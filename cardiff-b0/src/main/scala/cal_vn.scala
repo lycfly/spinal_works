@@ -36,7 +36,7 @@ class cal_vn (N: Int, SizeIn: Int) extends Component {
   v1gtv2 := io.vin1 > io.vin2
   bigger := Mux(v1gtv2 & io.rg_bypass_mean , io.vin1 , io.vin2)
   smaller := Mux(v1gtv2 & io.rg_bypass_mean, io.vin2 , io.vin1)
-  data_load_finish := v_cnt === (io.valid_num-1)
+  data_load_finish := v_cnt === io.valid_num
   io.mean := ((max_v +^ min_v)|>>1).sat(1)
   io.finish := io.en & io.vin_vld & data_load_finish
   when(io.en & io.vin_vld){

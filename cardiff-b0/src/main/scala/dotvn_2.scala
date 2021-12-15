@@ -43,7 +43,7 @@ class dotVn_2 (N: Int, SizeIn: Int, SizeCoeff: Int) extends Component {
   vin_true_in := Mux(io.rg_bypass_mean, vin_minus_mean, io.vn_in(mac_cnt))
 
   mac_start := mac_cnt === 0
-  mac_finish := mac_cnt === io.valid_num-1
+  mac_finish := mac_cnt === io.valid_num
   product1 := vin_true_in * io.rg_sin_table(mac_cnt)
   product2 := vin_true_in * io.rg_cos_table(mac_cnt)
   s1 := (product1 >> 2).resized

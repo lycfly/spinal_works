@@ -31,6 +31,9 @@ class cal_phase (N: Int, SizeIn: Int, SizeCoeff: Int, SizeOut: Int) extends Comp
   val dot = new dotVn_2 (N = N, SizeIn = SizeIn, SizeCoeff = SizeCoeff)
   val cordic = new cordic_int (SizeIn = SizeCoeff+SizeIn, SizeOut = SizeOut)
 
+  val valid_num_true = UInt(3 bits)
+  valid_num_true := ((io.valid_num<<1)-1).resize(3)
+
   val mean = SInt(SizeIn bits)
   val calvn_finish = Bool()
   val vn = Vec(SInt(SizeIn bits), N)
@@ -41,7 +44,7 @@ class cal_phase (N: Int, SizeIn: Int, SizeCoeff: Int, SizeOut: Int) extends Comp
 
   calvn.io.en <> io.rg_calphase_en
   calvn.io.rg_bypass_mean <> io.rg_bypass_mean
-  calvn.io.valid_num <> io.valid_num
+  calvn.io.valid_num <> valid_num_true
   calvn.io.vin1 <> io.vin1
   calvn.io.vin2 <> io.vin2
   calvn.io.rg_leakage_table <> io.rg_leakage_table
@@ -56,7 +59,7 @@ class cal_phase (N: Int, SizeIn: Int, SizeCoeff: Int, SizeOut: Int) extends Comp
   dot.io.rg_sin_table <> io.rg_sin_table
   dot.io.vn_vld <> calvn_finish
   dot.io.vn_in <> vn
-  dot.io.valid_num <> io.valid_num
+  dot.io.valid_num <> valid_num_true
   dot.io.mean <> mean
   dot.io.psum_out1 <> psum_out1
   dot.io.psum_out2 <> psum_out2
@@ -84,7 +87,7 @@ object Inst_cal_phase {
       defaultConfigForClockDomains = ClockDomainConfig(resetKind = ASYNC,
         clockEdge = RISING,
         resetActiveLevel = LOW),
-      mode=Verilog,
+      mode=SystemVerilog,
       oneFilePerComponent = true)
       .addStandardMemBlackboxing(blackboxAll)
       .generate(new cal_phase (N = 8, SizeIn = 8, SizeCoeff = 8, SizeOut = 8))

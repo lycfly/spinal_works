@@ -1,5 +1,5 @@
-./enumdefine.v
-./cal_vn.v
-./dotVn_2.v
-./cordic_int.v
-./cal_phase.v
+./enumdefine.sv
+./cal_vn.sv
+./dotVn_2.sv
+./cordic_int.sv
+./cal_phase.sv
