@@ -1,0 +1,32 @@
+# Setup File for Synopsys dc_shell
+#
+# Application:
+#  "HDL Coding Styles"
+#
+# Mode: tcl
+# Path: Apps/HDL/Setup   
+# File: .synopsys_dc.setup-tcl
+# Date: 20 Feb 99
+#
+# HDL LIBRARY
+  define_design_lib APP_LIB  -path ../App_Bin
+
+# CBA LIBRARY PATH
+  set CELL_LIB  "../Technology/CBA"
+
+# SEARCH PATH
+  set search_path  [lappend  search_path  $CELL_LIB]
+
+# TECHNOLOGY FILES
+  set target_library    tc6a.db
+  set link_library  { * tc6a.db }
+  set symbol_library    tc6a.sdb
+
+# SCHEMATICS
+  set designer "CASCADED"
+  set company  "Apps:  HDL Styles"
+  set plot_command  "lpr -h -Plj377"
+
+# SYNTHETIC CACHE
+  set cache_write  ~
+  set cache_read   $cache_write

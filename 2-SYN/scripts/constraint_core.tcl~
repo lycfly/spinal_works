@@ -1,0 +1,58 @@
+
+set     CLK_SOURCE_LATENCY  		1
+set     CLK_NETWORK_LATENCY 		1
+set     OUT_LOAD                        0.2
+
+set     MAX_FANOUT                      20
+set     MAX_CAP                         0.4
+set     MAX_TRAN                        1.2
+    	                        		
+##### Source Clock Definition ###########################################################
+create_clock -name chip_pll_clk  -period 15   [get_pins u_miner_hat/u_glichfreeclk/y]
+create_clock -name pll_clk       -period 15   [get_pins u_pll/CLK_OUT ]
+create_clock -name spi_clk       -period 30   [get_pins u_pad/spi_clk ]
+create_clock -name input_clk     -period 20   [get_pins u_pad/input_clk]
+set_clock_group  -name sys_group -asynchronous \
+  -group [get_clocks "spi_clk"] \
+  -group [list [get_clocks "pll_clk"]  [get_clocks "input_clk"] [get_clocks "chip_pll_clk" ]]
+set_clock_groups -asynchronous  -name logic_exc_group \
+  -group [get_clocks "input_clk"] \
+  -group [get_clocks "pll_clk"] \
+  -group [get_clocks "chip_pll_clk"] 
+
+
+set_clock_uncertainty  1    [get_clocks "spi_clk  input_clk"]
+set_clock_uncertainty  1    [get_clocks "pll_clk"]
+set_clock_uncertainty  1   [get_clocks "chip_pll_clk"]
+set_clock_transition   0.2     [all_clocks]
+set_clock_latency     -source 	$CLK_SOURCE_LATENCY 	[get_clocks "spi_clk  input_clk"]
+set_clock_latency            	$CLK_NETWORK_LATENCY 	[get_clocks "spi_clk  input_clk"]
+#
+################ Specifing I/O Timing Requirments #########################################
+#
+set_input_delay  -clock  spi_clk  2 [get_ports pad_spi_rxd ]
+set_input_delay  -clock  spi_clk  2 [get_ports pad_spi_busy]
+
+set_input_transition 0.2 [all_inputs]
+set_input_delay 0.5 -clock input_clk [remove_from_collection [all_inputs] [get_ports "pad_spi_clk  pad_input_clk  pad_spi_rxd  "]] -add_delay 
+set_output_delay 0.5    -clock input_clk     [all_outputs] -add_delay
+set_load                 $OUT_LOAD            [all_outputs]
+#
+#
+################ Specifing dont_touch #########################################################
+set_dont_touch     u_miner_hat/u_margin_controller/U_PSM
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/u_or_tree_core_1
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/u_or_tree_core_0
+set_dont_touch     u_miner_hat/M/u_core/u_core_p/u_or_tree_core_p
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_or_tree_multi_16
+set_dont_touch     u_miner_hat/M/u_or_tree_sha256_top
+
+
+
+set ALL_EX_OUT          [remove_from_collection [current_design] [all_outputs]]
+set ALL_EX_OUT_IN       [remove_from_collection $ALL_EX_OUT [all_inputs]]
+set_max_transition      $MAX_TRAN               $ALL_EX_OUT_IN 
+set_max_fanout          $MAX_FANOUT             $ALL_EX_OUT_IN
+set_max_capacitance     $MAX_CAP                $ALL_EX_OUT_IN
+#
+###############################################################################################

@@ -1,0 +1,10 @@
+DONE:
+1. Changed all script headers to DFTC.
+2. The Tech_Libs directory was renamed "Technology".
+3. Changed all define_design_lib to HDL_LIB.
+4. Added "WORKSHOP DEFAULTS" section to Lab_0?/.syn*.
+
+NEEDS:
+1. Labs 2,5,6  need translate from workshop_lib to TSMC.
+2. Most labs now access .db files from Lab_0?, not DB/.
+3. "Solutions" directory needs updating.

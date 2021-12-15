@@ -1,0 +1,74 @@
+/* DFTC SETUP FILE
+ * Mode: dcsh
+ * File: .synopsys_dc.setup
+ * Path: <DFTW>/Lab_02
+ * Date:  4 Dec'00
+ */
+
+/* HDL LIBRARY */
+   define_design_lib HDL_LIB  -path ../HDL_Bin
+
+/* DESIGNWARE */
+   synthetic_library = dw_foundation.sldb
+
+/* GENERIC LIBRARY PATH */
+   GENERIC = "../Technology/GENERIC"
+
+/* SEARCH PATH */
+   search_path = search_path + { GENERIC }
+   search_path = search_path + { ../DB }
+
+/* TECHNOLOGY FILES */
+   target_library = { workshop_lib.db }
+   link_library   = { "*"  workshop_lib.db }
+   symbol_library = { workshop_lib.sdb }
+
+/* TEST DEFAULT VARIABLES */
+   test_default_period       = 100
+   test_default_delay        =   5
+   test_default_bidir_delay  =  55
+   test_default_strobe       =  95
+   test_default_strobe_width =   0
+
+/* WORKSHOP DEFAULTS **********************************/
+
+/* COMMAND WINDOW */
+   view_command_win = true
+   view_command_win_max_lines = 3000
+
+/* DEFAULT MESSAGES */
+   view_select_default_message = \
+   "Left: SELECT   \
+     Mid: EXTEND   \
+   Right: MENU"
+
+/* LAYERS
+ * Instance Name [green]:
+ */
+   set_layer  cell_name_layer  visible TRUE
+   set_layer  cell_name_layer  red       0
+   set_layer  cell_name_layer  green 65535
+   set_layer  cell_name_layer  blue   6554
+
+/* LOG FILES */
+   command_log_file      = ".dc_script.log"
+   view_command_log_file = ".transcript.log"
+   view_log_file         = ""
+
+/* SCHEMATIC OPTIONS */
+   designer = "DFTW Course"
+   company  = "Generic"
+
+   default_schematic_options = "-no_bus    \
+                                -dont_left \
+                                -sort_outputs"
+
+   alias csh  "create_schematic -hierarchy \
+                                -schematic \
+                                -dont_left \
+                                -no_bus"
+   view_script_submenu_items = {           \
+                  "Shotgun Schematics" csh \
+   }
+
+/******************************************************/

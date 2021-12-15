@@ -1,0 +1,3112 @@
+/*
+ *  CONFIDENTIAL AND PROPRIETARY SOFTWARE OF ARM PHYSICAL IP, INC.
+ * 
+ *  Copyright (c) 1993 - 2021 ARM Physical IP, Inc.  All Rights Reserved.
+ * 
+ *  Use of this Software is subject to the terms and conditions of the
+ *  applicable license agreement with ARM Physical IP, Inc.
+ *  In addition, this Software is protected by patents, copyright law 
+ *  and international treaties.
+ * 
+ *  The copyright notice(s) in this Software does not indicate actual or
+ *  intended publication of this Software.
+ * 
+ *  Compiler Name: High Speed Single Port SRAM SVT MVT Compiler
+ * 
+ *  Creation Date: Mon Jan  4 14:33:25 2021
+ * 
+ *  Instance Options:
+ *    Instance Name:                 sram2Kx8
+ *    Number of Words:               2048
+ *    Number of Bits:                8
+ *    Multiplexer Width:             8
+ *    Multi-Vt selection:            BASE
+ *    Frequency <MHz>:               200
+ *    Activity Factor <%>:           50
+ *    Pipeline:                      off
+ *    Word-Write Mask:               off
+ *    Word Partition Size:           1
+ *    Write through:                 off
+ *    Top Metal Layer:               m5-m10
+ *    Power Type:                    otc
+ *    Redundancy:                    off
+ *    Redundant Columns:             2
+ *    Redundant Rows:                0
+ *    BIST MUXes:                    off
+ *    Soft Error Repair (SER):       none
+ *    Power Gating:                  off
+ *    Back Biasing:                  off
+ *    Retention:                     on
+ *    Extra Margin Adjustment:       on
+ *    Advanced Test Features:        off
+ *    Customer Comment:              This is a memory instance
+ *    Bus-notation:                  on
+ *    Power Ground Rename:           vddpe:VDDPE,vddce:VDDCE,vsse:VSSE
+ *    Name Case:                     upper
+ *    Number of Rows per Bitline:    128
+ *    Check Instance Name:           on
+ *    Diodes:                        on
+ *    Drive Strength:                6
+ *    Site Definitions:              off
+ *    Library Name:                  sram_sp_hsd
+ *    Liberty setting:               nldm
+ * 
+ *  Compiler Versions:
+ *    Memory Version:                r0p0
+ *    Lang compiler Version:         4.5.1-EAC
+ *    View Name:                     Liberty
+ *    AMCI Version:                  2.0.4-EAC
+ *    RTE Version:                   2.3.7-EAC
+ *    EOS Data Routines Version:     2.3.4-EAC
+ *    liberty_memcomp Version:       2.4.11-EAC
+ * 
+ *  Verified With:
+ *    Synopsys Primetime, Cadence Encounter Timing System, Synopsys Design Compiler,
+ *    Cadence RTL Compiler.
+ * 
+ *  Modeling Assumptions:
+ *    This library contains a black box description for a memory element. At
+ *    the library level, a default_max_transition constraint is set to the 
+ *    maximum characterized input slew.  Each output has a max_capacitance 
+ *    constraint set to the highest characterized output load.  These two 
+ *    constraints force Design Compiler to synthesize circuits that operate 
+ *    within the characterization space.  The user can tighten these constraints,
+ *    if desired.  When writing SDF from Synopsys Design Compiler or Synopsys
+ *    Primetime, use the version 3.0 or 2.1 option. This ensures the SDF will
+ *    annotate to simulation models provided with this generator.
+ * 
+ *  Modeling Limitations:
+ *    Due to limitations of the .lib format, some data reduction was necessary.
+ *    When reducing data, minimum values were chosen for the fast case corner
+ *    and maximum values were used for the typical and best case corners.  It
+ *    is recommended that critical timing and setup and hold times be checked 
+ *    at all corners.
+ * 
+ *  Known Bugs: N/A
+ * 
+ *  Known Work Arounds: N/A
+ * 
+*/
+
+library(sram_sp_hsd_tt_0p81v_0p81v_0c) {
+  delay_model         : table_lookup;
+  library_features(report_delay_calculation,report_power_calculation);
+  revision            : 1.1;        
+  date                : "Mon Jan  4 14:33:25 2021";
+  comment             :  "Copyright (c) 1993 - 2021 ARM Physical IP, Inc.  All Rights Reserved.";
+
+  /* unit attributes */
+  time_unit           : "1ns";
+  voltage_unit        : "1V";
+  current_unit        : "1mA";
+  leakage_power_unit  : "1mW";
+  nom_process         : 1;
+  nom_temperature     : 0;
+  nom_voltage         : 0.81;
+  capacitive_load_unit(1,pf);
+  pulling_resistance_unit        : "1kohm";
+
+  /* default attributes */
+  default_fanout_load            : 1.000;
+  default_cell_leakage_power     : 0.000;
+  default_inout_pin_cap          : 0.005;
+  default_input_pin_cap          : 0.005;
+  default_output_pin_cap         : 0.000;
+
+  /* threshold definitions */
+  default_leakage_power_density  : 0.000;
+  slew_derate_from_library       : 0.500;
+  slew_lower_threshold_pct_fall  : 30.000;
+  slew_upper_threshold_pct_fall  : 70.000;
+  slew_lower_threshold_pct_rise  : 30.000;
+  slew_upper_threshold_pct_rise  : 70.000;
+  input_threshold_pct_fall       : 50.000;
+  input_threshold_pct_rise       : 50.000;
+  output_threshold_pct_fall      : 50.000;
+  output_threshold_pct_rise      : 50.000;
+
+  /* k-factors */
+  k_process_cell_fall            : 0.000;
+  k_process_cell_leakage_power   : 0.000;
+  k_process_cell_rise            : 0.000;
+  k_process_fall_transition      : 0.000;
+  k_process_hold_fall            : 0.000;
+  k_process_hold_rise            : 0.000;
+  k_process_internal_power       : 0.000;
+  k_process_min_pulse_width_high : 0.000;
+  k_process_min_pulse_width_low  : 0.000;
+  k_process_pin_cap              : 0.000;
+  k_process_recovery_fall        : 0.000;
+  k_process_recovery_rise        : 0.000;
+  k_process_rise_transition      : 0.000;
+  k_process_setup_fall           : 0.000;
+  k_process_setup_rise           : 0.000;
+  k_process_wire_cap             : 0.000;
+  k_process_wire_res             : 0.000;
+  k_temp_cell_fall               : 0.000;
+  k_temp_cell_rise               : 0.000;
+  k_temp_hold_fall               : 0.000;
+  k_temp_hold_rise               : 0.000;
+  k_temp_min_pulse_width_high    : 0.000;
+  k_temp_min_pulse_width_low     : 0.000;
+  k_temp_min_period              : 0.000;
+  k_temp_rise_propagation        : 0.000;
+  k_temp_fall_propagation        : 0.000;
+  k_temp_rise_transition         : 0.000;
+  k_temp_fall_transition         : 0.000;
+  k_temp_recovery_fall           : 0.000;
+  k_temp_recovery_rise           : 0.000;
+  k_temp_setup_fall              : 0.000;
+  k_temp_setup_rise              : 0.000;
+  k_volt_cell_fall               : 0.000;
+  k_volt_cell_rise               : 0.000;
+  k_volt_hold_fall               : 0.000;
+  k_volt_hold_rise               : 0.000;
+  k_volt_min_pulse_width_high    : 0.000;
+  k_volt_min_pulse_width_low     : 0.000;
+  k_volt_min_period              : 0.000;
+  k_volt_rise_propagation        : 0.000;
+  k_volt_fall_propagation        : 0.000;
+  k_volt_rise_transition         : 0.000;
+  k_volt_fall_transition         : 0.000;
+  k_volt_recovery_fall           : 0.000;
+  k_volt_recovery_rise           : 0.000;
+  k_volt_setup_fall              : 0.000;
+  k_volt_setup_rise              : 0.000;
+
+  /* Additional instance information */ 
+  define ("peak_current", "cell", "float");
+  define ("retention_current", "cell", "float");
+  define ("inrush_current", "cell", "float");
+
+  /* templates */ 
+  lu_table_template(sram2Kx8_inputslew_bistload_delay_template) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_inputslew_outputload_delay_template) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_clockslew_bistload_delay_template) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_clockslew_outputload_delay_template) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_inputslew_bistload_retain_template) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_inputslew_outputload_retain_template) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_clockslew_bistload_retain_template) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_clockslew_outputload_retain_template) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_inputslew_bistload_slew_template) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_inputslew_outputload_slew_template) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_clockslew_bistload_slew_template) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_clockslew_outputload_slew_template) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_clockslew_inputslew_setuphold_template) {
+    variable_1 : related_pin_transition;
+    variable_2 : constrained_pin_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_clockslew_clockslew_setuphold_template) {
+    variable_1 : related_pin_transition;
+    variable_2 : constrained_pin_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_inputslew_clockslew_setuphold_template) {
+    variable_1 : related_pin_transition;
+    variable_2 : constrained_pin_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_inputslew_inputslew_setuphold_template) {
+    variable_1 : related_pin_transition;
+    variable_2 : constrained_pin_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_clockslew_inputslew_setup_template) {
+    variable_1 : related_pin_transition;
+    variable_2 : constrained_pin_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_clockslew_clockslew_setup_template) {
+    variable_1 : related_pin_transition;
+    variable_2 : constrained_pin_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_inputslew_clockslew_setup_template) {
+    variable_1 : related_pin_transition;
+    variable_2 : constrained_pin_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_inputslew_inputslew_setup_template) {
+    variable_1 : related_pin_transition;
+    variable_2 : constrained_pin_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_clockslew_inputslew_hold_template) {
+    variable_1 : related_pin_transition;
+    variable_2 : constrained_pin_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_clockslew_clockslew_hold_template) {
+    variable_1 : related_pin_transition;
+    variable_2 : constrained_pin_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_inputslew_clockslew_hold_template) {
+    variable_1 : related_pin_transition;
+    variable_2 : constrained_pin_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_inputslew_inputslew_hold_template) {
+    variable_1 : related_pin_transition;
+    variable_2 : constrained_pin_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_cts1x7_clockslew_delay_template) {
+    variable_1 : input_net_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_cts1x7_inputslew_delay_template) {
+    variable_1 : input_net_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_cts1x7_clockslew_slew_template) {
+    variable_1 : input_net_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  lu_table_template(sram2Kx8_cts1x7_inputslew_slew_template) {
+    variable_1 : input_net_transition;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  power_lut_template(sram2Kx8_clockslew_outputload_energy_template) {
+    variable_1 : input_transition_time;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  power_lut_template(sram2Kx8_clockslew_bistload_energy_template) {
+    variable_1 : input_transition_time;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  power_lut_template(sram2Kx8_inputslew_outputload_energy_template) {
+    variable_1 : input_transition_time;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  power_lut_template(sram2Kx8_inputslew_bistload_energy_template) {
+    variable_1 : input_transition_time;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  power_lut_template(sram2Kx8_outputload_energy_template) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  power_lut_template(sram2Kx8_bistload_energy_template) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  power_lut_template(sram2Kx8_clockslew_energy_template) {
+    variable_1 : input_transition_time;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+  power_lut_template(sram2Kx8_inputslew_energy_template) {
+    variable_1 : input_transition_time;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+
+  type (sram2Kx8_Q) {
+    base_type : array ;
+    data_type : bit ;
+    bit_width : 8;
+    bit_from : 7;
+    bit_to : 0 ;
+    downto : true ;
+  }
+  type (sram2Kx8_A) {
+    base_type : array ;
+    data_type : bit ;
+    bit_width : 11;
+    bit_from : 10;
+    bit_to : 0 ;
+    downto : true ;
+  }
+  type (sram2Kx8_D) {
+    base_type : array ;
+    data_type : bit ;
+    bit_width : 8;
+    bit_from : 7;
+    bit_to : 0 ;
+    downto : true ;
+  }
+  type (sram2Kx8_EMA) {
+    base_type : array ;
+    data_type : bit ;
+    bit_width : 3;
+    bit_from : 2;
+    bit_to : 0 ;
+    downto : true ;
+  }
+  type (sram2Kx8_EMAW) {
+    base_type : array ;
+    data_type : bit ;
+    bit_width : 2;
+    bit_from : 1;
+    bit_to : 0 ;
+    downto : true ;
+  }
+
+  /* voltage-maps */
+  voltage_map (VDDPE, 0.81);
+  voltage_map (VDDCE, 0.81);
+  voltage_map (VSSE, 0.0);
+
+  /* operating-conditions */
+  operating_conditions(tt_0p81v_0p81v_0c) {
+    process      : 1;
+    temperature  : 0;
+    voltage      : 0.81;
+    tree_type    : balanced_tree;
+  }
+  default_operating_conditions : tt_0p81v_0p81v_0c;
+
+  /* wire-loads */
+  wire_load("sample") {
+    resistance   : 1.6e-05;
+    capacitance  : 0.0002;
+    area         : 1.7;
+    slope        : 500;
+    fanout_length(1,500);
+  }
+
+  cell(sram2Kx8) {
+    area : 11343.235200;
+    dont_use : true;
+    dont_touch : true;
+    interface_timing : true;
+    is_memory_cell : true;
+    /* Peak current of all modes. */
+    peak_current : 27.518689;
+    /* Peak current when entering or exiting the power modes. */
+    inrush_current : 15.266976;
+    /* leakage current in retention mode (RET1N=0) */
+    retention_current : 0.002133;
+    memory() {
+      type : ram;
+      address_width : 11;
+      word_width : 8;
+    }
+    pg_pin(VDDCE) {
+      voltage_name : VDDCE;
+      pg_type : backup_power;
+      direction : inout;
+    }
+    pg_pin(VDDPE) {
+      voltage_name : VDDPE;
+      pg_type : primary_power;
+      direction : inout;
+    }
+    pg_pin(VSSE) {
+      voltage_name : VSSE;
+      pg_type : primary_ground;
+      direction : inout;
+    }
+    bus(Q) {
+      bus_type : sram2Kx8_Q;
+      direction : output;
+      related_power_pin : "VDDPE";
+      related_ground_pin : "VSSE";
+      power_down_function : "!VDDCE + !VDDPE + VSSE";
+      memory_read() {
+        address : A;
+      }
+      max_capacitance : 0.300000;
+      max_transition : 0.576000;
+      timing() {
+        related_pin : CLK;
+        timing_type : rising_edge;
+        timing_sense : non_unate;
+        when : "RET1N&WEN&!EMA[2]&!EMA[1]&!EMA[0]";
+        sdf_cond : "RET1N == 1'b1 && WEN == 1'b1 && EMA[2] == 1'b0 && EMA[1] == 1'b0 && \
+                EMA[0] == 1'b0";
+        cell_rise(sram2Kx8_clockslew_outputload_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.413397, 0.417748, 0.423663, 0.436059, 0.460313, 0.505798, 0.598190", \
+            "0.419106, 0.423457, 0.429373, 0.441769, 0.466023, 0.511507, 0.603899", \
+            "0.436437, 0.440788, 0.446704, 0.459099, 0.483353, 0.528838, 0.621230", \
+            "0.444735, 0.449086, 0.455001, 0.467397, 0.491651, 0.537135, 0.629527", \
+            "0.451427, 0.455778, 0.461693, 0.474089, 0.498343, 0.543828, 0.636219", \
+            "0.468406, 0.472758, 0.478673, 0.491069, 0.515323, 0.560807, 0.653199", \
+            "0.487345, 0.491696, 0.497611, 0.510007, 0.534261, 0.579746, 0.672138" \
+          );
+        }
+        retaining_rise(sram2Kx8_clockslew_outputload_retain_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.259028, 0.264742, 0.271407, 0.285093, 0.308539, 0.348574, 0.426480", \
+            "0.264289, 0.270003, 0.276668, 0.290354, 0.313800, 0.353835, 0.431741", \
+            "0.282314, 0.288028, 0.294693, 0.308379, 0.331825, 0.371860, 0.449766", \
+            "0.290435, 0.296149, 0.302814, 0.316500, 0.339946, 0.379981, 0.457887", \
+            "0.296102, 0.301816, 0.308481, 0.322167, 0.345613, 0.385648, 0.463554", \
+            "0.313697, 0.319411, 0.326076, 0.339762, 0.363208, 0.403243, 0.481149", \
+            "0.331268, 0.336982, 0.343647, 0.357333, 0.380779, 0.420814, 0.498720" \
+          );
+        }
+        rise_transition(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243" \
+          );
+        }
+        retain_rise_slew(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243" \
+          );
+        }
+        cell_fall(sram2Kx8_clockslew_outputload_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.414004, 0.418399, 0.424374, 0.436895, 0.461394, 0.507338, 0.600663", \
+            "0.419771, 0.424166, 0.430141, 0.442662, 0.467161, 0.513105, 0.606430", \
+            "0.437277, 0.441672, 0.447647, 0.460168, 0.484667, 0.530611, 0.623936", \
+            "0.445658, 0.450053, 0.456028, 0.468549, 0.493048, 0.538992, 0.632317", \
+            "0.452418, 0.456813, 0.462788, 0.475309, 0.499808, 0.545752, 0.639077", \
+            "0.469569, 0.473964, 0.479939, 0.492460, 0.516959, 0.562903, 0.656228", \
+            "0.488699, 0.493094, 0.499069, 0.511590, 0.536089, 0.582033, 0.675358" \
+          );
+        }
+        retaining_fall(sram2Kx8_clockslew_outputload_retain_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.256437, 0.262094, 0.268693, 0.282242, 0.305453, 0.345088, 0.422215", \
+            "0.261646, 0.267303, 0.273901, 0.287450, 0.310662, 0.350296, 0.427423", \
+            "0.279490, 0.285147, 0.291746, 0.305295, 0.328506, 0.368141, 0.445268", \
+            "0.287530, 0.293187, 0.299785, 0.313335, 0.336546, 0.376181, 0.453308", \
+            "0.293141, 0.298797, 0.305396, 0.318945, 0.342156, 0.381791, 0.458918", \
+            "0.310560, 0.316216, 0.322815, 0.336364, 0.359575, 0.399210, 0.476337", \
+            "0.327955, 0.333612, 0.340210, 0.353759, 0.376971, 0.416605, 0.493732" \
+          );
+        }
+        fall_transition(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487" \
+          );
+        }
+        retain_fall_slew(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CLK;
+        timing_type : rising_edge;
+        timing_sense : non_unate;
+        when : "RET1N&WEN&!EMA[2]&!EMA[1]&EMA[0]";
+        sdf_cond : "RET1N == 1'b1 && WEN == 1'b1 && EMA[2] == 1'b0 && EMA[1] == 1'b0 && \
+                EMA[0] == 1'b1";
+        cell_rise(sram2Kx8_clockslew_outputload_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.415161, 0.419512, 0.425428, 0.437824, 0.462078, 0.507562, 0.599954", \
+            "0.420871, 0.425222, 0.431137, 0.443533, 0.467787, 0.513271, 0.605663", \
+            "0.438202, 0.442553, 0.448468, 0.460864, 0.485118, 0.530602, 0.622994", \
+            "0.446499, 0.450850, 0.456765, 0.469161, 0.493415, 0.538900, 0.631291", \
+            "0.453191, 0.457542, 0.463458, 0.475853, 0.500107, 0.545592, 0.637984", \
+            "0.470171, 0.474522, 0.480437, 0.492833, 0.517087, 0.562571, 0.654963", \
+            "0.489109, 0.493461, 0.499376, 0.511772, 0.536026, 0.581510, 0.673902" \
+          );
+        }
+        retaining_rise(sram2Kx8_clockslew_outputload_retain_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.260522, 0.266236, 0.272901, 0.286587, 0.310033, 0.350068, 0.427974", \
+            "0.265783, 0.271497, 0.278162, 0.291848, 0.315294, 0.355329, 0.433235", \
+            "0.283808, 0.289522, 0.296187, 0.309873, 0.333319, 0.373354, 0.451260", \
+            "0.291929, 0.297643, 0.304308, 0.317994, 0.341440, 0.381475, 0.459381", \
+            "0.297596, 0.303310, 0.309975, 0.323661, 0.347107, 0.387142, 0.465048", \
+            "0.315191, 0.320905, 0.327570, 0.341256, 0.364702, 0.404737, 0.482643", \
+            "0.332762, 0.338476, 0.345141, 0.358827, 0.382273, 0.422308, 0.500214" \
+          );
+        }
+        rise_transition(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243" \
+          );
+        }
+        retain_rise_slew(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243" \
+          );
+        }
+        cell_fall(sram2Kx8_clockslew_outputload_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.415786, 0.420181, 0.426156, 0.438677, 0.463176, 0.509120, 0.602445", \
+            "0.421553, 0.425948, 0.431923, 0.444444, 0.468943, 0.514887, 0.608212", \
+            "0.439059, 0.443454, 0.449429, 0.461950, 0.486449, 0.532393, 0.625718", \
+            "0.447440, 0.451835, 0.457810, 0.470331, 0.494830, 0.540774, 0.634099", \
+            "0.454200, 0.458595, 0.464570, 0.477091, 0.501590, 0.547534, 0.640859", \
+            "0.471351, 0.475746, 0.481721, 0.494242, 0.518741, 0.564685, 0.658010", \
+            "0.490481, 0.494876, 0.500851, 0.513372, 0.537871, 0.583815, 0.677140" \
+          );
+        }
+        retaining_fall(sram2Kx8_clockslew_outputload_retain_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.257917, 0.263574, 0.270172, 0.283722, 0.306933, 0.346568, 0.423695", \
+            "0.263126, 0.268782, 0.275381, 0.288930, 0.312141, 0.351776, 0.428903", \
+            "0.280970, 0.286627, 0.293226, 0.306775, 0.329986, 0.369621, 0.446748", \
+            "0.289010, 0.294667, 0.301265, 0.314814, 0.338026, 0.377661, 0.454788", \
+            "0.294620, 0.300277, 0.306876, 0.320425, 0.343636, 0.383271, 0.460398", \
+            "0.312040, 0.317696, 0.324295, 0.337844, 0.361055, 0.400690, 0.477817", \
+            "0.329435, 0.335092, 0.341690, 0.355239, 0.378451, 0.418085, 0.495212" \
+          );
+        }
+        fall_transition(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487" \
+          );
+        }
+        retain_fall_slew(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CLK;
+        timing_type : rising_edge;
+        timing_sense : non_unate;
+        when : "RET1N&WEN&!EMA[2]&EMA[1]&!EMA[0]";
+        sdf_cond : "RET1N == 1'b1 && WEN == 1'b1 && EMA[2] == 1'b0 && EMA[1] == 1'b1 && \
+                EMA[0] == 1'b0";
+        cell_rise(sram2Kx8_clockslew_outputload_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.418410, 0.422761, 0.428677, 0.441072, 0.465326, 0.510811, 0.603203", \
+            "0.424120, 0.428471, 0.434386, 0.446782, 0.471036, 0.516520, 0.608912", \
+            "0.441451, 0.445802, 0.451717, 0.464113, 0.488367, 0.533851, 0.626243", \
+            "0.449748, 0.454099, 0.460014, 0.472410, 0.496664, 0.542148, 0.634540", \
+            "0.456440, 0.460791, 0.466706, 0.479102, 0.503356, 0.548841, 0.641233", \
+            "0.473420, 0.477771, 0.483686, 0.496082, 0.520336, 0.565820, 0.658212", \
+            "0.492358, 0.496709, 0.502625, 0.515020, 0.539274, 0.584759, 0.677151" \
+          );
+        }
+        retaining_rise(sram2Kx8_clockslew_outputload_retain_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.263130, 0.268787, 0.275385, 0.288934, 0.312146, 0.351780, 0.428907", \
+            "0.268338, 0.273995, 0.280593, 0.294142, 0.317354, 0.356989, 0.434116", \
+            "0.286183, 0.291840, 0.298438, 0.311987, 0.335199, 0.374833, 0.451960", \
+            "0.294223, 0.299879, 0.306478, 0.320027, 0.343239, 0.382873, 0.460000", \
+            "0.299833, 0.305490, 0.312088, 0.325637, 0.348849, 0.388483, 0.465610", \
+            "0.317252, 0.322909, 0.329507, 0.343056, 0.366268, 0.405903, 0.483029", \
+            "0.334647, 0.340304, 0.346903, 0.360452, 0.383663, 0.423298, 0.500425" \
+          );
+        }
+        rise_transition(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243" \
+          );
+        }
+        retain_rise_slew(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243" \
+          );
+        }
+        cell_fall(sram2Kx8_clockslew_outputload_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.419068, 0.423463, 0.429438, 0.441959, 0.466458, 0.512402, 0.605727", \
+            "0.424835, 0.429230, 0.435205, 0.447726, 0.472225, 0.518169, 0.611494", \
+            "0.442341, 0.446736, 0.452711, 0.465232, 0.489731, 0.535675, 0.629000", \
+            "0.450722, 0.455117, 0.461092, 0.473613, 0.498112, 0.544056, 0.637381", \
+            "0.457482, 0.461877, 0.467852, 0.480373, 0.504872, 0.550816, 0.644141", \
+            "0.474633, 0.479028, 0.485003, 0.497524, 0.522023, 0.567967, 0.661292", \
+            "0.493763, 0.498158, 0.504133, 0.516654, 0.541153, 0.587097, 0.680422" \
+          );
+        }
+        retaining_fall(sram2Kx8_clockslew_outputload_retain_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.260498, 0.266099, 0.272631, 0.286045, 0.309024, 0.348262, 0.424618", \
+            "0.265655, 0.271255, 0.277787, 0.291201, 0.314180, 0.353419, 0.429774", \
+            "0.283321, 0.288921, 0.295454, 0.308867, 0.331847, 0.371085, 0.447441", \
+            "0.291280, 0.296881, 0.303413, 0.316827, 0.339806, 0.379044, 0.455400", \
+            "0.296835, 0.302435, 0.308967, 0.322381, 0.345360, 0.384599, 0.460954", \
+            "0.314079, 0.319680, 0.326212, 0.339626, 0.362605, 0.401844, 0.478199", \
+            "0.331301, 0.336901, 0.343433, 0.356847, 0.379827, 0.419065, 0.495421" \
+          );
+        }
+        fall_transition(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487" \
+          );
+        }
+        retain_fall_slew(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CLK;
+        timing_type : rising_edge;
+        timing_sense : non_unate;
+        when : "RET1N&WEN&!EMA[2]&EMA[1]&EMA[0]";
+        sdf_cond : "RET1N == 1'b1 && WEN == 1'b1 && EMA[2] == 1'b0 && EMA[1] == 1'b1 && \
+                EMA[0] == 1'b1";
+        cell_rise(sram2Kx8_clockslew_outputload_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.421375, 0.425726, 0.431641, 0.444037, 0.468291, 0.513775, 0.606167", \
+            "0.427085, 0.431436, 0.437351, 0.449747, 0.474001, 0.519486, 0.611878", \
+            "0.444415, 0.448767, 0.454682, 0.467077, 0.491332, 0.536817, 0.629207", \
+            "0.452713, 0.457063, 0.462980, 0.475375, 0.499629, 0.545114, 0.637506", \
+            "0.459406, 0.463756, 0.469671, 0.482067, 0.506321, 0.551806, 0.644198", \
+            "0.476385, 0.480736, 0.486651, 0.499047, 0.523301, 0.568786, 0.661178", \
+            "0.495324, 0.499674, 0.505590, 0.517986, 0.542239, 0.587725, 0.680116" \
+          );
+        }
+        retaining_rise(sram2Kx8_clockslew_outputload_retain_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.263130, 0.268787, 0.275385, 0.288934, 0.312146, 0.351780, 0.428907", \
+            "0.268338, 0.273995, 0.280593, 0.294142, 0.317354, 0.356989, 0.434116", \
+            "0.286183, 0.291840, 0.298438, 0.311987, 0.335199, 0.374833, 0.451960", \
+            "0.294223, 0.299879, 0.306478, 0.320027, 0.343239, 0.382873, 0.460000", \
+            "0.299833, 0.305490, 0.312088, 0.325637, 0.348849, 0.388483, 0.465610", \
+            "0.317252, 0.322909, 0.329507, 0.343056, 0.366268, 0.405903, 0.483029", \
+            "0.334647, 0.340304, 0.346903, 0.360452, 0.383663, 0.423298, 0.500425" \
+          );
+        }
+        rise_transition(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243" \
+          );
+        }
+        retain_rise_slew(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243" \
+          );
+        }
+        cell_fall(sram2Kx8_clockslew_outputload_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.422063, 0.426457, 0.432433, 0.444954, 0.469453, 0.515396, 0.608721", \
+            "0.427830, 0.432225, 0.438200, 0.450721, 0.475220, 0.521164, 0.614489", \
+            "0.445336, 0.449731, 0.455706, 0.468226, 0.492726, 0.538670, 0.631994", \
+            "0.453717, 0.458112, 0.464087, 0.476608, 0.501107, 0.547051, 0.640376", \
+            "0.460477, 0.464871, 0.470847, 0.483368, 0.507866, 0.553811, 0.647136", \
+            "0.477628, 0.482023, 0.487998, 0.500519, 0.525018, 0.570962, 0.664287", \
+            "0.496758, 0.501153, 0.507128, 0.519649, 0.544147, 0.590092, 0.683417" \
+          );
+        }
+        retaining_fall(sram2Kx8_clockslew_outputload_retain_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.260498, 0.266099, 0.272631, 0.286045, 0.309024, 0.348262, 0.424618", \
+            "0.265655, 0.271255, 0.277787, 0.291201, 0.314180, 0.353419, 0.429774", \
+            "0.283321, 0.288921, 0.295454, 0.308867, 0.331847, 0.371085, 0.447441", \
+            "0.291280, 0.296881, 0.303413, 0.316827, 0.339806, 0.379044, 0.455400", \
+            "0.296835, 0.302435, 0.308967, 0.322381, 0.345360, 0.384599, 0.460954", \
+            "0.314079, 0.319680, 0.326212, 0.339626, 0.362605, 0.401844, 0.478199", \
+            "0.331301, 0.336901, 0.343433, 0.356847, 0.379827, 0.419065, 0.495421" \
+          );
+        }
+        fall_transition(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487" \
+          );
+        }
+        retain_fall_slew(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CLK;
+        timing_type : rising_edge;
+        timing_sense : non_unate;
+        when : "RET1N&WEN&EMA[2]&!EMA[1]&!EMA[0]";
+        sdf_cond : "RET1N == 1'b1 && WEN == 1'b1 && EMA[2] == 1'b1 && EMA[1] == 1'b0 && \
+                EMA[0] == 1'b0";
+        cell_rise(sram2Kx8_clockslew_outputload_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.553515, 0.557866, 0.563781, 0.576177, 0.600431, 0.645916, 0.738307", \
+            "0.559224, 0.563575, 0.569491, 0.581886, 0.606140, 0.651625, 0.744017", \
+            "0.576555, 0.580906, 0.586822, 0.599217, 0.623471, 0.668956, 0.761348", \
+            "0.584853, 0.589203, 0.595119, 0.607515, 0.631769, 0.677253, 0.769645", \
+            "0.591545, 0.595896, 0.601811, 0.614207, 0.638461, 0.683946, 0.776337", \
+            "0.608524, 0.612875, 0.618791, 0.631186, 0.655441, 0.700925, 0.793317", \
+            "0.627463, 0.631814, 0.637729, 0.650125, 0.674379, 0.719864, 0.812256" \
+          );
+        }
+        retaining_rise(sram2Kx8_clockslew_outputload_retain_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.263130, 0.268787, 0.275385, 0.288934, 0.312146, 0.351780, 0.428907", \
+            "0.268338, 0.273995, 0.280593, 0.294142, 0.317354, 0.356989, 0.434116", \
+            "0.286183, 0.291840, 0.298438, 0.311987, 0.335199, 0.374833, 0.451960", \
+            "0.294223, 0.299879, 0.306478, 0.320027, 0.343239, 0.382873, 0.460000", \
+            "0.299833, 0.305490, 0.312088, 0.325637, 0.348849, 0.388483, 0.465610", \
+            "0.317252, 0.322909, 0.329507, 0.343056, 0.366268, 0.405903, 0.483029", \
+            "0.334647, 0.340304, 0.346903, 0.360452, 0.383663, 0.423298, 0.500425" \
+          );
+        }
+        rise_transition(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243" \
+          );
+        }
+        retain_rise_slew(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243" \
+          );
+        }
+        cell_fall(sram2Kx8_clockslew_outputload_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.555537, 0.559932, 0.565907, 0.578428, 0.602927, 0.648871, 0.742196", \
+            "0.561304, 0.565699, 0.571674, 0.584195, 0.608694, 0.654638, 0.747963", \
+            "0.578810, 0.583205, 0.589180, 0.601701, 0.626200, 0.672144, 0.765469", \
+            "0.587191, 0.591586, 0.597561, 0.610082, 0.634581, 0.680525, 0.773850", \
+            "0.593951, 0.598346, 0.604321, 0.616842, 0.641341, 0.687285, 0.780610", \
+            "0.611102, 0.615497, 0.621472, 0.633993, 0.658492, 0.704436, 0.797761", \
+            "0.630232, 0.634627, 0.640602, 0.653123, 0.677622, 0.723566, 0.816891" \
+          );
+        }
+        retaining_fall(sram2Kx8_clockslew_outputload_retain_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.260498, 0.266099, 0.272631, 0.286045, 0.309024, 0.348262, 0.424618", \
+            "0.265655, 0.271255, 0.277787, 0.291201, 0.314180, 0.353419, 0.429774", \
+            "0.283321, 0.288921, 0.295454, 0.308867, 0.331847, 0.371085, 0.447441", \
+            "0.291280, 0.296881, 0.303413, 0.316827, 0.339806, 0.379044, 0.455400", \
+            "0.296835, 0.302435, 0.308967, 0.322381, 0.345360, 0.384599, 0.460954", \
+            "0.314079, 0.319680, 0.326212, 0.339626, 0.362605, 0.401844, 0.478199", \
+            "0.331301, 0.336901, 0.343433, 0.356847, 0.379827, 0.419065, 0.495421" \
+          );
+        }
+        fall_transition(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487" \
+          );
+        }
+        retain_fall_slew(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CLK;
+        timing_type : rising_edge;
+        timing_sense : non_unate;
+        when : "RET1N&WEN&EMA[2]&!EMA[1]&EMA[0]";
+        sdf_cond : "RET1N == 1'b1 && WEN == 1'b1 && EMA[2] == 1'b1 && EMA[1] == 1'b0 && \
+                EMA[0] == 1'b1";
+        cell_rise(sram2Kx8_clockslew_outputload_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.638806, 0.643157, 0.649072, 0.661468, 0.685722, 0.731207, 0.823599", \
+            "0.644515, 0.648866, 0.654782, 0.667178, 0.691432, 0.736916, 0.829308", \
+            "0.661846, 0.666197, 0.672113, 0.684508, 0.708762, 0.754247, 0.846639", \
+            "0.670144, 0.674495, 0.680410, 0.692806, 0.717060, 0.762544, 0.854936", \
+            "0.676836, 0.681187, 0.687102, 0.699498, 0.723752, 0.769237, 0.861628", \
+            "0.693815, 0.698167, 0.704082, 0.716478, 0.740732, 0.786216, 0.878608", \
+            "0.712754, 0.717105, 0.723020, 0.735416, 0.759670, 0.805155, 0.897547" \
+          );
+        }
+        retaining_rise(sram2Kx8_clockslew_outputload_retain_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.263130, 0.268787, 0.275385, 0.288934, 0.312146, 0.351780, 0.428907", \
+            "0.268338, 0.273995, 0.280593, 0.294142, 0.317354, 0.356989, 0.434116", \
+            "0.286183, 0.291840, 0.298438, 0.311987, 0.335199, 0.374833, 0.451960", \
+            "0.294223, 0.299879, 0.306478, 0.320027, 0.343239, 0.382873, 0.460000", \
+            "0.299833, 0.305490, 0.312088, 0.325637, 0.348849, 0.388483, 0.465610", \
+            "0.317252, 0.322909, 0.329507, 0.343056, 0.366268, 0.405903, 0.483029", \
+            "0.334647, 0.340304, 0.346903, 0.360452, 0.383663, 0.423298, 0.500425" \
+          );
+        }
+        rise_transition(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243" \
+          );
+        }
+        retain_rise_slew(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243" \
+          );
+        }
+        cell_fall(sram2Kx8_clockslew_outputload_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.641690, 0.646085, 0.652060, 0.664581, 0.689080, 0.735024, 0.828349", \
+            "0.647457, 0.651852, 0.657827, 0.670348, 0.694847, 0.740791, 0.834116", \
+            "0.664963, 0.669358, 0.675333, 0.687854, 0.712353, 0.758297, 0.851622", \
+            "0.673344, 0.677739, 0.683714, 0.696235, 0.720734, 0.766678, 0.860003", \
+            "0.680104, 0.684499, 0.690474, 0.702995, 0.727494, 0.773438, 0.866763", \
+            "0.697255, 0.701650, 0.707625, 0.720146, 0.744645, 0.790589, 0.883914", \
+            "0.716385, 0.720780, 0.726755, 0.739276, 0.763775, 0.809719, 0.903044" \
+          );
+        }
+        retaining_fall(sram2Kx8_clockslew_outputload_retain_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.260498, 0.266099, 0.272631, 0.286045, 0.309024, 0.348262, 0.424618", \
+            "0.265655, 0.271255, 0.277787, 0.291201, 0.314180, 0.353419, 0.429774", \
+            "0.283321, 0.288921, 0.295454, 0.308867, 0.331847, 0.371085, 0.447441", \
+            "0.291280, 0.296881, 0.303413, 0.316827, 0.339806, 0.379044, 0.455400", \
+            "0.296835, 0.302435, 0.308967, 0.322381, 0.345360, 0.384599, 0.460954", \
+            "0.314079, 0.319680, 0.326212, 0.339626, 0.362605, 0.401844, 0.478199", \
+            "0.331301, 0.336901, 0.343433, 0.356847, 0.379827, 0.419065, 0.495421" \
+          );
+        }
+        fall_transition(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487" \
+          );
+        }
+        retain_fall_slew(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CLK;
+        timing_type : rising_edge;
+        timing_sense : non_unate;
+        when : "RET1N&WEN&EMA[2]&EMA[1]&!EMA[0]";
+        sdf_cond : "RET1N == 1'b1 && WEN == 1'b1 && EMA[2] == 1'b1 && EMA[1] == 1'b1 && \
+                EMA[0] == 1'b0";
+        cell_rise(sram2Kx8_clockslew_outputload_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.689327, 0.693678, 0.699593, 0.711989, 0.736243, 0.781728, 0.874119", \
+            "0.695036, 0.699387, 0.705303, 0.717698, 0.741953, 0.787437, 0.879829", \
+            "0.712367, 0.716718, 0.722634, 0.735029, 0.759283, 0.804768, 0.897160", \
+            "0.720665, 0.725016, 0.730931, 0.743327, 0.767581, 0.813065, 0.905457", \
+            "0.727357, 0.731708, 0.737623, 0.750019, 0.774273, 0.819758, 0.912149", \
+            "0.744336, 0.748687, 0.754603, 0.766999, 0.791253, 0.836737, 0.929129", \
+            "0.763275, 0.767626, 0.773541, 0.785937, 0.810191, 0.855676, 0.948068" \
+          );
+        }
+        retaining_rise(sram2Kx8_clockslew_outputload_retain_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.263130, 0.268787, 0.275385, 0.288934, 0.312146, 0.351780, 0.428907", \
+            "0.268338, 0.273995, 0.280593, 0.294142, 0.317354, 0.356989, 0.434116", \
+            "0.286183, 0.291840, 0.298438, 0.311987, 0.335199, 0.374833, 0.451960", \
+            "0.294223, 0.299879, 0.306478, 0.320027, 0.343239, 0.382873, 0.460000", \
+            "0.299833, 0.305490, 0.312088, 0.325637, 0.348849, 0.388483, 0.465610", \
+            "0.317252, 0.322909, 0.329507, 0.343056, 0.366268, 0.405903, 0.483029", \
+            "0.334647, 0.340304, 0.346903, 0.360452, 0.383663, 0.423298, 0.500425" \
+          );
+        }
+        rise_transition(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243" \
+          );
+        }
+        retain_rise_slew(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243" \
+          );
+        }
+        cell_fall(sram2Kx8_clockslew_outputload_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.692721, 0.697116, 0.703091, 0.715612, 0.740111, 0.786055, 0.879380", \
+            "0.698488, 0.702883, 0.708858, 0.721379, 0.745878, 0.791822, 0.885147", \
+            "0.715994, 0.720389, 0.726364, 0.738885, 0.763384, 0.809328, 0.902653", \
+            "0.724375, 0.728770, 0.734745, 0.747266, 0.771765, 0.817709, 0.911034", \
+            "0.731135, 0.735530, 0.741505, 0.754026, 0.778525, 0.824469, 0.917794", \
+            "0.748286, 0.752681, 0.758656, 0.771177, 0.795676, 0.841620, 0.934945", \
+            "0.767416, 0.771811, 0.777786, 0.790307, 0.814806, 0.860750, 0.954075" \
+          );
+        }
+        retaining_fall(sram2Kx8_clockslew_outputload_retain_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.260498, 0.266099, 0.272631, 0.286045, 0.309024, 0.348262, 0.424618", \
+            "0.265655, 0.271255, 0.277787, 0.291201, 0.314180, 0.353419, 0.429774", \
+            "0.283321, 0.288921, 0.295454, 0.308867, 0.331847, 0.371085, 0.447441", \
+            "0.291280, 0.296881, 0.303413, 0.316827, 0.339806, 0.379044, 0.455400", \
+            "0.296835, 0.302435, 0.308967, 0.322381, 0.345360, 0.384599, 0.460954", \
+            "0.314079, 0.319680, 0.326212, 0.339626, 0.362605, 0.401844, 0.478199", \
+            "0.331301, 0.336901, 0.343433, 0.356847, 0.379827, 0.419065, 0.495421" \
+          );
+        }
+        fall_transition(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487" \
+          );
+        }
+        retain_fall_slew(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CLK;
+        timing_type : rising_edge;
+        timing_sense : non_unate;
+        when : "RET1N&WEN&EMA[2]&EMA[1]&EMA[0]";
+        sdf_cond : "RET1N == 1'b1 && WEN == 1'b1 && EMA[2] == 1'b1 && EMA[1] == 1'b1 && \
+                EMA[0] == 1'b1";
+        cell_rise(sram2Kx8_clockslew_outputload_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.771624, 0.775975, 0.781891, 0.794286, 0.818540, 0.864025, 0.956417", \
+            "0.777334, 0.781685, 0.787600, 0.799996, 0.824250, 0.869734, 0.962126", \
+            "0.794664, 0.799016, 0.804931, 0.817327, 0.841581, 0.887065, 0.979457", \
+            "0.802962, 0.807313, 0.813228, 0.825624, 0.849878, 0.895362, 0.987754", \
+            "0.809654, 0.814005, 0.819920, 0.832316, 0.856570, 0.902055, 0.994446", \
+            "0.826634, 0.830985, 0.836900, 0.849296, 0.873550, 0.919034, 1.011426", \
+            "0.845572, 0.849923, 0.855839, 0.868234, 0.892488, 0.937973, 1.030365" \
+          );
+        }
+        retaining_rise(sram2Kx8_clockslew_outputload_retain_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.263130, 0.268787, 0.275385, 0.288934, 0.312146, 0.351780, 0.428907", \
+            "0.268338, 0.273995, 0.280593, 0.294142, 0.317354, 0.356989, 0.434116", \
+            "0.286183, 0.291840, 0.298438, 0.311987, 0.335199, 0.374833, 0.451960", \
+            "0.294223, 0.299879, 0.306478, 0.320027, 0.343239, 0.382873, 0.460000", \
+            "0.299833, 0.305490, 0.312088, 0.325637, 0.348849, 0.388483, 0.465610", \
+            "0.317252, 0.322909, 0.329507, 0.343056, 0.366268, 0.405903, 0.483029", \
+            "0.334647, 0.340304, 0.346903, 0.360452, 0.383663, 0.423298, 0.500425" \
+          );
+        }
+        rise_transition(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243" \
+          );
+        }
+        retain_rise_slew(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243", \
+            "0.027623, 0.033998, 0.041678, 0.056599, 0.089954, 0.160060, 0.299243" \
+          );
+        }
+        cell_fall(sram2Kx8_clockslew_outputload_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.775850, 0.780245, 0.786220, 0.798741, 0.823240, 0.869184, 0.962509", \
+            "0.781617, 0.786012, 0.791987, 0.804508, 0.829007, 0.874951, 0.968276", \
+            "0.799123, 0.803518, 0.809493, 0.822014, 0.846513, 0.892457, 0.985782", \
+            "0.807504, 0.811899, 0.817874, 0.830395, 0.854894, 0.900838, 0.994163", \
+            "0.814264, 0.818659, 0.824634, 0.837155, 0.861654, 0.907598, 1.000923", \
+            "0.831415, 0.835810, 0.841785, 0.854306, 0.878805, 0.924749, 1.018074", \
+            "0.850545, 0.854940, 0.860915, 0.873436, 0.897935, 0.943879, 1.037204" \
+          );
+        }
+        retaining_fall(sram2Kx8_clockslew_outputload_retain_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.260498, 0.266099, 0.272631, 0.286045, 0.309024, 0.348262, 0.424618", \
+            "0.265655, 0.271255, 0.277787, 0.291201, 0.314180, 0.353419, 0.429774", \
+            "0.283321, 0.288921, 0.295454, 0.308867, 0.331847, 0.371085, 0.447441", \
+            "0.291280, 0.296881, 0.303413, 0.316827, 0.339806, 0.379044, 0.455400", \
+            "0.296835, 0.302435, 0.308967, 0.322381, 0.345360, 0.384599, 0.460954", \
+            "0.314079, 0.319680, 0.326212, 0.339626, 0.362605, 0.401844, 0.478199", \
+            "0.331301, 0.336901, 0.343433, 0.356847, 0.379827, 0.419065, 0.495421" \
+          );
+        }
+        fall_transition(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487" \
+          );
+        }
+        retain_fall_slew(sram2Kx8_clockslew_outputload_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487", \
+            "0.018404, 0.023385, 0.032381, 0.050580, 0.095165, 0.180634, 0.349487" \
+          );
+        }
+      }
+      internal_power() {
+        related_pin : CLK;
+        related_pg_pin : "VDDPE";
+        when : "RET1N&WEN";
+        rise_power(sram2Kx8_clockslew_outputload_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.014585, 0.014598, 0.014611, 0.014624, 0.015230, 0.015244, 0.015258", \
+            "0.014598, 0.014611, 0.014624, 0.014637, 0.015244, 0.015258, 0.015271", \
+            "0.014611, 0.014624, 0.014637, 0.014650, 0.015258, 0.015271, 0.015285", \
+            "0.014624, 0.014637, 0.014650, 0.014663, 0.015271, 0.015285, 0.015299", \
+            "0.014637, 0.014650, 0.014663, 0.014676, 0.015285, 0.015299, 0.015312", \
+            "0.014650, 0.014663, 0.014676, 0.014689, 0.015299, 0.015312, 0.015326", \
+            "0.014663, 0.014676, 0.014689, 0.014702, 0.015312, 0.015326, 0.015340" \
+          );
+        }
+        fall_power(sram2Kx8_clockslew_outputload_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.004000, 0.009000, 0.018000, 0.035000, 0.075000, 0.150000, 0.300000");
+          values (\
+            "0.004857, 0.005258, 0.005261, 0.005265, 0.005551, 0.006166, 0.006171", \
+            "0.005174, 0.005575, 0.005579, 0.005583, 0.005868, 0.006484, 0.006489", \
+            "0.005178, 0.005579, 0.005583, 0.005587, 0.005873, 0.006489, 0.006494", \
+            "0.005408, 0.005809, 0.005813, 0.005817, 0.006102, 0.006717, 0.006723", \
+            "0.005412, 0.005813, 0.005817, 0.005822, 0.006106, 0.006723, 0.006728", \
+            "0.005415, 0.005817, 0.005822, 0.005826, 0.006111, 0.006728, 0.006733", \
+            "0.005419, 0.005822, 0.005826, 0.005830, 0.006115, 0.006733, 0.006738" \
+          );
+        }
+      }
+    }
+    pin(CLK) {
+      direction : input;
+      related_power_pin : "VDDPE";
+      related_ground_pin : "VSSE";
+      capacitance : 0.013248;
+      clock : true;
+      max_transition : 0.301300;
+      /* Internal energy table for read mode */
+      internal_power() {
+        when : "RET1N&!CEN&WEN&!EMA[2]&!EMA[1]&!EMA[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.328974, 2.331565, 2.334837, 2.337172, 2.339510, 2.341849, 2.344191");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for read mode */
+      internal_power() {
+        when : "RET1N&!CEN&WEN&!EMA[2]&!EMA[1]&EMA[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.332817, 2.335411, 2.338687, 2.341026, 2.343367, 2.345710, 2.348056");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for read mode */
+      internal_power() {
+        when : "RET1N&!CEN&WEN&!EMA[2]&EMA[1]&!EMA[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.344795, 2.347401, 2.350690, 2.353041, 2.355393, 2.357749, 2.360106");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for read mode */
+      internal_power() {
+        when : "RET1N&!CEN&WEN&!EMA[2]&EMA[1]&EMA[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.360171, 2.362792, 2.366096, 2.368462, 2.370831, 2.373201, 2.375574");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for read mode */
+      internal_power() {
+        when : "RET1N&!CEN&WEN&EMA[2]&!EMA[1]&!EMA[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.749627, 2.752636, 2.756328, 2.759085, 2.761844, 2.764606, 2.767371");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for read mode */
+      internal_power() {
+        when : "RET1N&!CEN&WEN&EMA[2]&!EMA[1]&EMA[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.832599, 2.835691, 2.839467, 2.842306, 2.845148, 2.847994, 2.850842");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for read mode */
+      internal_power() {
+        when : "RET1N&!CEN&WEN&EMA[2]&EMA[1]&!EMA[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.864975, 2.868098, 2.871905, 2.874777, 2.877652, 2.880529, 2.883410");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for read mode */
+      internal_power() {
+        when : "RET1N&!CEN&WEN&EMA[2]&EMA[1]&EMA[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.907899, 2.911065, 2.914914, 2.917828, 2.920746, 2.923667, 2.926591");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&!EMA[2]&!EMA[1]&!EMA[0]&!EMAW[1]&!EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.352264, 2.354881, 2.358407, 2.360766, 2.363127, 2.365490, 2.367856");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&!EMA[2]&!EMA[1]&EMA[0]&!EMAW[1]&!EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.361335, 2.364121, 2.367994, 2.370362, 2.372733, 2.375106, 2.377481");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&!EMA[2]&EMA[1]&!EMA[0]&!EMAW[1]&!EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.373433, 2.376231, 2.380117, 2.382497, 2.384880, 2.387265, 2.389652");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&!EMA[2]&EMA[1]&EMA[0]&!EMAW[1]&!EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.388623, 2.391436, 2.395337, 2.397733, 2.400131, 2.402531, 2.404933");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&EMA[2]&!EMA[1]&!EMA[0]&!EMAW[1]&!EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.781145, 2.784351, 2.788645, 2.791433, 2.794225, 2.797019, 2.799816");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&EMA[2]&!EMA[1]&EMA[0]&!EMAW[1]&!EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.865973, 2.869262, 2.873640, 2.876513, 2.879389, 2.882269, 2.885151");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&EMA[2]&EMA[1]&!EMA[0]&!EMAW[1]&!EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.897220, 2.900541, 2.904949, 2.907855, 2.910763, 2.913673, 2.916587");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&EMA[2]&EMA[1]&EMA[0]&!EMAW[1]&!EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.941857, 2.945221, 2.949672, 2.952622, 2.955575, 2.958530, 2.961489");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&!EMA[2]&!EMA[1]&!EMA[0]&!EMAW[1]&EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.363271, 2.365899, 2.369478, 2.371848, 2.374220, 2.376594, 2.378971");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&!EMA[2]&!EMA[1]&EMA[0]&!EMAW[1]&EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.372361, 2.375158, 2.379043, 2.381422, 2.383804, 2.386187, 2.388573");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&!EMA[2]&EMA[1]&!EMA[0]&!EMAW[1]&EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.384519, 2.387329, 2.391226, 2.393617, 2.396010, 2.398406, 2.400804");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&!EMA[2]&EMA[1]&EMA[0]&!EMAW[1]&EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.399784, 2.402609, 2.406521, 2.408928, 2.411337, 2.413748, 2.416162");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&EMA[2]&!EMA[1]&!EMA[0]&!EMAW[1]&EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.794248, 2.797467, 2.801774, 2.804576, 2.807380, 2.810187, 2.812998");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&EMA[2]&!EMA[1]&EMA[0]&!EMAW[1]&EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.879490, 2.882792, 2.887184, 2.890071, 2.892960, 2.895854, 2.898750");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&EMA[2]&EMA[1]&!EMA[0]&!EMAW[1]&EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.910891, 2.914225, 2.918648, 2.921567, 2.924488, 2.927412, 2.930340");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&EMA[2]&EMA[1]&EMA[0]&!EMAW[1]&EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.955741, 2.959119, 2.963584, 2.966548, 2.969514, 2.972484, 2.975456");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&!EMA[2]&!EMA[1]&!EMA[0]&EMAW[1]&!EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.375378, 2.378182, 2.382074, 2.384456, 2.386841, 2.389227, 2.391617");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&!EMA[2]&!EMA[1]&EMA[0]&EMAW[1]&!EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.383387, 2.386195, 2.390091, 2.392481, 2.394874, 2.397268, 2.399666");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&!EMA[2]&EMA[1]&!EMA[0]&EMAW[1]&!EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.395605, 2.398426, 2.402334, 2.404736, 2.407141, 2.409548, 2.411957");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&!EMA[2]&EMA[1]&EMA[0]&EMAW[1]&!EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.410946, 2.413781, 2.417705, 2.420123, 2.422543, 2.424965, 2.427390");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&EMA[2]&!EMA[1]&!EMA[0]&EMAW[1]&!EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.807351, 2.810583, 2.814903, 2.817718, 2.820535, 2.823356, 2.826179");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&EMA[2]&!EMA[1]&EMA[0]&EMAW[1]&!EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.893007, 2.896323, 2.900728, 2.903628, 2.906532, 2.909439, 2.912348");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&EMA[2]&EMA[1]&!EMA[0]&EMAW[1]&!EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.924563, 2.927910, 2.932346, 2.935279, 2.938214, 2.941152, 2.944094");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&EMA[2]&EMA[1]&EMA[0]&EMAW[1]&!EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.969626, 2.973017, 2.977496, 2.980474, 2.983454, 2.986438, 2.989424");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&!EMA[2]&!EMA[1]&!EMA[0]&EMAW[1]&EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.390475, 2.393291, 2.397193, 2.399590, 2.401990, 2.404392, 2.406797");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&!EMA[2]&!EMA[1]&EMA[0]&EMAW[1]&EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.394413, 2.397233, 2.401139, 2.403540, 2.405944, 2.408350, 2.410758");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&!EMA[2]&EMA[1]&!EMA[0]&EMAW[1]&EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.406691, 2.409523, 2.413442, 2.415855, 2.418271, 2.420690, 2.423110");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&!EMA[2]&EMA[1]&EMA[0]&EMAW[1]&EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.422443, 2.425290, 2.429225, 2.431654, 2.434086, 2.436520, 2.438956");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&EMA[2]&!EMA[1]&!EMA[0]&EMAW[1]&EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.821607, 2.824852, 2.829185, 2.832014, 2.834846, 2.837681, 2.840519");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&EMA[2]&!EMA[1]&EMA[0]&EMAW[1]&EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.906650, 2.909980, 2.914398, 2.917312, 2.920229, 2.923150, 2.926073");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&EMA[2]&EMA[1]&!EMA[0]&EMAW[1]&EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.939797, 2.943158, 2.947608, 2.950556, 2.953506, 2.956459, 2.959416");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for write mode */
+      internal_power() {
+        when : "RET1N&!CEN&!WEN&EMA[2]&EMA[1]&EMA[0]&EMAW[1]&EMAW[0]";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("2.983787, 2.987192, 2.991685, 2.994677, 2.997672, 3.000669, 3.003670");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for ds mode */
+      internal_power() {
+        when : "RET1N&CEN";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.006478, 0.006482, 0.006487, 0.006492, 0.006497, 0.006502, 0.006507");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      /* Internal energy table for precharge mode */
+      internal_power() {
+        when : "!RET1N";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.006478, 0.006482, 0.006487, 0.006492, 0.006497, 0.006502, 0.006507");
+        }
+        fall_power(sram2Kx8_clockslew_energy_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.020230, 0.020249, 0.020268, 0.020287, 0.020306, 0.020341, 0.020360");
+        }
+      }
+      minimum_period() {
+        constraint : 0.622410;
+        when : "RET1N&!CEN&!EMA[2]&!EMA[1]&!EMA[0]&!EMAW[1]&!EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq0aEMA0eq0aEMAW1eq0aEMAW0eq0aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.624229;
+        when : "RET1N&!CEN&!EMA[2]&!EMA[1]&EMA[0]&!EMAW[1]&!EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq0aEMA0eq1aEMAW1eq0aEMAW0eq0aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.627577;
+        when : "RET1N&!CEN&!EMA[2]&EMA[1]&!EMA[0]&!EMAW[1]&!EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq1aEMA0eq0aEMAW1eq0aEMAW0eq0aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.630634;
+        when : "RET1N&!CEN&!EMA[2]&EMA[1]&EMA[0]&!EMAW[1]&!EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq1aEMA0eq1aEMAW1eq0aEMAW0eq0aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.766881;
+        when : "RET1N&!CEN&EMA[2]&!EMA[1]&!EMA[0]&!EMAW[1]&!EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq0aEMA0eq0aEMAW1eq0aEMAW0eq0aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.854824;
+        when : "RET1N&!CEN&EMA[2]&!EMA[1]&EMA[0]&!EMAW[1]&!EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq0aEMA0eq1aEMAW1eq0aEMAW0eq0aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.906915;
+        when : "RET1N&!CEN&EMA[2]&EMA[1]&!EMA[0]&!EMAW[1]&!EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq1aEMA0eq0aEMAW1eq0aEMAW0eq0aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.991770;
+        when : "RET1N&!CEN&EMA[2]&EMA[1]&EMA[0]&!EMAW[1]&!EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq1aEMA0eq1aEMAW1eq0aEMAW0eq0aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.622061;
+        when : "RET1N&!CEN&!EMA[2]&!EMA[1]&!EMA[0]&!EMAW[1]&EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq0aEMA0eq0aEMAW1eq0aEMAW0eq1aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.623880;
+        when : "RET1N&!CEN&!EMA[2]&!EMA[1]&EMA[0]&!EMAW[1]&EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq0aEMA0eq1aEMAW1eq0aEMAW0eq1aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.627230;
+        when : "RET1N&!CEN&!EMA[2]&EMA[1]&!EMA[0]&!EMAW[1]&EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq1aEMA0eq0aEMAW1eq0aEMAW0eq1aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.630286;
+        when : "RET1N&!CEN&!EMA[2]&EMA[1]&EMA[0]&!EMAW[1]&EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq1aEMA0eq1aEMAW1eq0aEMAW0eq1aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.766533;
+        when : "RET1N&!CEN&EMA[2]&!EMA[1]&!EMA[0]&!EMAW[1]&EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq0aEMA0eq0aEMAW1eq0aEMAW0eq1aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.854475;
+        when : "RET1N&!CEN&EMA[2]&!EMA[1]&EMA[0]&!EMAW[1]&EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq0aEMA0eq1aEMAW1eq0aEMAW0eq1aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.906567;
+        when : "RET1N&!CEN&EMA[2]&EMA[1]&!EMA[0]&!EMAW[1]&EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq1aEMA0eq0aEMAW1eq0aEMAW0eq1aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.991423;
+        when : "RET1N&!CEN&EMA[2]&EMA[1]&EMA[0]&!EMAW[1]&EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq1aEMA0eq1aEMAW1eq0aEMAW0eq1aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.705758;
+        when : "RET1N&!CEN&!EMA[2]&!EMA[1]&!EMA[0]&EMAW[1]&!EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq0aEMA0eq0aEMAW1eq1aEMAW0eq0aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.707578;
+        when : "RET1N&!CEN&!EMA[2]&!EMA[1]&EMA[0]&EMAW[1]&!EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq0aEMA0eq1aEMAW1eq1aEMAW0eq0aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.710927;
+        when : "RET1N&!CEN&!EMA[2]&EMA[1]&!EMA[0]&EMAW[1]&!EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq1aEMA0eq0aEMAW1eq1aEMAW0eq0aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.713985;
+        when : "RET1N&!CEN&!EMA[2]&EMA[1]&EMA[0]&EMAW[1]&!EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq1aEMA0eq1aEMAW1eq1aEMAW0eq0aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.850231;
+        when : "RET1N&!CEN&EMA[2]&!EMA[1]&!EMA[0]&EMAW[1]&!EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq0aEMA0eq0aEMAW1eq1aEMAW0eq0aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.938173;
+        when : "RET1N&!CEN&EMA[2]&!EMA[1]&EMA[0]&EMAW[1]&!EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq0aEMA0eq1aEMAW1eq1aEMAW0eq0aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.990264;
+        when : "RET1N&!CEN&EMA[2]&EMA[1]&!EMA[0]&EMAW[1]&!EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq1aEMA0eq0aEMAW1eq1aEMAW0eq0aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 1.075120;
+        when : "RET1N&!CEN&EMA[2]&EMA[1]&EMA[0]&EMAW[1]&!EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq1aEMA0eq1aEMAW1eq1aEMAW0eq0aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.900514;
+        when : "RET1N&!CEN&!EMA[2]&!EMA[1]&!EMA[0]&EMAW[1]&EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq0aEMA0eq0aEMAW1eq1aEMAW0eq1aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.902334;
+        when : "RET1N&!CEN&!EMA[2]&!EMA[1]&EMA[0]&EMAW[1]&EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq0aEMA0eq1aEMAW1eq1aEMAW0eq1aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.905682;
+        when : "RET1N&!CEN&!EMA[2]&EMA[1]&!EMA[0]&EMAW[1]&EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq1aEMA0eq0aEMAW1eq1aEMAW0eq1aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.908740;
+        when : "RET1N&!CEN&!EMA[2]&EMA[1]&EMA[0]&EMAW[1]&EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq1aEMA0eq1aEMAW1eq1aEMAW0eq1aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 1.044987;
+        when : "RET1N&!CEN&EMA[2]&!EMA[1]&!EMA[0]&EMAW[1]&EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq0aEMA0eq0aEMAW1eq1aEMAW0eq1aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 1.132928;
+        when : "RET1N&!CEN&EMA[2]&!EMA[1]&EMA[0]&EMAW[1]&EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq0aEMA0eq1aEMAW1eq1aEMAW0eq1aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 1.185020;
+        when : "RET1N&!CEN&EMA[2]&EMA[1]&!EMA[0]&EMAW[1]&EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq1aEMA0eq0aEMAW1eq1aEMAW0eq1aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 1.269874;
+        when : "RET1N&!CEN&EMA[2]&EMA[1]&EMA[0]&EMAW[1]&EMAW[0]&!EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq1aEMA0eq1aEMAW1eq1aEMAW0eq1aEMASeq0";
+      }
+      minimum_period() {
+        constraint : 0.622410;
+        when : "RET1N&!CEN&!EMA[2]&!EMA[1]&!EMA[0]&!EMAW[1]&!EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq0aEMA0eq0aEMAW1eq0aEMAW0eq0aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.624229;
+        when : "RET1N&!CEN&!EMA[2]&!EMA[1]&EMA[0]&!EMAW[1]&!EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq0aEMA0eq1aEMAW1eq0aEMAW0eq0aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.627577;
+        when : "RET1N&!CEN&!EMA[2]&EMA[1]&!EMA[0]&!EMAW[1]&!EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq1aEMA0eq0aEMAW1eq0aEMAW0eq0aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.630634;
+        when : "RET1N&!CEN&!EMA[2]&EMA[1]&EMA[0]&!EMAW[1]&!EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq1aEMA0eq1aEMAW1eq0aEMAW0eq0aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.766881;
+        when : "RET1N&!CEN&EMA[2]&!EMA[1]&!EMA[0]&!EMAW[1]&!EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq0aEMA0eq0aEMAW1eq0aEMAW0eq0aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.854824;
+        when : "RET1N&!CEN&EMA[2]&!EMA[1]&EMA[0]&!EMAW[1]&!EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq0aEMA0eq1aEMAW1eq0aEMAW0eq0aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.906915;
+        when : "RET1N&!CEN&EMA[2]&EMA[1]&!EMA[0]&!EMAW[1]&!EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq1aEMA0eq0aEMAW1eq0aEMAW0eq0aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.991770;
+        when : "RET1N&!CEN&EMA[2]&EMA[1]&EMA[0]&!EMAW[1]&!EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq1aEMA0eq1aEMAW1eq0aEMAW0eq0aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.622061;
+        when : "RET1N&!CEN&!EMA[2]&!EMA[1]&!EMA[0]&!EMAW[1]&EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq0aEMA0eq0aEMAW1eq0aEMAW0eq1aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.623880;
+        when : "RET1N&!CEN&!EMA[2]&!EMA[1]&EMA[0]&!EMAW[1]&EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq0aEMA0eq1aEMAW1eq0aEMAW0eq1aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.627230;
+        when : "RET1N&!CEN&!EMA[2]&EMA[1]&!EMA[0]&!EMAW[1]&EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq1aEMA0eq0aEMAW1eq0aEMAW0eq1aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.630286;
+        when : "RET1N&!CEN&!EMA[2]&EMA[1]&EMA[0]&!EMAW[1]&EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq1aEMA0eq1aEMAW1eq0aEMAW0eq1aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.766533;
+        when : "RET1N&!CEN&EMA[2]&!EMA[1]&!EMA[0]&!EMAW[1]&EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq0aEMA0eq0aEMAW1eq0aEMAW0eq1aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.854475;
+        when : "RET1N&!CEN&EMA[2]&!EMA[1]&EMA[0]&!EMAW[1]&EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq0aEMA0eq1aEMAW1eq0aEMAW0eq1aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.906567;
+        when : "RET1N&!CEN&EMA[2]&EMA[1]&!EMA[0]&!EMAW[1]&EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq1aEMA0eq0aEMAW1eq0aEMAW0eq1aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.991423;
+        when : "RET1N&!CEN&EMA[2]&EMA[1]&EMA[0]&!EMAW[1]&EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq1aEMA0eq1aEMAW1eq0aEMAW0eq1aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.705758;
+        when : "RET1N&!CEN&!EMA[2]&!EMA[1]&!EMA[0]&EMAW[1]&!EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq0aEMA0eq0aEMAW1eq1aEMAW0eq0aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.707578;
+        when : "RET1N&!CEN&!EMA[2]&!EMA[1]&EMA[0]&EMAW[1]&!EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq0aEMA0eq1aEMAW1eq1aEMAW0eq0aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.710927;
+        when : "RET1N&!CEN&!EMA[2]&EMA[1]&!EMA[0]&EMAW[1]&!EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq1aEMA0eq0aEMAW1eq1aEMAW0eq0aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.713985;
+        when : "RET1N&!CEN&!EMA[2]&EMA[1]&EMA[0]&EMAW[1]&!EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq1aEMA0eq1aEMAW1eq1aEMAW0eq0aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.850231;
+        when : "RET1N&!CEN&EMA[2]&!EMA[1]&!EMA[0]&EMAW[1]&!EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq0aEMA0eq0aEMAW1eq1aEMAW0eq0aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.938173;
+        when : "RET1N&!CEN&EMA[2]&!EMA[1]&EMA[0]&EMAW[1]&!EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq0aEMA0eq1aEMAW1eq1aEMAW0eq0aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.990264;
+        when : "RET1N&!CEN&EMA[2]&EMA[1]&!EMA[0]&EMAW[1]&!EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq1aEMA0eq0aEMAW1eq1aEMAW0eq0aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 1.075120;
+        when : "RET1N&!CEN&EMA[2]&EMA[1]&EMA[0]&EMAW[1]&!EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq1aEMA0eq1aEMAW1eq1aEMAW0eq0aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.900514;
+        when : "RET1N&!CEN&!EMA[2]&!EMA[1]&!EMA[0]&EMAW[1]&EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq0aEMA0eq0aEMAW1eq1aEMAW0eq1aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.902334;
+        when : "RET1N&!CEN&!EMA[2]&!EMA[1]&EMA[0]&EMAW[1]&EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq0aEMA0eq1aEMAW1eq1aEMAW0eq1aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.905682;
+        when : "RET1N&!CEN&!EMA[2]&EMA[1]&!EMA[0]&EMAW[1]&EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq1aEMA0eq0aEMAW1eq1aEMAW0eq1aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 0.908740;
+        when : "RET1N&!CEN&!EMA[2]&EMA[1]&EMA[0]&EMAW[1]&EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq0aEMA1eq1aEMA0eq1aEMAW1eq1aEMAW0eq1aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 1.044987;
+        when : "RET1N&!CEN&EMA[2]&!EMA[1]&!EMA[0]&EMAW[1]&EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq0aEMA0eq0aEMAW1eq1aEMAW0eq1aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 1.132928;
+        when : "RET1N&!CEN&EMA[2]&!EMA[1]&EMA[0]&EMAW[1]&EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq0aEMA0eq1aEMAW1eq1aEMAW0eq1aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 1.185020;
+        when : "RET1N&!CEN&EMA[2]&EMA[1]&!EMA[0]&EMAW[1]&EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq1aEMA0eq0aEMAW1eq1aEMAW0eq1aEMASeq1";
+      }
+      minimum_period() {
+        constraint : 1.269874;
+        when : "RET1N&!CEN&EMA[2]&EMA[1]&EMA[0]&EMAW[1]&EMAW[0]&EMAS";
+        sdf_cond : "RET1Neq1aCENeq0aEMA2eq1aEMA1eq1aEMA0eq1aEMAW1eq1aEMAW0eq1aEMASeq1";
+      }
+      min_pulse_width_high : 0.272598;
+      min_pulse_width_low : 0.173364;
+      timing() {
+        timing_type : min_clock_tree_path;
+        timing_sense : positive_unate;
+        cell_rise(sram2Kx8_cts1x7_clockslew_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.140567, 0.145841, 0.163312, 0.172563, 0.178158, 0.195436, 0.215326");
+        }
+        rise_transition(sram2Kx8_cts1x7_clockslew_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.026918, 0.027040, 0.028040, 0.029040, 0.030040, 0.031040, 0.032040");
+        }
+        cell_fall(sram2Kx8_cts1x7_clockslew_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.140567, 0.145841, 0.163312, 0.172563, 0.178158, 0.195436, 0.215326");
+        }
+        fall_transition(sram2Kx8_cts1x7_clockslew_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.033094, 0.034094, 0.035094, 0.036094, 0.037094, 0.038094, 0.039094");
+        }
+      }
+      timing() {
+        timing_type : min_clock_tree_path;
+        timing_sense : negative_unate;
+        cell_fall(sram2Kx8_cts1x7_clockslew_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.140567, 0.145841, 0.163312, 0.172563, 0.178158, 0.195436, 0.215326");
+        }
+        fall_transition(sram2Kx8_cts1x7_clockslew_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.033094, 0.034094, 0.035094, 0.036094, 0.037094, 0.038094, 0.039094");
+        }
+        cell_rise(sram2Kx8_cts1x7_clockslew_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.140567, 0.145841, 0.163312, 0.172563, 0.178158, 0.195436, 0.215326");
+        }
+        rise_transition(sram2Kx8_cts1x7_clockslew_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.026918, 0.027040, 0.028040, 0.029040, 0.030040, 0.031040, 0.032040");
+        }
+      }
+      timing() {
+        timing_type : max_clock_tree_path;
+        timing_sense : positive_unate;
+        cell_rise(sram2Kx8_cts1x7_clockslew_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.177858, 0.182820, 0.201427, 0.210404, 0.213970, 0.232063, 0.250605");
+        }
+        rise_transition(sram2Kx8_cts1x7_clockslew_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.026918, 0.027040, 0.028040, 0.029040, 0.030040, 0.031040, 0.032040");
+        }
+        cell_fall(sram2Kx8_cts1x7_clockslew_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.177858, 0.182820, 0.201427, 0.210404, 0.213970, 0.232063, 0.250605");
+        }
+        fall_transition(sram2Kx8_cts1x7_clockslew_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.033094, 0.034094, 0.035094, 0.036094, 0.037094, 0.038094, 0.039094");
+        }
+      }
+      timing() {
+        timing_type : max_clock_tree_path;
+        timing_sense : negative_unate;
+        cell_fall(sram2Kx8_cts1x7_clockslew_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.177858, 0.182820, 0.201427, 0.210404, 0.213970, 0.232063, 0.250605");
+        }
+        fall_transition(sram2Kx8_cts1x7_clockslew_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.033094, 0.034094, 0.035094, 0.036094, 0.037094, 0.038094, 0.039094");
+        }
+        cell_rise(sram2Kx8_cts1x7_clockslew_delay_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.177858, 0.182820, 0.201427, 0.210404, 0.213970, 0.232063, 0.250605");
+        }
+        rise_transition(sram2Kx8_cts1x7_clockslew_slew_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          values ("0.026918, 0.027040, 0.028040, 0.029040, 0.030040, 0.031040, 0.032040");
+        }
+      }
+    }
+    pin(CEN) {
+      direction : input;
+      related_power_pin : "VDDPE";
+      related_ground_pin : "VSSE";
+      capacitance : 0.002596;
+      max_transition : 0.480000;
+      timing() {
+        related_pin : CLK;
+        timing_type : setup_rising;
+        when : "RET1N";
+        sdf_cond : "RET1Neq1";
+        rise_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.133843, 0.137757, 0.152565, 0.172507, 0.189796, 0.209822, 0.238599", \
+            "0.128670, 0.132585, 0.147391, 0.167335, 0.184622, 0.204651, 0.233425", \
+            "0.110889, 0.114803, 0.129610, 0.149553, 0.166842, 0.186869, 0.215644", \
+            "0.107489, 0.112645, 0.124667, 0.140284, 0.157570, 0.177599, 0.206373", \
+            "0.106489, 0.111645, 0.123667, 0.138939, 0.152515, 0.172544, 0.201318", \
+            "0.105489, 0.110645, 0.122667, 0.137939, 0.150721, 0.165712, 0.195824", \
+            "0.104489, 0.109645, 0.121667, 0.136939, 0.149721, 0.164722, 0.194834" \
+          );
+        }
+        fall_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.130782, 0.134736, 0.149693, 0.169837, 0.187300, 0.207529, 0.236596", \
+            "0.125557, 0.129511, 0.144467, 0.164613, 0.182074, 0.202305, 0.231370", \
+            "0.107596, 0.111550, 0.126506, 0.146651, 0.164114, 0.184344, 0.213409", \
+            "0.102226, 0.107331, 0.119233, 0.137288, 0.154749, 0.174980, 0.204045", \
+            "0.101236, 0.106341, 0.118243, 0.133362, 0.149643, 0.169874, 0.198939", \
+            "0.100246, 0.105351, 0.117253, 0.132372, 0.145026, 0.162973, 0.193389", \
+            "0.099256, 0.104361, 0.116263, 0.131382, 0.144036, 0.161973, 0.192389" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CLK;
+        timing_type : hold_rising;
+        when : "RET1N";
+        sdf_cond : "RET1Neq1";
+        rise_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.133164, 0.127955, 0.123148, 0.122148, 0.116863, 0.115863, 0.114863", \
+            "0.138624, 0.133415, 0.128608, 0.127608, 0.122323, 0.121323, 0.120323", \
+            "0.156061, 0.150852, 0.146045, 0.145045, 0.139760, 0.138760, 0.137760", \
+            "0.165346, 0.160137, 0.155330, 0.154330, 0.149045, 0.148045, 0.147045", \
+            "0.170768, 0.165559, 0.160752, 0.159752, 0.154467, 0.153467, 0.152467", \
+            "0.188224, 0.183015, 0.178208, 0.177208, 0.171923, 0.170923, 0.169923", \
+            "0.207951, 0.202742, 0.197935, 0.196935, 0.191650, 0.190650, 0.189650" \
+          );
+        }
+        fall_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.141171, 0.134771, 0.129268, 0.121222, 0.118276, 0.117155, 0.110331", \
+            "0.146445, 0.140045, 0.134542, 0.126496, 0.123550, 0.122429, 0.115605", \
+            "0.163916, 0.157516, 0.152013, 0.143967, 0.141021, 0.139900, 0.133076", \
+            "0.173166, 0.166766, 0.161263, 0.153217, 0.150271, 0.149150, 0.142326", \
+            "0.178763, 0.172363, 0.166860, 0.158814, 0.155868, 0.154747, 0.147923", \
+            "0.196217, 0.189817, 0.184314, 0.176268, 0.173322, 0.172201, 0.165377", \
+            "0.215929, 0.209529, 0.204026, 0.195980, 0.193034, 0.191913, 0.185089" \
+          );
+        }
+      }
+      timing() {
+        related_pin : RET1N;
+        timing_type : non_seq_setup_falling;
+        fall_constraint(sram2Kx8_inputslew_inputslew_setup_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000" \
+          );
+        }
+      }
+      timing() {
+        related_pin : RET1N;
+        timing_type : non_seq_hold_falling;
+        fall_constraint(sram2Kx8_inputslew_inputslew_hold_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.613858, 0.607216, 0.600122, 0.598850, 0.588686, 0.587691, 0.586686", \
+            "0.619999, 0.613357, 0.606263, 0.604991, 0.594827, 0.593827, 0.592827", \
+            "0.637305, 0.630663, 0.623569, 0.622297, 0.612133, 0.611133, 0.610133", \
+            "0.645294, 0.638652, 0.631558, 0.630286, 0.620560, 0.619570, 0.618122", \
+            "0.652556, 0.645914, 0.638820, 0.637548, 0.627384, 0.626384, 0.625384", \
+            "0.668056, 0.661414, 0.654320, 0.653048, 0.642964, 0.641974, 0.640884", \
+            "0.689012, 0.682370, 0.675276, 0.674004, 0.663840, 0.662840, 0.661840" \
+          );
+        }
+      }
+      timing() {
+        related_pin : RET1N;
+        timing_type : non_seq_setup_rising;
+        fall_constraint(sram2Kx8_inputslew_inputslew_setup_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000" \
+          );
+        }
+      }
+      timing() {
+        related_pin : RET1N;
+        timing_type : non_seq_hold_rising;
+        fall_constraint(sram2Kx8_inputslew_inputslew_hold_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.805500, 0.792797, 0.779376, 0.752893, 0.732244, 0.700269, 0.658222", \
+            "0.830906, 0.818203, 0.804782, 0.778299, 0.757650, 0.725675, 0.683628", \
+            "0.857747, 0.845044, 0.831623, 0.805140, 0.784491, 0.752516, 0.710469", \
+            "0.910715, 0.898012, 0.884591, 0.858108, 0.837459, 0.805484, 0.763437", \
+            "0.952013, 0.939310, 0.925889, 0.899406, 0.878757, 0.846782, 0.804735", \
+            "1.015963, 1.003260, 0.989839, 0.963356, 0.942707, 0.910732, 0.868685", \
+            "1.100056, 1.087353, 1.073932, 1.047449, 1.026800, 0.994825, 0.952778" \
+          );
+        }
+      }
+      internal_power() {
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_inputslew_energy_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values ("0.108510, 0.108786, 0.108841, 0.108950, 0.109059, 0.109168, 0.109277");
+        }
+        fall_power(sram2Kx8_inputslew_energy_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values ("1.080598, 1.081440, 1.082520, 1.083601, 1.084683, 1.085766, 1.086850");
+        }
+      }
+    }
+    pin(WEN) {
+      direction : input;
+      related_power_pin : "VDDPE";
+      related_ground_pin : "VSSE";
+      capacitance : 0.004441;
+      max_transition : 0.480000;
+      timing() {
+        related_pin : CLK;
+        timing_type : setup_rising;
+        when : "RET1N&!CEN";
+        sdf_cond : "RET1Neq1aCENeq0";
+        rise_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.119370, 0.125177, 0.137984, 0.156180, 0.170583, 0.192107, 0.220448", \
+            "0.112299, 0.118106, 0.130913, 0.148320, 0.162724, 0.184247, 0.212843", \
+            "0.095764, 0.101571, 0.114378, 0.130885, 0.145289, 0.166812, 0.195154", \
+            "0.086180, 0.091987, 0.104794, 0.122624, 0.137027, 0.158551, 0.186892", \
+            "0.079316, 0.085123, 0.097930, 0.116443, 0.130846, 0.152370, 0.180712", \
+            "0.064347, 0.070154, 0.082961, 0.099878, 0.114282, 0.135805, 0.164147", \
+            "0.043439, 0.049246, 0.062053, 0.081625, 0.096028, 0.117552, 0.145894" \
+          );
+        }
+        fall_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.115323, 0.121463, 0.134621, 0.154810, 0.169359, 0.191100, 0.219728", \
+            "0.108323, 0.114072, 0.127335, 0.146871, 0.161420, 0.183161, 0.212045", \
+            "0.091953, 0.097702, 0.110381, 0.129260, 0.143809, 0.165550, 0.194178", \
+            "0.082465, 0.088214, 0.100893, 0.120915, 0.135464, 0.157205, 0.185833", \
+            "0.075670, 0.081419, 0.094779, 0.114672, 0.129221, 0.150962, 0.179590", \
+            "0.060850, 0.066599, 0.079278, 0.097940, 0.112489, 0.134230, 0.162858", \
+            "0.040151, 0.046155, 0.059313, 0.079502, 0.094051, 0.115792, 0.144420" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CLK;
+        timing_type : hold_rising;
+        when : "RET1N&!CEN";
+        sdf_cond : "RET1Neq1aCENeq0";
+        rise_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.148343, 0.142362, 0.137707, 0.136707, 0.134803, 0.133803, 0.132803", \
+            "0.153775, 0.147794, 0.143139, 0.142139, 0.140235, 0.139235, 0.138235", \
+            "0.171554, 0.165573, 0.160918, 0.159918, 0.158014, 0.157014, 0.156014", \
+            "0.179699, 0.173718, 0.169063, 0.168063, 0.166159, 0.165159, 0.164159", \
+            "0.186913, 0.180932, 0.176277, 0.175277, 0.173373, 0.172373, 0.171373", \
+            "0.202331, 0.196350, 0.191695, 0.190695, 0.188791, 0.187791, 0.186791", \
+            "0.223205, 0.217224, 0.212569, 0.211569, 0.209665, 0.208665, 0.207665" \
+          );
+        }
+        fall_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.149219, 0.141802, 0.136645, 0.128901, 0.125886, 0.125060, 0.115257", \
+            "0.154562, 0.147145, 0.141988, 0.134244, 0.131229, 0.130403, 0.120600", \
+            "0.171921, 0.164504, 0.159347, 0.151603, 0.148588, 0.147762, 0.137959", \
+            "0.181369, 0.173952, 0.168795, 0.161051, 0.158036, 0.157210, 0.147407", \
+            "0.186739, 0.179322, 0.174165, 0.166421, 0.163406, 0.162580, 0.152777", \
+            "0.204021, 0.196604, 0.191447, 0.183703, 0.180688, 0.179862, 0.170059", \
+            "0.223893, 0.216476, 0.211319, 0.203575, 0.200560, 0.199734, 0.189931" \
+          );
+        }
+      }
+      internal_power() {
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_inputslew_energy_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values ("0.078552, 0.078581, 0.078657, 0.078735, 0.078812, 0.078889, 0.078966");
+        }
+        fall_power(sram2Kx8_inputslew_energy_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values ("0.078552, 0.078581, 0.078657, 0.078735, 0.078812, 0.078889, 0.078966");
+        }
+      }
+    }
+    bus(A) {
+      bus_type : sram2Kx8_A;
+      direction : input;
+      related_power_pin : "VDDPE";
+      related_ground_pin : "VSSE";
+      capacitance : 0.002657;
+      max_transition : 0.480000;
+      timing() {
+        related_pin : CLK;
+        timing_type : setup_rising;
+        when : "RET1N&!CEN";
+        sdf_cond : "RET1Neq1aCENeq0";
+        rise_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.172317, 0.180698, 0.193645, 0.211607, 0.227636, 0.249134, 0.288419", \
+            "0.166861, 0.175242, 0.188189, 0.206151, 0.222180, 0.241331, 0.280617", \
+            "0.149376, 0.157757, 0.170704, 0.188666, 0.204695, 0.226055, 0.265340", \
+            "0.140324, 0.148705, 0.161652, 0.179614, 0.195643, 0.218205, 0.257490", \
+            "0.135011, 0.143392, 0.156339, 0.174301, 0.190330, 0.207727, 0.247012", \
+            "0.117575, 0.125956, 0.138903, 0.156865, 0.172894, 0.193992, 0.233277", \
+            "0.097620, 0.106001, 0.118948, 0.136910, 0.152939, 0.173285, 0.212570" \
+          );
+        }
+        fall_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.165760, 0.174057, 0.186875, 0.204657, 0.220526, 0.246683, 0.286365", \
+            "0.160359, 0.168656, 0.181473, 0.199256, 0.215124, 0.238802, 0.278484", \
+            "0.143048, 0.151346, 0.164163, 0.181946, 0.197814, 0.223371, 0.263053", \
+            "0.134087, 0.142384, 0.155202, 0.172984, 0.188853, 0.215442, 0.255124", \
+            "0.128827, 0.137124, 0.149942, 0.167724, 0.183593, 0.204858, 0.244540", \
+            "0.111565, 0.119863, 0.132680, 0.150463, 0.166331, 0.190984, 0.230666", \
+            "0.091810, 0.100107, 0.112925, 0.130707, 0.146576, 0.170068, 0.209750" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CLK;
+        timing_type : hold_rising;
+        when : "RET1N&!CEN";
+        sdf_cond : "RET1Neq1aCENeq0";
+        rise_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.135020, 0.127688, 0.120665, 0.119406, 0.111495, 0.110495, 0.107364", \
+            "0.140344, 0.133768, 0.126745, 0.125486, 0.116813, 0.115813, 0.113443", \
+            "0.157827, 0.150901, 0.143878, 0.142619, 0.134302, 0.133302, 0.130576", \
+            "0.167221, 0.159107, 0.152821, 0.150528, 0.143696, 0.142696, 0.139034", \
+            "0.172575, 0.165999, 0.158976, 0.157717, 0.149049, 0.148049, 0.145675", \
+            "0.189852, 0.181738, 0.175452, 0.173062, 0.166327, 0.165327, 0.161665", \
+            "0.209782, 0.202091, 0.195382, 0.193809, 0.186257, 0.185257, 0.181766" \
+          );
+        }
+        fall_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.141489, 0.134847, 0.127753, 0.126481, 0.116317, 0.115321, 0.114317", \
+            "0.147630, 0.140988, 0.133894, 0.132622, 0.122458, 0.121458, 0.120458", \
+            "0.164936, 0.158294, 0.151200, 0.149928, 0.139764, 0.138764, 0.137764", \
+            "0.172925, 0.166283, 0.159189, 0.157917, 0.148190, 0.147200, 0.145753", \
+            "0.180187, 0.173545, 0.166451, 0.165179, 0.155015, 0.154015, 0.153015", \
+            "0.195687, 0.189045, 0.181951, 0.180679, 0.170595, 0.169605, 0.168515", \
+            "0.216643, 0.210001, 0.202907, 0.201635, 0.191471, 0.190471, 0.189471" \
+          );
+        }
+      }
+      internal_power() {
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_inputslew_energy_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values ("0.056467, 0.056522, 0.056577, 0.056632, 0.056687, 0.056742, 0.056797");
+        }
+        fall_power(sram2Kx8_inputslew_energy_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values ("0.055621, 0.055656, 0.055710, 0.055764, 0.055818, 0.055872, 0.055927");
+        }
+      }
+    }
+    bus(D) {
+      bus_type : sram2Kx8_D;
+      direction : input;
+      related_power_pin : "VDDPE";
+      related_ground_pin : "VSSE";
+      memory_write() {
+        address : A;
+        clocked_on : CLK;
+      }
+      capacitance : 0.004951;
+      max_transition : 0.480000;
+      timing() {
+        related_pin : CLK;
+        timing_type : setup_rising;
+        when : "RET1N&!CEN&!WEN";
+        sdf_cond : "RET1Neq1aCENeq0aWENeq0";
+        rise_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.044606, 0.051078, 0.067047, 0.089440, 0.111592, 0.138888, 0.178501", \
+            "0.038724, 0.045115, 0.061085, 0.083478, 0.105630, 0.132926, 0.172539", \
+            "0.022188, 0.028280, 0.043515, 0.065908, 0.088061, 0.115357, 0.154970", \
+            "0.015559, 0.021650, 0.036679, 0.058864, 0.081017, 0.108313, 0.147925", \
+            "0.012600, 0.015945, 0.030976, 0.052804, 0.074956, 0.102252, 0.141865", \
+            "0.012600, 0.012600, 0.012871, 0.033947, 0.055721, 0.083017, 0.122629", \
+            "0.012600, 0.012600, 0.012600, 0.015630, 0.036480, 0.063555, 0.103168" \
+          );
+        }
+        fall_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.054879, 0.061417, 0.077547, 0.100166, 0.122542, 0.150114, 0.190127", \
+            "0.048939, 0.055394, 0.071525, 0.094144, 0.116520, 0.144092, 0.184105", \
+            "0.032236, 0.038389, 0.053778, 0.076397, 0.098773, 0.126345, 0.166358", \
+            "0.025539, 0.031692, 0.046873, 0.069282, 0.091658, 0.119230, 0.159242", \
+            "0.022500, 0.025930, 0.041112, 0.063160, 0.085536, 0.113108, 0.153121", \
+            "0.022500, 0.022500, 0.022825, 0.044113, 0.066107, 0.093678, 0.133691", \
+            "0.022500, 0.022500, 0.022500, 0.025612, 0.046671, 0.074020, 0.114033" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CLK;
+        timing_type : hold_rising;
+        when : "RET1N&!CEN&!WEN";
+        sdf_cond : "RET1Neq1aCENeq0aWENeq0";
+        rise_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.167940, 0.157876, 0.146933, 0.132116, 0.130965, 0.103937, 0.093622", \
+            "0.172902, 0.162838, 0.152037, 0.137078, 0.135927, 0.108899, 0.098584", \
+            "0.191509, 0.181445, 0.170300, 0.155685, 0.154534, 0.127506, 0.117191", \
+            "0.200486, 0.190422, 0.180022, 0.164662, 0.163511, 0.136483, 0.126409", \
+            "0.204051, 0.193987, 0.183730, 0.168227, 0.167076, 0.140048, 0.130117", \
+            "0.222145, 0.212081, 0.201865, 0.186321, 0.185170, 0.158142, 0.148252", \
+            "0.240686, 0.230622, 0.220105, 0.204862, 0.203711, 0.176683, 0.166492" \
+          );
+        }
+        fall_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.171183, 0.163926, 0.150916, 0.134144, 0.120283, 0.103919, 0.077497", \
+            "0.175453, 0.168196, 0.155186, 0.138414, 0.124553, 0.108189, 0.081767", \
+            "0.194929, 0.187672, 0.174662, 0.157890, 0.144029, 0.127665, 0.101243", \
+            "0.202809, 0.195552, 0.182542, 0.165770, 0.151909, 0.135545, 0.109123", \
+            "0.208113, 0.200856, 0.187846, 0.171074, 0.157213, 0.140849, 0.114427", \
+            "0.226920, 0.219663, 0.206653, 0.189881, 0.176020, 0.159664, 0.133234", \
+            "0.246877, 0.239620, 0.226610, 0.209838, 0.195977, 0.179613, 0.153191" \
+          );
+        }
+      }
+      internal_power() {
+        when : "WEN";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_inputslew_energy_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values ("0.030684, 0.030713, 0.030743, 0.030772, 0.030801, 0.030830, 0.030859");
+        }
+        fall_power(sram2Kx8_inputslew_energy_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values ("0.027676, 0.027702, 0.027728, 0.027754, 0.027806, 0.027832, 0.027858");
+        }
+      }
+      internal_power() {
+        when : "!WEN";
+        related_pg_pin : "VDDPE";
+        rise_power(sram2Kx8_inputslew_energy_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values ("0.030688, 0.030718, 0.030747, 0.030776, 0.030805, 0.030834, 0.030863");
+        }
+        fall_power(sram2Kx8_inputslew_energy_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values ("0.027700, 0.027726, 0.027753, 0.027757, 0.027828, 0.027854, 0.027880");
+        }
+      }
+    }
+    bus(EMA) {
+      bus_type : sram2Kx8_EMA;
+      direction : input;
+      related_power_pin : "VDDPE";
+      related_ground_pin : "VSSE";
+      capacitance : 0.003659;
+      max_transition : 0.480000;
+      timing() {
+        related_pin : CLK;
+        timing_type : setup_rising;
+        when : "RET1N&!CEN";
+        sdf_cond : "RET1Neq1aCENeq0";
+        rise_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.622989, 0.631370, 0.644317, 0.662279, 0.678308, 0.699806, 0.739091", \
+            "0.617533, 0.625914, 0.638861, 0.656823, 0.672852, 0.692004, 0.731289", \
+            "0.600048, 0.608429, 0.621376, 0.639338, 0.655367, 0.676727, 0.716012", \
+            "0.590996, 0.599377, 0.612324, 0.630286, 0.646315, 0.668877, 0.708162", \
+            "0.585683, 0.594064, 0.607011, 0.624973, 0.641002, 0.658399, 0.697684", \
+            "0.568247, 0.576628, 0.589575, 0.607537, 0.623566, 0.644664, 0.683949", \
+            "0.548292, 0.556673, 0.569620, 0.587582, 0.603611, 0.623957, 0.663242" \
+          );
+        }
+        fall_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.623062, 0.631359, 0.644177, 0.661959, 0.677828, 0.703986, 0.743668", \
+            "0.617661, 0.625958, 0.638776, 0.656558, 0.672427, 0.696105, 0.735787", \
+            "0.600351, 0.608648, 0.621465, 0.639248, 0.655116, 0.680674, 0.720356", \
+            "0.591389, 0.599686, 0.612504, 0.630286, 0.646155, 0.672745, 0.712427", \
+            "0.586129, 0.594427, 0.607244, 0.625026, 0.640895, 0.662161, 0.701843", \
+            "0.568868, 0.577165, 0.589982, 0.607765, 0.623633, 0.648287, 0.687969", \
+            "0.549112, 0.557409, 0.570227, 0.588009, 0.603878, 0.627371, 0.667053" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CLK;
+        timing_type : hold_rising;
+        when : "RET1N&!CEN";
+        sdf_cond : "RET1Neq1aCENeq0";
+        rise_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "1.254367, 1.247035, 1.240012, 1.238753, 1.230842, 1.229842, 1.226710", \
+            "1.259690, 1.253115, 1.246092, 1.244832, 1.236160, 1.235160, 1.232790", \
+            "1.277174, 1.270248, 1.263225, 1.261965, 1.253649, 1.252649, 1.249923", \
+            "1.286568, 1.278454, 1.272168, 1.269874, 1.263043, 1.262043, 1.258381", \
+            "1.291922, 1.285346, 1.278323, 1.277064, 1.268396, 1.267396, 1.265021", \
+            "1.309199, 1.301085, 1.294799, 1.292409, 1.285674, 1.284674, 1.281012", \
+            "1.329129, 1.321438, 1.314729, 1.313155, 1.305604, 1.304604, 1.301113" \
+          );
+        }
+        fall_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "1.253446, 1.246804, 1.239710, 1.238438, 1.228274, 1.227279, 1.226274", \
+            "1.259587, 1.252945, 1.245851, 1.244579, 1.234415, 1.233415, 1.232415", \
+            "1.276893, 1.270251, 1.263157, 1.261885, 1.251721, 1.250721, 1.249721", \
+            "1.284882, 1.278240, 1.271146, 1.269874, 1.260148, 1.259158, 1.257710", \
+            "1.292144, 1.285502, 1.278408, 1.277136, 1.266972, 1.265972, 1.264972", \
+            "1.307644, 1.301002, 1.293908, 1.292636, 1.282553, 1.281563, 1.280472", \
+            "1.328600, 1.321958, 1.314864, 1.313592, 1.303428, 1.302428, 1.301428" \
+          );
+        }
+      }
+    }
+    bus(EMAW) {
+      bus_type : sram2Kx8_EMAW;
+      direction : input;
+      related_power_pin : "VDDPE";
+      related_ground_pin : "VSSE";
+      capacitance : 0.004940;
+      max_transition : 0.480000;
+      timing() {
+        related_pin : CLK;
+        timing_type : setup_rising;
+        when : "RET1N&!CEN";
+        sdf_cond : "RET1Neq1aCENeq0";
+        rise_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.622989, 0.631370, 0.644317, 0.662279, 0.678308, 0.699806, 0.739091", \
+            "0.617533, 0.625914, 0.638861, 0.656823, 0.672852, 0.692004, 0.731289", \
+            "0.600048, 0.608429, 0.621376, 0.639338, 0.655367, 0.676727, 0.716012", \
+            "0.590996, 0.599377, 0.612324, 0.630286, 0.646315, 0.668877, 0.708162", \
+            "0.585683, 0.594064, 0.607011, 0.624973, 0.641002, 0.658399, 0.697684", \
+            "0.568247, 0.576628, 0.589575, 0.607537, 0.623566, 0.644664, 0.683949", \
+            "0.548292, 0.556673, 0.569620, 0.587582, 0.603611, 0.623957, 0.663242" \
+          );
+        }
+        fall_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.623062, 0.631359, 0.644177, 0.661959, 0.677828, 0.703986, 0.743668", \
+            "0.617661, 0.625958, 0.638776, 0.656558, 0.672427, 0.696105, 0.735787", \
+            "0.600351, 0.608648, 0.621465, 0.639248, 0.655116, 0.680674, 0.720356", \
+            "0.591389, 0.599686, 0.612504, 0.630286, 0.646155, 0.672745, 0.712427", \
+            "0.586129, 0.594427, 0.607244, 0.625026, 0.640895, 0.662161, 0.701843", \
+            "0.568868, 0.577165, 0.589982, 0.607765, 0.623633, 0.648287, 0.687969", \
+            "0.549112, 0.557409, 0.570227, 0.588009, 0.603878, 0.627371, 0.667053" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CLK;
+        timing_type : hold_rising;
+        when : "RET1N&!CEN";
+        sdf_cond : "RET1Neq1aCENeq0";
+        rise_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "1.254367, 1.247035, 1.240012, 1.238753, 1.230842, 1.229842, 1.226710", \
+            "1.259690, 1.253115, 1.246092, 1.244832, 1.236160, 1.235160, 1.232790", \
+            "1.277174, 1.270248, 1.263225, 1.261965, 1.253649, 1.252649, 1.249923", \
+            "1.286568, 1.278454, 1.272168, 1.269874, 1.263043, 1.262043, 1.258381", \
+            "1.291922, 1.285346, 1.278323, 1.277064, 1.268396, 1.267396, 1.265021", \
+            "1.309199, 1.301085, 1.294799, 1.292409, 1.285674, 1.284674, 1.281012", \
+            "1.329129, 1.321438, 1.314729, 1.313155, 1.305604, 1.304604, 1.301113" \
+          );
+        }
+        fall_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "1.253446, 1.246804, 1.239710, 1.238438, 1.228274, 1.227279, 1.226274", \
+            "1.259587, 1.252945, 1.245851, 1.244579, 1.234415, 1.233415, 1.232415", \
+            "1.276893, 1.270251, 1.263157, 1.261885, 1.251721, 1.250721, 1.249721", \
+            "1.284882, 1.278240, 1.271146, 1.269874, 1.260148, 1.259158, 1.257710", \
+            "1.292144, 1.285502, 1.278408, 1.277136, 1.266972, 1.265972, 1.264972", \
+            "1.307644, 1.301002, 1.293908, 1.292636, 1.282553, 1.281563, 1.280472", \
+            "1.328600, 1.321958, 1.314864, 1.313592, 1.303428, 1.302428, 1.301428" \
+          );
+        }
+      }
+    }
+    pin(EMAS) {
+      direction : input;
+      related_power_pin : "VDDPE";
+      related_ground_pin : "VSSE";
+      capacitance : 0.006451;
+      max_transition : 0.480000;
+      timing() {
+        related_pin : CLK;
+        timing_type : setup_rising;
+        when : "RET1N&!CEN";
+        sdf_cond : "RET1Neq1aCENeq0";
+        rise_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.623062, 0.631359, 0.644177, 0.661959, 0.677828, 0.703986, 0.743668", \
+            "0.617661, 0.625958, 0.638776, 0.656558, 0.672427, 0.696105, 0.735787", \
+            "0.600351, 0.608648, 0.621465, 0.639248, 0.655116, 0.680674, 0.720356", \
+            "0.591389, 0.599686, 0.612504, 0.630286, 0.646155, 0.672745, 0.712427", \
+            "0.586129, 0.594427, 0.607244, 0.625026, 0.640895, 0.662161, 0.701843", \
+            "0.568868, 0.577165, 0.589982, 0.607765, 0.623633, 0.648287, 0.687969", \
+            "0.549112, 0.557409, 0.570227, 0.588009, 0.603878, 0.627371, 0.667053" \
+          );
+        }
+        fall_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.623062, 0.631359, 0.644177, 0.661959, 0.677828, 0.703986, 0.743668", \
+            "0.617661, 0.625958, 0.638776, 0.656558, 0.672427, 0.696105, 0.735787", \
+            "0.600351, 0.608648, 0.621465, 0.639248, 0.655116, 0.680674, 0.720356", \
+            "0.591389, 0.599686, 0.612504, 0.630286, 0.646155, 0.672745, 0.712427", \
+            "0.586129, 0.594427, 0.607244, 0.625026, 0.640895, 0.662161, 0.701843", \
+            "0.568868, 0.577165, 0.589982, 0.607765, 0.623633, 0.648287, 0.687969", \
+            "0.549112, 0.557409, 0.570227, 0.588009, 0.603878, 0.627371, 0.667053" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CLK;
+        timing_type : hold_rising;
+        when : "RET1N&!CEN";
+        sdf_cond : "RET1Neq1aCENeq0";
+        rise_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "1.254367, 1.247035, 1.240012, 1.238753, 1.230842, 1.229842, 1.226710", \
+            "1.259690, 1.253115, 1.246092, 1.244832, 1.236160, 1.235160, 1.232790", \
+            "1.277174, 1.270248, 1.263225, 1.261965, 1.253649, 1.252649, 1.249923", \
+            "1.286568, 1.278454, 1.272168, 1.269874, 1.263043, 1.262043, 1.258381", \
+            "1.291922, 1.285346, 1.278323, 1.277064, 1.268396, 1.267396, 1.265021", \
+            "1.309199, 1.301085, 1.294799, 1.292409, 1.285674, 1.284674, 1.281012", \
+            "1.329129, 1.321438, 1.314729, 1.313155, 1.305604, 1.304604, 1.301113" \
+          );
+        }
+        fall_constraint(sram2Kx8_clockslew_inputslew_setuphold_template) {
+          index_1 ("0.001900, 0.019800, 0.080000, 0.107000, 0.133900, 0.200900, 0.301300");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "1.253446, 1.246804, 1.239710, 1.238438, 1.228274, 1.227279, 1.226274", \
+            "1.259587, 1.252945, 1.245851, 1.244579, 1.234415, 1.233415, 1.232415", \
+            "1.276893, 1.270251, 1.263157, 1.261885, 1.251721, 1.250721, 1.249721", \
+            "1.284882, 1.278240, 1.271146, 1.269874, 1.260148, 1.259158, 1.257710", \
+            "1.292144, 1.285502, 1.278408, 1.277136, 1.266972, 1.265972, 1.264972", \
+            "1.307644, 1.301002, 1.293908, 1.292636, 1.282553, 1.281563, 1.280472", \
+            "1.328600, 1.321958, 1.314864, 1.313592, 1.303428, 1.302428, 1.301428" \
+          );
+        }
+      }
+    }
+    pin(RET1N) {
+      direction : input;
+      always_on : true;
+      related_power_pin : "VDDCE";
+      related_ground_pin : "VSSE";
+      capacitance : 0.001700;
+      max_transition : 0.480000;
+      internal_power() {
+        when : "CEN";
+        related_pg_pin : "VDDCE";
+        rise_power(sram2Kx8_inputslew_energy_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values ("4.577974, 4.582551, 4.587132, 4.591716, 4.596307, 4.600902, 4.605501");
+        }
+        fall_power(sram2Kx8_inputslew_energy_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values ("1.062526, 1.063638, 1.064702, 1.065767, 1.066833, 1.067900, 1.068967");
+        }
+      }
+      timing() {
+        related_pin : CEN;
+        timing_type : non_seq_setup_rising;
+        rise_constraint(sram2Kx8_inputslew_inputslew_setup_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CEN;
+        timing_type : non_seq_hold_rising;
+        rise_constraint(sram2Kx8_inputslew_inputslew_hold_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.614779, 0.607447, 0.600424, 0.599165, 0.591254, 0.590254, 0.587122", \
+            "0.620102, 0.613527, 0.606504, 0.605244, 0.596572, 0.595572, 0.593202", \
+            "0.637586, 0.630660, 0.623636, 0.622377, 0.614061, 0.613061, 0.610335", \
+            "0.646980, 0.638866, 0.632580, 0.630286, 0.623455, 0.622455, 0.618793", \
+            "0.652334, 0.645758, 0.638735, 0.637476, 0.628808, 0.627808, 0.625433", \
+            "0.669611, 0.661497, 0.655211, 0.652821, 0.646086, 0.645086, 0.641424", \
+            "0.689541, 0.681849, 0.675141, 0.673567, 0.666016, 0.665016, 0.661525" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CEN;
+        timing_type : non_seq_setup_rising;
+        fall_constraint(sram2Kx8_inputslew_inputslew_setup_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000", \
+            "0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000" \
+          );
+        }
+      }
+      timing() {
+        related_pin : CEN;
+        timing_type : non_seq_hold_rising;
+        fall_constraint(sram2Kx8_inputslew_inputslew_hold_template) {
+          index_1 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          index_2 ("0.001900, 0.031600, 0.080000, 0.146700, 0.213300, 0.320000, 0.480000");
+          values (\
+            "0.032281, 0.025639, 0.018545, 0.017273, 0.007109, 0.006113, 0.005109", \
+            "0.038422, 0.031780, 0.024686, 0.023414, 0.013250, 0.012250, 0.011250", \
+            "0.055728, 0.049086, 0.041992, 0.040720, 0.030556, 0.029556, 0.028556", \
+            "0.063717, 0.057075, 0.049981, 0.048709, 0.038982, 0.037992, 0.036545", \
+            "0.070979, 0.064337, 0.057243, 0.055971, 0.045807, 0.044807, 0.043807", \
+            "0.086479, 0.079837, 0.072743, 0.071471, 0.061387, 0.060397, 0.059307", \
+            "0.107435, 0.100793, 0.093699, 0.092427, 0.082263, 0.081263, 0.080263" \
+          );
+        }
+      }
+    }
+    leakage_power() {
+      related_pg_pin : "VDDCE";
+      value : 1.112e-03;
+    }
+    leakage_power() {
+      related_pg_pin : "VDDPE";
+      value : 2.635e-03;
+    }
+    leakage_power() {
+      related_pg_pin : "VDDCE";
+      when :"!RET1N";
+      value : 1.090e-03;
+    }
+    leakage_power() {
+      related_pg_pin : "VDDPE";
+      when :"!RET1N";
+      value : 2.346e-03;
+    }
+  }
+}

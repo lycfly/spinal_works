@@ -1,0 +1,86 @@
+ 
+****************************************
+Report : cell
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Sun Nov 28 20:42:27 2021
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    c - control logic
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+B_0                       GTECH_BUF       gtech           0.000000  c, u
+B_1                       GTECH_BUF       gtech           0.000000  c, u
+B_2                       GTECH_BUF       gtech           0.000000  c, u
+B_3                       GTECH_BUF       gtech           0.000000  c, u
+B_4                       GTECH_BUF       gtech           0.000000  c, u
+B_5                       GTECH_BUF       gtech           0.000000  u
+B_6                       GTECH_BUF       gtech           0.000000  c, u
+C192                      *SELECT_OP_2.9_2.1_9            0.000000  s, u
+C193                      *SELECT_OP_2.10_2.1_10          0.000000  s, u
+C194                      *SELECT_OP_2.10_2.1_10          0.000000  s, u
+C213                      GTECH_AND2      gtech           0.000000  c, u
+C217                      GTECH_AND2      gtech           0.000000  c, u
+C221                      GTECH_AND2      gtech           0.000000  c, u
+C222                      GTECH_AND2      gtech           0.000000  c, u
+I_0                       GTECH_NOT       gtech           0.000000  c, u
+I_1                       GTECH_NOT       gtech           0.000000  u
+I_2                       GTECH_NOT       gtech           0.000000  u
+I_3                       GTECH_NOT       gtech           0.000000  u
+I_4                       GTECH_NOT       gtech           0.000000  u
+I_5                       GTECH_NOT       gtech           0.000000  u
+I_6                       GTECH_NOT       gtech           0.000000  u
+I_7                       GTECH_NOT       gtech           0.000000  u
+I_8                       GTECH_NOT       gtech           0.000000  u
+I_9                       GTECH_NOT       gtech           0.000000  u
+I_10                      GTECH_NOT       gtech           0.000000  u
+I_11                      GTECH_NOT       gtech           0.000000  u
+I_12                      GTECH_NOT       gtech           0.000000  u
+LastA2stZero_reg          **SEQGEN**                      0.000000  n, u
+add_148                   *ADD_UNS_OP_9_1_9               0.000000  s, u
+add_175                   *ADD_TC_OP_9_9_10               0.000000  s, u
+calvn                     cal_vn                          0.000000  h, n, u
+cordic                    cordic_int                      0.000000  h, n, u
+dot                       dotVn                           0.000000  h, n, u
+lt_149                    *LT_UNS_OP_7_9_1                0.000000  s, u
+ph_last_reg_0_            **SEQGEN**                      0.000000  n, u
+ph_last_reg_1_            **SEQGEN**                      0.000000  n, u
+ph_last_reg_2_            **SEQGEN**                      0.000000  n, u
+ph_last_reg_3_            **SEQGEN**                      0.000000  n, u
+ph_last_reg_4_            **SEQGEN**                      0.000000  n, u
+ph_last_reg_5_            **SEQGEN**                      0.000000  n, u
+ph_last_reg_6_            **SEQGEN**                      0.000000  n, u
+ph_last_reg_7_            **SEQGEN**                      0.000000  n, u
+ph_now_reg_0_             **SEQGEN**                      0.000000  n, u
+ph_now_reg_1_             **SEQGEN**                      0.000000  n, u
+ph_now_reg_2_             **SEQGEN**                      0.000000  n, u
+ph_now_reg_3_             **SEQGEN**                      0.000000  n, u
+ph_now_reg_4_             **SEQGEN**                      0.000000  n, u
+ph_now_reg_5_             **SEQGEN**                      0.000000  n, u
+ph_now_reg_6_             **SEQGEN**                      0.000000  n, u
+ph_now_reg_7_             **SEQGEN**                      0.000000  n, u
+ph_vld_dly1_reg           **SEQGEN**                      0.000000  n, u
+res_last_reg_0_           **SEQGEN**                      0.000000  n, u
+res_last_reg_1_           **SEQGEN**                      0.000000  n, u
+res_last_reg_2_           **SEQGEN**                      0.000000  n, u
+res_last_reg_3_           **SEQGEN**                      0.000000  n, u
+res_last_reg_4_           **SEQGEN**                      0.000000  n, u
+res_last_reg_5_           **SEQGEN**                      0.000000  n, u
+res_last_reg_6_           **SEQGEN**                      0.000000  n, u
+res_last_reg_7_           **SEQGEN**                      0.000000  n, u
+res_last_reg_8_           **SEQGEN**                      0.000000  n, u
+res_last_reg_9_           **SEQGEN**                      0.000000  n, u
+res_last_vld_reg          **SEQGEN**                      0.000000  n, u
+sub_147                   *SUB_TC_OP_8_8_9                0.000000  s, u
+sub_173                   *SUB_TC_OP_9_9_10               0.000000  s, u
+--------------------------------------------------------------------------------
+Total 64 cells                                            0.000000
+1

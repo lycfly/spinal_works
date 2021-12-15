@@ -1,0 +1,1980 @@
+[0m2021.12.04 20:54:24 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works/cal_phase' for client Visual Studio Code 1.62.3.[0m
+[0m2021.12.04 20:54:26 INFO  time: initialize in 2.08s[0m
+[0m2021.12.04 20:54:30 WARN  Build server is not auto-connectable.[0m
+[0m2021.12.04 20:54:43 WARN  no build target for: /mnt/mydata/spinal_works/cal_phase/build.sbt[0m
+[0m2021.12.04 20:54:48 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.12.04 20:54:55 INFO  time: code lens generation in 12s[0m
+[0m2021.12.04 20:55:02 WARN  no build target for: /mnt/mydata/spinal_works/cal_phase/build.sbt[0m
+[0m2021.12.04 20:55:04 INFO  running '/usr/local/jdk1.8/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals1147066931078571397/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.12.04 20:55:09 INFO  [info] welcome to sbt 1.5.5 (Oracle Corporation Java 1.8.0_291)[0m
+[0m2021.12.04 20:55:18 INFO  [info] loading global plugins from /root/.sbt/1.0/plugins[0m
+[0m2021.12.04 20:55:31 INFO  [info] loading settings for project cal_phase-build-build from metals.sbt ...[0m
+[0m2021.12.04 20:55:31 INFO  [info] loading project definition from /mnt/mydata/spinal_works/cal_phase/project/project[0m
+[0m2021.12.04 20:55:39 INFO  [info] loading settings for project cal_phase-build from metals.sbt ...[0m
+[0m2021.12.04 20:55:39 INFO  [info] loading project definition from /mnt/mydata/spinal_works/cal_phase/project[0m
+[0m2021.12.04 20:55:46 INFO  [success] Generated .bloop/cal_phase-build.json[0m
+[0m2021.12.04 20:55:47 INFO  [success] Total time: 7 s, completed Dec 4, 2021 8:55:47 PM[0m
+[0m2021.12.04 20:55:53 INFO  [info] loading settings for project cal_phase from build.sbt ...[0m
+[0m2021.12.04 20:55:54 INFO  [info] set current project to cardiff-b0 (in build file:/mnt/mydata/spinal_works/cal_phase/)[0m
+[0m2021.12.04 20:55:59 INFO  [success] Generated .bloop/cal_phase.json[0m
+[0m2021.12.04 20:55:59 INFO  [success] Generated .bloop/cal_phase-test.json[0m
+[0m2021.12.04 20:55:59 INFO  [success] Total time: 4 s, completed Dec 4, 2021 8:56:00 PM[0m
+[0m2021.12.04 20:56:00 INFO  time: ran 'sbt bloopInstall' in 56s[0m
+[0m2021.12.04 20:56:00 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher1060754749929579382/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading 2 projects from '/mnt/mydata/spinal_works/cal_phase/.bloop'...
+[0m[32m[D][0m Loading project from '/mnt/mydata/spinal_works/cal_phase/.bloop/cal_phase.json'
+[0m[32m[D][0m Loading project from '/mnt/mydata/spinal_works/cal_phase/.bloop/cal_phase-test.json'
+[0m[32m[D][0m Missing analysis file for project 'cal_phase-test'
+[0m[32m[D][0m Missing analysis file for project 'cal_phase'
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher1060754749929579382/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher1060754749929579382/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.04 20:56:00 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.04 20:56:00 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher4066256746658033029/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher4066256746658033029/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher4066256746658033029/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.04 20:56:01 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.04 20:56:01 INFO  time: Connected to build server in 1.25s[0m
+[0m2021.12.04 20:56:01 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.04 20:56:02 INFO  time: Imported build in 0.44s[0m
+[0m2021.12.04 20:56:09 INFO  running '/usr/local/jdk1.8/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals6712014204439079373/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.12.04 20:56:14 INFO  [info] welcome to sbt 1.5.5 (Oracle Corporation Java 1.8.0_291)[0m
+[0m2021.12.04 20:56:15 INFO  time: code lens generation in 13s[0m
+[0m2021.12.04 20:56:20 INFO  time: indexed workspace in 17s[0m
+[0m2021.12.04 20:56:20 INFO  [info] loading global plugins from /root/.sbt/1.0/plugins[0m
+[0m2021.12.04 20:56:21 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+[0m2021.12.04 20:56:24 INFO  [info] loading settings for project cal_phase-build-build from metals.sbt ...[0m
+[0m2021.12.04 20:56:24 INFO  [info] loading project definition from /mnt/mydata/spinal_works/cal_phase/project/project[0m
+[0m2021.12.04 20:56:28 INFO  [info] loading settings for project cal_phase-build from metals.sbt ...[0m
+[0m2021.12.04 20:56:28 INFO  [info] loading project definition from /mnt/mydata/spinal_works/cal_phase/project[0m
+[0m2021.12.04 20:56:36 INFO  [success] Generated .bloop/cal_phase-build.json[0m
+[0m2021.12.04 20:56:36 INFO  [success] Total time: 8 s, completed Dec 4, 2021 8:56:36 PM[0m
+[0m2021.12.04 20:56:38 INFO  [info] loading settings for project cal_phase from build.sbt ...[0m
+[0m2021.12.04 20:56:38 INFO  [info] set current project to cardiff-b0 (in build file:/mnt/mydata/spinal_works/cal_phase/)[0m
+[0m2021.12.04 20:56:42 INFO  [success] Generated .bloop/cal_phase.json[0m
+[0m2021.12.04 20:56:42 INFO  [success] Generated .bloop/cal_phase-test.json[0m
+[0m2021.12.04 20:56:42 INFO  [success] Total time: 3 s, completed Dec 4, 2021 8:56:42 PM[0m
+[0m2021.12.04 20:56:42 INFO  time: ran 'sbt bloopInstall' in 33s[0m
+[0m2021.12.04 20:56:42 INFO  Disconnecting from Bloop session...[0m
+[0m2021.12.04 20:56:42 INFO  No more data in the server stdin, exiting...Shut down connection with build server.
+No more data in the server stdin, exiting...
+[0m
+No more data in the server stdin, exiting...
+[0mNo more data in the client stdin, exiting...2021.12.04 20:56:42
+ INFO No more data in the server stdin, exiting... 
+Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.12.04 20:56:42 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher3318588183360891828/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher3318588183360891828/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher3318588183360891828/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.04 20:56:42 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.04 20:56:42 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher8844517168957656549/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher8844517168957656549/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher8844517168957656549/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.04 20:56:43 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.04 20:56:43 INFO  time: Connected to build server in 0.25s[0m
+[0m2021.12.04 20:56:43 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.04 20:56:43 INFO  time: Imported build in 0.21s[0m
+[0m2021.12.04 20:56:48 INFO  compiling cal_phase (8 scala sources)[0m
+[0m2021.12.04 20:56:48 INFO  time: indexed workspace in 5.13s[0m
+[0m2021.12.04 20:56:49 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+[0m2021.12.04 20:56:49 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 6.477s)[0m
+[0m2021.12.04 20:56:49 INFO  compiling cal_phase (8 scala sources)[0m
+[0m2021.12.04 20:57:05 INFO  compiling cal_phase (7 scala sources)[0m
+[0m2021.12.04 20:57:06 WARN  failed to generate semanticdb for /mnt/mydata/spinal_works/cal_phase/src/main/scala/Main.scala:
+java.nio.file.NoSuchFileException: /mnt/mydata/spinal_works/cal_phase/src/main/scala/Main.scala
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.inputs.Input$File.chars$lzycompute(Input.scala:52)
+	at scala.meta.inputs.Input$File.chars(Input.scala:52)
+	at scala.meta.internal.parsers.ScalametaParser.<init>(ScalametaParser.scala:153)
+	at scala.meta.internal.parsers.ScalametaParser$$anon$264.apply(ScalametaParser.scala:5320)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:201)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:52)
+	at scala.meta.internal.semanticdb.scalac.SemanticdbPipeline$SemanticdbTyperComponent$ComputeSemanticdbPhase.saveSemanticdbForCompilationUnit(SemanticdbPipeline.scala:60)
+	at scala.meta.internal.semanticdb.scalac.SemanticdbPipeline$SemanticdbTyperComponent$ComputeSemanticdbPhase.apply(SemanticdbPipeline.scala:67)
+	at scala.tools.nsc.Global$GlobalPhase$$anonfun$applyPhase$1.apply$mcV$sp(Global.scala:467)
+	at scala.tools.nsc.Global$GlobalPhase.withCurrentUnit(Global.scala:458)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:467)
+	at scala.tools.nsc.Global$GlobalPhase$$anonfun$run$1.apply(Global.scala:425)
+	at scala.tools.nsc.Global$GlobalPhase$$anonfun$run$1.apply(Global.scala:425)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:891)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1334)
+	at scala.tools.nsc.Global$GlobalPhase.run(Global.scala:425)
+	at scala.meta.internal.semanticdb.scalac.SemanticdbPipeline$SemanticdbTyperComponent$ComputeSemanticdbPhase.run(SemanticdbPipeline.scala:77)
+	at scala.tools.nsc.Global$Run.compileUnitsInternal(Global.scala:1528)
+	at scala.tools.nsc.Global$Run.compileUnits(Global.scala:1513)
+	at scala.tools.nsc.Global$Run.compileSources(Global.scala:1508)
+	at scala.tools.nsc.Global$Run.compile(Global.scala:1609)
+	at xsbt.CachedCompiler0.run(CompilerInterface.scala:148)
+	at xsbt.CachedCompiler0.run(CompilerInterface.scala:123)
+	at xsbt.CompilerInterface.run(CompilerInterface.scala:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sbt.internal.inc.AnalyzingCompiler.call(AnalyzingCompiler.scala:252)
+	at sbt.internal.inc.AnalyzingCompiler.compile(AnalyzingCompiler.scala:121)
+	at sbt.internal.inc.AnalyzingCompiler.compile(AnalyzingCompiler.scala:94)
+	at sbt.internal.inc.bloop.internal.BloopHighLevelCompiler.compileSources$1(BloopHighLevelCompiler.scala:141)
+	at sbt.internal.inc.bloop.internal.BloopHighLevelCompiler.$anonfun$compile$7(BloopHighLevelCompiler.scala:159)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at sbt.internal.inc.bloop.internal.BloopHighLevelCompiler.$anonfun$compile$1(BloopHighLevelCompiler.scala:71)
+	at bloop.tracing.BraveTracer.traceInternal(BraveTracer.scala:65)
+	at bloop.tracing.BraveTracer.trace(BraveTracer.scala:39)
+	at sbt.internal.inc.bloop.internal.BloopHighLevelCompiler.timed$1(BloopHighLevelCompiler.scala:70)
+	at sbt.internal.inc.bloop.internal.BloopHighLevelCompiler.$anonfun$compile$6(BloopHighLevelCompiler.scala:159)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at monix.eval.internal.TaskRunLoop$.monix$eval$internal$TaskRunLoop$$loop$1(TaskRunLoop.scala:187)
+	at monix.eval.internal.TaskRunLoop$RestartCallback$1.onSuccess(TaskRunLoop.scala:119)
+	at monix.eval.Task$.$anonfun$forkedUnit$2(Task.scala:1463)
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1402)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1067)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1703)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+[0m
+[0m2021.12.04 20:57:06 WARN  failed to generate semanticdb for /mnt/mydata/spinal_works/cal_phase/src/main/scala/Main.scala:
+java.nio.file.NoSuchFileException: /mnt/mydata/spinal_works/cal_phase/src/main/scala/Main.scala
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.inputs.Input$File.chars$lzycompute(Input.scala:52)
+	at scala.meta.inputs.Input$File.chars(Input.scala:52)
+	at scala.meta.internal.parsers.ScalametaParser.<init>(ScalametaParser.scala:153)
+	at scala.meta.internal.parsers.ScalametaParser$$anon$264.apply(ScalametaParser.scala:5320)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:201)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:52)
+	at scala.meta.internal.semanticdb.scalac.SemanticdbPipeline$SemanticdbTyperComponent$ComputeSemanticdbPhase.saveSemanticdbForCompilationUnit(SemanticdbPipeline.scala:60)
+	at scala.meta.internal.semanticdb.scalac.SemanticdbPipeline$SemanticdbTyperComponent$ComputeSemanticdbPhase.apply(SemanticdbPipeline.scala:67)
+	at scala.tools.nsc.Global$GlobalPhase$$anonfun$applyPhase$1.apply$mcV$sp(Global.scala:467)
+	at scala.tools.nsc.Global$GlobalPhase.withCurrentUnit(Global.scala:458)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:467)
+	at scala.tools.nsc.Global$GlobalPhase$$anonfun$run$1.apply(Global.scala:425)
+	at scala.tools.nsc.Global$GlobalPhase$$anonfun$run$1.apply(Global.scala:425)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:891)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1334)
+	at scala.tools.nsc.Global$GlobalPhase.run(Global.scala:425)
+	at scala.meta.internal.semanticdb.scalac.SemanticdbPipeline$SemanticdbTyperComponent$ComputeSemanticdbPhase.run(SemanticdbPipeline.scala:77)
+	at scala.tools.nsc.Global$Run.compileUnitsInternal(Global.scala:1528)
+	at scala.tools.nsc.Global$Run.compileUnits(Global.scala:1513)
+	at scala.tools.nsc.Global$Run.compileSources(Global.scala:1508)
+	at scala.tools.nsc.Global$Run.compile(Global.scala:1609)
+	at xsbt.CachedCompiler0.run(CompilerInterface.scala:148)
+	at xsbt.CachedCompiler0.run(CompilerInterface.scala:123)
+	at xsbt.CompilerInterface.run(CompilerInterface.scala:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sbt.internal.inc.AnalyzingCompiler.call(AnalyzingCompiler.scala:252)
+	at sbt.internal.inc.AnalyzingCompiler.compile(AnalyzingCompiler.scala:121)
+	at sbt.internal.inc.AnalyzingCompiler.compile(AnalyzingCompiler.scala:94)
+	at sbt.internal.inc.bloop.internal.BloopHighLevelCompiler.compileSources$1(BloopHighLevelCompiler.scala:141)
+	at sbt.internal.inc.bloop.internal.BloopHighLevelCompiler.$anonfun$compile$7(BloopHighLevelCompiler.scala:159)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at sbt.internal.inc.bloop.internal.BloopHighLevelCompiler.$anonfun$compile$1(BloopHighLevelCompiler.scala:71)
+	at bloop.tracing.BraveTracer.traceInternal(BraveTracer.scala:65)
+	at bloop.tracing.BraveTracer.trace(BraveTracer.scala:39)
+	at sbt.internal.inc.bloop.internal.BloopHighLevelCompiler.timed$1(BloopHighLevelCompiler.scala:70)
+	at sbt.internal.inc.bloop.internal.BloopHighLevelCompiler.$anonfun$compile$6(BloopHighLevelCompiler.scala:159)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at monix.eval.internal.TaskRunLoop$.monix$eval$internal$TaskRunLoop$$loop$1(TaskRunLoop.scala:187)
+	at monix.eval.internal.TaskRunLoop$RestartCallback$1.onSuccess(TaskRunLoop.scala:119)
+	at monix.eval.Task$.$anonfun$forkedUnit$2(Task.scala:1463)
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1402)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1067)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1703)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:172)
+[0m
+[0m2021.12.04 20:57:36 INFO  time: compiled cal_phase in 30s[0m
+[0m2021.12.04 20:57:36 ERROR Unexpected error when compiling cal_phase: '/mnt/mydata/spinal_works/cal_phase/src/main/scala/Main.scala (No such file or directory)'[0m
+[0m2021.12.04 20:57:36 ERROR Unexpected error when compiling cal_phase: '/mnt/mydata/spinal_works/cal_phase/src/main/scala/Main.scala (No such file or directory)'[0m
+Dec 04, 2021 8:57:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.12.04 20:57:39 INFO  shutting down Metals[0m
+[0m2021.12.04 20:57:39 INFO No more data in the server stdin, exiting... 
+No more data in the server stdin, exiting...Shut down connection with build server.
+[0m
+No more data in the server stdin, exiting...[0m2021.12.04 20:57:39 INFO  
+Shut down connection with build server.[0mNo more data in the server stdin, exiting...
+
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+[0m2021.12.04 20:58:17 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works/cal_phase' for client Visual Studio Code 1.62.3.[0m
+[0m2021.12.04 20:58:18 INFO  time: initialize in 1.24s[0m
+[0m2021.12.04 20:58:20 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher9055148138521590814/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher9055148138521590814/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher9055148138521590814/bsp.socket...
+[0m2021.12.04 20:58:21 INFO  skipping build import with status 'Installed'[0m
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.04 20:58:21 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.04 20:58:21 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher7661099186105801527/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher7661099186105801527/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher7661099186105801527/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.04 20:58:23 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.04 20:58:23 INFO  time: Connected to build server in 2.95s[0m
+[0m2021.12.04 20:58:23 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.04 20:58:24 INFO  time: Imported build in 0.79s[0m
+[0m2021.12.04 20:58:26 INFO  running '/usr/local/jdk1.8/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals2379790207092302966/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.12.04 20:58:28 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.12.04 20:58:31 INFO  [info] welcome to sbt 1.5.5 (Oracle Corporation Java 1.8.0_291)[0m
+[0m2021.12.04 20:58:36 INFO  [info] loading global plugins from /root/.sbt/1.0/plugins[0m
+[0m2021.12.04 20:58:38 INFO  time: code lens generation in 15s[0m
+[0m2021.12.04 20:58:41 INFO  [info] loading settings for project cal_phase-build-build from metals.sbt ...[0m
+[0m2021.12.04 20:58:41 INFO  [info] loading project definition from /mnt/mydata/spinal_works/cal_phase/project/project[0m
+[0m2021.12.04 20:58:44 INFO  [info] loading settings for project cal_phase-build from metals.sbt ...[0m
+[0m2021.12.04 20:58:44 INFO  [info] loading project definition from /mnt/mydata/spinal_works/cal_phase/project[0m
+[0m2021.12.04 20:58:49 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+[0m2021.12.04 20:58:52 INFO  time: indexed workspace in 27s[0m
+[0m2021.12.04 20:58:52 WARN  no build target for: /mnt/mydata/spinal_works/test/src/main/scala/s_table.scala[0m
+[0m2021.12.04 20:58:52 WARN  no build target for: /mnt/mydata/spinal_works/test/src/main/scala/s_table.scala[0m
+[0m2021.12.04 20:58:53 INFO  [success] Generated .bloop/cal_phase-build.json[0m
+[0m2021.12.04 20:58:53 INFO  [success] Total time: 9 s, completed Dec 4, 2021 8:58:54 PM[0m
+[0m2021.12.04 20:58:57 INFO  [info] loading settings for project cal_phase from build.sbt ...[0m
+[0m2021.12.04 20:58:57 INFO  [info] set current project to cardiff-b0 (in build file:/mnt/mydata/spinal_works/cal_phase/)[0m
+[0m2021.12.04 20:59:03 INFO  [success] Generated .bloop/cal_phase.json[0m
+[0m2021.12.04 20:59:03 INFO  [success] Generated .bloop/cal_phase-test.json[0m
+[0m2021.12.04 20:59:03 INFO  [success] Total time: 5 s, completed Dec 4, 2021 8:59:03 PM[0m
+[0m2021.12.04 20:59:04 INFO  time: ran 'sbt bloopInstall' in 37s[0m
+[0m2021.12.04 20:59:04 INFO  Disconnecting from Bloop session...[0m
+[0mNo more data in the server stdin, exiting...2021.12.04 20:59:04 
+INFO No more data in the server stdin, exiting...
+ Shut down connection with build server.[0mNo more data in the server stdin, exiting...
+
+[0mNo more data in the server stdin, exiting...2021.12.04 20:59:04
+ No more data in the client stdin, exiting...
+INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...[0m2021.12.04 20:59:04
+ INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher2226861706877685652/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher2226861706877685652/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher2226861706877685652/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.04 20:59:04 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.04 20:59:04 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher5667180692218683875/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher5667180692218683875/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher5667180692218683875/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.04 20:59:04 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.04 20:59:04 INFO  time: Connected to build server in 0.55s[0m
+[0m2021.12.04 20:59:04 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.04 20:59:06 INFO  time: Imported build in 1.07s[0m
+[0m2021.12.04 20:59:06 INFO  time: code lens generation in 9.94s[0m
+[0m2021.12.04 20:59:07 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.12.04 20:59:09 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+[0m2021.12.04 20:59:16 INFO  time: indexed workspace in 10s[0m
+[0m2021.12.04 20:59:16 WARN  no build target for: /mnt/mydata/spinal_works/test/src/main/scala/s_table.scala[0m
+[0m2021.12.04 20:59:25 INFO  running '/usr/local/jdk1.8/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals1689057701192544823/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.12.04 20:59:29 INFO  [info] welcome to sbt 1.5.5 (Oracle Corporation Java 1.8.0_291)[0m
+[0m2021.12.04 20:59:34 INFO  [info] loading global plugins from /root/.sbt/1.0/plugins[0m
+Dec 04, 2021 8:59:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 36
+[0m2021.12.04 20:59:37 INFO  compiling cal_phase (7 scala sources)[0m
+[0m2021.12.04 20:59:39 INFO  [info] loading settings for project cal_phase-build-build from metals.sbt ...[0m
+[0m2021.12.04 20:59:39 INFO  [info] loading project definition from /mnt/mydata/spinal_works/cal_phase/project/project[0m
+[0m2021.12.04 20:59:44 INFO  [info] loading settings for project cal_phase-build from metals.sbt ...[0m
+[0m2021.12.04 20:59:44 INFO  [info] loading project definition from /mnt/mydata/spinal_works/cal_phase/project[0m
+[0m2021.12.04 20:59:52 INFO  [success] Generated .bloop/cal_phase-build.json[0m
+[0m2021.12.04 20:59:52 INFO  [success] Total time: 8 s, completed Dec 4, 2021 8:59:52 PM[0m
+[0m2021.12.04 20:59:57 INFO  [info] loading settings for project cal_phase from build.sbt ...[0m
+[0m2021.12.04 20:59:58 INFO  [info] set current project to cardiff-b0 (in build file:/mnt/mydata/spinal_works/cal_phase/)[0m
+[0m2021.12.04 21:00:04 INFO  [success] Generated .bloop/cal_phase.json[0m
+[0m2021.12.04 21:00:04 INFO  [success] Generated .bloop/cal_phase-test.json[0m
+[0m2021.12.04 21:00:04 INFO  [success] Total time: 5 s, completed Dec 4, 2021 9:00:04 PM[0m
+[0m2021.12.04 21:00:05 INFO  time: ran 'sbt bloopInstall' in 39s[0m
+[0m2021.12.04 21:00:05 INFO  Disconnecting from Bloop session...[0m
+[0mNo more data in the server stdin, exiting...2021.12.04 21:00:05 
+INFO No more data in the server stdin, exiting... 
+Shut down connection with build server.No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m
+[0mNo more data in the client stdin, exiting...
+2021.12.04 21:00:05 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...[0m2021.12.04 21:00:05
+ INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher5144228360478161916/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher5144228360478161916/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher5144228360478161916/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.04 21:00:05 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.04 21:00:05 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher9176577884330672061/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher9176577884330672061/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher9176577884330672061/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.04 21:00:05 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.04 21:00:05 INFO  time: Connected to build server in 0.43s[0m
+[0m2021.12.04 21:00:05 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.04 21:00:05 INFO  time: Imported build in 0.4s[0m
+[0m2021.12.04 21:00:09 INFO  time: indexed workspace in 3.55s[0m
+[0m2021.12.04 21:00:10 INFO  compiling cal_phase (10 scala sources)[0m
+[0m2021.12.04 21:00:10 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+[0m2021.12.04 21:00:45 INFO  time: compiled cal_phase in 34s[0m
+Dec 04, 2021 9:02:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 80
+[0m2021.12.04 21:02:25 INFO  compiling cal_phase (1 scala source)[0m
+[0m2021.12.04 21:02:35 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 2m 29.713s)[0m
+[0m2021.12.04 21:02:35 INFO  compiling cal_phase (1 scala source)[0m
+[0m2021.12.04 21:02:41 INFO  time: compiled cal_phase in 6.44s[0m
+[0m2021.12.04 21:02:41 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 2m 36.334s)[0m
+[0m2021.12.04 21:02:50 WARN  Error downloading ch.epfl.scala:scala-expression-compiler_2.11.12:2.0.11
+  not found: /root/.ivy2/local/ch.epfl.scala/scala-expression-compiler_2.11.12/2.0.11/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/ch/epfl/scala/scala-expression-compiler_2.11.12/2.0.11/scala-expression-compiler_2.11.12-2.0.11.pom[0m
+[0m2021.12.04 21:02:50 WARN  Expression evaluation will not work.[0m
+[0m2021.12.04 21:02:50 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/dap-server.trace.json[0m
+[0m2021.12.04 21:02:53 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/dap-client.trace.json[0m
+[0m2021.12.04 21:02:53 INFO  Starting debug proxy for [Inst_cal_phase][0m
+[0m2021.12.04 21:02:54 INFO  Trying to attach to remote debuggee VM localhost:45575 .[0m
+[0m2021.12.04 21:02:54 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.12.04 21:03:09 ERROR Exception in thread "main" java.lang.AssertionError: assertion failed: Verilator C++ model compilation failed[0m
+[0m2021.12.04 21:03:09 ERROR 	at scala.Predef$.assert(Predef.scala:170)[0m
+[0m2021.12.04 21:03:09 ERROR 	at spinal.sim.VerilatorBackend.compileVerilator(VerilatorBackend.scala:478)[0m
+[0m2021.12.04 21:03:09 ERROR 	at spinal.sim.VerilatorBackend.<init>(VerilatorBackend.scala:540)[0m
+[0m2021.12.04 21:03:09 ERROR 	at spinal.core.sim.SpinalVerilatorBackend$.apply(SimBootstraps.scala:135)[0m
+[0m2021.12.04 21:03:09 ERROR 	at spinal.core.sim.SpinalSimConfig.compile(SimBootstraps.scala:625)[0m
+[0m2021.12.04 21:03:09 ERROR 	at spinal.core.sim.SpinalSimConfig.compile(SimBootstraps.scala:588)[0m
+[0m2021.12.04 21:03:09 ERROR 	at Inst_cal_phase$.<init>(cal_phase.scala:103)[0m
+[0m2021.12.04 21:03:09 ERROR 	at Inst_cal_phase$.<clinit>(cal_phase.scala)[0m
+[0m2021.12.04 21:03:09 ERROR 	at Inst_cal_phase.main(cal_phase.scala)[0m
+[0m2021.12.04 21:03:09 INFO  Closing debug server tcp://0.0.0.0:36007[0m
+[0m2021.12.04 21:03:12 INFO  Canceling debug proxy for [Inst_cal_phase][0m
+[0m2021.12.04 21:05:38 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 5m 33.071s)[0m
+[0m2021.12.04 21:05:41 WARN  Error downloading ch.epfl.scala:scala-expression-compiler_2.11.12:2.0.11
+  not found: /root/.ivy2/local/ch.epfl.scala/scala-expression-compiler_2.11.12/2.0.11/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/ch/epfl/scala/scala-expression-compiler_2.11.12/2.0.11/scala-expression-compiler_2.11.12-2.0.11.pom[0m
+[0m2021.12.04 21:05:41 WARN  Expression evaluation will not work.[0m
+[0m2021.12.04 21:05:41 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/dap-server.trace.json[0m
+[0m2021.12.04 21:05:42 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/dap-client.trace.json[0m
+[0m2021.12.04 21:05:42 INFO  Starting debug proxy for [Inst_cal_phase][0m
+[0m2021.12.04 21:05:44 INFO  Trying to attach to remote debuggee VM localhost:39731 .[0m
+[0m2021.12.04 21:05:44 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.12.04 21:06:04 ERROR Could not initialize GTK!  Is DISPLAY env var/xhost set?[0m
+[0m2021.12.04 21:06:04 ERROR [0m
+[0m2021.12.04 21:06:05 INFO  Canceling debug proxy for [Inst_cal_phase][0m
+[0m2021.12.04 21:06:04 INFO  Closing debug server tcp://0.0.0.0:33845[0m
+[0m2021.12.04 21:08:19 INFO  compiling cal_phase (1 scala source)[0m
+[0m2021.12.04 21:08:26 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 8m 20.994s)[0m
+[0m2021.12.04 21:08:26 INFO  compiling cal_phase (1 scala source)[0m
+[0m2021.12.04 21:08:30 INFO  time: compiled cal_phase in 3.37s[0m
+[0m2021.12.04 21:08:30 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 8m 24.958s)[0m
+[0m2021.12.04 21:08:32 WARN  Error downloading ch.epfl.scala:scala-expression-compiler_2.11.12:2.0.11
+  not found: /root/.ivy2/local/ch.epfl.scala/scala-expression-compiler_2.11.12/2.0.11/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/ch/epfl/scala/scala-expression-compiler_2.11.12/2.0.11/scala-expression-compiler_2.11.12-2.0.11.pom[0m
+[0m2021.12.04 21:08:32 WARN  Expression evaluation will not work.[0m
+[0m2021.12.04 21:08:32 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/dap-server.trace.json[0m
+[0m2021.12.04 21:08:32 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/dap-client.trace.json[0m
+[0m2021.12.04 21:08:33 INFO  Starting debug proxy for [Inst_cal_phase][0m
+[0m2021.12.04 21:08:34 INFO  Trying to attach to remote debuggee VM localhost:42141 .[0m
+[0m2021.12.04 21:08:34 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.12.04 21:08:55 INFO  Canceling debug proxy for [Inst_cal_phase][0m
+[0m2021.12.04 21:08:55 INFO  Closing debug server tcp://0.0.0.0:34671[0m
+Dec 04, 2021 9:15:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 231
+Dec 04, 2021 9:15:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 235
+Dec 04, 2021 9:15:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 234
+Dec 04, 2021 9:15:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 239
+Dec 04, 2021 9:15:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.InterruptedException
+java.util.concurrent.CompletionException: java.lang.InterruptedException
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:673)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:1975)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:42)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.pc.VirtualFileParams.checkCanceled(VirtualFileParams.java:25)
+	at scala.meta.internal.pc.CompletionProvider$$anonfun$1.apply(CompletionProvider.scala:77)
+	at scala.meta.internal.pc.CompletionProvider$$anonfun$1.apply(CompletionProvider.scala:76)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:410)
+	at scala.collection.Iterator$class.toStream(Iterator.scala:1320)
+	at scala.collection.AbstractIterator.toStream(Iterator.scala:1334)
+	at scala.collection.Iterator$$anonfun$toStream$1.apply(Iterator.scala:1320)
+	at scala.collection.Iterator$$anonfun$toStream$1.apply(Iterator.scala:1320)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1233)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1223)
+	at scala.collection.immutable.StreamIterator$$anonfun$next$1.apply(Stream.scala:1120)
+	at scala.collection.immutable.StreamIterator$$anonfun$next$1.apply(Stream.scala:1120)
+	at scala.collection.immutable.StreamIterator$LazyCell.v$lzycompute(Stream.scala:1109)
+	at scala.collection.immutable.StreamIterator$LazyCell.v(Stream.scala:1109)
+	at scala.collection.immutable.StreamIterator.hasNext(Stream.scala:1114)
+	at scala.collection.convert.Wrappers$IteratorWrapper.hasNext(Wrappers.scala:30)
+	at org.eclipse.lsp4j.jsonrpc.json.adapters.CollectionTypeAdapter.write(CollectionTypeAdapter.java:134)
+	at org.eclipse.lsp4j.jsonrpc.json.adapters.CollectionTypeAdapter.write(CollectionTypeAdapter.java:40)
+	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.write(TypeAdapterRuntimeTypeWrapper.java:69)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.write(ReflectiveTypeAdapterFactory.java:127)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.write(ReflectiveTypeAdapterFactory.java:245)
+	at com.google.gson.Gson.toJson(Gson.java:735)
+	at org.eclipse.lsp4j.jsonrpc.json.adapters.MessageTypeAdapter.write(MessageTypeAdapter.java:423)
+	at org.eclipse.lsp4j.jsonrpc.json.adapters.MessageTypeAdapter.write(MessageTypeAdapter.java:55)
+	at com.google.gson.Gson.toJson(Gson.java:735)
+	at com.google.gson.Gson.toJson(Gson.java:714)
+	at org.eclipse.lsp4j.jsonrpc.json.MessageJsonHandler.serialize(MessageJsonHandler.java:145)
+	at org.eclipse.lsp4j.jsonrpc.json.MessageJsonHandler.serialize(MessageJsonHandler.java:140)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:59)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.lambda$handleRequest$1(RemoteEndpoint.java:281)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670)
+	... 9 more
+
+[0m2021.12.04 21:16:17 INFO  compiling cal_phase (1 scala source)[0m
+[0m2021.12.04 21:16:17 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 16m 12.345s)[0m
+[0m2021.12.04 21:16:17 INFO  compiling cal_phase (1 scala source)[0m
+[0m2021.12.04 21:16:20 INFO  time: compiled cal_phase in 2.09s[0m
+[0m2021.12.04 21:16:20 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 16m 14.52s)[0m
+[0m2021.12.04 21:16:20 INFO  compiling cal_phase (1 scala source)[0m
+[0m2021.12.04 21:16:20 INFO  compiling cal_phase (1 scala source)[0m
+[0m2021.12.04 21:16:22 INFO  time: compiled cal_phase in 1.88s[0m
+Dec 04, 2021 9:16:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:252)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:244)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+[0m2021.12.04 21:16:30 INFO  compiling cal_phase (1 scala source)[0m
+[0m2021.12.04 21:16:32 INFO  time: compiled cal_phase in 2.73s[0m
+[0m2021.12.04 21:17:10 INFO  compiling cal_phase (1 scala source)[0m
+[0m2021.12.04 21:17:16 INFO  time: compiled cal_phase in 5.87s[0m
+[0m2021.12.04 21:17:17 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 17m 11.876s)[0m
+[0m2021.12.04 21:17:19 WARN  Error downloading ch.epfl.scala:scala-expression-compiler_2.11.12:2.0.11
+  not found: /root/.ivy2/local/ch.epfl.scala/scala-expression-compiler_2.11.12/2.0.11/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/ch/epfl/scala/scala-expression-compiler_2.11.12/2.0.11/scala-expression-compiler_2.11.12-2.0.11.pom[0m
+[0m2021.12.04 21:17:19 WARN  Expression evaluation will not work.[0m
+[0m2021.12.04 21:17:19 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/dap-server.trace.json[0m
+[0m2021.12.04 21:17:19 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/dap-client.trace.json[0m
+[0m2021.12.04 21:17:19 INFO  Starting debug proxy for [Inst_cal_phase][0m
+[0m2021.12.04 21:17:20 INFO  Trying to attach to remote debuggee VM localhost:42537 .[0m
+[0m2021.12.04 21:17:20 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.12.04 21:17:34 ERROR Exception in thread "main" java.io.FileNotFoundException: ./rtl/enumdefine.v (No such file or directory)[0m
+[0m2021.12.04 21:17:34 ERROR 	at java.io.FileOutputStream.open0(Native Method)[0m
+[0m2021.12.04 21:17:34 ERROR 	at java.io.FileOutputStream.open(FileOutputStream.java:270)[0m
+[0m2021.12.04 21:17:34 ERROR 	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)[0m
+[0m2021.12.04 21:17:34 ERROR unexpected error during source scanning
+java.lang.RuntimeException: invalid symbol format
+ception in thread "main" java/io/FileNotFoundException: //
+                                                        ^
+	at scala.sys.package$.error(package.scala:30)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.fail(Scala.scala:200)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.parseValue(Scala.scala:230)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.parseDescriptor(Scala.scala:259)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser.entryPoint(Scala.scala:279)
+	at scala.meta.internal.semanticdb.Scala$DescriptorParser$.apply(Scala.scala:287)
+	at scala.meta.internal.semanticdb.Scala$ScalaSymbolOps.owner(Scala.scala:101)
+	at scala.meta.internal.mtags.Symbol.owner(Symbol.scala:34)
+	at scala.meta.internal.mtags.DefinitionAlternatives$GlobalSymbol$.unapply(DefinitionAlternatives.scala:24)
+	at scala.meta.internal.mtags.DefinitionAlternatives$$anonfun$caseClassApplyOrCopyParams$1.applyOrElse(DefinitionAlternatives.scala:46)
+	at scala.meta.internal.mtags.DefinitionAlternatives$$anonfun$caseClassApplyOrCopyParams$1.applyOrElse(DefinitionAlternatives.scala:43)
+	at scala.PartialFunction$Lifted.apply(PartialFunction.scala:228)
+	at scala.PartialFunction$Lifted.apply(PartialFunction.scala:224)
+	at scala.Option.collect(Option.scala:432)
+	at scala.meta.internal.mtags.DefinitionAlternatives$.caseClassApplyOrCopyParams(DefinitionAlternatives.scala:43)
+	at scala.meta.internal.mtags.DefinitionAlternatives$.apply(DefinitionAlternatives.scala:14)
+	at scala.meta.internal.mtags.SymbolIndexBucket.query0(SymbolIndexBucket.scala:161)
+	at scala.meta.internal.mtags.SymbolIndexBucket.query(SymbolIndexBucket.scala:129)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.$anonfun$findSymbolDefinition$1(OnDemandSymbolIndex.scala:116)
+	at scala.collection.immutable.List.flatMap(List.scala:366)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.findSymbolDefinition(OnDemandSymbolIndex.scala:116)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definitions(OnDemandSymbolIndex.scala:48)
+	at scala.meta.internal.metals.DestinationProvider.definition(DefinitionProvider.scala:297)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:335)
+	at scala.meta.internal.metals.DestinationProvider.fromSymbol(DefinitionProvider.scala:355)
+	at scala.meta.internal.metals.DefinitionProvider.fromSymbol(DefinitionProvider.scala:104)
+	at scala.meta.internal.metals.StacktraceAnalyzer.findLocationForSymbol$1(StacktraceAnalyzer.scala:69)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$2(StacktraceAnalyzer.scala:74)
+	at scala.PartialFunction$Unlifted.applyOrElse(PartialFunction.scala:237)
+	at scala.collection.TraversableOnce.collectFirst(TraversableOnce.scala:180)
+	at scala.collection.TraversableOnce.collectFirst$(TraversableOnce.scala:167)
+	at scala.collection.AbstractTraversable.collectFirst(Traversable.scala:108)
+	at scala.meta.internal.metals.StacktraceAnalyzer.$anonfun$fileLocationFromLine$1(StacktraceAnalyzer.scala:74)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.metals.StacktraceAnalyzer.fileLocationFromLine(StacktraceAnalyzer.scala:72)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1(DebugProxy.scala:182)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleServerMessage$1$adapted(DebugProxy.scala:159)
+	at scala.meta.internal.metals.debug.ServerAdapter.$anonfun$onReceived$1(ServerAdapter.scala:25)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.$anonfun$listen$1(MessageIdAdapter.scala:57)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at scala.meta.internal.metals.debug.SocketEndpoint.listen(SocketEndpoint.scala:26)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.listen(MessageIdAdapter.scala:47)
+	at scala.meta.internal.metals.debug.ServerAdapter.onReceived(ServerAdapter.scala:18)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$listenToServer$1(DebugProxy.scala:66)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[0m
+[0m2021.12.04 21:17:34 ERROR 	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)[0m
+[0m2021.12.04 21:17:34 ERROR 	at java.io.FileWriter.<init>(FileWriter.java:63)[0m
+[0m2021.12.04 21:17:34 ERROR 	at spinal.core.internals.PhaseVerilog.impl(PhaseVerilog.scala:66)[0m
+[0m2021.12.04 21:17:34 ERROR 	at spinal.core.internals.PhaseContext.doPhase(Phase.scala:180)[0m
+[0m2021.12.04 21:17:34 ERROR 	at spinal.core.internals.SpinalVerilogBoot$$anonfun$singleShot$2$$anonfun$apply$116.apply(Phase.scala:2431)[0m
+[0m2021.12.04 21:17:34 ERROR 	at spinal.core.internals.SpinalVerilogBoot$$anonfun$singleShot$2$$anonfun$apply$116.apply(Phase.scala:2429)[0m
+[0m2021.12.04 21:17:34 ERROR 	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)[0m
+[0m2021.12.04 21:17:34 ERROR 	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)[0m
+[0m2021.12.04 21:17:34 ERROR 	at spinal.core.internals.SpinalVerilogBoot$$anonfun$singleShot$2.apply(Phase.scala:2429)[0m
+[0m2021.12.04 21:17:34 ERROR 	at spinal.core.internals.SpinalVerilogBoot$$anonfun$singleShot$2.apply(Phase.scala:2368)[0m
+[0m2021.12.04 21:17:34 ERROR 	at spinal.core.ScopeProperty$.sandbox(ScopeProperty.scala:31)[0m
+[0m2021.12.04 21:17:34 ERROR 	at spinal.core.internals.SpinalVerilogBoot$.singleShot(Phase.scala:2368)[0m
+[0m2021.12.04 21:17:34 ERROR 	at spinal.core.internals.SpinalVerilogBoot$.apply(Phase.scala:2363)[0m
+[0m2021.12.04 21:17:34 ERROR 	at spinal.core.Spinal$.apply(Spinal.scala:353)[0m
+[0m2021.12.04 21:17:34 ERROR 	at spinal.core.SpinalConfig.generate(Spinal.scala:158)[0m
+[0m2021.12.04 21:17:34 ERROR 	at Inst_cal_phase$.main(cal_phase.scala:102)[0m
+[0m2021.12.04 21:17:34 ERROR 	at Inst_cal_phase.main(cal_phase.scala)[0m
+[0m2021.12.04 21:17:34 INFO  Closing debug server tcp://0.0.0.0:32925[0m
+[0m2021.12.04 21:17:39 INFO  Canceling debug proxy for [Inst_cal_phase][0m
+[0m2021.12.04 21:18:06 INFO  compiling cal_phase (1 scala source)[0m
+[0m2021.12.04 21:18:07 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 18m 2.316s)[0m
+[0m2021.12.04 21:18:07 INFO  compiling cal_phase (1 scala source)[0m
+[0m2021.12.04 21:18:13 INFO  time: compiled cal_phase in 5.09s[0m
+[0m2021.12.04 21:18:13 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 18m 7.519s)[0m
+[0m2021.12.04 21:18:14 WARN  Error downloading ch.epfl.scala:scala-expression-compiler_2.11.12:2.0.11
+  not found: /root/.ivy2/local/ch.epfl.scala/scala-expression-compiler_2.11.12/2.0.11/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/ch/epfl/scala/scala-expression-compiler_2.11.12/2.0.11/scala-expression-compiler_2.11.12-2.0.11.pom[0m
+[0m2021.12.04 21:18:14 WARN  Expression evaluation will not work.[0m
+[0m2021.12.04 21:18:14 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/dap-server.trace.json[0m
+[0m2021.12.04 21:18:14 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/dap-client.trace.json[0m
+[0m2021.12.04 21:18:14 INFO  Starting debug proxy for [Inst_cal_phase][0m
+[0m2021.12.04 21:18:14 INFO  Trying to attach to remote debuggee VM localhost:39517 .[0m
+[0m2021.12.04 21:18:14 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.12.04 21:18:27 ERROR Exception in thread "main" java.io.FileNotFoundException: rtl/enumdefine.v (No such file or directory)[0m
+[0m2021.12.04 21:18:27 ERROR 	at java.io.FileOutputStream.open0(Native Method)[0m
+[0m2021.12.04 21:18:27 ERROR 	at java.io.FileOutputStream.open(FileOutputStream.java:270)[0m
+[0m2021.12.04 21:18:27 ERROR 	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)[0m
+[0m2021.12.04 21:18:27 ERROR 	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)[0m
+[0m2021.12.04 21:18:27 ERROR 	at java.io.FileWriter.<init>(FileWriter.java:63)[0m
+[0m2021.12.04 21:18:27 ERROR 	at spinal.core.internals.PhaseVerilog.impl(PhaseVerilog.scala:66)[0m
+[0m2021.12.04 21:18:27 ERROR 	at spinal.core.internals.PhaseContext.doPhase(Phase.scala:180)[0m
+[0m2021.12.04 21:18:27 ERROR 	at spinal.core.internals.SpinalVerilogBoot$$anonfun$singleShot$2$$anonfun$apply$116.apply(Phase.scala:2431)[0m
+[0m2021.12.04 21:18:27 ERROR 	at spinal.core.internals.SpinalVerilogBoot$$anonfun$singleShot$2$$anonfun$apply$116.apply(Phase.scala:2429)[0m
+[0m2021.12.04 21:18:27 ERROR 	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)[0m
+[0m2021.12.04 21:18:27 ERROR 	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)[0m
+[0m2021.12.04 21:18:27 ERROR 	at spinal.core.internals.SpinalVerilogBoot$$anonfun$singleShot$2.apply(Phase.scala:2429)[0m
+[0m2021.12.04 21:18:27 ERROR 	at spinal.core.internals.SpinalVerilogBoot$$anonfun$singleShot$2.apply(Phase.scala:2368)[0m
+[0m2021.12.04 21:18:27 ERROR 	at spinal.core.ScopeProperty$.sandbox(ScopeProperty.scala:31)[0m
+[0m2021.12.04 21:18:27 ERROR 	at spinal.core.internals.SpinalVerilogBoot$.singleShot(Phase.scala:2368)[0m
+[0m2021.12.04 21:18:27 ERROR 	at spinal.core.internals.SpinalVerilogBoot$.apply(Phase.scala:2363)[0m
+[0m2021.12.04 21:18:27 ERROR 	at spinal.core.Spinal$.apply(Spinal.scala:353)[0m
+[0m2021.12.04 21:18:27 ERROR 	at spinal.core.SpinalConfig.generate(Spinal.scala:158)[0m
+[0m2021.12.04 21:18:27 ERROR 	at Inst_cal_phase$.main(cal_phase.scala:102)[0m
+[0m2021.12.04 21:18:27 ERROR 	at Inst_cal_phase.main(cal_phase.scala)[0m
+[0m2021.12.04 21:18:27 INFO  Closing debug server tcp://0.0.0.0:36883[0m
+[0m2021.12.04 21:18:29 INFO  Canceling debug proxy for [Inst_cal_phase][0m
+Dec 04, 2021 9:19:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 481
+Dec 04, 2021 9:20:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 562
+Dec 04, 2021 9:20:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 563
+Dec 04, 2021 9:20:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 564
+Dec 04, 2021 9:20:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 574
+[0m2021.12.04 21:21:56 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 21m 50.375s)[0m
+[0m2021.12.04 21:21:57 WARN  Error downloading ch.epfl.scala:scala-expression-compiler_2.11.12:2.0.11
+  not found: /root/.ivy2/local/ch.epfl.scala/scala-expression-compiler_2.11.12/2.0.11/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/ch/epfl/scala/scala-expression-compiler_2.11.12/2.0.11/scala-expression-compiler_2.11.12-2.0.11.pom[0m
+[0m2021.12.04 21:21:57 WARN  Expression evaluation will not work.[0m
+[0m2021.12.04 21:21:57 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/dap-server.trace.json[0m
+[0m2021.12.04 21:21:57 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/dap-client.trace.json[0m
+[0m2021.12.04 21:21:58 INFO  Starting debug proxy for [Inst_cal_phase][0m
+[0m2021.12.04 21:21:58 INFO  Trying to attach to remote debuggee VM localhost:42547 .[0m
+[0m2021.12.04 21:21:58 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.12.04 21:22:13 INFO  Canceling debug proxy for [Inst_cal_phase][0m
+[0m2021.12.04 21:22:13 INFO  Closing debug server tcp://0.0.0.0:39221[0m
+Dec 04, 2021 9:23:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 632
+[0m2021.12.04 21:28:39 INFO  Shut down connection with build server.[0m
+No more data in the server stdin, exiting...[0m
+No more data in the server stdin, exiting...2021.12.04 21:28:39
+ No more data in the server stdin, exiting...INFO 
+ Shut down connection with build server.No more data in the client stdin, exiting...[0m
+No more data in the server stdin, exiting...
+
+No more data in the client stdin, exiting...
+[0m2021.12.04 21:29:08 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works/cal_phase' for client Visual Studio Code 1.62.3.[0m
+[0m2021.12.04 21:29:09 INFO  time: initialize in 0.61s[0m
+[0m2021.12.04 21:29:10 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher4796148365257708788/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m2021.12.04 21:29:10 INFO  skipping build import with status 'Installed'[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher4796148365257708788/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher4796148365257708788/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.04 21:29:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.04 21:29:10 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher601699543016135604/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher601699543016135604/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher601699543016135604/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.04 21:29:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.04 21:29:11 INFO  time: Connected to build server in 0.6s[0m
+[0m2021.12.04 21:29:11 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.04 21:29:10 INFO  time: Imported build in 0.26s[0m
+[0m2021.12.04 21:29:17 INFO  time: indexed workspace in 6.2s[0m
+[0m2021.12.04 21:29:20 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+Dec 04, 2021 9:37:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+[0m2021.12.04 22:11:13 INFO  shutting down Metals[0m
+[0m2021.12.04 22:11:13 INFO  Shut down connection with build server.[0m
+[0m2021.12.04 22:11:13 INFO  No more data in the client stdin, exiting...Shut down connection with build server.
+[0m
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.12.05 10:49:32 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works/cal_phase' for client Visual Studio Code 1.62.3.[0m
+[0m2021.12.05 10:49:33 INFO  time: initialize in 0.66s[0m
+[0m2021.12.05 10:49:33 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher7761943933311676245/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m2021.12.05 10:49:34 INFO  skipping build import with status 'Installed'[0m
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+[0m2021.12.05 10:49:39 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+Waiting for the bsp connection to come up...
+No server running at 127.0.0.1:8212, let's fire one...
+Resolving ch.epfl.scala:bloop-frontend_2.12:1.4.11...
+Starting bloop server at 127.0.0.1:8212...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from '/mnt/mydata/spinal_works/cal_phase/.bloop'...
+[0m[32m[D][0m Loading project from '/mnt/mydata/spinal_works/cal_phase/.bloop/cal_phase.json'
+[0m[32m[D][0m Loading project from '/mnt/mydata/spinal_works/cal_phase/.bloop/cal_phase-test.json'
+[0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.11.12.
+[0m[32m[D][0m   => /root/.cache/coursier/v1/https/repo1.maven.org/maven2/jline/jline/2.14.3/jline-2.14.3.jar
+[0m[32m[D][0m   => /root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar
+[0m[32m[D][0m   => /root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar
+[0m[32m[D][0m   => /root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12.jar
+[0m[32m[D][0m   => /root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar
+[0m[32m[D][0m   => /root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12.jar
+[0m[32m[D][0m Configured Scala SemanticDB in projects 'cal_phase-test', 'cal_phase'
+[0m[32m[D][0m Missing analysis file for project 'cal_phase-test'
+[0m[32m[D][0m Loading previous analysis for 'cal_phase' from '/mnt/mydata/spinal_works/cal_phase/target/streams/compile/bloopAnalysisOut/_global/streams/inc_compile_2.11.zip'.
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher7761943933311676245/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher7761943933311676245/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.05 10:49:39 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.05 10:49:39 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher3105813915210507588/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher3105813915210507588/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher3105813915210507588/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.05 10:49:40 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.05 10:49:40 INFO  time: Connected to build server in 6.6s[0m
+[0m2021.12.05 10:49:40 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.05 10:49:40 INFO  time: Imported build in 0.3s[0m
+[0m2021.12.05 10:49:43 INFO  time: code lens generation in 7.84s[0m
+[0m2021.12.05 10:49:46 INFO  time: indexed workspace in 5.56s[0m
+[0m2021.12.05 10:49:48 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+Dec 05, 2021 10:51:16 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.12.05 10:51:17 INFO  shutting down Metals[0m
+[0m2021.12.05 10:51:17 INFO  Shut down connection with build server.[0m
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...[0m2021.12.05 10:51:17 INFO  Shut down connection with build server.
+[0mNo more data in the server stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+
+No more data in the client stdin, exiting...
+[0m2021.12.05 10:51:32 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works/cal_phase' for client Visual Studio Code 1.62.3.[0m
+[0m2021.12.05 10:51:33 INFO  time: initialize in 0.5s[0m
+[0m2021.12.05 10:51:34 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher4130452921684779367/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m2021.12.05 10:51:33 INFO  skipping build import with status 'Installed'[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher4130452921684779367/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher4130452921684779367/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.05 10:51:34 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.05 10:51:34 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher8287725439833205540/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher8287725439833205540/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher8287725439833205540/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.05 10:51:34 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.05 10:51:34 INFO  time: Connected to build server in 0.48s[0m
+[0m2021.12.05 10:51:34 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.05 10:51:34 INFO  time: Imported build in 0.16s[0m
+[0m2021.12.05 10:51:38 INFO  time: indexed workspace in 4.17s[0m
+[0m2021.12.05 10:51:40 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+[0m2021.12.05 11:04:51 INFO  Shut down connection with build server.No more data in the server stdin, exiting...[0m
+No more data in the server stdin, exiting...
+
+No more data in the server stdin, exiting...[0m
+No more data in the server stdin, exiting...
+2021.12.05 11:04:51No more data in the client stdin, exiting... 
+INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.12.05 11:05:10 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works/cal_phase' for client Visual Studio Code 1.62.3.[0m
+[0m2021.12.05 11:05:11 INFO  time: initialize in 0.5s[0m
+[0m2021.12.05 11:05:12 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher7586026365381145890/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m2021.12.05 11:05:11 INFO  skipping build import with status 'Installed'[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher7586026365381145890/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher7586026365381145890/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.05 11:05:12 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.05 11:05:12 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher626400594598472795/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher626400594598472795/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher626400594598472795/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.05 11:05:12 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.05 11:05:12 INFO  time: Connected to build server in 0.5s[0m
+[0m2021.12.05 11:05:12 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.05 11:05:12 INFO  time: Imported build in 0.17s[0m
+[0m2021.12.05 11:05:16 INFO  time: indexed workspace in 4.04s[0m
+[0m2021.12.05 11:05:18 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+[0m2021.12.05 13:33:19 INFO No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting... 
+Shut down connection with build server.[0m
+[0m2021.12.05 13:33:19 INFO No more data in the client stdin, exiting...
+ Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.12.05 13:33:37 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works/cal_phase' for client Visual Studio Code 1.62.3.[0m
+[0m2021.12.05 13:33:37 INFO  time: initialize in 0.52s[0m
+[0m2021.12.05 13:33:38 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher112381504814226316/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m2021.12.05 13:33:39 INFO  skipping build import with status 'Installed'[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher112381504814226316/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher112381504814226316/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.05 13:33:39 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.05 13:33:39 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher2726294168225801110/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher2726294168225801110/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher2726294168225801110/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.05 13:33:38 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.05 13:33:38 INFO  time: Connected to build server in 0.73s[0m
+[0m2021.12.05 13:33:38 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.05 13:33:39 INFO  time: Imported build in 0.23s[0m
+[0m2021.12.05 13:33:44 INFO  time: indexed workspace in 4.76s[0m
+[0m2021.12.05 13:33:46 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+Dec 05, 2021 3:13:30 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Dec 05, 2021 3:13:48 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.12.05 15:21:17 INFO  Shut down connection with build server.No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0mNo more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+
+[0m2021.12.05 15:21:17 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+[0m2021.12.05 15:21:44 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works/cal_phase' for client Visual Studio Code 1.62.3.[0m
+[0m2021.12.05 15:21:44 INFO  time: initialize in 0.52s[0m
+[0m2021.12.05 15:21:45 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher6190916486242885223/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m2021.12.05 15:21:46 INFO  skipping build import with status 'Installed'[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher6190916486242885223/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher6190916486242885223/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.05 15:21:46 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.05 15:21:46 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher1357503207116601577/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher1357503207116601577/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher1357503207116601577/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.05 15:21:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.05 15:21:45 INFO  time: Connected to build server in 0.6s[0m
+[0m2021.12.05 15:21:45 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.05 15:21:46 INFO  time: Imported build in 0.2s[0m
+Dec 05, 2021 3:21:49 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.12.05 15:21:49 INFO  shutting down Metals[0m
+[0m2021.12.05 15:21:50 INFO  No more data in the server stdin, exiting...
+Shut down connection with build server.No more data in the server stdin, exiting...[0m
+
+No more data in the server stdin, exiting...
+[0mNo more data in the server stdin, exiting...2021.12.05 15:21:50
+ INFO No more data in the client stdin, exiting... 
+Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.12.05 15:22:07 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works/cal_phase' for client Visual Studio Code 1.62.3.[0m
+[0m2021.12.05 15:22:08 INFO  time: initialize in 0.54s[0m
+[0m2021.12.05 15:22:09 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher5333408969546971543/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher5333408969546971543/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher5333408969546971543/bsp.socket...
+[0m2021.12.05 15:22:09 INFO  skipping build import with status 'Installed'[0m
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.05 15:22:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.05 15:22:09 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher4390399103862838170/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher4390399103862838170/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher4390399103862838170/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.05 15:22:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.05 15:22:09 INFO  time: Connected to build server in 0.63s[0m
+[0m2021.12.05 15:22:09 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.05 15:22:10 INFO  time: Imported build in 0.23s[0m
+[0m2021.12.05 15:22:14 INFO  time: indexed workspace in 4.03s[0m
+[0m2021.12.05 15:22:15 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.12.05 16:58:09 INFO  Shut down connection with build server.No more data in the server stdin, exiting...
+[0mNo more data in the server stdin, exiting...
+
+[0m2021.12.05 16:58:09 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+[0m2021.12.13 20:22:55 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works/cal_phase' for client Visual Studio Code 1.63.0.[0m
+[0m2021.12.13 20:22:55 INFO  time: initialize in 0.28s[0m
+[0m2021.12.13 20:22:55 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher6597622814213426548/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from '/mnt/mydata/spinal_works/cal_phase/.bloop'...
+[0m[32m[D][0m Loading project from '/mnt/mydata/spinal_works/cal_phase/.bloop/cal_phase-test.json'
+[0m[32m[D][0m Loading project from '/mnt/mydata/spinal_works/cal_phase/.bloop/cal_phase.json'
+[0m[32m[D][0m Configured Scala SemanticDB in projects 'cal_phase-test', 'cal_phase'
+[0m[32m[D][0m Missing analysis file for project 'cal_phase-test'
+[0m[32m[D][0m Loading previous analysis for 'cal_phase' from '/mnt/mydata/spinal_works/cal_phase/target/streams/compile/bloopAnalysisOut/_global/streams/inc_compile_2.11.zip'.
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher6597622814213426548/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher6597622814213426548/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:22:56 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.13 20:22:56 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher2562902399802847108/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher2562902399802847108/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher2562902399802847108/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:22:57 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.13 20:23:02 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.12.13 20:23:04 INFO  time: code lens generation in 2.52s[0m
+[0m2021.12.13 20:23:06 INFO  running '/usr/local/jdk1.8/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals9088577779580923106/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.12.13 20:23:07 INFO  [info] welcome to sbt 1.5.5 (Oracle Corporation Java 1.8.0_291)[0m
+[0m2021.12.13 20:23:08 INFO  [info] loading global plugins from /root/.sbt/1.0/plugins[0m
+[0m2021.12.13 20:23:10 INFO  [info] loading settings for project cal_phase-build-build from metals.sbt ...[0m
+[0m2021.12.13 20:23:10 INFO  [info] loading project definition from /mnt/mydata/spinal_works/cal_phase/project/project[0m
+[0m2021.12.13 20:23:10 INFO  [info] loading settings for project cal_phase-build from metals.sbt ...[0m
+[0m2021.12.13 20:23:10 INFO  [info] loading project definition from /mnt/mydata/spinal_works/cal_phase/project[0m
+No more data in the client stdin, exiting...
+[0m2021.12.13 20:23:17 ERROR Timeout waiting for 'build/initialize' response[0m
+[0m2021.12.13 20:23:17 WARN  Retrying connection to the build server Bloop[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher7092680591811308913/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher7092680591811308913/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher7092680591811308913/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:23:17 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.13 20:23:21 INFO  [success] Generated .bloop/cal_phase-build.json[0m
+[0m2021.12.13 20:23:21 INFO  [success] Total time: 11 s, completed Dec 13, 2021 8:23:21 PM[0m
+[0m2021.12.13 20:23:23 INFO  [info] loading settings for project cal_phase from build.sbt ...[0m
+[0m2021.12.13 20:23:23 INFO  [info] set current project to cal_phase (in build file:/mnt/mydata/spinal_works/cal_phase/)[0m
+[0m2021.12.13 20:23:23 INFO  [success] Generated .bloop/cal_phase.json[0m
+[0m2021.12.13 20:23:23 INFO  [success] Generated .bloop/cal_phase-test.json[0m
+[0m2021.12.13 20:23:23 INFO  [success] Total time: 1 s, completed Dec 13, 2021 8:23:24 PM[0m
+[0m2021.12.13 20:23:24 INFO  time: ran 'sbt bloopInstall' in 18s[0m
+[0m2021.12.13 20:23:24 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher4339074595983868247/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from '/mnt/mydata/spinal_works/cal_phase/.bloop'...
+[0m[32m[D][0m Loading project from '/mnt/mydata/spinal_works/cal_phase/.bloop/cal_phase.json'
+[0m[32m[D][0m Loading project from '/mnt/mydata/spinal_works/cal_phase/.bloop/cal_phase-test.json'
+[0m[32m[D][0m Configured Scala SemanticDB in projects 'cal_phase-test', 'cal_phase'
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher4339074595983868247/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher4339074595983868247/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:23:24 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.13 20:23:24 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher9194114890094292904/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher9194114890094292904/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher9194114890094292904/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:23:24 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+No more data in the client stdin, exiting...[0m
+2021.12.13 20:23:37 ERROR Timeout waiting for 'build/initialize' response[0m
+[0m2021.12.13 20:23:37 WARN  Retrying connection to the build server Bloop[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher2834146063192097883/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher2834146063192097883/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher2834146063192097883/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:23:37 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+No more data in the client stdin, exiting...
+[0m2021.12.13 20:23:44 ERROR Timeout waiting for 'build/initialize' response[0m
+[0m2021.12.13 20:23:44 WARN  Retrying connection to the build server Bloop[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher1904331037751637942/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher1904331037751637942/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher1904331037751637942/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:23:44 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.13 20:23:52 INFO  time: Connected to build server in 28s[0m
+[0m2021.12.13 20:23:52 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.13 20:23:52 INFO  time: Imported build in 0.11s[0m
+[0m2021.12.13 20:23:52 INFO  time: Connected to build server in 56s[0m
+[0m2021.12.13 20:23:52 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.13 20:23:54 INFO  time: indexed workspace in 1.71s[0m
+[0m2021.12.13 20:23:54 INFO  time: indexed workspace in 1.61s[0m
+[0m2021.12.13 20:24:07 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+Dec 13, 2021 8:24:25 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:252)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:244)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+[0m2021.12.13 20:24:39 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 1m 42.724s)[0m
+Dec 13, 2021 8:24:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:252)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:244)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+[0m2021.12.13 20:24:59 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 2m 2.283s)[0m
+Dec 13, 2021 8:24:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:252)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:244)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+[0m2021.12.13 20:28:24 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 5m 27.912s)[0m
+Dec 13, 2021 8:28:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:252)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:244)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+[0m2021.12.13 20:29:48 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 6m 51.768s)[0m
+Dec 13, 2021 8:29:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:252)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:244)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+[0m2021.12.13 20:29:53 INFO  Disconnecting from Bloop session...[0m
+[0m2021.12.13 20:29:53No more data in the server stdin, exiting... 
+INFO No more data in the server stdin, exiting... 
+Shut down connection with build server.No more data in the server stdin, exiting...
+[0mNo more data in the server stdin, exiting...
+
+[0m2021.12.13 20:29:53No more data in the client stdin, exiting... 
+INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.12.13 20:29:53 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher460704003421300620/bsp.socket'...
+Waiting for the bsp connection to come up...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+Waiting for the bsp connection to come up...
+No server running at 127.0.0.1:8212, let's fire one...
+Resolving ch.epfl.scala:bloop-frontend_2.12:1.4.11...
+Starting bloop server at 127.0.0.1:8212...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from '/mnt/mydata/spinal_works/cal_phase/.bloop'...
+[0m[32m[D][0m Loading project from '/mnt/mydata/spinal_works/cal_phase/.bloop/cal_phase.json'
+[0m[32m[D][0m Loading project from '/mnt/mydata/spinal_works/cal_phase/.bloop/cal_phase-test.json'
+[0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.11.12.
+[0m[32m[D][0m   => /root/.cache/coursier/v1/https/repo1.maven.org/maven2/jline/jline/2.14.3/jline-2.14.3.jar
+[0m[32m[D][0m   => /root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar
+[0m[32m[D][0m   => /root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar
+[0m[32m[D][0m   => /root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12.jar
+[0m[32m[D][0m   => /root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar
+[0m[32m[D][0m   => /root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12.jar
+[0m[32m[D][0m Configured Scala SemanticDB in projects 'cal_phase', 'cal_phase-test'
+[0m[32m[D][0m Missing analysis file for project 'cal_phase-test'
+[0m[32m[D][0m Loading previous analysis for 'cal_phase' from '/mnt/mydata/spinal_works/cal_phase/target/streams/compile/bloopAnalysisOut/_global/streams/inc_compile_2.11.zip'.
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher460704003421300620/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher460704003421300620/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:29:55 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.13 20:29:55 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher7927144853645729404/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher7927144853645729404/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher7927144853645729404/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:29:55 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.13 20:29:55 INFO  time: Connected to build server in 2s[0m
+[0m2021.12.13 20:29:55 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.13 20:29:55 INFO  time: Imported build in 0.13s[0m
+[0m2021.12.13 20:29:57 INFO  time: indexed workspace in 1.04s[0m
+[0m2021.12.13 20:29:57 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+[0m2021.12.13 20:30:10 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 15.179s)[0m
+Dec 13, 2021 8:30:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:252)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:244)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+[0m2021.12.13 20:30:16 INFO  shutting down Metals[0m
+[0m2021.12.13 20:30:16 INFO  Shut down connection with build server.[0m
+[0m2021.12.13 20:30:16 No more data in the client stdin, exiting...INFO  
+Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+[0m2021.12.13 20:30:16 ERROR Unexpected error initializing server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[0m
+[0m2021.12.13 20:30:35 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works/cal_phase' for client Visual Studio Code 1.63.0.[0m
+[0m2021.12.13 20:30:36 INFO  time: initialize in 0.28s[0m
+[0m2021.12.13 20:30:35 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher5416631088009445440/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m2021.12.13 20:30:36 INFO  skipping build import with status 'Installed'[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher5416631088009445440/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher5416631088009445440/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:30:36 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.13 20:30:36 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher6298421538489377252/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher6298421538489377252/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher6298421538489377252/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:30:37 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.13 20:30:37 INFO  time: Connected to build server in 0.4s[0m
+[0m2021.12.13 20:30:37 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.13 20:30:37 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.12.13 20:30:37 INFO  time: code lens generation in 1.87s[0m
+[0m2021.12.13 20:30:40 INFO  time: indexed workspace in 1.61s[0m
+[0m2021.12.13 20:30:40 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+Dec 13, 2021 8:30:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:252)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:244)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+Dec 13, 2021 8:34:46 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.12.13 20:35:29 INFO  shutting down Metals[0m
+[0m2021.12.13 20:35:29No more data in the server stdin, exiting... 
+INFO  No more data in the server stdin, exiting...Shut down connection with build server.
+[0mNo more data in the server stdin, exiting...
+
+No more data in the server stdin, exiting...[0m
+2021.12.13 20:35:29 No more data in the client stdin, exiting...INFO 
+ Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.12.13 20:35:37 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works/cal_phase' for client Visual Studio Code 1.63.0.[0m
+[0m2021.12.13 20:35:37 INFO  time: initialize in 0.28s[0m
+[0m2021.12.13 20:35:37 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher4720845199330792386/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m2021.12.13 20:35:37 INFO  skipping build import with status 'Installed'[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher4720845199330792386/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher4720845199330792386/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:35:38 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.13 20:35:38 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher1532273408619713319/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher1532273408619713319/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher1532273408619713319/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:35:38 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.13 20:35:38 INFO  time: Connected to build server in 0.35s[0m
+[0m2021.12.13 20:35:38 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.13 20:35:38 INFO  time: Imported build in 0.1s[0m
+[0m2021.12.13 20:35:40 INFO  time: indexed workspace in 2.21s[0m
+[0m2021.12.13 20:35:41 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+Dec 13, 2021 8:35:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:252)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:244)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+[0m2021.12.13 20:36:01 INFO  shutting down Metals[0m
+[0m2021.12.13 20:36:01No more data in the server stdin, exiting... 
+INFO  No more data in the server stdin, exiting...Shut down connection with build server.
+[0mNo more data in the server stdin, exiting...
+
+No more data in the server stdin, exiting...[0m
+2021.12.13 20:36:01 No more data in the client stdin, exiting...INFO 
+ Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.12.13 20:36:13 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works/cal_phase' for client Visual Studio Code 1.63.0.[0m
+[0m2021.12.13 20:36:13 INFO  time: initialize in 0.31s[0m
+[0m2021.12.13 20:36:13 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher7170795701436085770/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m2021.12.13 20:36:13 INFO  skipping build import with status 'Installed'[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher7170795701436085770/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher7170795701436085770/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:36:13 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.13 20:36:13 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher1695491348513092264/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher1695491348513092264/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher1695491348513092264/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:36:14 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.13 20:36:14 INFO  time: Connected to build server in 0.4s[0m
+[0m2021.12.13 20:36:14 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.13 20:36:14 INFO  time: Imported build in 0.12s[0m
+[0m2021.12.13 20:36:16 INFO  time: indexed workspace in 1.99s[0m
+[0m2021.12.13 20:36:17 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+Dec 13, 2021 8:36:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:252)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:244)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+Dec 13, 2021 8:39:02 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Dec 13, 2021 8:39:16 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.12.13 20:39:17 INFO  shutting down Metals[0m
+No more data in the server stdin, exiting...[0m
+2021.12.13 20:39:17No more data in the server stdin, exiting... INFO 
+ No more data in the server stdin, exiting...Shut down connection with build server.[0m
+
+No more data in the server stdin, exiting...
+[0m2021.12.13 20:39:17 No more data in the client stdin, exiting...INFO 
+ Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.12.13 20:39:25 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works/cal_phase' for client Visual Studio Code 1.63.0.[0m
+[0m2021.12.13 20:39:25 INFO  time: initialize in 0.29s[0m
+[0m2021.12.13 20:39:25 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher4508621449155176669/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m2021.12.13 20:39:25 INFO  skipping build import with status 'Installed'[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher4508621449155176669/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher4508621449155176669/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:39:25 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.13 20:39:25 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher322230151990880081/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher322230151990880081/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher322230151990880081/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.13 20:39:26 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /root/.cache/metals/bsp.trace.json[0m
+[0m2021.12.13 20:39:26 INFO  time: Connected to build server in 0.4s[0m
+[0m2021.12.13 20:39:26 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.13 20:39:26 INFO  time: Imported build in 0.14s[0m
+Dec 13, 2021 8:39:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+[0m2021.12.13 20:39:29 INFO  time: indexed workspace in 2.61s[0m
+[0m2021.12.13 20:39:30 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+Dec 13, 2021 8:39:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:252)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:244)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+[0m2021.12.13 20:40:43 INFO  compiling cal_phase (10 scala sources)[0m
+[0m2021.12.13 20:40:53 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 1m 26.966s)[0m
+[0m2021.12.13 20:40:53 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 1m 26.966s)[0m
+[0m2021.12.13 20:40:53 INFO  compiling cal_phase (10 scala sources)[0m
+[0m2021.12.13 20:40:53 INFO  compiling cal_phase (10 scala sources)[0m
+[0m2021.12.13 20:41:01 INFO  Deduplicating compilation of cal_phase-test from bsp client 'Metals 0.10.9' (since 1m 34.967s)[0m
+[0m2021.12.13 20:41:01 INFO  time: compiled cal_phase in 8.67s[0m
+Dec 13, 2021 8:41:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:252)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:244)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+[0m2021.12.13 20:46:21 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 6m 54.533s)[0m
+Dec 13, 2021 8:46:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:252)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:244)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+[0m2021.12.13 20:46:23 INFO  Deduplicating compilation of cal_phase from bsp client 'Metals 0.10.9' (since 6m 56.54s)[0m
+Dec 13, 2021 8:46:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Debugging is not supported because bloop server is running on a JRE /usr/synopsys/verdi-L-2016.06-1/share/jre/linux64 with no support for Java Debug Interface: 'JDI implementation is not provided by the vendor'. To enable debugging, install a JDK and restart the bloop server.
+
+Run bloop about for more information about the current JDK runtime.
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:252)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:244)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+[0m2021.12.13 20:50:16 ERROR [0m
+[0m2021.12.13 20:50:16 ERROR https://github.com/scala/hello-world.g8.git: cannot open git-upload-pack[0m
+[0m2021.12.13 20:50:16 ERROR [0m
+[0m2021.12.13 20:50:16 INFO  time: ran 'giter8.Giter8' in 0.68s[0m
+[0m2021.12.13 20:51:06 INFO  shutting down Metals[0m
+No more data in the server stdin, exiting...[0m
+2021.12.13 20:51:06No more data in the server stdin, exiting... 
+INFO  No more data in the server stdin, exiting...Shut down connection with build server.[0m
+
+No more data in the server stdin, exiting...[0m2021.12.13 20:51:06
+No more data in the client stdin, exiting... 
+INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...

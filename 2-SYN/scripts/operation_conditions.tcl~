@@ -1,0 +1,35 @@
+set_operating_conditions \
+			 ss_typical_max_0p99v_125c  \
+			-library sc9mc_logic0040ll_base_lvt_c40_ss_typical_max_0p99v_125c 
+
+
+
+
+set_operating_conditions \
+			 smic_ss_06v_125c \
+			-library LVLLH_SS_6_99_125c 
+
+set_operating_conditions \
+			 smic40_max \
+			-library S40NLLPLLGS_ZP1500_v1.1.1_max 
+
+set_operating_conditions \
+			 SP40NLLD2RNP_OV3_V0p3_ss_V0p99_125C \
+			-library SP40NLLD2RNP_OV3_V0p3_ss_V0p99_125C 
+
+
+set_operating_conditions \
+		       smic_ss_0p6v_125c \
+			-library smic_ss_0p6v_125c
+
+set_operating_conditions \
+		       latch_ss_0p6v_125 \
+			-library monitor_DFF_0p6v_125
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+/************************************************/
+/* FIVE_REG BLOCK                               */
+/* AutoFix dc_shell script.                     */
+/*                                              */
+/* File: TASK_08.dc                             */
+/* Path: <DFTW>/Lab_03                          */
+/*                                              */
+/************************************************/
+
+/* ENABLE AutoFix DFT:
+ * Turn on AutoFix, but not Shadow Logic.
+ */
+   current_design FIVE_REG
+   set_dft_configuration  -order autofix
+
+/* ADD ASIC_TEST PORT
+ * Create a test-mode port needed by AutoFix.
+ * Apply a test_hold of 1 to ASIC_TEST.
+ */
+   create_port  -dir in  ASIC_TEST
+   set_test_hold     1   ASIC_TEST
+
+/* SET AutoFix CONFIGURATION:
+ * 1. Fix only clock violations.
+ * 2. Use "clk" as existing controllable clock.
+ * 3. Use ASIC_TEST as the test_mode port.
+ */
+   set_autofix_configuration  -clock true \
+                              -async false
+   set_autofix_clock  clk  all_registers()
+   set_dft_signal  test_mode  -port  ASIC_TEST
+
+/* SET SCAN CONFIGURATION:
+ * Optionally create SE port for buffering.
+ * Optionally share input port a[0] with SI.
+ * Explicitly declare test-clock waveform.
+ */
+   create_port  -dir in   SE
+   set_scan_signal test_scan_enable -port SE
+   set_scan_signal test_scan_in     -port a[0]
+   create_test_clock  -p 100  -w {45 55}  clk
+
+/* INSERT AutoFix DFT:
+ * Fix all violations flagged by check_dft.
+ * Insert a scan path from port a[0] to e[3].
+ */
+   check_dft
+   preview_dft  -test_points all
+   insert_dft   -map high
+   check_dft
+   report_test  -scan_path
+
+/************************************************/

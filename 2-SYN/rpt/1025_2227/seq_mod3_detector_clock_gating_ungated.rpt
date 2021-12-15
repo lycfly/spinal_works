@@ -1,0 +1,37 @@
+ 
+****************************************
+Report : clock_gating
+        -ungated
+        -verbose
+Design : seq_mod3_detector
+Version: L-2016.03-SP1
+Date   : Mon Oct 25 22:30:15 2021
+****************************************
+
+
+--------------------------------------------------------------------------------
+                             Ungated Register Report
+--------------------------------------------------------------------------------
+           Ungated Register     |  Reason                  |  What Next?
+--------------------------------------------------------------------------------
+    current_state_reg_0_        |  Always enabled register |  -
+    success_reg                 |  Always enabled register |  -
+    current_state_reg_1_        |  Min bitwidth not met    |  -
+                                |                          |
+--------------------------------------------------------------------------------
+
+
+                             Clock Gating Summary
+          ------------------------------------------------------------
+          |    Number of Clock gating elements    |        0         |
+          |                                       |                  |
+          |    Number of Gated registers          |     0 (0.00%)    |
+          |                                       |                  |
+          |    Number of Ungated registers        |     3 (100.00%)  |
+          |                                       |                  |
+          |    Total number of registers          |        3         |
+          ------------------------------------------------------------
+
+
+
+1

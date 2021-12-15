@@ -1,0 +1,23 @@
+{signal: [
+  {name:'clk', wave: 'p...........' },
+  {name:'wdat', wave: 'x..3456x....', data: 'a b c d' },
+  {name:'rdat', wave: 'x...7834x...', data: 'x y a b' },
+  {name:'rd', wave: '0..1...0....' },
+  {name:'wr', wave: '0..1...0....' },
+  {name:'raddr', wave: 'x..2222x....', data: '2 3 4 5' },
+  {name:'waddr', wave: 'x..2222x....', data: '4 5 6 7' },
+  {name:'conflict_flag', wave: '0..1...0....' },
+  {name:'buffer_flag', wave: '0...1...0...' },
+  {name:'buffer_data', wave: 'x...3456x...', data: 'a b c d' },
+  {name:'even_rd', wave: '0..1010.....' },
+  {name:'even_wr', wave: '0...1010....' },
+  {name:'even_raddr', wave: 'x.2.2.2.x...', data: '1(2) 2(4) 3(6)'  },
+  {name:'even_waddr', wave: 'x..2.2.x....', data: '2(4) 3(6)' },
+  
+  {name:'odd_rd', wave: '0...1010....' },
+  {name:'odd_wr', wave: '0....1010...' },
+  {name:'odd_raddr',  wave: 'x..2.2.x....', data: '1(3) 2(5)'  },
+  {name:'odd_waddr', wave: 'x...2.2.x...', data: '2(5) 3(7)' },
+  
+]
+}

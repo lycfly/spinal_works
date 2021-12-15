@@ -1,0 +1,42 @@
+#*******************************************************************************
+
+
+create_power_domain BIT_TOP                      -include_scope
+create_power_domain BIT_CORE                     -elements { u_BNN_AES_top_hat
+						            } 
+
+create_supply_net VDD_top_net                      -domain BIT_TOP  
+create_supply_net VDD_core_net                     -domain BIT_TOP
+create_supply_net VDD_core_net                     -domain BIT_CORE                -reuse
+create_supply_net VSS_top_net                      -domain BIT_TOP
+create_supply_net VSS_top_net                      -domain BIT_CORE                -reuse
+create_supply_net VDD_top_net                      -domain BIT_CORE                -reuse
+
+
+create_supply_port VDD_top_port                                      -direction in
+create_supply_port VSS_top_port                                      -direction in
+create_supply_port VDD_core_port                   -domain BIT_CORE  -direction in
+
+connect_supply_net VDD_top_net                     -ports VDD_top_port
+connect_supply_net VSS_top_net                     -ports VSS_top_port
+connect_supply_net VDD_core_net                    -ports VDD_core_port
+
+set_domain_supply_net BIT_TOP                   -primary_power_net VDD_top_net                 -primary_ground_net VSS_top_net
+set_domain_supply_net BIT_CORE                  -primary_power_net VDD_core_net                -primary_ground_net VSS_top_net
+
+
+set_level_shifter VDD3V3to1V8 -domain BIT_CORE   -applies_to outputs -rule low_to_high -location automatic -elements {u_BNN_AES_top_hat}
+
+map_level_shifter_cell  VDD3V3to1V8  -domain BIT_CORE  -lib_cells { LVLLHD2BWP30P140 }
+
+
+###Define Power State
+add_port_state VDD_top_port             -state {VDD 0.81000} 
+add_port_state VSS_top_port             -state {GND 0.000000}
+add_port_state VDD_core_port            -state {VDD_CORE 0.50000}
+
+
+#create_pst chip_pst -supplies [list VDD_top_net VDD_core_port  VSS_top_net ]
+#add_pst_state PwrSt1     -pst chip_pst  -state { VDD        VDD_CORE  GND  }
+#add_pst_state POWERDOWN  -pst chip_pst  -state { VDD_Off    VDD_CORE  GND  }
+

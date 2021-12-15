@@ -1,0 +1,976 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 18, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+set TOP_MODULE cal_phase
+cal_phase
+set compile_enable_register_merging    true
+true
+set compile_seqmap_propagate_constants true
+true
+set verilogout_no_tri   "true"
+true
+set verilogout_equation "false"
+false
+set mv_default_level_shifter_voltage_range_infinity true
+true
+set change_names_dont_change_bus_members      true
+true
+set compile_disable_hierarchical_inverter_opt true
+true
+set auto_insert_level_shifters_on_clocks      all
+all
+set auto_insert_level_shifters true
+true
+analyze -format verilog "/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v"  -define DC_SYN
+Running PRESTO HDLC
+Compiling source file /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+1
+elaborate       $TOP_MODULE
+Loading db file '/usr/synopsys/dc-L-2016.03-SP1/libraries/syn/gtech.db'
+Loading db file '/usr/synopsys/dc-L-2016.03-SP1/libraries/syn/standard.sldb'
+  Loading link library 'gtech'
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Running PRESTO HDLC
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:147: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:173: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:175: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine cal_phase line 154 in file
+		'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  LastA2stZero_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     ph_now_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     ph_last_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   ph_vld_dly1_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    res_last_reg     | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  res_last_vld_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'cal_phase'.
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Building the design 'cal_vn'. (HDL-193)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:641: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:642: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:643: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:644: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:645: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:646: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:647: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:656: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:657: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:658: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:659: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:660: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:661: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:662: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:663: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine cal_vn line 689 in file
+		'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     VnReg_4_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     VnReg_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     VnReg_5_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     VnReg_7_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   in_vld_dly1_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   in_vld_dly2_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    SumXinReg_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     VnReg_0_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     VnReg_1_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     VnReg_2_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     VnReg_3_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dotVn'. (HDL-193)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:447: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:448: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 384 in file
+	'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           385            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine dotVn line 423 in file
+		'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     mac_en_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     mac_cnt_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      psum2_reg      | Flip-flop |  19   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      psum1_reg      | Flip-flop |  19   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine dotVn line 456 in file
+		'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     finish_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'cordic_int'. (HDL-193)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:254: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:255: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:256: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:307: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:308: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:309: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:311: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:312: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:313: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine cordic_int line 259 in file
+		'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       xn_reg        | Flip-flop |  22   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     cal_en_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       yn_reg        | Flip-flop |  22   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   nozero_flg_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     finish_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     res_rg_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     cal_cnt_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'FloorAndWrap'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 's_table'. (HDL-193)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:822: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:825: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:829: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:834: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:838: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:844: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:893: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:894: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:898: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 906 in file
+	'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           907            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 935 in file
+	'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           936            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'FloorAndWrap_8'. (HDL-193)
+Presto compilation completed successfully.
+1
+current_design  $TOP_MODULE
+Current design is 'cal_phase'.
+{cal_phase}
+link
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+
+  Linking design 'cal_phase'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (7 designs)               /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.db, etc
+
+1
+report_clock
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : clocks
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Sun Nov 28 20:54:05 2021
+****************************************
+
+No clocks in this design.
+
+1
+check_design > ./rpt/check_deisgn.rpt
+check_timing  > ./rpt/check_timing.rpt
+set_clock_gating_style -setup 0.3 -hold 0 -pos integrated -neg integrated -max_fanout 32 -control_point before -control_signal scan_enable
+Error: Cannot read file 'your_library.db'. (UID-58)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Warning: The setup and hold values overrides the library values for the integrated cells. (PWR-206)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: The library cell required for use as an integrated clock-gating cell does not exist in the libraries specified.  The required attribute is latch_posedge_precontrol.  (PWR-191)
+Error: The library cell required for use as an integrated clock-gating cell does not exist in the libraries specified.  The required attribute is latch_negedge_precontrol.  (PWR-191)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Warning: A latch-based clock-gating style was chosen but
+	no latches are in the technology library. (PWR-661)
+Warning: The clock-gating style was not changed. (PWR-132)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+0
+check_timing
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Warning: The following end-points are not constrained for maximum delay.
+
+End point
+---------------
+LastA2stZero_reg/next_state
+LastA2stZero_reg/synch_enable
+calvn/SumXinReg_reg[0]/next_state
+calvn/SumXinReg_reg[0]/synch_enable
+calvn/SumXinReg_reg[1]/next_state
+calvn/SumXinReg_reg[1]/synch_enable
+calvn/SumXinReg_reg[2]/next_state
+calvn/SumXinReg_reg[2]/synch_enable
+calvn/SumXinReg_reg[3]/next_state
+calvn/SumXinReg_reg[3]/synch_enable
+calvn/SumXinReg_reg[4]/next_state
+calvn/SumXinReg_reg[4]/synch_enable
+calvn/SumXinReg_reg[5]/next_state
+calvn/SumXinReg_reg[5]/synch_enable
+calvn/SumXinReg_reg[6]/next_state
+calvn/SumXinReg_reg[6]/synch_enable
+calvn/SumXinReg_reg[7]/next_state
+calvn/SumXinReg_reg[7]/synch_enable
+calvn/SumXinReg_reg[8]/next_state
+calvn/SumXinReg_reg[8]/synch_enable
+calvn/SumXinReg_reg[9]/next_state
+calvn/SumXinReg_reg[9]/synch_enable
+calvn/SumXinReg_reg[10]/next_state
+calvn/SumXinReg_reg[10]/synch_enable
+calvn/VnReg_0_reg[0]/next_state
+calvn/VnReg_0_reg[0]/synch_enable
+calvn/VnReg_0_reg[1]/next_state
+calvn/VnReg_0_reg[1]/synch_enable
+calvn/VnReg_0_reg[2]/next_state
+calvn/VnReg_0_reg[2]/synch_enable
+calvn/VnReg_0_reg[3]/next_state
+calvn/VnReg_0_reg[3]/synch_enable
+calvn/VnReg_0_reg[4]/next_state
+calvn/VnReg_0_reg[4]/synch_enable
+calvn/VnReg_0_reg[5]/next_state
+calvn/VnReg_0_reg[5]/synch_enable
+calvn/VnReg_0_reg[6]/next_state
+calvn/VnReg_0_reg[6]/synch_enable
+calvn/VnReg_0_reg[7]/next_state
+calvn/VnReg_0_reg[7]/synch_enable
+calvn/VnReg_1_reg[0]/next_state
+calvn/VnReg_1_reg[0]/synch_enable
+calvn/VnReg_1_reg[1]/next_state
+calvn/VnReg_1_reg[1]/synch_enable
+calvn/VnReg_1_reg[2]/next_state
+calvn/VnReg_1_reg[2]/synch_enable
+calvn/VnReg_1_reg[3]/next_state
+calvn/VnReg_1_reg[3]/synch_enable
+calvn/VnReg_1_reg[4]/next_state
+calvn/VnReg_1_reg[4]/synch_enable
+calvn/VnReg_1_reg[5]/next_state
+calvn/VnReg_1_reg[5]/synch_enable
+calvn/VnReg_1_reg[6]/next_state
+calvn/VnReg_1_reg[6]/synch_enable
+calvn/VnReg_1_reg[7]/next_state
+calvn/VnReg_1_reg[7]/synch_enable
+calvn/VnReg_2_reg[0]/next_state
+calvn/VnReg_2_reg[0]/synch_enable
+calvn/VnReg_2_reg[1]/next_state
+calvn/VnReg_2_reg[1]/synch_enable
+calvn/VnReg_2_reg[2]/next_state
+calvn/VnReg_2_reg[2]/synch_enable
+calvn/VnReg_2_reg[3]/next_state
+calvn/VnReg_2_reg[3]/synch_enable
+calvn/VnReg_2_reg[4]/next_state
+calvn/VnReg_2_reg[4]/synch_enable
+calvn/VnReg_2_reg[5]/next_state
+calvn/VnReg_2_reg[5]/synch_enable
+calvn/VnReg_2_reg[6]/next_state
+calvn/VnReg_2_reg[6]/synch_enable
+calvn/VnReg_2_reg[7]/next_state
+calvn/VnReg_2_reg[7]/synch_enable
+calvn/VnReg_3_reg[0]/next_state
+calvn/VnReg_3_reg[0]/synch_enable
+calvn/VnReg_3_reg[1]/next_state
+calvn/VnReg_3_reg[1]/synch_enable
+calvn/VnReg_3_reg[2]/next_state
+calvn/VnReg_3_reg[2]/synch_enable
+calvn/VnReg_3_reg[3]/next_state
+calvn/VnReg_3_reg[3]/synch_enable
+calvn/VnReg_3_reg[4]/next_state
+calvn/VnReg_3_reg[4]/synch_enable
+calvn/VnReg_3_reg[5]/next_state
+calvn/VnReg_3_reg[5]/synch_enable
+calvn/VnReg_3_reg[6]/next_state
+calvn/VnReg_3_reg[6]/synch_enable
+calvn/VnReg_3_reg[7]/next_state
+calvn/VnReg_3_reg[7]/synch_enable
+calvn/VnReg_4_reg[0]/next_state
+calvn/VnReg_4_reg[0]/synch_enable
+calvn/VnReg_4_reg[1]/next_state
+calvn/VnReg_4_reg[1]/synch_enable
+calvn/VnReg_4_reg[2]/next_state
+calvn/VnReg_4_reg[2]/synch_enable
+calvn/VnReg_4_reg[3]/next_state
+calvn/VnReg_4_reg[3]/synch_enable
+calvn/VnReg_4_reg[4]/next_state
+calvn/VnReg_4_reg[4]/synch_enable
+calvn/VnReg_4_reg[5]/next_state
+calvn/VnReg_4_reg[5]/synch_enable
+calvn/VnReg_4_reg[6]/next_state
+calvn/VnReg_4_reg[6]/synch_enable
+calvn/VnReg_4_reg[7]/next_state
+calvn/VnReg_4_reg[7]/synch_enable
+calvn/VnReg_5_reg[0]/next_state
+calvn/VnReg_5_reg[0]/synch_enable
+calvn/VnReg_5_reg[1]/next_state
+calvn/VnReg_5_reg[1]/synch_enable
+calvn/VnReg_5_reg[2]/next_state
+calvn/VnReg_5_reg[2]/synch_enable
+calvn/VnReg_5_reg[3]/next_state
+calvn/VnReg_5_reg[3]/synch_enable
+calvn/VnReg_5_reg[4]/next_state
+calvn/VnReg_5_reg[4]/synch_enable
+calvn/VnReg_5_reg[5]/next_state
+calvn/VnReg_5_reg[5]/synch_enable
+calvn/VnReg_5_reg[6]/next_state
+calvn/VnReg_5_reg[6]/synch_enable
+calvn/VnReg_5_reg[7]/next_state
+calvn/VnReg_5_reg[7]/synch_enable
+calvn/VnReg_6_reg[0]/next_state
+calvn/VnReg_6_reg[0]/synch_enable
+calvn/VnReg_6_reg[1]/next_state
+calvn/VnReg_6_reg[1]/synch_enable
+calvn/VnReg_6_reg[2]/next_state
+calvn/VnReg_6_reg[2]/synch_enable
+calvn/VnReg_6_reg[3]/next_state
+calvn/VnReg_6_reg[3]/synch_enable
+calvn/VnReg_6_reg[4]/next_state
+calvn/VnReg_6_reg[4]/synch_enable
+calvn/VnReg_6_reg[5]/next_state
+calvn/VnReg_6_reg[5]/synch_enable
+calvn/VnReg_6_reg[6]/next_state
+calvn/VnReg_6_reg[6]/synch_enable
+calvn/VnReg_6_reg[7]/next_state
+calvn/VnReg_6_reg[7]/synch_enable
+calvn/VnReg_7_reg[0]/next_state
+calvn/VnReg_7_reg[0]/synch_enable
+calvn/VnReg_7_reg[1]/next_state
+calvn/VnReg_7_reg[1]/synch_enable
+calvn/VnReg_7_reg[2]/next_state
+calvn/VnReg_7_reg[2]/synch_enable
+calvn/VnReg_7_reg[3]/next_state
+calvn/VnReg_7_reg[3]/synch_enable
+calvn/VnReg_7_reg[4]/next_state
+calvn/VnReg_7_reg[4]/synch_enable
+calvn/VnReg_7_reg[5]/next_state
+calvn/VnReg_7_reg[5]/synch_enable
+calvn/VnReg_7_reg[6]/next_state
+calvn/VnReg_7_reg[6]/synch_enable
+calvn/VnReg_7_reg[7]/next_state
+calvn/VnReg_7_reg[7]/synch_enable
+calvn/in_vld_dly1_reg/next_state
+calvn/in_vld_dly2_reg/next_state
+cordic/cal_cnt_reg[0]/next_state
+cordic/cal_cnt_reg[1]/next_state
+cordic/cal_cnt_reg[2]/next_state
+cordic/cal_en_reg/next_state
+cordic/cal_en_reg/synch_enable
+cordic/finish_reg/next_state
+cordic/nozero_flg_reg/next_state
+cordic/nozero_flg_reg/synch_enable
+cordic/res_rg_reg[0]/next_state
+cordic/res_rg_reg[0]/synch_enable
+cordic/res_rg_reg[1]/next_state
+cordic/res_rg_reg[1]/synch_enable
+cordic/res_rg_reg[2]/next_state
+cordic/res_rg_reg[2]/synch_enable
+cordic/res_rg_reg[3]/next_state
+cordic/res_rg_reg[3]/synch_enable
+cordic/res_rg_reg[4]/next_state
+cordic/res_rg_reg[4]/synch_enable
+cordic/res_rg_reg[5]/next_state
+cordic/res_rg_reg[5]/synch_enable
+cordic/res_rg_reg[6]/next_state
+cordic/res_rg_reg[6]/synch_enable
+cordic/res_rg_reg[7]/next_state
+cordic/res_rg_reg[7]/synch_enable
+cordic/xn_reg[0]/next_state
+cordic/xn_reg[0]/synch_enable
+cordic/xn_reg[1]/next_state
+cordic/xn_reg[1]/synch_enable
+cordic/xn_reg[2]/next_state
+cordic/xn_reg[2]/synch_enable
+cordic/xn_reg[3]/next_state
+cordic/xn_reg[3]/synch_enable
+cordic/xn_reg[4]/next_state
+cordic/xn_reg[4]/synch_enable
+cordic/xn_reg[5]/next_state
+cordic/xn_reg[5]/synch_enable
+cordic/xn_reg[6]/next_state
+cordic/xn_reg[6]/synch_enable
+cordic/xn_reg[7]/next_state
+cordic/xn_reg[7]/synch_enable
+cordic/xn_reg[8]/next_state
+cordic/xn_reg[8]/synch_enable
+cordic/xn_reg[9]/next_state
+cordic/xn_reg[9]/synch_enable
+cordic/xn_reg[10]/next_state
+cordic/xn_reg[10]/synch_enable
+cordic/xn_reg[11]/next_state
+cordic/xn_reg[11]/synch_enable
+cordic/xn_reg[12]/next_state
+cordic/xn_reg[12]/synch_enable
+cordic/xn_reg[13]/next_state
+cordic/xn_reg[13]/synch_enable
+cordic/xn_reg[14]/next_state
+cordic/xn_reg[14]/synch_enable
+cordic/xn_reg[15]/next_state
+cordic/xn_reg[15]/synch_enable
+cordic/xn_reg[16]/next_state
+cordic/xn_reg[16]/synch_enable
+cordic/xn_reg[17]/next_state
+cordic/xn_reg[17]/synch_enable
+cordic/xn_reg[18]/next_state
+cordic/xn_reg[18]/synch_enable
+cordic/xn_reg[19]/next_state
+cordic/xn_reg[19]/synch_enable
+cordic/xn_reg[20]/next_state
+cordic/xn_reg[20]/synch_enable
+cordic/xn_reg[21]/next_state
+cordic/xn_reg[21]/synch_enable
+cordic/yn_reg[0]/next_state
+cordic/yn_reg[0]/synch_enable
+cordic/yn_reg[1]/next_state
+cordic/yn_reg[1]/synch_enable
+cordic/yn_reg[2]/next_state
+cordic/yn_reg[2]/synch_enable
+cordic/yn_reg[3]/next_state
+cordic/yn_reg[3]/synch_enable
+cordic/yn_reg[4]/next_state
+cordic/yn_reg[4]/synch_enable
+cordic/yn_reg[5]/next_state
+cordic/yn_reg[5]/synch_enable
+cordic/yn_reg[6]/next_state
+cordic/yn_reg[6]/synch_enable
+cordic/yn_reg[7]/next_state
+cordic/yn_reg[7]/synch_enable
+cordic/yn_reg[8]/next_state
+cordic/yn_reg[8]/synch_enable
+cordic/yn_reg[9]/next_state
+cordic/yn_reg[9]/synch_enable
+cordic/yn_reg[10]/next_state
+cordic/yn_reg[10]/synch_enable
+cordic/yn_reg[11]/next_state
+cordic/yn_reg[11]/synch_enable
+cordic/yn_reg[12]/next_state
+cordic/yn_reg[12]/synch_enable
+cordic/yn_reg[13]/next_state
+cordic/yn_reg[13]/synch_enable
+cordic/yn_reg[14]/next_state
+cordic/yn_reg[14]/synch_enable
+cordic/yn_reg[15]/next_state
+cordic/yn_reg[15]/synch_enable
+cordic/yn_reg[16]/next_state
+cordic/yn_reg[16]/synch_enable
+cordic/yn_reg[17]/next_state
+cordic/yn_reg[17]/synch_enable
+cordic/yn_reg[18]/next_state
+cordic/yn_reg[18]/synch_enable
+cordic/yn_reg[19]/next_state
+cordic/yn_reg[19]/synch_enable
+cordic/yn_reg[20]/next_state
+cordic/yn_reg[20]/synch_enable
+cordic/yn_reg[21]/next_state
+cordic/yn_reg[21]/synch_enable
+dot/finish_reg/next_state
+dot/mac_cnt_reg[0]/next_state
+dot/mac_cnt_reg[1]/next_state
+dot/mac_cnt_reg[2]/next_state
+dot/mac_en_reg/next_state
+dot/mac_en_reg/synch_enable
+dot/psum1_reg[0]/next_state
+dot/psum1_reg[0]/synch_enable
+dot/psum1_reg[1]/next_state
+dot/psum1_reg[1]/synch_enable
+dot/psum1_reg[2]/next_state
+dot/psum1_reg[2]/synch_enable
+dot/psum1_reg[3]/next_state
+dot/psum1_reg[3]/synch_enable
+dot/psum1_reg[4]/next_state
+dot/psum1_reg[4]/synch_enable
+dot/psum1_reg[5]/next_state
+dot/psum1_reg[5]/synch_enable
+dot/psum1_reg[6]/next_state
+dot/psum1_reg[6]/synch_enable
+dot/psum1_reg[7]/next_state
+dot/psum1_reg[7]/synch_enable
+dot/psum1_reg[8]/next_state
+dot/psum1_reg[8]/synch_enable
+dot/psum1_reg[9]/next_state
+dot/psum1_reg[9]/synch_enable
+dot/psum1_reg[10]/next_state
+dot/psum1_reg[10]/synch_enable
+dot/psum1_reg[11]/next_state
+dot/psum1_reg[11]/synch_enable
+dot/psum1_reg[12]/next_state
+dot/psum1_reg[12]/synch_enable
+dot/psum1_reg[13]/next_state
+dot/psum1_reg[13]/synch_enable
+dot/psum1_reg[14]/next_state
+dot/psum1_reg[14]/synch_enable
+dot/psum1_reg[15]/next_state
+dot/psum1_reg[15]/synch_enable
+dot/psum1_reg[16]/next_state
+dot/psum1_reg[16]/synch_enable
+dot/psum1_reg[17]/next_state
+dot/psum1_reg[17]/synch_enable
+dot/psum1_reg[18]/next_state
+dot/psum1_reg[18]/synch_enable
+dot/psum2_reg[0]/next_state
+dot/psum2_reg[0]/synch_enable
+dot/psum2_reg[1]/next_state
+dot/psum2_reg[1]/synch_enable
+dot/psum2_reg[2]/next_state
+dot/psum2_reg[2]/synch_enable
+dot/psum2_reg[3]/next_state
+dot/psum2_reg[3]/synch_enable
+dot/psum2_reg[4]/next_state
+dot/psum2_reg[4]/synch_enable
+dot/psum2_reg[5]/next_state
+dot/psum2_reg[5]/synch_enable
+dot/psum2_reg[6]/next_state
+dot/psum2_reg[6]/synch_enable
+dot/psum2_reg[7]/next_state
+dot/psum2_reg[7]/synch_enable
+dot/psum2_reg[8]/next_state
+dot/psum2_reg[8]/synch_enable
+dot/psum2_reg[9]/next_state
+dot/psum2_reg[9]/synch_enable
+dot/psum2_reg[10]/next_state
+dot/psum2_reg[10]/synch_enable
+dot/psum2_reg[11]/next_state
+dot/psum2_reg[11]/synch_enable
+dot/psum2_reg[12]/next_state
+dot/psum2_reg[12]/synch_enable
+dot/psum2_reg[13]/next_state
+dot/psum2_reg[13]/synch_enable
+dot/psum2_reg[14]/next_state
+dot/psum2_reg[14]/synch_enable
+dot/psum2_reg[15]/next_state
+dot/psum2_reg[15]/synch_enable
+dot/psum2_reg[16]/next_state
+dot/psum2_reg[16]/synch_enable
+dot/psum2_reg[17]/next_state
+dot/psum2_reg[17]/synch_enable
+dot/psum2_reg[18]/next_state
+dot/psum2_reg[18]/synch_enable
+ph_last_reg[0]/next_state
+ph_last_reg[0]/synch_enable
+ph_last_reg[1]/next_state
+ph_last_reg[1]/synch_enable
+ph_last_reg[2]/next_state
+ph_last_reg[2]/synch_enable
+ph_last_reg[3]/next_state
+ph_last_reg[3]/synch_enable
+ph_last_reg[4]/next_state
+ph_last_reg[4]/synch_enable
+ph_last_reg[5]/next_state
+ph_last_reg[5]/synch_enable
+ph_last_reg[6]/next_state
+ph_last_reg[6]/synch_enable
+ph_last_reg[7]/next_state
+ph_last_reg[7]/synch_enable
+ph_now_reg[0]/next_state
+ph_now_reg[0]/synch_enable
+ph_now_reg[1]/next_state
+ph_now_reg[1]/synch_enable
+ph_now_reg[2]/next_state
+ph_now_reg[2]/synch_enable
+ph_now_reg[3]/next_state
+ph_now_reg[3]/synch_enable
+ph_now_reg[4]/next_state
+ph_now_reg[4]/synch_enable
+ph_now_reg[5]/next_state
+ph_now_reg[5]/synch_enable
+ph_now_reg[6]/next_state
+ph_now_reg[6]/synch_enable
+ph_now_reg[7]/next_state
+ph_now_reg[7]/synch_enable
+ph_vld_dly1_reg/next_state
+res[0]
+res[1]
+res[2]
+res[3]
+res[4]
+res[5]
+res[6]
+res[7]
+res[8]
+res[9]
+res_last_reg[0]/next_state
+res_last_reg[0]/synch_enable
+res_last_reg[1]/next_state
+res_last_reg[1]/synch_enable
+res_last_reg[2]/next_state
+res_last_reg[2]/synch_enable
+res_last_reg[3]/next_state
+res_last_reg[3]/synch_enable
+res_last_reg[4]/next_state
+res_last_reg[4]/synch_enable
+res_last_reg[5]/next_state
+res_last_reg[5]/synch_enable
+res_last_reg[6]/next_state
+res_last_reg[6]/synch_enable
+res_last_reg[7]/next_state
+res_last_reg[7]/synch_enable
+res_last_reg[8]/next_state
+res_last_reg[8]/synch_enable
+res_last_reg[9]/next_state
+res_last_reg[9]/synch_enable
+res_last_vld_reg/next_state
+res_vld
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1
+group_path -name INPUT_GROUP -from [all_inputs ]
+1
+group_path -name OUTPUT_GROUP -to  [all_outputs]
+1
+set upf_create_implicit_supply_sets false
+false
+set_fix_multiple_port_nets -all -buffer_constants
+1
+set_fix_multiple_port_nets -all -buffer_constants [all_designs]
+1
+compile_ultra -no_autoungroup  -no_boundary_optimization  -gate_clock
+Warning: The value of variable 'compile_preserve_subdesign_interfaces' has been changed to true because '-no_boundary_optimization' is used. (OPT-133)
+Information: Starting from 2013.12 release, constant propagation is enabled even when boundary optimization is disabled. (OPT-1318)
+Information: Performing power optimization. (PWR-850)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+Error: No target library found. (OPT-1312)
+0
+#compile_ultra -timing_high_effort_script -no_autoungroup  -no_boundary_optimization
+#compile_ultra -timing_high_effort_script -no_autoungroup  -no_boundary_optimization -incremental
+set verilogout_no_tri   "true"
+true
+set verilogout_equation "false"
+false
+change_names -hier -rules verilog
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+Warning: In the design FloorAndWrap, net 'dout[7]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap, net 'dout[6]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap, net 'dout[5]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap, net 'dout[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap, net 'dout[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap, net 'dout[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap, net 'dout[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap, net 'dout[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap_8, net 'dout[15]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap_8, net 'dout[14]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap_8, net 'dout[13]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap_8, net 'dout[12]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap_8, net 'dout[11]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap_8, net 'dout[10]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap_8, net 'dout[9]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap_8, net 'dout[8]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap_8, net 'dout[7]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap_8, net 'dout[6]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap_8, net 'dout[5]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap_8, net 'dout[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap_8, net 'dout[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap_8, net 'dout[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap_8, net 'dout[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design FloorAndWrap_8, net 'dout[0]' is connecting multiple ports. (UCN-1)
+1
+write_sdc                                ./outputs/$date/${TOP_MODULE}.sdc
+1
+write -format ddc     -hierarchy -output ./outputs/$date/${TOP_MODULE}.ddc
+Writing ddc file './outputs/1128_2053/cal_phase.ddc'.
+1
+write -format verilog -hierarchy -output ./outputs/$date/${TOP_MODULE}.v
+Writing verilog file '/mnt/mydata/spinal_works/cardiff-b0/syn/outputs/1128_2053/cal_phase.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Module cal_vn contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module s_table contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module dotVn contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module cordic_int contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module cal_phase contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+1
+write_link_library -out                  ./outputs/$date/link_library.txt
+1
+report_constraint -all_vio > ./rpt/$date/constrant.rpt
+report_area   -hier        > ./rpt/$date/area.rpt
+report_constraint  -all_violators                         > ./rpt/$date/${TOP_MODULE}_constraint_all_violators.rpt
+check_timing                                              > ./rpt/$date/${TOP_MODULE}_check_timing_final.rpt
+report_timing_requirements                                > ./rpt/$date/${TOP_MODULE}_report_timing_requirements.rpt
+report_timing -transition_time -nets -attributes -nosplit > ./rpt/$date/${TOP_MODULE}_mapped_timing.rpt
+report_area -physical -nosplit -hierarchy                 > ./rpt/$date/${TOP_MODULE}_mapped_area.rpt
+report_power                                              > ./rpt/$date/${TOP_MODULE}_power.rpt
+report_cell                                               > ./rpt/$date/${TOP_MODULE}_cell.rpt
+#report_timing  -delay max -max_paths 50                   > ./rpt/$date/${TOP_MODULE}_timing_max_path.rpt
+report_timing  -delay max -path_type full_clock_expanded -sort_by slack -max_paths 50 -nosplit                   > ./rpt/$date/${TOP_MODULE}_timing_max_path.rpt
+report_timing  -delay min -path_type full_clock_expanded -sort_by slack -max_paths 50 -nosplit                   > ./rpt/$date/${TOP_MODULE}_timing_min_path.rpt
+report_reference                                          > ./rpt/$date/${TOP_MODULE}_ref.rpt
+report_power -hierarchy -levels 3                         > ./rpt/$date/${TOP_MODULE}_hie_power.rpt
+report_power -verbose                                     > ./rpt/$date/${TOP_MODULE}_total_power.rpt
+report_clock_gating -gated -verbose                       > ./rpt/$date/${TOP_MODULE}_clock_gating_gated.rpt
+report_clock_gating -ungated -verbose                     > ./rpt/$date/${TOP_MODULE}_clock_gating_ungated.rpt
+dc_shell> 
+Memory usage for main task 92 Mbytes.
+Memory usage for this session 92 Mbytes.
+CPU usage for this session 1 seconds ( 0.00 hours ).
+
+Thank you...

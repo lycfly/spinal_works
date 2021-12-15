@@ -1,0 +1,42 @@
+[0m2021.12.13 20:07:44 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works/verilog' for client Visual Studio Code 1.63.0.[0m
+[0m2021.12.13 20:07:44 INFO  time: initialize in 0.3s[0m
+[0m2021.12.13 20:07:44 WARN  Build server is not auto-connectable.[0m
+[0m2021.12.13 20:07:44 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works/verilog'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.13 20:07:45 WARN  no build target for: /mnt/mydata/spinal_works/cal_phase/build.sbt[0m
+[0m2021.12.13 20:07:46 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.12.13 20:07:47 INFO  time: code lens generation in 2.62s[0m
+[0m2021.12.13 20:07:51 WARN  no build target for: /mnt/mydata/spinal_works/cal_phase/src/main/scala/cal_phase.scala[0m
+[0m2021.12.13 20:08:06 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works/verilog'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.13 20:09:56 WARN  no build target for: /mnt/mydata/spinal_works/cal_phase/build.sbt[0m
+[0m2021.12.13 20:10:08 WARN  no build target for: /mnt/mydata/spinal_works/cal_phase/build.sbt[0m
+[0m2021.12.13 20:10:20 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works/verilog'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+Dec 13, 2021 8:10:45 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.12.13 20:10:58 WARN  no build target for: /mnt/mydata/spinal_works/cardiff-b0/src/main/scala/cal_phase.scala[0m
+[0m2021.12.13 20:11:17 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works/verilog'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.13 20:11:23 INFO  compilation cancelled[0m
+[0m2021.12.13 20:11:29 INFO  Attempting to connect to the build server...[0m
+[0m2021.12.13 20:11:29 INFO  No build server found[0m
+[0m2021.12.13 20:11:29 INFO  time: Connected to build server in 5ms[0m
+[0m2021.12.13 20:11:29 WARN  no build target for: /mnt/mydata/spinal_works/cal_phase/build.sbt[0m
+[0m2021.12.13 20:11:29 WARN  no build target for: /mnt/mydata/spinal_works/cardiff-b0/src/main/scala/cal_phase.scala[0m
+[0m2021.12.13 20:11:59 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works/verilog'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.13 20:14:31 ERROR [0m
+[0m2021.12.13 20:14:31 ERROR https://github.com/scala/hello-world.g8.git: cannot open git-upload-pack[0m
+[0m2021.12.13 20:14:31 ERROR [0m
+[0m2021.12.13 20:14:31 INFO  time: ran 'giter8.Giter8' in 0.77s[0m
+[0m2021.12.13 20:16:13 WARN  no build target for: /mnt/mydata/spinal_works/cal_phase/build.sbt[0m
+[0m2021.12.13 20:19:41 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works/verilog'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+Dec 13, 2021 8:34:46 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.12.13 20:34:51 INFO  shutting down Metals[0m
+[0m2021.12.13 20:34:58 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works/verilog' for client Visual Studio Code 1.63.0.[0m
+[0m2021.12.13 20:34:59 INFO  time: initialize in 0.28s[0m
+[0m2021.12.13 20:34:59 WARN  Build server is not auto-connectable.[0m
+[0m2021.12.13 20:34:59 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works/verilog'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.13 20:35:04 WARN  no build target for: /mnt/mydata/spinal_works/cal_phase/src/main/scala/cal_phase.scala[0m
+[0m2021.12.13 20:35:05 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.12.13 20:35:07 INFO  time: code lens generation in 2.66s[0m
+[0m2021.12.13 20:35:07 INFO  time: code lens generation in 2.1s[0m
+[0m2021.12.13 20:35:08 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works/verilog'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.13 20:35:24 INFO  shutting down Metals[0m

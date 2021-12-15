@@ -1,0 +1,61 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Sat Dec 11 06:28:56 2021
+[*]
+[dumpfile] "D:\mydata\spinal_works\verilog\fif0_single_port_ram\fifo_tb\dump.vcd"
+[dumpfile_mtime] "Thu Dec 09 15:33:40 2021"
+[dumpfile_size] 3014779
+[savefile] "D:\mydata\spinal_works\verilog\fif0_single_port_ram\fifo_tb\debug_signals.gtkw"
+[timestart] 0
+[size] 1920 1017
+[pos] -1 -1
+*-16.000000 195000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.sync_fifo_spram_v2.
+[sst_width] 326
+[signals_width] 142
+[sst_expanded] 1
+[sst_vpaned_height] 300
+@28
+top.sync_fifo_spram_v2.clk
+top.sync_fifo_spram_v2.rst_n
+top.sync_fifo_spram_v2.full
+top.sync_fifo_spram_v2.empty
+@22
+top.sync_fifo_spram_v2.fifo_cnt[3:0]
+@28
+[color] 3
+top.sync_fifo_spram_v2.wr_en
+@24
+[color] 3
+top.sync_fifo_spram_v2.wr_ptr[2:0]
+@22
+[color] 3
+top.sync_fifo_spram_v2.din[15:0]
+@28
+[color] 1
+top.sync_fifo_spram_v2.rd_en
+@800024
+[color] 1
+top.sync_fifo_spram_v2.rd_ptr[2:0]
+@28
+[color] 1
+(0)top.sync_fifo_spram_v2.rd_ptr[2:0]
+[color] 1
+(1)top.sync_fifo_spram_v2.rd_ptr[2:0]
+@29
+[color] 1
+(2)top.sync_fifo_spram_v2.rd_ptr[2:0]
+@1001200
+-group_end
+@22
+[color] 1
+top.sync_fifo_spram_v2.dout[15:0]
+@28
+top.sync_fifo_spram_v2.even_rd
+top.sync_fifo_spram_v2.even_wr
+top.sync_fifo_spram_v2.ce_even
+top.sync_fifo_spram_v2.sp_ram_1.we
+top.sync_fifo_spram_v2.even_addr[1:0]
+[pattern_trace] 1
+[pattern_trace] 0

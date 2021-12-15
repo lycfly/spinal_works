@@ -1,0 +1,18 @@
+foreach (EACH_DESIGN, {ADES, BDES, CDES, DDES}) {
+  read EACH_DESIGN + "_GENERIC.db"
+  current_design EACH_DESIGN
+  set_scan_configuration -style multiplexed_flip_flop
+  compile -scan
+  if (EACH_DESIGN == "ADES") {
+    set_scan_element false find(cell, "sh*_reg")
+    set_scan_segment shift -access {test_scan_in sh1_reg/D, \
+			test_scan_out sh4_reg/Q} \
+			-contains { "sh*_reg"}
+  }
+  check_test > EACH_DESIGN + ".rpt"
+  preview_scan -show all >> EACH_DESIGN + ".rpt"
+  insert_scan
+  check_test >> EACH_DESIGN + ".rpt"
+  report_test -scan_path >> EACH_DESIGN + ".rpt"
+  write -format db -hierarchy -output EACH_DESIGN + ".db"
+}

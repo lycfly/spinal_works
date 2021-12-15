@@ -1,0 +1,2979 @@
+ 
+****************************************
+Report : timing
+        -path full_clock_expanded
+        -delay max
+        -max_paths 50
+        -sort_by slack
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Thu Oct 28 14:34:14 2021
+****************************************
+
+Operating Conditions: slow_125_1.62   Library: ssc_core_slow
+Wire Load Model Mode: enclosed
+
+  Startpoint: vin_vld (input port clocked by clk)
+  Endpoint: calvn/clk_gate_SumXinReg_reg/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  vin_vld (in)                                            0.00       6.00 f
+  calvn/vin_vld (cal_vn)                                  0.00       6.00 f
+  calvn/U52/Y (and2a15)                                   0.36       6.36 f
+  calvn/clk_gate_SumXinReg_reg/EN (SNPS_CLOCK_GATE_HIGH_cal_vn_1)     0.00     6.36 f
+  calvn/clk_gate_SumXinReg_reg/latch/D (ldf1b3)           0.00       6.36 f
+  data arrival time                                                  6.36
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                      -1.00       6.00
+  calvn/clk_gate_SumXinReg_reg/latch/G (ldf1b3)           0.00       6.00 f
+  time borrowed from endpoint                             0.36       6.36
+  data required time                                                 6.36
+  --------------------------------------------------------------------------
+  data required time                                                 6.36
+  data arrival time                                                 -6.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                                 5.00   
+  library setup time                                     -0.49   
+  --------------------------------------------------------------
+  max time borrow                                         4.51   
+  --------------------------------------------------------------
+  actual time borrow                                      0.36   
+  clock uncertainty                                      -1.00   
+  --------------------------------------------------------------
+  time given to startpoint                               -0.64   
+  --------------------------------------------------------------
+
+
+  Startpoint: dot/mac_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum2_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  dotVn              5KGATES               ssc_core_slow
+  s_table            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a9)          0.00       2.00 r
+  dot/mac_cnt_reg_1_/Q (fdf2a9)            0.90       2.90 r
+  dot/U247/Y (inv1a3)                      0.11       3.01 f
+  dot/U248/Y (and2c6)                      0.14       3.15 r
+  dot/U249/Y (clk1b6)                      0.11       3.25 f
+  dot/U250/Y (inv1a15)                     0.19       3.44 r
+  dot/U285/Y (oa4f3)                       0.12       3.57 f
+  dot/U287/Y (oa1f3)                       0.19       3.76 r
+  dot/U288/Y (oa1f3)                       0.08       3.84 f
+  dot/U289/Y (ao1f3)                       0.13       3.96 r
+  dot/table_1/din[1] (s_table)             0.00       3.96 r
+  dot/table_1/U48/Y (buf1a15)              0.30       4.26 r
+  dot/table_1/U74/Y (and2c9)               0.10       4.36 f
+  dot/table_1/U244/CO (ha1a3)              0.25       4.62 f
+  dot/table_1/U243/CO (ha1a3)              0.25       4.86 f
+  dot/table_1/U242/S (ha1a3)               0.53       5.39 f
+  dot/table_1/U250/Y (inv1a3)              0.12       5.51 r
+  dot/table_1/U29/Y (ao1d2)                0.19       5.70 r
+  dot/table_1/U46/Y (or2c3)                0.13       5.83 f
+  dot/table_1/U371/CO (fa1a2)              0.36       6.19 f
+  dot/table_1/U385/CO (fa1a2)              0.36       6.56 f
+  dot/table_1/U397/CO (fa1a2)              0.39       6.94 f
+  dot/table_1/U252/Y (ao1d3)               0.13       7.07 r
+  dot/table_1/U45/Y (or2c3)                0.12       7.19 f
+  dot/table_1/U301/CO (fa1a2)              0.44       7.63 f
+  dot/table_1/U255/Y (or2c3)               0.13       7.76 r
+  dot/table_1/U43/Y (or3d3)                0.17       7.92 f
+  dot/table_1/U268/CO (fa1a2)              0.39       8.31 f
+  dot/table_1/U274/CO (fa1a3)              0.38       8.69 f
+  dot/table_1/U82/Y (or2b2)                0.15       8.84 r
+  dot/table_1/U81/Y (or2c3)                0.18       9.02 f
+  dot/table_1/U275/Y (xor3b3)              0.30       9.32 f
+  dot/table_1/U3/Y (or2c1)                 0.25       9.57 r
+  dot/table_1/U52/Y (ao2i3)                0.26       9.84 f
+  dot/table_1/s2[15] (s_table)             0.00       9.84 f
+  dot/U61/Y (and2c3)                       0.31      10.14 r
+  dot/U17/Y (inv1a1)                       0.11      10.25 f
+  dot/U11/Y (or2c1)                        0.36      10.62 r
+  dot/U73/Y (xor2a2)                       0.25      10.87 f
+  dot/psum2_reg_15_/D (fdf2a3)             0.00      10.87 f
+  data arrival time                                  10.87
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  dot/psum2_reg_15_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.13      10.87
+  data required time                                 10.87
+  -----------------------------------------------------------
+  data required time                                 10.87
+  data arrival time                                 -10.87
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: dot/mac_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_18_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  dotVn              5KGATES               ssc_core_slow
+  s_table            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a9)          0.00       2.00 r
+  dot/mac_cnt_reg_1_/Q (fdf2a9)            0.90       2.90 r
+  dot/U242/Y (and2c9)                      0.13       3.03 f
+  dot/U243/Y (buf1a15)                     0.23       3.25 f
+  dot/U253/Y (oa4f3)                       0.22       3.47 r
+  dot/U255/Y (oa1f3)                       0.13       3.61 f
+  dot/U150/Y (ao2a3)                       0.33       3.94 f
+  dot/table_1/din[0] (s_table)             0.00       3.94 f
+  dot/table_1/U159/Y (buf1a27)             0.22       4.17 f
+  dot/table_1/U126/Y (inv1a3)              0.31       4.47 r
+  dot/table_1/U121/Y (xor2a6)              0.29       4.77 f
+  dot/table_1/U47/Y (clk1b6)               0.21       4.97 r
+  dot/table_1/U112/Y (ao4f2)               0.16       5.14 f
+  dot/table_1/U423/Y (oa1f3)               0.20       5.34 r
+  dot/table_1/U425/Y (ao2i3)               0.23       5.56 f
+  dot/table_1/s1[2] (s_table)              0.00       5.56 f
+  dot/U145/CO (fa1a2)                      0.44       6.01 f
+  dot/U143/CO (fa1a2)                      0.42       6.43 f
+  dot/U142/CO (fa1a2)                      0.40       6.82 f
+  dot/U138/CO (fa1a2)                      0.37       7.19 f
+  dot/U263/CO (fa1a3)                      0.38       7.57 f
+  dot/U133/Y (or2c3)                       0.11       7.68 r
+  dot/U131/Y (or2c3)                       0.12       7.80 f
+  dot/U262/CO (fa1a3)                      0.36       8.16 f
+  dot/U261/CO (fa1a3)                      0.37       8.53 f
+  dot/U127/Y (ao1d2)                       0.14       8.67 r
+  dot/U126/Y (or2c3)                       0.15       8.82 f
+  dot/U125/Y (or2c3)                       0.12       8.94 r
+  dot/U124/Y (or2c3)                       0.12       9.06 f
+  dot/U121/CO (fa1a2)                      0.36       9.41 f
+  dot/U120/CO (fa1a2)                      0.39       9.80 f
+  dot/U117/Y (or2c3)                       0.11       9.91 r
+  dot/U113/Y (or2c3)                       0.14      10.05 f
+  dot/U111/Y (or2c3)                       0.13      10.19 r
+  dot/U205/Y (or2c6)                       0.14      10.33 f
+  dot/U110/Y (mx2a3)                       0.35      10.68 r
+  dot/U108/Y (xor2a2)                      0.21      10.89 f
+  dot/psum1_reg_18_/D (fdf2a3)             0.00      10.89 f
+  data arrival time                                  10.89
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  dot/psum1_reg_18_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.10      10.90
+  data required time                                 10.90
+  -----------------------------------------------------------
+  data required time                                 10.90
+  data arrival time                                 -10.89
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: v_in_4[0] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  v_in_4[0] (in)                           0.00       6.00 f
+  U98/Y (inv1a1)                           0.45       6.45 r
+  U113/Y (inv1a3)                          0.24       6.70 f
+  calvn/v_in_4[0] (cal_vn)                 0.00       6.70 f
+  calvn/intadd_17_U4/CO (fa1a2)            0.41       7.11 f
+  calvn/intadd_17_U3/CO (fa1a2)            0.36       7.47 f
+  calvn/intadd_17_U2/S (fa1a2)             0.44       7.92 f
+  calvn/intadd_0_U9/CO (fa1a3)             0.46       8.38 f
+  calvn/U154/Y (or2c3)                     0.13       8.51 r
+  calvn/U156/Y (or3d3)                     0.26       8.76 f
+  calvn/U157/Y (or2c3)                     0.16       8.92 r
+  calvn/U159/Y (or3d3)                     0.17       9.09 f
+  calvn/intadd_0_U6/CO (fa1a2)             0.39       9.48 f
+  calvn/intadd_0_U5/CO (fa1a2)             0.37       9.85 f
+  calvn/intadd_0_U4/CO (fa1a3)             0.42      10.27 f
+  calvn/U176/Y (or2c3)                     0.16      10.42 r
+  calvn/U178/Y (or3d6)                     0.17      10.59 f
+  calvn/U180/Y (or2c3)                     0.13      10.72 r
+  calvn/U181/Y (and3a3)                    0.21      10.93 r
+  calvn/SumXinReg_reg_10_/D (fdf2a3)       0.00      10.93 r
+  data arrival time                                  10.93
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/SumXinReg_reg_10_/CLK (fdf2a3)     0.00      11.00 r
+  library setup time                      -0.04      10.96
+  data required time                                 10.96
+  -----------------------------------------------------------
+  data required time                                 10.96
+  data arrival time                                 -10.93
+  -----------------------------------------------------------
+  slack (MET)                                         0.03
+
+
+  Startpoint: dot/psum1_reg_5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_21_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dotVn              5KGATES               ssc_core_slow
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_5_/CLK (fdf2a3)                           0.00       2.00 r
+  dot/psum1_reg_5_/Q (fdf2a3)                             0.70       2.70 f
+  dot/FloorWrapPsum1/din[3] (FloorAndWrap_8_1)            0.00       2.70 f
+  dot/FloorWrapPsum1/U16/Y (clk1a3)                       0.20       2.91 f
+  dot/FloorWrapPsum1/dout[3] (FloorAndWrap_8_1)           0.00       2.91 f
+  dot/psum_out1[3] (dotVn)                                0.00       2.91 f
+  cordic/x[3] (cordic_int)                                0.00       2.91 f
+  cordic/U258/Y (and2c1)                                  0.41       3.32 r
+  cordic/U260/Y (and2a1)                                  0.30       3.62 r
+  cordic/U263/Y (or3d3)                                   0.15       3.76 f
+  cordic/U266/Y (and2c3)                                  0.25       4.02 r
+  cordic/U199/Y (inv1a3)                                  0.09       4.11 f
+  cordic/U198/Y (or2c3)                                   0.19       4.29 r
+  cordic/U76/Y (or3d9)                                    0.40       4.69 f
+  cordic/U11/Y (or2c9)                                    0.48       5.18 r
+  cordic/U344/Y (clk1a3)                                  0.46       5.64 r
+  cordic/U345/Y (xor2a2)                                  0.25       5.89 r
+  cordic/U347/Y (or2c1)                                   0.29       6.18 f
+  cordic/U348/Y (ao1f2)                                   0.27       6.45 r
+  cordic/U379/Y (oa1f3)                                   0.24       6.69 f
+  cordic/U396/Y (ao1f3)                                   0.32       7.01 r
+  cordic/U51/Y (oa1f3)                                    0.28       7.29 f
+  cordic/U405/Y (ao1e6)                                   0.26       7.55 r
+  cordic/U415/Y (oa1f6)                                   0.17       7.72 f
+  cordic/U417/Y (ao1e6)                                   0.23       7.95 r
+  cordic/U426/Y (oa1f6)                                   0.17       8.13 f
+  cordic/U434/Y (ao1f6)                                   0.26       8.38 r
+  cordic/U445/Y (oa1f6)                                   0.18       8.56 f
+  cordic/U450/Y (ao1f6)                                   0.23       8.79 r
+  cordic/U21/Y (oa1f3)                                    0.22       9.01 f
+  cordic/U48/Y (ao1f3)                                    0.32       9.33 r
+  cordic/U476/Y (oa1f3)                                   0.24       9.57 f
+  cordic/U484/Y (ao1f3)                                   0.32       9.89 r
+  cordic/U493/Y (oa1f3)                                   0.25      10.14 f
+  cordic/U501/Y (ao1f3)                                   0.23      10.37 r
+  cordic/U80/Y (xor2b2)                                   0.25      10.61 f
+  cordic/U79/Y (or2b2)                                    0.25      10.87 f
+  cordic/yn_reg_21_/D (fdf2a6)                            0.00      10.87 f
+  data arrival time                                                 10.87
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  cordic/yn_reg_21_/CLK (fdf2a6)                          0.00      11.00 r
+  library setup time                                     -0.10      10.90
+  data required time                                                10.90
+  --------------------------------------------------------------------------
+  data required time                                                10.90
+  data arrival time                                                -10.87
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.04
+
+
+  Startpoint: cordic/cal_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_21_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  cordic/cal_cnt_reg_0_/CLK (fdf2a3)       0.00       2.00 r
+  cordic/cal_cnt_reg_0_/Q (fdf2a3)         0.95       2.95 r
+  cordic/U208/Y (or2a6)                    0.44       3.39 r
+  cordic/U254/Y (clk1b6)                   0.37       3.76 f
+  cordic/U202/Y (and2c3)                   0.43       4.19 r
+  cordic/U201/Y (buf1a9)                   0.41       4.60 r
+  cordic/U299/Y (inv1a9)                   0.27       4.87 f
+  cordic/U621/Y (or2c1)                    0.26       5.13 r
+  cordic/U140/Y (ao2i1)                    0.22       5.35 f
+  cordic/U622/Y (ao1d2)                    0.22       5.57 r
+  cordic/U623/Y (xor2a2)                   0.27       5.84 r
+  cordic/U626/Y (or2c1)                    0.27       6.11 f
+  cordic/U627/Y (inv1a1)                   0.29       6.40 r
+  cordic/U628/Y (oa1f3)                    0.12       6.52 f
+  cordic/U630/Y (ao1f2)                    0.25       6.77 r
+  cordic/U106/Y (oa1f3)                    0.15       6.93 f
+  cordic/U104/Y (ao1f3)                    0.32       7.24 r
+  cordic/U50/Y (oa1f3)                     0.24       7.49 f
+  cordic/U97/Y (ao1f3)                     0.32       7.81 r
+  cordic/U660/Y (oa1f3)                    0.28       8.08 f
+  cordic/U669/Y (ao1f6)                    0.29       8.37 r
+  cordic/U678/Y (oa1f6)                    0.18       8.55 f
+  cordic/U679/Y (ao1e6)                    0.23       8.78 r
+  cordic/U689/Y (oa1f6)                    0.17       8.95 f
+  cordic/U693/Y (ao1f6)                    0.26       9.21 r
+  cordic/U702/Y (oa1f6)                    0.18       9.39 f
+  cordic/U710/Y (ao1f6)                    0.26       9.64 r
+  cordic/U718/Y (oa1f6)                    0.16       9.80 f
+  cordic/U726/Y (ao1f3)                    0.30      10.10 r
+  cordic/U731/Y (oa1f3)                    0.24      10.34 f
+  cordic/U747/Y (ao1f3)                    0.23      10.57 r
+  cordic/U748/Y (xor2b2)                   0.28      10.85 f
+  cordic/xn_reg_21_/D (fdf2a3)             0.00      10.85 f
+  data arrival time                                  10.85
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  cordic/xn_reg_21_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.11      10.89
+  data required time                                 10.89
+  -----------------------------------------------------------
+  data required time                                 10.89
+  data arrival time                                 -10.85
+  -----------------------------------------------------------
+  slack (MET)                                         0.04
+
+
+  Startpoint: v_in_4[0] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  v_in_4[0] (in)                           0.00       6.00 f
+  U98/Y (inv1a1)                           0.45       6.45 r
+  U113/Y (inv1a3)                          0.24       6.70 f
+  calvn/v_in_4[0] (cal_vn)                 0.00       6.70 f
+  calvn/intadd_17_U4/CO (fa1a2)            0.41       7.11 f
+  calvn/intadd_17_U3/CO (fa1a2)            0.36       7.47 f
+  calvn/intadd_17_U2/S (fa1a2)             0.44       7.92 f
+  calvn/intadd_0_U9/CO (fa1a3)             0.46       8.38 f
+  calvn/U154/Y (or2c3)                     0.13       8.51 r
+  calvn/U156/Y (or3d3)                     0.26       8.76 f
+  calvn/U157/Y (or2c3)                     0.16       8.92 r
+  calvn/U159/Y (or3d3)                     0.17       9.09 f
+  calvn/intadd_0_U6/CO (fa1a2)             0.39       9.48 f
+  calvn/intadd_0_U5/CO (fa1a2)             0.37       9.85 f
+  calvn/intadd_0_U4/CO (fa1a3)             0.42      10.27 f
+  calvn/U176/Y (or2c3)                     0.16      10.42 r
+  calvn/U178/Y (or3d6)                     0.17      10.59 f
+  calvn/U183/Y (xor2a2)                    0.32      10.91 r
+  calvn/SumXinReg_reg_9_/D (fdf2a9)        0.00      10.91 r
+  data arrival time                                  10.91
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/SumXinReg_reg_9_/CLK (fdf2a9)      0.00      11.00 r
+  library setup time                      -0.04      10.96
+  data required time                                 10.96
+  -----------------------------------------------------------
+  data required time                                 10.96
+  data arrival time                                 -10.91
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: dot/mac_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum2_reg_16_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  dotVn              5KGATES               ssc_core_slow
+  s_table            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a9)          0.00       2.00 r
+  dot/mac_cnt_reg_1_/Q (fdf2a9)            0.90       2.90 r
+  dot/U247/Y (inv1a3)                      0.11       3.01 f
+  dot/U248/Y (and2c6)                      0.14       3.15 r
+  dot/U249/Y (clk1b6)                      0.11       3.25 f
+  dot/U250/Y (inv1a15)                     0.19       3.44 r
+  dot/U251/Y (or2c3)                       0.11       3.55 f
+  dot/U252/Y (oa1f3)                       0.19       3.75 r
+  dot/U150/Y (ao2a3)                       0.21       3.96 r
+  dot/table_1/din[0] (s_table)             0.00       3.96 r
+  dot/table_1/U159/Y (buf1a27)             0.22       4.18 r
+  dot/table_1/U126/Y (inv1a3)              0.22       4.40 f
+  dot/table_1/U118/CO (ha1a3)              0.33       4.73 f
+  dot/table_1/U338/CO (fa1a2)              0.35       5.08 f
+  dot/table_1/U348/CO (fa1a2)              0.36       5.44 f
+  dot/table_1/U359/CO (fa1a2)              0.37       5.81 f
+  dot/table_1/U58/CO (fa1a3)               0.42       6.23 f
+  dot/table_1/U203/Y (or2c3)               0.12       6.34 r
+  dot/table_1/U97/Y (or3d3)                0.17       6.52 f
+  dot/table_1/U389/CO (fa1a2)              0.40       6.92 f
+  dot/table_1/U56/Y (ao1d2)                0.15       7.06 r
+  dot/table_1/U92/Y (or2c3)                0.13       7.19 f
+  dot/table_1/U290/CO (fa1a2)              0.39       7.58 f
+  dot/table_1/U205/Y (ao1d3)               0.13       7.70 r
+  dot/table_1/U86/Y (or2c3)                0.12       7.83 f
+  dot/table_1/U259/CO (fa1a2)              0.37       8.20 f
+  dot/table_1/U269/CO (fa1a3)              0.36       8.56 f
+  dot/table_1/U304/CO (fa1a2)              0.36       8.92 f
+  dot/table_1/U278/CO (fa1a2)              0.39       9.30 f
+  dot/table_1/U280/Y (ao2i9)               0.40       9.71 r
+  dot/table_1/U2/Y (buf1a2)                0.22       9.92 r
+  dot/table_1/s2[16] (s_table)             0.00       9.92 r
+  dot/U58/Y (and2c3)                       0.13      10.05 f
+  dot/U70/Y (inv1a3)                       0.13      10.19 r
+  dot/U48/Y (or2c1)                        0.28      10.47 f
+  dot/U109/Y (xor2b2)                      0.32      10.79 f
+  dot/psum2_reg_16_/D (fdf2a3)             0.00      10.79 f
+  data arrival time                                  10.79
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  dot/psum2_reg_16_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.79
+  -----------------------------------------------------------
+  slack (MET)                                         0.09
+
+
+  Startpoint: dot/mac_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum2_reg_17_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  dotVn              5KGATES               ssc_core_slow
+  s_table            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a9)          0.00       2.00 r
+  dot/mac_cnt_reg_1_/Q (fdf2a9)            0.77       2.77 f
+  dot/U179/Y (and2c3)                      0.17       2.94 r
+  dot/U54/Y (buf1a9)                       0.29       3.22 r
+  dot/U53/Y (or2c9)                        0.16       3.38 f
+  dot/U106/Y (inv1a9)                      0.37       3.76 r
+  dot/U50/Y (ao2a6)                        0.59       4.35 r
+  dot/table_1/din[4] (s_table)             0.00       4.35 r
+  dot/table_1/U122/S (ha1a3)               0.46       4.81 f
+  dot/table_1/U171/CO (fa1a2)              0.36       5.17 f
+  dot/table_1/U115/S (fa1a3)               0.76       5.93 r
+  dot/table_1/U170/Y (inv1a9)              0.29       6.22 f
+  dot/table_1/U390/S (ha1a2)               0.42       6.64 r
+  dot/table_1/U391/Y (inv1a1)              0.13       6.76 f
+  dot/table_1/U392/Y (and2c1)              0.50       7.27 r
+  dot/table_1/U396/Y (oa2i2)               0.19       7.46 f
+  dot/table_1/U399/Y (ao2i3)               0.17       7.63 r
+  dot/table_1/s2[8] (s_table)              0.00       7.63 r
+  dot/U30/Y (or2c1)                        0.30       7.92 f
+  dot/U29/Y (inv1a1)                       0.30       8.22 r
+  dot/U229/Y (oa1f3)                       0.13       8.35 f
+  dot/U64/Y (ao1f2)                        0.40       8.74 r
+  dot/U232/Y (oa1f3)                       0.23       8.98 f
+  dot/U21/Y (ao1f2)                        0.40       9.37 r
+  dot/U233/Y (oa1f3)                       0.21       9.59 f
+  dot/U234/Y (ao1f3)                       0.31       9.89 r
+  dot/U19/Y (oa1f3)                        0.22      10.12 f
+  dot/U235/Y (ao1f6)                       0.29      10.41 r
+  dot/U236/Y (oa1f3)                       0.15      10.56 f
+  dot/U237/Y (xor2b2)                      0.24      10.79 f
+  dot/psum2_reg_17_/D (fdf2a3)             0.00      10.79 f
+  data arrival time                                  10.79
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  dot/psum2_reg_17_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.09      10.91
+  data required time                                 10.91
+  -----------------------------------------------------------
+  data required time                                 10.91
+  data arrival time                                 -10.79
+  -----------------------------------------------------------
+  slack (MET)                                         0.11
+
+
+  Startpoint: dot/mac_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum2_reg_18_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  dotVn              5KGATES               ssc_core_slow
+  s_table            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a9)          0.00       2.00 r
+  dot/mac_cnt_reg_1_/Q (fdf2a9)            0.77       2.77 f
+  dot/U179/Y (and2c3)                      0.17       2.94 r
+  dot/U54/Y (buf1a9)                       0.29       3.22 r
+  dot/U53/Y (or2c9)                        0.16       3.38 f
+  dot/U106/Y (inv1a9)                      0.37       3.76 r
+  dot/U50/Y (ao2a6)                        0.59       4.35 r
+  dot/table_1/din[4] (s_table)             0.00       4.35 r
+  dot/table_1/U122/S (ha1a3)               0.46       4.81 f
+  dot/table_1/U171/CO (fa1a2)              0.36       5.17 f
+  dot/table_1/U115/S (fa1a3)               0.76       5.93 r
+  dot/table_1/U170/Y (inv1a9)              0.29       6.22 f
+  dot/table_1/U390/S (ha1a2)               0.42       6.64 r
+  dot/table_1/U391/Y (inv1a1)              0.13       6.76 f
+  dot/table_1/U392/Y (and2c1)              0.50       7.27 r
+  dot/table_1/U396/Y (oa2i2)               0.19       7.46 f
+  dot/table_1/U399/Y (ao2i3)               0.17       7.63 r
+  dot/table_1/s2[8] (s_table)              0.00       7.63 r
+  dot/U30/Y (or2c1)                        0.30       7.92 f
+  dot/U29/Y (inv1a1)                       0.30       8.22 r
+  dot/U229/Y (oa1f3)                       0.13       8.35 f
+  dot/U64/Y (ao1f2)                        0.40       8.74 r
+  dot/U232/Y (oa1f3)                       0.23       8.98 f
+  dot/U21/Y (ao1f2)                        0.40       9.37 r
+  dot/U233/Y (oa1f3)                       0.21       9.59 f
+  dot/U234/Y (ao1f3)                       0.31       9.89 r
+  dot/U19/Y (oa1f3)                        0.22      10.12 f
+  dot/U235/Y (ao1f6)                       0.29      10.41 r
+  dot/U239/Y (oa1f3)                       0.15      10.56 f
+  dot/U240/Y (xor2b2)                      0.29      10.84 r
+  dot/psum2_reg_18_/D (fdf2a15)            0.00      10.84 r
+  data arrival time                                  10.84
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  dot/psum2_reg_18_/CLK (fdf2a15)          0.00      11.00 r
+  library setup time                      -0.03      10.97
+  data required time                                 10.97
+  -----------------------------------------------------------
+  data required time                                 10.97
+  data arrival time                                 -10.84
+  -----------------------------------------------------------
+  slack (MET)                                         0.13
+
+
+  Startpoint: dot/mac_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_17_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  dotVn              5KGATES               ssc_core_slow
+  s_table            5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a9)                         0.00       2.00 r
+  dot/mac_cnt_reg_1_/Q (fdf2a9)                           0.90       2.90 r
+  dot/U247/Y (inv1a3)                                     0.11       3.01 f
+  dot/U248/Y (and2c6)                                     0.14       3.15 r
+  dot/U249/Y (clk1b6)                                     0.11       3.25 f
+  dot/U250/Y (inv1a15)                                    0.19       3.44 r
+  dot/U285/Y (oa4f3)                                      0.12       3.57 f
+  dot/U287/Y (oa1f3)                                      0.19       3.76 r
+  dot/U288/Y (oa1f3)                                      0.08       3.84 f
+  dot/U289/Y (ao1f3)                                      0.13       3.96 r
+  dot/table_1/din[1] (s_table)                            0.00       3.96 r
+  dot/table_1/U48/Y (buf1a15)                             0.30       4.26 r
+  dot/table_1/U74/Y (and2c9)                              0.10       4.36 f
+  dot/table_1/U244/CO (ha1a3)                             0.25       4.62 f
+  dot/table_1/U243/CO (ha1a3)                             0.25       4.86 f
+  dot/table_1/U242/S (ha1a3)                              0.53       5.39 f
+  dot/table_1/U250/Y (inv1a3)                             0.12       5.51 r
+  dot/table_1/U29/Y (ao1d2)                               0.19       5.70 r
+  dot/table_1/U46/Y (or2c3)                               0.13       5.83 f
+  dot/table_1/U371/CO (fa1a2)                             0.36       6.19 f
+  dot/table_1/U385/CO (fa1a2)                             0.36       6.56 f
+  dot/table_1/U397/CO (fa1a2)                             0.39       6.94 f
+  dot/table_1/U252/Y (ao1d3)                              0.13       7.07 r
+  dot/table_1/U45/Y (or2c3)                               0.12       7.19 f
+  dot/table_1/U301/CO (fa1a2)                             0.44       7.63 f
+  dot/table_1/U255/Y (or2c3)                              0.13       7.76 r
+  dot/table_1/U43/Y (or3d3)                               0.17       7.92 f
+  dot/table_1/U268/CO (fa1a2)                             0.39       8.31 f
+  dot/table_1/U274/CO (fa1a3)                             0.38       8.69 f
+  dot/table_1/U82/Y (or2b2)                               0.15       8.84 r
+  dot/table_1/U81/Y (or2c3)                               0.18       9.02 f
+  dot/table_1/U53/Y (or2c3)                               0.11       9.13 r
+  dot/table_1/U39/Y (and2a3)                              0.21       9.34 r
+  dot/table_1/U4/Y (or2c1)                                0.20       9.54 f
+  dot/table_1/U285/Y (ao2i9)                              0.30       9.84 r
+  dot/table_1/U41/Y (clk1a3)                              0.17      10.01 r
+  dot/table_1/s1[16] (s_table)                            0.00      10.01 r
+  dot/DP_OP_17J1_134_9881_U7/CO0 (facs3a2)                0.20      10.21 f
+  dot/DP_OP_17J1_134_9881_U6/S (facsf1b2)                 0.50      10.71 f
+  dot/psum1_reg_17_/D (fdf2a3)                            0.00      10.71 f
+  data arrival time                                                 10.71
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  dot/psum1_reg_17_/CLK (fdf2a3)                          0.00      11.00 r
+  library setup time                                     -0.14      10.86
+  data required time                                                10.86
+  --------------------------------------------------------------------------
+  data required time                                                10.86
+  data arrival time                                                -10.71
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.15
+
+
+  Startpoint: cordic/cal_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_20_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  cordic/cal_cnt_reg_0_/CLK (fdf2a3)       0.00       2.00 r
+  cordic/cal_cnt_reg_0_/Q (fdf2a3)         0.95       2.95 r
+  cordic/U208/Y (or2a6)                    0.44       3.39 r
+  cordic/U254/Y (clk1b6)                   0.37       3.76 f
+  cordic/U202/Y (and2c3)                   0.43       4.19 r
+  cordic/U201/Y (buf1a9)                   0.41       4.60 r
+  cordic/U299/Y (inv1a9)                   0.27       4.87 f
+  cordic/U621/Y (or2c1)                    0.26       5.13 r
+  cordic/U140/Y (ao2i1)                    0.22       5.35 f
+  cordic/U622/Y (ao1d2)                    0.22       5.57 r
+  cordic/U623/Y (xor2a2)                   0.27       5.84 r
+  cordic/U626/Y (or2c1)                    0.27       6.11 f
+  cordic/U627/Y (inv1a1)                   0.29       6.40 r
+  cordic/U628/Y (oa1f3)                    0.12       6.52 f
+  cordic/U630/Y (ao1f2)                    0.25       6.77 r
+  cordic/U106/Y (oa1f3)                    0.15       6.93 f
+  cordic/U104/Y (ao1f3)                    0.32       7.24 r
+  cordic/U50/Y (oa1f3)                     0.24       7.49 f
+  cordic/U97/Y (ao1f3)                     0.32       7.81 r
+  cordic/U660/Y (oa1f3)                    0.28       8.08 f
+  cordic/U669/Y (ao1f6)                    0.29       8.37 r
+  cordic/U678/Y (oa1f6)                    0.18       8.55 f
+  cordic/U679/Y (ao1e6)                    0.23       8.78 r
+  cordic/U689/Y (oa1f6)                    0.17       8.95 f
+  cordic/U693/Y (ao1f6)                    0.26       9.21 r
+  cordic/U702/Y (oa1f6)                    0.18       9.39 f
+  cordic/U710/Y (ao1f6)                    0.26       9.64 r
+  cordic/U718/Y (oa1f6)                    0.16       9.80 f
+  cordic/U726/Y (ao1f3)                    0.30      10.10 r
+  cordic/U731/Y (oa1f3)                    0.24      10.34 f
+  cordic/U741/Y (xor2a2)                   0.29      10.63 f
+  cordic/xn_reg_20_/D (fdf2a3)             0.00      10.63 f
+  data arrival time                                  10.63
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  cordic/xn_reg_20_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.63
+  -----------------------------------------------------------
+  slack (MET)                                         0.25
+
+
+  Startpoint: dot/psum1_reg_5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_20_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dotVn              5KGATES               ssc_core_slow
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_5_/CLK (fdf2a3)                           0.00       2.00 r
+  dot/psum1_reg_5_/Q (fdf2a3)                             0.70       2.70 f
+  dot/FloorWrapPsum1/din[3] (FloorAndWrap_8_1)            0.00       2.70 f
+  dot/FloorWrapPsum1/U16/Y (clk1a3)                       0.20       2.91 f
+  dot/FloorWrapPsum1/dout[3] (FloorAndWrap_8_1)           0.00       2.91 f
+  dot/psum_out1[3] (dotVn)                                0.00       2.91 f
+  cordic/x[3] (cordic_int)                                0.00       2.91 f
+  cordic/U258/Y (and2c1)                                  0.41       3.32 r
+  cordic/U260/Y (and2a1)                                  0.30       3.62 r
+  cordic/U263/Y (or3d3)                                   0.15       3.76 f
+  cordic/U266/Y (and2c3)                                  0.25       4.02 r
+  cordic/U199/Y (inv1a3)                                  0.09       4.11 f
+  cordic/U198/Y (or2c3)                                   0.19       4.29 r
+  cordic/U76/Y (or3d9)                                    0.40       4.69 f
+  cordic/U11/Y (or2c9)                                    0.48       5.18 r
+  cordic/U344/Y (clk1a3)                                  0.46       5.64 r
+  cordic/U345/Y (xor2a2)                                  0.25       5.89 r
+  cordic/U347/Y (or2c1)                                   0.29       6.18 f
+  cordic/U348/Y (ao1f2)                                   0.27       6.45 r
+  cordic/U379/Y (oa1f3)                                   0.24       6.69 f
+  cordic/U396/Y (ao1f3)                                   0.32       7.01 r
+  cordic/U51/Y (oa1f3)                                    0.28       7.29 f
+  cordic/U405/Y (ao1e6)                                   0.26       7.55 r
+  cordic/U415/Y (oa1f6)                                   0.17       7.72 f
+  cordic/U417/Y (ao1e6)                                   0.23       7.95 r
+  cordic/U426/Y (oa1f6)                                   0.17       8.13 f
+  cordic/U434/Y (ao1f6)                                   0.26       8.38 r
+  cordic/U445/Y (oa1f6)                                   0.18       8.56 f
+  cordic/U450/Y (ao1f6)                                   0.23       8.79 r
+  cordic/U21/Y (oa1f3)                                    0.22       9.01 f
+  cordic/U48/Y (ao1f3)                                    0.32       9.33 r
+  cordic/U476/Y (oa1f3)                                   0.24       9.57 f
+  cordic/U484/Y (ao1f3)                                   0.32       9.89 r
+  cordic/U493/Y (oa1f3)                                   0.25      10.14 f
+  cordic/U744/Y (xor2a2)                                  0.25      10.39 f
+  cordic/U81/Y (or2b2)                                    0.25      10.64 f
+  cordic/yn_reg_20_/D (fdf2a3)                            0.00      10.64 f
+  data arrival time                                                 10.64
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  cordic/yn_reg_20_/CLK (fdf2a3)                          0.00      11.00 r
+  library setup time                                     -0.10      10.90
+  data required time                                                10.90
+  --------------------------------------------------------------------------
+  data required time                                                10.90
+  data arrival time                                                -10.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.27
+
+
+  Startpoint: v_in_4[0] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  v_in_4[0] (in)                           0.00       6.00 f
+  U98/Y (inv1a1)                           0.45       6.45 r
+  U113/Y (inv1a3)                          0.24       6.70 f
+  calvn/v_in_4[0] (cal_vn)                 0.00       6.70 f
+  calvn/intadd_17_U4/CO (fa1a2)            0.41       7.11 f
+  calvn/intadd_17_U3/CO (fa1a2)            0.36       7.47 f
+  calvn/intadd_17_U2/S (fa1a2)             0.44       7.92 f
+  calvn/intadd_0_U9/CO (fa1a3)             0.46       8.38 f
+  calvn/U154/Y (or2c3)                     0.13       8.51 r
+  calvn/U156/Y (or3d3)                     0.26       8.76 f
+  calvn/U157/Y (or2c3)                     0.16       8.92 r
+  calvn/U159/Y (or3d3)                     0.17       9.09 f
+  calvn/intadd_0_U6/CO (fa1a2)             0.39       9.48 f
+  calvn/intadd_0_U5/CO (fa1a2)             0.37       9.85 f
+  calvn/intadd_0_U4/CO (fa1a3)             0.42      10.27 f
+  calvn/U4/Y (xor3a3)                      0.36      10.63 f
+  calvn/SumXinReg_reg_8_/D (fdf2a9)        0.00      10.63 f
+  data arrival time                                  10.63
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/SumXinReg_reg_8_/CLK (fdf2a9)      0.00      11.00 r
+  library setup time                      -0.07      10.93
+  data required time                                 10.93
+  -----------------------------------------------------------
+  data required time                                 10.93
+  data arrival time                                 -10.63
+  -----------------------------------------------------------
+  slack (MET)                                         0.30
+
+
+  Startpoint: dot/mac_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_16_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  dotVn              5KGATES               ssc_core_slow
+  s_table            5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a9)                         0.00       2.00 r
+  dot/mac_cnt_reg_1_/Q (fdf2a9)                           0.90       2.90 r
+  dot/U242/Y (and2c9)                                     0.13       3.03 f
+  dot/U243/Y (buf1a15)                                    0.23       3.25 f
+  dot/U253/Y (oa4f3)                                      0.22       3.47 r
+  dot/U255/Y (oa1f3)                                      0.13       3.61 f
+  dot/U150/Y (ao2a3)                                      0.33       3.94 f
+  dot/table_1/din[0] (s_table)                            0.00       3.94 f
+  dot/table_1/U159/Y (buf1a27)                            0.22       4.17 f
+  dot/table_1/U126/Y (inv1a3)                             0.31       4.47 r
+  dot/table_1/U121/Y (xor2a6)                             0.29       4.77 f
+  dot/table_1/U47/Y (clk1b6)                              0.21       4.97 r
+  dot/table_1/U112/Y (ao4f2)                              0.16       5.14 f
+  dot/table_1/U423/Y (oa1f3)                              0.20       5.34 r
+  dot/table_1/U425/Y (ao2i3)                              0.23       5.56 f
+  dot/table_1/s1[2] (s_table)                             0.00       5.56 f
+  dot/U145/CO (fa1a2)                                     0.44       6.01 f
+  dot/U143/CO (fa1a2)                                     0.42       6.43 f
+  dot/U142/CO (fa1a2)                                     0.40       6.82 f
+  dot/U138/CO (fa1a2)                                     0.37       7.19 f
+  dot/U263/CO (fa1a3)                                     0.38       7.57 f
+  dot/U133/Y (or2c3)                                      0.11       7.68 r
+  dot/U131/Y (or2c3)                                      0.12       7.80 f
+  dot/U262/CO (fa1a3)                                     0.36       8.16 f
+  dot/U261/CO (fa1a3)                                     0.37       8.53 f
+  dot/U127/Y (ao1d2)                                      0.14       8.67 r
+  dot/U126/Y (or2c3)                                      0.15       8.82 f
+  dot/U125/Y (or2c3)                                      0.12       8.94 r
+  dot/U124/Y (or2c3)                                      0.12       9.06 f
+  dot/U121/CO (fa1a2)                                     0.36       9.41 f
+  dot/U120/CO (fa1a2)                                     0.39       9.80 f
+  dot/U117/Y (or2c3)                                      0.11       9.91 r
+  dot/U113/Y (or2c3)                                      0.14      10.05 f
+  dot/U111/Y (or2c3)                                      0.13      10.19 r
+  dot/U205/Y (or2c6)                                      0.14      10.33 f
+  dot/DP_OP_17J1_134_9881_U7/S (facs3a2)                  0.27      10.60 f
+  dot/psum1_reg_16_/D (fdf2a3)                            0.00      10.60 f
+  data arrival time                                                 10.60
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  dot/psum1_reg_16_/CLK (fdf2a3)                          0.00      11.00 r
+  library setup time                                     -0.10      10.90
+  data required time                                                10.90
+  --------------------------------------------------------------------------
+  data required time                                                10.90
+  data arrival time                                                -10.60
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.31
+
+
+  Startpoint: cordic/cal_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_19_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  cordic/cal_cnt_reg_0_/CLK (fdf2a3)       0.00       2.00 r
+  cordic/cal_cnt_reg_0_/Q (fdf2a3)         0.95       2.95 r
+  cordic/U208/Y (or2a6)                    0.44       3.39 r
+  cordic/U254/Y (clk1b6)                   0.37       3.76 f
+  cordic/U202/Y (and2c3)                   0.43       4.19 r
+  cordic/U201/Y (buf1a9)                   0.41       4.60 r
+  cordic/U299/Y (inv1a9)                   0.27       4.87 f
+  cordic/U621/Y (or2c1)                    0.26       5.13 r
+  cordic/U140/Y (ao2i1)                    0.22       5.35 f
+  cordic/U622/Y (ao1d2)                    0.22       5.57 r
+  cordic/U623/Y (xor2a2)                   0.27       5.84 r
+  cordic/U626/Y (or2c1)                    0.27       6.11 f
+  cordic/U627/Y (inv1a1)                   0.29       6.40 r
+  cordic/U628/Y (oa1f3)                    0.12       6.52 f
+  cordic/U630/Y (ao1f2)                    0.25       6.77 r
+  cordic/U106/Y (oa1f3)                    0.15       6.93 f
+  cordic/U104/Y (ao1f3)                    0.32       7.24 r
+  cordic/U50/Y (oa1f3)                     0.24       7.49 f
+  cordic/U97/Y (ao1f3)                     0.32       7.81 r
+  cordic/U660/Y (oa1f3)                    0.28       8.08 f
+  cordic/U669/Y (ao1f6)                    0.29       8.37 r
+  cordic/U678/Y (oa1f6)                    0.18       8.55 f
+  cordic/U679/Y (ao1e6)                    0.23       8.78 r
+  cordic/U689/Y (oa1f6)                    0.17       8.95 f
+  cordic/U693/Y (ao1f6)                    0.26       9.21 r
+  cordic/U702/Y (oa1f6)                    0.18       9.39 f
+  cordic/U710/Y (ao1f6)                    0.26       9.64 r
+  cordic/U718/Y (oa1f6)                    0.16       9.80 f
+  cordic/U726/Y (ao1f3)                    0.30      10.10 r
+  cordic/U727/Y (xor2b2)                   0.30      10.40 f
+  cordic/xn_reg_19_/D (fdf2a3)             0.00      10.40 f
+  data arrival time                                  10.40
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  cordic/xn_reg_19_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.13      10.87
+  data required time                                 10.87
+  -----------------------------------------------------------
+  data required time                                 10.87
+  data arrival time                                 -10.40
+  -----------------------------------------------------------
+  slack (MET)                                         0.48
+
+
+  Startpoint: dot/psum1_reg_5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_19_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dotVn              5KGATES               ssc_core_slow
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_5_/CLK (fdf2a3)                           0.00       2.00 r
+  dot/psum1_reg_5_/Q (fdf2a3)                             0.70       2.70 f
+  dot/FloorWrapPsum1/din[3] (FloorAndWrap_8_1)            0.00       2.70 f
+  dot/FloorWrapPsum1/U16/Y (clk1a3)                       0.20       2.91 f
+  dot/FloorWrapPsum1/dout[3] (FloorAndWrap_8_1)           0.00       2.91 f
+  dot/psum_out1[3] (dotVn)                                0.00       2.91 f
+  cordic/x[3] (cordic_int)                                0.00       2.91 f
+  cordic/U258/Y (and2c1)                                  0.41       3.32 r
+  cordic/U260/Y (and2a1)                                  0.30       3.62 r
+  cordic/U263/Y (or3d3)                                   0.15       3.76 f
+  cordic/U266/Y (and2c3)                                  0.25       4.02 r
+  cordic/U199/Y (inv1a3)                                  0.09       4.11 f
+  cordic/U198/Y (or2c3)                                   0.19       4.29 r
+  cordic/U76/Y (or3d9)                                    0.40       4.69 f
+  cordic/U11/Y (or2c9)                                    0.48       5.18 r
+  cordic/U344/Y (clk1a3)                                  0.46       5.64 r
+  cordic/U345/Y (xor2a2)                                  0.25       5.89 r
+  cordic/U347/Y (or2c1)                                   0.29       6.18 f
+  cordic/U348/Y (ao1f2)                                   0.27       6.45 r
+  cordic/U379/Y (oa1f3)                                   0.24       6.69 f
+  cordic/U396/Y (ao1f3)                                   0.32       7.01 r
+  cordic/U51/Y (oa1f3)                                    0.28       7.29 f
+  cordic/U405/Y (ao1e6)                                   0.26       7.55 r
+  cordic/U415/Y (oa1f6)                                   0.17       7.72 f
+  cordic/U417/Y (ao1e6)                                   0.23       7.95 r
+  cordic/U426/Y (oa1f6)                                   0.17       8.13 f
+  cordic/U434/Y (ao1f6)                                   0.26       8.38 r
+  cordic/U445/Y (oa1f6)                                   0.18       8.56 f
+  cordic/U450/Y (ao1f6)                                   0.23       8.79 r
+  cordic/U21/Y (oa1f3)                                    0.22       9.01 f
+  cordic/U48/Y (ao1f3)                                    0.32       9.33 r
+  cordic/U476/Y (oa1f3)                                   0.24       9.57 f
+  cordic/U484/Y (ao1f3)                                   0.32       9.89 r
+  cordic/U729/Y (xor2b2)                                  0.27      10.16 f
+  cordic/U82/Y (or2b2)                                    0.26      10.41 f
+  cordic/yn_reg_19_/D (fdf2a3)                            0.00      10.41 f
+  data arrival time                                                 10.41
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  cordic/yn_reg_19_/CLK (fdf2a3)                          0.00      11.00 r
+  library setup time                                     -0.10      10.90
+  data required time                                                10.90
+  --------------------------------------------------------------------------
+  data required time                                                10.90
+  data arrival time                                                -10.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.49
+
+
+  Startpoint: dot/mac_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum2_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  dotVn              5KGATES               ssc_core_slow
+  s_table            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a9)          0.00       2.00 r
+  dot/mac_cnt_reg_1_/Q (fdf2a9)            0.90       2.90 r
+  dot/U247/Y (inv1a3)                      0.11       3.01 f
+  dot/U248/Y (and2c6)                      0.14       3.15 r
+  dot/U249/Y (clk1b6)                      0.11       3.25 f
+  dot/U250/Y (inv1a15)                     0.19       3.44 r
+  dot/U285/Y (oa4f3)                       0.12       3.57 f
+  dot/U287/Y (oa1f3)                       0.19       3.76 r
+  dot/U288/Y (oa1f3)                       0.08       3.84 f
+  dot/U289/Y (ao1f3)                       0.13       3.96 r
+  dot/table_1/din[1] (s_table)             0.00       3.96 r
+  dot/table_1/U48/Y (buf1a15)              0.30       4.26 r
+  dot/table_1/U74/Y (and2c9)               0.10       4.36 f
+  dot/table_1/U244/CO (ha1a3)              0.25       4.62 f
+  dot/table_1/U243/CO (ha1a3)              0.25       4.86 f
+  dot/table_1/U242/S (ha1a3)               0.53       5.39 f
+  dot/table_1/U250/Y (inv1a3)              0.12       5.51 r
+  dot/table_1/U29/Y (ao1d2)                0.19       5.70 r
+  dot/table_1/U46/Y (or2c3)                0.13       5.83 f
+  dot/table_1/U371/CO (fa1a2)              0.36       6.19 f
+  dot/table_1/U385/CO (fa1a2)              0.36       6.56 f
+  dot/table_1/U397/CO (fa1a2)              0.39       6.94 f
+  dot/table_1/U252/Y (ao1d3)               0.13       7.07 r
+  dot/table_1/U45/Y (or2c3)                0.12       7.19 f
+  dot/table_1/U301/CO (fa1a2)              0.44       7.63 f
+  dot/table_1/U255/Y (or2c3)               0.13       7.76 r
+  dot/table_1/U43/Y (or3d3)                0.17       7.92 f
+  dot/table_1/U268/CO (fa1a2)              0.39       8.31 f
+  dot/table_1/U274/CO (fa1a3)              0.38       8.69 f
+  dot/table_1/U314/Y (xor2b2)              0.24       8.93 f
+  dot/table_1/U135/Y (or2c1)               0.25       9.19 r
+  dot/table_1/U417/Y (ao2i3)               0.27       9.46 f
+  dot/table_1/s2[14] (s_table)             0.00       9.46 f
+  dot/U123/Y (or2a3)                       0.25       9.71 f
+  dot/U3/Y (or2c1)                         0.35      10.05 r
+  dot/U114/Y (xor2b2)                      0.25      10.31 f
+  dot/psum2_reg_14_/D (fdf2a3)             0.00      10.31 f
+  data arrival time                                  10.31
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  dot/psum2_reg_14_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.31
+  -----------------------------------------------------------
+  slack (MET)                                         0.57
+
+
+  Startpoint: v_in_4[0] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  v_in_4[0] (in)                           0.00       6.00 f
+  U98/Y (inv1a1)                           0.45       6.45 r
+  U113/Y (inv1a3)                          0.24       6.70 f
+  calvn/v_in_4[0] (cal_vn)                 0.00       6.70 f
+  calvn/intadd_17_U4/CO (fa1a2)            0.41       7.11 f
+  calvn/intadd_17_U3/CO (fa1a2)            0.36       7.47 f
+  calvn/intadd_17_U2/S (fa1a2)             0.44       7.92 f
+  calvn/intadd_0_U9/CO (fa1a3)             0.46       8.38 f
+  calvn/U154/Y (or2c3)                     0.13       8.51 r
+  calvn/U156/Y (or3d3)                     0.26       8.76 f
+  calvn/U157/Y (or2c3)                     0.16       8.92 r
+  calvn/U159/Y (or3d3)                     0.17       9.09 f
+  calvn/intadd_0_U6/CO (fa1a2)             0.39       9.48 f
+  calvn/intadd_0_U5/CO (fa1a2)             0.37       9.85 f
+  calvn/intadd_0_U4/S (fa1a3)              0.54      10.40 r
+  calvn/SumXinReg_reg_7_/D (fdf2a9)        0.00      10.40 r
+  data arrival time                                  10.40
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/SumXinReg_reg_7_/CLK (fdf2a9)      0.00      11.00 r
+  library setup time                      -0.03      10.97
+  data required time                                 10.97
+  -----------------------------------------------------------
+  data required time                                 10.97
+  data arrival time                                 -10.40
+  -----------------------------------------------------------
+  slack (MET)                                         0.57
+
+
+  Startpoint: dot/mac_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  dotVn              5KGATES               ssc_core_slow
+  s_table            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a9)          0.00       2.00 r
+  dot/mac_cnt_reg_1_/Q (fdf2a9)            0.90       2.90 r
+  dot/U247/Y (inv1a3)                      0.11       3.01 f
+  dot/U248/Y (and2c6)                      0.14       3.15 r
+  dot/U249/Y (clk1b6)                      0.11       3.25 f
+  dot/U250/Y (inv1a15)                     0.19       3.44 r
+  dot/U251/Y (or2c3)                       0.11       3.55 f
+  dot/U252/Y (oa1f3)                       0.19       3.75 r
+  dot/U150/Y (ao2a3)                       0.21       3.96 r
+  dot/table_1/din[0] (s_table)             0.00       3.96 r
+  dot/table_1/U159/Y (buf1a27)             0.22       4.18 r
+  dot/table_1/U126/Y (inv1a3)              0.22       4.40 f
+  dot/table_1/U118/CO (ha1a3)              0.33       4.73 f
+  dot/table_1/U338/CO (fa1a2)              0.35       5.08 f
+  dot/table_1/U348/CO (fa1a2)              0.36       5.44 f
+  dot/table_1/U359/CO (fa1a2)              0.37       5.81 f
+  dot/table_1/U58/CO (fa1a3)               0.42       6.23 f
+  dot/table_1/U203/Y (or2c3)               0.12       6.34 r
+  dot/table_1/U97/Y (or3d3)                0.17       6.52 f
+  dot/table_1/U389/CO (fa1a2)              0.40       6.92 f
+  dot/table_1/U56/Y (ao1d2)                0.15       7.06 r
+  dot/table_1/U92/Y (or2c3)                0.13       7.19 f
+  dot/table_1/U290/CO (fa1a2)              0.39       7.58 f
+  dot/table_1/U205/Y (ao1d3)               0.13       7.70 r
+  dot/table_1/U86/Y (or2c3)                0.12       7.83 f
+  dot/table_1/U259/CO (fa1a2)              0.37       8.20 f
+  dot/table_1/U269/CO (fa1a3)              0.36       8.56 f
+  dot/table_1/U304/CO (fa1a2)              0.36       8.92 f
+  dot/table_1/U278/S (fa1a2)               0.46       9.38 r
+  dot/table_1/U270/Y (inv1a3)              0.10       9.48 f
+  dot/table_1/U287/Y (ao2i9)               0.38       9.86 r
+  dot/table_1/s1[15] (s_table)             0.00       9.86 r
+  dot/U258/Y (xor2a2)                      0.19      10.05 f
+  dot/U259/Y (xor2b2)                      0.26      10.32 f
+  dot/psum1_reg_15_/D (fdf2a3)             0.00      10.32 f
+  data arrival time                                  10.32
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  dot/psum1_reg_15_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.10      10.90
+  data required time                                 10.90
+  -----------------------------------------------------------
+  data required time                                 10.90
+  data arrival time                                 -10.32
+  -----------------------------------------------------------
+  slack (MET)                                         0.59
+
+
+  Startpoint: dot/mac_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum2_reg_13_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  dotVn              5KGATES               ssc_core_slow
+  s_table            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a9)          0.00       2.00 r
+  dot/mac_cnt_reg_1_/Q (fdf2a9)            0.90       2.90 r
+  dot/U247/Y (inv1a3)                      0.11       3.01 f
+  dot/U248/Y (and2c6)                      0.14       3.15 r
+  dot/U249/Y (clk1b6)                      0.11       3.25 f
+  dot/U250/Y (inv1a15)                     0.19       3.44 r
+  dot/U251/Y (or2c3)                       0.11       3.55 f
+  dot/U252/Y (oa1f3)                       0.19       3.75 r
+  dot/U150/Y (ao2a3)                       0.21       3.96 r
+  dot/table_1/din[0] (s_table)             0.00       3.96 r
+  dot/table_1/U159/Y (buf1a27)             0.22       4.18 r
+  dot/table_1/U126/Y (inv1a3)              0.22       4.40 f
+  dot/table_1/U118/CO (ha1a3)              0.33       4.73 f
+  dot/table_1/U338/CO (fa1a2)              0.35       5.08 f
+  dot/table_1/U348/CO (fa1a2)              0.36       5.44 f
+  dot/table_1/U359/CO (fa1a2)              0.37       5.81 f
+  dot/table_1/U58/CO (fa1a3)               0.42       6.23 f
+  dot/table_1/U203/Y (or2c3)               0.12       6.34 r
+  dot/table_1/U97/Y (or3d3)                0.17       6.52 f
+  dot/table_1/U389/CO (fa1a2)              0.40       6.92 f
+  dot/table_1/U56/Y (ao1d2)                0.15       7.06 r
+  dot/table_1/U92/Y (or2c3)                0.13       7.19 f
+  dot/table_1/U290/CO (fa1a2)              0.39       7.58 f
+  dot/table_1/U205/Y (ao1d3)               0.13       7.70 r
+  dot/table_1/U86/Y (or2c3)                0.12       7.83 f
+  dot/table_1/U259/CO (fa1a2)              0.37       8.20 f
+  dot/table_1/U269/S (fa1a3)               0.34       8.53 f
+  dot/table_1/U206/Y (inv1a3)              0.13       8.67 r
+  dot/table_1/U210/Y (and2c3)              0.07       8.74 f
+  dot/table_1/U211/Y (oa2i2)               0.31       9.05 r
+  dot/table_1/U65/Y (or3d3)                0.26       9.32 f
+  dot/table_1/s2[13] (s_table)             0.00       9.32 f
+  dot/U77/Y (and2c3)                       0.25       9.57 r
+  dot/U62/Y (inv1a1)                       0.10       9.67 f
+  dot/U10/Y (or2c1)                        0.36      10.03 r
+  dot/U75/Y (xor2a2)                       0.25      10.28 f
+  dot/psum2_reg_13_/D (fdf2a3)             0.00      10.28 f
+  data arrival time                                  10.28
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  dot/psum2_reg_13_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.13      10.87
+  data required time                                 10.87
+  -----------------------------------------------------------
+  data required time                                 10.87
+  data arrival time                                 -10.28
+  -----------------------------------------------------------
+  slack (MET)                                         0.59
+
+
+  Startpoint: cordic/cal_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_18_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  cordic/cal_cnt_reg_0_/CLK (fdf2a3)       0.00       2.00 r
+  cordic/cal_cnt_reg_0_/Q (fdf2a3)         0.95       2.95 r
+  cordic/U208/Y (or2a6)                    0.44       3.39 r
+  cordic/U254/Y (clk1b6)                   0.37       3.76 f
+  cordic/U202/Y (and2c3)                   0.43       4.19 r
+  cordic/U201/Y (buf1a9)                   0.41       4.60 r
+  cordic/U299/Y (inv1a9)                   0.27       4.87 f
+  cordic/U621/Y (or2c1)                    0.26       5.13 r
+  cordic/U140/Y (ao2i1)                    0.22       5.35 f
+  cordic/U622/Y (ao1d2)                    0.22       5.57 r
+  cordic/U623/Y (xor2a2)                   0.27       5.84 r
+  cordic/U626/Y (or2c1)                    0.27       6.11 f
+  cordic/U627/Y (inv1a1)                   0.29       6.40 r
+  cordic/U628/Y (oa1f3)                    0.12       6.52 f
+  cordic/U630/Y (ao1f2)                    0.25       6.77 r
+  cordic/U106/Y (oa1f3)                    0.15       6.93 f
+  cordic/U104/Y (ao1f3)                    0.32       7.24 r
+  cordic/U50/Y (oa1f3)                     0.24       7.49 f
+  cordic/U97/Y (ao1f3)                     0.32       7.81 r
+  cordic/U660/Y (oa1f3)                    0.28       8.08 f
+  cordic/U669/Y (ao1f6)                    0.29       8.37 r
+  cordic/U678/Y (oa1f6)                    0.18       8.55 f
+  cordic/U679/Y (ao1e6)                    0.23       8.78 r
+  cordic/U689/Y (oa1f6)                    0.17       8.95 f
+  cordic/U693/Y (ao1f6)                    0.26       9.21 r
+  cordic/U702/Y (oa1f6)                    0.18       9.39 f
+  cordic/U710/Y (ao1f6)                    0.26       9.64 r
+  cordic/U718/Y (oa1f6)                    0.16       9.80 f
+  cordic/U823/Y (xor2a2)                   0.25      10.06 f
+  cordic/U35/Y (ao1a3)                     0.23      10.28 f
+  cordic/xn_reg_18_/D (fdf2a3)             0.00      10.28 f
+  data arrival time                                  10.28
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  cordic/xn_reg_18_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.08      10.92
+  data required time                                 10.92
+  -----------------------------------------------------------
+  data required time                                 10.92
+  data arrival time                                 -10.28
+  -----------------------------------------------------------
+  slack (MET)                                         0.64
+
+
+  Startpoint: dot/psum1_reg_5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_18_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dotVn              5KGATES               ssc_core_slow
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_5_/CLK (fdf2a3)                           0.00       2.00 r
+  dot/psum1_reg_5_/Q (fdf2a3)                             0.70       2.70 f
+  dot/FloorWrapPsum1/din[3] (FloorAndWrap_8_1)            0.00       2.70 f
+  dot/FloorWrapPsum1/U16/Y (clk1a3)                       0.20       2.91 f
+  dot/FloorWrapPsum1/dout[3] (FloorAndWrap_8_1)           0.00       2.91 f
+  dot/psum_out1[3] (dotVn)                                0.00       2.91 f
+  cordic/x[3] (cordic_int)                                0.00       2.91 f
+  cordic/U258/Y (and2c1)                                  0.41       3.32 r
+  cordic/U260/Y (and2a1)                                  0.30       3.62 r
+  cordic/U263/Y (or3d3)                                   0.15       3.76 f
+  cordic/U266/Y (and2c3)                                  0.25       4.02 r
+  cordic/U199/Y (inv1a3)                                  0.09       4.11 f
+  cordic/U198/Y (or2c3)                                   0.19       4.29 r
+  cordic/U76/Y (or3d9)                                    0.40       4.69 f
+  cordic/U11/Y (or2c9)                                    0.48       5.18 r
+  cordic/U344/Y (clk1a3)                                  0.46       5.64 r
+  cordic/U345/Y (xor2a2)                                  0.25       5.89 r
+  cordic/U347/Y (or2c1)                                   0.29       6.18 f
+  cordic/U348/Y (ao1f2)                                   0.27       6.45 r
+  cordic/U379/Y (oa1f3)                                   0.24       6.69 f
+  cordic/U396/Y (ao1f3)                                   0.32       7.01 r
+  cordic/U51/Y (oa1f3)                                    0.28       7.29 f
+  cordic/U405/Y (ao1e6)                                   0.26       7.55 r
+  cordic/U415/Y (oa1f6)                                   0.17       7.72 f
+  cordic/U417/Y (ao1e6)                                   0.23       7.95 r
+  cordic/U426/Y (oa1f6)                                   0.17       8.13 f
+  cordic/U434/Y (ao1f6)                                   0.26       8.38 r
+  cordic/U445/Y (oa1f6)                                   0.18       8.56 f
+  cordic/U450/Y (ao1f6)                                   0.23       8.79 r
+  cordic/U21/Y (oa1f3)                                    0.22       9.01 f
+  cordic/U48/Y (ao1f3)                                    0.32       9.33 r
+  cordic/U476/Y (oa1f3)                                   0.24       9.57 f
+  cordic/U767/Y (xor2a2)                                  0.25       9.83 f
+  cordic/U25/Y (ao1a1)                                    0.34      10.16 f
+  cordic/yn_reg_18_/D (fdf2a3)                            0.00      10.16 f
+  data arrival time                                                 10.16
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  cordic/yn_reg_18_/CLK (fdf2a3)                          0.00      11.00 r
+  library setup time                                     -0.10      10.90
+  data required time                                                10.90
+  --------------------------------------------------------------------------
+  data required time                                                10.90
+  data arrival time                                                -10.16
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.74
+
+
+  Startpoint: cordic/cal_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_17_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  cordic/cal_cnt_reg_0_/CLK (fdf2a3)       0.00       2.00 r
+  cordic/cal_cnt_reg_0_/Q (fdf2a3)         0.95       2.95 r
+  cordic/U208/Y (or2a6)                    0.44       3.39 r
+  cordic/U254/Y (clk1b6)                   0.37       3.76 f
+  cordic/U202/Y (and2c3)                   0.43       4.19 r
+  cordic/U201/Y (buf1a9)                   0.41       4.60 r
+  cordic/U299/Y (inv1a9)                   0.27       4.87 f
+  cordic/U621/Y (or2c1)                    0.26       5.13 r
+  cordic/U140/Y (ao2i1)                    0.22       5.35 f
+  cordic/U622/Y (ao1d2)                    0.22       5.57 r
+  cordic/U623/Y (xor2a2)                   0.27       5.84 r
+  cordic/U626/Y (or2c1)                    0.27       6.11 f
+  cordic/U627/Y (inv1a1)                   0.29       6.40 r
+  cordic/U628/Y (oa1f3)                    0.12       6.52 f
+  cordic/U630/Y (ao1f2)                    0.25       6.77 r
+  cordic/U106/Y (oa1f3)                    0.15       6.93 f
+  cordic/U104/Y (ao1f3)                    0.32       7.24 r
+  cordic/U50/Y (oa1f3)                     0.24       7.49 f
+  cordic/U97/Y (ao1f3)                     0.32       7.81 r
+  cordic/U660/Y (oa1f3)                    0.28       8.08 f
+  cordic/U669/Y (ao1f6)                    0.29       8.37 r
+  cordic/U678/Y (oa1f6)                    0.18       8.55 f
+  cordic/U679/Y (ao1e6)                    0.23       8.78 r
+  cordic/U689/Y (oa1f6)                    0.17       8.95 f
+  cordic/U693/Y (ao1f6)                    0.26       9.21 r
+  cordic/U702/Y (oa1f6)                    0.18       9.39 f
+  cordic/U710/Y (ao1f6)                    0.26       9.64 r
+  cordic/U825/Y (xor2b2)                   0.27       9.91 f
+  cordic/U36/Y (ao1a3)                     0.24      10.16 f
+  cordic/xn_reg_17_/D (fdf2a3)             0.00      10.16 f
+  data arrival time                                  10.16
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  cordic/xn_reg_17_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.08      10.92
+  data required time                                 10.92
+  -----------------------------------------------------------
+  data required time                                 10.92
+  data arrival time                                 -10.16
+  -----------------------------------------------------------
+  slack (MET)                                         0.76
+
+
+  Startpoint: dot/mac_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  dotVn              5KGATES               ssc_core_slow
+  s_table            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a9)          0.00       2.00 r
+  dot/mac_cnt_reg_1_/Q (fdf2a9)            0.90       2.90 r
+  dot/U247/Y (inv1a3)                      0.11       3.01 f
+  dot/U248/Y (and2c6)                      0.14       3.15 r
+  dot/U249/Y (clk1b6)                      0.11       3.25 f
+  dot/U250/Y (inv1a15)                     0.19       3.44 r
+  dot/U251/Y (or2c3)                       0.11       3.55 f
+  dot/U252/Y (oa1f3)                       0.19       3.75 r
+  dot/U150/Y (ao2a3)                       0.21       3.96 r
+  dot/table_1/din[0] (s_table)             0.00       3.96 r
+  dot/table_1/U159/Y (buf1a27)             0.22       4.18 r
+  dot/table_1/U126/Y (inv1a3)              0.22       4.40 f
+  dot/table_1/U118/CO (ha1a3)              0.33       4.73 f
+  dot/table_1/U338/CO (fa1a2)              0.35       5.08 f
+  dot/table_1/U348/CO (fa1a2)              0.36       5.44 f
+  dot/table_1/U359/CO (fa1a2)              0.37       5.81 f
+  dot/table_1/U58/CO (fa1a3)               0.42       6.23 f
+  dot/table_1/U203/Y (or2c3)               0.12       6.34 r
+  dot/table_1/U97/Y (or3d3)                0.17       6.52 f
+  dot/table_1/U389/CO (fa1a2)              0.40       6.92 f
+  dot/table_1/U56/Y (ao1d2)                0.15       7.06 r
+  dot/table_1/U92/Y (or2c3)                0.13       7.19 f
+  dot/table_1/U290/CO (fa1a2)              0.39       7.58 f
+  dot/table_1/U205/Y (ao1d3)               0.13       7.70 r
+  dot/table_1/U86/Y (or2c3)                0.12       7.83 f
+  dot/table_1/U259/CO (fa1a2)              0.37       8.20 f
+  dot/table_1/U269/CO (fa1a3)              0.36       8.56 f
+  dot/table_1/U304/S (fa1a2)               0.45       9.01 r
+  dot/table_1/U305/Y (inv1a3)              0.10       9.12 f
+  dot/table_1/U80/Y (ao2i3)                0.37       9.49 r
+  dot/table_1/s1[14] (s_table)             0.00       9.49 r
+  dot/U210/Y (xor2b2)                      0.34       9.83 f
+  dot/U211/Y (xor2b2)                      0.29      10.12 f
+  dot/psum1_reg_14_/D (fdf2a3)             0.00      10.12 f
+  data arrival time                                  10.12
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  dot/psum1_reg_14_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.10      10.90
+  data required time                                 10.90
+  -----------------------------------------------------------
+  data required time                                 10.90
+  data arrival time                                 -10.12
+  -----------------------------------------------------------
+  slack (MET)                                         0.79
+
+
+  Startpoint: dot/psum1_reg_5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/clk_gate_xn_reg/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dotVn              5KGATES               ssc_core_slow
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_5_/CLK (fdf2a3)                           0.00       2.00 r
+  dot/psum1_reg_5_/Q (fdf2a3)                             0.70       2.70 f
+  dot/FloorWrapPsum1/din[3] (FloorAndWrap_8_1)            0.00       2.70 f
+  dot/FloorWrapPsum1/U16/Y (clk1a3)                       0.20       2.91 f
+  dot/FloorWrapPsum1/dout[3] (FloorAndWrap_8_1)           0.00       2.91 f
+  dot/psum_out1[3] (dotVn)                                0.00       2.91 f
+  cordic/x[3] (cordic_int)                                0.00       2.91 f
+  cordic/U258/Y (and2c1)                                  0.41       3.32 r
+  cordic/U260/Y (and2a1)                                  0.30       3.62 r
+  cordic/U263/Y (or3d3)                                   0.15       3.76 f
+  cordic/U266/Y (and2c3)                                  0.25       4.02 r
+  cordic/U199/Y (inv1a3)                                  0.09       4.11 f
+  cordic/U198/Y (or2c3)                                   0.19       4.29 r
+  cordic/U76/Y (or3d9)                                    0.40       4.69 f
+  cordic/U197/Y (and2a1)                                  0.31       5.01 f
+  cordic/U504/Y (oa1f3)                                   0.17       5.18 r
+  cordic/clk_gate_xn_reg/EN (SNPS_CLOCK_GATE_HIGH_cordic_int_0)     0.00     5.18 r
+  cordic/clk_gate_xn_reg/latch/D (ldf1b3)                 0.00       5.18 r
+  data arrival time                                                  5.18
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                      -1.00       6.00
+  cordic/clk_gate_xn_reg/latch/G (ldf1b3)                 0.00       6.00 f
+  time borrowed from endpoint                             0.00       6.00
+  data required time                                                 6.00
+  --------------------------------------------------------------------------
+  data required time                                                 6.00
+  data arrival time                                                 -5.18
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.82
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                                 5.00   
+  library setup time                                     -0.50   
+  --------------------------------------------------------------
+  max time borrow                                         4.50   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: dot/psum1_reg_5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_17_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dotVn              5KGATES               ssc_core_slow
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_5_/CLK (fdf2a3)                           0.00       2.00 r
+  dot/psum1_reg_5_/Q (fdf2a3)                             0.70       2.70 f
+  dot/FloorWrapPsum1/din[3] (FloorAndWrap_8_1)            0.00       2.70 f
+  dot/FloorWrapPsum1/U16/Y (clk1a3)                       0.20       2.91 f
+  dot/FloorWrapPsum1/dout[3] (FloorAndWrap_8_1)           0.00       2.91 f
+  dot/psum_out1[3] (dotVn)                                0.00       2.91 f
+  cordic/x[3] (cordic_int)                                0.00       2.91 f
+  cordic/U258/Y (and2c1)                                  0.41       3.32 r
+  cordic/U260/Y (and2a1)                                  0.30       3.62 r
+  cordic/U263/Y (or3d3)                                   0.15       3.76 f
+  cordic/U266/Y (and2c3)                                  0.25       4.02 r
+  cordic/U199/Y (inv1a3)                                  0.09       4.11 f
+  cordic/U198/Y (or2c3)                                   0.19       4.29 r
+  cordic/U76/Y (or3d9)                                    0.40       4.69 f
+  cordic/U11/Y (or2c9)                                    0.48       5.18 r
+  cordic/U344/Y (clk1a3)                                  0.46       5.64 r
+  cordic/U345/Y (xor2a2)                                  0.25       5.89 r
+  cordic/U347/Y (or2c1)                                   0.29       6.18 f
+  cordic/U348/Y (ao1f2)                                   0.27       6.45 r
+  cordic/U379/Y (oa1f3)                                   0.24       6.69 f
+  cordic/U396/Y (ao1f3)                                   0.32       7.01 r
+  cordic/U51/Y (oa1f3)                                    0.28       7.29 f
+  cordic/U405/Y (ao1e6)                                   0.26       7.55 r
+  cordic/U415/Y (oa1f6)                                   0.17       7.72 f
+  cordic/U417/Y (ao1e6)                                   0.23       7.95 r
+  cordic/U426/Y (oa1f6)                                   0.17       8.13 f
+  cordic/U434/Y (ao1f6)                                   0.26       8.38 r
+  cordic/U445/Y (oa1f6)                                   0.18       8.56 f
+  cordic/U450/Y (ao1f6)                                   0.23       8.79 r
+  cordic/U21/Y (oa1f3)                                    0.22       9.01 f
+  cordic/U48/Y (ao1f3)                                    0.32       9.33 r
+  cordic/U769/Y (xor2b2)                                  0.27       9.59 f
+  cordic/U770/Y (oa1f1)                                   0.29       9.88 r
+  cordic/U771/Y (inv1a1)                                  0.17      10.05 f
+  cordic/yn_reg_17_/D (fdf2a3)                            0.00      10.05 f
+  data arrival time                                                 10.05
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  cordic/yn_reg_17_/CLK (fdf2a3)                          0.00      11.00 r
+  library setup time                                     -0.12      10.88
+  data required time                                                10.88
+  --------------------------------------------------------------------------
+  data required time                                                10.88
+  data arrival time                                                -10.05
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: v_in_4[0] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  v_in_4[0] (in)                           0.00       6.00 f
+  U98/Y (inv1a1)                           0.45       6.45 r
+  U113/Y (inv1a3)                          0.24       6.70 f
+  calvn/v_in_4[0] (cal_vn)                 0.00       6.70 f
+  calvn/intadd_17_U4/CO (fa1a2)            0.41       7.11 f
+  calvn/intadd_17_U3/CO (fa1a2)            0.36       7.47 f
+  calvn/intadd_17_U2/S (fa1a2)             0.44       7.92 f
+  calvn/intadd_0_U9/CO (fa1a3)             0.46       8.38 f
+  calvn/U154/Y (or2c3)                     0.13       8.51 r
+  calvn/U156/Y (or3d3)                     0.26       8.76 f
+  calvn/U157/Y (or2c3)                     0.16       8.92 r
+  calvn/U159/Y (or3d3)                     0.17       9.09 f
+  calvn/intadd_0_U6/CO (fa1a2)             0.39       9.48 f
+  calvn/intadd_0_U5/S (fa1a2)              0.49       9.97 r
+  calvn/SumXinReg_reg_6_/D (fdf2a9)        0.00       9.97 r
+  data arrival time                                   9.97
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/SumXinReg_reg_6_/CLK (fdf2a9)      0.00      11.00 r
+  library setup time                      -0.04      10.96
+  data required time                                 10.96
+  -----------------------------------------------------------
+  data required time                                 10.96
+  data arrival time                                  -9.97
+  -----------------------------------------------------------
+  slack (MET)                                         0.99
+
+
+  Startpoint: dot/mac_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum2_reg_12_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  dotVn              5KGATES               ssc_core_slow
+  s_table            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a9)          0.00       2.00 r
+  dot/mac_cnt_reg_1_/Q (fdf2a9)            0.90       2.90 r
+  dot/U247/Y (inv1a3)                      0.11       3.01 f
+  dot/U248/Y (and2c6)                      0.14       3.15 r
+  dot/U249/Y (clk1b6)                      0.11       3.25 f
+  dot/U250/Y (inv1a15)                     0.19       3.44 r
+  dot/U285/Y (oa4f3)                       0.12       3.57 f
+  dot/U287/Y (oa1f3)                       0.19       3.76 r
+  dot/U288/Y (oa1f3)                       0.08       3.84 f
+  dot/U289/Y (ao1f3)                       0.13       3.96 r
+  dot/table_1/din[1] (s_table)             0.00       3.96 r
+  dot/table_1/U48/Y (buf1a15)              0.30       4.26 r
+  dot/table_1/U74/Y (and2c9)               0.10       4.36 f
+  dot/table_1/U244/CO (ha1a3)              0.25       4.62 f
+  dot/table_1/U243/CO (ha1a3)              0.25       4.86 f
+  dot/table_1/U242/S (ha1a3)               0.53       5.39 f
+  dot/table_1/U250/Y (inv1a3)              0.12       5.51 r
+  dot/table_1/U29/Y (ao1d2)                0.19       5.70 r
+  dot/table_1/U46/Y (or2c3)                0.13       5.83 f
+  dot/table_1/U371/CO (fa1a2)              0.36       6.19 f
+  dot/table_1/U385/CO (fa1a2)              0.36       6.56 f
+  dot/table_1/U397/CO (fa1a2)              0.39       6.94 f
+  dot/table_1/U252/Y (ao1d3)               0.13       7.07 r
+  dot/table_1/U45/Y (or2c3)                0.12       7.19 f
+  dot/table_1/U301/CO (fa1a2)              0.44       7.63 f
+  dot/table_1/U255/Y (or2c3)               0.13       7.76 r
+  dot/table_1/U43/Y (or3d3)                0.17       7.92 f
+  dot/table_1/U268/S (fa1a2)               0.50       8.43 r
+  dot/table_1/U136/Y (or2c1)               0.20       8.63 f
+  dot/table_1/U66/Y (ao2i3)                0.19       8.82 r
+  dot/table_1/s2[12] (s_table)             0.00       8.82 r
+  dot/U22/Y (or2a1)                        0.35       9.17 r
+  dot/U4/Y (or2c1)                         0.34       9.51 f
+  dot/U118/Y (xor2b2)                      0.33       9.84 f
+  dot/psum2_reg_12_/D (fdf2a3)             0.00       9.84 f
+  data arrival time                                   9.84
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  dot/psum2_reg_12_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                  -9.84
+  -----------------------------------------------------------
+  slack (MET)                                         1.03
+
+
+  Startpoint: cordic/cal_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_16_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  cordic/cal_cnt_reg_0_/CLK (fdf2a3)       0.00       2.00 r
+  cordic/cal_cnt_reg_0_/Q (fdf2a3)         0.95       2.95 r
+  cordic/U208/Y (or2a6)                    0.44       3.39 r
+  cordic/U254/Y (clk1b6)                   0.37       3.76 f
+  cordic/U202/Y (and2c3)                   0.43       4.19 r
+  cordic/U201/Y (buf1a9)                   0.41       4.60 r
+  cordic/U299/Y (inv1a9)                   0.27       4.87 f
+  cordic/U621/Y (or2c1)                    0.26       5.13 r
+  cordic/U140/Y (ao2i1)                    0.22       5.35 f
+  cordic/U622/Y (ao1d2)                    0.22       5.57 r
+  cordic/U623/Y (xor2a2)                   0.27       5.84 r
+  cordic/U626/Y (or2c1)                    0.27       6.11 f
+  cordic/U627/Y (inv1a1)                   0.29       6.40 r
+  cordic/U628/Y (oa1f3)                    0.12       6.52 f
+  cordic/U630/Y (ao1f2)                    0.25       6.77 r
+  cordic/U106/Y (oa1f3)                    0.15       6.93 f
+  cordic/U104/Y (ao1f3)                    0.32       7.24 r
+  cordic/U50/Y (oa1f3)                     0.24       7.49 f
+  cordic/U97/Y (ao1f3)                     0.32       7.81 r
+  cordic/U660/Y (oa1f3)                    0.28       8.08 f
+  cordic/U669/Y (ao1f6)                    0.29       8.37 r
+  cordic/U678/Y (oa1f6)                    0.18       8.55 f
+  cordic/U679/Y (ao1e6)                    0.23       8.78 r
+  cordic/U689/Y (oa1f6)                    0.17       8.95 f
+  cordic/U693/Y (ao1f6)                    0.26       9.21 r
+  cordic/U702/Y (oa1f6)                    0.18       9.39 f
+  cordic/U828/Y (xor2a2)                   0.26       9.64 f
+  cordic/U26/Y (ao1a3)                     0.23       9.87 f
+  cordic/xn_reg_16_/D (fdf2a3)             0.00       9.87 f
+  data arrival time                                   9.87
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  cordic/xn_reg_16_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.08      10.92
+  data required time                                 10.92
+  -----------------------------------------------------------
+  data required time                                 10.92
+  data arrival time                                  -9.87
+  -----------------------------------------------------------
+  slack (MET)                                         1.05
+
+
+  Startpoint: dot/mac_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_13_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  dotVn              5KGATES               ssc_core_slow
+  s_table            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a9)          0.00       2.00 r
+  dot/mac_cnt_reg_1_/Q (fdf2a9)            0.90       2.90 r
+  dot/U242/Y (and2c9)                      0.13       3.03 f
+  dot/U243/Y (buf1a15)                     0.23       3.25 f
+  dot/U253/Y (oa4f3)                       0.22       3.47 r
+  dot/U255/Y (oa1f3)                       0.13       3.61 f
+  dot/U150/Y (ao2a3)                       0.33       3.94 f
+  dot/table_1/din[0] (s_table)             0.00       3.94 f
+  dot/table_1/U159/Y (buf1a27)             0.22       4.17 f
+  dot/table_1/U126/Y (inv1a3)              0.31       4.47 r
+  dot/table_1/U121/Y (xor2a6)              0.29       4.77 f
+  dot/table_1/U47/Y (clk1b6)               0.21       4.97 r
+  dot/table_1/U112/Y (ao4f2)               0.16       5.14 f
+  dot/table_1/U423/Y (oa1f3)               0.20       5.34 r
+  dot/table_1/U425/Y (ao2i3)               0.23       5.56 f
+  dot/table_1/s1[2] (s_table)              0.00       5.56 f
+  dot/U145/CO (fa1a2)                      0.44       6.01 f
+  dot/U143/CO (fa1a2)                      0.42       6.43 f
+  dot/U142/CO (fa1a2)                      0.40       6.82 f
+  dot/U138/CO (fa1a2)                      0.37       7.19 f
+  dot/U263/CO (fa1a3)                      0.38       7.57 f
+  dot/U133/Y (or2c3)                       0.11       7.68 r
+  dot/U131/Y (or2c3)                       0.12       7.80 f
+  dot/U262/CO (fa1a3)                      0.36       8.16 f
+  dot/U261/CO (fa1a3)                      0.37       8.53 f
+  dot/U127/Y (ao1d2)                       0.14       8.67 r
+  dot/U126/Y (or2c3)                       0.15       8.82 f
+  dot/U125/Y (or2c3)                       0.12       8.94 r
+  dot/U124/Y (or2c3)                       0.12       9.06 f
+  dot/U121/CO (fa1a2)                      0.36       9.41 f
+  dot/U120/S (fa1a2)                       0.48       9.89 r
+  dot/psum1_reg_13_/D (fdf2a3)             0.00       9.89 r
+  data arrival time                                   9.89
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  dot/psum1_reg_13_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.05      10.95
+  data required time                                 10.95
+  -----------------------------------------------------------
+  data required time                                 10.95
+  data arrival time                                  -9.89
+  -----------------------------------------------------------
+  slack (MET)                                         1.06
+
+
+  Startpoint: dot/psum1_reg_5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_16_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dotVn              5KGATES               ssc_core_slow
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_5_/CLK (fdf2a3)                           0.00       2.00 r
+  dot/psum1_reg_5_/Q (fdf2a3)                             0.70       2.70 f
+  dot/FloorWrapPsum1/din[3] (FloorAndWrap_8_1)            0.00       2.70 f
+  dot/FloorWrapPsum1/U16/Y (clk1a3)                       0.20       2.91 f
+  dot/FloorWrapPsum1/dout[3] (FloorAndWrap_8_1)           0.00       2.91 f
+  dot/psum_out1[3] (dotVn)                                0.00       2.91 f
+  cordic/x[3] (cordic_int)                                0.00       2.91 f
+  cordic/U258/Y (and2c1)                                  0.41       3.32 r
+  cordic/U260/Y (and2a1)                                  0.30       3.62 r
+  cordic/U263/Y (or3d3)                                   0.15       3.76 f
+  cordic/U266/Y (and2c3)                                  0.25       4.02 r
+  cordic/U199/Y (inv1a3)                                  0.09       4.11 f
+  cordic/U198/Y (or2c3)                                   0.19       4.29 r
+  cordic/U76/Y (or3d9)                                    0.40       4.69 f
+  cordic/U11/Y (or2c9)                                    0.48       5.18 r
+  cordic/U344/Y (clk1a3)                                  0.46       5.64 r
+  cordic/U345/Y (xor2a2)                                  0.30       5.93 f
+  cordic/U347/Y (or2c1)                                   0.36       6.30 r
+  cordic/U348/Y (ao1f2)                                   0.30       6.59 f
+  cordic/U379/Y (oa1f3)                                   0.31       6.90 r
+  cordic/U396/Y (ao1f3)                                   0.18       7.08 f
+  cordic/U51/Y (oa1f3)                                    0.39       7.47 r
+  cordic/U405/Y (ao1e6)                                   0.15       7.62 f
+  cordic/U415/Y (oa1f6)                                   0.25       7.87 r
+  cordic/U417/Y (ao1e6)                                   0.13       8.00 f
+  cordic/U426/Y (oa1f6)                                   0.25       8.25 r
+  cordic/U434/Y (ao1f6)                                   0.14       8.39 f
+  cordic/U445/Y (oa1f6)                                   0.25       8.64 r
+  cordic/U450/Y (ao1f6)                                   0.12       8.76 f
+  cordic/U21/Y (oa1f3)                                    0.33       9.09 r
+  cordic/U774/Y (xor2a2)                                  0.18       9.28 f
+  cordic/U775/Y (oa1f1)                                   0.28       9.56 r
+  cordic/U776/Y (inv1a1)                                  0.17       9.73 f
+  cordic/yn_reg_16_/D (fdf2a3)                            0.00       9.73 f
+  data arrival time                                                  9.73
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  cordic/yn_reg_16_/CLK (fdf2a3)                          0.00      11.00 r
+  library setup time                                     -0.12      10.88
+  data required time                                                10.88
+  --------------------------------------------------------------------------
+  data required time                                                10.88
+  data arrival time                                                 -9.73
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: cordic/cal_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  cordic/cal_cnt_reg_0_/CLK (fdf2a3)       0.00       2.00 r
+  cordic/cal_cnt_reg_0_/Q (fdf2a3)         0.95       2.95 r
+  cordic/U208/Y (or2a6)                    0.44       3.39 r
+  cordic/U254/Y (clk1b6)                   0.37       3.76 f
+  cordic/U202/Y (and2c3)                   0.43       4.19 r
+  cordic/U201/Y (buf1a9)                   0.41       4.60 r
+  cordic/U299/Y (inv1a9)                   0.27       4.87 f
+  cordic/U621/Y (or2c1)                    0.26       5.13 r
+  cordic/U140/Y (ao2i1)                    0.22       5.35 f
+  cordic/U622/Y (ao1d2)                    0.22       5.57 r
+  cordic/U623/Y (xor2a2)                   0.27       5.84 r
+  cordic/U626/Y (or2c1)                    0.27       6.11 f
+  cordic/U627/Y (inv1a1)                   0.29       6.40 r
+  cordic/U628/Y (oa1f3)                    0.12       6.52 f
+  cordic/U630/Y (ao1f2)                    0.25       6.77 r
+  cordic/U106/Y (oa1f3)                    0.15       6.93 f
+  cordic/U104/Y (ao1f3)                    0.32       7.24 r
+  cordic/U50/Y (oa1f3)                     0.24       7.49 f
+  cordic/U97/Y (ao1f3)                     0.32       7.81 r
+  cordic/U660/Y (oa1f3)                    0.28       8.08 f
+  cordic/U669/Y (ao1f6)                    0.29       8.37 r
+  cordic/U678/Y (oa1f6)                    0.18       8.55 f
+  cordic/U679/Y (ao1e6)                    0.23       8.78 r
+  cordic/U689/Y (oa1f6)                    0.17       8.95 f
+  cordic/U693/Y (ao1f6)                    0.26       9.21 r
+  cordic/U830/Y (xor2b2)                   0.27       9.48 f
+  cordic/U27/Y (ao1a3)                     0.24       9.73 f
+  cordic/xn_reg_15_/D (fdf2a3)             0.00       9.73 f
+  data arrival time                                   9.73
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  cordic/xn_reg_15_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.08      10.92
+  data required time                                 10.92
+  -----------------------------------------------------------
+  data required time                                 10.92
+  data arrival time                                  -9.73
+  -----------------------------------------------------------
+  slack (MET)                                         1.19
+
+
+  Startpoint: cordic/cal_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/clk_gate_res_rg_reg/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  cordic/cal_cnt_reg_0_/CLK (fdf2a3)                      0.00       2.00 r
+  cordic/cal_cnt_reg_0_/Q (fdf2a3)                        0.95       2.95 r
+  cordic/U208/Y (or2a6)                                   0.44       3.39 r
+  cordic/U254/Y (clk1b6)                                  0.37       3.76 f
+  cordic/U15/Y (and2a3)                                   0.37       4.13 f
+  cordic/U24/Y (or2a6)                                    0.41       4.53 f
+  cordic/U78/Y (oa1f3)                                    0.20       4.73 r
+  cordic/clk_gate_res_rg_reg/EN (SNPS_CLOCK_GATE_HIGH_cordic_int_1)     0.00     4.73 r
+  cordic/clk_gate_res_rg_reg/latch/D (ldf1b3)             0.00       4.73 r
+  data arrival time                                                  4.73
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                      -1.00       6.00
+  cordic/clk_gate_res_rg_reg/latch/G (ldf1b3)             0.00       6.00 f
+  time borrowed from endpoint                             0.00       6.00
+  data required time                                                 6.00
+  --------------------------------------------------------------------------
+  data required time                                                 6.00
+  data arrival time                                                 -4.73
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.27
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                                 5.00   
+  library setup time                                     -0.50   
+  --------------------------------------------------------------
+  max time borrow                                         4.50   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: dot/mac_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum2_reg_11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  dotVn              5KGATES               ssc_core_slow
+  s_table            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a9)          0.00       2.00 r
+  dot/mac_cnt_reg_1_/Q (fdf2a9)            0.90       2.90 r
+  dot/U247/Y (inv1a3)                      0.11       3.01 f
+  dot/U248/Y (and2c6)                      0.14       3.15 r
+  dot/U249/Y (clk1b6)                      0.11       3.25 f
+  dot/U250/Y (inv1a15)                     0.19       3.44 r
+  dot/U285/Y (oa4f3)                       0.12       3.57 f
+  dot/U287/Y (oa1f3)                       0.19       3.76 r
+  dot/U288/Y (oa1f3)                       0.08       3.84 f
+  dot/U289/Y (ao1f3)                       0.13       3.96 r
+  dot/table_1/din[1] (s_table)             0.00       3.96 r
+  dot/table_1/U48/Y (buf1a15)              0.30       4.26 r
+  dot/table_1/U74/Y (and2c9)               0.10       4.36 f
+  dot/table_1/U244/CO (ha1a3)              0.25       4.62 f
+  dot/table_1/U243/CO (ha1a3)              0.25       4.86 f
+  dot/table_1/U242/CO (ha1a3)              0.25       5.11 f
+  dot/table_1/U234/S (ha1a3)               0.52       5.63 f
+  dot/table_1/U30/Y (inv1a1)               0.24       5.87 r
+  dot/table_1/U103/Y (ao1d2)               0.22       6.08 r
+  dot/table_1/U96/Y (or2c3)                0.13       6.21 f
+  dot/table_1/U374/CO (fa1a2)              0.36       6.57 f
+  dot/table_1/U388/CO (fa1a2)              0.36       6.94 f
+  dot/table_1/U400/CO (fa1a2)              0.36       7.30 f
+  dot/table_1/U288/CO (fa1a2)              0.36       7.67 f
+  dot/table_1/U315/S (fa1a2)               0.46       8.13 r
+  dot/table_1/U316/Y (inv1a3)              0.10       8.23 f
+  dot/table_1/U332/Y (ao2i3)               0.27       8.51 r
+  dot/table_1/s2[11] (s_table)             0.00       8.51 r
+  dot/U24/Y (or2c1)                        0.33       8.84 f
+  dot/U12/Y (or2c1)                        0.47       9.31 r
+  dot/U78/Y (xor2a2)                       0.26       9.57 f
+  dot/psum2_reg_11_/D (fdf2a3)             0.00       9.57 f
+  data arrival time                                   9.57
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  dot/psum2_reg_11_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.13      10.87
+  data required time                                 10.87
+  -----------------------------------------------------------
+  data required time                                 10.87
+  data arrival time                                  -9.57
+  -----------------------------------------------------------
+  slack (MET)                                         1.31
+
+
+  Startpoint: v_in_0[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_0_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 r
+  v_in_0[0] (in)                                          0.00       6.00 r
+  U102/Y (inv1a1)                                         0.20       6.20 f
+  U118/Y (inv1a3)                                         0.31       6.51 r
+  calvn/v_in_0[0] (cal_vn)                                0.00       6.51 r
+  calvn/U145/Y (oa1f3)                                    0.19       6.71 f
+  calvn/intadd_8_U8/CO (fa1a2)                            0.38       7.08 f
+  calvn/intadd_8_U7/CO (fa1a2)                            0.36       7.45 f
+  calvn/intadd_8_U6/CO (fa1a2)                            0.36       7.81 f
+  calvn/intadd_8_U5/CO (fa1a2)                            0.36       8.18 f
+  calvn/intadd_8_U4/CO (fa1a2)                            0.36       8.54 f
+  calvn/intadd_8_U3/CO (fa1a2)                            0.36       8.91 f
+  calvn/intadd_8_U2/S (fa1a2)                             0.44       9.35 r
+  calvn/U70/Y (inv1a1)                                    0.09       9.44 f
+  calvn/FloorWrapVn_0/din[10] (FloorAndWrap_7)            0.00       9.44 f
+  calvn/FloorWrapVn_0/U1/Y (clk1a3)                       0.16       9.60 f
+  calvn/FloorWrapVn_0/dout[7] (FloorAndWrap_7)            0.00       9.60 f
+  calvn/VnReg_0_reg_7_/D (fdf2a3)                         0.00       9.60 f
+  data arrival time                                                  9.60
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_0_reg_7_/CLK (fdf2a3)                       0.00      11.00 r
+  library setup time                                     -0.08      10.92
+  data required time                                                10.92
+  --------------------------------------------------------------------------
+  data required time                                                10.92
+  data arrival time                                                 -9.60
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.32
+
+
+  Startpoint: v_in_4[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_4_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 r
+  v_in_4[0] (in)                                          0.00       6.00 r
+  U98/Y (inv1a1)                                          0.20       6.20 f
+  U113/Y (inv1a3)                                         0.30       6.51 r
+  calvn/v_in_4[0] (cal_vn)                                0.00       6.51 r
+  calvn/U151/Y (oa1f3)                                    0.19       6.70 f
+  calvn/intadd_4_U8/CO (fa1a2)                            0.38       7.07 f
+  calvn/intadd_4_U7/CO (fa1a2)                            0.36       7.44 f
+  calvn/intadd_4_U6/CO (fa1a2)                            0.36       7.80 f
+  calvn/intadd_4_U5/CO (fa1a2)                            0.36       8.17 f
+  calvn/intadd_4_U4/CO (fa1a2)                            0.36       8.53 f
+  calvn/intadd_4_U3/CO (fa1a2)                            0.36       8.89 f
+  calvn/intadd_4_U2/S (fa1a2)                             0.44       9.33 r
+  calvn/U82/Y (inv1a1)                                    0.09       9.43 f
+  calvn/FloorWrapVn_4/din[10] (FloorAndWrap_3)            0.00       9.43 f
+  calvn/FloorWrapVn_4/U4/Y (clk1a3)                       0.16       9.59 f
+  calvn/FloorWrapVn_4/dout[7] (FloorAndWrap_3)            0.00       9.59 f
+  calvn/VnReg_4_reg_7_/D (fdf2a3)                         0.00       9.59 f
+  data arrival time                                                  9.59
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_4_reg_7_/CLK (fdf2a3)                       0.00      11.00 r
+  library setup time                                     -0.08      10.92
+  data required time                                                10.92
+  --------------------------------------------------------------------------
+  data required time                                                10.92
+  data arrival time                                                 -9.59
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.33
+
+
+  Startpoint: cordic/cal_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  cordic/cal_cnt_reg_0_/CLK (fdf2a3)       0.00       2.00 r
+  cordic/cal_cnt_reg_0_/Q (fdf2a3)         0.95       2.95 r
+  cordic/U208/Y (or2a6)                    0.44       3.39 r
+  cordic/U254/Y (clk1b6)                   0.37       3.76 f
+  cordic/U202/Y (and2c3)                   0.43       4.19 r
+  cordic/U201/Y (buf1a9)                   0.41       4.60 r
+  cordic/U336/Y (clk1b6)                   0.29       4.89 f
+  cordic/U140/Y (ao2i1)                    0.45       5.34 r
+  cordic/U622/Y (ao1d2)                    0.22       5.56 f
+  cordic/U623/Y (xor2a2)                   0.31       5.87 f
+  cordic/U626/Y (or2c1)                    0.34       6.21 r
+  cordic/U627/Y (inv1a1)                   0.15       6.36 f
+  cordic/U628/Y (oa1f3)                    0.26       6.62 r
+  cordic/U630/Y (ao1f2)                    0.15       6.77 f
+  cordic/U106/Y (oa1f3)                    0.34       7.11 r
+  cordic/U104/Y (ao1f3)                    0.19       7.30 f
+  cordic/U50/Y (oa1f3)                     0.35       7.64 r
+  cordic/U97/Y (ao1f3)                     0.19       7.83 f
+  cordic/U660/Y (oa1f3)                    0.40       8.23 r
+  cordic/U669/Y (ao1f6)                    0.16       8.40 f
+  cordic/U678/Y (oa1f6)                    0.25       8.65 r
+  cordic/U679/Y (ao1e6)                    0.13       8.78 f
+  cordic/U689/Y (oa1f6)                    0.25       9.03 r
+  cordic/U833/Y (xor2a2)                   0.23       9.26 r
+  cordic/U83/Y (oa1f3)                     0.06       9.32 f
+  cordic/U834/Y (inv1a1)                   0.28       9.59 r
+  cordic/xn_reg_14_/D (fdf2a3)             0.00       9.59 r
+  data arrival time                                   9.59
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  cordic/xn_reg_14_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.07      10.93
+  data required time                                 10.93
+  -----------------------------------------------------------
+  data required time                                 10.93
+  data arrival time                                  -9.59
+  -----------------------------------------------------------
+  slack (MET)                                         1.33
+
+
+  Startpoint: v_in_4[0] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  v_in_4[0] (in)                           0.00       6.00 f
+  U98/Y (inv1a1)                           0.45       6.45 r
+  U113/Y (inv1a3)                          0.24       6.70 f
+  calvn/v_in_4[0] (cal_vn)                 0.00       6.70 f
+  calvn/intadd_17_U4/CO (fa1a2)            0.41       7.11 f
+  calvn/intadd_17_U3/CO (fa1a2)            0.36       7.47 f
+  calvn/intadd_17_U2/S (fa1a2)             0.44       7.92 f
+  calvn/intadd_0_U9/CO (fa1a3)             0.46       8.38 f
+  calvn/U154/Y (or2c3)                     0.13       8.51 r
+  calvn/U156/Y (or3d3)                     0.26       8.76 f
+  calvn/U157/Y (or2c3)                     0.16       8.92 r
+  calvn/U159/Y (or3d3)                     0.17       9.09 f
+  calvn/intadd_0_U6/S (fa1a2)              0.51       9.60 r
+  calvn/SumXinReg_reg_5_/D (fdf2a9)        0.00       9.60 r
+  data arrival time                                   9.60
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/SumXinReg_reg_5_/CLK (fdf2a9)      0.00      11.00 r
+  library setup time                      -0.04      10.96
+  data required time                                 10.96
+  -----------------------------------------------------------
+  data required time                                 10.96
+  data arrival time                                  -9.60
+  -----------------------------------------------------------
+  slack (MET)                                         1.36
+
+
+  Startpoint: v_in_1[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_1_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 r
+  v_in_1[0] (in)                                          0.00       6.00 r
+  U116/Y (inv1a3)                                         0.13       6.13 f
+  U117/Y (inv1a3)                                         0.27       6.40 r
+  calvn/v_in_1[0] (cal_vn)                                0.00       6.40 r
+  calvn/U147/Y (oa1f3)                                    0.19       6.59 f
+  calvn/intadd_7_U8/CO (fa1a2)                            0.40       6.99 f
+  calvn/intadd_7_U7/CO (fa1a2)                            0.40       7.38 f
+  calvn/intadd_7_U6/CO (fa1a2)                            0.36       7.75 f
+  calvn/intadd_7_U5/CO (fa1a2)                            0.36       8.11 f
+  calvn/intadd_7_U4/CO (fa1a2)                            0.36       8.48 f
+  calvn/intadd_7_U3/CO (fa1a2)                            0.36       8.84 f
+  calvn/intadd_7_U2/S (fa1a2)                             0.44       9.28 r
+  calvn/U74/Y (inv1a1)                                    0.09       9.38 f
+  calvn/FloorWrapVn_1/din[10] (FloorAndWrap_6)            0.00       9.38 f
+  calvn/FloorWrapVn_1/U1/Y (clk1a3)                       0.16       9.54 f
+  calvn/FloorWrapVn_1/dout[7] (FloorAndWrap_6)            0.00       9.54 f
+  calvn/VnReg_1_reg_7_/D (fdf2a3)                         0.00       9.54 f
+  data arrival time                                                  9.54
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_1_reg_7_/CLK (fdf2a3)                       0.00      11.00 r
+  library setup time                                     -0.08      10.92
+  data required time                                                10.92
+  --------------------------------------------------------------------------
+  data required time                                                10.92
+  data arrival time                                                 -9.54
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.39
+
+
+  Startpoint: v_in_5[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_5_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 r
+  v_in_5[0] (in)                                          0.00       6.00 r
+  U97/Y (inv1a1)                                          0.20       6.20 f
+  U107/Y (inv1a3)                                         0.23       6.44 r
+  calvn/v_in_5[0] (cal_vn)                                0.00       6.44 r
+  calvn/U149/Y (oa1f3)                                    0.17       6.61 f
+  calvn/intadd_3_U8/CO (fa1a2)                            0.38       6.99 f
+  calvn/intadd_3_U7/CO (fa1a2)                            0.36       7.35 f
+  calvn/intadd_3_U6/CO (fa1a2)                            0.36       7.72 f
+  calvn/intadd_3_U5/CO (fa1a2)                            0.36       8.08 f
+  calvn/intadd_3_U4/CO (fa1a2)                            0.36       8.45 f
+  calvn/intadd_3_U3/CO (fa1a2)                            0.36       8.81 f
+  calvn/intadd_3_U2/S (fa1a1)                             0.45       9.26 r
+  calvn/U78/Y (inv1a1)                                    0.11       9.37 f
+  calvn/FloorWrapVn_5/din[10] (FloorAndWrap_2)            0.00       9.37 f
+  calvn/FloorWrapVn_5/U1/Y (clk1a3)                       0.17       9.53 f
+  calvn/FloorWrapVn_5/dout[7] (FloorAndWrap_2)            0.00       9.53 f
+  calvn/VnReg_5_reg_7_/D (fdf2a3)                         0.00       9.53 f
+  data arrival time                                                  9.53
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_5_reg_7_/CLK (fdf2a3)                       0.00      11.00 r
+  library setup time                                     -0.08      10.92
+  data required time                                                10.92
+  --------------------------------------------------------------------------
+  data required time                                                10.92
+  data arrival time                                                 -9.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.39
+
+
+  Startpoint: v_in_3[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_3_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 r
+  v_in_3[0] (in)                                          0.00       6.00 r
+  U100/Y (inv1a1)                                         0.20       6.20 f
+  U108/Y (inv1a3)                                         0.23       6.44 r
+  calvn/v_in_3[0] (cal_vn)                                0.00       6.44 r
+  calvn/U150/Y (oa1f3)                                    0.17       6.61 f
+  calvn/intadd_5_U8/CO (fa1a2)                            0.38       6.99 f
+  calvn/intadd_5_U7/CO (fa1a2)                            0.36       7.35 f
+  calvn/intadd_5_U6/CO (fa1a2)                            0.36       7.72 f
+  calvn/intadd_5_U5/CO (fa1a2)                            0.36       8.08 f
+  calvn/intadd_5_U4/CO (fa1a2)                            0.36       8.45 f
+  calvn/intadd_5_U3/CO (fa1a2)                            0.36       8.81 f
+  calvn/intadd_5_U2/S (fa1a1)                             0.45       9.26 r
+  calvn/U80/Y (inv1a1)                                    0.11       9.37 f
+  calvn/FloorWrapVn_3/din[10] (FloorAndWrap_4)            0.00       9.37 f
+  calvn/FloorWrapVn_3/U1/Y (clk1a3)                       0.17       9.53 f
+  calvn/FloorWrapVn_3/dout[7] (FloorAndWrap_4)            0.00       9.53 f
+  calvn/VnReg_3_reg_7_/D (fdf2a3)                         0.00       9.53 f
+  data arrival time                                                  9.53
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_3_reg_7_/CLK (fdf2a3)                       0.00      11.00 r
+  library setup time                                     -0.08      10.92
+  data required time                                                10.92
+  --------------------------------------------------------------------------
+  data required time                                                10.92
+  data arrival time                                                 -9.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.39
+
+
+  Startpoint: v_in_6[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_6_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 r
+  v_in_6[0] (in)                                          0.00       6.00 r
+  U111/Y (inv1a3)                                         0.13       6.13 f
+  U112/Y (inv1a3)                                         0.29       6.42 r
+  calvn/v_in_6[0] (cal_vn)                                0.00       6.42 r
+  calvn/U152/Y (oa1f3)                                    0.19       6.61 f
+  calvn/intadd_2_U8/CO (fa1a2)                            0.38       6.99 f
+  calvn/intadd_2_U7/CO (fa1a2)                            0.36       7.35 f
+  calvn/intadd_2_U6/CO (fa1a2)                            0.36       7.72 f
+  calvn/intadd_2_U5/CO (fa1a2)                            0.36       8.08 f
+  calvn/intadd_2_U4/CO (fa1a2)                            0.36       8.44 f
+  calvn/intadd_2_U3/CO (fa1a2)                            0.36       8.81 f
+  calvn/intadd_2_U2/S (fa1a2)                             0.44       9.25 r
+  calvn/U84/Y (inv1a1)                                    0.09       9.34 f
+  calvn/FloorWrapVn_6/din[10] (FloorAndWrap_1)            0.00       9.34 f
+  calvn/FloorWrapVn_6/U1/Y (clk1a3)                       0.16       9.50 f
+  calvn/FloorWrapVn_6/dout[7] (FloorAndWrap_1)            0.00       9.50 f
+  calvn/VnReg_6_reg_7_/D (fdf2a3)                         0.00       9.51 f
+  data arrival time                                                  9.51
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_6_reg_7_/CLK (fdf2a3)                       0.00      11.00 r
+  library setup time                                     -0.08      10.92
+  data required time                                                10.92
+  --------------------------------------------------------------------------
+  data required time                                                10.92
+  data arrival time                                                 -9.51
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.42
+
+
+  Startpoint: v_in_7[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_7_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 r
+  v_in_7[0] (in)                                          0.00       6.00 r
+  U109/Y (inv1a3)                                         0.13       6.13 f
+  U110/Y (inv1a3)                                         0.29       6.42 r
+  calvn/v_in_7[0] (cal_vn)                                0.00       6.42 r
+  calvn/U146/Y (oa1f3)                                    0.19       6.61 f
+  calvn/intadd_1_U8/CO (fa1a2)                            0.38       6.99 f
+  calvn/intadd_1_U7/CO (fa1a2)                            0.36       7.35 f
+  calvn/intadd_1_U6/CO (fa1a2)                            0.36       7.72 f
+  calvn/intadd_1_U5/CO (fa1a2)                            0.36       8.08 f
+  calvn/intadd_1_U4/CO (fa1a2)                            0.36       8.44 f
+  calvn/intadd_1_U3/CO (fa1a2)                            0.36       8.81 f
+  calvn/intadd_1_U2/S (fa1a2)                             0.44       9.25 r
+  calvn/U72/Y (inv1a1)                                    0.09       9.34 f
+  calvn/FloorWrapVn_7/din[10] (FloorAndWrap_0)            0.00       9.34 f
+  calvn/FloorWrapVn_7/U1/Y (clk1a3)                       0.16       9.50 f
+  calvn/FloorWrapVn_7/dout[7] (FloorAndWrap_0)            0.00       9.50 f
+  calvn/VnReg_7_reg_7_/D (fdf2a3)                         0.00       9.51 f
+  data arrival time                                                  9.51
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_7_reg_7_/CLK (fdf2a3)                       0.00      11.00 r
+  library setup time                                     -0.08      10.92
+  data required time                                                10.92
+  --------------------------------------------------------------------------
+  data required time                                                10.92
+  data arrival time                                                 -9.51
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.42
+
+
+  Startpoint: v_in_2[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_2_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 r
+  v_in_2[0] (in)                                          0.00       6.00 r
+  U114/Y (inv1a3)                                         0.13       6.13 f
+  U115/Y (inv1a3)                                         0.29       6.42 r
+  calvn/v_in_2[0] (cal_vn)                                0.00       6.42 r
+  calvn/U148/Y (oa1f3)                                    0.19       6.61 f
+  calvn/intadd_6_U8/CO (fa1a2)                            0.38       6.99 f
+  calvn/intadd_6_U7/CO (fa1a2)                            0.36       7.35 f
+  calvn/intadd_6_U6/CO (fa1a2)                            0.36       7.72 f
+  calvn/intadd_6_U5/CO (fa1a2)                            0.36       8.08 f
+  calvn/intadd_6_U4/CO (fa1a2)                            0.36       8.44 f
+  calvn/intadd_6_U3/CO (fa1a2)                            0.36       8.81 f
+  calvn/intadd_6_U2/S (fa1a2)                             0.44       9.25 r
+  calvn/U76/Y (inv1a1)                                    0.09       9.34 f
+  calvn/FloorWrapVn_2/din[10] (FloorAndWrap_5)            0.00       9.34 f
+  calvn/FloorWrapVn_2/U1/Y (clk1a3)                       0.16       9.50 f
+  calvn/FloorWrapVn_2/dout[7] (FloorAndWrap_5)            0.00       9.50 f
+  calvn/VnReg_2_reg_7_/D (fdf2a3)                         0.00       9.51 f
+  data arrival time                                                  9.51
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_2_reg_7_/CLK (fdf2a3)                       0.00      11.00 r
+  library setup time                                     -0.08      10.92
+  data required time                                                10.92
+  --------------------------------------------------------------------------
+  data required time                                                10.92
+  data arrival time                                                 -9.51
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.42
+
+
+  Startpoint: dot/mac_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_12_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  dotVn              5KGATES               ssc_core_slow
+  s_table            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a9)          0.00       2.00 r
+  dot/mac_cnt_reg_1_/Q (fdf2a9)            0.90       2.90 r
+  dot/U242/Y (and2c9)                      0.13       3.03 f
+  dot/U243/Y (buf1a15)                     0.23       3.25 f
+  dot/U253/Y (oa4f3)                       0.22       3.47 r
+  dot/U255/Y (oa1f3)                       0.13       3.61 f
+  dot/U150/Y (ao2a3)                       0.33       3.94 f
+  dot/table_1/din[0] (s_table)             0.00       3.94 f
+  dot/table_1/U159/Y (buf1a27)             0.22       4.17 f
+  dot/table_1/U126/Y (inv1a3)              0.31       4.47 r
+  dot/table_1/U121/Y (xor2a6)              0.29       4.77 f
+  dot/table_1/U47/Y (clk1b6)               0.21       4.97 r
+  dot/table_1/U112/Y (ao4f2)               0.16       5.14 f
+  dot/table_1/U423/Y (oa1f3)               0.20       5.34 r
+  dot/table_1/U425/Y (ao2i3)               0.23       5.56 f
+  dot/table_1/s1[2] (s_table)              0.00       5.56 f
+  dot/U145/CO (fa1a2)                      0.44       6.01 f
+  dot/U143/CO (fa1a2)                      0.42       6.43 f
+  dot/U142/CO (fa1a2)                      0.40       6.82 f
+  dot/U138/CO (fa1a2)                      0.37       7.19 f
+  dot/U263/CO (fa1a3)                      0.38       7.57 f
+  dot/U133/Y (or2c3)                       0.11       7.68 r
+  dot/U131/Y (or2c3)                       0.12       7.80 f
+  dot/U262/CO (fa1a3)                      0.36       8.16 f
+  dot/U261/CO (fa1a3)                      0.37       8.53 f
+  dot/U127/Y (ao1d2)                       0.14       8.67 r
+  dot/U126/Y (or2c3)                       0.15       8.82 f
+  dot/U125/Y (or2c3)                       0.12       8.94 r
+  dot/U124/Y (or2c3)                       0.12       9.06 f
+  dot/U121/S (fa1a2)                       0.47       9.53 r
+  dot/psum1_reg_12_/D (fdf2a3)             0.00       9.53 r
+  data arrival time                                   9.53
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  dot/psum1_reg_12_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.05      10.95
+  data required time                                 10.95
+  -----------------------------------------------------------
+  data required time                                 10.95
+  data arrival time                                  -9.53
+  -----------------------------------------------------------
+  slack (MET)                                         1.42
+
+
+  Startpoint: dot/psum1_reg_5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dotVn              5KGATES               ssc_core_slow
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_5_/CLK (fdf2a3)                           0.00       2.00 r
+  dot/psum1_reg_5_/Q (fdf2a3)                             0.70       2.70 f
+  dot/FloorWrapPsum1/din[3] (FloorAndWrap_8_1)            0.00       2.70 f
+  dot/FloorWrapPsum1/U16/Y (clk1a3)                       0.20       2.91 f
+  dot/FloorWrapPsum1/dout[3] (FloorAndWrap_8_1)           0.00       2.91 f
+  dot/psum_out1[3] (dotVn)                                0.00       2.91 f
+  cordic/x[3] (cordic_int)                                0.00       2.91 f
+  cordic/U258/Y (and2c1)                                  0.41       3.32 r
+  cordic/U260/Y (and2a1)                                  0.30       3.62 r
+  cordic/U263/Y (or3d3)                                   0.15       3.76 f
+  cordic/U266/Y (and2c3)                                  0.25       4.02 r
+  cordic/U199/Y (inv1a3)                                  0.09       4.11 f
+  cordic/U198/Y (or2c3)                                   0.19       4.29 r
+  cordic/U76/Y (or3d9)                                    0.40       4.69 f
+  cordic/U11/Y (or2c9)                                    0.48       5.18 r
+  cordic/U344/Y (clk1a3)                                  0.46       5.64 r
+  cordic/U345/Y (xor2a2)                                  0.25       5.89 r
+  cordic/U347/Y (or2c1)                                   0.29       6.18 f
+  cordic/U348/Y (ao1f2)                                   0.27       6.45 r
+  cordic/U379/Y (oa1f3)                                   0.24       6.69 f
+  cordic/U396/Y (ao1f3)                                   0.32       7.01 r
+  cordic/U51/Y (oa1f3)                                    0.28       7.29 f
+  cordic/U405/Y (ao1e6)                                   0.26       7.55 r
+  cordic/U415/Y (oa1f6)                                   0.17       7.72 f
+  cordic/U417/Y (ao1e6)                                   0.23       7.95 r
+  cordic/U426/Y (oa1f6)                                   0.17       8.13 f
+  cordic/U434/Y (ao1f6)                                   0.26       8.38 r
+  cordic/U445/Y (oa1f6)                                   0.18       8.56 f
+  cordic/U450/Y (ao1f6)                                   0.23       8.79 r
+  cordic/U778/Y (xor2b2)                                  0.26       9.05 f
+  cordic/U85/Y (oa1f2)                                    0.19       9.24 r
+  cordic/U779/Y (inv1a1)                                  0.15       9.39 f
+  cordic/yn_reg_15_/D (fdf2a3)                            0.00       9.39 f
+  data arrival time                                                  9.39
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  cordic/yn_reg_15_/CLK (fdf2a3)                          0.00      11.00 r
+  library setup time                                     -0.11      10.89
+  data required time                                                10.89
+  --------------------------------------------------------------------------
+  data required time                                                10.89
+  data arrival time                                                 -9.39
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.51
+
+
+  Startpoint: cordic/cal_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_13_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  cordic/cal_cnt_reg_0_/CLK (fdf2a3)       0.00       2.00 r
+  cordic/cal_cnt_reg_0_/Q (fdf2a3)         0.95       2.95 r
+  cordic/U208/Y (or2a6)                    0.44       3.39 r
+  cordic/U254/Y (clk1b6)                   0.37       3.76 f
+  cordic/U202/Y (and2c3)                   0.43       4.19 r
+  cordic/U201/Y (buf1a9)                   0.41       4.60 r
+  cordic/U336/Y (clk1b6)                   0.29       4.89 f
+  cordic/U140/Y (ao2i1)                    0.45       5.34 r
+  cordic/U622/Y (ao1d2)                    0.22       5.56 f
+  cordic/U623/Y (xor2a2)                   0.31       5.87 f
+  cordic/U626/Y (or2c1)                    0.34       6.21 r
+  cordic/U627/Y (inv1a1)                   0.15       6.36 f
+  cordic/U628/Y (oa1f3)                    0.26       6.62 r
+  cordic/U630/Y (ao1f2)                    0.15       6.77 f
+  cordic/U106/Y (oa1f3)                    0.34       7.11 r
+  cordic/U104/Y (ao1f3)                    0.19       7.30 f
+  cordic/U50/Y (oa1f3)                     0.35       7.64 r
+  cordic/U97/Y (ao1f3)                     0.19       7.83 f
+  cordic/U660/Y (oa1f3)                    0.40       8.23 r
+  cordic/U669/Y (ao1f6)                    0.16       8.40 f
+  cordic/U678/Y (oa1f6)                    0.25       8.65 r
+  cordic/U679/Y (ao1e6)                    0.13       8.78 f
+  cordic/U836/Y (xor2b2)                   0.29       9.06 r
+  cordic/U84/Y (oa1f3)                     0.06       9.13 f
+  cordic/U837/Y (inv1a1)                   0.28       9.40 r
+  cordic/xn_reg_13_/D (fdf2a3)             0.00       9.40 r
+  data arrival time                                   9.40
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  cordic/xn_reg_13_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.07      10.93
+  data required time                                 10.93
+  -----------------------------------------------------------
+  data required time                                 10.93
+  data arrival time                                  -9.40
+  -----------------------------------------------------------
+  slack (MET)                                         1.52
+
+
+  Startpoint: dot/mac_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  dotVn              5KGATES               ssc_core_slow
+  s_table            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a9)          0.00       2.00 r
+  dot/mac_cnt_reg_1_/Q (fdf2a9)            0.90       2.90 r
+  dot/U247/Y (inv1a3)                      0.11       3.01 f
+  dot/U248/Y (and2c6)                      0.14       3.15 r
+  dot/U249/Y (clk1b6)                      0.11       3.25 f
+  dot/U250/Y (inv1a15)                     0.19       3.44 r
+  dot/U285/Y (oa4f3)                       0.12       3.57 f
+  dot/U287/Y (oa1f3)                       0.19       3.76 r
+  dot/U288/Y (oa1f3)                       0.08       3.84 f
+  dot/U289/Y (ao1f3)                       0.13       3.96 r
+  dot/table_1/din[1] (s_table)             0.00       3.96 r
+  dot/table_1/U48/Y (buf1a15)              0.30       4.26 r
+  dot/table_1/U74/Y (and2c9)               0.10       4.36 f
+  dot/table_1/U244/CO (ha1a3)              0.25       4.62 f
+  dot/table_1/U243/CO (ha1a3)              0.25       4.86 f
+  dot/table_1/U242/CO (ha1a3)              0.25       5.11 f
+  dot/table_1/U234/S (ha1a3)               0.52       5.63 f
+  dot/table_1/U30/Y (inv1a1)               0.24       5.87 r
+  dot/table_1/U103/Y (ao1d2)               0.22       6.08 r
+  dot/table_1/U96/Y (or2c3)                0.13       6.21 f
+  dot/table_1/U374/CO (fa1a2)              0.36       6.57 f
+  dot/table_1/U388/CO (fa1a2)              0.36       6.94 f
+  dot/table_1/U400/CO (fa1a2)              0.36       7.30 f
+  dot/table_1/U288/CO (fa1a2)              0.36       7.67 f
+  dot/table_1/U315/S (fa1a2)               0.46       8.13 r
+  dot/table_1/U316/Y (inv1a3)              0.10       8.23 f
+  dot/table_1/U482/Y (ao2i3)               0.39       8.62 r
+  dot/table_1/s1[11] (s_table)             0.00       8.62 r
+  dot/U256/Y (xor2b2)                      0.35       8.97 f
+  dot/U257/Y (xor2b2)                      0.29       9.26 f
+  dot/psum1_reg_11_/D (fdf2a3)             0.00       9.26 f
+  data arrival time                                   9.26
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  dot/psum1_reg_11_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.10      10.90
+  data required time                                 10.90
+  -----------------------------------------------------------
+  data required time                                 10.90
+  data arrival time                                  -9.26
+  -----------------------------------------------------------
+  slack (MET)                                         1.64
+
+
+  Startpoint: v_in_0[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_0_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          10KGATES              ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_0[0] (in)                                          0.00       6.00 f
+  U102/Y (inv1a1)                                         0.45       6.45 r
+  U118/Y (inv1a3)                                         0.25       6.70 f
+  calvn/v_in_0[0] (cal_vn)                                0.00       6.70 f
+  calvn/U145/Y (oa1f3)                                    0.26       6.96 r
+  calvn/intadd_8_U8/CO (fa1a2)                            0.34       7.30 r
+  calvn/intadd_8_U7/CO (fa1a2)                            0.31       7.61 r
+  calvn/intadd_8_U6/CO (fa1a2)                            0.31       7.93 r
+  calvn/intadd_8_U5/CO (fa1a2)                            0.31       8.24 r
+  calvn/intadd_8_U4/CO (fa1a2)                            0.31       8.56 r
+  calvn/intadd_8_U3/S (fa1a2)                             0.39       8.95 f
+  calvn/U118/Y (inv1a1)                                   0.19       9.14 r
+  calvn/FloorWrapVn_0/din[9] (FloorAndWrap_7)             0.00       9.14 r
+  calvn/FloorWrapVn_0/U2/Y (clk1a3)                       0.18       9.32 r
+  calvn/FloorWrapVn_0/dout[6] (FloorAndWrap_7)            0.00       9.32 r
+  calvn/VnReg_0_reg_6_/D (fdf2a3)                         0.00       9.32 r
+  data arrival time                                                  9.32
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_0_reg_6_/CLK (fdf2a3)                       0.00      11.00 r
+  library setup time                                     -0.04      10.96
+  data required time                                                10.96
+  --------------------------------------------------------------------------
+  data required time                                                10.96
+  data arrival time                                                 -9.32
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.65
+
+
+1

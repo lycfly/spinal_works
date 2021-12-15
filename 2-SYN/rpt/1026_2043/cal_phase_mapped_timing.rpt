@@ -1,0 +1,249 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Oct 26 20:44:41 2021
+****************************************
+
+Operating Conditions: ssg0p81v125c   Library: tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: v_in_1[2] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       2.00       2.00
+  input external delay                                              4.00       6.00 f
+  v_in_1[2] (in)                                          1.00      0.00       6.00 f
+  v_in_1[2] (net)                               1                   0.00       6.00 f
+  calvn/v_in_1[2] (cal_vn)                                          0.00       6.00 f
+  calvn/v_in_1[2] (net)                                             0.00       6.00 f
+  calvn/U134/ZN (INVD1BWP7T35P140)                        0.22      0.19       6.19 r
+  calvn/intadd_7_A_1_ (net)                     3                   0.00       6.19 r
+  calvn/U148/ZN (NR2D1BWP7T35P140)                        0.06      0.04       6.23 f
+  calvn/intadd_11_CI (net)                      2                   0.00       6.23 f
+  calvn/intadd_11_U5/S (FA1D1BWP7T35P140)                 0.03      0.09       6.32 f    mo 
+  calvn/intadd_11_SUM_0_ (net)                  1                   0.00       6.32 f
+  calvn/intadd_13_U3/S (FA1D1BWP7T35P140)                 0.03      0.11       6.43 r    mo 
+  calvn/intadd_13_SUM_2_ (net)                  1                   0.00       6.43 r
+  calvn/intadd_15_U2/S (FA1D1BWP7T35P140)                 0.03      0.09       6.52 f    mo 
+  calvn/intadd_0_A_3_ (net)                     1                   0.00       6.52 f
+  calvn/intadd_0_U8/CO (FA1D1BWP7T35P140)                 0.02      0.07       6.58 f    mo 
+  calvn/intadd_0_n7 (net)                       1                   0.00       6.58 f
+  calvn/intadd_0_U7/CO (FA1D1BWP7T35P140)                 0.02      0.06       6.64 f    mo 
+  calvn/intadd_0_n6 (net)                       1                   0.00       6.64 f
+  calvn/intadd_0_U6/CO (FA1D1BWP7T35P140)                 0.02      0.06       6.70 f    mo 
+  calvn/intadd_0_n5 (net)                       1                   0.00       6.70 f
+  calvn/intadd_0_U5/CO (FA1D1BWP7T35P140)                 0.02      0.06       6.75 f    mo 
+  calvn/intadd_0_n4 (net)                       1                   0.00       6.75 f
+  calvn/intadd_0_U4/CO (FA1D1BWP7T35P140)                 0.02      0.06       6.81 f    mo 
+  calvn/intadd_0_n3 (net)                       1                   0.00       6.81 f
+  calvn/intadd_0_U3/CO (FA1D1BWP7T35P140)                 0.02      0.06       6.86 f    mo 
+  calvn/intadd_0_n2 (net)                       1                   0.00       6.86 f
+  calvn/intadd_0_U2/S (FA1D1BWP7T35P140)                  0.02      0.09       6.95 r    mo 
+  calvn/SumXin[9] (net)                         1                   0.00       6.95 r
+  calvn/SumXinReg_reg_9_/D (DFCNQD1BWP7T35P140)           0.02      0.00       6.95 r
+  data arrival time                                                            6.95
+
+  clock clk (rise edge)                                            10.00      10.00
+  clock network delay (ideal)                                       2.00      12.00
+  clock uncertainty                                                -1.00      11.00
+  calvn/SumXinReg_reg_9_/CP (DFCNQD1BWP7T35P140)                    0.00      11.00 r
+  library setup time                                               -0.03      10.97
+  data required time                                                          10.97
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                          10.97
+  data arrival time                                                           -6.95
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  4.02
+
+
+  Startpoint: cordic/res_rg_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: res[1] (output port clocked by clk)
+  Path Group: OUTPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cordic_int_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       2.00       2.00
+  cordic/res_rg_reg_1_/CP (DFCNQD1BWP7T35P140)            1.00      0.00       2.00 r
+  cordic/res_rg_reg_1_/Q (DFCNQD1BWP7T35P140)             0.44      0.37       2.37 r
+  cordic/res[1] (net)                           2                   0.00       2.37 r
+  cordic/res[1] (cordic_int)                                        0.00       2.37 r
+  res[1] (net)                                                      0.00       2.37 r
+  res[1] (out)                                            0.44      0.00       2.37 r
+  data arrival time                                                            2.37
+
+  clock clk (rise edge)                                            10.00      10.00
+  clock network delay (ideal)                                       2.00      12.00
+  clock uncertainty                                                -1.00      11.00
+  output external delay                                            -6.00       5.00
+  data required time                                                           5.00
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           5.00
+  data arrival time                                                           -2.37
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.63
+
+
+  Startpoint: dot/psum1_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_20_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       2.00       2.00
+  dot/psum1_reg_3_/CP (DFCNQD1BWP7T35P140)                1.00      0.00       2.00 r
+  dot/psum1_reg_3_/Q (DFCNQD1BWP7T35P140)                 0.01      0.14       2.14 f
+  dot/n_zz_5[2] (net)                           2                   0.00       2.14 f
+  dot/FloorWrap1/din[2] (FloorAndWrap_8_1)                          0.00       2.14 f
+  dot/FloorWrap1/din[2] (net)                                       0.00       2.14 f
+  dot/FloorWrap1/U13/Z (DEL025D1BWP7T35P140)              0.02      0.03       2.17 f
+  dot/FloorWrap1/dout[2] (net)                  3                   0.00       2.17 f
+  dot/FloorWrap1/dout[2] (FloorAndWrap_8_1)                         0.00       2.17 f
+  dot/psum_out1[2] (net)                                            0.00       2.17 f
+  dot/psum_out1[2] (dotVn)                                          0.00       2.17 f
+  dot_psum_out1[2] (net)                                            0.00       2.17 f
+  cordic/x[2] (cordic_int)                                          0.00       2.17 f
+  cordic/x[2] (net)                                                 0.00       2.17 f
+  cordic/U182/ZN (NR3OPTPAD1BWP7T35P140)                  0.03      0.03       2.19 r
+  cordic/n3 (net)                               1                   0.00       2.19 r
+  cordic/U183/ZN (ND3D1BWP7T35P140)                       0.03      0.03       2.22 f
+  cordic/n6 (net)                               1                   0.00       2.22 f
+  cordic/U184/ZN (NR2D1BWP7T35P140)                       0.02      0.02       2.24 r
+  cordic/n9 (net)                               1                   0.00       2.24 r
+  cordic/U79/ZN (ND3D1BWP7T35P140)                        0.05      0.04       2.27 f
+  cordic/n77 (net)                              3                   0.00       2.27 f
+  cordic/U187/ZN (NR3OPTPAD1BWP7T35P140)                  0.03      0.03       2.31 r
+  cordic/n18 (net)                              1                   0.00       2.31 r
+  cordic/U75/ZN (ND3D1BWP7T35P140)                        0.04      0.03       2.34 f
+  cordic/n22 (net)                              2                   0.00       2.34 f
+  cordic/U72/ZN (ND2D1BWP7T35P140)                        0.05      0.04       2.38 r
+  cordic/n177 (net)                            11                   0.00       2.38 r
+  cordic/U68/ZN (IND2D1BWP7T35P140)                       0.09      0.07       2.45 f
+  cordic/n206 (net)                            11                   0.00       2.45 f
+  cordic/U60/Z (DEL025D1BWP7T35P140)                      0.07      0.08       2.53 f
+  cordic/n1 (net)                              13                   0.00       2.53 f
+  cordic/U15/Z (XOR2D1BWP7T35P140)                        0.05      0.06       2.58 f
+  cordic/DP_OP_76J1_129_9700_n48 (net)          1                   0.00       2.58 f
+  cordic/DP_OP_76J1_129_9700_U23/CO (FA1D1BWP7T35P140)     0.03     0.06       2.64 f    mo 
+  cordic/DP_OP_76J1_129_9700_n22 (net)          1                   0.00       2.64 f
+  cordic/DP_OP_76J1_129_9700_U22/CO (FA1D1BWP7T35P140)     0.03     0.06       2.70 f    mo 
+  cordic/DP_OP_76J1_129_9700_n21 (net)          1                   0.00       2.70 f
+  cordic/DP_OP_76J1_129_9700_U21/CO (FA1D1BWP7T35P140)     0.03     0.06       2.76 f    mo 
+  cordic/DP_OP_76J1_129_9700_n20 (net)          1                   0.00       2.76 f
+  cordic/DP_OP_76J1_129_9700_U20/CO (FA1D1BWP7T35P140)     0.03     0.06       2.81 f    mo 
+  cordic/DP_OP_76J1_129_9700_n19 (net)          1                   0.00       2.81 f
+  cordic/DP_OP_76J1_129_9700_U19/CO (FA1D1BWP7T35P140)     0.03     0.06       2.87 f    mo 
+  cordic/DP_OP_76J1_129_9700_n18 (net)          1                   0.00       2.87 f
+  cordic/DP_OP_76J1_129_9700_U18/CO (FA1D1BWP7T35P140)     0.03     0.06       2.92 f    mo 
+  cordic/DP_OP_76J1_129_9700_n17 (net)          1                   0.00       2.92 f
+  cordic/DP_OP_76J1_129_9700_U17/CO (FA1D1BWP7T35P140)     0.03     0.06       2.98 f    mo 
+  cordic/DP_OP_76J1_129_9700_n16 (net)          1                   0.00       2.98 f
+  cordic/DP_OP_76J1_129_9700_U16/CO (FA1D1BWP7T35P140)     0.03     0.06       3.03 f    mo 
+  cordic/DP_OP_76J1_129_9700_n15 (net)          1                   0.00       3.03 f
+  cordic/DP_OP_76J1_129_9700_U15/CO (FA1D1BWP7T35P140)     0.03     0.06       3.09 f    mo 
+  cordic/DP_OP_76J1_129_9700_n14 (net)          1                   0.00       3.09 f
+  cordic/DP_OP_76J1_129_9700_U14/CO (FA1D1BWP7T35P140)     0.03     0.06       3.14 f    mo 
+  cordic/DP_OP_76J1_129_9700_n13 (net)          1                   0.00       3.14 f
+  cordic/DP_OP_76J1_129_9700_U13/CO (FA1D1BWP7T35P140)     0.03     0.06       3.20 f    mo 
+  cordic/DP_OP_76J1_129_9700_n12 (net)          1                   0.00       3.20 f
+  cordic/DP_OP_76J1_129_9700_U12/CO (FA1D1BWP7T35P140)     0.03     0.06       3.25 f    mo 
+  cordic/DP_OP_76J1_129_9700_n11 (net)          1                   0.00       3.25 f
+  cordic/DP_OP_76J1_129_9700_U11/CO (FA1D1BWP7T35P140)     0.03     0.06       3.31 f    mo 
+  cordic/DP_OP_76J1_129_9700_n10 (net)          1                   0.00       3.31 f
+  cordic/DP_OP_76J1_129_9700_U10/CO (FA1D1BWP7T35P140)     0.03     0.06       3.36 f    mo 
+  cordic/DP_OP_76J1_129_9700_n9 (net)           1                   0.00       3.36 f
+  cordic/DP_OP_76J1_129_9700_U9/CO (FA1D1BWP7T35P140)     0.03      0.06       3.42 f    mo 
+  cordic/DP_OP_76J1_129_9700_n8 (net)           1                   0.00       3.42 f
+  cordic/DP_OP_76J1_129_9700_U8/CO (FA1D1BWP7T35P140)     0.03      0.06       3.47 f    mo 
+  cordic/DP_OP_76J1_129_9700_n7 (net)           1                   0.00       3.47 f
+  cordic/DP_OP_76J1_129_9700_U7/CO (FA1D1BWP7T35P140)     0.03      0.06       3.53 f    mo 
+  cordic/DP_OP_76J1_129_9700_n6 (net)           1                   0.00       3.53 f
+  cordic/DP_OP_76J1_129_9700_U6/CO (FA1D1BWP7T35P140)     0.03      0.06       3.58 f    mo 
+  cordic/DP_OP_76J1_129_9700_n5 (net)           1                   0.00       3.58 f
+  cordic/DP_OP_76J1_129_9700_U5/CO (FA1D1BWP7T35P140)     0.03      0.06       3.64 f    mo 
+  cordic/DP_OP_76J1_129_9700_n4 (net)           1                   0.00       3.64 f
+  cordic/DP_OP_76J1_129_9700_U4/CO (FA1D1BWP7T35P140)     0.03      0.06       3.69 f    mo 
+  cordic/DP_OP_76J1_129_9700_n3 (net)           1                   0.00       3.69 f
+  cordic/DP_OP_76J1_129_9700_U3/S (FA1D1BWP7T35P140)      0.02      0.09       3.78 r    mo 
+  cordic/C24_DATA2_20 (net)                     1                   0.00       3.78 r
+  cordic/U211/Z (AN2D1BWP7T35P140)                        0.01      0.03       3.80 r
+  cordic/N286 (net)                             1                   0.00       3.80 r
+  cordic/xn_reg_20_/D (DFCNQD1BWP7T35P140)                0.01      0.00       3.80 r
+  data arrival time                                                            3.80
+
+  clock clk (rise edge)                                            10.00      10.00
+  clock network delay (ideal)                                       2.00      12.00
+  clock uncertainty                                                -1.00      11.00
+  cordic/xn_reg_20_/CP (DFCNQD1BWP7T35P140)                         0.00      11.00 r
+  library setup time                                               -0.03      10.97
+  data required time                                                          10.97
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                          10.97
+  data arrival time                                                           -3.80
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  7.17
+
+
+1

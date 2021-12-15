@@ -1,0 +1,5 @@
+// TetraMAX Setup File
+// Read compressed TSMC Verilog library:
+
+   read netlist \
+      ../Technology/TSMC/verilog/core.gz

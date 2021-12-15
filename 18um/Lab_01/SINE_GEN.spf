@@ -1,0 +1,75 @@
+STIL 1.0;
+Header {
+   Title "DFT Compiler 2000.11 STIL output";
+   Date "Sun Jun 10 12:30:07 2001";
+   History {
+   }
+}
+Signals {
+   "CLOCK" In; "test_se" In; "test_si" In;
+   "SINE[0]" Out; "SINE[1]" Out; "SINE[2]" Out; "SINE[3]" Out; 
+   "test_so" Out;
+} 
+SignalGroups {
+   "all_inputs"   '"CLOCK" + "test_se" + "test_si"'; // #signals=3
+   "all_outputs"   '"SINE[0]" + "SINE[1]" + "SINE[2]" + "SINE[3]" + 
+   "test_so"'; // #signals=5
+   "all_ports"   '"all_inputs" + "all_outputs"'; // #signals=8
+   "_pi"   '"all_inputs"'; // #signals=3
+   "_po"   '"all_outputs"'; // #signals=5
+} 
+ScanStructures {
+   ScanChain "c0" {
+      ScanLength 5;
+      ScanIn "test_si";
+      ScanOut "test_so";
+   } 
+} 
+Timing {
+   WaveformTable "_default_WFT_" {
+      Period '100ns';
+      Waveforms {
+         "all_inputs" { 0 { '0ns' D; } }
+         "all_inputs" { 1 { '0ns' U; } }
+         "all_inputs" { Z { '0ns' Z; } }
+         "all_outputs" { X { '0ns' X; } }
+         "all_outputs" { H { '0ns' X; '40ns' H; } }
+         "all_outputs" { T { '0ns' X; '40ns' T; } }
+         "all_outputs" { L { '0ns' X; '40ns' L; } }
+         "CLOCK" { P { '0ns' D; '45ns' U; '55ns' D; } }
+      }
+   }
+} 
+PatternBurst "__burst__" {
+   "__pattern__" {
+   }
+} 
+PatternExec {
+   Timing "";
+   PatternBurst "__burst__";
+} 
+Procedures {
+   "load_unload" {
+      Shift { 
+         W "_default_WFT_";
+         V {  "CLOCK"=P; "test_se"=1; "_so"=#; "_si"=#; } 
+      }
+   }
+   "capture" {
+      W "_default_WFT_";
+      V { "_pi"=\r3 #; "_po"=\r5 #; }
+   }
+   "capture_CLOCK" {
+      W "_default_WFT_";
+      "forcePI": V { "_pi"=\r3 #; }
+      "measurePO": V { "_po"=\r5 #; }
+      "pulse": V { "CLOCK"=P; }
+   }
+} 
+MacroDefs {
+   "test_setup" {
+      W "_default_WFT_";
+      V {  "CLOCK"=0; } 
+      V {  "CLOCK"=0; } 
+   }
+} 

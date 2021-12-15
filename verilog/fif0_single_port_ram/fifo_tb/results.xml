@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1639293925" />
+    <testcase name="run_test" classname="sync_fifo_tb" file="/mnt/mydata/spinal_works/verilog/fif0_single_port_ram/fifo_tb/sync_fifo_tb.py" lineno="79" time="27.81269073486328" sim_time_ns="1000120.001" ratio_time="35959.12421901513" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,128 @@
+STIL 1.0 {
+   Design P2000.9;
+}
+Header {
+   Title "  TetraMAX (TM)  2000.11-i001115_023115 STIL output";
+   Date "Sun Jun 10 10:50:27 2001";
+   Source "DFT Compiler 2000.11 STIL output";
+   History {
+      Ann {*Mon May 21 13:39:29 2001*}
+      Ann {*     Uncollapsed Stuck Fault Summary Report *}
+      Ann {* ----------------------------------------------- *}
+      Ann {* fault class                     code   #faults *}
+      Ann {* ------------------------------  ----  --------- *}
+      Ann {* Detected                         DT          1 *}
+      Ann {*   detected_by_simulation         DS         (1) *}
+      Ann {* Possibly detected                PT          0 *}
+      Ann {* Undetectable                     UD          0 *}
+      Ann {* ATPG untestable                  AU          0 *}
+      Ann {* Not detected                     ND          0 *}
+      Ann {* ----------------------------------------------- *}
+      Ann {* total faults                                 1 *}
+      Ann {* test coverage                           100.00% *}
+      Ann {* ----------------------------------------------- *}
+      Ann {*  *}
+      Ann {*            Pattern Summary Report *}
+      Ann {* ----------------------------------------------- *}
+      Ann {* #internal patterns                           1 *}
+      Ann {*     #basic_scan patterns                     1 *}
+      Ann {* ----------------------------------------------- *}
+      Ann {*  *}
+      Ann {* rule  severity  #fails  description *}
+      Ann {* ----  --------  ------  --------------------------------- *}
+      Ann {* B8    warning        1  unconnected module input pin *}
+      Ann {* B9    warning        2  undriven module internal net *}
+      Ann {* B10   warning        6  unconnected module internal net *}
+      Ann {*  *}
+      Ann {* clock_name        off  usage *}
+      Ann {* ----------------  ---  -------------------------- *}
+      Ann {* /CLOCK             0   master shift  *}
+      Ann {*  *}
+      Ann {* There are no constraint ports *}
+      Ann {* There are no equivalent pins *}
+      Ann {* There are no net connections *}
+   }
+}
+Signals {
+   "CLOCK" In; "test_si" In { ScanIn; } "test_se" In; "SINE[3]" Out; "SINE[2]" Out;
+   "SINE[1]" Out; "SINE[0]" Out; "test_so" Out { ScanOut; }
+}
+SignalGroups {
+   "all_inputs" = '"CLOCK" + "test_se" + "test_si"'; // #signals=3
+   "_pi" = '"all_inputs"'; // #signals=3
+   "all_outputs" = '"SINE[0]" + "SINE[1]" + "SINE[2]" + "SINE[3]" + "test_so"'; // #signals=5
+   "all_ports" = '"all_inputs" + "all_outputs"'; // #signals=8
+   "_so" = '"test_so"' { ScanOut; } // #signals=1
+   "_po" = '"all_outputs"'; // #signals=5
+   "_si" = '"test_si"' { ScanIn; } // #signals=1
+}
+ScanStructures {
+   ScanChain "c0" {
+      ScanLength 5;
+      ScanIn "test_si";
+      ScanOut "test_so";
+      ScanInversion 0;
+      ScanCells "SINE_GEN.\ANGLE_reg[0] " "SINE_GEN.\ANGLE_reg[1] " "SINE_GEN.\ANGLE_reg[2] "
+      "SINE_GEN.\ANGLE_reg[3] " "SINE_GEN.\ANGLE_reg[4] " ;
+   }
+}
+Timing {
+   WaveformTable "_default_WFT_" {
+      Period '100ns';
+      Waveforms {
+         "all_inputs" { 0 { '0ns' D; } }
+         "all_inputs" { 1 { '0ns' U; } }
+         "all_inputs" { Z { '0ns' Z; } }
+         "all_outputs" { X { '0ns' X; } }
+         "all_outputs" { H { '0ns' X; '40ns' H; } }
+         "all_outputs" { L { '0ns' X; '40ns' L; } }
+         "all_outputs" { T { '0ns' X; '40ns' T; } }
+         "CLOCK" { P { '0ns' D; '45ns' U; '55ns' D; } }
+      }
+   }
+}
+PatternBurst "__burst__" { PatList {
+   "__pattern__" {
+   }
+}}
+PatternExec {
+   PatternBurst "__burst__";
+}
+Procedures {
+   "load_unload" {
+      W "_default_WFT_";
+      Shift {          W "_default_WFT_";
+         V { "CLOCK"=P; "test_se"=1; "_so"=#; "_si"=#; }
+      }
+   }
+   "capture" {
+      W "_default_WFT_";
+      V { "_pi"=###; "_po"=#####; }
+   }
+   "capture_CLOCK" {
+      W "_default_WFT_";
+      "forcePI": V { "_pi"=###; }
+      "measurePO": V { "_po"=#####; }
+      "pulse": V { "CLOCK"=P; }
+   }
+}
+MacroDefs {
+   "test_setup" {
+      W "_default_WFT_";
+      V { "CLOCK"=0; }
+      V { "CLOCK"=0; }
+   }
+}
+Pattern "__pattern__" {
+   W "_default_WFT_";
+   "precondition all Signals": C { "_pi"=000; "_po"=\j XXXXX; }
+   Macro "test_setup";
+   "chain_test": Call "load_unload" { 
+      "test_si"=\r4 0011 ; "test_so"=XXXXXLLHHLLHHLLH; }
+   "pattern 0": Call "load_unload" { 
+      "test_si"=10100; }
+   Call "capture" { 
+      "_pi"=001; "_po"=LLHLH; }
+   "end 0 unload": Call "load_unload" { 
+      "test_so"=HLHLL; }
+}

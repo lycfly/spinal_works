@@ -1,0 +1,207 @@
+remove_design -designs
+1
+read CLOCK1.db
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/CLOCK1.db'
+Current design is now '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/CLOCK1.db:CLOCK1'
+{"CLOCK1", "CREG", "EREG", "DREG", "BREG", "AREG", "CLOCK_GEN"}
+current_design CLOCK1
+Current design is 'CLOCK1'.
+{"CLOCK1"}
+
+check_test
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/Lib/workshop_lib.db'
+Loading db file '/remote/release/1998.02/libraries/syn/gtech.db'
+Loading db file '/remote/release/1998.02/libraries/syn/standard.sldb'
+  Loading target library 'workshop_lib'
+Warning: Multibit library cell 'LD1X4P' will not be used in multibit optimization. (OPT-918)
+Warning: Multibit library cell 'LD1X4' will not be used in multibit optimization. (OPT-918)
+  Loading design 'CLOCK1'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk (45.0,55.0). (TEST-260)
+Warning: Normal mode clock pin CP of cell breg/br_reg[0] (FD1) is uncontrollable. (TEST-169)
+Information: The network contains: breg/br_reg[0]/CP, clk_inst/INT_CLK_reg/Q. (TEST-281)
+Information: There are 7 other pins with the same violation. (TEST-170)
+Warning: Normal mode clock pin CP of cell dreg/dr_reg[0] (FD1) is uncontrollable. (TEST-169)
+Information: The network contains: dreg/dr_reg[0]/CP, u20/Z, u20/A, clk_inst/INT_CLK_reg/Q. (TEST-281)
+Information: There are 7 other pins with the same violation. (TEST-170)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk...
+  ...simulating capture clock falling edge at port clk...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk. (TEST-262)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 16
+**************************************************
+
+PROTOCOL VIOLATIONS
+     16 Uncontrollable clock violations (TEST-169)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  16 out of 27 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+   *  16 cells are black boxes
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  11 cells are valid scan cells
+
+1
+create_test_patterns
+  Loading design 'CLOCK1'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Building test generation network
+Information: Faults on unused cell outputs are not considered, e.g. pin QN of cell clk_inst/COUNT_reg[0] (FD1). (TEST-200)
+Warning: Design has no scan path.  Generated vectors will not be saved. (UIT-8)
+
+  Combinational Test Pattern Generation starts:
+
+    Start random pattern generation...
+
+       33.97% faults processed ; cumulative fault coverage =  33.97%
+       34.29% faults processed ; cumulative fault coverage =  34.29%
+       34.62% faults processed ; cumulative fault coverage =  34.62%
+
+    ...End random pattern generation
+
+    Start deterministic pattern generation...
+
+
+    ...End deterministic pattern generation
+
+
+                                Non-collapsed     Collapsed
+    No. of detected faults      192               108
+    No. of abandoned faults     0                 0
+    No. of tied faults          0                 0
+    No. of redundant faults     0                 0
+    No. of untested faults      288               204
+    Total no. of faults         480               312
+    Fault coverage              40.00             34.62
+
+    No. of test patterns         12
+
+    Test Generation Time (CPU)  0.00 sec
+
+    Start compaction...
+
+    ...End compaction
+
+    No. of compacted patterns    10
+
+    Compaction Time (CPU)       0.00 sec
+...Writing test program CLOCK1 (without vectors) to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_4/CLOCK1.vdb
+1
+
+remove_design -designs
+Removing file 'CLOCK1.db'
+         design 'CLOCK1'
+         design 'CREG'
+         design 'EREG'
+         design 'DREG'
+         design 'BREG'
+         design 'AREG'
+         design 'CLOCK_GEN'
+1
+read CLOCK_DFT.db
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/CLOCK_DFT.db'
+Current design is now '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/CLOCK_DFT.db:CLOCK_DFT'
+{"CLOCK_DFT", "CREG", "EREG", "DREG", "BREG", "AREG", "CLOCK_GEN"}
+current_design CLOCK_DFT
+Current design is 'CLOCK_DFT'.
+{"CLOCK_DFT"}
+
+report_test -assertions
+ 
+****************************************
+Report : test
+          -assertions
+Design : CLOCK_DFT
+Version: 1998.02
+Date   : Sat Aug 29 18:19:44 1998
+****************************************
+
+Assertions:
+
+  CLOCK_DFT:
+      tm port held to 1
+
+1
+check_test
+  Loading design 'CLOCK_DFT'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk (45.0,55.0). (TEST-260)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk...
+  ...simulating capture clock falling edge at port clk...
+Information: Clock port clk captures data on both edges. (TEST-135)
+Warning: Pin D of cell dreg/dr_reg[3] (FD1) cannot capture reliably. (TEST-478)
+Information: Cell breg/br_reg[3] launches response data from pin QN at rising edge of clock port clk (pin CP) at time 45.0. (TEST-472)
+Information: Cell dreg/dr_reg[3] captures data on pin D at falling edge of clock port clk (pin CP) at time 55.0. (TEST-473)
+Information: There is a path from breg/br_reg[3] to dreg/dr_reg[3]. (TEST-474)
+Information: The path contains: breg/br_reg[3]/QN, u42/B, u42/Z, u27/B, u27/Z, dreg/dr_reg[3]/D. (TEST-282)
+Information: There are 3 other pins with the same violation. (TEST-170)
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk. (TEST-262)
+Warning: Data can not be captured into cell dreg/dr_reg[0] (FD1). (TEST-310)
+Information: There are 3 other cells with the same violation. (TEST-171)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 8
+**************************************************
+
+CAPTURE VIOLATIONS
+      4 Unreliable capture (data pin) violations (TEST-478)
+      4 Cell does not capture violations (TEST-310)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  4 out of 27 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+   *   4 cells have parallel capture violations
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  23 cells are valid scan cells
+
+1

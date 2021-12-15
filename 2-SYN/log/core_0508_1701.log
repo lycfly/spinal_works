@@ -1,0 +1,143 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version M-2016.12-SP2 for linux64 - Feb 23, 2017 
+
+                    Copyright (c) 1988 - 2017 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/soc/luyc18/.synopsys_dv_prefs.tcl
+set TOP_MODULE   oct_top
+oct_top
+#set TOP_MODULE  tst
+set compile_enable_register_merging    true
+true
+set compile_seqmap_propagate_constants true
+true
+set verilogout_no_tri   "true"
+true
+set verilogout_equation "false"
+false
+set mv_default_level_shifter_voltage_range_infinity true
+true
+# subset file enable 
+set SUBSET_FLAG 1      
+1
+#set SETUP_FILE "./scripts/dc_setup.tcl"
+set SETUP_FILE "./scripts/dc_setup_subset.tcl"
+./scripts/dc_setup_subset.tcl
+set FILE_LIST "./flist.v"
+./flist.v
+set CONSTRAINT "./scripts/constraint_core.tcl"
+./scripts/constraint_core.tcl
+set SUBSET_FILE "./scripts/set_target_library_subset.tcl"
+./scripts/set_target_library_subset.tcl
+source -e -v $SETUP_FILE
+define_design_lib work -path ./elab
+1
+history keep 500
+500
+set enable_page_mode false
+false
+set sh_enable_page_mode false
+false
+set compile_seqmap_identify_shift_registers false
+false
+set compile_seqmap_identify_shift_registers_with_synchronous_logic false
+false
+set timing_enable_multiple_clocks_per_reg true
+true
+set lib_path "/projects/soc/TECHLIB/TSMC/28nm/T28/tcbn28hpcplusbwp7t35p140_180b/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp7t35p140_180a 							/projects/soc/TECHLIB/TSMC/28nm/T28/tcbn28hpcplusbwp7t40p140ehvt_170a/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp7t40p140ehvt_170a               /home/soc/lumy17/2020-03-29_debug/bcwj/bc_0413/lib_setup_KWS/db/std/wcl_ud 				  		/home/soc/wucj/2020-01-KWS_AVS_v1-Backend/lib_setup/db/pmk/wcl_ud               /home/soc/wucj/2020-11-Graduation/0-lib_setup/7t30p_hvt 							/home/soc/wucj/2020-11-Graduation/0-lib_setup/7t35p_svt 							/home/soc/wucj/2020-11-Graduation/0-lib_setup/7t40p_ehvt               /home/soc/luyc18/1_On_chip_learn-v2/2-SYN/sram_libs
+              "
+/projects/soc/TECHLIB/TSMC/28nm/T28/tcbn28hpcplusbwp7t35p140_180b/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp7t35p140_180a 							/projects/soc/TECHLIB/TSMC/28nm/T28/tcbn28hpcplusbwp7t40p140ehvt_170a/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp7t40p140ehvt_170a               /home/soc/lumy17/2020-03-29_debug/bcwj/bc_0413/lib_setup_KWS/db/std/wcl_ud 				  		/home/soc/wucj/2020-01-KWS_AVS_v1-Backend/lib_setup/db/pmk/wcl_ud               /home/soc/wucj/2020-11-Graduation/0-lib_setup/7t30p_hvt 							/home/soc/wucj/2020-11-Graduation/0-lib_setup/7t35p_svt 							/home/soc/wucj/2020-11-Graduation/0-lib_setup/7t40p_ehvt               /home/soc/luyc18/1_On_chip_learn-v2/2-SYN/sram_libs
+              
+set search_path       ". $lib_path"
+. /projects/soc/TECHLIB/TSMC/28nm/T28/tcbn28hpcplusbwp7t35p140_180b/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp7t35p140_180a        /projects/soc/TECHLIB/TSMC/28nm/T28/tcbn28hpcplusbwp7t40p140ehvt_170a/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp7t40p140ehvt_170a               /home/soc/lumy17/2020-03-29_debug/bcwj/bc_0413/lib_setup_KWS/db/std/wcl_ud         /home/soc/wucj/2020-01-KWS_AVS_v1-Backend/lib_setup/db/pmk/wcl_ud               /home/soc/wucj/2020-11-Graduation/0-lib_setup/7t30p_hvt        /home/soc/wucj/2020-11-Graduation/0-lib_setup/7t35p_svt        /home/soc/wucj/2020-11-Graduation/0-lib_setup/7t40p_ehvt               /home/soc/luyc18/1_On_chip_learn-v2/2-SYN/sram_libs
+              
+################   ssg0p81v      ################
+#set target_library   "tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db                          "    
+################   ssg0p5v 0p72v ################
+set target_library   "  	tcbn28hpcplusbwp7t35p140ssg0p5v0c_ccs.db 	tcbn28hpcplusbwp7t35p140ssg0p72v0c_ccs.db 	tcbn28hpcplusbwp7t35p140ssg0p5v0p72v0c_ccs.db  	tcbn28hpcplusbwp7t40p140ehvttt0p5v0c_ccs.db "    
+  	tcbn28hpcplusbwp7t35p140ssg0p5v0c_ccs.db 	tcbn28hpcplusbwp7t35p140ssg0p72v0c_ccs.db 	tcbn28hpcplusbwp7t35p140ssg0p5v0p72v0c_ccs.db  	tcbn28hpcplusbwp7t40p140ehvttt0p5v0c_ccs.db 
+#	tcbn28hpcplusbwp7t40p140ehvttt0p5v0c_ccs.db 
+################   sram ssg0p81v ################
+#set synthetic_library "dw_foundation.sldb"
+#set link_library      " * 	           	$target_library               sram_sp_hsd_ssg_0p81v_0p81v_125c.db 	         	  $synthetic_library  "
+################   sram ssg0p72v ################
+set synthetic_library "dw_foundation.sldb"
+dw_foundation.sldb
+set link_library      " * 	           	$target_library               $synthetic_library               sram_sp_hsd_ssg_0p72v_0p72v_0c.db               "
+ * 	           	  	tcbn28hpcplusbwp7t35p140ssg0p5v0c_ccs.db 	tcbn28hpcplusbwp7t35p140ssg0p72v0c_ccs.db 	tcbn28hpcplusbwp7t35p140ssg0p5v0p72v0c_ccs.db  	tcbn28hpcplusbwp7t40p140ehvttt0p5v0c_ccs.db                dw_foundation.sldb               sram_sp_hsd_ssg_0p72v_0p72v_0c.db               
+ * 	           	  	tcbn28hpcplusbwp7t35p140ssg0p5v0c_ccs.db 	tcbn28hpcplusbwp7t35p140ssg0p72v0c_ccs.db 	tcbn28hpcplusbwp7t35p140ssg0p5v0p72v0c_ccs.db  	tcbn28hpcplusbwp7t40p140ehvttt0p5v0c_ccs.db                dw_foundation.sldb               sram_sp_hsd_ssg_0p72v_0p72v_0c.db               
+file copy -force $SETUP_FILE  ./outputs/$data
+#set_level_shifter_cell  LVLLH  -cell_type LH -std_cell_main_rail_pg_pin VDDI
+# set_level_shifter_cell  LVLLH -cell_type LH -output_signal_level VDD  -input_signal_level VDDI -std_cell_main_rail_pg_pin VDDI
+set change_names_dont_change_bus_members      true
+true
+set compile_disable_hierarchical_inverter_opt true
+true
+set auto_insert_level_shifters_on_clocks      all
+all
+set auto_insert_level_shifters true
+true
+analyze -format verilog $FILE_LIST  -define DC_SYN
+Running PRESTO HDLC
+Compiling source file ./flist.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/CONFIG.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/dram2glb_transformer.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/glb2dram_transformer.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/para_config.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/sram_bank.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/glb_banks_v2.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/address_trans.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/glb_connector.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/one_hot_mux.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/glb_read_data_mux.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/dram_glb_transformer.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/glb_arbitrate.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/pass_control.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/mask_mem_connector.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/mask_mem_reg.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/psum_out_bus_control_v2.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/psum_in_bus_control_v2.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/weight_bus_control_v2.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/ifmap_bus_control_v2.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/mask_in_bus_control.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/router_feature.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/router_psum_in.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/router_psum_in_row.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/router_psum_out.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/router_weight.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/router_mask.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/load_mask.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/load_weight.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/load_fmap.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/macc.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/reg_pad.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/mul.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/adder.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/gate_mux_adder.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/reg_pinA.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/reg_pinB.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/pe.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/pe_top.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/pe_set.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/pe_set_with_bus.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/oct_logic_top.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/oct_mem_top.v
+Opening include file /home/soc/luyc18/1_On_chip_learn-v2/1-Design/0-RTL/oct_top.v
+Presto compilation completed successfully.
+Loading db file '/home/soc/wucj/2020-11-Graduation/0-lib_setup/7t35p_svt/tcbn28hpcplusbwp7t35p140ssg0p5v0c_ccs.db'

@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : clock_gating
+        -ungated
+        -verbose
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Sun Nov 28 21:11:45 2021
+****************************************
+
+
+--------------------------------------------------------------------------------
+                             Ungated Register Report
+--------------------------------------------------------------------------------
+           Ungated Register     |  Reason                  |  What Next?
+--------------------------------------------------------------------------------
+    ph_vld_dly1_reg             |  Always enabled register |  -
+    res_last_vld_reg            |  Always enabled register |  -
+    calvn/in_vld_dly1_reg       |  Always enabled register |  -
+    calvn/in_vld_dly2_reg       |  Always enabled register |  -
+    dot/mac_en_reg              |  Min bitwidth not met    |  -
+    dot/finish_reg              |  Always enabled register |  -
+    dot/mac_cnt_reg_1_          |  Min bitwidth not met    |  -
+    dot/mac_cnt_reg_0_          |  Always enabled register |  -
+    dot/mac_cnt_reg_2_          |  Min bitwidth not met    |  -
+    cordic/finish_reg           |  Always enabled register |  -
+    cordic/cal_en_reg           |  Min bitwidth not met    |  -
+    cordic/cal_cnt_reg_2_       |  Min bitwidth not met    |  -
+    cordic/nozero_flg_reg       |  Min bitwidth not met    |  -
+    cordic/cal_cnt_reg_0_       |  Always enabled register |  -
+    cordic/cal_cnt_reg_1_       |  Min bitwidth not met    |  -
+                                |                          |
+--------------------------------------------------------------------------------
+
+
+                             Clock Gating Summary
+          ------------------------------------------------------------
+          |    Number of Clock gating elements    |        7         |
+          |                                       |                  |
+          |    Number of Gated registers          |   190 (92.68%)   |
+          |                                       |                  |
+          |    Number of Ungated registers        |    15 (7.32%)    |
+          |                                       |                  |
+          |    Total number of registers          |      205         |
+          ------------------------------------------------------------
+
+
+
+1

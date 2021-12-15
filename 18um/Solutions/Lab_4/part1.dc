@@ -1,0 +1,17 @@
+remove_design -designs
+
+read LATCH.db
+
+check_test
+create_test_patterns
+report_test -faults -class untested
+
+set_scan_transparent true LD1 -existing
+check_test
+create_test_patterns
+report_test -faults -class untested
+
+preview_scan -show all
+insert_scan
+check_test
+create_test_patterns

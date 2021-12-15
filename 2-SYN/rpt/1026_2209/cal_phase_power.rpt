@@ -1,0 +1,85 @@
+Warning: Main library 'ssc_core_slow' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Oct 26 22:11:04 2021
+****************************************
+
+
+Library(s) Used:
+
+    ssc_core_slow (File: /root/lib/18um/Technology/TSMC/core/synopsys/db/nopower/core_slow.db)
+
+Information: The cells in your design are not characterized for internal power. (PWR-229)
+
+Operating Conditions: slow_125_1.62   Library: ssc_core_slow
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+cal_phase              5KGATES           ssc_core_slow
+cal_vn                 5KGATES           ssc_core_slow
+dotVn                  5KGATES           ssc_core_slow
+cordic_int             5KGATES           ssc_core_slow
+FloorAndWrap_7         5KGATES           ssc_core_slow
+FloorAndWrap_6         5KGATES           ssc_core_slow
+FloorAndWrap_5         5KGATES           ssc_core_slow
+FloorAndWrap_4         5KGATES           ssc_core_slow
+FloorAndWrap_3         5KGATES           ssc_core_slow
+FloorAndWrap_2         5KGATES           ssc_core_slow
+FloorAndWrap_1         5KGATES           ssc_core_slow
+FloorAndWrap_0         5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_0
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_1
+                       5KGATES           ssc_core_slow
+s_table                5KGATES           ssc_core_slow
+FloorAndWrap_8_1       5KGATES           ssc_core_slow
+FloorAndWrap_8_0       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_dotVn
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cordic_int_0
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cordic_int_2
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cordic_int_1
+                       5KGATES           ssc_core_slow
+
+
+Global Operating Voltage = 1.62 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = Unitless
+
+
+  Cell Internal Power  =   0.0000 mW    (0%)
+  Net Switching Power  = 467.4164 uW  (100%)
+                         ---------
+Total Dynamic Power    = 467.4164 uW  (100%)
+
+Cell Leakage Power     =   0.0000 
+
+Error: Either dynamic power or leakage power, in the library, is unitless. Unable to display complete power group summary. (PWR-799)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000               NA   (     N/A)
+memory             0.0000            0.0000            0.0000               NA   (     N/A)
+black_box          0.0000            0.0000            0.0000               NA   (     N/A)
+clock_network      0.0000        3.8341e-02            0.0000               NA   (     N/A)
+register           0.0000        2.4018e-02            0.0000               NA   (     N/A)
+sequential         0.0000            0.0000            0.0000               NA   (     N/A)
+combinational      0.0000            0.4051            0.0000               NA   (     N/A)
+--------------------------------------------------------------------------------------------------
+Total              0.0000 mW         0.4674 mW         0.0000               NA        
+1

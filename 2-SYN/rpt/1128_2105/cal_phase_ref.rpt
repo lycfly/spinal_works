@@ -1,0 +1,69 @@
+ 
+****************************************
+Report : reference
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Sun Nov 28 21:05:57 2021
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+SNPS_CLOCK_GATE_HIGH_cal_phase_0
+                                 40.140000       1     40.140000  h, n
+SNPS_CLOCK_GATE_HIGH_cal_phase_1
+                                 40.140000       1     40.140000  h, n
+and2a3             ssc_core_slow
+                                 12.540000       2     25.080000  
+and3d2             ssc_core_slow
+                                 12.540000       1     12.540000  
+ao1d2              ssc_core_slow
+                                 15.050000       2     30.100000  
+ao1f2              ssc_core_slow
+                                 12.540000       1     12.540000  
+ao4a3              ssc_core_slow
+                                 22.580000       2     45.160000  
+buf1a9             ssc_core_slow
+                                 17.559999       2     35.119999  
+cal_vn                        11704.250034       1  11704.250034  h, n
+clk1a3             ssc_core_slow
+                                 10.040000      49    491.959998  
+cordic_int                    13934.370029       1  13934.370029  h, n
+dotVn                         14825.650050       1  14825.650050  h, n
+fa1a2              ssc_core_slow
+                                 50.180000       4    200.720001  r
+fa1a3              ssc_core_slow
+                                 50.180000       4    200.720001  r
+fdf2a3             ssc_core_slow
+                                 52.680000      29   1527.720009  n
+ha1a1              ssc_core_slow
+                                 30.110001       1     30.110001  r
+ha1a3              ssc_core_slow
+                                 30.110001       7    210.770004  r
+inv1a1             ssc_core_slow
+                                  5.020000      20    100.400000  
+inv1a3             ssc_core_slow
+                                  7.530000      21    158.130004  
+mx2a1              ssc_core_slow
+                                 20.070000       1     20.070000  
+or2a1              ssc_core_slow
+                                 12.540000       1     12.540000  
+or2c1              ssc_core_slow
+                                  7.530000       1      7.530000  
+or3d1              ssc_core_slow
+                                 10.040000       1     10.040000  
+xor2b2             ssc_core_slow
+                                 22.580000       1     22.580000  
+-----------------------------------------------------------------------------
+Total 24 references                                 43698.380131
+1

@@ -1,0 +1,63 @@
+ 
+****************************************
+Report : area
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Oct 26 22:11:04 2021
+****************************************
+
+Library(s) Used:
+
+    ssc_core_slow (File: /root/lib/18um/Technology/TSMC/core/synopsys/db/nopower/core_slow.db)
+
+Number of ports:                          649
+Number of nets:                          2945
+Number of cells:                         2175
+Number of combinational cells:           1975
+Number of sequential cells:               180
+Number of macros/black boxes:               0
+Number of buf/inv:                        634
+Number of references:                       8
+
+Combinational area:              29004.860079
+Buf/Inv area:                     4680.790002
+Noncombinational area:            9407.280025
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 38412.140104
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ----------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-  Black-
+                                  Total       Total    national    national   boxes   Design
+--------------------------------  ----------  -------  ----------  ---------  ------  ---------------------------------
+cal_phase                         38412.1401    100.0    727.8800     0.0000  0.0000  cal_phase
+calvn                             11696.7300     30.5   6797.0500  4176.8400  0.0000  cal_vn
+calvn/FloorWrap_0                    80.3200      0.2     80.3200     0.0000  0.0000  FloorAndWrap_7
+calvn/FloorWrap_1                    80.3200      0.2     80.3200     0.0000  0.0000  FloorAndWrap_6
+calvn/FloorWrap_2                    80.3200      0.2     80.3200     0.0000  0.0000  FloorAndWrap_5
+calvn/FloorWrap_3                    80.3200      0.2     80.3200     0.0000  0.0000  FloorAndWrap_4
+calvn/FloorWrap_4                    80.3200      0.2     80.3200     0.0000  0.0000  FloorAndWrap_3
+calvn/FloorWrap_5                    80.3200      0.2     80.3200     0.0000  0.0000  FloorAndWrap_2
+calvn/FloorWrap_6                    80.3200      0.2     80.3200     0.0000  0.0000  FloorAndWrap_1
+calvn/FloorWrap_7                    80.3200      0.2     80.3200     0.0000  0.0000  FloorAndWrap_0
+calvn/clk_gate_SumXinReg_reg         40.1400      0.1     12.5400    27.6000  0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_1
+calvn/clk_gate_VnReg_4_reg           40.1400      0.1     12.5400    27.6000  0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_0
+cordic                            11816.7500     30.8   8849.1000  2847.2300  0.0000  cordic_int
+cordic/clk_gate_nozero_flg_reg       40.1400      0.1     12.5400    27.6000  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_2
+cordic/clk_gate_res_rg_reg           40.1400      0.1     12.5400    27.6000  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_1
+cordic/clk_gate_xn_reg               40.1400      0.1     12.5400    27.6000  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_0
+dot                               14170.7800     36.9   4162.5200  2217.6100  0.0000  dotVn
+dot/FloorWrap1                      160.6400      0.4    160.6400     0.0000  0.0000  FloorAndWrap_8_1
+dot/FloorWrap2                      160.6400      0.4    160.6400     0.0000  0.0000  FloorAndWrap_8_0
+dot/clk_gate_mac_cnt_reg             40.1400      0.1     12.5400    27.6000  0.0000  SNPS_CLOCK_GATE_HIGH_dotVn
+dot/table_1                        7429.2300     19.3   7429.2300     0.0000  0.0000  s_table
+--------------------------------  ----------  -------  ----------  ---------  ------  ---------------------------------
+Total                                                  29004.8601  9407.2800  0.0000
+
+1

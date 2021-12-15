@@ -1,0 +1,448 @@
+remove_design -designs
+Removing file 'CLOCK_DFT.db'
+         design 'CLOCK_DFT'
+         design 'CREG'
+         design 'EREG'
+         design 'DREG'
+         design 'BREG'
+         design 'AREG'
+         design 'CLOCK_GEN'
+1
+read CLOCK_DFT.db
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/CLOCK_DFT.db'
+Current design is now '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/CLOCK_DFT.db:CLOCK_DFT'
+{"CLOCK_DFT", "CREG", "EREG", "DREG", "BREG", "AREG", "CLOCK_GEN"}
+
+check_test
+  Loading design 'CLOCK_DFT'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk (45.0,55.0). (TEST-260)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk...
+  ...simulating capture clock falling edge at port clk...
+Information: Clock port clk captures data on both edges. (TEST-135)
+Warning: Pin D of cell dreg/dr_reg[3] (FD1) cannot capture reliably. (TEST-478)
+Information: Cell breg/br_reg[3] launches response data from pin QN at rising edge of clock port clk (pin CP) at time 45.0. (TEST-472)
+Information: Cell dreg/dr_reg[3] captures data on pin D at falling edge of clock port clk (pin CP) at time 55.0. (TEST-473)
+Information: There is a path from breg/br_reg[3] to dreg/dr_reg[3]. (TEST-474)
+Information: The path contains: breg/br_reg[3]/QN, u42/B, u42/Z, u27/B, u27/Z, dreg/dr_reg[3]/D. (TEST-282)
+Information: There are 3 other pins with the same violation. (TEST-170)
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk. (TEST-262)
+Warning: Data can not be captured into cell dreg/dr_reg[0] (FD1). (TEST-310)
+Information: There are 3 other cells with the same violation. (TEST-171)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 8
+**************************************************
+
+CAPTURE VIOLATIONS
+      4 Unreliable capture (data pin) violations (TEST-478)
+      4 Cell does not capture violations (TEST-310)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  4 out of 27 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+   *   4 cells have parallel capture violations
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  23 cells are valid scan cells
+
+1
+create_test_patterns
+  Loading design 'CLOCK_DFT'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Building test generation network
+Information: Faults on unused cell outputs are not considered, e.g. pin QN of cell clk_inst/COUNT_reg[0] (FD1). (TEST-200)
+Warning: Design has no scan path.  Generated vectors will not be saved. (UIT-8)
+
+  Combinational Test Pattern Generation starts:
+
+    Start random pattern generation...
+
+       74.09% faults processed ; cumulative fault coverage =  74.09%
+
+    ...End random pattern generation
+
+    Start deterministic pattern generation...
+
+       98.34% faults processed ; cumulative fault coverage =  74.42%
+      100.00% faults processed ; cumulative fault coverage =  74.75%
+
+    ...End deterministic pattern generation
+
+
+                                Non-collapsed     Collapsed
+    No. of detected faults      381               225
+    No. of abandoned faults     0                 0
+    No. of tied faults          0                 0
+    No. of redundant faults     0                 0
+    No. of untested faults      115               76
+    Total no. of faults         496               301
+    Fault coverage              76.81             74.75
+
+    No. of test patterns         13
+
+    Test Generation Time (CPU)  0.00 sec
+
+    Start compaction...
+
+    ...End compaction
+
+    No. of compacted patterns    13
+
+    Compaction Time (CPU)       0.00 sec
+...Writing test program CLOCK_DFT (without vectors) to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_4/CLOCK_DFT.vdb
+1
+
+create_test_clock -period 100 -waveform {55, 45} "clk"
+Performing create_test_clock on port 'clk'. 
+1
+check_test
+  Loading design 'CLOCK_DFT'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk (55.0,45.0). (TEST-260)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock falling edge at port clk...
+  ...simulating capture clock rising edge at port clk...
+Information: Clock port clk captures data on both edges. (TEST-135)
+Warning: Pin D of cell ereg/e_reg[2] (FD1) cannot capture reliably. (TEST-478)
+Information: Cell creg/cr_reg[1] launches response data from pin Q at falling edge of clock port clk (pin CP) at time 45.0. (TEST-472)
+Information: Cell ereg/e_reg[2] captures data on pin D at rising edge of clock port clk (pin CP) at time 55.0. (TEST-473)
+Information: There is a path from creg/cr_reg[1] to ereg/e_reg[2]. (TEST-474)
+Information: The path contains: creg/cr_reg[1]/Q, u39/D, u39/Z, u26/B, u26/Z, ereg/e_reg[2]/D. (TEST-282)
+Information: There are 3 other pins with the same violation. (TEST-170)
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk. (TEST-262)
+Warning: Data can not be captured into cell ereg/e_reg[0] (FD1). (TEST-310)
+Information: There are 3 other cells with the same violation. (TEST-171)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 8
+**************************************************
+
+CAPTURE VIOLATIONS
+      4 Unreliable capture (data pin) violations (TEST-478)
+      4 Cell does not capture violations (TEST-310)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  4 out of 27 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+   *   4 cells have parallel capture violations
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  23 cells are valid scan cells
+
+1
+create_test_patterns
+  Loading design 'CLOCK_DFT'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Building test generation network
+Information: Faults on unused cell outputs are not considered, e.g. pin QN of cell clk_inst/COUNT_reg[0] (FD1). (TEST-200)
+Warning: Design has no scan path.  Generated vectors will not be saved. (UIT-8)
+
+  Combinational Test Pattern Generation starts:
+
+    Start random pattern generation...
+
+       76.16% faults processed ; cumulative fault coverage =  76.16%
+
+    ...End random pattern generation
+
+    Start deterministic pattern generation...
+
+       98.34% faults processed ; cumulative fault coverage =  76.49%
+      100.00% faults processed ; cumulative fault coverage =  76.82%
+
+    ...End deterministic pattern generation
+
+
+                                Non-collapsed     Collapsed
+    No. of detected faults      387               232
+    No. of abandoned faults     0                 0
+    No. of tied faults          0                 0
+    No. of redundant faults     0                 0
+    No. of untested faults      109               70
+    Total no. of faults         496               302
+    Fault coverage              78.02             76.82
+
+    No. of test patterns         13
+
+    Test Generation Time (CPU)  0.00 sec
+
+    Start compaction...
+
+    ...End compaction
+
+    No. of compacted patterns    11
+
+    Compaction Time (CPU)       0.00 sec
+...Writing test program CLOCK_DFT (without vectors) to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_4/CLOCK_DFT.vdb
+1
+
+delete_test
+1
+multi_pass_test_generation = true
+"true"
+
+create_test_clock -period 100 -waveform {45, 55} "clk"
+Performing create_test_clock on port 'clk'. 
+1
+check_test
+  Loading design 'CLOCK_DFT'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk (45.0,55.0). (TEST-260)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk...
+  ...simulating capture clock falling edge at port clk...
+Information: Clock port clk captures data on both edges. (TEST-135)
+Warning: Pin D of cell dreg/dr_reg[3] (FD1) cannot capture reliably. (TEST-478)
+Information: Cell breg/br_reg[3] launches response data from pin QN at rising edge of clock port clk (pin CP) at time 45.0. (TEST-472)
+Information: Cell dreg/dr_reg[3] captures data on pin D at falling edge of clock port clk (pin CP) at time 55.0. (TEST-473)
+Information: There is a path from breg/br_reg[3] to dreg/dr_reg[3]. (TEST-474)
+Information: The path contains: breg/br_reg[3]/QN, u42/B, u42/Z, u27/B, u27/Z, dreg/dr_reg[3]/D. (TEST-282)
+Information: There are 3 other pins with the same violation. (TEST-170)
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk. (TEST-262)
+Warning: Data can not be captured into cell dreg/dr_reg[0] (FD1). (TEST-310)
+Information: There are 3 other cells with the same violation. (TEST-171)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 8
+**************************************************
+
+CAPTURE VIOLATIONS
+      4 Unreliable capture (data pin) violations (TEST-478)
+      4 Cell does not capture violations (TEST-310)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  4 out of 27 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+   *   4 cells have parallel capture violations
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  23 cells are valid scan cells
+
+1
+create_test_patterns -out pass1
+  Loading design 'CLOCK_DFT'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Building test generation network
+Information: Faults on unused cell outputs are not considered, e.g. pin QN of cell clk_inst/COUNT_reg[0] (FD1). (TEST-200)
+Warning: Design has no scan path.  Generated vectors will not be saved. (UIT-8)
+
+  Combinational Test Pattern Generation starts:
+
+    Start random pattern generation...
+
+       74.09% faults processed ; cumulative fault coverage =  74.09%
+
+    ...End random pattern generation
+
+    Start deterministic pattern generation...
+
+       98.34% faults processed ; cumulative fault coverage =  74.42%
+      100.00% faults processed ; cumulative fault coverage =  74.75%
+
+    ...End deterministic pattern generation
+
+
+                                Non-collapsed     Collapsed
+    No. of detected faults      381               225
+    No. of abandoned faults     0                 0
+    No. of tied faults          0                 0
+    No. of redundant faults     0                 0
+    No. of untested faults      115               76
+    Total no. of faults         496               301
+    Fault coverage              76.81             74.75
+
+    No. of test patterns         13
+
+    Test Generation Time (CPU)  0.00 sec
+
+    Start compaction...
+
+    ...End compaction
+
+    No. of compacted patterns    13
+
+    Compaction Time (CPU)       0.00 sec
+...Writing test program pass1 (without vectors) to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_4/pass1.vdb
+1
+create_test_clock -period 100 -waveform {55, 45} "clk"
+Performing create_test_clock on port 'clk'. 
+1
+create_test_patterns -out pass2
+Information: This test generation run is an incremental run. It will target
+	     the faults left undetected by the preceding test program. (TPM-60)
+	     The preceding test program sequence is {pass1}.
+  Loading design 'CLOCK_DFT'
+  Checking test design rules
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Building test generation network
+Information: Faults on unused cell outputs are not considered, e.g. pin QN of cell clk_inst/COUNT_reg[0] (FD1). (TEST-200)
+Warning: Design has no scan path.  Generated vectors will not be saved. (UIT-8)
+
+  Combinational Test Pattern Generation starts:
+
+    Start random pattern generation...
+
+       94.74% faults processed ; cumulative fault coverage =  94.74%
+
+    ...End random pattern generation
+
+    Start deterministic pattern generation...
+
+
+    ...End deterministic pattern generation
+
+
+                                Non-collapsed     Collapsed
+    No. of detected faults      104               72
+    No. of abandoned faults     0                 0
+    No. of tied faults          0                 0
+    No. of redundant faults     0                 0
+    No. of untested faults      11                4
+    Total no. of faults         115               76
+    Fault coverage              90.43             94.74
+
+    No. of test patterns         9
+
+    Test Generation Time (CPU)  0.00 sec
+
+    Start compaction...
+
+    ...End compaction
+
+    No. of compacted patterns    7
+
+    Compaction Time (CPU)       0.00 sec
+...Writing test program pass2 (without vectors) to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_4/pass2.vdb
+1
+
+report_test -coverage -faults -class untested
+ 
+****************************************
+Report : test
+          -coverage
+          -faults (untested)
+Design : CLOCK_DFT
+Version: 1998.02
+Date   : Sat Aug 29 18:20:11 1998
+****************************************
+
+Test program : `pass2' 
+Depends on   : `pass1'
+               
+Fault Coverage Report :
+
+    Detect   : Number of faults Detected
+    Aband    : Number of faults Abandoned
+    Tied     : Number of faults Tied High or Low
+    Redun    : Number of faults Redundant
+    Untest   : Number of faults Untested
+    Probl    : Number of faults Probably Detected
+    Unpro    : Number of faults Hyperactive/Oscillating
+    Total    : Number of faults Total
+    Coverage : Detect / (Total - Tied - Redund)
+
+Design/Cell          Detect  Aband  Tied Redun Untest Probl Unpro Total Coverage
+--------------------------------------------------------------------------------
+areg                     24      0     0     0      0     0     0     24 100.00%
+breg                     24      0     0     0      0     0     0     24 100.00%
+clk_inst                172      0     0     0     10     0     0    182  94.51%
+creg                     24      0     0     0      0     0     0     24 100.00%
+dreg                     26      0     0     0      0     0     0     26 100.00%
+ereg                     24      0     0     0      0     0     0     24 100.00%
+CLOCK_DFT               485      0     0     0     11     0     0    496  97.78%
+
+Test program : `pass2' 
+Depends on   : `pass1'
+               
+Faults:
+
+ s-a-0 : stuck at 0 fault
+ s-a-1 : stuck at 1 fault
+
+  clk_inst:
+    Untested:
+      INT_CLK_reg/Q pin s-a-0 & s-a-1
+      U82/A pin s-a-0 & s-a-1
+      U82/B pin         s-a-1
+      U82/D pin         s-a-1
+      U89/A pin s-a-0 & s-a-1
+      U89/Z pin s-a-0 & s-a-1
+  CLOCK_DFT:
+    Untested:
+      tm port         s-a-1
+
+1
+
+multi_pass_test_generation = false
+"false"

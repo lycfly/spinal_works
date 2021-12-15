@@ -1,0 +1,427 @@
+// Verilog netlist written by  M i l l e n n i u m  1997.08-i970926_175841 
+// Date: Wed Oct 08 08:00:41 1997
+// Top module: ICC_ASIC
+
+`celldefine
+module ITN (DI, PAD, IC);
+input PAD;
+output DI;
+inout IC;
+   buf buf (DI, PAD);
+endmodule
+`endcelldefine
+
+`celldefine
+module ON2T (PAD, DO, EN);
+input DO, EN;
+output PAD;
+wire int;
+   bufif1 bufif1 (int, DO, EN);
+   bufif1 bufif11 (PAD, int, EN);
+endmodule
+`endcelldefine
+
+`celldefine
+module DFFLPH (Q, QB, D, CK, SDI, SE);
+input D, CK, SDI, SE;
+output Q, QB;
+wire din;
+   _MUX mux (SE, D, SDI, din);
+   _DFF reg (1'b0, 1'b0, CK, din, Q);
+   not not (QB, Q);
+endmodule
+`endcelldefine
+
+`celldefine
+module DFFRLPH (Q, QB, D, CK, SDI, SE, RB);
+input D, CK, SDI, SE, RB;
+output Q, QB;
+wire din;
+   _MUX mux (SE, D, SDI, din);
+   _DFF reg (1'b0, !RB, CK, din, Q);
+   not not (QB, Q);
+endmodule
+`endcelldefine
+
+`celldefine
+module AND2H (X, A, B);
+input A, B;
+output X;
+   and and (X, A, B);
+endmodule
+`endcelldefine
+
+`celldefine
+module OR3 (X, A, B, C);
+input A, B, C;
+output X;
+   or or (X, A, B, C);
+endmodule
+`endcelldefine
+
+`celldefine
+module NAN2 (X, A, B);
+input A, B;
+output X;
+   nand nand (X, A, B);
+endmodule
+`endcelldefine
+
+`celldefine
+module BITN (DI, BC);
+input BC;
+output DI;
+   buf buf (DI, BC);
+endmodule
+`endcelldefine
+
+`celldefine
+module OR2 (X, A, B);
+input A, B;
+output X;
+   or or (X, A, B);
+endmodule
+`endcelldefine
+
+`celldefine
+module DFFSLPH (Q, QB, SB, D, CK, SDI, SE);
+input SB, D, CK, SDI, SE;
+output Q, QB;
+wire din;
+   _MUX mux (SE, D, SDI, din);
+   _DFF reg (!SB, 1'b0, CK, din, Q);
+   not not (QB, Q);
+endmodule
+`endcelldefine
+
+`celldefine
+module NAN4 (X, A, B, C, D);
+input A, B, C, D;
+output X;
+   nand nand (X, A, B, C, D);
+endmodule
+`endcelldefine
+
+module OAI211_UDP_1 (Y, A, B, C, D);
+input A, B, C, D;
+output Y;
+wire _or0;
+   _OR _or0 (B, A, _or0);
+   _NAND _and1 (_or0, D, C, Y);
+endmodule
+
+`celldefine
+module OA211H (X, A, B, C, D);
+input A, B, C, D;
+output X;
+wire XB;
+   OAI211_UDP_1 OAI211_UDP_1 (XB, A, B, C, D);
+   not not (X, XB);
+endmodule
+`endcelldefine
+
+`celldefine
+module NOR2B (X, A, B);
+input A, B;
+output X;
+   nor nor (X, A, B);
+endmodule
+`endcelldefine
+
+`celldefine
+module INVB (X, A);
+input A;
+output X;
+   not not (X, A);
+endmodule
+`endcelldefine
+
+`celldefine
+module AND4H (X, A, B, C, D);
+input A, B, C, D;
+output X;
+   and and (X, A, B, C, D);
+endmodule
+`endcelldefine
+
+module OAI22_UDP_1 (Y, A, B, C, D);
+input A, B, C, D;
+output Y;
+wire _nor0, _nor1;
+   _NOR _nor0 (C, D, _nor0);
+   _NOR _nor1 (A, B, _nor1);
+   _OR _or2 (_nor0, _nor1, Y);
+endmodule
+
+`celldefine
+module OA22H (X, A, B, C, D);
+input A, B, C, D;
+output X;
+wire XB;
+   OAI22_UDP_1 OAI22_UDP_1 (XB, A, B, C, D);
+   not not (X, XB);
+endmodule
+`endcelldefine
+
+`celldefine
+module AND2 (X, A, B);
+input A, B;
+output X;
+   and and (X, A, B);
+endmodule
+`endcelldefine
+
+module AOI22_UDP_1 (Y, A, B, C, D);
+input A, B, C, D;
+output Y;
+wire _and0, _and1;
+   _AND _and0 (D, C, _and0);
+   _AND _and1 (B, A, _and1);
+   _NOR _or2 (_and0, _and1, Y);
+endmodule
+
+`celldefine
+module AO22H (X, A, B, C, D);
+input A, B, C, D;
+output X;
+wire xb;
+   AOI22_UDP_1 AOI22_UDP_1 (xb, A, B, C, D);
+   not not (X, xb);
+endmodule
+`endcelldefine
+
+`celldefine
+module INV2 (X, A);
+input A;
+output X;
+   not not (X, A);
+endmodule
+`endcelldefine
+
+`celldefine
+module MX41 (X, A, SLA, B, SLB, C, SLC, D, SLD);
+input A, SLA, B, SLB, C, SLC, D, SLD;
+output X;
+wire AOI1, AOI2;
+   AOI22_UDP_1 AOI22_UDP_1 (AOI1, A, SLA, B, SLB);
+   AOI22_UDP_1 AOI22_UDP_11 (AOI2, C, SLC, D, SLD);
+   nand nand (X, AOI1, AOI2);
+endmodule
+`endcelldefine
+
+module MUX2_UDP_1 (Q, A, B, SL);
+input A, B, SL;
+output Q;
+   _MUX _mux0 (SL, A, B, Q);
+endmodule
+
+`celldefine
+module MUX2H (X, A, SL, B);
+input A, SL, B;
+output X;
+   MUX2_UDP_1 MUX2_UDP_1 (X, A, B, SL);
+endmodule
+`endcelldefine
+
+`celldefine
+module AND3 (X, A, B, C);
+input A, B, C;
+output X;
+   and and (X, A, B, C);
+endmodule
+`endcelldefine
+
+`celldefine
+module AOI22H (X, A, B, C, D);
+input A, B, C, D;
+output X;
+   AOI22_UDP_1 GA1 (X, A, B, C, D);
+endmodule
+`endcelldefine
+
+module AOI211_UDP_1 (Y, A, B, C, D);
+input A, B, C, D;
+output Y;
+wire _nand0;
+   _NAND _nand0 (A, B, _nand0);
+   _AND _and1 (_nand0, !D, !C, Y);
+endmodule
+
+`celldefine
+module AOI21H (X, A, B, C);
+input A, B, C;
+output X;
+   AOI211_UDP_1 AM1 (X, A, B, C, 1'b0);
+endmodule
+`endcelldefine
+
+`celldefine
+module NOR5 (X, A, B, C, D, E);
+input A, B, C, D, E;
+output X;
+   nor nor (X, A, B, C, D, E);
+endmodule
+`endcelldefine
+
+`celldefine
+module INV (X, A);
+input A;
+output X;
+   not not (X, A);
+endmodule
+`endcelldefine
+
+`celldefine
+module NAN3 (X, A, B, C);
+input A, B, C;
+output X;
+   nand nand (X, A, B, C);
+endmodule
+`endcelldefine
+
+`celldefine
+module BON4T (BIC, PAD, DO, EN);
+input DO, EN;
+output BIC;
+inout PAD;
+   bufif1 bufif11 (PAD, DO, EN);
+   nmos nmos (BIC, PAD, 1'b1);
+endmodule
+`endcelldefine
+
+`celldefine
+module BUF3 (X, A);
+input A;
+output X;
+   buf buf (X, A);
+endmodule
+`endcelldefine
+
+module BOTHVSS (PAD);
+input PAD;
+endmodule
+
+module BOTHVDD (PAD);
+input PAD;
+endmodule
+
+`celldefine
+module INV8 (X, A);
+input A;
+output X;
+   not not (X, A);
+endmodule
+`endcelldefine
+
+`celldefine
+module ON2 (PAD, DO);
+input DO;
+output PAD;
+   buf buf (PAD, DO);
+endmodule
+`endcelldefine
+
+`celldefine
+module PUH (RC);
+output RC;
+   _TIEZ _tiez (RC);
+endmodule
+`endcelldefine
+
+`celldefine
+module AO321H (X, A, B, C, D, E, F);
+input A, B, C, D, E, F;
+output X;
+wire n3, aoi;
+   nand nand (n3, A, B, C);
+   AOI211_UDP_1 AOI211_UDP_1 (aoi, D, E, F, 1'b0);
+   nand nand2 (X, n3, aoi);
+endmodule
+`endcelldefine
+
+`celldefine
+module ON4OD (PAD, DO);
+input DO;
+output PAD;
+wire int;
+   bufif0 bufif0 (int, DO, 1'b0);
+   bufif0 bufif01 (PAD, DO, int);
+endmodule
+`endcelldefine
+
+`celldefine
+module BUF8 (X, A);
+input A;
+output X;
+   buf buf (X, A);
+endmodule
+`endcelldefine
+
+`celldefine
+module MUX2IH (XB, A, B, SL);
+input A, B, SL;
+output XB;
+wire X;
+   MUX2_UDP_1 Mux21 (X, A, B, SL);
+   not not (XB, X);
+endmodule
+`endcelldefine
+
+`celldefine
+module OR4H (X, A, B, C, D);
+input A, B, C, D;
+output X;
+   or or (X, A, B, C, D);
+endmodule
+`endcelldefine
+
+`celldefine
+module NAN5 (X, A, B, C, D, E);
+input A, B, C, D, E;
+output X;
+   nand nand (X, A, B, C, D, E);
+endmodule
+`endcelldefine
+
+`celldefine
+module BUF (X, A);
+input A;
+output X;
+   buf buf (X, A);
+endmodule
+`endcelldefine
+
+`celldefine
+module ITNH (DI, PAD, IC);
+input PAD;
+output DI;
+inout IC;
+   buf buf (DI, PAD);
+endmodule
+`endcelldefine
+
+`celldefine
+module NOR2H (X, A, B);
+input A, B;
+output X;
+   nor nor (X, A, B);
+endmodule
+`endcelldefine
+
+`celldefine
+module MUX2I (XB, A, B, SL);
+input A, B, SL;
+output XB;
+wire X;
+   MUX2_UDP_1 Mux21 (X, A, B, SL);
+   not not (XB, X);
+endmodule
+`endcelldefine
+
+`celldefine
+module BUF8B (X, A);
+input A;
+output X;
+   buf buf (X, A);
+endmodule
+`endcelldefine

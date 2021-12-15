@@ -1,0 +1,13 @@
+remove_design -designs
+read CLOCK1.db
+current_design CLOCK1
+
+check_test
+create_test_patterns
+
+remove_design -designs
+read CLOCK_DFT.db
+current_design CLOCK_DFT
+
+report_test -assertions
+check_test

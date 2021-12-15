@@ -1,0 +1,12 @@
+########################################################################
+
+# Created by write_link_library -target ptsh on Sun Nov 28 20:39:34 2021
+
+########################################################################
+
+# Recommended setting of $link_path:
+
+set link_path { * gtech.db }
+
+
+set link_path_per_instance [list ]

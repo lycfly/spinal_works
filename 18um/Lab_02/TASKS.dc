@@ -1,0 +1,69 @@
+/*  FLOW1 BLOCK
+ *  Insert Scan at ASIC Level
+ *  File: TASKS.dc            
+ *  Path: <DFTW>/Lab_02
+ *  Date: Dec.00            
+ */
+
+/* COMPILE CORE LOGIC
+ * The first step is to synthesize the entire design.
+ * DFTC commands work on synthesized gate-level logic. 
+ * There is no glue logic to synthesize in design FLOW1.
+ * We need only compile "top-down" from design CORE.
+ * Timing constraints have been applied to CORE and FLOW1.
+ */
+   current_design CORE
+   set_scan_configuration  -style multiplexed_flip_flop
+   compile -scan
+
+/* CHECK CORE LOGIC
+ * Check the synthesized CORE logic for DRC violations.
+ * First create a clock waveform. This waveform has NO
+ * effect on synthesis, but IS used by check_scan. 
+ */
+   create_test_clock  -p 100  -w {40 60} CLK
+   check_scan
+
+/* CONFIGURE SCAN AT ASIC LEVEL
+ * Insert a scan path and generate test patterns
+ * all at the top (ASIC) level. This includes:
+ *  1. Set the chip-wide scan style;
+ *  2. Create RTZ clock at ASIC level;
+ *  3. Specify one scan chain.
+ *  4. Scan-port constraints at ASIC level.
+ */ 
+   current_design FLOW1
+   set_scan_configuration  -style multiplexed_flip_flop
+   create_test_clock  -p 100  -w {40 60} CLK
+   set_scan_configuration  -chain_count 1
+   set_scan_signal test_scan_in      -port HRS
+   set_scan_signal test_scan_out     -port SPEAKER_OUT
+   set_scan_signal test_scan_enable  -port TEST_SE
+
+/* PREVIEW SCAN
+ * Use "preview" to report expected scan architecture.
+ */
+   preview_scan -show all
+
+/* INSERT SCAN AT ASIC LEVEL
+ * Inserts scan chain at same level as subsequent ATPG.
+ * Uses the ports that we constrained earlier.
+ */
+   current_design FLOW1
+   insert_scan
+   check_scan
+   report_test -scan_path
+
+/* PREVIEW FAULT COVERAGE
+ * The create_test_patterns command is run at the same
+ * level that scan insertion was done. Identification
+ * of scan paths is thus AUTOMATIC.
+ */
+   current_design FLOW1
+   create_test_patterns -compaction high
+   report_test -coverage
+
+/* FORMAT PATTERNS INTO VECTORS
+ * Try Summit TDS format:
+ */
+   write_test  -format tds

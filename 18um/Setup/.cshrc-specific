@@ -1,0 +1,15 @@
+# DFTW WORKSHOP SETUP
+# For nixon and drizel:
+# Date: 11 June 2001
+#
+# DFTC 2000.11 Setup:
+  setenv SYNOPSYS /release/2000.11
+  alias design_analyzer \
+ "$SYNOPSYS/sparcOS5/syn/bin/design_analyzer&"
+ 
+# TetraMAX 2000.11 Setup:
+  setenv TMAX /release/2000.11-SP1
+  alias tmax '$TMAX/sparcOS5/syn/bin/tmax \!*'
+  setenv LM_LICENSE_FILE  /release/keys/key.2000.05.lic
+
+  setenv PRINTER lw119

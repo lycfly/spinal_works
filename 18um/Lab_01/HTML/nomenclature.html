@@ -1,0 +1,582 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (X11; I; SunOS 5.5.1 sun4m) [Netscape]">
+   <title>Using DesignWare Core Cell Datasheets</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<h1>
+<font face="Helvetica,Arial">How to Read DesignWare&reg; Standard Cell
+Datasheets</font></h1>
+
+<hr align="left" noshade>
+<h2>
+<a NAME="Core Cell Naming Convention"></a>Standard Cell Naming Convention</h2>
+The DesignWare Standard Cells use a naming convention with the following
+fields:
+<p>(<b>Function</b>)(Variation)(Inversions)(OutputDrive)
+<p>Where:
+<blockquote><b>Function</b> is the abbreviated cell function
+<p>Variation is the number of inputs, functional configuration or clear/preset
+options
+<p>Inversions is an indicator of input or output pin inversions
+<p>OutputDrive is the output <b>drive strength</b></blockquote>
+<b>Example:</b>
+<p>For cell <b>nand2a1</b>:
+<blockquote>nand is the function
+<p>2 is the number of inputs
+<p>a is the input inversion
+<p>1 is the drive strength</blockquote>
+For cell <b>fd2a1:</b>
+<blockquote>fd is the function
+<p>2 is the preset/clear option
+<p>a is the clock/data/output inversion
+<p><b>1</b> is the drive strength</blockquote>
+
+<h2>
+<a NAME="Core Cell Function"></a>Standard Cell Function</h2>
+The following table describes the Standard Cell name <b>prefixes</b>:
+<br>&nbsp;
+<table BORDER CELLPADDING=0 >
+<caption valign="top">Standard Cell Functions</caption>
+
+<tr>
+<th>Cell Name Prefix</th>
+
+<th>Group Name</th>
+
+<th>Function</th>
+</tr>
+
+<tr>
+<td>
+<center>and</center>
+</td>
+
+<td>AND Gates</td>
+
+<td>Logical AND</td>
+</tr>
+
+<tr>
+<td>
+<center>ao</center>
+</td>
+
+<td>AND-OR Gates</td>
+
+<td>Logical AND-OR</td>
+</tr>
+
+<tr>
+<td>
+<center>ax</center>
+</td>
+
+<td>XOR Gates</td>
+
+<td>AND-into-XOR Gate</td>
+</tr>
+
+<tr>
+<td>
+<center>buf</center>
+</td>
+
+<td>Buffers / Inverters</td>
+
+<td>Non-Inverting buffer</td>
+</tr>
+
+<tr>
+<td>
+<center>fa</center>
+</td>
+
+<td>Adders</td>
+
+<td>Full adder</td>
+</tr>
+
+<tr>
+<td>
+<center>fd</center>
+</td>
+
+<td>Flip-Flops</td>
+
+<td>D flip-flop</td>
+</tr>
+
+<tr>
+<td>
+<center><b>fdf</b></center>
+</td>
+
+<td>Flip-Flops</td>
+
+<td>Fast flip-flop</td>
+</tr>
+
+<tr>
+<td>
+<center><b>fdm</b></center>
+</td>
+
+<td>Flip-Flops</td>
+
+<td>Multiplexed D flip-flop</td>
+</tr>
+
+<tr>
+<td>
+<center>fjk</center>
+</td>
+
+<td>Flip-Flops</td>
+
+<td>J-K flip-flop</td>
+</tr>
+
+<tr>
+<td>
+<center>ha</center>
+</td>
+
+<td>Adders</td>
+
+<td>Half adder</td>
+</tr>
+
+<tr>
+<td>
+<center>hld</center>
+</td>
+
+<td>Miscellaneous</td>
+
+<td>Bus holder</td>
+</tr>
+
+<tr>
+<td>
+<center>inv</center>
+</td>
+
+<td>Buffers / Inverters</td>
+
+<td>Inverter</td>
+</tr>
+
+<tr>
+<td>
+<center>ld</center>
+</td>
+
+<td>Latches</td>
+
+<td>D latch</td>
+</tr>
+
+<tr>
+<td>
+<center>ldm</center>
+</td>
+
+<td>Latches</td>
+
+<td>Multiplexed D latch</td>
+</tr>
+
+<tr>
+<td>
+<center>mx</center>
+</td>
+
+<td>Multiplexer</td>
+
+<td>Multiplexer</td>
+</tr>
+
+<tr>
+<td>
+<center>nand</center>
+</td>
+
+<td>NAND Gates</td>
+
+<td>Logical NAND</td>
+</tr>
+
+<tr>
+<td>
+<center>nor</center>
+</td>
+
+<td>NOR Gates</td>
+
+<td>Logical NOR</td>
+</tr>
+
+<tr>
+<td>
+<center>oa</center>
+</td>
+
+<td>OR-AND Gates</td>
+
+<td>Logical OR-AND</td>
+</tr>
+
+<tr>
+<td>
+<center>or</center>
+</td>
+
+<td>OR Gates</td>
+
+<td>Logical OR</td>
+</tr>
+
+<tr>
+<td>
+<center>tri</center>
+</td>
+
+<td>Buffers / Inverters</td>
+
+<td>Tristate buffer</td>
+</tr>
+
+<tr>
+<td>
+<center>xa</center>
+</td>
+
+<td>XOR Gates</td>
+
+<td>XOR-into-AND gate</td>
+</tr>
+
+<tr>
+<td>
+<center>xnor</center>
+</td>
+
+<td>XOR Gates</td>
+
+<td>Logical XNOR</td>
+</tr>
+
+<tr>
+<td>
+<center>xor</center>
+</td>
+
+<td>XOR Gates</td>
+
+<td>Logical XOR</td>
+</tr>
+
+<tr>
+<td>
+<center>(miscellaneous)</center>
+</td>
+
+<td>Miscellaneous</td>
+
+<td>Power, ground tie-off, etc.</td>
+</tr>
+</table>
+
+<h2>
+<a NAME="Core Cell Name Variation"></a>Standard Cell Name Variation</h2>
+The variation part of a Standard Cell name is different for different cell
+functions. For simple logical gates (e.g., AND, NAND, NOR, XOR, XNOR),
+the variation refers to the number of inputs. For complex gates (AND-OR,
+OR-AND), the variation refers to the logic configuration. For sequential
+cells, the variation refers to the existence or non-existence of preset
+and clear pins.
+<br>&nbsp;
+<table BORDER CELLPADDING=0 >
+<tr>
+<th>Cell Type</th>
+
+<th>Letter in Cell Name</th>
+
+<th>Meaning of Letter</th>
+</tr>
+
+<tr>
+<td>AND, NAND, OR, NOR, XOR, Buffers, Inverters, Multiplexers</td>
+
+<td>
+<center>[1-n]</center>
+</td>
+
+<td>Number of inputs</td>
+</tr>
+
+<tr>
+<td>AND-OR, OR-AND</td>
+
+<td>
+<center>[1-n]</center>
+</td>
+
+<td>Random indicator of complex gate function</td>
+</tr>
+
+<tr>
+<td>Adders</td>
+
+<td>
+<center>[1-n]</center>
+</td>
+
+<td>1 = non-inverting outputs
+<br>2 = CO inverted</td>
+</tr>
+
+<tr>
+<td>Flip-Flops, Latches</td>
+
+<td>
+<center>[1-n]</center>
+</td>
+
+<td>1 = No set or clear
+<br>2 = Active low or clear
+<br>3 = Active low set
+<br>4 = Active set and clear</td>
+</tr>
+</table>
+
+<h2>
+<a NAME="Inversions"></a>Inversions</h2>
+DesignWare Standard Cells can have inverted inputs or outputs. The number
+of these inversions is indicated by a letter in the cell name. The following
+table describes the correspondence to the inversion letter in the cell
+name and the number of inverted inputs for combinational cells.
+<br>&nbsp;
+<table BORDER CELLPADDING=0 >
+<caption valign="top">Inversion Field in Combinational Cell Names</caption>
+
+<tr>
+<th>Letter in Cell Name</th>
+
+<th>Number of Inverted Inputs</th>
+</tr>
+
+<tr>
+<td>
+<center>a</center>
+</td>
+
+<td>
+<center>0</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>b</center>
+</td>
+
+<td>
+<center>1</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>c</center>
+</td>
+
+<td>
+<center>2</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>d</center>
+</td>
+
+<td>
+<center>3</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>e</center>
+</td>
+
+<td>
+<center>4</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>f</center>
+</td>
+
+<td>
+<center>5</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>g</center>
+</td>
+
+<td>
+<center>6</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>h</center>
+</td>
+
+<td>
+<center>7</center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center>i</center>
+</td>
+
+<td>
+<center>8</center>
+</td>
+</tr>
+</table>
+
+<p>The correspondence for the inversion field for sequential cells is shown
+below
+<br>&nbsp;
+<table BORDER CELLPADDING=0 >
+<caption valign="top">Inversion Field in Sequential Cell Names</caption>
+
+<tr>
+<th>Letter in Cell Name</th>
+
+<th>Number of Inverted Pin</th>
+</tr>
+
+<tr>
+<td>
+<center>a</center>
+</td>
+
+<td>none</td>
+</tr>
+
+<tr>
+<td>
+<center>b</center>
+</td>
+
+<td>CLK</td>
+</tr>
+
+<tr>
+<td>
+<center>c</center>
+</td>
+
+<td>Q</td>
+</tr>
+</table>
+
+<h2>
+<a NAME="Output Drive"></a>Output Drive</h2>
+The output drive strength field indicates the relative size of the output
+transistors. The drive strength is an integer number. The strengths are
+approximately proportional. For example, a nand2a2 has about twice the
+drive strength of a nand2a1.
+<h2>
+<a NAME="Truth Table"></a>Truth Table</h2>
+The functional behavior of combinational Standard Cells is described using
+truth tables.
+<br>The symbols used in the truth table are shown below:
+<br>&nbsp;
+<table BORDER CELLPADDING=0 >
+<caption valign="top">Truth Table Conventions</caption>
+
+<tr>
+<th>Symbol</th>
+
+<th>Convention</th>
+</tr>
+
+<tr>
+<td>
+<center>0</center>
+</td>
+
+<td>Logic 0</td>
+</tr>
+
+<tr>
+<td>
+<center>1</center>
+</td>
+
+<td>Logic 1</td>
+</tr>
+
+<tr>
+<td>
+<center>X</center>
+</td>
+
+<td>Unknown (either 1 or 0)</td>
+</tr>
+
+<tr>
+<td>
+<center>Z</center>
+</td>
+
+<td>High Impedance</td>
+</tr>
+
+<tr>
+<td>
+<center>--</center>
+</td>
+
+<td>Don't Care</td>
+</tr>
+
+<tr>
+<td>
+<center>--></center>
+</td>
+
+<td>State Change Edge</td>
+</tr>
+</table>
+
+<h2>
+<a NAME="Setup and Hold Time"></a>Setup and Hold Time</h2>
+Setup and hold times are provided for sequential cells.
+<br>The given values are the worst-case values for any core cell input
+pin.
+<br>For example, the setup timing given for an "fdm1a1" cell is the worst
+setup time for D0, D1, and S.
+<p>
+<hr align="left" noshade>
+<br>&nbsp;
+</body>
+</html>

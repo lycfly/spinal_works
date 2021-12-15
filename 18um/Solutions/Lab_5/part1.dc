@@ -1,0 +1,49 @@
+remove_design -designs
+read TOP_HIER.db
+
+current_design TOP_HIER
+
+check_test
+preview_scan -show {scan_clocks, cells}
+
+set_scan_configuration -clock_mixing mix_edges
+preview_scan -show {scan_clocks, cells}
+
+set_scan_configuration -clock_mixing mix_clocks
+set_scan_configuration -chain_count 3
+preview_scan -show {scan_clocks, cells}
+
+set_scan_configuration -add_lockup false
+preview_scan -show {scan_clocks, cells}
+
+set_scan_segment shift -access \
+	{test_scan_in,  instA/sh1_reg/D, \
+	 test_scan_out, instA/sh4_reg/Q} \
+	-contains {"instA/sh*reg"}
+preview_scan -show all
+
+preview_scan -script > scan.scr
+include ../Solutions/Lab_6/scan.scr
+preview_scan -show all
+
+set_scan_signal test_scan_in  -port b1[1] -chain path1
+set_scan_signal test_scan_out -port d1[1] -chain path1
+set_scan_signal test_scan_in  -port b1[2] -chain path2
+set_scan_signal test_scan_out -port d1[2] -chain path2
+set_scan_signal test_scan_in  -port b1[3] -chain path3
+set_scan_signal test_scan_out -port d1[3] -chain path3
+set_scan_signal test_scan_enable -port test_se -hookup sebuf/Z
+
+preview_scan -show all
+
+set_scan_configuration -bidi_mode input
+check_test
+
+insert_scan
+check_test
+report_test -scan_path
+
+create_test_patterns
+report_test -coverage -faults -class untested
+
+remove_design -designs

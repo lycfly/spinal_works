@@ -1,0 +1,192 @@
+ 
+****************************************
+Report : timing
+        -path full_clock_expanded
+        -delay max
+        -max_paths 50
+        -sort_by slack
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Sun Nov 28 20:47:41 2021
+****************************************
+
+Operating Conditions: nom_pvt   Library: gtech
+Wire Load Model Mode: top
+
+  Startpoint: res_last_vld_reg
+              (rising edge-triggered flip-flop)
+  Endpoint: res_vld (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  res_last_vld_reg/clocked_on (**SEQGEN**)                0.00       0.00 r
+  res_last_vld_reg/Q (**SEQGEN**)                         0.00       0.00 r
+  res_vld (out)                                           0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: res_last_reg_9_
+              (rising edge-triggered flip-flop)
+  Endpoint: res[9] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  res_last_reg_9_/clocked_on (**SEQGEN**)                 0.00       0.00 r
+  res_last_reg_9_/Q (**SEQGEN**)                          0.00       0.00 r
+  res[9] (out)                                            0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: res_last_reg_8_
+              (rising edge-triggered flip-flop)
+  Endpoint: res[8] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  res_last_reg_8_/clocked_on (**SEQGEN**)                 0.00       0.00 r
+  res_last_reg_8_/Q (**SEQGEN**)                          0.00       0.00 r
+  res[8] (out)                                            0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: res_last_reg_7_
+              (rising edge-triggered flip-flop)
+  Endpoint: res[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  res_last_reg_7_/clocked_on (**SEQGEN**)                 0.00       0.00 r
+  res_last_reg_7_/Q (**SEQGEN**)                          0.00       0.00 r
+  res[7] (out)                                            0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: res_last_reg_6_
+              (rising edge-triggered flip-flop)
+  Endpoint: res[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  res_last_reg_6_/clocked_on (**SEQGEN**)                 0.00       0.00 r
+  res_last_reg_6_/Q (**SEQGEN**)                          0.00       0.00 r
+  res[6] (out)                                            0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: res_last_reg_5_
+              (rising edge-triggered flip-flop)
+  Endpoint: res[5] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  res_last_reg_5_/clocked_on (**SEQGEN**)                 0.00       0.00 r
+  res_last_reg_5_/Q (**SEQGEN**)                          0.00       0.00 r
+  res[5] (out)                                            0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: res_last_reg_4_
+              (rising edge-triggered flip-flop)
+  Endpoint: res[4] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  res_last_reg_4_/clocked_on (**SEQGEN**)                 0.00       0.00 r
+  res_last_reg_4_/Q (**SEQGEN**)                          0.00       0.00 r
+  res[4] (out)                                            0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: res_last_reg_3_
+              (rising edge-triggered flip-flop)
+  Endpoint: res[3] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  res_last_reg_3_/clocked_on (**SEQGEN**)                 0.00       0.00 r
+  res_last_reg_3_/Q (**SEQGEN**)                          0.00       0.00 r
+  res[3] (out)                                            0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: res_last_reg_2_
+              (rising edge-triggered flip-flop)
+  Endpoint: res[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  res_last_reg_2_/clocked_on (**SEQGEN**)                 0.00       0.00 r
+  res_last_reg_2_/Q (**SEQGEN**)                          0.00       0.00 r
+  res[2] (out)                                            0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: res_last_reg_1_
+              (rising edge-triggered flip-flop)
+  Endpoint: res[1] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  res_last_reg_1_/clocked_on (**SEQGEN**)                 0.00       0.00 r
+  res_last_reg_1_/Q (**SEQGEN**)                          0.00       0.00 r
+  res[1] (out)                                            0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: res_last_reg_0_
+              (rising edge-triggered flip-flop)
+  Endpoint: res[0] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  res_last_reg_0_/clocked_on (**SEQGEN**)                 0.00       0.00 r
+  res_last_reg_0_/Q (**SEQGEN**)                          0.00       0.00 r
+  res[0] (out)                                            0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

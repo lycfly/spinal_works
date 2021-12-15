@@ -1,0 +1,19 @@
+remove_design -designs
+read CLOCK_DFT.db
+
+check_test
+preview_scan -show all
+
+create_clock -name clock1 -period 100 find(port, "clk")
+create_clock -name clock2 -period 100 find(pin, "clk_inst/DIV_CLK")
+
+set_scan_path path1 all_registers(-edge_triggered -clock clock1) -complete true
+set_scan_path path2
+set_scan_path path3
+
+preview_scan -show all
+
+insert_scan
+
+check_test
+report_test -scan_path

@@ -1,0 +1,335 @@
+#################################
+
+set_dont_touch     u_miner_hat/u_margin_controller/U_PSM
+set_dont_touch     u_LVLLH_X1M_A9TL40
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/u_or_tree_core_1
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/u_or_tree_core_0
+
+##################################u_core_1_avs###################################
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_8
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_9
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_10
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_11
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_12
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_13
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_14
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_15
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_16
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_17
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_18
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_19
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_20
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_21
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_22
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_23
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_24
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_25
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_26
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_27
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_28
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_29
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_30
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_e_reg_31
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_8
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_9
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_10
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_11
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_12
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_13
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_14
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_15
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_16
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_17
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_18
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_19
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_20
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_21
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_22
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_23
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_24
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_25
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_26
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_27
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_28
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_29
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_30
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/reg_a_reg_31
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_a_reg_22
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_a_reg_23
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_a_reg_30
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_a_reg_31
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_10
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_11
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_12
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_13
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_14
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_15
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_16
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_17
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_18
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_19
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_20
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_21
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_22
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_23
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_24
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_25
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_26
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_27
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_28
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_29
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_30
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/pre_e_reg_31
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_9
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_10
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_11
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_12
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_13
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_14
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_15
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_16
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_17
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_18
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_19
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_20
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_21
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_22
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_23
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_24
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_25
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_26
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_27
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_28
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_29
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_30
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w0_reg_31
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_6
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_7
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_10
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_11
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_12
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_13
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_14
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_15
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_17
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_18
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_19
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_20
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_21
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_22
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_23
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_24
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_25
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_26
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_27
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_28
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_29
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_30
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w1_reg_31
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w7_reg_14
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w7_reg_15
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w7_reg_19
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w7_reg_21
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w7_reg_22
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w7_reg_23
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w7_reg_24
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w7_reg_25
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w7_reg_26
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w7_reg_29
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w7_reg_30
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_1_avs/w7_reg_31
+################ Internal Design Rule ########################################################
+
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_5
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_6
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_7
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_8
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_9
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_10
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_11
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_12
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_13
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_14
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_15
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_16
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_17
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_18
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_19
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_20
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_21
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_22
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_23
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_24
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_25
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_26
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_27
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_28
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_29
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_30
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_e_reg_31
+
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_3
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_6
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_7
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_8
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_9
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_10
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_11
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_12
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_13
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_14
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_15
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_16
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_17
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_18
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_19
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_20
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_21
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_22
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_23
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_24
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_25
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_26
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_27
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_28
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_29
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_30
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/reg_a_reg_31
+
+
+
+
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_a_reg_15
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_a_reg_22
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_a_reg_23
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_a_reg_28
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_a_reg_29
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_a_reg_30
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_a_reg_31
+
+
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_10
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_11
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_12
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_13
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_14
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_15
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_16
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_17
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_18
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_19
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_20
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_21
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_22
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_23
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_24
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_25
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_26
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_27
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_28
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_29
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_30
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/pre_e_reg_31
+
+
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_6
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_7
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_8
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_9
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_10
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_11
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_12
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_13
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_14
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_15
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_16
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_17
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_18
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_19
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_20
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_21
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_22
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_23
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_24
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_25
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_26
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_27
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_28
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_29
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_30
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w0_reg_31
+
+
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_11
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_12
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_13
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_14
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_15
+#####set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_16
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_17
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_18
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_19
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_20
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_21
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_22
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_23
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_24
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_25
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_26
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_27
+########set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_28
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_29
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_30
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w1_reg_31
+
+
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w15_reg_11
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w15_reg_12
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w15_reg_13
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w15_reg_14
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w15_reg_17
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w15_reg_29
+set_dont_touch     u_miner_hat/M/u_core/u_btc_unit/u_cal_core_avs/u_core_0_avs/w15_reg_30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+################ Internal Design Rule ########################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

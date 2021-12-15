@@ -1,0 +1,210 @@
+ 
+****************************************
+Report : clock_gating
+        -gated
+        -verbose
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Oct 26 20:44:43 2021
+****************************************
+
+
+--------------------------------------------------------------------------------
+                             Gated Register Report
+--------------------------------------------------------------------------------
+            Clock Gating Bank                    |         Gated Register 
+--------------------------------------------------------------------------------
+                                                 |
+ calvn/clk_gate_VnReg_4_reg                      |       calvn/VnReg_4_reg_7_
+                                                 |       calvn/VnReg_7_reg_7_
+                                                 |       calvn/VnReg_6_reg_7_
+                                                 |       calvn/VnReg_5_reg_7_
+                                                 |       calvn/VnReg_5_reg_0_
+                                                 |       calvn/VnReg_7_reg_0_
+                                                 |       calvn/VnReg_6_reg_0_
+                                                 |       calvn/VnReg_4_reg_0_
+                                                 |       calvn/VnReg_7_reg_1_
+                                                 |       calvn/VnReg_6_reg_1_
+                                                 |       calvn/VnReg_5_reg_1_
+                                                 |       calvn/VnReg_4_reg_1_
+                                                 |       calvn/VnReg_7_reg_2_
+                                                 |       calvn/VnReg_6_reg_2_
+                                                 |       calvn/VnReg_5_reg_2_
+                                                 |       calvn/VnReg_4_reg_2_
+                                                 |       calvn/VnReg_4_reg_3_
+                                                 |       calvn/VnReg_7_reg_3_
+                                                 |       calvn/VnReg_6_reg_3_
+                                                 |       calvn/VnReg_5_reg_3_
+                                                 |       calvn/VnReg_4_reg_4_
+                                                 |       calvn/VnReg_7_reg_4_
+                                                 |       calvn/VnReg_6_reg_4_
+                                                 |       calvn/VnReg_5_reg_4_
+                                                 |       calvn/VnReg_4_reg_5_
+                                                 |       calvn/VnReg_7_reg_5_
+                                                 |       calvn/VnReg_6_reg_5_
+                                                 |       calvn/VnReg_5_reg_5_
+                                                 |       calvn/VnReg_4_reg_6_
+                                                 |       calvn/VnReg_7_reg_6_
+                                                 |       calvn/VnReg_6_reg_6_
+                                                 |       calvn/VnReg_5_reg_6_
+                                                 |
+ calvn/clk_gate_VnReg_0_reg                      |       calvn/VnReg_2_reg_7_
+                                                 |       calvn/VnReg_1_reg_7_
+                                                 |       calvn/VnReg_0_reg_7_
+                                                 |       calvn/VnReg_3_reg_0_
+                                                 |       calvn/VnReg_2_reg_0_
+                                                 |       calvn/VnReg_1_reg_0_
+                                                 |       calvn/VnReg_0_reg_0_
+                                                 |       calvn/VnReg_3_reg_1_
+                                                 |       calvn/VnReg_1_reg_1_
+                                                 |       calvn/VnReg_2_reg_1_
+                                                 |       calvn/VnReg_0_reg_1_
+                                                 |       calvn/VnReg_3_reg_2_
+                                                 |       calvn/VnReg_2_reg_2_
+                                                 |       calvn/VnReg_1_reg_2_
+                                                 |       calvn/VnReg_0_reg_2_
+                                                 |       calvn/VnReg_3_reg_3_
+                                                 |       calvn/VnReg_2_reg_3_
+                                                 |       calvn/VnReg_1_reg_3_
+                                                 |       calvn/VnReg_0_reg_3_
+                                                 |       calvn/VnReg_3_reg_4_
+                                                 |       calvn/VnReg_2_reg_4_
+                                                 |       calvn/VnReg_1_reg_4_
+                                                 |       calvn/VnReg_0_reg_4_
+                                                 |       calvn/VnReg_3_reg_5_
+                                                 |       calvn/VnReg_2_reg_5_
+                                                 |       calvn/VnReg_1_reg_5_
+                                                 |       calvn/VnReg_0_reg_5_
+                                                 |       calvn/VnReg_3_reg_6_
+                                                 |       calvn/VnReg_2_reg_6_
+                                                 |       calvn/VnReg_1_reg_6_
+                                                 |       calvn/VnReg_0_reg_6_
+                                                 |       calvn/VnReg_3_reg_7_
+                                                 |
+ calvn/clk_gate_SumXinReg_reg                    |       calvn/SumXinReg_reg_0_
+                                                 |       calvn/SumXinReg_reg_3_
+                                                 |       calvn/SumXinReg_reg_4_
+                                                 |       calvn/SumXinReg_reg_5_
+                                                 |       calvn/SumXinReg_reg_6_
+                                                 |       calvn/SumXinReg_reg_7_
+                                                 |       calvn/SumXinReg_reg_8_
+                                                 |       calvn/SumXinReg_reg_10_
+                                                 |       calvn/SumXinReg_reg_9_
+                                                 |       calvn/SumXinReg_reg_1_
+                                                 |       calvn/SumXinReg_reg_2_
+                                                 |
+ dot/clk_gate_mac_cnt_reg                        |       dot/psum2_reg_2_
+                                                 |       dot/psum2_reg_3_
+                                                 |       dot/psum2_reg_4_
+                                                 |       dot/psum2_reg_5_
+                                                 |       dot/psum2_reg_6_
+                                                 |       dot/psum2_reg_7_
+                                                 |       dot/psum2_reg_8_
+                                                 |       dot/psum2_reg_9_
+                                                 |       dot/psum2_reg_10_
+                                                 |       dot/psum2_reg_11_
+                                                 |       dot/psum2_reg_12_
+                                                 |       dot/psum2_reg_13_
+                                                 |       dot/psum2_reg_14_
+                                                 |       dot/psum2_reg_15_
+                                                 |       dot/psum2_reg_16_
+                                                 |       dot/psum2_reg_17_
+                                                 |       dot/psum2_reg_18_
+                                                 |       dot/mac_cnt_reg_2_
+                                                 |       dot/mac_cnt_reg_1_
+                                                 |       dot/mac_cnt_reg_0_
+                                                 |
+ dot/clk_gate_psum2_reg                          |       dot/psum2_reg_1_
+                                                 |       dot/psum1_reg_1_
+                                                 |       dot/psum1_reg_2_
+                                                 |       dot/psum1_reg_3_
+                                                 |       dot/psum1_reg_4_
+                                                 |       dot/psum1_reg_5_
+                                                 |       dot/psum1_reg_6_
+                                                 |       dot/psum1_reg_7_
+                                                 |       dot/psum1_reg_8_
+                                                 |       dot/psum1_reg_9_
+                                                 |       dot/psum1_reg_10_
+                                                 |       dot/psum1_reg_11_
+                                                 |       dot/psum1_reg_12_
+                                                 |       dot/psum1_reg_13_
+                                                 |       dot/psum1_reg_14_
+                                                 |       dot/psum1_reg_15_
+                                                 |       dot/psum1_reg_16_
+                                                 |       dot/psum1_reg_17_
+                                                 |       dot/psum1_reg_18_
+                                                 |
+ cordic/clk_gate_xn_reg                          |       cordic/xn_reg_21_
+                                                 |       cordic/xn_reg_20_
+                                                 |       cordic/xn_reg_19_
+                                                 |       cordic/xn_reg_18_
+                                                 |       cordic/xn_reg_17_
+                                                 |       cordic/xn_reg_16_
+                                                 |       cordic/xn_reg_15_
+                                                 |       cordic/xn_reg_14_
+                                                 |       cordic/xn_reg_13_
+                                                 |       cordic/xn_reg_12_
+                                                 |       cordic/xn_reg_11_
+                                                 |       cordic/xn_reg_10_
+                                                 |       cordic/xn_reg_9_
+                                                 |       cordic/xn_reg_8_
+                                                 |       cordic/xn_reg_7_
+                                                 |       cordic/xn_reg_6_
+                                                 |       cordic/xn_reg_5_
+                                                 |       cordic/xn_reg_4_
+                                                 |       cordic/xn_reg_3_
+                                                 |       cordic/xn_reg_2_
+                                                 |       cordic/xn_reg_1_
+                                                 |       cordic/xn_reg_0_
+                                                 |
+ cordic/clk_gate_yn_reg                          |       cordic/yn_reg_21_
+                                                 |       cordic/yn_reg_20_
+                                                 |       cordic/yn_reg_19_
+                                                 |       cordic/yn_reg_18_
+                                                 |       cordic/yn_reg_17_
+                                                 |       cordic/yn_reg_16_
+                                                 |       cordic/yn_reg_15_
+                                                 |       cordic/yn_reg_14_
+                                                 |       cordic/yn_reg_13_
+                                                 |       cordic/yn_reg_12_
+                                                 |       cordic/yn_reg_11_
+                                                 |       cordic/yn_reg_10_
+                                                 |       cordic/yn_reg_9_
+                                                 |       cordic/yn_reg_8_
+                                                 |       cordic/yn_reg_7_
+                                                 |       cordic/yn_reg_6_
+                                                 |       cordic/yn_reg_5_
+                                                 |       cordic/yn_reg_4_
+                                                 |       cordic/yn_reg_3_
+                                                 |       cordic/yn_reg_2_
+                                                 |       cordic/yn_reg_1_
+                                                 |       cordic/yn_reg_0_
+                                                 |
+ cordic/clk_gate_nozero_flg_reg                  |       cordic/nozero_flg_reg
+                                                 |       cordic/cal_cnt_reg_0_
+                                                 |       cordic/cal_cnt_reg_1_
+                                                 |
+ cordic/clk_gate_res_rg_reg                      |       cordic/res_rg_reg_6_
+                                                 |       cordic/res_rg_reg_5_
+                                                 |       cordic/res_rg_reg_4_
+                                                 |       cordic/res_rg_reg_3_
+                                                 |       cordic/res_rg_reg_2_
+                                                 |       cordic/res_rg_reg_1_
+                                                 |
+--------------------------------------------------------------------------------
+
+
+                             Clock Gating Summary
+          ------------------------------------------------------------
+          |    Number of Clock gating elements    |        9         |
+          |                                       |                  |
+          |    Number of Gated registers          |   167 (97.09%)   |
+          |                                       |                  |
+          |    Number of Ungated registers        |     5 (2.91%)    |
+          |                                       |                  |
+          |    Total number of registers          |      172         |
+          ------------------------------------------------------------
+
+
+
+1

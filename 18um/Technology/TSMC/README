@@ -1,0 +1,22 @@
+Sun Aug 13 10:39:26 PDT 2000
+
+What: TSMC Library for CES
+Name: SCB971 0.18um
+Type: SiArc Standard Cell (SSC)
+Path: /remote/drg58/slsport/release/odyssey/lib/taipei/SC_SCB971_2.3.1
+                                                       SC_SCB971_2.3.2 <- Patch.
+
+Tree:
+               core              verilog           io
+                |                   |               |
+                |                 core.v            |
+             synopsys               io.v        synopsys
+            /     |                                 |  \
+         lib     db                                db   lib
+        /      ___|_____                            |      \
+    *.lib     /         \                           |     *.lib
+           power      nopower                     power      
+                     /   |   \                   /  |  \
+                    /    |    \                 /   |   \
+             slow.db  typ.db   fast.db   slow.db typ.db fast.db
+                     core.sdb

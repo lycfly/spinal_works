@@ -1,0 +1,7 @@
+`include "/mnt/mydata/spinal_works/cardiff-b0/cal_phase.v"
+`include "/mnt/mydata/spinal_works/cardiff-b0/FloorAndWrap.v"
+`include "/mnt/mydata/spinal_works/cardiff-b0/s_table.v"
+`include "/mnt/mydata/spinal_works/cardiff-b0/FloorAndWrap_8.v"
+`include "/mnt/mydata/spinal_works/cardiff-b0/cal_vn.v"
+`include "/mnt/mydata/spinal_works/cardiff-b0/dotVn.v"
+`include "/mnt/mydata/spinal_works/cardiff-b0/cordic_int.v"

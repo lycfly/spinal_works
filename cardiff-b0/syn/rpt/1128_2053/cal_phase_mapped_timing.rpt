@@ -1,0 +1,42 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Sun Nov 28 20:54:05 2021
+****************************************
+
+Operating Conditions: nom_pvt   Library: gtech
+Wire Load Model Mode: top
+
+  Startpoint: res_last_vld_reg
+              (rising edge-triggered flip-flop)
+  Endpoint: res_vld (output port)
+  Path Group: (none)
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  res_last_vld_reg/clocked_on (**SEQGEN**)                0.00      0.00       0.00 r
+  res_last_vld_reg/Q (**SEQGEN**)                         0.00      0.00       0.00 r
+  res_vld (net)                                 1                   0.00       0.00 r
+  res_vld (out)                                           0.00      0.00       0.00 r
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

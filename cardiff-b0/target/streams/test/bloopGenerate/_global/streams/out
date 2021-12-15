@@ -1,0 +1,4 @@
+[debug] [cardiff-b0-test] Classpath dependencies List()
+[debug] [cardiff-b0-test] Dependencies from configurations List(cardiff-b0)
+[debug] Bloop wrote the configuration of project 'cardiff-b0-test' to '/mnt/mydata/spinal_works/cardiff-b0/.bloop/cardiff-b0-test.json'
+[success] Generated .bloop/cardiff-b0-test.json

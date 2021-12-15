@@ -1,0 +1,41 @@
+# DFTW WORKSHOP
+# Lab Transfer Script
+# Date: 11 June 2001
+#
+# File: xfer_dftw *
+# Path: ~cdancak/bin
+# Call: ~cdancak/bin/xfer_dftw
+# From: ~classNNN [401..415]
+# Time: ~5 min
+#
+# SOURCE/DESTINATION DIRECTORIES
+  set lab_path = ~cdancak/DFTW/Labs_Jun.11
+  set dst_path = ~`whoami`
+#
+# EMPTY ~classNNN DIRECTORY
+  cd ${dst_path}
+# Prompt before emptying out:
+  echo "Ready to empty out:  `pwd` "
+  echo " "
+  echo -n "Type ok to proceed:  "
+  set _kbi = $<
+  if ("$_kbi" != "ok")  suspend
+  echo "Now emptying out: `pwd` "
+  /bin/rm -rf *
+  echo " "
+#
+# COPY IN LAB FILES
+  echo "Copying lab files into:  `pwd` "
+  echo " "
+ (cd ${lab_path}; \
+  find . -print -depth | \
+  cpio -pdmv ${dst_path} )
+#
+# COPY IN DOT FILES
+  echo " "
+  echo "Copying dot files..."
+  cp ${lab_path}/Setup/.Xdefaults      ${dst_path}
+  cp ${lab_path}/Setup/.cshrc-specific ${dst_path}
+  echo "Done with `whoami`"
+  echo " "
+# Done.

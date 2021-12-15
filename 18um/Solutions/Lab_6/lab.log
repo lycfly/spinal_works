@@ -1,0 +1,738 @@
+remove_design -designs
+1
+
+read INIT.db
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/INIT.db'
+Current design is now '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/INIT.db:INIT'
+{"INIT", "CONFIG", "MUX", "CONVERTOR_CKT", "COMPUTE_BLOCK", "ALARM_SM_2", "COMPARATOR", "ALARM_BLOCK", "ALARM_COUNTER", "ALARM_COUNTER_DW01_inc_6_0", "ALARM_STATE_MACHINE", "TIME_BLOCK", "TIME_COUNTER", "TIME_COUNTER_DW01_inc_6_0", "TIME_STATE_MACHINE", "CLOCK_GEN", "CLOCK_GEN_DW01_inc_6_0"}
+
+current_design INIT
+Current design is 'INIT'.
+{"INIT"}
+
+check_test
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/Lib/workshop_lib.db'
+Loading db file '/remote/release/1998.02/libraries/syn/gtech.db'
+Loading db file '/remote/release/1998.02/libraries/syn/standard.sldb'
+  Loading target library 'workshop_lib'
+Warning: Multibit library cell 'LD1X4P' will not be used in multibit optimization. (OPT-918)
+Warning: Multibit library cell 'LD1X4' will not be used in multibit optimization. (OPT-918)
+  Loading design 'INIT'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port CLK (45.0,55.0). (TEST-260)
+Warning: Normal mode clock pin CP of cell U1/U1/U1/CURRENT_STATE_reg[1] (FD1) is uncontrollable. (TEST-169)
+Information: The network contains: U1/U1/U1/CURRENT_STATE_reg[1]/CP, U1/U9/Z, U1/U9/B, U_CONF/U28/Z, U_CONF/U28/C, U_CONF/conf_reg_reg[0]/Q, U_CONF/U28/B, U_CONF/U32/Z, U_CONF/U32/A, U_CONF/conf_reg_reg[1]/Q, U_CONF/U28/A, U_CONF/conf_reg_reg[2]/Q, U1/U9/A, U1/U10/Z, U1/U10/A, U1/U7/DIV_CLK_reg/Q. (TEST-281)
+Information: There are 32 other pins with the same violation. (TEST-170)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port CLK...
+Warning: Data pin Z of cell U1/U9 (EON1) is driven by a clock/enable signal. (TEST-131)
+Information: The network contains: CLK, U1/U9/C. (TEST-281)
+  ...simulating capture clock falling edge at port CLK...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : CLK. (TEST-262)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 34
+**************************************************
+
+PROTOCOL VIOLATIONS
+     33 Uncontrollable clock violations (TEST-169)
+CAPTURE VIOLATIONS
+      1 Clock used as data violation (TEST-131)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  33 out of 43 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+   *  33 cells are black boxes
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  10 cells are valid scan cells
+
+1
+set_test_hold 0 CONF_ENABLE
+Performing set_test_hold on port 'CONF_ENABLE'. 
+1
+check_test
+  Loading design 'INIT'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port CLK (45.0,55.0). (TEST-260)
+Warning: Normal mode clock pin CP of cell U1/U1/U1/CURRENT_STATE_reg[1] (FD1) is uncontrollable. (TEST-169)
+Information: The network contains: U1/U1/U1/CURRENT_STATE_reg[1]/CP, U1/U9/Z, U1/U9/B, U_CONF/U28/Z, U_CONF/U28/C, U_CONF/conf_reg_reg[0]/Q, U_CONF/U28/B, U_CONF/U32/Z, U_CONF/U32/A, U_CONF/conf_reg_reg[1]/Q, U_CONF/U28/A, U_CONF/conf_reg_reg[2]/Q, U1/U9/A, U1/U10/Z, U1/U10/A, U1/U7/DIV_CLK_reg/Q. (TEST-281)
+Information: There are 32 other pins with the same violation. (TEST-170)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port CLK...
+Warning: Data pin Z of cell U1/U9 (EON1) is driven by a clock/enable signal. (TEST-131)
+Information: The network contains: CLK, U1/U9/C. (TEST-281)
+  ...simulating capture clock falling edge at port CLK...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : CLK. (TEST-262)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 34
+**************************************************
+
+PROTOCOL VIOLATIONS
+     33 Uncontrollable clock violations (TEST-169)
+CAPTURE VIOLATIONS
+      1 Clock used as data violation (TEST-131)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  33 out of 43 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+   *  33 cells are black boxes
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  10 cells are valid scan cells
+
+1
+write_test_protocol -out no_scan.tpf
+Writing test protocol file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_7/no_scan.tpf'...
+1
+sh cp ../Solutions/Lab_7/no_scan.tpf .
+0
+read_init_protocol no_scan.tpf
+Reading initialization protocol file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_7/no_scan.tpf'...
+Information: Foreach pattern section is being ignored (TESTDB-253)
+1
+
+trace_nets find(net, TEST_MODE)
+Performing trace_nets on net 'TEST_MODE'. 
+1
+check_test
+  Loading design 'INIT'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+Warning: Sequential cell U_CONF/conf_reg_reg[0] (FD1) has constant logic 1/0 state. (TEST-142)
+Information: There are 2 other cells with the same violation. (TEST-171)
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port CLK...
+  ...simulating capture clock falling edge at port CLK...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : CLK. (TEST-262)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+/*****************************************************************/
+/* TRACE NET LEGEND:                                             */
+/*   1. VECTORS                                                  */
+/*      IV `i' : `i'th Initialization Vector                     */
+/*       SI(i) : Serial Scan In (repeated `i' times)             */
+/*         PMV : Parallel Measure Vector                         */
+/*         CAP : Capture Vector                                  */
+/*         1SO : First Scan-out Measure Vector                   */
+/*       SO(i) : Serial Scan Out (repeated `i' times)            */
+/*         VEC : Parallel Vector                                 */
+/*                                                               */
+/*   2. VALUES                                                   */
+/*           0 : Logic 0                                         */
+/*           1 : Logic 1                                         */
+/*           z : High Impedance Value                            */
+/*           u : Uninitialized                                   */
+/*          Si : Scanned-in Value                                */
+/*          Is : Initial State                                   */
+/*          Rd : Response Data                                   */
+/*           x : Unknown                                         */
+/*          So : Scanned-out Value                               */
+/*          Na : Net Values Not Available (Vector Not Simulated) */
+/*****************************************************************/
+
+STARTING PRINT OF TRACE INFORMATION FOR:
+
+Nets Traced In the Command Line:
+  TEST_MODE
+
+
+                  T   
+                  E   
+                  S   
+                  T   
+                  _   
+                  M   
+                  O   
+                  D   
+                  E   
+          ============
+     IV 1 ------------
+          0.0     x   
+     IV 2 ------------
+                  x   
+     IV 3 ------------
+          90.0    0   
+     IV 4 ------------
+          90.0    1   
+    SI(0) ------------
+                  1   
+      PMV ------------
+                  1   
+      CAP ------------
+          90.0    Na  
+          110.0   Na  
+    SO(0) ------------
+          0.0     1   
+          ============
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 3
+**************************************************
+
+SCAN IN VIOLATIONS
+      3 Cell constant during scan violations (TEST-142)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  3 out of 43 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+   *   3 cells have constant values
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  40 cells are valid scan cells
+
+1
+
+insert_scan
+  Loading design 'INIT'
+Warning: In design 'TIME_BLOCK', there are 11 output ports shorted to other output ports. (LINT-30)
+Warning: In design 'ALARM_BLOCK', there are 11 output ports shorted to other output ports. (LINT-30)
+Warning: In design 'CONVERTOR_CKT', there are 4 output ports shorted to other output ports. (LINT-30)
+
+Information: Use the 'check_design' command for 
+	 more information about warnings. (LINT-99)
+
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+  Inserting Scan Cells
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+  Transferring design 'ALARM_COUNTER_DW01_inc_6_0' to database 'INIT.db'
+  Transferring (new) design 'ALARM_COUNTER_test_1' to database 'INIT.db'
+  Transferring (new) design 'ALARM_STATE_MACHINE_test_1' to database 'INIT.db'
+  Transferring (new) design 'ALARM_BLOCK_test_1' to database 'INIT.db'
+  Transferring (new) design 'ALARM_SM_2_test_1' to database 'INIT.db'
+  Transferring design 'CLOCK_GEN_DW01_inc_6_0' to database 'INIT.db'
+  Transferring (new) design 'CLOCK_GEN_test_1' to database 'INIT.db'
+  Transferring design 'COMPARATOR' to database 'INIT.db'
+  Transferring design 'TIME_COUNTER_DW01_inc_6_0' to database 'INIT.db'
+  Transferring (new) design 'TIME_COUNTER_test_1' to database 'INIT.db'
+  Transferring (new) design 'TIME_STATE_MACHINE_test_1' to database 'INIT.db'
+  Transferring (new) design 'TIME_BLOCK_test_1' to database 'INIT.db'
+  Transferring (new) design 'COMPUTE_BLOCK_test_1' to database 'INIT.db'
+  Transferring design 'CONFIG' to database 'INIT.db'
+  Transferring design 'CONVERTOR_CKT' to database 'INIT.db'
+  Transferring design 'MUX' to database 'INIT.db'
+  Transferring design 'INIT' to database 'INIT.db'
+
+1
+check_test
+  Loading design 'INIT'
+
+Information: Starting test design rule checking for existing scan design. (TEST-220)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port CLK (45.0,55.0). (TEST-260)
+Warning: Normal mode clock pin CP of cell U1/U1/U1/CURRENT_STATE_reg[1] (FD1S) is uncontrollable. (TEST-169)
+Information: The network contains: U1/U1/U1/CURRENT_STATE_reg[1]/CP, U1/U9/Z, U1/U9/B, U_CONF/U28/Z, U_CONF/U28/C, U_CONF/conf_reg_reg[0]/Q, U_CONF/U28/B, U_CONF/U32/Z, U_CONF/U32/A, U_CONF/conf_reg_reg[1]/Q, U_CONF/U28/A, U_CONF/conf_reg_reg[2]/Q, U1/U9/A, U1/U10/Z, U1/U10/A, U1/U7/DIV_CLK_reg/Q. (TEST-281)
+Information: There are 32 other pins with the same violation. (TEST-170)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+Information: Extending scan in by one cycle because during the first cycle,
+	some scan chains do not shift in data. (TEST-301)
+  ...simulating parallel vector...
+  ...binding scan-in state...
+Warning: Cell U1/U7/COUNT_reg[0] (FD1S) is not scan controllable. (TEST-302)
+Information: Because it clocks in an unknown value from pin TI. (TEST-512)
+Information: Because pin Q of cell U1/U2/U3/MINUTES_OUT_reg[5] (FD1S) is unknown due to a previously reported violation. (TEST-522)
+Information: As a result, 6 other cells are not scan controllable. (TEST-502)
+Warning: Cell U_CONF/conf_reg_reg[0] (FD1) is not scan controllable. (TEST-302)
+Information: Because cell did not receive scan-in data from an input port. (TEST-517)
+Information: Because cell contains data that was in cell U_CONF/conf_reg_reg[0] (FD1) at the start of scan shift. (TEST-525)
+Information: There are 2 other cells with the same violation. (TEST-171)
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port CLK...
+Warning: Data pin Z of cell U1/U9 (EON1) is driven by a clock/enable signal. (TEST-131)
+Information: The network contains: CLK, U1/U9/C. (TEST-281)
+  ...simulating capture clock falling edge at port CLK...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : CLK. (TEST-262)
+  ...simulating parallel vector...
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+/*****************************************************************/
+/* TRACE NET LEGEND:                                             */
+/*   1. VECTORS                                                  */
+/*      IV `i' : `i'th Initialization Vector                     */
+/*       SI(i) : Serial Scan In (repeated `i' times)             */
+/*         PMV : Parallel Measure Vector                         */
+/*         CAP : Capture Vector                                  */
+/*         1SO : First Scan-out Measure Vector                   */
+/*       SO(i) : Serial Scan Out (repeated `i' times)            */
+/*         VEC : Parallel Vector                                 */
+/*                                                               */
+/*   2. VALUES                                                   */
+/*           0 : Logic 0                                         */
+/*           1 : Logic 1                                         */
+/*           z : High Impedance Value                            */
+/*           u : Uninitialized                                   */
+/*          Si : Scanned-in Value                                */
+/*          Is : Initial State                                   */
+/*          Rd : Response Data                                   */
+/*           x : Unknown                                         */
+/*          So : Scanned-out Value                               */
+/*          Na : Net Values Not Available (Vector Not Simulated) */
+/*****************************************************************/
+
+STARTING PRINT OF TRACE INFORMATION FOR:
+
+Nets Traced In the Command Line:
+  TEST_MODE
+
+
+                  T   
+                  E   
+                  S   
+                  T   
+                  _   
+                  M   
+                  O   
+                  D   
+                  E   
+          ============
+     IV 1 ------------
+          0.0     x   
+     IV 2 ------------
+                  x   
+    SI(7) ------------
+                  x   
+      PMV ------------
+                  x   
+      CAP ------------
+          45.0    Na  
+          55.0    Na  
+      1SO ------------
+          0.0     x   
+    SO(7) ------------
+                  x   
+          ============
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 44
+**************************************************
+
+PROTOCOL VIOLATIONS
+     33 Uncontrollable clock violations (TEST-169)
+SCAN IN VIOLATIONS
+     10 Cell is uncontrollable during scan violations (TEST-302)
+CAPTURE VIOLATIONS
+      1 Clock used as data violation (TEST-131)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  43 out of 43 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+   *  43 cells are black boxes
+   *   4 cells are identified causes of other reported violations
+
+1
+
+write_test_protocol -out scan.tpf
+Writing test protocol file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_7/scan.tpf'...
+1
+sh cp ../Solutions/Lab_7/scan.tpf .
+0
+read_init_protocol scan.tpf
+Reading initialization protocol file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_7/scan.tpf'...
+Information: Foreach pattern section is being ignored (TESTDB-253)
+1
+
+check_test
+  Loading design 'INIT'
+
+Information: Starting test design rule checking for existing scan design. (TEST-220)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...encountered protocol comment 'Test mode should be active now!!!'...
+  ...simulating serial scan-in...
+  ...40 bits scanned-in to 40 cells (total scan-in 40)...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+Warning: Sequential cell U_CONF/conf_reg_reg[0] (FD1) has constant logic 1/0 state. (TEST-142)
+Information: There are 2 other cells with the same violation. (TEST-171)
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port CLK...
+  ...simulating capture clock falling edge at port CLK...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : CLK. (TEST-262)
+  ...simulating parallel vector...
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...data scanned-out from 39 cells (total scan-out 40)...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+/*****************************************************************/
+/* TRACE NET LEGEND:                                             */
+/*   1. VECTORS                                                  */
+/*      IV `i' : `i'th Initialization Vector                     */
+/*       SI(i) : Serial Scan In (repeated `i' times)             */
+/*         PMV : Parallel Measure Vector                         */
+/*         CAP : Capture Vector                                  */
+/*         1SO : First Scan-out Measure Vector                   */
+/*       SO(i) : Serial Scan Out (repeated `i' times)            */
+/*         VEC : Parallel Vector                                 */
+/*                                                               */
+/*   2. VALUES                                                   */
+/*           0 : Logic 0                                         */
+/*           1 : Logic 1                                         */
+/*           z : High Impedance Value                            */
+/*           u : Uninitialized                                   */
+/*          Si : Scanned-in Value                                */
+/*          Is : Initial State                                   */
+/*          Rd : Response Data                                   */
+/*           x : Unknown                                         */
+/*          So : Scanned-out Value                               */
+/*          Na : Net Values Not Available (Vector Not Simulated) */
+/*****************************************************************/
+
+STARTING PRINT OF TRACE INFORMATION FOR:
+
+Nets Traced In the Command Line:
+  TEST_MODE
+
+
+                  T   
+                  E   
+                  S   
+                  T   
+                  _   
+                  M   
+                  O   
+                  D   
+                  E   
+          ============
+     IV 1 ------------
+          0.0     x   
+     IV 2 ------------
+                  x   
+     IV 3 ------------
+          90.0    0   
+     IV 4 ------------
+          90.0    1   
+   SI(40) ------------
+                  1   
+      PMV ------------
+                  1   
+      CAP ------------
+          90.0    Na  
+          110.0   Na  
+      1SO ------------
+          0.0     1   
+   SO(40) ------------
+                  1   
+          ============
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 3
+**************************************************
+
+SCAN IN VIOLATIONS
+      3 Cell constant during scan violations (TEST-142)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  3 out of 43 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+   *   3 cells have constant values
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  40 cells are valid scan cells
+
+1
+create_test_patterns
+  Loading design 'INIT'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Building test generation network
+Information: Faults on unused cell outputs are not considered, e.g. pin QN of cell U_CONF/conf_reg_reg[0] (FD1). (TEST-200)
+
+  Combinational Test Pattern Generation starts:
+
+    Start random pattern generation...
+
+       86.70% faults processed ; cumulative fault coverage =  86.70%
+       90.46% faults processed ; cumulative fault coverage =  90.46%
+       91.63% faults processed ; cumulative fault coverage =  91.63%
+       91.94% faults processed ; cumulative fault coverage =  91.94%
+       92.26% faults processed ; cumulative fault coverage =  92.26%
+       92.74% faults processed ; cumulative fault coverage =  92.74%
+       93.16% faults processed ; cumulative fault coverage =  93.16%
+       93.22% faults processed ; cumulative fault coverage =  93.22%
+       93.32% faults processed ; cumulative fault coverage =  93.32%
+       93.43% faults processed ; cumulative fault coverage =  93.43%
+
+    ...End random pattern generation
+
+    Start deterministic pattern generation...
+
+       97.99% faults processed ; cumulative fault coverage =  95.97%
+      100.00% faults processed ; cumulative fault coverage =  96.92%
+
+    ...End deterministic pattern generation
+
+
+                                Non-collapsed     Collapsed
+    No. of detected faults      3078              1826
+    No. of abandoned faults     0                 0
+    No. of tied faults          1                 1
+    No. of redundant faults     2                 2
+    No. of untested faults      87                58
+    Total no. of faults         3168              1887
+    Fault coverage              97.25             96.92
+
+    No. of test patterns         98
+
+    Test Generation Time (CPU)  1.00 sec
+
+    Start compaction...
+
+    ...End compaction
+
+    No. of compacted patterns    80
+
+    Compaction Time (CPU)       0.00 sec
+...Writing test program INIT to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_7/INIT.vdb
+1
+report_test -scan_path
+ 
+****************************************
+Report : test
+          -scan_path
+Design : INIT
+Version: 1998.02
+Date   : Sat Aug 29 18:53:09 1998
+****************************************
+
+  (*) indicates change of polarity in scan data
+  (c) indicates cell is scan controllable only
+  (o) indicates cell is scan observable only
+  (x) indicates cell cannot capture
+
+Complete scan chain (ALARM --> SPEAKER_OUT) contains 40 cells:
+
+  ALARM	->
+  U1/U1/U1/CURRENT_STATE_reg[0]	->
+  U1/U1/U1/CURRENT_STATE_reg[1]	->
+  U1/U1/U2/AM_PM_OUT_reg	->
+  U1/U1/U2/CURRENT_SECS_reg[0]	->
+  U1/U1/U2/CURRENT_SECS_reg[1]	->
+  U1/U1/U2/CURRENT_SECS_reg[2]	->
+  U1/U1/U2/CURRENT_SECS_reg[3]	->
+  U1/U1/U2/CURRENT_SECS_reg[4]	->
+  U1/U1/U2/CURRENT_SECS_reg[5]	->
+  U1/U1/U2/HOURS_OUT_reg[0]	->
+  U1/U1/U2/HOURS_OUT_reg[1]	->
+  U1/U1/U2/HOURS_OUT_reg[2]	->
+  U1/U1/U2/HOURS_OUT_reg[3]	->
+  U1/U1/U2/MINUTES_OUT_reg[0]	->
+  U1/U1/U2/MINUTES_OUT_reg[1]	->
+  U1/U1/U2/MINUTES_OUT_reg[2]	->
+  U1/U1/U2/MINUTES_OUT_reg[3]	->
+  U1/U1/U2/MINUTES_OUT_reg[4]	->
+  U1/U1/U2/MINUTES_OUT_reg[5]	->
+  U1/U2/U0/CURRENT_STATE_reg[0]	->
+  U1/U2/U0/CURRENT_STATE_reg[1]	->
+  U1/U2/U3/AM_PM_OUT_reg	->
+  U1/U2/U3/HOURS_OUT_reg[0]	->
+  U1/U2/U3/HOURS_OUT_reg[1]	->
+  U1/U2/U3/HOURS_OUT_reg[2]	->
+  U1/U2/U3/HOURS_OUT_reg[3]	->
+  U1/U2/U3/MINUTES_OUT_reg[0]	->
+  U1/U2/U3/MINUTES_OUT_reg[1]	->
+  U1/U2/U3/MINUTES_OUT_reg[2]	->
+  U1/U2/U3/MINUTES_OUT_reg[3]	->
+  U1/U2/U3/MINUTES_OUT_reg[4]	->
+  U1/U2/U3/MINUTES_OUT_reg[5]	->
+  U1/U7/COUNT_reg[0]	->
+  U1/U7/COUNT_reg[1]	->
+  U1/U7/COUNT_reg[2]	->
+  U1/U7/COUNT_reg[3]	->
+  U1/U7/COUNT_reg[4]	->
+  U1/U7/COUNT_reg[5]	->
+  U1/U7/DIV_CLK_reg	->
+  U1/U5/CURRENT_STATE_reg	->
+  SPEAKER_OUT
+
+1
+report_test -faults -class untested
+ 
+****************************************
+Report : test
+          -faults (untested)
+Design : INIT
+Version: 1998.02
+Date   : Sat Aug 29 18:53:09 1998
+****************************************
+
+Test program : `INIT' 
+Depends on   : 
+
+Faults:
+
+ s-a-0 : stuck at 0 fault
+ s-a-1 : stuck at 1 fault
+
+  U1/U1/U2:
+    Untested:
+      U450/B pin         s-a-1
+      U453/A pin         s-a-1
+      U453/B pin         s-a-1
+      U468/A pin s-a-0
+      U474/A pin s-a-0
+      U474/B pin s-a-0
+      U475/A pin s-a-0
+      U475/B pin s-a-0
+  U1/U2/U3:
+    Untested:
+      U341/D pin         s-a-1
+      U342/B pin s-a-0
+      U343/B pin s-a-0
+      U346/A pin         s-a-1
+      U347/A pin s-a-0
+      U351/B pin s-a-0
+      U366/A pin         s-a-1
+      U367/A pin         s-a-1
+  U1:
+    Untested:
+      U9/A pin s-a-0 & s-a-1
+      U9/B pin         s-a-1
+      U9/D pin         s-a-1
+      U10/A pin s-a-0 & s-a-1
+      U10/Z pin s-a-0 & s-a-1
+  U_CONF:
+    Untested:
+      U28/A pin         s-a-1
+      U28/B pin         s-a-1
+      U28/C pin         s-a-1
+      U28/Z pin         s-a-1
+      U29/A pin s-a-0 & s-a-1
+      U29/B pin s-a-0 & s-a-1
+      U29/C pin s-a-0 & s-a-1
+      U29/D pin s-a-0 & s-a-1
+      U29/Z pin s-a-0 & s-a-1
+      U30/A pin s-a-0 & s-a-1
+      U30/B pin s-a-0 & s-a-1
+      U30/C pin s-a-0 & s-a-1
+      U30/D pin s-a-0 & s-a-1
+      U30/Z pin s-a-0 & s-a-1
+      U31/A pin s-a-0 & s-a-1
+      U31/B pin s-a-0 & s-a-1
+      U31/C pin s-a-0 & s-a-1
+      U31/D pin s-a-0 & s-a-1
+      U31/Z pin s-a-0 & s-a-1
+      U32/A pin s-a-0
+      U32/Z pin         s-a-1
+      U33/A pin s-a-0 & s-a-1
+      U33/Z pin s-a-0 & s-a-1
+      U34/A pin s-a-0 & s-a-1
+      U34/Z pin s-a-0 & s-a-1
+      conf_reg_reg[0]/D pin s-a-0 & s-a-1
+      conf_reg_reg[0]/CP pin s-a-0 & s-a-1
+      conf_reg_reg[0]/Q pin         s-a-1
+      conf_reg_reg[1]/D pin s-a-0 & s-a-1
+      conf_reg_reg[1]/CP pin s-a-0 & s-a-1
+      conf_reg_reg[1]/Q pin s-a-0
+      conf_reg_reg[2]/D pin s-a-0 & s-a-1
+      conf_reg_reg[2]/CP pin s-a-0 & s-a-1
+      conf_reg_reg[2]/Q pin         s-a-1
+  INIT:
+    Untested:
+      CONF port s-a-0 & s-a-1
+      CONF_ENABLE port s-a-0 & s-a-1
+
+1

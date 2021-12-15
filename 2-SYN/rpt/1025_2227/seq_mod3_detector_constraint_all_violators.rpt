@@ -1,0 +1,47 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : seq_mod3_detector
+Version: L-2016.03-SP1
+Date   : Mon Oct 25 22:30:14 2021
+****************************************
+
+
+   min_delay/hold ('clk' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   success_reg/D                3.07           2.16 f        -0.92  (VIOLATED)
+   current_state_reg_0_/D       3.07           2.16 f        -0.91  (VIOLATED)
+   current_state_reg_1_/D       3.07           2.17 f        -0.91  (VIOLATED)
+
+
+   max_transition
+
+                             Required        Actual
+   Net                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   data                         0.44           1.00          -0.56  (VIOLATED)
+       PIN :   U9/I             0.44           1.00          -0.56  (VIOLATED)
+   rst_n                        0.44           1.00          -0.56  (VIOLATED)
+       PIN :   success_reg/CDN
+                                0.44           1.00          -0.56  (VIOLATED)
+       PIN :   current_state_reg_0_/CDN
+                                0.44           1.00          -0.56  (VIOLATED)
+       PIN :   current_state_reg_1_/CDN
+                                0.44           1.00          -0.56  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      2                  -1.12  
+
+   max_leakage_power
+
+                             Required        Actual
+   Design                   Leakage Power  Leakage Power     Slack
+   -----------------------------------------------------------------
+   seq_mod3_detector            0.00         222.65        -222.65  (VIOLATED)
+
+
+1

@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1638682720" />
+    <testcase name="run_test" classname="sp_ram_tb" file="/mnt/mydata/spinal_works/verilog/fif0_single_port_ram/tb/sp_ram_tb.py" lineno="7" time="0.01289510726928711" sim_time_ns="600.001" ratio_time="46529.353146914174" />
+  </testsuite>
+</testsuites>

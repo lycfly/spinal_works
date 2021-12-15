@@ -1,0 +1,144 @@
+                        Design Analyzer (TM)
+                  Version 2000.05-1 -- Jul 12, 2000
+              Copyright (c) 1988-2000 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+design_analyzer> ls
+.                   .dc_script.log      .transcript.log     translate.dc
+..                  .synopsys_dc.setup  filenames.log
+include translate.dc
+/* TRANSLATE SCRIPT
+ * For DFTW Lab 3
+ * From GENERIC to TSMC
+ */
+
+/* GENERIC LIBRARY PATH */
+   GENERIC = "../Technology/GENERIC"
+"../Technology/GENERIC"
+
+/* TSMC LIBRARY PATH */
+   TSMC = "../Technology/TSMC/"
+"../Technology/TSMC/"
+   CORE = TSMC + "core/synopsys/db/nopower"
+"../Technology/TSMC/core/synopsys/db/nopower"
+   PADS = TSMC +   "io/synopsys/db/power"
+"../Technology/TSMC/io/synopsys/db/power"
+
+/* SEARCH PATH */
+   search_path = search_path + {GENERIC}
+{".", "/remote/trg6/2000.05-1/libraries/syn", "/remote/trg6/2000.05-1/dw/sim_ver", "../Technology/GENERIC", "../DB", "../Technology/GENERIC", "../Technology/TSMC/core/synopsys/db/nopower", "../Technology/TSMC/io/synopsys/db/power", "../Technology/GENERIC"}
+   search_path = search_path + {CORE  PADS}
+{".", "/remote/trg6/2000.05-1/libraries/syn", "/remote/trg6/2000.05-1/dw/sim_ver", "../Technology/GENERIC", "../DB", "../Technology/GENERIC", "../Technology/TSMC/core/synopsys/db/nopower", "../Technology/TSMC/io/synopsys/db/power", "../Technology/GENERIC", "../Technology/TSMC/core/synopsys/db/nopower", "../Technology/TSMC/io/synopsys/db/power"}
+
+/* TECHNOLOGY FILES */
+   target_library = { core_slow.db \
+                        io_slow.db \
+   }
+{"core_slow.db", "io_slow.db"}
+   link_library   = { "*"          \
+                   workshop_lib.db \
+                dw_foundation.sldb \
+   }
+{"*", "workshop_lib.db", "dw_foundation.sldb"}
+   symbol_library = core.sdb
+{"core.sdb"}
+
+/* TRANSLATION */
+   read -f db CLOCK_DFT.db
+Loading db file '/remote/trg1/cdancak/DFTW/Labs_Dec.4/Lab_3/CLOCK_DFT.db'
+Current design is now '/remote/trg1/cdancak/DFTW/Labs_Dec.4/Lab_3/CLOCK_DFT.db:CLOCK1'
+{"CLOCK1", "CREG", "EREG", "DREG", "BREG", "AREG", "CLOCK_GEN"}
+   translate  -verify          \
+              -verify_hier     \
+              -verify_eff high \
+              -preserve
+Loading db file '/remote/trg1/cdancak/DFTW/Labs_Dec.4/Technology/GENERIC/workshop_lib.db'
+Loading db file '/remote/trg6/2000.05-1/libraries/syn/dw_foundation.sldb'
+Loading db file '/remote/trg6/2000.05-1/libraries/syn/gtech.db'
+Loading db file '/remote/trg6/2000.05-1/libraries/syn/standard.sldb'
+Loading db file '/remote/trg1/cdancak/DFTW/Labs_Dec.4/Technology/TSMC/core/synopsys/db/nopower/core_slow.db'
+Loading db file '/remote/trg1/cdancak/DFTW/Labs_Dec.4/Technology/TSMC/io/synopsys/db/power/io_slow.db'
+
+  Loading target library 'ssc_core_slow'
+  Loading target library 'tpz973gwc'
+  Loading design 'CLOCK1'
+Information: Converting capacitance units for library 'workshop_lib' since those in library 'ssc_core_slow' differ. (TIM-106)
+Information: Changed wire load model for 'CREG' from '(none)' to '5KGATES'. (OPT-170)
+Information: Changed wire load model for 'EREG' from '(none)' to '5KGATES'. (OPT-170)
+Information: Changed wire load model for 'DREG' from '(none)' to '5KGATES'. (OPT-170)
+Information: Changed wire load model for 'BREG' from '(none)' to '5KGATES'. (OPT-170)
+Information: Changed wire load model for 'AREG' from '(none)' to '5KGATES'. (OPT-170)
+Information: Changed wire load model for 'CLOCK_GEN' from '(none)' to '5KGATES'. (OPT-170)
+  Copying Design (for verification)
+  Translating Design 'CLOCK1'
+    from the technology 'workshop_lib' (cmos) 
+    to the technologies 'ssc_core_slow' (cmos) 'tpz973gwc' (cmos) 
+
+  Transferring Design 'CLOCK1' to database 'CLOCK_DFT.db'
+  Transferring Design 'CLOCK_GEN' to database 'CLOCK_DFT.db'
+  Transferring Design 'AREG' to database 'CLOCK_DFT.db'
+  Transferring Design 'BREG' to database 'CLOCK_DFT.db'
+  Transferring Design 'DREG' to database 'CLOCK_DFT.db'
+  Transferring Design 'EREG' to database 'CLOCK_DFT.db'
+  Transferring Design 'CREG' to database 'CLOCK_DFT.db'
+
+  Verifying Designs CLOCK1/clk_inst  (High effort)
+  Verification Succeeded
+
+  Verifying Designs CLOCK1/areg  (High effort)
+  Verification Succeeded
+
+  Verifying Designs CLOCK1/breg  (High effort)
+  Verification Succeeded
+
+  Verifying Designs CLOCK1/dreg  (High effort)
+  Verification Succeeded
+
+  Verifying Designs CLOCK1/ereg  (High effort)
+  Verification Succeeded
+
+  Verifying Designs CLOCK1/creg  (High effort)
+  Verification Succeeded
+
+  Verifying Designs CLOCK1  (High effort)
+  Verification Succeeded
+Current design is 'CLOCK1'.
+1
+1
+design_analyzer> create_schematic -no_bus                                    -dont_left                                 -sort_outputs    -gen_database 
+Loading db file '/remote/trg1/cdancak/DFTW/Labs_Dec.4/Technology/TSMC/core/synopsys/db/nopower/core.sdb'
+Loading db file '/remote/trg6/2000.05-1/libraries/syn/1_25.font'
+1
+design_analyzer> man TIM-106
+
+
+v2000.05  Synopsys Inc. 1988-2000. All rights reserved.       n-1
+
+messages                  N.  Messages          Command Reference
+
+NAME
+          TIM-106 (Information) Converting capacitance units for
+          library '%s' since those in library '%s' differ.
+
+DESCRIPTION
+          The capacitance units specified in the first library
+          differ from those in the second library.  The second
+          library is Design Compiler's "main" library and
+          determines DC's default capacitance units.  DC reports
+          will use these units and all capacitance values
+          annotated on the design (using set_load) are assumed to
+          be in these units.
+
+          The informational message notifies you that Design
+          Compiler is handling conversion of units so that delay
+          calculation using cells in the first library will use
+          capacitance values in its native units.
+
+          Design Compiler's "main" library is determined as
+          follows:  During reporting the main library is the
+          first library in the link path that contains a cell
+          that is used in the design.  During optimization the
+          main library is the first target library specified.
+
+WHAT NEXT
+          To see the units that are specified for a library, use
+          the report_lib command.

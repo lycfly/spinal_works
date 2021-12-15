@@ -1,0 +1,2094 @@
+ 
+****************************************
+Report : timing
+        -path full_clock_expanded
+        -delay min
+        -max_paths 50
+        -sort_by slack
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Oct 26 20:44:42 2021
+****************************************
+
+Operating Conditions: ssg0p81v125c   Library: tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: cordic/cal_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/cal_cnt_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cordic_int_2 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  cordic/cal_cnt_reg_0_/CP (DFCNQD1BWP7T35P140)           0.00       2.00 r
+  cordic/cal_cnt_reg_0_/Q (DFCNQD1BWP7T35P140)            0.14       2.14 r
+  cordic/U234/ZN (INVD1BWP7T35P140)                       0.01       2.15 f
+  cordic/cal_cnt_reg_0_/D (DFCNQD1BWP7T35P140)            0.00       2.15 f
+  data arrival time                                                  2.15
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/cal_cnt_reg_0_/CP (DFCNQD1BWP7T35P140)           0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.15
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.92
+
+
+  Startpoint: dot/finish_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/cal_en_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cordic_int_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_2 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_3 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_2 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/finish_reg/CP (DFQD1BWP7T35P140)                    0.00       2.00 r
+  dot/finish_reg/Q (DFQD1BWP7T35P140)                     0.13       2.13 f
+  dot/psum_vld (dotVn)                                    0.00       2.13 f
+  cordic/vld (cordic_int)                                 0.00       2.13 f
+  cordic/U352/Z (OA21D1BWP7T35P140)                       0.03       2.16 f
+  cordic/cal_en_reg/D (DFCNQD1BWP7T35P140)                0.00       2.16 f
+  data arrival time                                                  2.16
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/cal_en_reg/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.16
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.91
+
+
+  Startpoint: dot/psum2_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum2_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_1_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum2_reg_1_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/U39/ZN (ND2D1BWP7T35P140)                           0.01       2.15 r
+  dot/U41/ZN (AOI21D1BWP7T35P140)                         0.02       2.16 f
+  dot/psum2_reg_1_/D (DFCNQD1BWP7T35P140)                 0.00       2.16 f
+  data arrival time                                                  2.16
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/psum2_reg_1_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.16
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.91
+
+
+  Startpoint: dot/psum1_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_1_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum1_reg_1_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/U43/ZN (ND2D1BWP7T35P140)                           0.01       2.15 r
+  dot/U45/ZN (AOI21D1BWP7T35P140)                         0.02       2.16 f
+  dot/psum1_reg_1_/D (DFCNQD1BWP7T35P140)                 0.00       2.16 f
+  data arrival time                                                  2.16
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/psum1_reg_1_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.16
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.91
+
+
+  Startpoint: dot/psum2_reg_18_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum2_reg_18_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_18_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum2_reg_18_/Q (DFCNQD1BWP7T35P140)                0.13       2.13 f
+  dot/U118/ZN (ND2D1BWP7T35P140)                          0.01       2.14 r
+  dot/U5/ZN (XNR2D1BWP7T35P140)                           0.02       2.16 f
+  dot/psum2_reg_18_/D (DFCNQD1BWP7T35P140)                0.00       2.16 f
+  data arrival time                                                  2.16
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/psum2_reg_18_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.16
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.91
+
+
+  Startpoint: dot/psum1_reg_18_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_18_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_18_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum1_reg_18_/Q (DFCNQD1BWP7T35P140)                0.13       2.13 f
+  dot/U117/ZN (ND2D1BWP7T35P140)                          0.01       2.14 r
+  dot/U4/ZN (XNR2D1BWP7T35P140)                           0.02       2.16 f
+  dot/psum1_reg_18_/D (DFCNQD1BWP7T35P140)                0.00       2.16 f
+  data arrival time                                                  2.16
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/psum1_reg_18_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.16
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.91
+
+
+  Startpoint: calvn/in_vld_dly1_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: calvn/in_vld_dly1_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cordic_int_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_2 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_3 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_2 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  calvn/in_vld_dly1_reg/CP (DFCNQD1BWP7T35P140)           0.00       2.00 r
+  calvn/in_vld_dly1_reg/Q (DFCNQD1BWP7T35P140)            0.14       2.14 f
+  calvn/U169/Z (AO21D1BWP7T35P140)                        0.03       2.17 f
+  calvn/in_vld_dly1_reg/D (DFCNQD1BWP7T35P140)            0.00       2.17 f
+  data arrival time                                                  2.17
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  calvn/in_vld_dly1_reg/CP (DFCNQD1BWP7T35P140)           0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.17
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.91
+
+
+  Startpoint: dot/mac_en_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/mac_en_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cordic_int_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_2 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_3 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_2 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/mac_en_reg/CP (DFCNQD1BWP7T35P140)                  0.00       2.00 r
+  dot/mac_en_reg/Q (DFCNQD1BWP7T35P140)                   0.14       2.14 f
+  dot/U18/Z (AO32D1BWP7T35P140)                           0.03       2.17 f
+  dot/mac_en_reg/D (DFCNQD1BWP7T35P140)                   0.00       2.17 f
+  data arrival time                                                  2.17
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/mac_en_reg/CP (DFCNQD1BWP7T35P140)                  0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.17
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.91
+
+
+  Startpoint: dot/finish_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/finish_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cordic_int_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_2 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_3 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_2 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/finish_reg/CP (DFQD1BWP7T35P140)                    0.00       2.00 r
+  dot/finish_reg/Q (DFQD1BWP7T35P140)                     0.13       2.13 f
+  dot/U120/ZN (MAOI22D1BWP7T35P140)                       0.03       2.16 f
+  dot/finish_reg/D (DFQD1BWP7T35P140)                     0.00       2.16 f
+  data arrival time                                                  2.16
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/finish_reg/CP (DFQD1BWP7T35P140)                    0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.16
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.90
+
+
+  Startpoint: calvn/in_vld_dly2_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: calvn/in_vld_dly2_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cordic_int_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_2 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_3 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_2 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  calvn/in_vld_dly2_reg/CP (DFCNQD1BWP7T35P140)           0.00       2.00 r
+  calvn/in_vld_dly2_reg/Q (DFCNQD1BWP7T35P140)            0.14       2.14 f
+  calvn/U170/Z (OA22D1BWP7T35P140)                        0.04       2.17 f
+  calvn/in_vld_dly2_reg/D (DFCNQD1BWP7T35P140)            0.00       2.17 f
+  data arrival time                                                  2.17
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  calvn/in_vld_dly2_reg/CP (DFCNQD1BWP7T35P140)           0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.17
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.90
+
+
+  Startpoint: dot/mac_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/mac_cnt_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  s_table            ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/mac_cnt_reg_0_/CP (DFCNQD1BWP7T35P140)              0.00       2.00 r
+  dot/mac_cnt_reg_0_/Q (DFCNQD1BWP7T35P140)               0.15       2.15 r
+  dot/U35/ZN (INVD1BWP7T35P140)                           0.02       2.17 f
+  dot/mac_cnt_reg_0_/D (DFCNQD1BWP7T35P140)               0.00       2.17 f
+  data arrival time                                                  2.17
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/mac_cnt_reg_0_/CP (DFCNQD1BWP7T35P140)              0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.17
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.90
+
+
+  Startpoint: dot/mac_cnt_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/mac_cnt_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  s_table            ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/mac_cnt_reg_2_/CP (DFCNQD1BWP7T35P140)              0.00       2.00 r
+  dot/mac_cnt_reg_2_/Q (DFCNQD1BWP7T35P140)               0.15       2.15 f
+  dot/U15/Z (AO21D1BWP7T35P140)                           0.03       2.18 f
+  dot/mac_cnt_reg_2_/D (DFCNQD1BWP7T35P140)               0.00       2.18 f
+  data arrival time                                                  2.18
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/mac_cnt_reg_2_/CP (DFCNQD1BWP7T35P140)              0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.18
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.90
+
+
+  Startpoint: dot/psum2_reg_4_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_4_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum2_reg_4_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap2/din[3] (FloorAndWrap_8_0)                0.00       2.14 f
+  dot/FloorWrap2/U13/Z (DEL025D1BWP7T35P140)              0.02       2.16 f
+  dot/FloorWrap2/dout[3] (FloorAndWrap_8_0)               0.00       2.16 f
+  dot/psum_out2[3] (dotVn)                                0.00       2.16 f
+  cordic/y[3] (cordic_int)                                0.00       2.16 f
+  cordic/U118/ZN (INVD1BWP7T35P140)                       0.01       2.17 r
+  cordic/U9/ZN (MOAI22D1BWP7T35P140)                      0.02       2.19 f
+  cordic/yn_reg_7_/D (DFCNQD1BWP7T35P140)                 0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/yn_reg_7_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.89
+
+
+  Startpoint: dot/psum2_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_12_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_9_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum2_reg_9_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap2/din[8] (FloorAndWrap_8_0)                0.00       2.14 f
+  dot/FloorWrap2/U3/Z (DEL025D1BWP7T35P140)               0.02       2.16 f
+  dot/FloorWrap2/dout[8] (FloorAndWrap_8_0)               0.00       2.16 f
+  dot/psum_out2[8] (dotVn)                                0.00       2.16 f
+  cordic/y[8] (cordic_int)                                0.00       2.16 f
+  cordic/U125/ZN (INVD1BWP7T35P140)                       0.01       2.17 r
+  cordic/U6/ZN (MOAI22D1BWP7T35P140)                      0.02       2.19 f
+  cordic/yn_reg_12_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/yn_reg_12_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.89
+
+
+  Startpoint: dot/psum2_reg_7_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_7_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum2_reg_7_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap2/din[6] (FloorAndWrap_8_0)                0.00       2.14 f
+  dot/FloorWrap2/U11/Z (DEL025D1BWP7T35P140)              0.02       2.16 f
+  dot/FloorWrap2/dout[6] (FloorAndWrap_8_0)               0.00       2.16 f
+  dot/psum_out2[6] (dotVn)                                0.00       2.16 f
+  cordic/y[6] (cordic_int)                                0.00       2.16 f
+  cordic/U129/ZN (INVD1BWP7T35P140)                       0.01       2.17 r
+  cordic/U7/ZN (MOAI22D1BWP7T35P140)                      0.02       2.19 f
+  cordic/yn_reg_10_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/yn_reg_10_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.89
+
+
+  Startpoint: dot/psum2_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_3_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum2_reg_3_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap2/din[2] (FloorAndWrap_8_0)                0.00       2.14 f
+  dot/FloorWrap2/U16/Z (DEL025D1BWP7T35P140)              0.02       2.16 f
+  dot/FloorWrap2/dout[2] (FloorAndWrap_8_0)               0.00       2.16 f
+  dot/psum_out2[2] (dotVn)                                0.00       2.16 f
+  cordic/y[2] (cordic_int)                                0.00       2.16 f
+  cordic/U122/ZN (INVD1BWP7T35P140)                       0.01       2.17 r
+  cordic/U10/ZN (MOAI22D1BWP7T35P140)                     0.02       2.19 f
+  cordic/yn_reg_6_/D (DFCNQD1BWP7T35P140)                 0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/yn_reg_6_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.89
+
+
+  Startpoint: dot/psum2_reg_6_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_6_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum2_reg_6_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap2/din[5] (FloorAndWrap_8_0)                0.00       2.14 f
+  dot/FloorWrap2/U4/Z (DEL025D1BWP7T35P140)               0.02       2.16 f
+  dot/FloorWrap2/dout[5] (FloorAndWrap_8_0)               0.00       2.16 f
+  dot/psum_out2[5] (dotVn)                                0.00       2.16 f
+  cordic/y[5] (cordic_int)                                0.00       2.16 f
+  cordic/U124/ZN (INVD1BWP7T35P140)                       0.01       2.17 r
+  cordic/U8/ZN (MOAI22D1BWP7T35P140)                      0.02       2.19 f
+  cordic/yn_reg_9_/D (DFCNQD1BWP7T35P140)                 0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/yn_reg_9_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.89
+
+
+  Startpoint: dot/psum2_reg_15_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_18_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_15_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum2_reg_15_/Q (DFCNQD1BWP7T35P140)                0.14       2.14 f
+  dot/FloorWrap2/din[14] (FloorAndWrap_8_0)               0.00       2.14 f
+  dot/FloorWrap2/U15/Z (DEL025D1BWP7T35P140)              0.02       2.16 f
+  dot/FloorWrap2/dout[14] (FloorAndWrap_8_0)              0.00       2.16 f
+  dot/psum_out2[14] (dotVn)                               0.00       2.16 f
+  cordic/y[14] (cordic_int)                               0.00       2.16 f
+  cordic/U123/ZN (INVD1BWP7T35P140)                       0.01       2.17 r
+  cordic/U5/ZN (MOAI22D1BWP7T35P140)                      0.02       2.19 f
+  cordic/yn_reg_18_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/yn_reg_18_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum1_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_12_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_9_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum1_reg_9_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap1/din[8] (FloorAndWrap_8_1)                0.00       2.14 f
+  dot/FloorWrap1/U15/Z (DEL025D1BWP7T35P140)              0.03       2.16 f
+  dot/FloorWrap1/dout[8] (FloorAndWrap_8_1)               0.00       2.16 f
+  dot/psum_out1[8] (dotVn)                                0.00       2.16 f
+  cordic/x[8] (cordic_int)                                0.00       2.16 f
+  cordic/U251/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/xn_reg_12_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/xn_reg_12_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum2_reg_12_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_12_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum2_reg_12_/Q (DFCNQD1BWP7T35P140)                0.14       2.14 f
+  dot/FloorWrap2/din[11] (FloorAndWrap_8_0)               0.00       2.14 f
+  dot/FloorWrap2/U7/Z (DEL025D1BWP7T35P140)               0.03       2.16 f
+  dot/FloorWrap2/dout[11] (FloorAndWrap_8_0)              0.00       2.16 f
+  dot/psum_out2[11] (dotVn)                               0.00       2.16 f
+  cordic/y[11] (cordic_int)                               0.00       2.16 f
+  cordic/U256/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/yn_reg_15_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/yn_reg_15_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum2_reg_13_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_16_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_13_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum2_reg_13_/Q (DFCNQD1BWP7T35P140)                0.14       2.14 f
+  dot/FloorWrap2/din[12] (FloorAndWrap_8_0)               0.00       2.14 f
+  dot/FloorWrap2/U5/Z (DEL025D1BWP7T35P140)               0.03       2.16 f
+  dot/FloorWrap2/dout[12] (FloorAndWrap_8_0)              0.00       2.16 f
+  dot/psum_out2[12] (dotVn)                               0.00       2.16 f
+  cordic/y[12] (cordic_int)                               0.00       2.16 f
+  cordic/U258/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/yn_reg_16_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/yn_reg_16_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum1_reg_5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_5_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum1_reg_5_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap1/din[4] (FloorAndWrap_8_1)                0.00       2.14 f
+  dot/FloorWrap1/U12/Z (DEL025D1BWP7T35P140)              0.03       2.16 f
+  dot/FloorWrap1/dout[4] (FloorAndWrap_8_1)               0.00       2.16 f
+  dot/psum_out1[4] (dotVn)                                0.00       2.16 f
+  cordic/x[4] (cordic_int)                                0.00       2.16 f
+  cordic/U245/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/xn_reg_8_/D (DFCNQD1BWP7T35P140)                 0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/xn_reg_8_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum1_reg_13_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_16_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_13_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum1_reg_13_/Q (DFCNQD1BWP7T35P140)                0.14       2.14 f
+  dot/FloorWrap1/din[12] (FloorAndWrap_8_1)               0.00       2.14 f
+  dot/FloorWrap1/U11/Z (DEL025D1BWP7T35P140)              0.03       2.16 f
+  dot/FloorWrap1/dout[12] (FloorAndWrap_8_1)              0.00       2.16 f
+  dot/psum_out1[12] (dotVn)                               0.00       2.16 f
+  cordic/x[12] (cordic_int)                               0.00       2.16 f
+  cordic/U259/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/xn_reg_16_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/xn_reg_16_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum2_reg_8_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_8_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum2_reg_8_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap2/din[7] (FloorAndWrap_8_0)                0.00       2.14 f
+  dot/FloorWrap2/U8/Z (DEL025D1BWP7T35P140)               0.03       2.16 f
+  dot/FloorWrap2/dout[7] (FloorAndWrap_8_0)               0.00       2.16 f
+  dot/psum_out2[7] (dotVn)                                0.00       2.16 f
+  cordic/y[7] (cordic_int)                                0.00       2.16 f
+  cordic/U249/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/yn_reg_11_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/yn_reg_11_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum2_reg_11_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_11_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum2_reg_11_/Q (DFCNQD1BWP7T35P140)                0.14       2.14 f
+  dot/FloorWrap2/din[10] (FloorAndWrap_8_0)               0.00       2.14 f
+  dot/FloorWrap2/U2/Z (DEL025D1BWP7T35P140)               0.03       2.16 f
+  dot/FloorWrap2/dout[10] (FloorAndWrap_8_0)              0.00       2.16 f
+  dot/psum_out2[10] (dotVn)                               0.00       2.16 f
+  cordic/y[10] (cordic_int)                               0.00       2.16 f
+  cordic/U254/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/yn_reg_14_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/yn_reg_14_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum2_reg_14_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_17_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_14_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum2_reg_14_/Q (DFCNQD1BWP7T35P140)                0.14       2.14 f
+  dot/FloorWrap2/din[13] (FloorAndWrap_8_0)               0.00       2.14 f
+  dot/FloorWrap2/U6/Z (DEL025D1BWP7T35P140)               0.03       2.16 f
+  dot/FloorWrap2/dout[13] (FloorAndWrap_8_0)              0.00       2.16 f
+  dot/psum_out2[13] (dotVn)                               0.00       2.16 f
+  cordic/y[13] (cordic_int)                               0.00       2.16 f
+  cordic/U261/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/yn_reg_17_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/yn_reg_17_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum1_reg_7_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_7_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum1_reg_7_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap1/din[6] (FloorAndWrap_8_1)                0.00       2.14 f
+  dot/FloorWrap1/U5/Z (DEL025D1BWP7T35P140)               0.03       2.16 f
+  dot/FloorWrap1/dout[6] (FloorAndWrap_8_1)               0.00       2.16 f
+  dot/psum_out1[6] (dotVn)                                0.00       2.16 f
+  cordic/x[6] (cordic_int)                                0.00       2.16 f
+  cordic/U248/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/xn_reg_10_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/xn_reg_10_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum1_reg_11_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_11_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum1_reg_11_/Q (DFCNQD1BWP7T35P140)                0.14       2.14 f
+  dot/FloorWrap1/din[10] (FloorAndWrap_8_1)               0.00       2.14 f
+  dot/FloorWrap1/U16/Z (DEL025D1BWP7T35P140)              0.03       2.16 f
+  dot/FloorWrap1/dout[10] (FloorAndWrap_8_1)              0.00       2.16 f
+  dot/psum_out1[10] (dotVn)                               0.00       2.16 f
+  cordic/x[10] (cordic_int)                               0.00       2.16 f
+  cordic/U255/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/xn_reg_14_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/xn_reg_14_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum1_reg_14_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_17_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_14_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum1_reg_14_/Q (DFCNQD1BWP7T35P140)                0.14       2.14 f
+  dot/FloorWrap1/din[13] (FloorAndWrap_8_1)               0.00       2.14 f
+  dot/FloorWrap1/U3/Z (DEL025D1BWP7T35P140)               0.03       2.16 f
+  dot/FloorWrap1/dout[13] (FloorAndWrap_8_1)              0.00       2.16 f
+  dot/psum_out1[13] (dotVn)                               0.00       2.16 f
+  cordic/x[13] (cordic_int)                               0.00       2.16 f
+  cordic/U260/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/xn_reg_17_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/xn_reg_17_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum2_reg_5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_5_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum2_reg_5_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap2/din[4] (FloorAndWrap_8_0)                0.00       2.14 f
+  dot/FloorWrap2/U10/Z (DEL025D1BWP7T35P140)              0.03       2.16 f
+  dot/FloorWrap2/dout[4] (FloorAndWrap_8_0)               0.00       2.16 f
+  dot/psum_out2[4] (dotVn)                                0.00       2.16 f
+  cordic/y[4] (cordic_int)                                0.00       2.16 f
+  cordic/U246/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/yn_reg_8_/D (DFCNQD1BWP7T35P140)                 0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/yn_reg_8_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum1_reg_4_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_4_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum1_reg_4_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap1/din[3] (FloorAndWrap_8_1)                0.00       2.14 f
+  dot/FloorWrap1/U8/Z (DEL025D1BWP7T35P140)               0.03       2.16 f
+  dot/FloorWrap1/dout[3] (FloorAndWrap_8_1)               0.00       2.16 f
+  dot/psum_out1[3] (dotVn)                                0.00       2.16 f
+  cordic/x[3] (cordic_int)                                0.00       2.16 f
+  cordic/U244/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/xn_reg_7_/D (DFCNQD1BWP7T35P140)                 0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/xn_reg_7_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum1_reg_8_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_8_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum1_reg_8_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap1/din[7] (FloorAndWrap_8_1)                0.00       2.14 f
+  dot/FloorWrap1/U10/Z (DEL025D1BWP7T35P140)              0.03       2.16 f
+  dot/FloorWrap1/dout[7] (FloorAndWrap_8_1)               0.00       2.16 f
+  dot/psum_out1[7] (dotVn)                                0.00       2.16 f
+  cordic/x[7] (cordic_int)                                0.00       2.16 f
+  cordic/U250/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/xn_reg_11_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/xn_reg_11_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum1_reg_12_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_12_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum1_reg_12_/Q (DFCNQD1BWP7T35P140)                0.14       2.14 f
+  dot/FloorWrap1/din[11] (FloorAndWrap_8_1)               0.00       2.14 f
+  dot/FloorWrap1/U1/Z (DEL025D1BWP7T35P140)               0.03       2.16 f
+  dot/FloorWrap1/dout[11] (FloorAndWrap_8_1)              0.00       2.16 f
+  dot/psum_out1[11] (dotVn)                               0.00       2.16 f
+  cordic/x[11] (cordic_int)                               0.00       2.16 f
+  cordic/U257/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/xn_reg_15_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/xn_reg_15_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum1_reg_15_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_18_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_15_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum1_reg_15_/Q (DFCNQD1BWP7T35P140)                0.14       2.14 f
+  dot/FloorWrap1/din[14] (FloorAndWrap_8_1)               0.00       2.14 f
+  dot/FloorWrap1/U7/Z (DEL025D1BWP7T35P140)               0.03       2.16 f
+  dot/FloorWrap1/dout[14] (FloorAndWrap_8_1)              0.00       2.16 f
+  dot/psum_out1[14] (dotVn)                               0.00       2.16 f
+  cordic/x[14] (cordic_int)                               0.00       2.16 f
+  cordic/U262/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/xn_reg_18_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/xn_reg_18_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum2_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_2_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum2_reg_2_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap2/din[1] (FloorAndWrap_8_0)                0.00       2.14 f
+  dot/FloorWrap2/U9/Z (DEL025D1BWP7T35P140)               0.03       2.16 f
+  dot/FloorWrap2/dout[1] (FloorAndWrap_8_0)               0.00       2.16 f
+  dot/psum_out2[1] (dotVn)                                0.00       2.16 f
+  cordic/y[1] (cordic_int)                                0.00       2.16 f
+  cordic/U241/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/yn_reg_5_/D (DFCNQD1BWP7T35P140)                 0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/yn_reg_5_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum2_reg_10_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_13_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_10_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum2_reg_10_/Q (DFCNQD1BWP7T35P140)                0.14       2.14 f
+  dot/FloorWrap2/din[9] (FloorAndWrap_8_0)                0.00       2.14 f
+  dot/FloorWrap2/U14/Z (DEL025D1BWP7T35P140)              0.03       2.16 f
+  dot/FloorWrap2/dout[9] (FloorAndWrap_8_0)               0.00       2.16 f
+  dot/psum_out2[9] (dotVn)                                0.00       2.16 f
+  cordic/y[9] (cordic_int)                                0.00       2.16 f
+  cordic/U252/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/yn_reg_13_/D (DFCNQD1BWP7T35P140)                0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/yn_reg_13_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum1_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_1_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum1_reg_1_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap1/din[0] (FloorAndWrap_8_1)                0.00       2.14 f
+  dot/FloorWrap1/U14/Z (DEL025D1BWP7T35P140)              0.03       2.16 f
+  dot/FloorWrap1/dout[0] (FloorAndWrap_8_1)               0.00       2.16 f
+  dot/psum_out1[0] (dotVn)                                0.00       2.16 f
+  cordic/x[0] (cordic_int)                                0.00       2.16 f
+  cordic/U240/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/xn_reg_4_/D (DFCNQD1BWP7T35P140)                 0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/xn_reg_4_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum2_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_1_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum2_reg_1_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap2/din[0] (FloorAndWrap_8_0)                0.00       2.14 f
+  dot/FloorWrap2/U1/Z (DEL025D1BWP7T35P140)               0.03       2.16 f
+  dot/FloorWrap2/dout[0] (FloorAndWrap_8_0)               0.00       2.16 f
+  dot/psum_out2[0] (dotVn)                                0.00       2.16 f
+  cordic/y[0] (cordic_int)                                0.00       2.16 f
+  cordic/U239/Z (AO22D1BWP7T35P140)                       0.03       2.19 f
+  cordic/yn_reg_4_/D (DFCNQD1BWP7T35P140)                 0.00       2.19 f
+  data arrival time                                                  2.19
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/yn_reg_4_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.19
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum1_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_2_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum1_reg_2_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap1/din[1] (FloorAndWrap_8_1)                0.00       2.14 f
+  dot/FloorWrap1/U6/Z (DEL025D1BWP7T35P140)               0.03       2.16 f
+  dot/FloorWrap1/dout[1] (FloorAndWrap_8_1)               0.00       2.16 f
+  dot/psum_out1[1] (dotVn)                                0.00       2.16 f
+  cordic/x[1] (cordic_int)                                0.00       2.16 f
+  cordic/U242/Z (AO22D1BWP7T35P140)                       0.03       2.20 f
+  cordic/xn_reg_5_/D (DFCNQD1BWP7T35P140)                 0.00       2.20 f
+  data arrival time                                                  2.20
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/xn_reg_5_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.20
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum1_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_3_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum1_reg_3_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap1/din[2] (FloorAndWrap_8_1)                0.00       2.14 f
+  dot/FloorWrap1/U13/Z (DEL025D1BWP7T35P140)              0.03       2.16 f
+  dot/FloorWrap1/dout[2] (FloorAndWrap_8_1)               0.00       2.16 f
+  dot/psum_out1[2] (dotVn)                                0.00       2.16 f
+  cordic/x[2] (cordic_int)                                0.00       2.16 f
+  cordic/U243/Z (AO22D1BWP7T35P140)                       0.03       2.20 f
+  cordic/xn_reg_6_/D (DFCNQD1BWP7T35P140)                 0.00       2.20 f
+  data arrival time                                                  2.20
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/xn_reg_6_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.20
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum1_reg_6_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_6_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum1_reg_6_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/FloorWrap1/din[5] (FloorAndWrap_8_1)                0.00       2.14 f
+  dot/FloorWrap1/U4/Z (DEL025D1BWP7T35P140)               0.03       2.16 f
+  dot/FloorWrap1/dout[5] (FloorAndWrap_8_1)               0.00       2.16 f
+  dot/psum_out1[5] (dotVn)                                0.00       2.16 f
+  cordic/x[5] (cordic_int)                                0.00       2.16 f
+  cordic/U247/Z (AO22D1BWP7T35P140)                       0.03       2.20 f
+  cordic/xn_reg_9_/D (DFCNQD1BWP7T35P140)                 0.00       2.20 f
+  data arrival time                                                  2.20
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/xn_reg_9_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.20
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum1_reg_10_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_13_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_10_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum1_reg_10_/Q (DFCNQD1BWP7T35P140)                0.14       2.14 f
+  dot/FloorWrap1/din[9] (FloorAndWrap_8_1)                0.00       2.14 f
+  dot/FloorWrap1/U9/Z (DEL025D1BWP7T35P140)               0.03       2.16 f
+  dot/FloorWrap1/dout[9] (FloorAndWrap_8_1)               0.00       2.16 f
+  dot/psum_out1[9] (dotVn)                                0.00       2.16 f
+  cordic/x[9] (cordic_int)                                0.00       2.16 f
+  cordic/U253/Z (AO22D1BWP7T35P140)                       0.03       2.20 f
+  cordic/xn_reg_13_/D (DFCNQD1BWP7T35P140)                0.00       2.20 f
+  data arrival time                                                  2.20
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/xn_reg_13_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.08       3.08
+  data required time                                                 3.08
+  --------------------------------------------------------------------------
+  data required time                                                 3.08
+  data arrival time                                                 -2.20
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.88
+
+
+  Startpoint: dot/psum2_reg_17_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum2_reg_17_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_0   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_17_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum2_reg_17_/Q (DFCNQD1BWP7T35P140)                0.13       2.13 f
+  dot/U77/ZN (INR2D1BWP7T35P140)                          0.02       2.16 f
+  dot/intadd_17_U2/S (FA1D1BWP7T35P140)                   0.05       2.20 f
+  dot/psum2_reg_17_/D (DFCNQD1BWP7T35P140)                0.00       2.20 f
+  data arrival time                                                  2.20
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/psum2_reg_17_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.20
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.87
+
+
+  Startpoint: dot/psum1_reg_17_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_17_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_17_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum1_reg_17_/Q (DFCNQD1BWP7T35P140)                0.13       2.13 f
+  dot/U61/ZN (INR2D1BWP7T35P140)                          0.02       2.16 f
+  dot/intadd_18_U2/S (FA1D1BWP7T35P140)                   0.05       2.20 f
+  dot/psum1_reg_17_/D (DFCNQD1BWP7T35P140)                0.00       2.20 f
+  data arrival time                                                  2.20
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/psum1_reg_17_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.20
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.87
+
+
+  Startpoint: cordic/cal_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/nozero_flg_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cordic_int_2 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  cordic/cal_cnt_reg_1_/CP (DFCNQD1BWP7T35P140)           0.00       2.00 r
+  cordic/cal_cnt_reg_1_/Q (DFCNQD1BWP7T35P140)            0.14       2.14 f
+  cordic/U142/Z (OR2D1BWP7T35P140)                        0.03       2.17 f
+  cordic/U193/Z (OR2D1BWP7T35P140)                        0.03       2.20 f
+  cordic/nozero_flg_reg/D (DFSNQD1BWP7T35P140)            0.00       2.20 f
+  data arrival time                                                  2.20
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/nozero_flg_reg/CP (DFSNQD1BWP7T35P140)           0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.20
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.87
+
+
+  Startpoint: cordic/cal_cnt_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/cal_cnt_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cordic_int_2 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  cordic/cal_cnt_reg_1_/CP (DFCNQD1BWP7T35P140)           0.00       2.00 r
+  cordic/cal_cnt_reg_1_/Q (DFCNQD1BWP7T35P140)            0.14       2.14 f
+  cordic/U142/Z (OR2D1BWP7T35P140)                        0.03       2.17 f
+  cordic/U230/ZN (INVD1BWP7T35P140)                       0.02       2.19 r
+  cordic/U232/ZN (NR2D1BWP7T35P140)                       0.01       2.21 f
+  cordic/cal_cnt_reg_1_/D (DFCNQD1BWP7T35P140)            0.00       2.21 f
+  data arrival time                                                  2.21
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/cal_cnt_reg_1_/CP (DFCNQD1BWP7T35P140)           0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.21
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.87
+
+
+  Startpoint: dot/psum1_reg_10_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_10_/CP (DFCNQD1BWP7T35P140)               0.00       2.00 r
+  dot/psum1_reg_10_/Q (DFCNQD1BWP7T35P140)                0.14       2.14 f
+  dot/U54/ZN (INR2D1BWP7T35P140)                          0.02       2.16 f
+  dot/intadd_18_U9/S (FA1D1BWP7T35P140)                   0.05       2.21 f
+  dot/psum1_reg_10_/D (DFCNQD1BWP7T35P140)                0.00       2.21 f
+  data arrival time                                                  2.21
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/psum1_reg_10_/CP (DFCNQD1BWP7T35P140)               0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.21
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.87
+
+
+  Startpoint: dot/psum1_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_9_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum1_reg_9_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/U53/ZN (INR2D1BWP7T35P140)                          0.02       2.16 f
+  dot/intadd_18_U10/S (FA1D1BWP7T35P140)                  0.05       2.21 f
+  dot/psum1_reg_9_/D (DFCNQD1BWP7T35P140)                 0.00       2.21 f
+  data arrival time                                                  2.21
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/psum1_reg_9_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.21
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.87
+
+
+  Startpoint: dot/psum1_reg_8_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_8_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum1_reg_8_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/U52/ZN (INR2D1BWP7T35P140)                          0.02       2.16 f
+  dot/intadd_18_U11/S (FA1D1BWP7T35P140)                  0.05       2.21 f
+  dot/psum1_reg_8_/D (DFCNQD1BWP7T35P140)                 0.00       2.21 f
+  data arrival time                                                  2.21
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/psum1_reg_8_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.21
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.87
+
+
+  Startpoint: dot/psum1_reg_4_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_8_1   ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum1_reg_4_/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  dot/psum1_reg_4_/Q (DFCNQD1BWP7T35P140)                 0.14       2.14 f
+  dot/U48/ZN (INR2D1BWP7T35P140)                          0.02       2.16 f
+  dot/intadd_18_U15/S (FA1D1BWP7T35P140)                  0.05       2.21 f
+  dot/psum1_reg_4_/D (DFCNQD1BWP7T35P140)                 0.00       2.21 f
+  data arrival time                                                  2.21
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/psum1_reg_4_/CP (DFCNQD1BWP7T35P140)                0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.21
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.87
+
+
+1

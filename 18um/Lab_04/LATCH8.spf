@@ -1,0 +1,104 @@
+STIL 1.0;
+Header {
+   Title "DC-XP 2000.05-1 STIL output";
+   Date "Mon Dec  4 22:14:05 2000";
+   History {
+   }
+}
+Signals {
+   "A[0]" In; "A[1]" In; "A[2]" In; "A[3]" In; "B[0]" In; "B[1]" In; "B[2]" In; "B[3]" In; "CLK1" In; "CLK2" In; "CLK3" In; "C[0]" In; "C[1]" In; "C[2]" In; "C[3]" In; "ENABLE" In; "LOAD_C" In; "test_se" In; "test_si1" In; "test_si2" In; "test_si3" In;
+   "DR[0]" Out; "DR[1]" Out; "DR[2]" Out; "DR[3]" Out; "test_so1" Out; "test_so2" Out;
+} 
+SignalGroups {
+   "all_inputs"   '"A[0]" + "A[1]" + "A[2]" + "A[3]" + "B[0]" + "B[1]" + "B[2]" + "B[3]" + "CLK1" + "CLK2" + "CLK3" + "C[0]" + "C[1]" + "C[2]" + "C[3]" + "ENABLE" + "LOAD_C" + "test_se" + "test_si1" + "test_si2" + "test_si3"'; // #signals=21
+   "all_outputs"   '"DR[0]" + "DR[1]" + "DR[2]" + "DR[3]" + "test_so1" + "test_so2"'; // #signals=6
+   "all_ports"   '"all_inputs" + "all_outputs"'; // #signals=27
+   "_pi"   '"all_inputs"'; // #signals=21
+   "_po"   '"all_outputs"'; // #signals=6
+} 
+ScanStructures {
+   ScanChain "c0" {
+      ScanLength 6;
+      ScanIn "test_si1";
+      ScanOut "test_so1";
+   } 
+   ScanChain "c1" {
+      ScanLength 6;
+      ScanIn "test_si2";
+      ScanOut "test_so2";
+   } 
+   ScanChain "c2" {
+      ScanLength 5;
+      ScanIn "test_si3";
+      ScanOut "DR[3]";
+   } 
+} 
+Timing {
+   WaveformTable "_default_WFT_" {
+      Period '100ns';
+      Waveforms {
+         "all_inputs" { 0 { '0ns' D; } }
+         "all_inputs" { 1 { '0ns' U; } }
+         "all_inputs" { Z { '0ns' Z; } }
+         "all_outputs" { X { '0ns' X; } }
+         "all_outputs" { H { '0ns' X; '40ns' H; } }
+         "all_outputs" { T { '0ns' X; '40ns' T; } }
+         "all_outputs" { L { '0ns' X; '40ns' L; } }
+         "CLK3" { P { '0ns' D; '45ns' U; '55ns' D; } }
+         "CLK2" { P { '0ns' D; '45ns' U; '55ns' D; } }
+         "LOAD_C" { P { '0ns' D; '45ns' U; '55ns' D; } }
+         "CLK1" { P { '0ns' D; '45ns' U; '55ns' D; } }
+      }
+   }
+} 
+PatternBurst "__burst__" {
+   "__pattern__" {
+   }
+} 
+PatternExec {
+   Timing "";
+   PatternBurst "__burst__";
+} 
+Procedures {
+   "load_unload" {
+      Shift { 
+         W "_default_WFT_";
+         V {  "CLK1"=P; "CLK2"=P; "CLK3"=P; "LOAD_C"=P; "test_se"=1; "_so"=###; "_si"=###; } 
+      }
+   }
+   "capture" {
+      W "_default_WFT_";
+      V { "_pi"=\r21 #; "_po"=\r6 #; }
+   }
+   "capture_CLK3" {
+      W "_default_WFT_";
+      "forcePI": V { "_pi"=\r21 #; }
+      "measurePO": V { "_po"=\r6 #; }
+      "pulse": V { "CLK3"=P; }
+   }
+   "capture_CLK2" {
+      W "_default_WFT_";
+      "forcePI": V { "_pi"=\r21 #; }
+      "measurePO": V { "_po"=\r6 #; }
+      "pulse": V { "CLK2"=P; }
+   }
+   "capture_LOAD_C" {
+      W "_default_WFT_";
+      "forcePI": V { "_pi"=\r21 #; }
+      "measurePO": V { "_po"=\r6 #; }
+      "pulse": V { "LOAD_C"=P; }
+   }
+   "capture_CLK1" {
+      W "_default_WFT_";
+      "forcePI": V { "_pi"=\r21 #; }
+      "measurePO": V { "_po"=\r6 #; }
+      "pulse": V { "CLK1"=P; }
+   }
+} 
+MacroDefs {
+   "test_setup" {
+      W "_default_WFT_";
+      V {  "CLK1"=0; "CLK2"=0; "CLK3"=0; "LOAD_C"=0; } 
+      V {  "CLK1"=0; "CLK2"=0; "CLK3"=0; "LOAD_C"=0; } 
+   }
+} 

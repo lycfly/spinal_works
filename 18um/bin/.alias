@@ -1,0 +1,45 @@
+# PERSONAL ALIAS FILE
+#
+# File: .alias
+# Path: VHDL_PhD/Dot_Files
+# Call: Copied by xfer_vhdl.
+# 
+# ALIAS COMMAND
+# Argument N, last event:  \!:N
+# All arguments, if any:   \!*
+# Alias line continuation: \\
+  alias    a alias
+# DIRECTORY-STACK DEFINITIONS
+# a dirs  'dirs | tr "\040" "\012" | \\
+#          sed "s/.*\(cdancak\)/\~\1/"'
+  a dirs  'dirs | sed "s/ \(.\)/\\\
+\1/g" | sed "s/.*\(cdancak\)/\~\1/" | \\
+           sed "s/^/  /"'
+  a popd  'popd >& /dev/null; dirs'
+  a pushd 'pushd \!* >& /dev/null; dirs'
+# PROMPT-STRING DEFINITIONS
+  a bwd   'pwd | sed "s?.*\/??"'
+  a sps   'set prompt = "`bwd`> "'
+# DIRECTORY-STACK ALIASES
+  a dir  'clear; dirs; sps; /bin/ls -AF'
+  a pop  'clear; popd; sps; /bin/ls -AF'
+  a psh  'pushd \!*;   sps; /bin/ls -AF'
+  a sid  'popd; clear; pushd \!*; sps; /bin/ls -AF'
+  a top  '@ N=`dirs|wc -w` - 1; repeat $N popd; dir'
+# COMMAND ABBREVIATIONS
+  a cpu  '/usr/local/bin/top'
+  a dec  'stty  erase "^?"  werase "^H"  kill "^U"'
+  a fix  'echo "User: `whoami`   Host: `hostname`"'
+  a his  'history | tail -12'
+  a lsc  'clear; ls -ltF \!* | cut -d" " -f10-'
+  a ping '/usr/etc/ping'
+  a rm   'rm -i'
+  a run  'source'
+  a see  'more -cs \!:1'
+  a sun  'stty  erase "^H"  werase "^?"  kill "^U"'
+  a vin  'vi -c "se nonu" \!*'
+#
+# INVOKE SYNOPSYS TOOLS
+  a mdc  'psh ${SYNOPSYS}; psh doc/syn/man'
+  a mvs  'psh ${SYNOPSYS}; psh doc/sim/man'
+#

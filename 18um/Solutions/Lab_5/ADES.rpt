@@ -1,0 +1,172 @@
+  Loading design 'ADES'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+Information: Cell sh1_reg (FD1S) will not be scanned due to a set_scan or set_scan_element command. (TEST-202)
+Information: There are 3 other cells with the same violation. (TEST-171)
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk1 (45.0,55.0). (TEST-260)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk1...
+  ...simulating capture clock falling edge at port clk1...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk1. (TEST-262)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 0
+**************************************************
+
+
+
+**************************************************
+  Sequential Cell Summary
+
+  0 out of 5 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *   1 cell is a valid scan cell
+   *   4 cells are valid non-scan cells
+
+  Loading design 'ADES'
+  Using test design rule information from previous check_test run
+  Architecting Scan Chains
+
+****************************************
+Preview scan report
+For    : 'Insert_scan' command
+Design : ADES
+Version: 1998.02
+Date   : Sat Aug 29 16:27:10 1998
+****************************************
+
+Number of chains: 1
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: no_mix
+
+  (l) shows cell scan-out drives a lockup latch
+  (s) shows cell is a scan segment
+  (t) shows cell has a true scan attribute
+  (w) shows cell scan-out drives a wire
+
+
+Scan chain '1' (test_si --> test_so) contains 5 cells:
+
+  shift (s)                     (clk1, 45.0, rising)
+  zr_reg                        
+
+  No scan signals
+
+
+****************************************
+
+Number of segments: 1
+
+
+Scan segment 'shift' (sh1_reg/D --> sh4_reg/Q) contains 4 cells:
+
+  sh1_reg                       (clk1, 45.0, rising)
+  sh3_reg                       
+  sh2_reg                       
+  sh4_reg                       
+
+  No other access pins
+
+
+****************************************
+
+No cells have scan true
+
+4 cells have scan false:
+
+  sh1_reg
+  sh3_reg
+  sh2_reg
+  sh4_reg
+
+
+  Loading design 'ADES'
+
+Information: Starting test design rule checking for existing scan design. (TEST-220)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+Information: Cell sh4_reg (FD1) will not be scanned due to a set_scan or set_scan_element command. (TEST-202)
+Information: There are 3 other cells with the same violation. (TEST-171)
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk1 (45.0,55.0). (TEST-260)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...5 bits scanned-in to 5 cells (total scan-in 5)...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk1...
+  ...simulating capture clock falling edge at port clk1...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk1. (TEST-262)
+  ...simulating parallel vector...
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...data scanned-out from 4 cells (total scan-out 5)...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 0
+**************************************************
+
+
+
+**************************************************
+  Sequential Cell Summary
+
+  0 out of 5 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *   5 cells are valid scan cells
+
+ 
+****************************************
+Report : test
+          -scan_path
+Design : ADES
+Version: 1998.02
+Date   : Sat Aug 29 16:27:12 1998
+****************************************
+
+  (*) indicates change of polarity in scan data
+  (c) indicates cell is scan controllable only
+  (o) indicates cell is scan observable only
+  (x) indicates cell cannot capture
+
+Complete scan chain (test_si --> test_so) contains 5 cells:
+
+  test_si	->
+  sh1_reg	->
+  sh2_reg	->
+  sh3_reg	->
+  sh4_reg	->
+  zr_reg	->
+  test_so
+

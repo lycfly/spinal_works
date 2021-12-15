@@ -1,0 +1,181 @@
+ 
+****************************************
+Report : cell
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Sun Nov 28 21:11:44 2021
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   cg - clock gating logic
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+LastA2stZero_reg          fdf2a3          ssc_core_slow   52.680000 n
+U25                       or2c1           ssc_core_slow   7.530000  
+U26                       inv1a1          ssc_core_slow   5.020000  
+U27                       inv1a1          ssc_core_slow   5.020000  
+U28                       inv1a1          ssc_core_slow   5.020000  
+U29                       clk1a3          ssc_core_slow   10.040000 
+U30                       inv1a1          ssc_core_slow   5.020000  
+U31                       ha1a1           ssc_core_slow   30.110001 r
+U32                       ha1a3           ssc_core_slow   30.110001 r
+U33                       ha1a3           ssc_core_slow   30.110001 r
+U34                       inv1a3          ssc_core_slow   7.530000  
+U35                       fa1a3           ssc_core_slow   50.180000 r
+U36                       and2a3          ssc_core_slow   12.540000 
+U37                       inv1a1          ssc_core_slow   5.020000  
+U38                       ha1a3           ssc_core_slow   30.110001 r
+U39                       ha1a3           ssc_core_slow   30.110001 r
+U40                       ha1a3           ssc_core_slow   30.110001 r
+U41                       ha1a3           ssc_core_slow   30.110001 r
+U42                       ha1a3           ssc_core_slow   30.110001 r
+U43                       and2a3          ssc_core_slow   12.540000 
+U44                       fa1a3           ssc_core_slow   50.180000 r
+U45                       fa1a3           ssc_core_slow   50.180000 r
+U46                       or2a1           ssc_core_slow   12.540000 
+U47                       clk1a3          ssc_core_slow   10.040000 
+U48                       clk1a3          ssc_core_slow   10.040000 
+U49                       clk1a3          ssc_core_slow   10.040000 
+U50                       clk1a3          ssc_core_slow   10.040000 
+U51                       clk1a3          ssc_core_slow   10.040000 
+U52                       clk1a3          ssc_core_slow   10.040000 
+U53                       clk1a3          ssc_core_slow   10.040000 
+U54                       clk1a3          ssc_core_slow   10.040000 
+U55                       clk1a3          ssc_core_slow   10.040000 
+U56                       clk1a3          ssc_core_slow   10.040000 
+U57                       clk1a3          ssc_core_slow   10.040000 
+U58                       clk1a3          ssc_core_slow   10.040000 
+U59                       clk1a3          ssc_core_slow   10.040000 
+U60                       clk1a3          ssc_core_slow   10.040000 
+U61                       clk1a3          ssc_core_slow   10.040000 
+U62                       clk1a3          ssc_core_slow   10.040000 
+U63                       clk1a3          ssc_core_slow   10.040000 
+U64                       clk1a3          ssc_core_slow   10.040000 
+U65                       clk1a3          ssc_core_slow   10.040000 
+U66                       clk1a3          ssc_core_slow   10.040000 
+U67                       clk1a3          ssc_core_slow   10.040000 
+U68                       clk1a3          ssc_core_slow   10.040000 
+U69                       clk1a3          ssc_core_slow   10.040000 
+U70                       clk1a3          ssc_core_slow   10.040000 
+U71                       clk1a3          ssc_core_slow   10.040000 
+U72                       clk1a3          ssc_core_slow   10.040000 
+U73                       clk1a3          ssc_core_slow   10.040000 
+U74                       clk1a3          ssc_core_slow   10.040000 
+U75                       clk1a3          ssc_core_slow   10.040000 
+U76                       clk1a3          ssc_core_slow   10.040000 
+U77                       clk1a3          ssc_core_slow   10.040000 
+U78                       clk1a3          ssc_core_slow   10.040000 
+U79                       clk1a3          ssc_core_slow   10.040000 
+U80                       clk1a3          ssc_core_slow   10.040000 
+U81                       clk1a3          ssc_core_slow   10.040000 
+U82                       clk1a3          ssc_core_slow   10.040000 
+U83                       clk1a3          ssc_core_slow   10.040000 
+U84                       clk1a3          ssc_core_slow   10.040000 
+U85                       clk1a3          ssc_core_slow   10.040000 
+U86                       clk1a3          ssc_core_slow   10.040000 
+U87                       clk1a3          ssc_core_slow   10.040000 
+U88                       clk1a3          ssc_core_slow   10.040000 
+U89                       clk1a3          ssc_core_slow   10.040000 
+U90                       clk1a3          ssc_core_slow   10.040000 
+U91                       clk1a3          ssc_core_slow   10.040000 
+U92                       clk1a3          ssc_core_slow   10.040000 
+U93                       clk1a3          ssc_core_slow   10.040000 
+U94                       clk1a3          ssc_core_slow   10.040000 
+U95                       inv1a3          ssc_core_slow   7.530000  
+U96                       inv1a3          ssc_core_slow   7.530000  
+U97                       inv1a1          ssc_core_slow   5.020000  
+U98                       inv1a1          ssc_core_slow   5.020000  
+U99                       inv1a3          ssc_core_slow   7.530000  
+U100                      inv1a1          ssc_core_slow   5.020000  
+U101                      inv1a3          ssc_core_slow   7.530000  
+U102                      inv1a1          ssc_core_slow   5.020000  
+U103                      inv1a3          ssc_core_slow   7.530000  
+U104                      inv1a3          ssc_core_slow   7.530000  
+U105                      inv1a3          ssc_core_slow   7.530000  
+U106                      inv1a3          ssc_core_slow   7.530000  
+U107                      inv1a3          ssc_core_slow   7.530000  
+U108                      inv1a3          ssc_core_slow   7.530000  
+U109                      inv1a3          ssc_core_slow   7.530000  
+U110                      inv1a3          ssc_core_slow   7.530000  
+U111                      inv1a3          ssc_core_slow   7.530000  
+U112                      inv1a3          ssc_core_slow   7.530000  
+U113                      inv1a3          ssc_core_slow   7.530000  
+U114                      inv1a3          ssc_core_slow   7.530000  
+U115                      inv1a3          ssc_core_slow   7.530000  
+U116                      inv1a3          ssc_core_slow   7.530000  
+U117                      inv1a3          ssc_core_slow   7.530000  
+U118                      inv1a3          ssc_core_slow   7.530000  
+U119                      buf1a9          ssc_core_slow   17.559999 
+U120                      buf1a9          ssc_core_slow   17.559999 
+U121                      inv1a1          ssc_core_slow   5.020000  
+U122                      inv1a1          ssc_core_slow   5.020000  
+U123                      inv1a1          ssc_core_slow   5.020000  
+U124                      inv1a1          ssc_core_slow   5.020000  
+U125                      fa1a2           ssc_core_slow   50.180000 r
+U126                      fa1a2           ssc_core_slow   50.180000 r
+U127                      fa1a2           ssc_core_slow   50.180000 r
+U128                      xor2b2          ssc_core_slow   22.580000 
+U129                      inv1a1          ssc_core_slow   5.020000  
+U130                      fa1a3           ssc_core_slow   50.180000 r
+U131                      ao4a3           ssc_core_slow   22.580000 
+U132                      inv1a1          ssc_core_slow   5.020000  
+U133                      ao4a3           ssc_core_slow   22.580000 
+U134                      inv1a1          ssc_core_slow   5.020000  
+U135                      and3d2          ssc_core_slow   12.540000 
+U136                      inv1a1          ssc_core_slow   5.020000  
+U137                      or3d1           ssc_core_slow   10.040000 
+U138                      ao1f2           ssc_core_slow   12.540000 
+U139                      inv1a1          ssc_core_slow   5.020000  
+U140                      inv1a1          ssc_core_slow   5.020000  
+U141                      ao1d2           ssc_core_slow   15.050000 
+U142                      fa1a2           ssc_core_slow   50.180000 r
+U143                      inv1a1          ssc_core_slow   5.020000  
+U144                      ao1d2           ssc_core_slow   15.050000 
+U145                      mx2a1           ssc_core_slow   20.070000 
+calvn                     cal_vn                          11704.250034
+                                                                    h, n
+clk_gate_LastA2stZero_reg SNPS_CLOCK_GATE_HIGH_cal_phase_0
+                                                          40.140000 cg, h, n
+clk_gate_ph_now_reg       SNPS_CLOCK_GATE_HIGH_cal_phase_1
+                                                          40.140000 cg, h, n
+cordic                    cordic_int                      13934.370029
+                                                                    h, n
+dot                       dotVn                           14825.650050
+                                                                    h, n
+ph_last_reg_0_            fdf2a3          ssc_core_slow   52.680000 n
+ph_last_reg_1_            fdf2a3          ssc_core_slow   52.680000 n
+ph_last_reg_2_            fdf2a3          ssc_core_slow   52.680000 n
+ph_last_reg_3_            fdf2a3          ssc_core_slow   52.680000 n
+ph_last_reg_4_            fdf2a3          ssc_core_slow   52.680000 n
+ph_last_reg_5_            fdf2a3          ssc_core_slow   52.680000 n
+ph_last_reg_6_            fdf2a3          ssc_core_slow   52.680000 n
+ph_last_reg_7_            fdf2a3          ssc_core_slow   52.680000 n
+ph_now_reg_0_             fdf2a3          ssc_core_slow   52.680000 n
+ph_now_reg_1_             fdf2a3          ssc_core_slow   52.680000 n
+ph_now_reg_2_             fdf2a3          ssc_core_slow   52.680000 n
+ph_now_reg_3_             fdf2a3          ssc_core_slow   52.680000 n
+ph_now_reg_4_             fdf2a3          ssc_core_slow   52.680000 n
+ph_now_reg_5_             fdf2a3          ssc_core_slow   52.680000 n
+ph_now_reg_6_             fdf2a3          ssc_core_slow   52.680000 n
+ph_now_reg_7_             fdf2a3          ssc_core_slow   52.680000 n
+ph_vld_dly1_reg           fdf2a3          ssc_core_slow   52.680000 n
+res_last_reg_0_           fdf2a3          ssc_core_slow   52.680000 n
+res_last_reg_1_           fdf2a3          ssc_core_slow   52.680000 n
+res_last_reg_2_           fdf2a3          ssc_core_slow   52.680000 n
+res_last_reg_3_           fdf2a3          ssc_core_slow   52.680000 n
+res_last_reg_4_           fdf2a3          ssc_core_slow   52.680000 n
+res_last_reg_5_           fdf2a3          ssc_core_slow   52.680000 n
+res_last_reg_6_           fdf2a3          ssc_core_slow   52.680000 n
+res_last_reg_7_           fdf2a3          ssc_core_slow   52.680000 n
+res_last_reg_8_           fdf2a3          ssc_core_slow   52.680000 n
+res_last_reg_9_           fdf2a3          ssc_core_slow   52.680000 n
+res_last_vld_reg          fdf2a3          ssc_core_slow   52.680000 n
+--------------------------------------------------------------------------------
+Total 155 cells                                           43698.380131
+1

@@ -1,0 +1,26 @@
+remove_design -designs
+
+read CLOCK_DFT.db
+preview_scan -show all
+insert_scan
+check_test
+report_test -scan_path
+create_test_patterns
+
+create_test_clock -period 100 -waveform {55, 45} "clk"
+check_test
+report_test -scan_path
+create_test_patterns
+
+delete_test
+multi_pass_test_generation = true
+
+create_test_clock -period 100 -waveform {45, 55} "clk"
+check_test
+create_test_patterns -out pass1
+create_test_clock -period 100 -waveform {55, 45} "clk"
+create_test_patterns -out pass2
+
+report_test -coverage -faults -class untested
+
+multi_pass_test_generation = false

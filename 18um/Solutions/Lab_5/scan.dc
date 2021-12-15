@@ -1,0 +1,43 @@
+/*Warning: Violations occurred during test design rule checking. (TEST-124)
+*/
+
+
+/******************************************************
+
+  Created by preview_scan() on Sat Aug 29 15:14:00 1998
+
+******************************************************/
+
+
+set_scan_path path1 -dedicated_scan_out false { \
+  instB/en_reg \
+  instD/r2_reg[1] \
+  instD/r2_reg[2] \
+  instD/r2_reg[3] \
+  instD/r2_reg[4] \
+  shift \
+}
+
+set_scan_path path2 -dedicated_scan_out false { \
+  instD/r1_reg[4] \
+  instD/r1_reg[3] \
+  instD/r1_reg[2] \
+  instD/r1_reg[1] \
+  instA/zr_reg \
+  instB/d2_reg[1] \
+  instB/d2_reg[2] \
+  instB/d2_reg[3] \
+  instB/d2_reg[4] \
+}
+
+set_scan_path path3 -dedicated_scan_out false { \
+  instC/a1r_reg \
+  instC/a2r_reg \
+  instB/d1_reg[1] \
+  instB/d1_reg[2] \
+  instB/d1_reg[3] \
+  instB/d1_reg[4] \
+  instC/yr_reg \
+  instC/zr_reg \
+}
+

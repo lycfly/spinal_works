@@ -1,0 +1,233 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Oct 26 22:11:04 2021
+****************************************
+
+Operating Conditions: slow_125_1.62   Library: ssc_core_slow
+Wire Load Model Mode: enclosed
+
+  Startpoint: en (input port clocked by clk)
+  Endpoint: calvn/clk_gate_SumXinReg_reg/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       2.00       2.00
+  input external delay                                              4.00       6.00 f
+  en (in)                                                 1.00      0.00       6.00 f
+  en (net)                                      4                   0.00       6.00 f
+  calvn/en (cal_vn)                                                 0.00       6.00 f
+  calvn/en (net)                                                    0.00       6.00 f
+  calvn/U158/Y (and2a6)                                   0.08      0.34       6.34 f
+  calvn/N1 (net)                                1                   0.00       6.34 f
+  calvn/clk_gate_SumXinReg_reg/EN (SNPS_CLOCK_GATE_HIGH_cal_vn_1)     0.00     6.34 f
+  calvn/clk_gate_SumXinReg_reg/EN (net)                             0.00       6.34 f
+  calvn/clk_gate_SumXinReg_reg/latch/D (ldf1b3)           0.08      0.00       6.34 f
+  data arrival time                                                            6.34
+
+  clock clk (fall edge)                                             5.00       5.00
+  clock network delay (ideal)                                       2.00       7.00
+  clock uncertainty                                                -1.00       6.00
+  calvn/clk_gate_SumXinReg_reg/latch/G (ldf1b3)                     0.00       6.00 f
+  time borrowed from endpoint                                       0.34       6.34
+  data required time                                                           6.34
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           6.34
+  data arrival time                                                           -6.34
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+  Time Borrowing Information
+  ------------------------------------------------------------------------
+  clk nominal pulse width                                           5.00   
+  library setup time                                               -0.48   
+  ------------------------------------------------------------------------
+  max time borrow                                                   4.52   
+  ------------------------------------------------------------------------
+  actual time borrow                                                0.34   
+  clock uncertainty                                                -1.00   
+  ------------------------------------------------------------------------
+  time given to startpoint                                         -0.66   
+  ------------------------------------------------------------------------
+
+
+  Startpoint: cordic/res_rg_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: res[1] (output port clocked by clk)
+  Path Group: OUTPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cordic_int         5KGATES               ssc_core_slow
+  cal_phase          5KGATES               ssc_core_slow
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                        Fanout     Trans      Incr       Path      Attributes
+  ------------------------------------------------------------------------------------------
+  clock clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        2.00       2.00
+  cordic/res_rg_reg_1_/CLK (fdf2a3)        1.00      0.00       2.00 r
+  cordic/res_rg_reg_1_/Q (fdf2a3)          0.73      0.97       2.97 r
+  cordic/res[1] (net)            2                   0.00       2.97 r
+  cordic/res[1] (cordic_int)                         0.00       2.97 r
+  res[1] (net)                                       0.00       2.97 r
+  res[1] (out)                             0.73      0.00       2.97 r
+  data arrival time                                             2.97
+
+  clock clk (rise edge)                             10.00      10.00
+  clock network delay (ideal)                        2.00      12.00
+  clock uncertainty                                 -1.00      11.00
+  output external delay                             -6.00       5.00
+  data required time                                            5.00
+  ------------------------------------------------------------------------------------------
+  data required time                                            5.00
+  data arrival time                                            -2.97
+  ------------------------------------------------------------------------------------------
+  slack (MET)                                                   2.03
+
+
+  Startpoint: dot/psum2_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_21_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dotVn              5KGATES               ssc_core_slow
+  cal_phase          5KGATES               ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       2.00       2.00
+  dot/psum2_reg_1_/CLK (fdf2a3)                           1.00      0.00       2.00 r
+  dot/psum2_reg_1_/Q (fdf2a3)                             0.11      0.70       2.70 f
+  dot/n_zz_6[0] (net)                           2                   0.00       2.70 f
+  dot/FloorWrap2/din[0] (FloorAndWrap_8_0)                          0.00       2.70 f
+  dot/FloorWrap2/din[0] (net)                                       0.00       2.70 f
+  dot/FloorWrap2/U16/Y (clk1a3)                           0.15      0.19       2.89 f
+  dot/FloorWrap2/dout[0] (net)                  3                   0.00       2.89 f
+  dot/FloorWrap2/dout[0] (FloorAndWrap_8_0)                         0.00       2.89 f
+  dot/psum_out2[0] (net)                                            0.00       2.89 f
+  dot/psum_out2[0] (dotVn)                                          0.00       2.89 f
+  dot_psum_out2[0] (net)                                            0.00       2.89 f
+  cordic/y[0] (cordic_int)                                          0.00       2.89 f
+  cordic/y[0] (net)                                                 0.00       2.89 f
+  cordic/U172/Y (and2c1)                                  0.75      0.41       3.31 r
+  cordic/n25 (net)                              1                   0.00       3.31 r
+  cordic/U146/Y (or3d1)                                   0.54      0.35       3.66 f
+  cordic/n29 (net)                              1                   0.00       3.66 f
+  cordic/U177/Y (and2c3)                                  0.30      0.23       3.89 r
+  cordic/n30 (net)                              1                   0.00       3.89 r
+  cordic/U178/Y (or3d3)                                   0.37      0.22       4.12 f
+  cordic/n481 (net)                             2                   0.00       4.12 f
+  cordic/U35/Y (or3d6)                                    0.26      0.20       4.31 r
+  cordic/n237 (net)                             3                   0.00       4.31 r
+  cordic/U180/Y (clk1b6)                                  0.20      0.15       4.47 f
+  cordic/n436 (net)                             4                   0.00       4.47 f
+  cordic/U6/Y (inv1a9)                                    0.61      0.35       4.81 r
+  cordic/n425 (net)                            19                   0.00       4.81 r
+  cordic/U33/Y (ao1f2)                                    0.32      0.22       5.03 f
+  cordic/n308 (net)                             1                   0.00       5.03 f
+  cordic/U457/Y (xor2a2)                                  0.27      0.25       5.27 r
+  cordic/n316 (net)                             2                   0.00       5.27 r
+  cordic/U466/Y (or2c1)                                   0.43      0.27       5.54 f
+  cordic/n664 (net)                             2                   0.00       5.54 f
+  cordic/U467/Y (inv1a1)                                  0.62      0.40       5.95 r
+  cordic/n659 (net)                             2                   0.00       5.95 r
+  cordic/U130/Y (oa1f1)                                   0.28      0.18       6.13 f
+  cordic/n319 (net)                             1                   0.00       6.13 f
+  cordic/U18/Y (ao1f2)                                    0.66      0.22       6.35 r
+  cordic/n655 (net)                             2                   0.00       6.35 r
+  cordic/U474/Y (oa1f3)                                   0.36      0.27       6.63 f
+  cordic/n652 (net)                             2                   0.00       6.63 f
+  cordic/U483/Y (ao1f3)                                   0.58      0.37       7.00 r
+  cordic/n645 (net)                             2                   0.00       7.00 r
+  cordic/U490/Y (oa1f6)                                   0.24      0.19       7.18 f
+  cordic/n641 (net)                             2                   0.00       7.18 f
+  cordic/U69/Y (ao1f3)                                    0.47      0.30       7.48 r
+  cordic/n633 (net)                             2                   0.00       7.48 r
+  cordic/U512/Y (oa1f3)                                   0.33      0.24       7.73 f
+  cordic/n628 (net)                             2                   0.00       7.73 f
+  cordic/U523/Y (ao1f3)                                   0.48      0.32       8.05 r
+  cordic/n620 (net)                             2                   0.00       8.05 r
+  cordic/U532/Y (oa1f3)                                   0.33      0.25       8.29 f
+  cordic/n615 (net)                             2                   0.00       8.29 f
+  cordic/U542/Y (ao1f3)                                   0.48      0.32       8.61 r
+  cordic/n607 (net)                             2                   0.00       8.61 r
+  cordic/U554/Y (oa1f3)                                   0.33      0.25       8.86 f
+  cordic/n602 (net)                             2                   0.00       8.86 f
+  cordic/U58/Y (ao1f3)                                    0.48      0.32       9.18 r
+  cordic/n594 (net)                             2                   0.00       9.18 r
+  cordic/U56/Y (oa1f3)                                    0.32      0.24       9.42 f
+  cordic/n589 (net)                             2                   0.00       9.42 f
+  cordic/U17/Y (ao1f2)                                    0.66      0.41       9.82 r
+  cordic/n581 (net)                             2                   0.00       9.82 r
+  cordic/U590/Y (oa1f3)                                   0.36      0.27      10.10 f
+  cordic/n460 (net)                             2                   0.00      10.10 f
+  cordic/U612/Y (ao1f3)                                   0.49      0.33      10.43 r
+  cordic/n465 (net)                             2                   0.00      10.43 r
+  cordic/U615/Y (oa1f3)                                   0.25      0.19      10.62 f
+  cordic/n473 (net)                             1                   0.00      10.62 f
+  cordic/U618/Y (xor2a2)                                  0.20      0.27      10.89 f
+  cordic/n672 (net)                             1                   0.00      10.89 f
+  cordic/xn_reg_21_/D (fdf2a3)                            0.20      0.00      10.89 f
+  data arrival time                                                           10.89
+
+  clock clk (rise edge)                                            10.00      10.00
+  clock network delay (ideal)                                       2.00      12.00
+  clock uncertainty                                                -1.00      11.00
+  cordic/xn_reg_21_/CLK (fdf2a3)                                    0.00      11.00 r
+  library setup time                                               -0.11      10.89
+  data required time                                                          10.89
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                          10.89
+  data arrival time                                                          -10.89
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.00
+
+
+1

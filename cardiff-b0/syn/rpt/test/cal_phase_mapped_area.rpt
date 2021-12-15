@@ -1,0 +1,69 @@
+ 
+****************************************
+Report : area
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Sun Nov 28 21:28:00 2021
+****************************************
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs (File: /root/lib/tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db)
+
+Number of ports:                          673
+Number of nets:                          2680
+Number of cells:                         1831
+Number of combinational cells:           1592
+Number of sequential cells:               215
+Number of macros/black boxes:               0
+Number of buf/inv:                        519
+Number of references:                      20
+
+Combinational area:                914.144001
+Buf/Inv area:                      113.581998
+Noncombinational area:             396.311998
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  1310.455999
+Total area:                 undefined
+
+The above information was reported from the logical library. The following are from the physical library:
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ---------------------------------
+cal_phase                         1310.4560    100.0   63.0140    53.9980  0.0000  cal_phase
+calvn                              386.6100     29.5  220.0100   143.3740  0.0000  cal_vn
+calvn/FloorWrapVn_0                  2.3520      0.2    2.3520     0.0000  0.0000  FloorAndWrap_7
+calvn/FloorWrapVn_1                  2.3520      0.2    2.3520     0.0000  0.0000  FloorAndWrap_6
+calvn/FloorWrapVn_2                  2.3520      0.2    2.3520     0.0000  0.0000  FloorAndWrap_5
+calvn/FloorWrapVn_3                  2.3520      0.2    2.3520     0.0000  0.0000  FloorAndWrap_4
+calvn/FloorWrapVn_4                  2.3520      0.2    2.3520     0.0000  0.0000  FloorAndWrap_3
+calvn/FloorWrapVn_5                  2.3520      0.2    2.3520     0.0000  0.0000  FloorAndWrap_2
+calvn/FloorWrapVn_6                  2.3520      0.2    2.3520     0.0000  0.0000  FloorAndWrap_1
+calvn/FloorWrapVn_7                  2.3520      0.2    2.3520     0.0000  0.0000  FloorAndWrap_0
+calvn/clk_gate_SumXinReg_reg         1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_1
+calvn/clk_gate_VnReg_0_reg           1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_2
+calvn/clk_gate_VnReg_4_reg           1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_0
+clk_gate_LastA2stZero_reg            1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_cal_phase_0
+clk_gate_ph_now_reg                  1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_cal_phase_1
+cordic                             414.6380     31.6  302.1340   108.0940  0.0000  cordic_int
+cordic/clk_gate_res_rg_reg           1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_1
+cordic/clk_gate_xn_reg               1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_0
+cordic/clk_gate_yn_reg               1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_2
+dot                                389.2560     29.7  102.3120    76.1460  0.0000  dotVn
+dot/FloorWrapPsum1                   4.7040      0.4    4.7040     0.0000  0.0000  FloorAndWrap_8_1
+dot/FloorWrapPsum2                   4.7040      0.4    4.7040     0.0000  0.0000  FloorAndWrap_8_0
+dot/clk_gate_psum1_reg               1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_dotVn_1
+dot/clk_gate_psum2_reg               1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_dotVn_0
+dot/table_1                        198.4500     15.1  198.4500     0.0000  0.0000  s_table
+--------------------------------  ---------  -------  --------  ---------  ------  ---------------------------------
+Total                                                 914.1440   396.3120  0.0000
+
+1

@@ -1,0 +1,612 @@
+remove_design -designs
+Removing design 'LATCH'
+1
+
+read BIDIR.db
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/BIDIR.db'
+Current design is now '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/BIDIR.db:BIDIR'
+{"BIDIR", "DDES", "CDES", "BDES", "ADES"}
+
+test_default_period = 200
+200.000000
+test_default_strobe = 190
+190.000000
+
+current_design BIDIR
+Current design is 'BIDIR'.
+{"BIDIR"}
+check_test
+Information: Using default scan style 'multiplexed_flip_flop'. (TESTDB-279)
+  Loading design 'BIDIR'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk1 (90.0,110.0). (TEST-260)
+Information: Inferred system/test clock port clk3 (90.0,110.0). (TEST-260)
+Information: Inferred system/test clock port clk2 (90.0,110.0). (TEST-260)
+Warning: Net bidi[4], connected to bidirectional port bidi[4], has three-state driver(s) with unknown mode during scan shift. (TEST-563)
+Information: Because the three-state cell U14 is unknown due to the following input pin values: E = x. (TEST-552)
+Information: Bidirectional port bidi[4] is inferred as X (Input don't care value) during scan shift due to scan configuration specification. (TEST-565)
+Information: There are 3 other nets with the same violation. (TEST-289)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk1...
+  ...simulating capture clock rising edge at port clk2...
+  ...simulating capture clock rising edge at port clk3...
+  ...simulating capture clock falling edge at port clk1...
+Information: Clock port clk1 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk2...
+  ...simulating capture clock falling edge at port clk3...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk1. (TEST-262)
+Information: Inferred capture clock group : clk2. (TEST-262)
+Information: Inferred capture clock group : clk3. (TEST-262)
+Warning: Pin D of cell instD/r1_reg[4] (FD1) cannot capture reliably. (TEST-478)
+Information: Bidirectional port bidi[3] changes value to M (Output don't care value) at time 55.0. (TEST-559)
+Information: Cell instD/r1_reg[4] captures data on pin D at rising edge of clock port clk1 (pin CP) at time 90.0. (TEST-473)
+Information: The path contains: bidi[3], instD/U64/A, instD/U64/Z, instD/U58/D, instD/U58/Z, instD/U41/B, instD/U41/Z, instD/r1_reg[4]/D. (TEST-282)
+Information: There are 3 other pins with the same violation. (TEST-170)
+Warning: Data can not be captured into cell instD/r1_reg[4] (FD1). (TEST-310)
+Information: There are 3 other cells with the same violation. (TEST-171)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 12
+**************************************************
+
+PROTOCOL VIOLATIONS
+      4 net (connected to bidirectional port) with unknown 3-state driver mode violations (TEST-563)
+CAPTURE VIOLATIONS
+      4 Unreliable capture (data pin) violations (TEST-478)
+      4 Cell does not capture violations (TEST-310)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  4 out of 26 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+   *   4 cells have parallel capture violations
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  22 cells are valid scan cells
+
+1
+create_test_patterns
+  Loading design 'BIDIR'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Building test generation network
+Information: Faults on unused cell outputs are not considered, e.g. pin QN of cell instA/sh1_reg (FD1). (TEST-200)
+Warning: Design has no scan path.  Generated vectors will not be saved. (UIT-8)
+
+  Combinational Test Pattern Generation starts:
+
+    Start random pattern generation...
+
+       65.55% faults processed ; cumulative fault coverage =  65.55%
+       76.56% faults processed ; cumulative fault coverage =  76.56%
+       77.99% faults processed ; cumulative fault coverage =  77.99%
+       78.47% faults processed ; cumulative fault coverage =  78.47%
+
+    ...End random pattern generation
+
+    Start deterministic pattern generation...
+
+       94.50% faults processed ; cumulative fault coverage =  80.14%
+       95.69% faults processed ; cumulative fault coverage =  81.34%
+       98.56% faults processed ; cumulative fault coverage =  81.82%
+      100.00% faults processed ; cumulative fault coverage =  83.25%
+
+    ...End deterministic pattern generation
+
+
+                                Non-collapsed     Collapsed
+    No. of detected faults      522               348
+    No. of abandoned faults     0                 0
+    No. of tied faults          0                 0
+    No. of redundant faults     0                 0
+    No. of untested faults      108               70
+    Total no. of faults         630               418
+    Fault coverage              82.86             83.25
+
+    No. of test patterns         26
+
+    Test Generation Time (CPU)  0.00 sec
+
+    Start compaction...
+
+    ...End compaction
+
+    No. of compacted patterns    19
+
+    Compaction Time (CPU)       0.00 sec
+...Writing test program BIDIR (without vectors) to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_5/BIDIR.vdb
+1
+
+test_default_bidir_delay = 110
+110.000000
+check_test
+  Loading design 'BIDIR'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk1 (90.0,110.0). (TEST-260)
+Information: Inferred system/test clock port clk3 (90.0,110.0). (TEST-260)
+Information: Inferred system/test clock port clk2 (90.0,110.0). (TEST-260)
+Warning: Net bidi[4], connected to bidirectional port bidi[4], has three-state driver(s) with unknown mode during scan shift. (TEST-563)
+Information: Because the three-state cell U14 is unknown due to the following input pin values: E = x. (TEST-552)
+Information: Bidirectional port bidi[4] is inferred as X (Input don't care value) during scan shift due to scan configuration specification. (TEST-565)
+Information: There are 3 other nets with the same violation. (TEST-289)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk1...
+  ...simulating capture clock rising edge at port clk2...
+  ...simulating capture clock rising edge at port clk3...
+  ...simulating capture clock falling edge at port clk1...
+Information: Clock port clk1 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk2...
+  ...simulating capture clock falling edge at port clk3...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk1. (TEST-262)
+Information: Inferred capture clock group : clk2. (TEST-262)
+Information: Inferred capture clock group : clk3. (TEST-262)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 4
+**************************************************
+
+PROTOCOL VIOLATIONS
+      4 net (connected to bidirectional port) with unknown 3-state driver mode violations (TEST-563)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  0 out of 26 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  26 cells are valid scan cells
+
+1
+create_test_patterns
+  Loading design 'BIDIR'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Building test generation network
+Information: Faults on unused cell outputs are not considered, e.g. pin QN of cell instA/sh1_reg (FD1). (TEST-200)
+Warning: Design has no scan path.  Generated vectors will not be saved. (UIT-8)
+
+  Combinational Test Pattern Generation starts:
+
+    Start random pattern generation...
+
+       74.40% faults processed ; cumulative fault coverage =  74.40%
+       89.95% faults processed ; cumulative fault coverage =  89.95%
+       90.43% faults processed ; cumulative fault coverage =  90.43%
+       92.34% faults processed ; cumulative fault coverage =  92.34%
+       93.78% faults processed ; cumulative fault coverage =  93.78%
+
+    ...End random pattern generation
+
+    Start deterministic pattern generation...
+
+      100.00% faults processed ; cumulative fault coverage =  97.61%
+
+    ...End deterministic pattern generation
+
+
+                                Non-collapsed     Collapsed
+    No. of detected faults      620               408
+    No. of abandoned faults     0                 0
+    No. of tied faults          0                 0
+    No. of redundant faults     0                 0
+    No. of untested faults      10                10
+    Total no. of faults         630               418
+    Fault coverage              98.41             97.61
+
+    No. of test patterns         29
+
+    Test Generation Time (CPU)  0.00 sec
+
+    Start compaction...
+
+    ...End compaction
+
+    No. of compacted patterns    25
+
+    Compaction Time (CPU)       0.00 sec
+...Writing test program BIDIR (without vectors) to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_5/BIDIR.vdb
+1
+report_test -faults -class untested
+ 
+****************************************
+Report : test
+          -faults (untested)
+Design : BIDIR
+Version: 1998.02
+Date   : Sat Aug 29 18:30:56 1998
+****************************************
+
+Test program : `BIDIR' 
+Depends on   : 
+
+Faults:
+
+ s-a-0 : stuck at 0 fault
+ s-a-1 : stuck at 1 fault
+
+  instB:
+    Untested:
+      en_reg/Q pin s-a-0 & s-a-1
+  BIDIR:
+    Untested:
+      U11/E pin s-a-0 & s-a-1
+      U12/E pin s-a-0 & s-a-1
+      U13/E pin s-a-0 & s-a-1
+      U14/E pin s-a-0 & s-a-1
+
+1
+
+set_scan_configuration -bidi_mode output
+Accepted scan specification for design 'BIDIR'.
+1
+check_test
+  Loading design 'BIDIR'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk1 (90.0,110.0). (TEST-260)
+Information: Inferred system/test clock port clk3 (90.0,110.0). (TEST-260)
+Information: Inferred system/test clock port clk2 (90.0,110.0). (TEST-260)
+Warning: Net bidi[4], connected to bidirectional port bidi[4], has three-state driver(s) with unknown mode during scan shift. (TEST-563)
+Information: Because the three-state cell U14 is unknown due to the following input pin values: E = x. (TEST-552)
+Information: Bidirectional port bidi[4] is inferred as M (Output don't care value) during scan shift due to scan configuration specification. (TEST-565)
+Information: There are 3 other nets with the same violation. (TEST-289)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk1...
+  ...simulating capture clock rising edge at port clk2...
+  ...simulating capture clock rising edge at port clk3...
+  ...simulating capture clock falling edge at port clk1...
+Information: Clock port clk1 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk2...
+  ...simulating capture clock falling edge at port clk3...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk1. (TEST-262)
+Information: Inferred capture clock group : clk2. (TEST-262)
+Information: Inferred capture clock group : clk3. (TEST-262)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 4
+**************************************************
+
+PROTOCOL VIOLATIONS
+      4 net (connected to bidirectional port) with unknown 3-state driver mode violations (TEST-563)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  0 out of 26 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  26 cells are valid scan cells
+
+1
+insert_scan
+  Loading design 'BIDIR'
+Warning: In design 'DDES', there is 1 net with no loads. (LINT-30)
+Warning: In design 'DDES', there is 1 unloaded input port. (LINT-30)
+
+Information: Use the 'check_design' command for 
+	 more information about warnings. (LINT-99)
+
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+  Inserting Scan Cells
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+  Transferring (new) design 'ADES_test_1' to database 'BIDIR.db'
+  Transferring (new) design 'BDES_test_1' to database 'BIDIR.db'
+  Transferring (new) design 'CDES_test_1' to database 'BIDIR.db'
+  Transferring (new) design 'DDES_test_1' to database 'BIDIR.db'
+  Transferring design 'BIDIR' to database 'BIDIR.db'
+
+Warning: Deleting current test program 'BIDIR' because it is not consistent with the current design. (TPM-40)
+1
+check_test
+  Loading design 'BIDIR'
+
+Information: Starting test design rule checking for existing scan design. (TEST-220)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk1 (90.0,110.0). (TEST-260)
+Information: Inferred system/test clock port clk3 (90.0,110.0). (TEST-260)
+Information: Inferred system/test clock port clk2 (90.0,110.0). (TEST-260)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...26 bits scanned-in to 26 cells (total scan-in 26)...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk1...
+  ...simulating capture clock rising edge at port clk2...
+  ...simulating capture clock rising edge at port clk3...
+  ...simulating capture clock falling edge at port clk1...
+Information: Clock port clk1 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk2...
+  ...simulating capture clock falling edge at port clk3...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk1. (TEST-262)
+Information: Inferred capture clock group : clk2. (TEST-262)
+Information: Inferred capture clock group : clk3. (TEST-262)
+  ...simulating parallel vector...
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...data scanned-out from 22 cells (total scan-out 26)...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 0
+**************************************************
+
+
+
+**************************************************
+  Sequential Cell Summary
+
+  0 out of 26 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  26 cells are valid scan cells
+
+1
+remove_design -design
+Removing file 'BIDIR.db'
+         design 'BIDIR'
+         design 'DDES'
+         design 'CDES'
+         design 'BDES'
+         design 'ADES'
+         design 'ADES_test_1'
+         design 'BDES_test_1'
+         design 'CDES_test_1'
+         design 'DDES_test_1'
+1
+
+read BIDIR.db
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/BIDIR.db'
+Current design is now '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/BIDIR.db:BIDIR'
+{"BIDIR", "DDES", "CDES", "BDES", "ADES"}
+current_design BIDIR
+Current design is 'BIDIR'.
+{"BIDIR"}
+set_scan_configuration -disable false
+Information: Using default scan style 'multiplexed_flip_flop'. (TESTDB-279)
+Accepted scan specification for design 'BIDIR'.
+1
+insert_scan
+  Loading design 'BIDIR'
+Warning: In design 'DDES', there is 1 net with no loads. (LINT-30)
+Warning: In design 'DDES', there is 1 unloaded input port. (LINT-30)
+
+Information: Use the 'check_design' command for 
+	 more information about warnings. (LINT-99)
+
+  Checking test design rules
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+  Inserting Scan Cells
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+  Transferring (new) design 'ADES_test_1' to database 'BIDIR.db'
+  Transferring (new) design 'BDES_test_1' to database 'BIDIR.db'
+  Transferring (new) design 'CDES_test_1' to database 'BIDIR.db'
+  Transferring (new) design 'DDES_test_1' to database 'BIDIR.db'
+  Transferring design 'BIDIR' to database 'BIDIR.db'
+
+1
+check_test
+  Loading design 'BIDIR'
+
+Information: Starting test design rule checking for existing scan design. (TEST-220)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk1 (90.0,110.0). (TEST-260)
+Information: Inferred system/test clock port clk3 (90.0,110.0). (TEST-260)
+Information: Inferred system/test clock port clk2 (90.0,110.0). (TEST-260)
+Warning: Net bidi[4], connected to bidirectional port bidi[4], has three-state driver(s) with unknown mode during scan shift. (TEST-563)
+Information: Because the three-state cell U14 is unknown due to the following input pin values: E = x. (TEST-552)
+Information: Bidirectional port bidi[4] is inferred as X (Input don't care value) during scan shift due to scan configuration specification. (TEST-565)
+Information: The preceding violation will prevent test pattern generation. (TEST-567)
+Information: There are 3 other nets with the same violation. (TEST-289)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...26 bits scanned-in to 26 cells (total scan-in 26)...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk1...
+  ...simulating capture clock rising edge at port clk2...
+  ...simulating capture clock rising edge at port clk3...
+  ...simulating capture clock falling edge at port clk1...
+Information: Clock port clk1 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk2...
+  ...simulating capture clock falling edge at port clk3...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk1. (TEST-262)
+Information: Inferred capture clock group : clk2. (TEST-262)
+Information: Inferred capture clock group : clk3. (TEST-262)
+  ...simulating parallel vector...
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...data scanned-out from 22 cells (total scan-out 26)...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 4
+      4 violations will stop test pattern generation
+**************************************************
+
+PROTOCOL VIOLATIONS
+      4 net (connected to bidirectional port) with unknown 3-state driver mode violations (TEST-563)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  0 out of 26 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  26 cells are valid scan cells
+
+1
+
+set_scan_configuration -bidi_mode input
+Accepted scan specification for design 'BIDIR'.
+1
+set_scan_configuration -disable true
+Accepted scan specification for design 'BIDIR'.
+1
+
+insert_scan
+Warning: You have asked for scan replacement, but attributes show that the design already has scan circuitry. Your request is ignored. (UIT-4)
+  Loading design 'BIDIR'
+Warning: In design 'DDES_test_1', there is 1 port not connected to any nets. (LINT-30)
+
+Information: Use the 'check_design' command for 
+	 more information about warnings. (LINT-99)
+
+  Checking test design rules
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+  Transferring design 'ADES_test_1' to database 'BIDIR.db'
+  Transferring design 'BDES_test_1' to database 'BIDIR.db'
+  Transferring (new) design 'CDES_test_2' to database 'BIDIR.db'
+  Transferring (new) design 'DDES_test_2' to database 'BIDIR.db'
+  Transferring design 'BIDIR' to database 'BIDIR.db'
+Warning: Deleting scan chain information from design 'BIDIR'. (OPT-463)
+
+1
+check_test
+  Loading design 'BIDIR'
+
+Information: Starting test design rule checking for existing scan design. (TEST-220)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk1 (90.0,110.0). (TEST-260)
+Information: Inferred system/test clock port clk3 (90.0,110.0). (TEST-260)
+Information: Inferred system/test clock port clk2 (90.0,110.0). (TEST-260)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...26 bits scanned-in to 26 cells (total scan-in 26)...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk1...
+  ...simulating capture clock rising edge at port clk2...
+  ...simulating capture clock rising edge at port clk3...
+  ...simulating capture clock falling edge at port clk1...
+Information: Clock port clk1 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk2...
+  ...simulating capture clock falling edge at port clk3...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk1. (TEST-262)
+Information: Inferred capture clock group : clk2. (TEST-262)
+Information: Inferred capture clock group : clk3. (TEST-262)
+  ...simulating parallel vector...
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...data scanned-out from 22 cells (total scan-out 26)...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 0
+**************************************************
+
+
+
+**************************************************
+  Sequential Cell Summary
+
+  0 out of 26 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  26 cells are valid scan cells
+
+1

@@ -1,0 +1,810 @@
+remove_design -designs
+Removing design 'TOP_ONLY'
+Removing design 'BDES'
+Removing design 'CDES'
+Removing design 'DDES'
+Removing design 'ADES'
+1
+
+foreach (EACH_DESIGN, {ADES, BDES, CDES, DDES}) {
+  read EACH_DESIGN + "_GENERIC.db"
+  current_design EACH_DESIGN
+  set_scan_configuration -style multiplexed_flip_flop
+  compile -scan
+  check_test > EACH_DESIGN + ".rpt"
+  preview_scan -show all >> EACH_DESIGN + ".rpt"
+  insert_scan
+  check_test >> EACH_DESIGN + ".rpt"
+  report_test -scan_path >> EACH_DESIGN + ".rpt"
+  write -format db -hierarchy -output EACH_DESIGN + ".db"
+}
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/ADES_GENERIC.db'
+Current design is now '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/ADES_GENERIC.db:ADES'
+Current design is 'ADES'.
+Accepted scan specification for design 'ADES'.
+
+  Loading design 'ADES'
+Information: Design 'ADES' has no optimization constraints set. (OPT-108)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'ADES'
+  Mapping 'ADES'
+
+                                               TOTAL NEG     DESIGN RULE
+            TRIALS      AREA     DELTA DELAY     SLACK          COST
+           --------    ------    -----------    -------        ------
+	         1       62.0          0.00         0.0           0.0 
+	         1       62.0          0.00         0.0           0.0 
+	         0
+	   --------
+	         0
+
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                               TOTAL NEG     DESIGN RULE
+            TRIALS      AREA     DELTA DELAY     SLACK          COST
+           --------    ------    -----------    -------        ------
+	         2       61.0          0.00         0.0           0.0 
+	        44
+	   --------
+	        46
+
+
+  Optimization Complete
+  ---------------------
+  Transferring Design 'ADES' to database 'ADES_GENERIC.db'
+Current design is 'ADES'.
+Warning: You have asked for scan replacement, but attributes show that the design already has scan circuitry. Your request is ignored. (UIT-4)
+  Loading design 'ADES'
+  Using test design rule information from previous check_test run
+  Architecting Scan Chains
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+  Transferring design 'ADES' to database 'ADES_GENERIC.db'
+
+Writing to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_6/ADES.db
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/BDES_GENERIC.db'
+Current design is now '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/BDES_GENERIC.db:BDES'
+Current design is 'BDES'.
+Accepted scan specification for design 'BDES'.
+
+  Loading design 'BDES'
+Information: Design 'BDES' has no optimization constraints set. (OPT-108)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'BDES'
+  Mapping 'BDES'
+
+                                               TOTAL NEG     DESIGN RULE
+            TRIALS      AREA     DELTA DELAY     SLACK          COST
+           --------    ------    -----------    -------        ------
+	         1      118.0          0.00         0.0           0.0 
+	         1      118.0          0.00         0.0           0.0 
+	         0
+	   --------
+	         0
+
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                               TOTAL NEG     DESIGN RULE
+            TRIALS      AREA     DELTA DELAY     SLACK          COST
+           --------    ------    -----------    -------        ------
+	        88
+	   --------
+	        88
+
+
+  Optimization Complete
+  ---------------------
+  Transferring Design 'BDES' to database 'BDES_GENERIC.db'
+Current design is 'BDES'.
+Warning: You have asked for scan replacement, but attributes show that the design already has scan circuitry. Your request is ignored. (UIT-4)
+  Loading design 'BDES'
+  Using test design rule information from previous check_test run
+  Architecting Scan Chains
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+  Transferring design 'BDES' to database 'BDES_GENERIC.db'
+
+Writing to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_6/BDES.db
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/CDES_GENERIC.db'
+Current design is now '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/CDES_GENERIC.db:CDES'
+Current design is 'CDES'.
+Accepted scan specification for design 'CDES'.
+
+  Loading design 'CDES'
+Information: Design 'CDES' has no optimization constraints set. (OPT-108)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'CDES'
+  Mapping 'CDES'
+
+                                               TOTAL NEG     DESIGN RULE
+            TRIALS      AREA     DELTA DELAY     SLACK          COST
+           --------    ------    -----------    -------        ------
+	         1       50.0          0.00         0.0           0.0 
+	         1       50.0          0.00         0.0           0.0 
+	         0
+	   --------
+	         0
+
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                               TOTAL NEG     DESIGN RULE
+            TRIALS      AREA     DELTA DELAY     SLACK          COST
+           --------    ------    -----------    -------        ------
+	         2       49.0          0.00         0.0           0.0 
+	         2       48.0          0.00         0.0           0.0 
+	         2       47.0          0.00         0.0           0.0 
+	        54
+	   --------
+	        60
+
+
+  Optimization Complete
+  ---------------------
+  Transferring Design 'CDES' to database 'CDES_GENERIC.db'
+Current design is 'CDES'.
+Warning: You have asked for scan replacement, but attributes show that the design already has scan circuitry. Your request is ignored. (UIT-4)
+  Loading design 'CDES'
+  Using test design rule information from previous check_test run
+  Architecting Scan Chains
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+  Transferring design 'CDES' to database 'CDES_GENERIC.db'
+
+Writing to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_6/CDES.db
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/DDES_GENERIC.db'
+Current design is now '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/DDES_GENERIC.db:DDES'
+Current design is 'DDES'.
+Accepted scan specification for design 'DDES'.
+
+  Loading design 'DDES'
+Information: Design 'DDES' has no optimization constraints set. (OPT-108)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'DDES'
+  Mapping 'DDES'
+
+                                               TOTAL NEG     DESIGN RULE
+            TRIALS      AREA     DELTA DELAY     SLACK          COST
+           --------    ------    -----------    -------        ------
+	         1      147.0          0.00         0.0           0.0 
+	         1      147.0          0.00         0.0           0.0 
+	         0
+	   --------
+	         0
+
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                               TOTAL NEG     DESIGN RULE
+            TRIALS      AREA     DELTA DELAY     SLACK          COST
+           --------    ------    -----------    -------        ------
+	         2      146.0          0.00         0.0           0.0 
+	         2      145.0          0.00         0.0           0.0 
+	       142
+	   --------
+	       146
+
+
+  Optimization Complete
+  ---------------------
+  Transferring Design 'DDES' to database 'DDES_GENERIC.db'
+Current design is 'DDES'.
+Warning: You have asked for scan replacement, but attributes show that the design already has scan circuitry. Your request is ignored. (UIT-4)
+  Loading design 'DDES'
+  Using test design rule information from previous check_test run
+  Architecting Scan Chains
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+  Transferring design 'DDES' to database 'DDES_GENERIC.db'
+
+Writing to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_6/DDES.db
+1
+
+remove_design -designs
+Removing design 'ADES'
+Removing design 'BDES'
+Removing design 'CDES'
+Removing design 'DDES'
+1
+read TOP_ONLY.db
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/TOP_ONLY.db'
+Current design is now '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/TOP_ONLY.db:TOP_ONLY'
+{"TOP_ONLY"}
+current_design TOP_ONLY
+Current design is 'TOP_ONLY'.
+{"TOP_ONLY"}
+
+link
+Linking design:
+  TOP_ONLY
+Using the following designs and libraries:
+  TOP_ONLY, workshop_lib (library)
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_6/ADES.db'
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_6/BDES.db'
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_6/CDES.db'
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_6/DDES.db'
+1
+
+set_scan_configuration -bidi_mode input
+Information: Using default scan style 'multiplexed_flip_flop'. (TESTDB-279)
+Accepted scan specification for design 'TOP_ONLY'.
+1
+check_test
+  Loading design 'TOP_ONLY'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+Information: Test pin test_se of cell instD (DDES) is unconnected. It is assumed inactive ('0') for the purpose of test. (TEST-333)
+Information: There are 3 other pins with the same violation. (TEST-170)
+Warning: Input pin test_si1 of cell instD (DDES) is unconnected. It is assumed 'X' for the purpose of test. (TEST-332)
+Information: There are 7 other pins with the same violation. (TEST-170)
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk1 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port clk2 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port clk3 (45.0,55.0). (TEST-260)
+Warning: Net bidi[4], connected to bidirectional port bidi[4], has three-state driver(s) with unknown mode during scan shift. (TEST-563)
+Information: Because the three-state cell U14 is unknown due to the following input pin values: E = x. (TEST-552)
+Information: Bidirectional port bidi[4] is inferred as X (Input don't care value) during scan shift due to scan configuration specification. (TEST-565)
+Information: There are 3 other nets with the same violation. (TEST-289)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk1...
+  ...simulating capture clock rising edge at port clk2...
+  ...simulating capture clock rising edge at port clk3...
+  ...simulating capture clock falling edge at port clk1...
+Information: Clock port clk1 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk2...
+Information: Clock port clk2 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk3...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk1. (TEST-262)
+Information: Inferred capture clock group : clk2. (TEST-262)
+Information: Inferred capture clock group : clk3. (TEST-262)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 12
+**************************************************
+
+TOPOLOGY VIOLATIONS
+      8 Unconnected input pin violations (TEST-332)
+PROTOCOL VIOLATIONS
+      4 net (connected to bidirectional port) with unknown 3-state driver mode violations (TEST-563)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  0 out of 26 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  26 cells are valid scan cells
+
+1
+preview_scan -show all
+  Loading design 'TOP_ONLY'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+
+****************************************
+Preview scan report
+For    : 'Insert_scan' command
+Design : TOP_ONLY
+Version: 1998.02
+Date   : Sat Aug 29 18:46:23 1998
+****************************************
+
+Number of chains: 5
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: no_mix
+
+  (l) shows cell scan-out drives a lockup latch
+  (s) shows cell is a scan segment
+  (t) shows cell has a true scan attribute
+  (w) shows cell scan-out drives a wire
+
+
+Scan chain '1' (test_si1 --> test_so1) contains 9 cells:
+
+  instA/sh1_reg                 (clk1, 45.0, rising)
+  instA/sh2_reg                 
+  instA/sh3_reg                 
+  instA/sh4_reg                 
+  instA/zr_reg                  
+  instB/d2_1_port_reg           
+  instB/d2_2_port_reg           
+  instB/d2_3_port_reg           
+  instB/net18_reg               
+
+  No scan signals
+
+
+Scan chain '2' (test_si2 --> test_so2) contains 2 cells:
+
+  instC/a1r_reg                 (clk2, 45.0, rising)
+  instC/add_158_plus_plus_carry_1_port_reg
+
+  No scan signals
+
+
+Scan chain '3' (test_si3 --> test_so3) contains 4 cells:
+
+  instD/r1_1_port_reg           (clk2, 55.0, falling)
+  instD/r1_2_port_reg           
+  instD/r1_3_port_reg           
+  instD/r1_4_port_reg           
+
+  No scan signals
+
+
+Scan chain '4' (test_si4 --> test_so4) contains 6 cells:
+
+  instB/d1_1_port_reg           (clk3, 45.0, rising)
+  instB/d1_2_port_reg           
+  instB/d1_3_port_reg           
+  instB/d1_4_port_reg           
+  instC/yr_reg                  
+  instC/zr_reg                  
+
+  No scan signals
+
+
+Scan chain '5' (test_si5 --> test_so5) contains 5 cells:
+
+  instB/en_reg                  (clk1, 55.0, falling)
+  instD/r2_1_port_reg           
+  instD/r2_2_port_reg           
+  instD/r2_3_port_reg           
+  instD/r2_4_port_reg           
+
+  No scan signals
+
+
+****************************************
+
+No segments
+
+
+****************************************
+
+No cells have scan true
+
+No cells have scan false
+
+
+1
+set_scan_configuration -chain_count 10
+Accepted scan specification for design 'TOP_ONLY'.
+1
+preview_scan -show all
+  Loading design 'TOP_ONLY'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+Warning: Only 8 scan chain elements are free. Cannot honor -chain_count specification of 10. (TEST-348)
+
+****************************************
+Preview scan report
+For    : 'Insert_scan' command
+Design : TOP_ONLY
+Version: 1998.02
+Date   : Sat Aug 29 18:46:23 1998
+****************************************
+
+Number of chains: 8
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: no_mix
+
+  (l) shows cell scan-out drives a lockup latch
+  (s) shows cell is a scan segment
+  (t) shows cell has a true scan attribute
+  (w) shows cell scan-out drives a wire
+
+
+Scan chain '1' (test_si1 --> test_so1) contains 5 cells:
+
+  instA/sh1_reg                 (clk1, 45.0, rising)
+  instA/sh2_reg                 
+  instA/sh3_reg                 
+  instA/sh4_reg                 
+  instA/zr_reg                  
+
+  No scan signals
+
+
+Scan chain '2' (test_si2 --> test_so2) contains 2 cells:
+
+  instC/a1r_reg                 (clk2, 45.0, rising)
+  instC/add_158_plus_plus_carry_1_port_reg
+
+  No scan signals
+
+
+Scan chain '3' (test_si3 --> test_so3) contains 4 cells:
+
+  instD/r1_1_port_reg           (clk2, 55.0, falling)
+  instD/r1_2_port_reg           
+  instD/r1_3_port_reg           
+  instD/r1_4_port_reg           
+
+  No scan signals
+
+
+Scan chain '4' (test_si4 --> test_so4) contains 4 cells:
+
+  instB/d1_1_port_reg           (clk3, 45.0, rising)
+  instB/d1_2_port_reg           
+  instB/d1_3_port_reg           
+  instB/d1_4_port_reg           
+
+  No scan signals
+
+
+Scan chain '5' (test_si5 --> test_so5) contains 4 cells:
+
+  instD/r2_1_port_reg           (clk1, 55.0, falling)
+  instD/r2_2_port_reg           
+  instD/r2_3_port_reg           
+  instD/r2_4_port_reg           
+
+  No scan signals
+
+
+Scan chain '6' (test_si6 --> test_so6) contains 4 cells:
+
+  instB/d2_1_port_reg           (clk1, 45.0, rising)
+  instB/d2_2_port_reg           
+  instB/d2_3_port_reg           
+  instB/net18_reg               
+
+  No scan signals
+
+
+Scan chain '7' (test_si7 --> test_so7) contains 2 cells:
+
+  instC/yr_reg                  (clk3, 45.0, rising)
+  instC/zr_reg                  
+
+  No scan signals
+
+
+Scan chain '8' (test_si8 --> test_so8) contains 1 cell:
+
+  instB/en_reg                  (clk1, 55.0, falling)
+
+  No scan signals
+
+
+****************************************
+
+No segments
+
+
+****************************************
+
+No cells have scan true
+
+No cells have scan false
+
+
+1
+
+set_scan_configuration -clock_mixing mix_clocks
+Accepted scan specification for design 'TOP_ONLY'.
+1
+set_scan_configuration -chain_count 3
+Accepted scan specification for design 'TOP_ONLY'.
+1
+set_scan_configuration -add_lockup false
+Accepted scan specification for design 'TOP_ONLY'.
+1
+
+set_scan_signal test_scan_in  -port b1[1] -chain path1
+Performing set_scan_signal on port 'b1[1]'. 
+Warning: There is no scan chain called 'path1'. Specification is ignored. (UIT-208)
+Accepted scan signal specification.
+1
+set_scan_signal test_scan_out -port d1[1] -chain path1
+Performing set_scan_signal on port 'd1[1]'. 
+Warning: There is no scan chain called 'path1'. Specification is ignored. (UIT-208)
+Accepted scan signal specification.
+1
+set_scan_signal test_scan_in  -port b1[2] -chain path2
+Performing set_scan_signal on port 'b1[2]'. 
+Warning: There is no scan chain called 'path2'. Specification is ignored. (UIT-208)
+Accepted scan signal specification.
+1
+set_scan_signal test_scan_out -port d1[2] -chain path2
+Performing set_scan_signal on port 'd1[2]'. 
+Warning: There is no scan chain called 'path2'. Specification is ignored. (UIT-208)
+Accepted scan signal specification.
+1
+set_scan_signal test_scan_in  -port b1[3] -chain path3
+Performing set_scan_signal on port 'b1[3]'. 
+Warning: There is no scan chain called 'path3'. Specification is ignored. (UIT-208)
+Accepted scan signal specification.
+1
+set_scan_signal test_scan_out -port d1[3] -chain path3
+Performing set_scan_signal on port 'd1[3]'. 
+Warning: There is no scan chain called 'path3'. Specification is ignored. (UIT-208)
+Accepted scan signal specification.
+1
+set_scan_signal test_scan_enable -port test_se
+Performing set_scan_signal on port 'test_se'. 
+Accepted scan signal specification.
+1
+
+insert_scan
+  Loading design 'TOP_ONLY'
+Warning: In design 'TOP_ONLY', there are 12 unconnected input pins.  Logic 0 assumed. (LINT-30)
+Warning: In design 'TOP_ONLY', there is 1 port not connected to any nets. (LINT-30)
+
+Information: Use the 'check_design' command for 
+	 more information about warnings. (LINT-99)
+
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+  Inserting Scan Cells
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+  Transferring design 'ADES' to database 'ADES.db'
+Warning: Deleting scan chain information from design 'ADES'. (OPT-463)
+  Transferring design 'BDES' to database 'BDES.db'
+Warning: Deleting scan chain information from design 'BDES'. (OPT-463)
+  Transferring design 'CDES' to database 'CDES.db'
+Warning: Deleting scan chain information from design 'CDES'. (OPT-463)
+  Transferring design 'DDES' to database 'DDES.db'
+Warning: Deleting scan chain information from design 'DDES'. (OPT-463)
+  Transferring design 'TOP_ONLY' to database 'TOP_ONLY.db'
+
+1
+check_test
+  Loading design 'TOP_ONLY'
+
+Information: Starting test design rule checking for existing scan design. (TEST-220)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk1 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port clk2 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port clk3 (45.0,55.0). (TEST-260)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...26 bits scanned-in to 26 cells (total scan-in 26)...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk1...
+  ...simulating capture clock rising edge at port clk2...
+  ...simulating capture clock rising edge at port clk3...
+  ...simulating capture clock falling edge at port clk1...
+Information: Clock port clk1 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk2...
+Information: Clock port clk2 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk3...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk1. (TEST-262)
+Information: Inferred capture clock group : clk2. (TEST-262)
+Information: Inferred capture clock group : clk3. (TEST-262)
+  ...simulating parallel vector...
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...data scanned-out from 23 cells (total scan-out 26)...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 0
+**************************************************
+
+
+
+**************************************************
+  Sequential Cell Summary
+
+  0 out of 26 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  26 cells are valid scan cells
+
+1
+
+remove_design ADES
+Removing design 'ADES'
+1
+
+EACH_DESIGN = ADES
+"ADES"
+  read EACH_DESIGN + "_GENERIC.db"
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/ADES_GENERIC.db'
+Current design is now '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/ADES_GENERIC.db:ADES'
+{"ADES"}
+  current_design EACH_DESIGN
+Current design is 'ADES'.
+{"ADES"}
+  set_scan_configuration -style multiplexed_flip_flop
+Accepted scan specification for design 'ADES'.
+1
+  compile -scan
+
+  Loading design 'ADES'
+Information: Design 'ADES' has no optimization constraints set. (OPT-108)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'ADES'
+  Mapping 'ADES'
+
+                                               TOTAL NEG     DESIGN RULE
+            TRIALS      AREA     DELTA DELAY     SLACK          COST
+           --------    ------    -----------    -------        ------
+	         1       62.0          0.00         0.0           0.0 
+	         1       62.0          0.00         0.0           0.0 
+	         0
+	   --------
+	         0
+
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                               TOTAL NEG     DESIGN RULE
+            TRIALS      AREA     DELTA DELAY     SLACK          COST
+           --------    ------    -----------    -------        ------
+	         2       61.0          0.00         0.0           0.0 
+	        44
+	   --------
+	        46
+
+
+  Optimization Complete
+  ---------------------
+  Transferring Design 'ADES' to database 'ADES_GENERIC.db'
+Current design is 'ADES'.
+1
+  set_scan_element false find(cell, "sh*_reg")
+Performing set_scan_element on cell 'sh1_reg'. 
+Performing set_scan_element on cell 'sh3_reg'. 
+Performing set_scan_element on cell 'sh2_reg'. 
+Performing set_scan_element on cell 'sh4_reg'. 
+1
+  set_scan_segment shift -access {test_scan_in sh1_reg/D, \
+			test_scan_out sh4_reg/Q} \
+			-contains { "sh*_reg"}
+Performing set_scan_segment on cell 'sh1_reg'. 
+Performing set_scan_segment on cell 'sh3_reg'. 
+Performing set_scan_segment on cell 'sh2_reg'. 
+Performing set_scan_segment on cell 'sh4_reg'. 
+Performing set_scan_segment on pin 'sh1_reg/D'. 
+Performing set_scan_segment on pin 'sh4_reg/Q'. 
+Accepted specification for scan segment 'shift'.
+1
+  check_test > EACH_DESIGN + ".rpt"
+1
+  preview_scan -show all >> EACH_DESIGN + ".rpt"
+1
+  insert_scan
+Warning: You have asked for scan replacement, but attributes show that the design already has scan circuitry. Your request is ignored. (UIT-4)
+  Loading design 'ADES'
+  Using test design rule information from previous check_test run
+  Architecting Scan Chains
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+  Transferring design 'ADES' to database 'ADES_GENERIC.db'
+
+1
+  check_test >> EACH_DESIGN + ".rpt"
+1
+  report_test -scan_path >> EACH_DESIGN + ".rpt"
+1
+  write -format db -hierarchy -output EACH_DESIGN + ".db"
+Writing to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_6/ADES.db
+1
+
+current_design TOP_ONLY
+Current design is 'TOP_ONLY'.
+{"TOP_ONLY"}
+check_test
+  Loading design 'TOP_ONLY'
+
+Information: Starting test design rule checking for existing scan design. (TEST-220)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk1 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port clk2 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port clk3 (45.0,55.0). (TEST-260)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...26 bits scanned-in to 26 cells (total scan-in 26)...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk1...
+  ...simulating capture clock rising edge at port clk2...
+  ...simulating capture clock rising edge at port clk3...
+  ...simulating capture clock falling edge at port clk1...
+Information: Clock port clk1 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk2...
+Information: Clock port clk2 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk3...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk1. (TEST-262)
+Information: Inferred capture clock group : clk2. (TEST-262)
+Information: Inferred capture clock group : clk3. (TEST-262)
+  ...simulating parallel vector...
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...data scanned-out from 23 cells (total scan-out 26)...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 0
+**************************************************
+
+
+
+**************************************************
+  Sequential Cell Summary
+
+  0 out of 26 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  26 cells are valid scan cells
+
+1

@@ -1,0 +1,35 @@
+//*********************************************************************
+//            Synopsys Standard Cell Library Verilog Models
+//              Licensed Software - Synopsys Confidential
+//        Copyright (C) 1991-2000 Synopsys. All rights reserved.
+//*********************************************************************
+// Tools Version: LA 3.4.9
+// Generate time: Fri Jun  2 09:49:23 PDT 2000
+//*********************************************************************
+`timescale 1 ns / 10 ps
+
+primitive ff(qout, data, clock, preset, clear, notifier);
+    output qout;
+    reg qout;
+    input data, clock, preset, clear, notifier;
+    table
+    // data clock  p c notifier state  qout 
+    // ------------------------------------
+         ?    n    ? 0    ?    :  1  :  - ; //If the previous state was 1 then the next state
+                                            //will also be 1.
+         ?    n    0 ?    ?    :  0  :  - ; //If the previous state was 0 then the next state
+                                            //will also be 0.
+         0    r    0 0    ?    :  ?  :  0 ; // posedge clock
+         1    r    0 0    ?    :  ?  :  1 ;
+         1    p    ? 0    ?    :  1  :  1 ; 
+         0    p    0 ?    ?    :  0  :  0 ; 
+         ?    n    0 0    ?    :  ?  :  - ; // ignore negedge clock
+         *    ?    0 0    ?    :  ?  :  - ; // ignore data changes on steady clock 
+         ?    ?    1 0    ?    :  ?  :  1 ; // preset logic
+         ?    ?    * 0    ?    :  1  :  1 ;
+         ?    ?    0 1    ?    :  ?  :  0 ; // clear logic 
+         ?    ?    0 *    ?    :  0  :  0 ;
+         ?    ?    1 1    ?    :  ?  :  x ; // illegal condition
+         ?    ?    ? ?    *    :  ?  :  x ; // timing checks error, qout set to x 
+    endtable
+endprimitive

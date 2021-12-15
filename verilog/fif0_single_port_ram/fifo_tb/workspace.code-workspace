@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../../../cal_phase"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../kws/spinal_mfcc"
+		}
+	],
+	"settings": {
+		"files.watcherExclude": {
+			"**/target": true
+		}
+	}
+}

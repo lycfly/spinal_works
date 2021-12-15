@@ -1,0 +1,38 @@
+ 
+****************************************
+Report : reference
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Sun Nov 28 20:39:34 2021
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+**SEQGEN**                        0.000000      29      0.000000  n, u
+*ADD_TC_OP_9_9_10                 0.000000       1      0.000000  s, u
+*ADD_UNS_OP_9_1_9                 0.000000       1      0.000000  s, u
+*LT_UNS_OP_7_9_1                  0.000000       1      0.000000  s, u
+*SELECT_OP_2.9_2.1_9              0.000000       1      0.000000  s, u
+*SELECT_OP_2.10_2.1_10            0.000000       2      0.000000  s, u
+*SUB_TC_OP_8_8_9                  0.000000       1      0.000000  s, u
+*SUB_TC_OP_9_9_10                 0.000000       1      0.000000  s, u
+GTECH_AND2         gtech          0.000000       4      0.000000  u
+GTECH_BUF          gtech          0.000000       7      0.000000  u
+GTECH_NOT          gtech          0.000000      13      0.000000  u
+cal_vn                            0.000000       1      0.000000  h, n, u
+cordic_int                        0.000000       1      0.000000  h, n, u
+dotVn                             0.000000       1      0.000000  h, n, u
+-----------------------------------------------------------------------------
+Total 14 references                                     0.000000
+1

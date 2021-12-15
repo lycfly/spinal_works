@@ -1,0 +1,246 @@
+Error: Could not read the following target libraries:
+your_library.db 
+ (UIO-3)
+ 
+****************************************
+Report : clock_gating
+        -ungated
+        -verbose
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Sun Nov 28 20:47:41 2021
+****************************************
+
+
+Warning: There is no information on why registers are ungated. (PWR-764)
+
+--------------------------------------------------------------------------------
+                             Ungated Register Report
+--------------------------------------------------------------------------------
+           Ungated Register     |  Reason                  |  What Next?
+--------------------------------------------------------------------------------
+    LastA2stZero_reg            |  Not Available           |  -
+    ph_now_reg_7_               |  Not Available           |  -
+    ph_now_reg_6_               |  Not Available           |  -
+    ph_now_reg_5_               |  Not Available           |  -
+    ph_now_reg_4_               |  Not Available           |  -
+    ph_now_reg_3_               |  Not Available           |  -
+    ph_now_reg_2_               |  Not Available           |  -
+    ph_now_reg_1_               |  Not Available           |  -
+    ph_now_reg_0_               |  Not Available           |  -
+    ph_last_reg_7_              |  Not Available           |  -
+    ph_last_reg_6_              |  Not Available           |  -
+    ph_last_reg_5_              |  Not Available           |  -
+    ph_last_reg_4_              |  Not Available           |  -
+    ph_last_reg_3_              |  Not Available           |  -
+    ph_last_reg_2_              |  Not Available           |  -
+    ph_last_reg_1_              |  Not Available           |  -
+    ph_last_reg_0_              |  Not Available           |  -
+    ph_vld_dly1_reg             |  Not Available           |  -
+    res_last_reg_9_             |  Not Available           |  -
+    res_last_reg_8_             |  Not Available           |  -
+    res_last_reg_7_             |  Not Available           |  -
+    res_last_reg_6_             |  Not Available           |  -
+    res_last_reg_5_             |  Not Available           |  -
+    res_last_reg_4_             |  Not Available           |  -
+    res_last_reg_3_             |  Not Available           |  -
+    res_last_reg_2_             |  Not Available           |  -
+    res_last_reg_1_             |  Not Available           |  -
+    res_last_reg_0_             |  Not Available           |  -
+    res_last_vld_reg            |  Not Available           |  -
+    calvn/VnReg_4_reg_7_        |  Not Available           |  -
+    calvn/VnReg_4_reg_6_        |  Not Available           |  -
+    calvn/VnReg_4_reg_5_        |  Not Available           |  -
+    calvn/VnReg_4_reg_4_        |  Not Available           |  -
+    calvn/VnReg_4_reg_3_        |  Not Available           |  -
+    calvn/VnReg_4_reg_2_        |  Not Available           |  -
+    calvn/VnReg_4_reg_1_        |  Not Available           |  -
+    calvn/VnReg_4_reg_0_        |  Not Available           |  -
+    calvn/VnReg_6_reg_7_        |  Not Available           |  -
+    calvn/VnReg_6_reg_6_        |  Not Available           |  -
+    calvn/VnReg_6_reg_5_        |  Not Available           |  -
+    calvn/VnReg_6_reg_4_        |  Not Available           |  -
+    calvn/VnReg_6_reg_3_        |  Not Available           |  -
+    calvn/VnReg_6_reg_2_        |  Not Available           |  -
+    calvn/VnReg_6_reg_1_        |  Not Available           |  -
+    calvn/VnReg_6_reg_0_        |  Not Available           |  -
+    calvn/VnReg_5_reg_7_        |  Not Available           |  -
+    calvn/VnReg_5_reg_6_        |  Not Available           |  -
+    calvn/VnReg_5_reg_5_        |  Not Available           |  -
+    calvn/VnReg_5_reg_4_        |  Not Available           |  -
+    calvn/VnReg_5_reg_3_        |  Not Available           |  -
+    calvn/VnReg_5_reg_2_        |  Not Available           |  -
+    calvn/VnReg_5_reg_1_        |  Not Available           |  -
+    calvn/VnReg_5_reg_0_        |  Not Available           |  -
+    calvn/VnReg_7_reg_7_        |  Not Available           |  -
+    calvn/VnReg_7_reg_6_        |  Not Available           |  -
+    calvn/VnReg_7_reg_5_        |  Not Available           |  -
+    calvn/VnReg_7_reg_4_        |  Not Available           |  -
+    calvn/VnReg_7_reg_3_        |  Not Available           |  -
+    calvn/VnReg_7_reg_2_        |  Not Available           |  -
+    calvn/VnReg_7_reg_1_        |  Not Available           |  -
+    calvn/VnReg_7_reg_0_        |  Not Available           |  -
+    calvn/in_vld_dly1_reg       |  Not Available           |  -
+    calvn/in_vld_dly2_reg       |  Not Available           |  -
+    calvn/SumXinReg_reg_10_     |  Not Available           |  -
+    calvn/SumXinReg_reg_9_      |  Not Available           |  -
+    calvn/SumXinReg_reg_8_      |  Not Available           |  -
+    calvn/SumXinReg_reg_7_      |  Not Available           |  -
+    calvn/SumXinReg_reg_6_      |  Not Available           |  -
+    calvn/SumXinReg_reg_5_      |  Not Available           |  -
+    calvn/SumXinReg_reg_4_      |  Not Available           |  -
+    calvn/SumXinReg_reg_3_      |  Not Available           |  -
+    calvn/SumXinReg_reg_2_      |  Not Available           |  -
+    calvn/SumXinReg_reg_1_      |  Not Available           |  -
+    calvn/SumXinReg_reg_0_      |  Not Available           |  -
+    calvn/VnReg_0_reg_7_        |  Not Available           |  -
+    calvn/VnReg_0_reg_6_        |  Not Available           |  -
+    calvn/VnReg_0_reg_5_        |  Not Available           |  -
+    calvn/VnReg_0_reg_4_        |  Not Available           |  -
+    calvn/VnReg_0_reg_3_        |  Not Available           |  -
+    calvn/VnReg_0_reg_2_        |  Not Available           |  -
+    calvn/VnReg_0_reg_1_        |  Not Available           |  -
+    calvn/VnReg_0_reg_0_        |  Not Available           |  -
+    calvn/VnReg_1_reg_7_        |  Not Available           |  -
+    calvn/VnReg_1_reg_6_        |  Not Available           |  -
+    calvn/VnReg_1_reg_5_        |  Not Available           |  -
+    calvn/VnReg_1_reg_4_        |  Not Available           |  -
+    calvn/VnReg_1_reg_3_        |  Not Available           |  -
+    calvn/VnReg_1_reg_2_        |  Not Available           |  -
+    calvn/VnReg_1_reg_1_        |  Not Available           |  -
+    calvn/VnReg_1_reg_0_        |  Not Available           |  -
+    calvn/VnReg_2_reg_7_        |  Not Available           |  -
+    calvn/VnReg_2_reg_6_        |  Not Available           |  -
+    calvn/VnReg_2_reg_5_        |  Not Available           |  -
+    calvn/VnReg_2_reg_4_        |  Not Available           |  -
+    calvn/VnReg_2_reg_3_        |  Not Available           |  -
+    calvn/VnReg_2_reg_2_        |  Not Available           |  -
+    calvn/VnReg_2_reg_1_        |  Not Available           |  -
+    calvn/VnReg_2_reg_0_        |  Not Available           |  -
+    calvn/VnReg_3_reg_7_        |  Not Available           |  -
+    calvn/VnReg_3_reg_6_        |  Not Available           |  -
+    calvn/VnReg_3_reg_5_        |  Not Available           |  -
+    calvn/VnReg_3_reg_4_        |  Not Available           |  -
+    calvn/VnReg_3_reg_3_        |  Not Available           |  -
+    calvn/VnReg_3_reg_2_        |  Not Available           |  -
+    calvn/VnReg_3_reg_1_        |  Not Available           |  -
+    calvn/VnReg_3_reg_0_        |  Not Available           |  -
+    dot/mac_en_reg              |  Not Available           |  -
+    dot/mac_cnt_reg_2_          |  Not Available           |  -
+    dot/mac_cnt_reg_1_          |  Not Available           |  -
+    dot/mac_cnt_reg_0_          |  Not Available           |  -
+    dot/psum2_reg_18_           |  Not Available           |  -
+    dot/psum2_reg_17_           |  Not Available           |  -
+    dot/psum2_reg_16_           |  Not Available           |  -
+    dot/psum2_reg_15_           |  Not Available           |  -
+    dot/psum2_reg_14_           |  Not Available           |  -
+    dot/psum2_reg_13_           |  Not Available           |  -
+    dot/psum2_reg_12_           |  Not Available           |  -
+    dot/psum2_reg_11_           |  Not Available           |  -
+    dot/psum2_reg_10_           |  Not Available           |  -
+    dot/psum2_reg_9_            |  Not Available           |  -
+    dot/psum2_reg_8_            |  Not Available           |  -
+    dot/psum2_reg_7_            |  Not Available           |  -
+    dot/psum2_reg_6_            |  Not Available           |  -
+    dot/psum2_reg_5_            |  Not Available           |  -
+    dot/psum2_reg_4_            |  Not Available           |  -
+    dot/psum2_reg_3_            |  Not Available           |  -
+    dot/psum2_reg_2_            |  Not Available           |  -
+    dot/psum2_reg_1_            |  Not Available           |  -
+    dot/psum2_reg_0_            |  Not Available           |  -
+    dot/psum1_reg_18_           |  Not Available           |  -
+    dot/psum1_reg_17_           |  Not Available           |  -
+    dot/psum1_reg_16_           |  Not Available           |  -
+    dot/psum1_reg_15_           |  Not Available           |  -
+    dot/psum1_reg_14_           |  Not Available           |  -
+    dot/psum1_reg_13_           |  Not Available           |  -
+    dot/psum1_reg_12_           |  Not Available           |  -
+    dot/psum1_reg_11_           |  Not Available           |  -
+    dot/psum1_reg_10_           |  Not Available           |  -
+    dot/psum1_reg_9_            |  Not Available           |  -
+    dot/psum1_reg_8_            |  Not Available           |  -
+    dot/psum1_reg_7_            |  Not Available           |  -
+    dot/psum1_reg_6_            |  Not Available           |  -
+    dot/psum1_reg_5_            |  Not Available           |  -
+    dot/psum1_reg_4_            |  Not Available           |  -
+    dot/psum1_reg_3_            |  Not Available           |  -
+    dot/psum1_reg_2_            |  Not Available           |  -
+    dot/psum1_reg_1_            |  Not Available           |  -
+    dot/psum1_reg_0_            |  Not Available           |  -
+    dot/finish_reg              |  Not Available           |  -
+    cordic/xn_reg_21_           |  Not Available           |  -
+    cordic/xn_reg_20_           |  Not Available           |  -
+    cordic/xn_reg_19_           |  Not Available           |  -
+    cordic/xn_reg_18_           |  Not Available           |  -
+    cordic/xn_reg_17_           |  Not Available           |  -
+    cordic/xn_reg_16_           |  Not Available           |  -
+    cordic/xn_reg_15_           |  Not Available           |  -
+    cordic/xn_reg_14_           |  Not Available           |  -
+    cordic/xn_reg_13_           |  Not Available           |  -
+    cordic/xn_reg_12_           |  Not Available           |  -
+    cordic/xn_reg_11_           |  Not Available           |  -
+    cordic/xn_reg_10_           |  Not Available           |  -
+    cordic/xn_reg_9_            |  Not Available           |  -
+    cordic/xn_reg_8_            |  Not Available           |  -
+    cordic/xn_reg_7_            |  Not Available           |  -
+    cordic/xn_reg_6_            |  Not Available           |  -
+    cordic/xn_reg_5_            |  Not Available           |  -
+    cordic/xn_reg_4_            |  Not Available           |  -
+    cordic/xn_reg_3_            |  Not Available           |  -
+    cordic/xn_reg_2_            |  Not Available           |  -
+    cordic/xn_reg_1_            |  Not Available           |  -
+    cordic/xn_reg_0_            |  Not Available           |  -
+    cordic/cal_en_reg           |  Not Available           |  -
+    cordic/yn_reg_21_           |  Not Available           |  -
+    cordic/yn_reg_20_           |  Not Available           |  -
+    cordic/yn_reg_19_           |  Not Available           |  -
+    cordic/yn_reg_18_           |  Not Available           |  -
+    cordic/yn_reg_17_           |  Not Available           |  -
+    cordic/yn_reg_16_           |  Not Available           |  -
+    cordic/yn_reg_15_           |  Not Available           |  -
+    cordic/yn_reg_14_           |  Not Available           |  -
+    cordic/yn_reg_13_           |  Not Available           |  -
+    cordic/yn_reg_12_           |  Not Available           |  -
+    cordic/yn_reg_11_           |  Not Available           |  -
+    cordic/yn_reg_10_           |  Not Available           |  -
+    cordic/yn_reg_9_            |  Not Available           |  -
+    cordic/yn_reg_8_            |  Not Available           |  -
+    cordic/yn_reg_7_            |  Not Available           |  -
+    cordic/yn_reg_6_            |  Not Available           |  -
+    cordic/yn_reg_5_            |  Not Available           |  -
+    cordic/yn_reg_4_            |  Not Available           |  -
+    cordic/yn_reg_3_            |  Not Available           |  -
+    cordic/yn_reg_2_            |  Not Available           |  -
+    cordic/yn_reg_1_            |  Not Available           |  -
+    cordic/yn_reg_0_            |  Not Available           |  -
+    cordic/nozero_flg_reg       |  Not Available           |  -
+    cordic/finish_reg           |  Not Available           |  -
+    cordic/res_rg_reg_7_        |  Not Available           |  -
+    cordic/res_rg_reg_6_        |  Not Available           |  -
+    cordic/res_rg_reg_5_        |  Not Available           |  -
+    cordic/res_rg_reg_4_        |  Not Available           |  -
+    cordic/res_rg_reg_3_        |  Not Available           |  -
+    cordic/res_rg_reg_2_        |  Not Available           |  -
+    cordic/res_rg_reg_1_        |  Not Available           |  -
+    cordic/res_rg_reg_0_        |  Not Available           |  -
+    cordic/cal_cnt_reg_2_       |  Not Available           |  -
+    cordic/cal_cnt_reg_1_       |  Not Available           |  -
+    cordic/cal_cnt_reg_0_       |  Not Available           |  -
+                                |                          |
+--------------------------------------------------------------------------------
+
+
+                             Clock Gating Summary
+          ------------------------------------------------------------
+          |    Number of Clock gating elements    |        0         |
+          |                                       |                  |
+          |    Number of Gated registers          |     0 (0.00%)    |
+          |                                       |                  |
+          |    Number of Ungated registers        |   207 (100.00%)  |
+          |                                       |                  |
+          |    Total number of registers          |      207         |
+          ------------------------------------------------------------
+
+
+
+1

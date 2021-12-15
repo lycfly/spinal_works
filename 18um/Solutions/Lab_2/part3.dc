@@ -1,0 +1,44 @@
+remove_design -designs
+read FLOW3.db
+
+current_design CORE
+set_scan_configuration -style multiplexed_flip_flop
+set_scan_configuration -methodology full_scan
+compile -scan
+
+current_design CORE
+set_scan_configuration -chain_count 1
+create_test_clock -period 100 -waveform {40, 60} find(port, "CLK")
+set_scan_signal test_scan_in -port "HRS"
+set_scan_signal test_scan_out -port "SPEAKER_OUT"
+set_scan_signal test_scan_enable -port "TEST_SE"
+preview_scan -show all
+insert_scan
+check_test
+report_test -scan_path
+
+current_design FLOW3
+set_attribute current_design jtag_inserted true -type boolean
+set_signal_type jtag_tck find(port, "TCK")
+set_signal_type jtag_tms find(port, "TMS")
+set_signal_type jtag_tdi find(port, "TDI")
+set_signal_type jtag_tdo find(port, "TDO")
+set_signal_type jtag_trst find(port, "TRST")
+
+set_scan_configuration -style multiplexed_flip_flop
+set_scan_configuration -methodology full_scan
+set_scan_configuration -existing_scan true
+create_test_clock -period 100 -waveform {40, 60} find(port, "CLK")
+set_signal_type test_scan_in find(port, "HRS")
+set_signal_type test_scan_out find(port, "SPEAKER_OUT")
+set_signal_type test_scan_enable find(port, "TEST_SE")
+
+check_test
+report_test -scan_path
+create_test_patterns -compaction_effort high
+
+report_test -coverage -faults -class untested
+
+/*
+write_test -format wgl
+*/

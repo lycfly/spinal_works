@@ -1,0 +1,130 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! X WINDOWS RESOURCE DATABASE
+! Personal Default Values
+! 
+! File: .Xdefaults
+! Path: ~cdancak
+! Tool: MWM, Synopsys
+! Note: To reload during session, use xrdb utility 
+!           % xrdb [-n] [-merge] .Xdefaults
+!       where -n prints, but does not do, changes;
+!       and -merge integrates an existing database.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+! X WINDOW DEFAULTS
+  XTerm*font: -adobe-courier-bold-r-normal--14-140-75-75-m-90-iso8859-1
+  XTerm*scrollBar: False
+  XTerm*geometry:  59x51+5+5
+  XTerm*saveLines:       200
+  XTerm*foreground:     black
+  XTerm*background:     OldLace
+  XTerm*highlightColor: gold
+!
+! KEYBOARD RUBOUT KEY
+! XTerm*ttyModes:  erase ^?
+  XTerm*ttyModes:  erase ^H
+!
+! MOTIF KEYBOARD FOCUS
+  Mwm*keyboardFocusPolicy: pointer
+!
+! MOTIF AUTORAISE FEATURE
+! Mwm*focusAutoRaise:      true
+! Mwm*autoRaiseDelay:      1000
+!
+! MOTIF WINDOW GEOMETRY
+! Mwm*frameBorderWidth:     5
+  Mwm*frameBorderWidth:    10
+! Mwm*resizeBorderWidth:    5
+  Mwm*resizeBorderWidth:   10
+!
+! DTWM DEFAULTS
+  Dtwm*0*iconPlacement:  top right
+
+! GENERAL DEFAULTS
+  *highlight:   black
+  *borderColor: black
+  sm.bell_enable: enable
+  sm.bell_percent: 50
+  sm.keyclick_enable: enable
+  sm.keyclick_percent: 50
+  sm.autorepeat_mode: enable
+  sm.lock_state: caps
+  sm.screen_saver_enable: enable
+  sm.screen_saver_period: 10
+  sm.display_foreground: black
+  sm.display_background:        #7d70bd6f9c28
+  sm.display_pattern:   1
+  *foreground: black
+  *background:  #deb7e665eb84
+  sm.pointer_foreground: white
+  sm.pointer_background: black
+  sm.pointer_button_order: right
+  sm.pointer_shape: 68
+  sm.mouse_accel_numerator: -1
+  sm.mouse_accel_denominator: -1
+  sm.mouse_accel_threshold: -1
+  *doubleClickDelay: 250
+  sm.printer.aspect_ratio: 1,1
+  sm.printer.color: bw
+  sm.printer.filename: printscr.ps
+  sm.printer.ribbon_saver: positive
+  sm.printer.storage_format: postscript
+  sm.message_region_text: Messages
+  sm.message_history_size: 10
+  sm.message_size_rows: 10
+  sm.message_size_columns: 80
+  sm.startup_state: mapped
+  sm.create_terminal:   2
+  sm.create_vue: 0
+  *language_preference1: 6
+  *language_preference2: 6
+  sm.confirm_endsession: 1
+  sm.host_list: 
+  sm.num_hosts: 0
+  sm.printer.file_prompt: 1
+!
+!
+! NETSCAPE DEFAULTS
+  Netscape*blinkingEnabled:  false
+!
+! DESIGN ANALYZER WINDOW
+! See $SYNOPSYS/admin/setup/Design_analyzer:
+!
+  design_analyzer*keyboardFocusPolicy: pointer
+  Design_analyzer*keyboardFocusPolicy: pointer
+!
+! Window Geometry:
+! Default:
+  Design_analyzer*Geometry: 850x600-10+10
+! Window Colors:
+! See SolvNET SYNTH-796.html.
+! Quit Netscape to release color map.
+  Design_analyzer*background:  OldLace
+  Design_analyzer*borderColor: green
+  Design_analyzer*foreground:  black
+  Design_analyzer*XmToggleButton*selectColor: red
+  Design_analyzer*fontList: -adobe-new?century?schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1
+
+  Design_analyzer*XmLabelGadget*fontList: -adobe-new?century?schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1
+  Design_analyzer*XmMessageBox.labelFontList: -adobe-new?century?schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1
+  Design_analyzer*XmMessageBox.buttonFontList: -adobe-new?century?schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1
+  Design_analyzer*command_win*command_win_list.fontList: -adobe-courier-bold-r-normal--12-120-75-75-m-70-iso8859-1
+  Design_analyzer*command_win*command_win_cmdline.fontList: -adobe-courier-bold-r-normal--12-120-75-75-m-70-iso8859-1
+  Design_analyzer*command_win*command_win_prompt.fontList: -adobe-new?century?schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1
+  Design_analyzer*command_win*XmText.fontList: -adobe-courier-bold-r-normal--12-120-75-75-m-70-iso8859-1
+  Design_analyzer*command_win*XmLabelGadget.fontList: -adobe-new?century?schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1
+  Design_analyzer*report_win_list.fontList:      -adobe-courier-bold-r-normal--12-120-75-75-m-70-iso8859-1
+  Design_analyzer*bus_selector_members.fontList: -adobe-courier-bold-r-normal--12-120-75-75-m-70-iso8859-1
+  Design_analyzer*licenses_user_list.fontList:   -adobe-courier-bold-r-normal--12-120-75-75-m-70-iso8859-1
+  Design_analyzer*text_window.fontList:          -adobe-courier-bold-r-normal--12-120-75-75-m-70-iso8859-1
+  Design_analyzer*about_text.fontList:           -adobe-courier-bold-r-normal--12-120-75-75-m-70-iso8859-1
+  Design_analyzer*define_states_states_list.fontList: -adobe-courier-bold-r-normal--12-120-75-75-m-70-iso8859-1
+  Design_analyzer*test_report_label3.fontList:   -adobe-new?century?schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1
+  Design_analyzer*view_layers_blueLB.fontList:  -adobe-new?century?schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1
+  Design_analyzer*view_layers_greenLB.fontList: -adobe-new?century?schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1
+  Design_analyzer*view_layers_redLB.fontList:   -adobe-new?century?schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1
+  Design_analyzer*main_window_file_Label.fontList: -adobe-new?century?schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1
+  Design_analyzer*main_window_line_Label.fontList: -adobe-new?century?schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1
+  Design_analyzer*status_Form*XmLabelGadget.fontList: -adobe-new?century?schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1
+!
+! Done.

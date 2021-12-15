@@ -1,0 +1,12 @@
+remove_design -design
+include bottom2.scr
+read TOP_ONLY.db
+current_design TOP_ONLY
+include top.scr
+preview_scan -show all
+insert_scan
+check_test
+report_test -scan_path
+create_test_patterns -compaction_effort high
+report_test -coverage -faults -class untested
+write_test -format wgl

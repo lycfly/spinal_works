@@ -1,0 +1,157 @@
+STIL 0.23;
+Header {
+   Title "DC-XP 1999.05-2 STIL output";
+   Date "Thu Jul 15 11:47:31 1999";
+   History {
+   }
+}
+Signals {
+   "ADDR2_2" In; "CLK" In; "VDD1" In; "VDD2" In; "VSS1" In; "TESTB" In; "VSS4" In;
+   "DMA_IRQ" In; "VDD4" In; "IRQ6" In; "P302_IRQ_1" In; "DSP_IRQ_1" In; "IRQ7" In;
+   "S302_IRQ" In; "IRQ4" In; "IRQ5" In; "BMG2" In; "IRQ1" In; "IRQ2" In; "IRQ3" In;
+   "DSP_IRQ_2" In; "IRQ0" In; "RESETN" In; "TIRQ1_2_N" In; "AT_IRQ_2" In; "NMI_2_N" In;
+   "RST2" In; "RW2" In; "SE_N" In; "RST4" In; "ADDR2_1" In; "ADDR2_3" In; "TDI" In
+   { ScanIn; } "BMG1" In; "VSS3" In; "NMI_1_N" In; "TIRQ2_1_N" In; "TIRQ1_1_N" In;
+   "DIRQ_1_N" In; "ADDR1_1" In; "RST3" In; "RW1" In; "VDD3" In; "RST1" In; "ADDR1_3" In;
+   "ADDR1_2" In; "VSS2" In; "DATA06" InOut; "DATA12" InOut; "DATA10" InOut; "DATA08" InOut;
+   "DATA09" InOut; "DATA11" InOut; "DATA14" InOut; "DATA13" InOut; "DATA15" InOut;
+   "DATA07" InOut; "DATA00" InOut; "DATA03" InOut; "DATA04" InOut; "DATA05" InOut;
+   "DATA02" InOut; "DATA01" InOut; "IACK_3_N" Out; "IPL2_0" Out; "ATSEL_1_N" Out;
+   "TDO" Out { ScanOut; } "ATSEL_2_N" Out; "IPL1_1" Out; "IPL1_0" Out; "IPL1_2" Out;
+   "IPL2_1" Out; "IPL2_2" Out; "IACK_1_N" Out; "IACK_0_N" Out; "IACK_2_N" Out; "IACK_7_N" Out;
+   "IACK_5_N" Out; "IACK_4_N" Out; "IACK_6_N" Out; "IACK_P302_N" Out; "IACK_S302_N" Out;
+   "DTACK2" Out; "DTACK1" Out;
+}
+SignalGroups {
+   "all_bidirectionals" = '"DATA00" + "DATA01" + "DATA02" + "DATA03" + "DATA04" +
+   "DATA05" + "DATA06" + "DATA07" + "DATA08" + "DATA09" + "DATA10" + "DATA11" +
+   "DATA12" + "DATA13" + "DATA14" + "DATA15"'; // #signals=16
+   "all_inputs" = '"ADDR1_1" + "ADDR1_2" + "ADDR1_3" + "ADDR2_1" + "ADDR2_2" + "ADDR2_3"
+   + "AT_IRQ_2" + "BMG1" + "BMG2" + "CLK" + "DIRQ_1_N" + "DMA_IRQ" + "DSP_IRQ_1" +
+   "DSP_IRQ_2" + "IRQ0" + "IRQ1" + "IRQ2" + "IRQ3" + "IRQ4" + "IRQ5" + "IRQ6" +
+   "IRQ7" + "NMI_1_N" + "NMI_2_N" + "P302_IRQ_1" + "RESETN" + "RST1" + "RST2" +
+   "RST3" + "RST4" + "RW1" + "RW2" + "S302_IRQ" + "SE_N" + "TDI" + "TESTB" + "TIRQ1_1_N"
+   + "TIRQ1_2_N" + "TIRQ2_1_N" + "VDD1" + "VDD2" + "VDD3" + "VDD4" + "VSS1" + "VSS2"
+   + "VSS3" + "VSS4"'; // #signals=47
+   "all_outputs" = '"ATSEL_1_N" + "ATSEL_2_N" + "DTACK1" + "DTACK2" + "IACK_0_N" +
+   "IACK_1_N" + "IACK_2_N" + "IACK_3_N" + "IACK_4_N" + "IACK_5_N" + "IACK_6_N" +
+   "IACK_7_N" + "IACK_P302_N" + "IACK_S302_N" + "IPL1_0" + "IPL1_1" + "IPL1_2" +
+   "IPL2_0" + "IPL2_1" + "IPL2_2" + "TDO"'; // #signals=21
+   "all_ports" = '"all_inputs" + "all_outputs" + "all_bidirectionals"'; // #signals=84
+   "_pi" = '"ADDR2_2" + "CLK" + "VDD1" + "VDD2" + "VSS1" + "TESTB" + "VSS4" + "DMA_IRQ"
+   + "VDD4" + "IRQ6" + "P302_IRQ_1" + "DSP_IRQ_1" + "IRQ7" + "S302_IRQ" + "IRQ4" +
+   "IRQ5" + "BMG2" + "IRQ1" + "IRQ2" + "IRQ3" + "DSP_IRQ_2" + "IRQ0" + "RESETN" +
+   "TIRQ1_2_N" + "AT_IRQ_2" + "NMI_2_N" + "RST2" + "RW2" + "SE_N" + "RST4" + "ADDR2_1"
+   + "DATA06" + "DATA12" + "DATA10" + "DATA08" + "ADDR2_3" + "DATA09" + "DATA11" +
+   "TDI" + "DATA14" + "DATA13" + "DATA15" + "DATA07" + "BMG1" + "DATA00" + "DATA03"
+   + "DATA04" + "DATA05" + "DATA02" + "VSS3" + "DATA01" + "NMI_1_N" + "TIRQ2_1_N"
+   + "TIRQ1_1_N" + "DIRQ_1_N" + "ADDR1_1" + "RST3" + "RW1" + "VDD3" + "RST1" + "ADDR1_3"
+   + "ADDR1_2" + "VSS2"'; // #signals=63
+   "_io" = '"DATA06" + "DATA12" + "DATA10" + "DATA08" + "DATA09" + "DATA11" + "DATA14"
+   + "DATA13" + "DATA15" + "DATA07" + "DATA00" + "DATA03" + "DATA04" + "DATA05" +
+   "DATA02" + "DATA01"'; // #signals=16
+   "_po" = '"IACK_3_N" + "IPL2_0" + "ATSEL_1_N" + "TDO" + "ATSEL_2_N" + "IPL1_1" +
+   "IPL1_0" + "IPL1_2" + "IPL2_1" + "IPL2_2" + "IACK_1_N" + "IACK_0_N" + "IACK_2_N"
+   + "IACK_7_N" + "IACK_5_N" + "IACK_4_N" + "IACK_6_N" + "IACK_P302_N" + "IACK_S302_N"
+   + "DATA06" + "DATA12" + "DATA10" + "DATA08" + "DATA09" + "DATA11" + "DATA14" +
+   "DATA13" + "DTACK2" + "DATA15" + "DATA07" + "DATA00" + "DATA03" + "DATA04" +
+   "DATA05" + "DATA02" + "DATA01" + "DTACK1"'; // #signals=37
+}
+ScanStructures {
+   ScanChain "c0" {
+      ScanLength 222;
+      ScanIn "TDI";
+      ScanOut "TDO";
+      ScanInversion 0;
+   }
+}
+Timing {
+   WaveformTable "_default_WFT_" {
+      Period '100ns';
+      Waveforms {
+         "all_inputs" { 0 { '0ns' D; } }
+         "all_inputs" { 1 { '0ns' U; } }
+         "all_inputs" { Z { '0ns' Z; } }
+         "all_bidirectionals" { 0 { '0ns' D; } }
+         "all_bidirectionals" { 1 { '0ns' U; } }
+         "all_bidirectionals" { T { '0ns' X; '40ns' T; } }
+         "all_bidirectionals" { X { '0ns' X; } }
+         "all_bidirectionals" { H { '0ns' X; '40ns' H; } }
+         "all_bidirectionals" { Z { '0ns' Z; } }
+         "all_bidirectionals" { L { '0ns' X; '40ns' L; } }
+         "all_outputs" { X { '0ns' X; } }
+         "all_outputs" { H { '0ns' X; '40ns' H; } }
+         "all_outputs" { T { '0ns' X; '40ns' T; } }
+         "all_outputs" { L { '0ns' X; '40ns' L; } }
+         "CLK"  { P { '0ns' D; '50ns' U; '70ns' D; } }
+         "RST1" { P { '0ns' D; '50ns' U; '70ns' D; } }
+         "RST2" { P { '0ns' D; '50ns' U; '70ns' D; } }
+         "RST3" { P { '0ns' D; '50ns' U; '70ns' D; } }
+         "RST4" { P { '0ns' D; '50ns' U; '70ns' D; } }
+      }
+   }
+}
+PatternBurst "_burst_" { PatList {
+   "_pattern_" {
+   }
+}}
+PatternExec {
+   Timing "";
+   PatternBurst "_burst_";
+}
+Procedures {
+   "load_unload" {
+      W "_default_WFT_";
+      V { "RESETN"=1; "CLK"=0; "SE_N"=0; "DATA10"=Z; "DATA11"=Z; "DATA12"=Z; "DATA13"=Z;
+          "DATA14"=Z; "DATA15"=Z; "DATA00"=Z; "DATA01"=Z; "DATA02"=Z; "DATA03"=Z;
+          "DATA04"=Z; "DATA05"=Z; "DATA06"=Z; "DATA07"=Z; "DATA08"=Z; "DATA09"=Z;
+          "TESTB"=0; "RST1"=0; "RST2"=0; "RST3"=0; "RST4"=0; }
+      Shift { 
+        W "_default_WFT_";
+        V { _si=#; _so=#; "CLK"=P; } 
+      }
+   }
+   "capture" {
+      W "_default_WFT_";
+      V { "_pi"=\r63 # ; 
+         "_po"=\r37 # ; }
+   }
+   "capture_CLK" {
+      W "_default_WFT_";
+      "forcePI": V { "_pi"=\r63 # ; "_po"=\r37 X ; }
+      "measurePO": V { "_po"=\r37 # ; }
+      "pulse": V { "_po"=\r37 X ; "CLK"=P; }
+   }
+   "capture_RST2" {
+      W "_default_WFT_";
+      "forcePI": V { "_pi"=\r63 # ; "_po"=\r37 X ; }
+      "measurePO": V { "_po"=\r37 # ; }
+      "pulse": V { "_po"=\r37 X ; "RST2"=P; }
+   }
+   "capture_RST1" {
+      W "_default_WFT_";
+      "forcePI": V { "_pi"=\r63 # ; "_po"=\r37 X ; }
+      "measurePO": V { "_po"=\r37 # ; }
+      "pulse": V { "_po"=\r37 X ; "RST1"=P; }
+   }
+   "capture_RST3" {
+      W "_default_WFT_";
+      "forcePI": V { "_pi"=\r63 # ; "_po"=\r37 X ; }
+      "measurePO": V { "_po"=\r37 # ; }
+      "pulse": V { "_po"=\r37 X ; "RST3"=P; }
+   }
+   "capture_RST4" {
+      W "_default_WFT_";
+      "forcePI": V { "_pi"=\r63 # ; "_po"=\r37 X ; }
+      "measurePO": V { "_po"=\r37 # ; }
+      "pulse": V { "_po"=\r37 X ; "RST4"=P; }
+   }
+}
+MacroDefs {
+   "test_setup" {
+      W "_default_WFT_";
+      V { "RESETN"=1; "CLK"=0; "SE_N"=1; "DATA10"=Z; "DATA11"=Z; "DATA12"=Z; "DATA13"=Z; "DATA14"=Z; "DATA15"=Z; 
+         "DATA00"=Z; "DATA01"=Z; "DATA02"=Z; "DATA03"=Z; "DATA04"=Z; "DATA05"=Z; "DATA06"=Z; "DATA07"=Z; 
+         "DATA08"=Z; "DATA09"=Z; "TESTB"=0; "RST1"=0; "RST2"=0; "RST3"=0; "RST4"=0; }
+   }
+}

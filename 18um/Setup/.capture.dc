@@ -1,0 +1,99 @@
+/* DC SCREEN CAPTURE
+ * Line Widths Optimized for Medium Zoom
+ * Date: Sep 00
+ */
+
+   view_background = "white"
+
+/* Cell Layer: thick black */
+   set_layer( cell_layer  visible TRUE )
+   set_layer( cell_layer  line_width 500 )
+   set_layer( cell_layer  red          0 )
+   set_layer( cell_layer  green        0 )
+   set_layer( cell_layer  blue         0 )
+
+/* Cell Name: blue */
+   set_layer( cell_name_layer  visible TRUE )
+   set_layer( cell_name_layer  red        0 )
+   set_layer( cell_name_layer  green      0 )
+   set_layer( cell_name_layer  blue   64880 )
+
+/* DesignWare Layer: thick red */
+   set_layer( designware_layer  visible TRUE )
+   set_layer( designware_layer  line_width 500 )
+   set_layer( designware_layer  red      65535 )
+   set_layer( designware_layer  green        0 )
+   set_layer( designware_layer  blue         0 )
+
+/* Ref Name: black */
+   set_layer( cell_ref_name_layer  visible TRUE )
+   set_layer( cell_ref_name_layer  red        0 )
+   set_layer( cell_ref_name_layer  green      0 )
+   set_layer( cell_ref_name_layer  blue       0 )
+
+/* Wire Layer: dark blue */
+   set_layer( net_layer  visible TRUE )
+   set_layer( net_layer  line_width 2 )
+   set_layer( net_layer  red        0 )
+   set_layer( net_layer  green      0 )
+   set_layer( net_layer  blue   32768 )
+  
+/* Wire Name: green */
+   set_layer( net_name_layer  visible FALSE )
+   set_layer( net_name_layer  line_width 1 )
+   set_layer( net_name_layer  red     9830 )
+   set_layer( net_name_layer  green  58982 )
+   set_layer( net_name_layer  blue   32768 )
+
+/* Port Layer: burnt gold */
+   set_layer( port_layer visible TRUE )
+   set_layer( port_layer line_width 500 )
+   set_layer( port_layer red    32768 )
+   set_layer( port_layer green  32768 )
+   set_layer( port_layer blue       0 )
+
+/* Port Name: black */
+   set_layer( port_name_layer visible TRUE )
+   set_layer( port_name_layer red        0 )
+   set_layer( port_name_layer green      0 )
+   set_layer( port_name_layer blue       0 )
+
+/* Pin Name: green */
+   set_layer( pin_name_layer  visible FALSE )
+   set_layer( pin_name_layer  red     9830 )
+   set_layer( pin_name_layer  green  39321 )
+   set_layer( pin_name_layer  blue   32768 )
+
+/* Hierarchy Name Layer: dark blue */
+/* [Names, in Designs Mgr ]        */
+   set_layer( hierarchy_name_layer  visible TRUE )
+   set_layer( hierarchy_name_layer  red      0 )
+   set_layer( hierarchy_name_layer  green    0 )
+   set_layer( hierarchy_name_layer  blue 49151 )
+
+/* Highlight Layer 0: red   */
+   set_layer( highlight_layer0 visible TRUE )
+   set_layer( highlight_layer0 line_width 3 )
+
+/* Highlight Layer 1: green */
+   set_layer( highlight_layer0 visible TRUE )
+   set_layer( highlight_layer0 line_width 3 )
+
+/* Symbol [Name] Layer: dark blue */
+   set_layer( symbol_name_layer  visible TRUE )
+   set_layer( symbol_name_layer  red      0 )
+   set_layer( symbol_name_layer  green    0 )
+   set_layer( symbol_name_layer  blue 49151 )
+
+   set_layer( symbol_layer visible TRUE )
+   set_layer( symbol_layer red    45875 )
+   set_layer( symbol_layer green  45875 )
+   set_layer( symbol_layer blue       0 )
+
+/* Bus Cell Layer: black */
+/* [Hierarchical Blocks] */
+   set_layer( bus_cell_layer visible TRUE )
+   set_layer( bus_cell_layer line_width 600 )
+   set_layer( bus_cell_layer red          0 )
+   set_layer( bus_cell_layer green        0 )
+   set_layer( bus_cell_layer blue         0 )

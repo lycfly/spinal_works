@@ -1,0 +1,50 @@
+ 
+****************************************
+Report : cell
+Design : seq_mod3_detector
+Version: L-2016.03-SP1
+Date   : Mon Oct 25 22:30:14 2021
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U9                        INVD1BWP7T35P140
+                                          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                                                          0.196000  
+U10                       INVD1BWP7T35P140
+                                          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                                                          0.196000  
+U11                       INVD1BWP7T35P140
+                                          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                                                          0.196000  
+U12                       AOI221D1BWP7T35P140
+                                          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                                                          0.686000  
+U13                       INVD1BWP7T35P140
+                                          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                                                          0.196000  
+U14                       AO33D1BWP7T35P140
+                                          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                                                          0.784000  
+U15                       AOI221D1BWP7T35P140
+                                          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                                                          0.686000  
+current_state_reg_0_      DFCNQD1BWP7T35P140
+                                          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                                                          1.862000  n
+current_state_reg_1_      DFCND1BWP7T35P140
+                                          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                                                          1.960000  n
+success_reg               DFCNQD1BWP7T35P140
+                                          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                                                          1.862000  n
+--------------------------------------------------------------------------------
+Total 10 cells                                            8.624000
+1

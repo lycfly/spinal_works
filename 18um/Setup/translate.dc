@@ -1,0 +1,42 @@
+/* TRANSLATE SCRIPT
+ * For DFTW Labs 3, 4
+ * From GENERIC to TSMC
+ * Date: Dec '00
+ */
+
+/* DESIGN .db FILE:
+ * Edit this variable to reflect the .db file
+ * in the working directory to be translated.
+ */
+   DESIGN_FILE = ./LATCH.db
+
+/* GENERIC LIBRARY PATH */
+   GENERIC = "../Technology/GENERIC"
+
+/* TSMC LIBRARY PATH */
+   TSMC = "../Technology/TSMC/"
+   CORE = TSMC + "core/synopsys/db/nopower"
+   PADS = TSMC +   "io/synopsys/db/power"
+
+/* SEARCH PATH */
+   search_path = search_path + {GENERIC}
+   search_path = search_path + {CORE  PADS}
+
+/* TECHNOLOGY FILES */
+   target_library = { core_slow.db \
+                        io_slow.db \
+   }
+   link_library   = { "*"          \
+                   workshop_lib.db \
+                dw_foundation.sldb \
+   }
+   symbol_library = core.sdb
+
+/* TRANSLATION:
+ * Translates .db file from GENERIC to TSMC.
+ */
+   read -f db DESIGN_FILE 
+   translate  -verify          \
+              -verify_hier     \
+              -verify_eff high \
+              -preserve

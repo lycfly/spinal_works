@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : area
+Design : seq_mod3_detector
+Version: L-2016.03-SP1
+Date   : Mon Oct 25 22:30:14 2021
+****************************************
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs (File: /root/lib/tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db)
+
+Number of ports:                            4
+Number of nets:                            14
+Number of cells:                           10
+Number of combinational cells:              7
+Number of sequential cells:                 3
+Number of macros/black boxes:               0
+Number of buf/inv:                          4
+Number of references:                       5
+
+Combinational area:                  2.940000
+Buf/Inv area:                        0.784000
+Noncombinational area:               5.684000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                     8.624000
+Total area:                 undefined
+
+The above information was reported from the logical library. The following are from the physical library:
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ---------
+seq_mod3_detector                    8.6240    100.0    2.9400     5.6840  0.0000  seq_mod3_detector
+--------------------------------  ---------  -------  --------  ---------  ------  ---------
+Total                                                   2.9400     5.6840  0.0000
+
+1

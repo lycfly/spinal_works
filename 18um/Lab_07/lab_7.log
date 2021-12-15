@@ -1,0 +1,876 @@
+ls
+ [.]
+ [..]
+ .synopsys_dc.setup
+ INTR_CTRL.tpf
+ INTR_CTRL.spf
+ INTR_CTRL.pat
+ INTR_CTRL.edif
+ CMOS.lib
+ lab_7.log
+ TASKS_3-9.tm
+ Z9.ps
+ INTR_CTRL.faults
+ INTR_CTRL.stil
+ INTR_CTRL-0.db
+ bus.ps
+ tsd.ps
+ #_7.
+ lab_7.cmd
+ TASK_09.dc
+ INTR_CTRL.db:INTR_CTRL
+ translate.dc
+ CMOS.gzip
+read netlist CMOS.lib
+ Begin reading netlist ( CMOS.lib )...
+ End parsing Verilog file CMOS.lib with 0 errors.
+ End reading netlist: #modules=50, top=BUF8B, #lines=427, CPU_time=0.02 sec, Memory=0MB
+write netlist CMOS.gzip -replace -compress gzip
+ End writing Verilog netlist, CPU_time = 0.01 sec, File_size = 1203
+read netlist -del
+ Warning: All netlist and library module data are now deleted. (M41)
+read netlist /remote/trg1/cdancak/DFTW/Labs_Dec.4/Lab_07/INTR_CTRL.edif -noabort
+ Begin reading netlist ( /remote/trg1/cdancak/DFTW/Labs_Dec.4/Lab_07/INTR_CTRL.edif )...
+ End parsing Edif file /remote/trg1/cdancak/DFTW/Labs_Dec.4/Lab_07/INTR_CTRL.edif with 0 errors;
+ End reading netlist: #modules=46, top=INTR_CTRL, #lines=10559, CPU_time=0.41 sec, Memory=0MB
+read netlist CMOS.gzip
+ Begin reading netlist ( CMOS.gzip )...
+ End parsing Verilog file CMOS.gzip with 0 errors.
+ End reading netlist: #modules=5, top=INTR_CTRL, #lines=427, CPU_time=0.02 sec, Memory=0MB
+report licenses
+ Test-Compile
+ Test-Compile-Share
+ Test-Analysis
+ Test-Faultsim
+ Test-ATPG-Ultra
+ Test-ATPG
+run build_model INTR_CTRL
+ ------------------------------------------------------------------------------
+ Begin build model for topcut = INTR_CTRL ...
+ ------------------------------------------------------------------------------
+ There were 787 primitives and 191 faultable pins removed during model optimizations
+ Warning: Rule B6 (undriven module inout pin) was violated 2 times.
+ Warning: Rule B8 (unconnected module input pin) was violated 2 times.
+ Warning: Rule B13 (undriven instance inout pin) was violated 37 times.
+ End build model: #primitives=1972, CPU_time=0.43 sec, Memory=1MB
+ ------------------------------------------------------------------------------
+ Begin learning analyses...
+ Warning: 32 faults on bidi connections were nofaulted. (M28)
+ End learning analyses, total learning CPU time=0.22 sec.
+ ------------------------------------------------------------------------------
+report primitives -pis -pos -pios
+ gate_id  type  port_name  (behavior_data)
+ -------  ----  -------------------------------
+       0    PI  /ADDR2_2 
+       1    PI  /CLK 
+       2    PI  /VDD1 
+       3    PI  /VDD2 
+       4    PI  /VSS1 
+       5    PI  /TESTB 
+       6    PI  /VSS4 
+       7    PI  /DMA_IRQ 
+       8    PI  /VDD4 
+       9    PI  /IRQ6 
+      10    PI  /P302_IRQ_1 
+      11    PI  /DSP_IRQ_1 
+      12    PI  /IRQ7 
+      13    PI  /S302_IRQ 
+      14    PI  /IRQ4 
+      15    PI  /IRQ5 
+      16    PI  /BMG2 
+      17    PI  /IRQ1 
+      18    PI  /IRQ2 
+      19    PI  /IRQ3 
+      20    PI  /DSP_IRQ_2 
+      21    PI  /IRQ0 
+      22    PI  /RESETN 
+      23    PI  /TIRQ1_2_N 
+      24    PI  /AT_IRQ_2 
+      25    PI  /NMI_2_N 
+      26    PI  /RST2 
+      27    PI  /RW2 
+      28    PI  /SE_N 
+      29    PI  /RST4 
+      30    PI  /ADDR2_1 
+      31    PI  /ADDR2_3 
+      32    PI  /TDI 
+      33    PI  /BMG1 
+      34    PI  /VSS3 
+      35    PI  /NMI_1_N 
+      36    PI  /TIRQ2_1_N 
+      37    PI  /TIRQ1_1_N 
+      38    PI  /DIRQ_1_N 
+      39    PI  /ADDR1_1 
+      40    PI  /RST3 
+      41    PI  /RW1 
+      42    PI  /VDD3 
+      43    PI  /RST1 
+      44    PI  /ADDR1_3 
+      45    PI  /ADDR1_2 
+      46    PI  /VSS2 
+ gate_id  type  port_name  (behavior_data)
+ -------  ----  -------------------------------
+    1951    PO  /IACK_3_N 
+    1952    PO  /IPL2_0 
+    1953    PO  /ATSEL_1_N 
+    1954    PO  /TDO 
+    1955    PO  /ATSEL_2_N 
+    1956    PO  /IPL1_1 
+    1957    PO  /IPL1_0 
+    1958    PO  /IPL1_2 
+    1959    PO  /IPL2_1 
+    1960    PO  /IPL2_2 
+    1961    PO  /IACK_1_N 
+    1962    PO  /IACK_0_N 
+    1963    PO  /IACK_2_N 
+    1964    PO  /IACK_7_N 
+    1965    PO  /IACK_5_N 
+    1966    PO  /IACK_4_N 
+    1967    PO  /IACK_6_N 
+    1968    PO  /IACK_P302_N 
+    1969    PO  /IACK_S302_N 
+    1970    PO  /DTACK2 
+    1971    PO  /DTACK1 
+ gate_id  type  port_name  (behavior_data)
+ -------  ----  -------------------------------
+      47   PIO  /DATA06 
+      48   PIO  /DATA12 
+      49   PIO  /DATA10 
+      50   PIO  /DATA08 
+      51   PIO  /DATA09 
+      52   PIO  /DATA11 
+      53   PIO  /DATA14 
+      54   PIO  /DATA13 
+      55   PIO  /DATA15 
+      56   PIO  /DATA07 
+      57   PIO  /DATA00 
+      58   PIO  /DATA03 
+      59   PIO  /DATA04 
+      60   PIO  /DATA05 
+      61   PIO  /DATA02 
+      62   PIO  /DATA01 
+ls
+ [.]
+ [..]
+ .synopsys_dc.setup
+ INTR_CTRL.tpf
+ INTR_CTRL.spf
+ INTR_CTRL.pat
+ INTR_CTRL.edif
+ CMOS.lib
+ lab_7.log
+ TASKS_3-9.tm
+ Z9.ps
+ INTR_CTRL.faults
+ INTR_CTRL.stil
+ INTR_CTRL-0.db
+ bus.ps
+ tsd.ps
+ #_7.
+ lab_7.cmd
+ TASK_09.dc
+ INTR_CTRL.db:INTR_CTRL
+ translate.dc
+ CMOS.gzip
+set drc INTR_CTRL.spf
+run drc
+ ------------------------------------------------------------------------------
+ Begin scan design rules checking...
+ ------------------------------------------------------------------------------
+ Begin reading test protocol file INTR_CTRL.spf...
+ Warning: Rule V11 (repeated entry) was violated 80 times.
+ End parsing STIL file INTR_CTRL.spf with 0 errors.
+ Test protocol file reading completed, CPU time=0.06 sec.
+ ------------------------------------------------------------------------------
+ Begin Bus/Wire contention ability checking...
+ Bus summary: #bus_gates=16, #bidi=16, #weak=0, #pull=0, #keepers=0
+    Contention status: #pass=0, #bidi=16, #fail=0, #abort=0, #not_analyzed=0
+    Z-state status   : #pass=0, #bidi=16, #fail=0, #abort=0, #not_analyzed=0
+ Bus/Wire contention ability checking completed, CPU time=0.01 sec.
+ ------------------------------------------------------------------------------
+ Begin simulating test protocol procedures...
+ Test protocol simulation completed, CPU time=0.01 sec.
+ ------------------------------------------------------------------------------
+ Begin scan chain operation checking...
+ Begin sensitization trace for chain = c0  sci = /TDI  sco = /TDO.
+ #shifts=0  time=0:  BUF gate /u5773 (624)
+ #shifts=0  time=0:  DFF gate /core/RESET_1/RESET_N_REG (1863)
+ #shifts=0  time=0:  MUX gate /core/RESET_1/RESET_N_REG (822)
+ #shifts=0  time=0:  DFF gate /core/RESET_1/RESET_1_REG (1865)
+ #shifts=1  time=0:  MUX gate /core/RESET_1/RESET_1_REG (1119)
+ #shifts=1  time=0:  BUF gate /core/INT_2/TIRQ2_REG (1117)
+ #shifts=1  time=0:  DFF gate /core/INT_2/TIRQ2_REG (1916)
+ #shifts=2  time=0:  MUX gate /core/INT_2/TIRQ2_REG (1182)
+ #shifts=2  time=0:  BUF gate /core/INT_2/TIRQ1_REG (1181)
+ #shifts=2  time=0:  DFF gate /core/INT_2/TIRQ1_REG (1927)
+ #shifts=3  time=0:  MUX gate /core/INT_2/TIRQ1_REG (1261)
+ #shifts=3  time=0:  BUF gate /core/INT_2/NMI_REG (1260)
+ #shifts=3  time=0:  DFF gate /core/INT_2/NMI_REG (1936)
+ #shifts=4  time=0:  MUX gate /core/INT_2/NMI_REG (1283)
+ #shifts=4  time=0:  DFF gate /core/INT_2/IRQ2_REG_11_ (1940)
+ #shifts=5  time=0:  MUX gate /core/INT_2/IRQ2_REG_11_ (1316)
+ #shifts=5  time=0:  DFF gate /core/INT_2/IRQ2_REG_10_ (1919)
+ #shifts=6  time=0:  MUX gate /core/INT_2/IRQ2_REG_10_ (1295)
+ #shifts=6  time=0:  DFF gate /core/INT_2/IRQ2_REG_9_ (1941)
+ #shifts=7  time=0:  MUX gate /core/INT_2/IRQ2_REG_9_ (1150)
+ #shifts=7  time=0:  DFF gate /core/INT_2/IRQ2_REG_8_ (1914)
+ #shifts=8  time=0:  MUX gate /core/INT_2/IRQ2_REG_8_ (1196)
+ #shifts=8  time=0:  DFF gate /core/INT_2/IRQ2_REG_7_ (1907)
+ #shifts=9  time=0:  MUX gate /core/INT_2/IRQ2_REG_7_ (1102)
+ #shifts=9  time=0:  DFF gate /core/INT_2/IRQ2_REG_6_ (1912)
+ #shifts=10  time=0:  MUX gate /core/INT_2/IRQ2_REG_6_ (1263)
+ #shifts=10  time=0:  DFF gate /core/INT_2/IRQ2_REG_5_ (1937)
+ #shifts=11  time=0:  MUX gate /core/INT_2/IRQ2_REG_5_ (1332)
+ #shifts=11  time=0:  DFF gate /core/INT_2/IRQ2_REG_4_ (1944)
+ #shifts=12  time=0:  MUX gate /core/INT_2/IRQ2_REG_4_ (1124)
+ #shifts=12  time=0:  DFF gate /core/INT_2/IRQ2_REG_3_ (1918)
+ #shifts=13  time=0:  MUX gate /core/INT_2/IRQ2_REG_3_ (1237)
+ #shifts=13  time=0:  DFF gate /core/INT_2/IRQ2_REG_2_ (1932)
+ #shifts=14  time=0:  MUX gate /core/INT_2/IRQ2_REG_2_ (1280)
+ #shifts=14  time=0:  DFF gate /core/INT_2/IRQ2_REG_1_ (1911)
+ #shifts=15  time=0:  MUX gate /core/INT_2/IRQ2_REG_1_ (1161)
+ #shifts=15  time=0:  DFF gate /core/INT_2/IRQ2_REG_0_ (1924)
+ #shifts=16  time=0:  MUX gate /core/INT_2/IRQ2_REG_0_ (1191)
+ #shifts=16  time=0:  BUF gate /core/INT_2/IRQ1_REG_10_ (1189)
+ #shifts=16  time=0:  DFF gate /core/INT_2/IRQ1_REG_10_ (1930)
+ #shifts=17  time=0:  MUX gate /core/INT_2/IRQ1_REG_10_ (1149)
+ #shifts=17  time=0:  BUF gate /core/INT_2/IRQ1_REG_9_ (1147)
+ #shifts=17  time=0:  DFF gate /core/INT_2/IRQ1_REG_9_ (1920)
+ #shifts=18  time=0:  MUX gate /core/INT_2/IRQ1_REG_9_ (1195)
+ #shifts=18  time=0:  BUF gate /core/INT_2/IRQ1_REG_8_ (1193)
+ #shifts=18  time=0:  DFF gate /core/INT_2/IRQ1_REG_8_ (1931)
+ #shifts=19  time=0:  MUX gate /core/INT_2/IRQ1_REG_8_ (1101)
+ #shifts=19  time=0:  BUF gate /core/INT_2/IRQ1_REG_7_ (1099)
+ #shifts=19  time=0:  DFF gate /core/INT_2/IRQ1_REG_7_ (1913)
+ #shifts=20  time=0:  MUX gate /core/INT_2/IRQ1_REG_7_ (1175)
+ #shifts=20  time=0:  BUF gate /core/INT_2/IRQ1_REG_6_ (1173)
+ #shifts=20  time=0:  DFF gate /core/INT_2/IRQ1_REG_6_ (1925)
+ #shifts=21  time=0:  MUX gate /core/INT_2/IRQ1_REG_6_ (1331)
+ #shifts=21  time=0:  BUF gate /core/INT_2/IRQ1_REG_5_ (1329)
+ #shifts=21  time=0:  DFF gate /core/INT_2/IRQ1_REG_5_ (1945)
+ #shifts=22  time=0:  MUX gate /core/INT_2/IRQ1_REG_5_ (1123)
+ #shifts=22  time=0:  BUF gate /core/INT_2/IRQ1_REG_4_ (1121)
+ #shifts=22  time=0:  DFF gate /core/INT_2/IRQ1_REG_4_ (1917)
+ #shifts=23  time=0:  MUX gate /core/INT_2/IRQ1_REG_4_ (1236)
+ #shifts=23  time=0:  BUF gate /core/INT_2/IRQ1_REG_3_ (1234)
+ #shifts=23  time=0:  DFF gate /core/INT_2/IRQ1_REG_3_ (1934)
+ #shifts=24  time=0:  MUX gate /core/INT_2/IRQ1_REG_3_ (1279)
+ #shifts=24  time=0:  BUF gate /core/INT_2/IRQ1_REG_2_ (1277)
+ #shifts=24  time=0:  DFF gate /core/INT_2/IRQ1_REG_2_ (1939)
+ #shifts=25  time=0:  MUX gate /core/INT_2/IRQ1_REG_2_ (1157)
+ #shifts=25  time=0:  BUF gate /core/INT_2/IRQ1_REG_1_ (1155)
+ #shifts=25  time=0:  DFF gate /core/INT_2/IRQ1_REG_1_ (1922)
+ #shifts=26  time=0:  MUX gate /core/INT_2/IRQ1_REG_1_ (1179)
+ #shifts=26  time=0:  BUF gate /core/INT_2/IRQ1_REG_0_ (1177)
+ #shifts=26  time=0:  DFF gate /core/INT_2/IRQ1_REG_0_ (1926)
+ #shifts=27  time=0:  MUX gate /core/INT_2/IRQ1_REG_0_ (1184)
+ #shifts=27  time=0:  DFF gate /core/INT_2/INT_IPL_N_REG_2_ (1928)
+ #shifts=28  time=0:  MUX gate /core/INT_2/INT_IPL_N_REG_2_ (1727)
+ #shifts=28  time=0:  DFF gate /core/INT_2/INT_IPL_N_REG_1_ (1915)
+ #shifts=29  time=0:  MUX gate /core/INT_2/INT_IPL_N_REG_1_ (1724)
+ #shifts=29  time=0:  DFF gate /core/INT_2/INT_IPL_N_REG_0_ (1938)
+ #shifts=30  time=0:  MUX gate /core/INT_2/INT_IPL_N_REG_0_ (1728)
+ #shifts=30  time=0:  BUF gate /core/INT_2/DMA2_REG (1313)
+ #shifts=30  time=0:  DFF gate /core/INT_2/DMA2_REG (1943)
+ #shifts=31  time=0:  MUX gate /core/INT_2/DMA2_REG (1159)
+ #shifts=31  time=0:  DFF gate /core/INT_2/DMA1_REG (1923)
+ #shifts=32  time=0:  MUX gate /core/INT_2/DMA1_REG (1153)
+ #shifts=32  time=0:  BUF gate /core/INT_2/DIRQ_REG (1152)
+ #shifts=32  time=0:  DFF gate /core/INT_2/DIRQ_REG (1921)
+ #shifts=33  time=0:  MUX gate /core/INT_2/DIRQ_REG (978)
+ #shifts=33  time=0:  BUF gate /core/INT_1/TIRQ2_REG (975)
+ #shifts=33  time=0:  DFF gate /core/INT_1/TIRQ2_REG (1880)
+ #shifts=34  time=0:  MUX gate /core/INT_1/TIRQ2_REG (1012)
+ #shifts=34  time=0:  BUF gate /core/INT_1/TIRQ1_REG (1011)
+ #shifts=34  time=0:  DFF gate /core/INT_1/TIRQ1_REG (1893)
+ #shifts=35  time=0:  MUX gate /core/INT_1/TIRQ1_REG (1038)
+ #shifts=35  time=0:  BUF gate /core/INT_1/NMI_REG (1034)
+ #shifts=35  time=0:  DFF gate /core/INT_1/NMI_REG (1902)
+ #shifts=36  time=0:  MUX gate /core/INT_1/NMI_REG (1054)
+ #shifts=36  time=0:  DFF gate /core/INT_1/IRQ2_REG_11_ (1904)
+ #shifts=37  time=0:  MUX gate /core/INT_1/IRQ2_REG_11_ (1564)
+ #shifts=37  time=0:  DFF gate /core/INT_1/IRQ2_REG_10_ (1884)
+ #shifts=38  time=0:  MUX gate /core/INT_1/IRQ2_REG_10_ (1055)
+ #shifts=38  time=0:  DFF gate /core/INT_1/IRQ2_REG_9_ (1905)
+ #shifts=39  time=0:  MUX gate /core/INT_1/IRQ2_REG_9_ (985)
+ #shifts=39  time=0:  DFF gate /core/INT_1/IRQ2_REG_8_ (1882)
+ #shifts=40  time=0:  MUX gate /core/INT_1/IRQ2_REG_8_ (1020)
+ #shifts=40  time=0:  DFF gate /core/INT_1/IRQ2_REG_7_ (1895)
+ #shifts=41  time=0:  MUX gate /core/INT_1/IRQ2_REG_7_ (973)
+ #shifts=41  time=0:  DFF gate /core/INT_1/IRQ2_REG_6_ (1877)
+ #shifts=42  time=0:  MUX gate /core/INT_1/IRQ2_REG_6_ (1032)
+ #shifts=42  time=0:  DFF gate /core/INT_1/IRQ2_REG_5_ (1901)
+ #shifts=43  time=0:  MUX gate /core/INT_1/IRQ2_REG_5_ (1077)
+ #shifts=43  time=0:  DFF gate /core/INT_1/IRQ2_REG_4_ (1909)
+ #shifts=44  time=0:  MUX gate /core/INT_1/IRQ2_REG_4_ (994)
+ #shifts=44  time=0:  DFF gate /core/INT_1/IRQ2_REG_3_ (1885)
+ #shifts=45  time=0:  MUX gate /core/INT_1/IRQ2_REG_3_ (1031)
+ #shifts=45  time=0:  DFF gate /core/INT_1/IRQ2_REG_2_ (1897)
+ #shifts=46  time=0:  MUX gate /core/INT_1/IRQ2_REG_2_ (1053)
+ #shifts=46  time=0:  DFF gate /core/INT_1/IRQ2_REG_1_ (1878)
+ #shifts=47  time=0:  MUX gate /core/INT_1/IRQ2_REG_1_ (1001)
+ #shifts=47  time=0:  DFF gate /core/INT_1/IRQ2_REG_0_ (1888)
+ #shifts=48  time=0:  MUX gate /core/INT_1/IRQ2_REG_0_ (1024)
+ #shifts=48  time=0:  BUF gate /core/INT_1/IRQ1_REG_10_ (1022)
+ #shifts=48  time=0:  DFF gate /core/INT_1/IRQ1_REG_10_ (1898)
+ #shifts=49  time=0:  MUX gate /core/INT_1/IRQ1_REG_10_ (984)
+ #shifts=49  time=0:  BUF gate /core/INT_1/IRQ1_REG_9_ (982)
+ #shifts=49  time=0:  DFF gate /core/INT_1/IRQ1_REG_9_ (1883)
+ #shifts=50  time=0:  MUX gate /core/INT_1/IRQ1_REG_9_ (1019)
+ #shifts=50  time=0:  BUF gate /core/INT_1/IRQ1_REG_8_ (1017)
+ #shifts=50  time=0:  DFF gate /core/INT_1/IRQ1_REG_8_ (1896)
+ #shifts=51  time=0:  MUX gate /core/INT_1/IRQ1_REG_8_ (972)
+ #shifts=51  time=0:  BUF gate /core/INT_1/IRQ1_REG_7_ (970)
+ #shifts=51  time=0:  DFF gate /core/INT_1/IRQ1_REG_7_ (1879)
+ #shifts=52  time=0:  MUX gate /core/INT_1/IRQ1_REG_7_ (1005)
+ #shifts=52  time=0:  BUF gate /core/INT_1/IRQ1_REG_6_ (1003)
+ #shifts=52  time=0:  DFF gate /core/INT_1/IRQ1_REG_6_ (1891)
+ #shifts=53  time=0:  MUX gate /core/INT_1/IRQ1_REG_6_ (1076)
+ #shifts=53  time=0:  BUF gate /core/INT_1/IRQ1_REG_5_ (1074)
+ #shifts=53  time=0:  DFF gate /core/INT_1/IRQ1_REG_5_ (1910)
+ #shifts=54  time=0:  MUX gate /core/INT_1/IRQ1_REG_5_ (993)
+ #shifts=54  time=0:  BUF gate /core/INT_1/IRQ1_REG_4_ (991)
+ #shifts=54  time=0:  DFF gate /core/INT_1/IRQ1_REG_4_ (1887)
+ #shifts=55  time=0:  MUX gate /core/INT_1/IRQ1_REG_4_ (1030)
+ #shifts=55  time=0:  BUF gate /core/INT_1/IRQ1_REG_3_ (1028)
+ #shifts=55  time=0:  DFF gate /core/INT_1/IRQ1_REG_3_ (1900)
+ #shifts=56  time=0:  MUX gate /core/INT_1/IRQ1_REG_3_ (1052)
+ #shifts=56  time=0:  BUF gate /core/INT_1/IRQ1_REG_2_ (1050)
+ #shifts=56  time=0:  DFF gate /core/INT_1/IRQ1_REG_2_ (1903)
+ #shifts=57  time=0:  MUX gate /core/INT_1/IRQ1_REG_2_ (1000)
+ #shifts=57  time=0:  BUF gate /core/INT_1/IRQ1_REG_1_ (998)
+ #shifts=57  time=0:  DFF gate /core/INT_1/IRQ1_REG_1_ (1890)
+ #shifts=58  time=0:  MUX gate /core/INT_1/IRQ1_REG_1_ (1009)
+ #shifts=58  time=0:  BUF gate /core/INT_1/IRQ1_REG_0_ (1007)
+ #shifts=58  time=0:  DFF gate /core/INT_1/IRQ1_REG_0_ (1892)
+ #shifts=59  time=0:  MUX gate /core/INT_1/IRQ1_REG_0_ (1014)
+ #shifts=59  time=0:  DFF gate /core/INT_1/INT_IPL_N_REG_2_ (1894)
+ #shifts=60  time=0:  MUX gate /core/INT_1/INT_IPL_N_REG_2_ (1048)
+ #shifts=60  time=0:  DFF gate /core/INT_1/INT_IPL_N_REG_1_ (1881)
+ #shifts=61  time=0:  MUX gate /core/INT_1/INT_IPL_N_REG_1_ (1047)
+ #shifts=61  time=0:  DFF gate /core/INT_1/INT_IPL_N_REG_0_ (1899)
+ #shifts=62  time=0:  MUX gate /core/INT_1/INT_IPL_N_REG_0_ (1072)
+ #shifts=62  time=0:  BUF gate /core/INT_1/DMA2_REG (1070)
+ #shifts=62  time=0:  DFF gate /core/INT_1/DMA2_REG (1908)
+ #shifts=63  time=0:  MUX gate /core/INT_1/DMA2_REG (996)
+ #shifts=63  time=0:  DFF gate /core/INT_1/DMA1_REG (1889)
+ #shifts=64  time=0:  MUX gate /core/INT_1/DMA1_REG (989)
+ #shifts=64  time=0:  BUF gate /core/INT_1/DIRQ_REG (987)
+ #shifts=64  time=0:  DFF gate /core/INT_1/DIRQ_REG (1886)
+ #shifts=65  time=0:  MUX gate /core/INT_1/DIRQ_REG (725)
+ #shifts=65  time=0:  DFF gate /core/IACK_2/L5_UREQ_REG_11_ (1795)
+ #shifts=66  time=0:  MUX gate /core/IACK_2/L5_UREQ_REG_11_ (1292)
+ #shifts=66  time=0:  DFF gate /core/IACK_2/L5_UREQ_REG_10_ (1868)
+ #shifts=67  time=0:  MUX gate /core/IACK_2/L5_UREQ_REG_10_ (1145)
+ #shifts=67  time=0:  DFF gate /core/IACK_2/L5_UREQ_REG_9_ (1805)
+ #shifts=68  time=0:  MUX gate /core/IACK_2/L5_UREQ_REG_9_ (1304)
+ #shifts=68  time=0:  DFF gate /core/IACK_2/L5_UREQ_REG_8_ (1820)
+ #shifts=69  time=0:  MUX gate /core/IACK_2/L5_UREQ_REG_8_ (1112)
+ #shifts=69  time=0:  DFF gate /core/IACK_2/L5_UREQ_REG_7_ (1871)
+ #shifts=70  time=0:  MUX gate /core/IACK_2/L5_UREQ_REG_7_ (1068)
+ #shifts=70  time=0:  DFF gate /core/IACK_2/L5_UREQ_REG_6_ (1794)
+ #shifts=71  time=0:  MUX gate /core/IACK_2/L5_UREQ_REG_6_ (1097)
+ #shifts=71  time=0:  DFF gate /core/IACK_2/L5_UREQ_REG_5_ (1798)
+ #shifts=72  time=0:  MUX gate /core/IACK_2/L5_UREQ_REG_5_ (1273)
+ #shifts=72  time=0:  BUF gate /core/IACK_2/L5_UREQ_REG_4_ (422)
+ #shifts=72  time=0:  DFF gate /core/IACK_2/L5_UREQ_REG_4_ (1808)
+ #shifts=73  time=0:  MUX gate /core/IACK_2/L5_UREQ_REG_4_ (1326)
+ #shifts=73  time=0:  BUF gate /core/IACK_2/L5_UREQ_REG_3_ (448)
+ #shifts=73  time=0:  DFF gate /core/IACK_2/L5_UREQ_REG_3_ (1814)
+ #shifts=74  time=0:  MUX gate /core/IACK_2/L5_UREQ_REG_3_ (1134)
+ #shifts=74  time=0:  BUF gate /core/IACK_2/L5_UREQ_REG_2_ (471)
+ #shifts=74  time=0:  DFF gate /core/IACK_2/L5_UREQ_REG_2_ (1824)
+ #shifts=75  time=0:  MUX gate /core/IACK_2/L5_UREQ_REG_2_ (1675)
+ #shifts=75  time=0:  BUF gate /core/IACK_2/L5_UREQ_REG_1_ (1670)
+ #shifts=75  time=0:  DFF gate /core/IACK_2/L5_UREQ_REG_1_ (1950)
+ #shifts=76  time=0:  MUX gate /core/IACK_2/L5_UREQ_REG_1_ (1685)
+ #shifts=76  time=0:  BUF gate /core/IACK_2/L5_UREQ_REG_0_ (369)
+ #shifts=76  time=0:  DFF gate /core/IACK_2/L5_UREQ_REG_0_ (1797)
+ #shifts=77  time=0:  MUX gate /core/IACK_2/L5_UREQ_REG_0_ (1170)
+ #shifts=77  time=0:  DFF gate /core/IACK_2/L5_PRI_REG_4_ (1801)
+ #shifts=78  time=0:  MUX gate /core/IACK_2/L5_PRI_REG_4_ (1232)
+ #shifts=78  time=0:  DFF gate /core/IACK_2/L5_PRI_REG_3_ (1731)
+ #shifts=79  time=0:  MUX gate /core/IACK_2/L5_PRI_REG_3_ (1726)
+ #shifts=79  time=0:  BUF gate /core/IACK_2/L5_PRI_REG_2_ (483)
+ #shifts=79  time=0:  DFF gate /core/IACK_2/L5_PRI_REG_2_ (1826)
+ #shifts=80  time=0:  MUX gate /core/IACK_2/L5_PRI_REG_2_ (1713)
+ #shifts=80  time=0:  BUF gate /core/IACK_2/L5_PRI_REG_1_ (440)
+ #shifts=80  time=0:  DFF gate /core/IACK_2/L5_PRI_REG_1_ (1811)
+ #shifts=81  time=0:  MUX gate /core/IACK_2/L5_PRI_REG_1_ (1719)
+ #shifts=81  time=0:  BUF gate /core/IACK_2/L5_PRI_REG_0_ (414)
+ #shifts=81  time=0:  DFF gate /core/IACK_2/L5_PRI_REG_0_ (1807)
+ #shifts=82  time=0:  MUX gate /core/IACK_2/L5_PRI_REG_0_ (1725)
+ #shifts=82  time=0:  DFF gate /core/IACK_2/L5_FREQ_REG_11_ (1819)
+ #shifts=83  time=0:  MUX gate /core/IACK_2/L5_FREQ_REG_11_ (1293)
+ #shifts=83  time=0:  BUF gate /core/IACK_2/L5_FREQ_REG_10_ (445)
+ #shifts=83  time=0:  DFF gate /core/IACK_2/L5_FREQ_REG_10_ (1813)
+ #shifts=84  time=0:  MUX gate /core/IACK_2/L5_FREQ_REG_10_ (1187)
+ #shifts=84  time=0:  DFF gate /core/IACK_2/L5_FREQ_REG_9_ (1929)
+ #shifts=85  time=0:  MUX gate /core/IACK_2/L5_FREQ_REG_9_ (1305)
+ #shifts=85  time=0:  BUF gate /core/IACK_2/L5_FREQ_REG_8_ (459)
+ #shifts=85  time=0:  DFF gate /core/IACK_2/L5_FREQ_REG_8_ (1818)
+ #shifts=86  time=0:  MUX gate /core/IACK_2/L5_FREQ_REG_8_ (1113)
+ #shifts=86  time=0:  DFF gate /core/IACK_2/L5_FREQ_REG_7_ (1812)
+ #shifts=87  time=0:  MUX gate /core/IACK_2/L5_FREQ_REG_7_ (1067)
+ #shifts=87  time=0:  BUF gate /core/IACK_2/L5_FREQ_REG_6_ (406)
+ #shifts=87  time=0:  DFF gate /core/IACK_2/L5_FREQ_REG_6_ (1803)
+ #shifts=88  time=0:  MUX gate /core/IACK_2/L5_FREQ_REG_6_ (1096)
+ #shifts=88  time=0:  DFF gate /core/IACK_2/L5_FREQ_REG_5_ (1788)
+ #shifts=89  time=0:  MUX gate /core/IACK_2/L5_FREQ_REG_5_ (1272)
+ #shifts=89  time=0:  BUF gate /core/IACK_2/L5_FREQ_REG_4_ (1208)
+ #shifts=89  time=0:  DFF gate /core/IACK_2/L5_FREQ_REG_4_ (1933)
+ #shifts=90  time=0:  MUX gate /core/IACK_2/L5_FREQ_REG_4_ (1327)
+ #shifts=90  time=0:  BUF gate /core/IACK_2/L5_FREQ_REG_3_ (476)
+ #shifts=90  time=0:  DFF gate /core/IACK_2/L5_FREQ_REG_3_ (1825)
+ #shifts=91  time=0:  MUX gate /core/IACK_2/L5_FREQ_REG_3_ (1135)
+ #shifts=91  time=0:  BUF gate /L5_FREQ_REG_2 (428)
+ #shifts=91  time=0:  DFF gate /L5_FREQ_REG_2 (1809)
+ #shifts=92  time=0:  MUX gate /L5_FREQ_REG_2 (1206)
+ #shifts=92  time=0:  BUF gate /core/IACK_2/L5_FREQ_REG_1_ (403)
+ #shifts=92  time=0:  DFF gate /core/IACK_2/L5_FREQ_REG_1_ (1802)
+ #shifts=93  time=0:  MUX gate /core/IACK_2/L5_FREQ_REG_1_ (1086)
+ #shifts=93  time=0:  BUF gate /core/IACK_2/L5_FREQ_REG_0_ (361)
+ #shifts=93  time=0:  DFF gate /core/IACK_2/L5_FREQ_REG_0_ (1793)
+ #shifts=94  time=0:  MUX gate /core/IACK_2/L5_FREQ_REG_0_ (1171)
+ #shifts=94  time=0:  BUF gate /core/IACK_2/L3_PRI_REG_3_ (431)
+ #shifts=94  time=0:  DFF gate /core/IACK_2/L3_PRI_REG_3_ (1810)
+ #shifts=95  time=0:  MUX gate /core/IACK_2/L3_PRI_REG_3_ (856)
+ #shifts=95  time=0:  DFF gate /core/IACK_2/L3_PRI_REG_2_ (1817)
+ #shifts=96  time=0:  MUX gate /core/IACK_2/L3_PRI_REG_2_ (1240)
+ #shifts=96  time=0:  DFF gate /core/IACK_2/L3_PRI_REG_1_ (1935)
+ #shifts=97  time=0:  MUX gate /core/IACK_2/L3_PRI_REG_1_ (1243)
+ #shifts=97  time=0:  DFF gate /core/IACK_2/L3_PRI_REG_0_ (1791)
+ #shifts=98  time=0:  MUX gate /core/IACK_2/L3_PRI_REG_0_ (867)
+ #shifts=98  time=0:  DFF gate /core/IACK_2/L3_FREQ_REG_11_ (1816)
+ #shifts=99  time=0:  MUX gate /core/IACK_2/L3_FREQ_REG_11_ (1289)
+ #shifts=99  time=0:  DFF gate /core/IACK_2/L3_FREQ_REG_10_ (1822)
+ #shifts=100  time=0:  MUX gate /core/IACK_2/L3_FREQ_REG_10_ (1142)
+ #shifts=100  time=0:  DFF gate /core/IACK_2/L3_FREQ_REG_9_ (1804)
+ #shifts=101  time=0:  MUX gate /core/IACK_2/L3_FREQ_REG_9_ (1303)
+ #shifts=101  time=0:  DFF gate /core/IACK_2/L3_FREQ_REG_8_ (1800)
+ #shifts=102  time=0:  MUX gate /core/IACK_2/L3_FREQ_REG_8_ (1109)
+ #shifts=102  time=0:  DFF gate /core/IACK_2/L3_FREQ_REG_7_ (1735)
+ #shifts=103  time=0:  MUX gate /core/IACK_2/L3_FREQ_REG_7_ (1066)
+ #shifts=103  time=0:  BUF gate /core/IACK_2/L3_FREQ_REG_6_ (468)
+ #shifts=103  time=0:  DFF gate /core/IACK_2/L3_FREQ_REG_6_ (1823)
+ #shifts=104  time=0:  MUX gate /core/IACK_2/L3_FREQ_REG_6_ (1095)
+ #shifts=104  time=0:  DFF gate /core/IACK_2/L3_FREQ_REG_5_ (1815)
+ #shifts=105  time=0:  MUX gate /core/IACK_2/L3_FREQ_REG_5_ (1269)
+ #shifts=105  time=0:  BUF gate /core/IACK_2/L3_FREQ_REG_4_ (411)
+ #shifts=105  time=0:  DFF gate /core/IACK_2/L3_FREQ_REG_4_ (1806)
+ #shifts=106  time=0:  MUX gate /core/IACK_2/L3_FREQ_REG_4_ (1323)
+ #shifts=106  time=0:  BUF gate /core/IACK_2/L3_FREQ_REG_3_ (373)
+ #shifts=106  time=0:  DFF gate /core/IACK_2/L3_FREQ_REG_3_ (1799)
+ #shifts=107  time=0:  MUX gate /core/IACK_2/L3_FREQ_REG_3_ (1131)
+ #shifts=107  time=0:  BUF gate /core/IACK_2/L3_FREQ_REG_2_ (366)
+ #shifts=107  time=0:  DFF gate /core/IACK_2/L3_FREQ_REG_2_ (1796)
+ #shifts=108  time=0:  MUX gate /core/IACK_2/L3_FREQ_REG_2_ (1203)
+ #shifts=108  time=0:  BUF gate /core/IACK_2/L3_FREQ_REG_1_ (839)
+ #shifts=108  time=0:  DFF gate /core/IACK_2/L3_FREQ_REG_1_ (1872)
+ #shifts=109  time=0:  MUX gate /core/IACK_2/L3_FREQ_REG_1_ (1084)
+ #shifts=109  time=0:  BUF gate /core/IACK_2/L3_FREQ_REG_0_ (464)
+ #shifts=109  time=0:  DFF gate /core/IACK_2/L3_FREQ_REG_0_ (1821)
+ #shifts=110  time=0:  MUX gate /core/IACK_2/L3_FREQ_REG_0_ (1167)
+ #shifts=110  time=0:  DFF gate /core/IACK_1/L5_UREQ_REG_11_ (1836)
+ #shifts=111  time=0:  MUX gate /core/IACK_1/L5_UREQ_REG_11_ (1659)
+ #shifts=111  time=0:  DFF gate /core/IACK_1/L5_UREQ_REG_10_ (1828)
+ #shifts=112  time=0:  MUX gate /core/IACK_1/L5_UREQ_REG_10_ (1637)
+ #shifts=112  time=0:  DFF gate /core/IACK_1/L5_UREQ_REG_9_ (1852)
+ #shifts=113  time=0:  MUX gate /core/IACK_1/L5_UREQ_REG_9_ (1655)
+ #shifts=113  time=0:  DFF gate /core/IACK_1/L5_UREQ_REG_8_ (1870)
+ #shifts=114  time=0:  MUX gate /core/IACK_1/L5_UREQ_REG_8_ (1651)
+ #shifts=114  time=0:  DFF gate /core/IACK_1/L5_UREQ_REG_7_ (1827)
+ #shifts=115  time=0:  MUX gate /core/IACK_1/L5_UREQ_REG_7_ (1650)
+ #shifts=115  time=0:  DFF gate /core/IACK_1/L5_UREQ_REG_6_ (1840)
+ #shifts=116  time=0:  MUX gate /core/IACK_1/L5_UREQ_REG_6_ (1654)
+ #shifts=116  time=0:  DFF gate /core/IACK_1/L5_UREQ_REG_5_ (1844)
+ #shifts=117  time=0:  MUX gate /core/IACK_1/L5_UREQ_REG_5_ (1644)
+ #shifts=117  time=0:  BUF gate /core/IACK_1/L5_UREQ_REG_4_ (563)
+ #shifts=117  time=0:  DFF gate /core/IACK_1/L5_UREQ_REG_4_ (1854)
+ #shifts=118  time=0:  MUX gate /core/IACK_1/L5_UREQ_REG_4_ (1641)
+ #shifts=118  time=0:  BUF gate /core/IACK_1/L5_UREQ_REG_3_ (600)
+ #shifts=118  time=0:  DFF gate /core/IACK_1/L5_UREQ_REG_3_ (1860)
+ #shifts=119  time=0:  MUX gate /core/IACK_1/L5_UREQ_REG_3_ (1645)
+ #shifts=119  time=0:  BUF gate /core/IACK_1/L5_UREQ_REG_2_ (920)
+ #shifts=119  time=0:  DFF gate /core/IACK_1/L5_UREQ_REG_2_ (1875)
+ #shifts=120  time=0:  MUX gate /core/IACK_1/L5_UREQ_REG_2_ (1639)
+ #shifts=120  time=0:  BUF gate /core/IACK_1/L5_UREQ_REG_1_ (510)
+ #shifts=120  time=0:  DFF gate /core/IACK_1/L5_UREQ_REG_1_ (1834)
+ #shifts=121  time=0:  MUX gate /core/IACK_1/L5_UREQ_REG_1_ (1647)
+ #shifts=121  time=0:  BUF gate /core/IACK_1/L5_UREQ_REG_0_ (549)
+ #shifts=121  time=0:  DFF gate /core/IACK_1/L5_UREQ_REG_0_ (1847)
+ #shifts=122  time=0:  MUX gate /core/IACK_1/L5_UREQ_REG_0_ (1657)
+ #shifts=122  time=0:  DFF gate /core/IACK_1/L5_PRI_REG_4_ (1846)
+ #shifts=123  time=0:  MUX gate /core/IACK_1/L5_PRI_REG_4_ (1563)
+ #shifts=123  time=0:  DFF gate /core/IACK_1/L5_PRI_REG_3_ (1835)
+ #shifts=124  time=0:  MUX gate /core/IACK_1/L5_PRI_REG_3_ (1534)
+ #shifts=124  time=0:  BUF gate /core/IACK_1/L5_PRI_REG_2_ (869)
+ #shifts=124  time=0:  DFF gate /core/IACK_1/L5_PRI_REG_2_ (1874)
+ #shifts=125  time=0:  MUX gate /core/IACK_1/L5_PRI_REG_2_ (1560)
+ #shifts=125  time=0:  BUF gate /core/IACK_1/L5_PRI_REG_1_ (603)
+ #shifts=125  time=0:  DFF gate /core/IACK_1/L5_PRI_REG_1_ (1861)
+ #shifts=126  time=0:  MUX gate /core/IACK_1/L5_PRI_REG_1_ (1531)
+ #shifts=126  time=0:  BUF gate /core/IACK_1/L5_PRI_REG_0_ (555)
+ #shifts=126  time=0:  DFF gate /core/IACK_1/L5_PRI_REG_0_ (1853)
+ #shifts=127  time=0:  MUX gate /core/IACK_1/L5_PRI_REG_0_ (1557)
+ #shifts=127  time=0:  DFF gate /core/IACK_1/L5_FREQ_REG_11_ (1867)
+ #shifts=128  time=0:  MUX gate /core/IACK_1/L5_FREQ_REG_11_ (1660)
+ #shifts=128  time=0:  BUF gate /core/IACK_1/L5_FREQ_REG_10_ (598)
+ #shifts=128  time=0:  DFF gate /core/IACK_1/L5_FREQ_REG_10_ (1859)
+ #shifts=129  time=0:  MUX gate /core/IACK_1/L5_FREQ_REG_10_ (1638)
+ #shifts=129  time=0:  DFF gate /core/IACK_1/L5_FREQ_REG_9_ (1831)
+ #shifts=130  time=0:  MUX gate /core/IACK_1/L5_FREQ_REG_9_ (1656)
+ #shifts=130  time=0:  BUF gate /core/IACK_1/L5_FREQ_REG_8_ (826)
+ #shifts=130  time=0:  DFF gate /core/IACK_1/L5_FREQ_REG_8_ (1869)
+ #shifts=131  time=0:  MUX gate /core/IACK_1/L5_FREQ_REG_8_ (1652)
+ #shifts=131  time=0:  DFF gate /core/IACK_1/L5_FREQ_REG_7_ (1858)
+ #shifts=132  time=0:  MUX gate /core/IACK_1/L5_FREQ_REG_7_ (1649)
+ #shifts=132  time=0:  BUF gate /core/IACK_1/L5_FREQ_REG_6_ (553)
+ #shifts=132  time=0:  DFF gate /core/IACK_1/L5_FREQ_REG_6_ (1850)
+ #shifts=133  time=0:  MUX gate /core/IACK_1/L5_FREQ_REG_6_ (1653)
+ #shifts=133  time=0:  DFF gate /core/IACK_1/L5_FREQ_REG_5_ (1838)
+ #shifts=134  time=0:  MUX gate /core/IACK_1/L5_FREQ_REG_5_ (1643)
+ #shifts=134  time=0:  BUF gate /core/IACK_1/L5_FREQ_REG_4_ (507)
+ #shifts=134  time=0:  DFF gate /core/IACK_1/L5_FREQ_REG_4_ (1830)
+ #shifts=135  time=0:  MUX gate /core/IACK_1/L5_FREQ_REG_4_ (1642)
+ #shifts=135  time=0:  BUF gate /core/IACK_1/L5_FREQ_REG_3_ (521)
+ #shifts=135  time=0:  DFF gate /core/IACK_1/L5_FREQ_REG_3_ (1842)
+ #shifts=136  time=0:  MUX gate /core/IACK_1/L5_FREQ_REG_3_ (1646)
+ #shifts=136  time=0:  BUF gate /core/IACK_1/L5_FREQ_REG_2_ (575)
+ #shifts=136  time=0:  DFF gate /core/IACK_1/L5_FREQ_REG_2_ (1856)
+ #shifts=137  time=0:  MUX gate /core/IACK_1/L5_FREQ_REG_2_ (1640)
+ #shifts=137  time=0:  BUF gate /core/IACK_1/L5_FREQ_REG_1_ (551)
+ #shifts=137  time=0:  DFF gate /core/IACK_1/L5_FREQ_REG_1_ (1849)
+ #shifts=138  time=0:  MUX gate /core/IACK_1/L5_FREQ_REG_1_ (1648)
+ #shifts=138  time=0:  BUF gate /core/IACK_1/L5_FREQ_REG_0_ (519)
+ #shifts=138  time=0:  DFF gate /core/IACK_1/L5_FREQ_REG_0_ (1841)
+ #shifts=139  time=0:  MUX gate /core/IACK_1/L5_FREQ_REG_0_ (1658)
+ #shifts=139  time=0:  BUF gate /core/IACK_1/L3_PRI_REG_3_ (588)
+ #shifts=139  time=0:  DFF gate /core/IACK_1/L3_PRI_REG_3_ (1857)
+ #shifts=140  time=0:  MUX gate /core/IACK_1/L3_PRI_REG_3_ (1532)
+ #shifts=140  time=0:  DFF gate /core/IACK_1/L3_PRI_REG_2_ (1866)
+ #shifts=141  time=0:  MUX gate /core/IACK_1/L3_PRI_REG_2_ (1559)
+ #shifts=141  time=0:  DFF gate /core/IACK_1/L3_PRI_REG_1_ (1832)
+ #shifts=142  time=0:  MUX gate /core/IACK_1/L3_PRI_REG_1_ (1533)
+ #shifts=142  time=0:  DFF gate /core/IACK_1/L3_PRI_REG_0_ (1837)
+ #shifts=143  time=0:  MUX gate /core/IACK_1/L3_PRI_REG_0_ (1558)
+ #shifts=143  time=0:  DFF gate /core/IACK_1/L3_FREQ_REG_11_ (1864)
+ #shifts=144  time=0:  MUX gate /core/IACK_1/L3_FREQ_REG_11_ (1634)
+ #shifts=144  time=0:  DFF gate /core/IACK_1/L3_FREQ_REG_10_ (1873)
+ #shifts=145  time=0:  MUX gate /core/IACK_1/L3_FREQ_REG_10_ (1601)
+ #shifts=145  time=0:  DFF gate /core/IACK_1/L3_FREQ_REG_9_ (1851)
+ #shifts=146  time=0:  MUX gate /core/IACK_1/L3_FREQ_REG_9_ (1630)
+ #shifts=146  time=0:  DFF gate /core/IACK_1/L3_FREQ_REG_8_ (1848)
+ #shifts=147  time=0:  MUX gate /core/IACK_1/L3_FREQ_REG_8_ (1622)
+ #shifts=147  time=0:  DFF gate /core/IACK_1/L3_FREQ_REG_7_ (1833)
+ #shifts=148  time=0:  MUX gate /core/IACK_1/L3_FREQ_REG_7_ (1621)
+ #shifts=148  time=0:  BUF gate /core/IACK_1/L3_FREQ_REG_6_ (954)
+ #shifts=148  time=0:  DFF gate /core/IACK_1/L3_FREQ_REG_6_ (1876)
+ #shifts=149  time=0:  MUX gate /core/IACK_1/L3_FREQ_REG_6_ (1627)
+ #shifts=149  time=0:  DFF gate /core/IACK_1/L3_FREQ_REG_5_ (1843)
+ #shifts=150  time=0:  MUX gate /core/IACK_1/L3_FREQ_REG_5_ (1610)
+ #shifts=150  time=0:  BUF gate /core/IACK_1/L3_FREQ_REG_4_ (568)
+ #shifts=150  time=0:  DFF gate /core/IACK_1/L3_FREQ_REG_4_ (1855)
+ #shifts=151  time=0:  MUX gate /core/IACK_1/L3_FREQ_REG_4_ (1607)
+ #shifts=151  time=0:  BUF gate /core/IACK_1/L3_FREQ_REG_3_ (524)
+ #shifts=151  time=0:  DFF gate /core/IACK_1/L3_FREQ_REG_3_ (1845)
+ #shifts=152  time=0:  MUX gate /core/IACK_1/L3_FREQ_REG_3_ (1613)
+ #shifts=152  time=0:  BUF gate /core/IACK_1/L3_FREQ_REG_2_ (517)
+ #shifts=152  time=0:  DFF gate /core/IACK_1/L3_FREQ_REG_2_ (1839)
+ #shifts=153  time=0:  MUX gate /core/IACK_1/L3_FREQ_REG_2_ (1604)
+ #shifts=153  time=0:  BUF gate /core/IACK_1/L3_FREQ_REG_1_ (505)
+ #shifts=153  time=0:  DFF gate /core/IACK_1/L3_FREQ_REG_1_ (1829)
+ #shifts=154  time=0:  MUX gate /core/IACK_1/L3_FREQ_REG_1_ (1616)
+ #shifts=154  time=0:  BUF gate /core/IACK_1/L3_FREQ_REG_0_ (612)
+ #shifts=154  time=0:  DFF gate /core/IACK_1/L3_FREQ_REG_0_ (1862)
+ #shifts=155  time=0:  MUX gate /core/IACK_1/L3_FREQ_REG_0_ (1631)
+ #shifts=155  time=0:  DFF gate /core/CTL_2/IACK2_REG (1736)
+ #shifts=156  time=0:  MUX gate /core/CTL_2/IACK2_REG (645)
+ #shifts=156  time=0:  DFF gate /core/CTL_2/IACK1_REG (1739)
+ #shifts=157  time=0:  MUX gate /core/CTL_2/IACK1_REG (650)
+ #shifts=157  time=0:  DFF gate /core/CTL_2/DSAK_REG (1743)
+ #shifts=158  time=0:  MUX gate /core/CTL_2/DSAK_REG (685)
+ #shifts=158  time=0:  BUF gate /core/CTL_2/DSAK1_REG (258)
+ #shifts=158  time=0:  DFF gate /core/CTL_2/DSAK1_REG (1740)
+ #shifts=159  time=0:  MUX gate /core/CTL_2/DSAK1_REG (651)
+ #shifts=159  time=0:  DFF gate /core/CTL_2/CTL_STATE_REG_2_ (1737)
+ #shifts=160  time=0:  MUX gate /core/CTL_2/CTL_STATE_REG_2_ (792)
+ #shifts=160  time=0:  DFF gate /core/CTL_2/CTL_STATE_REG_1_ (1741)
+ #shifts=161  time=0:  MUX gate /core/CTL_2/CTL_STATE_REG_1_ (793)
+ #shifts=161  time=0:  DFF gate /core/CTL_2/CTL_STATE_REG_0_ (1738)
+ #shifts=162  time=0:  MUX gate /core/CTL_2/CTL_STATE_REG_0_ (687)
+ #shifts=162  time=0:  DFF gate /core/CTL_2/CTL_ATSEL_N_REG (1742)
+ #shifts=163  time=0:  MUX gate /core/CTL_2/CTL_ATSEL_N_REG (652)
+ #shifts=163  time=0:  DFF gate /core/CTL2/CSREG (1730)
+ #shifts=164  time=0:  MUX gate /core/CTL2/CSREG (1308)
+ #shifts=164  time=0:  DFF gate /core/CTL_1/IACK2_REG (1942)
+ #shifts=165  time=0:  MUX gate /core/CTL_1/IACK2_REG (1463)
+ #shifts=165  time=0:  DFF gate /core/CTL_1/IACK1_REG (1948)
+ #shifts=166  time=0:  MUX gate /core/CTL_1/IACK1_REG (681)
+ #shifts=166  time=0:  DFF gate /core/CTL_1/DSAK_REG (1734)
+ #shifts=167  time=0:  MUX gate /core/CTL_1/DSAK_REG (1664)
+ #shifts=167  time=0:  BUF gate /core/CTL_1/DSAK1_REG (1662)
+ #shifts=167  time=0:  DFF gate /core/CTL_1/DSAK1_REG (1949)
+ #shifts=168  time=0:  MUX gate /core/CTL_1/DSAK1_REG (1057)
+ #shifts=168  time=0:  DFF gate /core/CTL_1/CTL_STATE_REG_2_ (1906)
+ #shifts=169  time=0:  MUX gate /core/CTL_1/CTL_STATE_REG_2_ (1407)
+ #shifts=169  time=0:  DFF gate /core/CTL_1/CTL_STATE_REG_1 (1732)
+ #shifts=170  time=0:  MUX gate /core/CTL_1/CTL_STATE_REG_1 (1408)
+ #shifts=170  time=0:  DFF gate /core/CTL_1/CTL_STATE_REG_0_ (1947)
+ #shifts=171  time=0:  MUX gate /core/CTL_1/CTL_STATE_REG_0_ (1340)
+ #shifts=171  time=0:  DFF gate /core/CTL_1/CTL_ATSEL_N_REG (1733)
+ #shifts=172  time=0:  MUX gate /core/CTL_1/CTL_ATSEL_N_REG (1333)
+ #shifts=172  time=0:  DFF gate /core/CTL_1/CS_REG (1946)
+ #shifts=173  time=0:  MUX gate /core/CTL_1/CS_REG (719)
+ #shifts=173  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_23_ (1753)
+ #shifts=174  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_23_ (796)
+ #shifts=174  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_22_ (1748)
+ #shifts=175  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_22_ (797)
+ #shifts=175  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_21_ (1764)
+ #shifts=176  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_21_ (804)
+ #shifts=176  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_20_ (1760)
+ #shifts=177  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_20_ (802)
+ #shifts=177  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_19_ (1744)
+ #shifts=178  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_19_ (817)
+ #shifts=178  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_18_ (1750)
+ #shifts=179  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_18_ (818)
+ #shifts=179  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_17_ (1766)
+ #shifts=180  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_17_ (795)
+ #shifts=180  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_16_ (1758)
+ #shifts=181  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_16_ (794)
+ #shifts=181  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_15_ (1755)
+ #shifts=182  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_15_ (803)
+ #shifts=182  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_14_ (1747)
+ #shifts=183  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_14_ (806)
+ #shifts=183  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_13_ (1765)
+ #shifts=184  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_13_ (821)
+ #shifts=184  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_12_ (1759)
+ #shifts=185  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_12_ (820)
+ #shifts=185  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_11_ (1752)
+ #shifts=186  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_11_ (799)
+ #shifts=186  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_10_ (1745)
+ #shifts=187  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_10_ (798)
+ #shifts=187  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_9_ (1751)
+ #shifts=188  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_9_ (801)
+ #shifts=188  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_8_ (1767)
+ #shifts=189  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_8_ (807)
+ #shifts=189  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_7_ (1761)
+ #shifts=190  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_7_ (815)
+ #shifts=190  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_6_ (1754)
+ #shifts=191  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_6_ (816)
+ #shifts=191  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_5_ (1729)
+ #shifts=192  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_5_ (1256)
+ #shifts=192  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_4_ (1762)
+ #shifts=193  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_4_ (800)
+ #shifts=193  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_3_ (1757)
+ #shifts=194  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_3_ (1258)
+ #shifts=194  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_2_ (1749)
+ #shifts=195  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_2_ (805)
+ #shifts=195  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_1_ (1756)
+ #shifts=196  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_1_ (1257)
+ #shifts=196  time=0:  DFF gate /core/CONFIG_2/CONFIG_DATA_REG_0_ (1746)
+ #shifts=197  time=0:  MUX gate /core/CONFIG_2/CONFIG_DATA_REG_0_ (819)
+ #shifts=197  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_23_ (1777)
+ #shifts=198  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_23_ (1437)
+ #shifts=198  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_22_ (1773)
+ #shifts=199  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_22_ (1436)
+ #shifts=199  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_21_ (1790)
+ #shifts=200  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_21_ (1452)
+ #shifts=200  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_20_ (1781)
+ #shifts=201  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_20_ (1450)
+ #shifts=201  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_19_ (1763)
+ #shifts=202  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_19_ (1443)
+ #shifts=202  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_18_ (1774)
+ #shifts=203  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_18_ (1444)
+ #shifts=203  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_17_ (1792)
+ #shifts=204  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_17_ (1434)
+ #shifts=204  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_16_ (1785)
+ #shifts=205  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_16_ (1435)
+ #shifts=205  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_15_ (1778)
+ #shifts=206  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_15_ (1451)
+ #shifts=206  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_14_ (1772)
+ #shifts=207  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_14_ (1456)
+ #shifts=207  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_13_ (1784)
+ #shifts=208  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_13_ (1448)
+ #shifts=208  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_12_ (1783)
+ #shifts=209  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_12_ (1447)
+ #shifts=209  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_11_ (1770)
+ #shifts=210  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_11_ (1438)
+ #shifts=210  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_10_ (1769)
+ #shifts=211  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_10_ (1439)
+ #shifts=211  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_9_ (1775)
+ #shifts=212  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_9_ (1455)
+ #shifts=212  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_8_ (1789)
+ #shifts=213  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_8_ (1449)
+ #shifts=213  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_7_ (1786)
+ #shifts=214  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_7_ (1441)
+ #shifts=214  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_6_ (1779)
+ #shifts=215  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_6_ (1442)
+ #shifts=215  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_5_ (1768)
+ #shifts=216  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_5_ (1433)
+ #shifts=216  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_4_ (1787)
+ #shifts=217  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_4_ (1440)
+ #shifts=217  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_3_ (1782)
+ #shifts=218  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_3_ (1454)
+ #shifts=218  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_2_ (1776)
+ #shifts=219  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_2_ (1453)
+ #shifts=219  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_1_ (1780)
+ #shifts=220  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_1_ (1445)
+ #shifts=220  time=0:  DFF gate /core/CONFIG_1/CONFIG_DATA_REG_0_ (1771)
+ #shifts=221  time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_0_ (1446)
+ #shifts=221  time=0:  BUF gate /u5364 (193)
+ #shifts=221  time=0:  PI gate /TDI (32)
+ check_forcesci_time=0:  MUX gate /core/CONFIG_1/CONFIG_DATA_REG_0_ (1446)
+ check_forcesci_time=0:  BUF gate /u5364 (193)
+ Chain c0 successfully traced with 222 scan_cells.
+ Scan chain operation checking completed, CPU time=1.67 sec.
+ ------------------------------------------------------------------------------
+ Begin clock rules checking...
+ Warning: Rule C17 (clock connected to PO) was violated 36 times.
+ Warning: Rule C19 (clock connected to non-contention-free BUS) was violated 32 times.
+ Warning: Rule C26 (clock as data different from capture clock for stable cell) was violated 52 times.
+ Clock rules checking completed, CPU time=0.02 sec.
+ ------------------------------------------------------------------------------
+ Begin nonscan rules checking...
+ Nonscan cell summary: #DFF=0  #DLAT=0  tla_usage_type=none
+ Nonscan rules checking completed, CPU time=0.01 sec.
+ ------------------------------------------------------------------------------
+ Begin DRC dependent learning...
+ Fast-sequential depth results: control=0(0), observe=0(0), detect=0(0), CPU time=0.01 sec
+ DRC dependent learning completed, CPU time=0.05 sec.
+ ------------------------------------------------------------------------------
+ Begin contention prevention rules checking...
+ 36 scan cells are connected to bidirectional BUS gates.
+ Warning: Rule Z9 (bidi bus driver enable affected by scan cell) was violated 16 times.
+ Contention prevention checking completed, CPU time=0.01 sec.
+ ------------------------------------------------------------------------------
+ DRC Summary Report
+ ------------------------------------------------------------------------------
+ Warning: Rule V11 (repeated entry) was violated 80 times.
+ Warning: Rule C17 (clock connected to PO) was violated 36 times.
+ Warning: Rule C19 (clock connected to non-contention-free BUS) was violated 32 times.
+ Warning: Rule C26 (clock as data different from capture clock for stable cell) was violated 52 times.
+ Warning: Rule Z9 (bidi bus driver enable affected by scan cell) was violated 16 times.
+ There were 216 violations that occurred during DRC process.
+ Design rules checking was successful, total CPU time=1.92 sec.
+ ------------------------------------------------------------------------------
+analyze violation Z9-1
+ Warning: Enable of bidi bus driver /u2303 (394) connected to scan cell gate (1743). (Z9-1)
+ The gate_report data is now set to "constrain_value".
+set atpg -capture 0 -merge off
+remove faults -all
+add faults -all
+ 9424 faults were added to fault list.
+report clocks
+ clock_name        off  usage
+ ----------------  ---  --------------------------
+ /CLK               0   master shift 
+ /RST1              0   PO master reset 
+ /RST2              0   PO master reset 
+ /RST3              0   PO master reset 
+ /RST4              0   PO master reset 
+set drc -clock /CLK
+run atpg
+ ATPG performed for stuck fault model using internal pattern source.
+ ----------------------------------------------------------
+ #patterns     #faults     #ATPG faults  test      process
+ stored     detect/active  red/au/abort  coverage  CPU time
+ ---------  -------------  ------------  --------  --------
+ Begin deterministic ATPG: #uncollapsed_faults=7657, abort_limit=10...
+ 32           5999   1651         0/5/0    82.50%      0.11
+ 63            636    998        0/15/0    89.13%      0.17
+ 94            229    743        0/28/0    91.57%      0.24
+ 124           156    526        0/55/0    93.23%      0.30
+ 153           111    264       0/135/0    94.41%      0.39
+ 184            90    155       0/142/0    95.36%      0.46
+ 215            50     87       0/151/0    95.90%      0.52
+ 245            51     33       0/154/0    96.44%      0.58
+ 250            10      0       0/169/0    96.54%      0.60
+ 
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT       9081
+ Possibly detected                PT          0
+ Undetectable                     UD         18
+ ATPG untestable                  AU        325
+ Not detected                     ND          0
+ -----------------------------------------------
+ total faults                              9424
+ test coverage                            96.54%
+ -----------------------------------------------
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                         250
+     #basic_scan patterns                   250
+ -----------------------------------------------
+report clocks
+ clock_name        off  usage
+ ----------------  ---  --------------------------
+ /CLK               0   master shift 
+ /RST1              0   PO master reset 
+ /RST2              0   PO master reset 
+ /RST3              0   PO master reset 
+ /RST4              0   PO master reset 
+set drc -clock -any
+run atpg
+ Error: There are no active faults in the fault list. (M114)
+ 
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT       9081
+ Possibly detected                PT          0
+ Undetectable                     UD         18
+ ATPG untestable                  AU        325
+ Not detected                     ND          0
+ -----------------------------------------------
+ total faults                              9424
+ test coverage                            96.54%
+ -----------------------------------------------
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                         250
+     #basic_scan patterns                   250
+ -----------------------------------------------
+remove faults -all
+ Warning: Internal pattern set is now deleted. (M133)
+add faults -all
+ 9424 faults were added to fault list.
+run atpg
+ ATPG performed for stuck fault model using internal pattern source.
+ ----------------------------------------------------------
+ #patterns     #faults     #ATPG faults  test      process
+ stored     detect/active  red/au/abort  coverage  CPU time
+ ---------  -------------  ------------  --------  --------
+ Begin deterministic ATPG: #uncollapsed_faults=7657, abort_limit=10...
+ 31           6010   1646         0/1/0    82.53%      0.11
+ 63            523   1106         0/8/0    88.06%      0.17
+ 93            296    798        0/14/0    91.20%      0.23
+ 122           179    578        0/28/0    93.10%      0.31
+ 152           112    410        0/54/3    94.29%      0.39
+ 182            83    219      0/108/10    95.17%      0.52
+ 212            78    128      0/115/11    96.00%      0.58
+ 240            51     61      0/125/12    96.54%      0.65
+ 254            33     20      0/128/14    96.90%      0.69
+ 
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT       9114
+ Possibly detected                PT          0
+ Undetectable                     UD         18
+ ATPG untestable                  AU        272
+ Not detected                     ND         20
+ -----------------------------------------------
+ total faults                              9424
+ test coverage                            96.90%
+ -----------------------------------------------
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                         254
+     #basic_scan patterns                   254
+ -----------------------------------------------

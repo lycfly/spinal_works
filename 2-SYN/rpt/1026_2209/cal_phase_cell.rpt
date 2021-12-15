@@ -1,0 +1,105 @@
+ 
+****************************************
+Report : cell
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Oct 26 22:11:04 2021
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U1                        inv1a1          ssc_core_slow   5.020000  
+U2                        clk1a3          ssc_core_slow   10.040000 
+U3                        clk1a3          ssc_core_slow   10.040000 
+U4                        clk1a3          ssc_core_slow   10.040000 
+U5                        inv1a9          ssc_core_slow   15.050000 
+U6                        inv1a9          ssc_core_slow   15.050000 
+U7                        clk1a3          ssc_core_slow   10.040000 
+U8                        clk1a3          ssc_core_slow   10.040000 
+U9                        clk1a3          ssc_core_slow   10.040000 
+U10                       clk1a3          ssc_core_slow   10.040000 
+U11                       clk1a3          ssc_core_slow   10.040000 
+U12                       clk1a3          ssc_core_slow   10.040000 
+U13                       clk1a3          ssc_core_slow   10.040000 
+U14                       clk1a3          ssc_core_slow   10.040000 
+U15                       clk1a3          ssc_core_slow   10.040000 
+U16                       clk1a3          ssc_core_slow   10.040000 
+U17                       clk1a3          ssc_core_slow   10.040000 
+U18                       clk1a3          ssc_core_slow   10.040000 
+U19                       clk1a3          ssc_core_slow   10.040000 
+U20                       clk1a3          ssc_core_slow   10.040000 
+U21                       clk1a3          ssc_core_slow   10.040000 
+U22                       clk1a3          ssc_core_slow   10.040000 
+U23                       clk1a3          ssc_core_slow   10.040000 
+U24                       clk1a3          ssc_core_slow   10.040000 
+U25                       clk1a3          ssc_core_slow   10.040000 
+U26                       clk1a3          ssc_core_slow   10.040000 
+U27                       clk1a3          ssc_core_slow   10.040000 
+U28                       clk1a3          ssc_core_slow   10.040000 
+U29                       clk1a3          ssc_core_slow   10.040000 
+U30                       clk1a3          ssc_core_slow   10.040000 
+U31                       clk1a3          ssc_core_slow   10.040000 
+U32                       clk1a3          ssc_core_slow   10.040000 
+U33                       clk1a3          ssc_core_slow   10.040000 
+U34                       clk1a3          ssc_core_slow   10.040000 
+U35                       clk1a3          ssc_core_slow   10.040000 
+U36                       clk1a3          ssc_core_slow   10.040000 
+U37                       clk1a3          ssc_core_slow   10.040000 
+U38                       clk1a3          ssc_core_slow   10.040000 
+U39                       clk1a3          ssc_core_slow   10.040000 
+U40                       clk1a3          ssc_core_slow   10.040000 
+U41                       clk1a3          ssc_core_slow   10.040000 
+U42                       clk1a3          ssc_core_slow   10.040000 
+U43                       clk1a3          ssc_core_slow   10.040000 
+U44                       clk1a3          ssc_core_slow   10.040000 
+U45                       clk1a3          ssc_core_slow   10.040000 
+U46                       clk1a3          ssc_core_slow   10.040000 
+U47                       clk1a3          ssc_core_slow   10.040000 
+U48                       clk1a3          ssc_core_slow   10.040000 
+U49                       clk1a3          ssc_core_slow   10.040000 
+U50                       clk1a3          ssc_core_slow   10.040000 
+U51                       clk1a3          ssc_core_slow   10.040000 
+U52                       clk1a3          ssc_core_slow   10.040000 
+U53                       inv1a3          ssc_core_slow   7.530000  
+U54                       inv1a3          ssc_core_slow   7.530000  
+U57                       inv1a3          ssc_core_slow   7.530000  
+U58                       inv1a3          ssc_core_slow   7.530000  
+U59                       inv1a1          ssc_core_slow   5.020000  
+U60                       inv1a3          ssc_core_slow   7.530000  
+U61                       inv1a1          ssc_core_slow   5.020000  
+U62                       inv1a3          ssc_core_slow   7.530000  
+U63                       inv1a3          ssc_core_slow   7.530000  
+U64                       inv1a3          ssc_core_slow   7.530000  
+U65                       inv1a3          ssc_core_slow   7.530000  
+U66                       inv1a3          ssc_core_slow   7.530000  
+U67                       inv1a3          ssc_core_slow   7.530000  
+U68                       inv1a3          ssc_core_slow   7.530000  
+U69                       inv1a3          ssc_core_slow   7.530000  
+U70                       inv1a3          ssc_core_slow   7.530000  
+U71                       inv1a3          ssc_core_slow   7.530000  
+U72                       inv1a3          ssc_core_slow   7.530000  
+U73                       inv1a3          ssc_core_slow   7.530000  
+U74                       inv1a3          ssc_core_slow   7.530000  
+U75                       inv1a3          ssc_core_slow   7.530000  
+U76                       inv1a3          ssc_core_slow   7.530000  
+U77                       inv1a3          ssc_core_slow   7.530000  
+U78                       inv1a3          ssc_core_slow   7.530000  
+U79                       inv1a3          ssc_core_slow   7.530000  
+U80                       inv1a3          ssc_core_slow   7.530000  
+U81                       clk1b6          ssc_core_slow   10.040000 
+calvn                     cal_vn                          11696.730031
+                                                                    h, n
+cordic                    cordic_int                      11816.750026
+                                                                    h, n
+dot                       dotVn                           14170.780044
+                                                                    h, n
+--------------------------------------------------------------------------------
+Total 82 cells                                            38412.140104
+1

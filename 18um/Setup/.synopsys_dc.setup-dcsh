@@ -1,0 +1,78 @@
+/* DFTC SETUP FILE
+ * Mode: dcsh
+ * File: .synopsys_dc.setup-dcsh
+ * Path: <DFTW>/Setup
+ * Date: 12 Mar'01
+ */
+
+/* HDL LIBRARY */
+   define_design_lib HDL_LIB  -path ../HDL_Bin
+
+/* DESIGNWARE */
+   synthetic_library = dw_foundation.sldb
+
+/* TSMC LIBRARY PATH */
+   TSMC = "../Technology/TSMC/"
+   CORE = TSMC + "core/synopsys/db/nopower"
+   PADS = TSMC +   "io/synopsys/db/power"
+
+/* SEARCH PATH */
+   search_path = search_path + {CORE  PADS}
+
+/* TECHNOLOGY FILES */
+   target_library = { core_slow.db \
+                        io_slow.db \
+   }
+   link_library   = { "*"          \
+                      core_slow.db \
+                        io_slow.db \
+                dw_foundation.sldb \
+   }
+   symbol_library = core.sdb
+
+/* SYNTHETIC CACHE */
+   cache_write = ~
+   cache_read  = cache_write
+
+/* WORKSHOP DEFAULTS **********************************/
+
+/* COMMAND WINDOW */
+   view_command_win = true
+   view_command_win_max_lines = 3000
+
+/* DEFAULT MESSAGES */
+   view_select_default_message = \
+   "Left: SELECT   \
+     Mid: EXTEND   \
+   Right: MENU"
+
+/* LAYERS
+ * Instance Name [green]:
+ */
+   set_layer  cell_name_layer  visible TRUE
+   set_layer  cell_name_layer  red       0
+   set_layer  cell_name_layer  green 65535
+   set_layer  cell_name_layer  blue   6554
+
+/* LOG FILES */
+   command_log_file      = ".dc_script.log"
+   view_command_log_file = ".transcript.log"
+   view_log_file         = ""
+
+/* SCHEMATIC OPTIONS */
+   designer = "DFTW Course"
+   company  = "TSMC 0.18um"
+
+   default_schematic_options = "-no_bus    \
+                                -dont_left \
+                                -sort_outputs"
+
+   alias csh  "create_schematic -hierarchy \
+                                -schematic \
+                                -dont_left \
+                                -no_bus"
+   view_script_submenu_items = {           \
+                  "Shotgun Schematics" csh \
+   }
+
+/******************************************************/

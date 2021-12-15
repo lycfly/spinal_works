@@ -1,0 +1,52 @@
+/************************************************/
+/* SINE-WAVE GENERATOR                          */
+/* Logic synthesis dc_shell script.             */
+/*                                              */
+/* File: TASK_03.dc                             */
+/* Path: <DFTW>/Lab_01                          */
+/*                                              */
+/************************************************/
+
+/* TIME STAMP */
+   sh date
+
+/* HDL CODE
+ * Set FORMAT to "verilog" or "vhdl" as desired,
+ * by editing the following variable assignment:
+ */
+   FORMAT = "verilog"
+
+   if (FORMAT == "verilog") {
+     analyze  -f verilog  -lib HDL_LIB  SINE_GEN.v
+     analyze  -f verilog  -lib HDL_LIB   ROM_8x4.v
+   }
+   if (FORMAT == "vhdl") {
+     analyze  -f vhdl   -lib HDL_LIB  SINE_GEN.vhd
+     analyze  -f vhdl   -lib HDL_LIB   ROM_8x4.vhd
+   }
+   elaborate  -lib HDL_LIB  SINE_GEN
+
+/* CONSTRAIN DESIGN */
+   current_design SINE_GEN
+   set_max_area  800
+   create_clock  -p 1.5  CLOCK
+
+/* TEST-READY COMPILE:
+ * Specify the style of scan flip-flops.
+ * Compile logic, using scan flip-flops.
+ */
+   set_scan_configuration  -style multiplexed_flip_flop
+   compile -scan
+
+/* UNGROUP DESIGNWARE:
+ * Collapse five-bit DesignWare incrementer.
+ * Its design name is:  SINE_GEN_DW01_inc_5.
+ * Find its instance and ungroup into gates.
+ */
+   ungroup -simple find(cell COUNT*)
+
+/* REPORT AREA, TIMING */
+   report_reference -nosplit
+   report_timing    -sig 3
+
+/************************************************/

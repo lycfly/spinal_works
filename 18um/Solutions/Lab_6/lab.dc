@@ -1,0 +1,27 @@
+remove_design -designs
+
+read INIT.db
+
+current_design INIT
+
+check_test
+set_test_hold 0 CONF_ENABLE
+check_test
+write_test_protocol -out no_scan.tpf
+sh cp ../Solutions/Lab_7a/no_scan.tpf .
+read_init_protocol no_scan.tpf
+
+trace_nets find(net, TEST_MODE)
+check_test
+
+insert_scan
+check_test
+
+write_test_protocol -out scan.tpf
+sh cp ../Solutions/Lab_7a/scan.tpf .
+read_init_protocol scan.tpf
+
+check_test
+create_test_patterns
+report_test -scan_path
+report_test -faults -class untested

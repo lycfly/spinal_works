@@ -1,0 +1,734 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 18, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+set TOP_MODULE cal_phase
+cal_phase
+#set TOP_MODULE  tst
+set compile_enable_register_merging    true
+true
+set compile_seqmap_propagate_constants true
+true
+set verilogout_no_tri   "true"
+true
+set verilogout_equation "false"
+false
+set mv_default_level_shifter_voltage_range_infinity true
+true
+# subset file enable 
+#set SUBSET_FLAG 0      
+set SETUP_FILE "./scripts/dc_setup.tcl"
+./scripts/dc_setup.tcl
+#set SETUP_FILE "./scripts/dc_setup_subset.tcl"
+set FILE_LIST "./flist.v"
+./flist.v
+set CONSTRAINT "./scripts/constraint_core.tcl"
+./scripts/constraint_core.tcl
+set SUBSET_FILE "./scripts/set_target_library_subset.tcl"
+./scripts/set_target_library_subset.tcl
+source -e -v $SETUP_FILE
+define_design_lib work -path ./elab
+1
+history keep 500
+500
+set enable_page_mode false
+false
+set sh_enable_page_mode false
+false
+set compile_seqmap_identify_shift_registers false
+false
+set compile_seqmap_identify_shift_registers_with_synchronous_logic false
+false
+set timing_enable_multiple_clocks_per_reg true
+true
+set lib_path "/root/lib"
+/root/lib
+set search_path       ". $lib_path"
+. /root/lib
+################   ssg0p81v      ################
+set target_library   "tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db                          "    
+tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db                          
+################   sram ssg0p81v ################
+set synthetic_library "dw_foundation.sldb"
+dw_foundation.sldb
+set link_library      " * 	           	       $target_library 	         	       $synthetic_library  "
+ * 	           	       tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db                           	         	       dw_foundation.sldb  
+ * 	           	       tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db                           	         	       dw_foundation.sldb  
+file copy -force $SETUP_FILE  ./outputs/$data
+#set_level_shifter_cell  LVLLH  -cell_type LH -std_cell_main_rail_pg_pin VDDI
+# set_level_shifter_cell  LVLLH -cell_type LH -output_signal_level VDD  -input_signal_level VDDI -std_cell_main_rail_pg_pin VDDI
+set change_names_dont_change_bus_members      true
+true
+set compile_disable_hierarchical_inverter_opt true
+true
+set auto_insert_level_shifters_on_clocks      all
+all
+set auto_insert_level_shifters true
+true
+analyze -format verilog $FILE_LIST  -define DC_SYN
+Running PRESTO HDLC
+Compiling source file ./flist.v
+Opening include file /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v
+Presto compilation completed successfully.
+Loading db file '/root/lib/tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db'
+Information: Using CCS timing libraries. (TIM-024)
+Loading db file '/usr/synopsys/dc-L-2016.03-SP1/libraries/syn/dw_foundation.sldb'
+1
+elaborate       $TOP_MODULE
+Loading db file '/usr/synopsys/dc-L-2016.03-SP1/libraries/syn/gtech.db'
+Loading db file '/usr/synopsys/dc-L-2016.03-SP1/libraries/syn/standard.sldb'
+  Loading link library 'tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'cal_phase'.
+Information: Building the design 'cal_vn'. (HDL-193)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:567: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:568: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:569: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:570: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:571: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:572: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:573: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:582: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:583: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:584: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:585: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:586: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:587: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:588: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:589: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine cal_vn line 615 in file
+		'/mnt/mydata/spinal_works/cardiff-b0/cal_phase.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     VnReg_4_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     VnReg_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     VnReg_5_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     VnReg_7_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   in_vld_dly1_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   in_vld_dly2_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    SumXinReg_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     VnReg_0_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     VnReg_1_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     VnReg_2_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     VnReg_3_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'dotVn'. (HDL-193)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:377: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:378: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 314 in file
+	'/mnt/mydata/spinal_works/cardiff-b0/cal_phase.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           315            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine dotVn line 353 in file
+		'/mnt/mydata/spinal_works/cardiff-b0/cal_phase.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     mac_en_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     mac_cnt_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      psum2_reg      | Flip-flop |  19   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      psum1_reg      | Flip-flop |  19   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine dotVn line 384 in file
+		'/mnt/mydata/spinal_works/cardiff-b0/cal_phase.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     finish_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'cordic_int'. (HDL-193)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:188: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:189: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:190: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:241: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:242: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:243: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:245: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:246: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:247: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine cordic_int line 193 in file
+		'/mnt/mydata/spinal_works/cardiff-b0/cal_phase.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       xn_reg        | Flip-flop |  22   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     cal_en_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       yn_reg        | Flip-flop |  22   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   nozero_flg_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     finish_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     res_rg_reg      | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     cal_cnt_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'FloorAndWrap'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 's_table'. (HDL-193)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:741: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:744: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:749: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:753: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:759: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:808: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:809: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/cal_phase.v:813: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 821 in file
+	'/mnt/mydata/spinal_works/cardiff-b0/cal_phase.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           822            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 850 in file
+	'/mnt/mydata/spinal_works/cardiff-b0/cal_phase.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           851            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'FloorAndWrap_8'. (HDL-193)
+Presto compilation completed successfully.
+1
+current_design  $TOP_MODULE
+Current design is 'cal_phase'.
+{cal_phase}
+link
+
+  Linking design 'cal_phase'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (7 designs)               /mnt/mydata/spinal_works/2-SYN/cal_phase.db, etc
+  tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs (library) /root/lib/tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db
+  dw_foundation.sldb (library) /usr/synopsys/dc-L-2016.03-SP1/libraries/syn/dw_foundation.sldb
+
+1
+###
+source -e -v $CONSTRAINT
+set     CLK_SOURCE_LATENCY  		1
+1
+set     CLK_SOURCE_LATENCY  		1
+1
+set     CLK_NETWORK_LATENCY 		1
+1
+set     OUT_LOAD                        0.05
+0.05
+set     MAX_FANOUT                      20
+20
+set     MAX_CAP                         0.4
+0.4
+set     MAX_TRAN                        2.0
+2.0
+set     PERIOD                          10
+10
+set ALL_IN_EX_CLK [remove_from_collection [all_inputs] [get_ports clk]]
+{en vin_vld v_in_0[7] v_in_0[6] v_in_0[5] v_in_0[4] v_in_0[3] v_in_0[2] v_in_0[1] v_in_0[0] v_in_1[7] v_in_1[6] v_in_1[5] v_in_1[4] v_in_1[3] v_in_1[2] v_in_1[1] v_in_1[0] v_in_2[7] v_in_2[6] v_in_2[5] v_in_2[4] v_in_2[3] v_in_2[2] v_in_2[1] v_in_2[0] v_in_3[7] v_in_3[6] v_in_3[5] v_in_3[4] v_in_3[3] v_in_3[2] v_in_3[1] v_in_3[0] v_in_4[7] v_in_4[6] v_in_4[5] v_in_4[4] v_in_4[3] v_in_4[2] v_in_4[1] v_in_4[0] v_in_5[7] v_in_5[6] v_in_5[5] v_in_5[4] v_in_5[3] v_in_5[2] v_in_5[1] v_in_5[0] v_in_6[7] v_in_6[6] v_in_6[5] v_in_6[4] v_in_6[3] v_in_6[2] v_in_6[1] v_in_6[0] v_in_7[7] v_in_7[6] v_in_7[5] v_in_7[4] v_in_7[3] v_in_7[2] v_in_7[1] v_in_7[0] resetn}
+set ALL_EX_OUT          [remove_from_collection [current_design] [all_outputs]]
+Current design is 'cal_phase'.
+{cal_phase}
+set ALL_EX_OUT_IN       [remove_from_collection $ALL_EX_OUT [all_inputs]]
+{cal_phase}
+# -----------------------------------------------------------------------
+#                           Design constraints
+# -----------------------------------------------------------------------
+create_clock [get_ports clk] -name clk -period $PERIOD -waveform [list 0 [expr $PERIOD * 0.5]]   
+1
+set_clock_uncertainty  -setup 1       [get_clocks clk]
+1
+set_clock_uncertainty  -hold 1       [get_clocks clk]
+1
+#set_clock_uncertainty  1    [get_clocks clk]
+set_clock_transition   1     [get_clocks clk]
+1
+set_clock_latency     -source 	$CLK_SOURCE_LATENCY 	[get_clocks clk]
+1
+set_clock_latency            	$CLK_NETWORK_LATENCY 	[get_clocks clk]
+1
+set_input_delay   [expr $PERIOD * 0.4]    -clock   clk     $ALL_IN_EX_CLK  -add_delay
+1
+set_output_delay  [expr $PERIOD * 0.6]    -clock   clk     [all_outputs] -add_delay
+1
+set_input_transition   1.0   $ALL_IN_EX_CLK
+1
+#set_drive 0 [all_inputs]
+#set_ideal_network [get_ports rst_n]
+# -----------------------------------------------------------------------
+#                           Environmental constraints
+# -----------------------------------------------------------------------
+set_load $OUT_LOAD [all_outputs]
+1
+# -----------------------------------------------------------------------
+#                                DRC rule
+# -----------------------------------------------------------------------
+set_max_transition      $MAX_TRAN               $ALL_EX_OUT_IN 
+1
+set_max_fanout          $MAX_FANOUT             $ALL_EX_OUT_IN
+1
+set_max_capacitance     $MAX_CAP                $ALL_EX_OUT_IN
+1
+1
+file copy -force $CONSTRAINT  ./outputs/$data
+######### subset multi vt ############
+#source -e -v $SUBSET_FILE
+report_clock
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Changed wire load model for 'cordic_int' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'FloorAndWrap_8' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'FloorAndWrap_8' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 's_table' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'dotVn' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'FloorAndWrap' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'FloorAndWrap' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'FloorAndWrap' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'FloorAndWrap' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'FloorAndWrap' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'FloorAndWrap' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'FloorAndWrap' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'FloorAndWrap' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'cal_vn' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'astr' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Changed wire load model for 'astr' from '(none)' to 'ZeroWireload'. (OPT-170)
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : clocks
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Oct 26 20:44:11 2021
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clk             10.00   {0 5}                         {clk}
+--------------------------------------------------------------------------------
+1
+check_design > ./rpt/check_deisgn.rpt
+check_timing  > ./rpt/check_timing.rpt
+set_clock_gating_style                      -setup 0.3                      -hold 0                      -pos integrated                      -neg integrated                      -max_fanout 32                      -control_point before                      -control_signal scan_enable
+Warning: The setup and hold values overrides the library values for the integrated cells. (PWR-206)
+
+Current clock gating style....
+Sequential cell: latch
+Minimum bank bitwidth: 3
+Minimum bank bitwidth for enhanced clock gating: 6
+Maximum fanout: 32
+Setup time for clock gate: 0.300000
+Hold time for clock gate: 0.000000
+Clock gating circuitry (positive edge): integrated
+Clock gating circuitry (negative edge): integrated
+ Note: inverter between clock gating circuitry 
+       and (negative edge) register clock pin.
+Control point insertion: before
+Control signal for control point: scan_enable
+Observation point insertion: false
+Observation logic depth: 5
+1
+#source -e -v ./scripts/set_dont_touch_cell.tcl
+#source -e -v ./scripts/set_false_path.tcl
+source -e -v ./scripts/set_dont_use.tcl
+set_dont_use  [get_lib_cells "                         */CKLHQD1BWP*                          */CKLHQD2BWP*                          */*CKLHQD*                           */CKLHQD*  			*/*4D*                             */TIEH*                           */TIEL* 			*/G* 			*/*D0* 			*/BHD* 			*/BOUNDARY* 			*/TAPCELL* 			*/DCAP* 			*/FILL* 			*/ANTENNA* 			*/DCCK* 			"    
+]
+1
+1
+check_timing
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1
+###set_max_area 0
+group_path -name INPUT_GROUP -from [all_inputs ]
+1
+group_path -name OUTPUT_GROUP -to  [all_outputs]
+1
+#
+#source -e -v ./scripts/operation_conditions.tcl
+#connect_supply_net VDD_top_net -ports {U_OCT_MEM_TOP_0/U_MASK_BANKS_0/*/sram/VDDCE}
+set upf_create_implicit_supply_sets false
+false
+#load_upf ./scripts/OCT_UPF_20210118.upf
+#set_voltage -object_list {VDD_core_net} 0.5
+#set_voltage -object_list {VDD_top_net} 0.72
+#set_voltage -object_list VSS_top_net 0
+set_fix_multiple_port_nets -all -buffer_constants
+1
+set_fix_multiple_port_nets -all -buffer_constants [all_designs]
+1
+compile_ultra -no_autoungroup  -no_boundary_optimization  -gate_clock
+Warning: The value of variable 'compile_preserve_subdesign_interfaces' has been changed to true because '-no_boundary_optimization' is used. (OPT-133)
+Information: Starting from 2013.12 release, constant propagation is enabled even when boundary optimization is disabled. (OPT-1318)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | L-2016.03-DWBB_201603.1 |     *     |
+| Licensed DW Building Blocks        | L-2016.03-DWBB_201603.1 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 36 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 8 instances of design 'FloorAndWrap'. (OPT-1056)
+Information: Uniquified 2 instances of design 'FloorAndWrap_8'. (OPT-1056)
+  Simplifying Design 'cal_phase'
+
+Loaded alib file './alib-52/tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'cordic_int'
+Information: Added key list 'DesignWare' to design 'cordic_int'. (DDB-72)
+Information: The register 'finish_reg' is a constant and will be removed. (OPT-1206)
+ Implement Synthetic for 'cordic_int'.
+  Processing 'cal_vn'
+ Implement Synthetic for 'cal_vn'.
+  Processing 'dotVn'
+Information: Added key list 'DesignWare' to design 'dotVn'. (DDB-72)
+ Implement Synthetic for 'dotVn'.
+  Processing 's_table'
+ Implement Synthetic for 's_table'.
+Information: Added key list 'DesignWare' to design 's_table'. (DDB-72)
+  Processing 'cal_phase'
+  Processing 'SNPS_CLOCK_GATE_HIGH_cordic_int_0'
+  Mapping integrated clock gating circuitry
+  Processing 'SNPS_CLOCK_GATE_HIGH_dotVn_0'
+  Mapping integrated clock gating circuitry
+  Processing 'SNPS_CLOCK_GATE_HIGH_cal_vn_0'
+  Mapping integrated clock gating circuitry
+  Processing 'FloorAndWrap_8_0'
+  Processing 'FloorAndWrap_0'
+Memory usage for J1 task 1329 Mbytes -- main task 1329 Mbytes.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Skipping clock gating on design cal_phase, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design FloorAndWrap_7, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cal_vn_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cal_vn_DP_OP_31J1_133_2606_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cal_vn_DW01_sub_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cal_vn_DW01_sub_J1_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cal_vn_DW01_sub_J1_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cal_vn_DW01_sub_J1_3, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cal_vn_DW01_sub_J1_4, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cal_vn_DW01_sub_J1_5, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cal_vn_DW01_sub_J1_6, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cal_vn_DW01_sub_J1_7, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design s_table, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design FloorAndWrap_8_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_dotVn_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design dotVn_DP_OP_15J1_135_9881_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design dotVn_DP_OP_14J1_134_9881_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cordic_int_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cordic_int_RSOP_67, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cordic_int_RSOP_68, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cordic_int_RSOP_69, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design s_table_DP_OP_34J1_137_8448_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design s_table_DP_OP_33J1_136_2187_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cordic_int_DP_OP_37J1_122_9418_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cordic_int_DP_OP_64J1_125_7659_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cordic_int_DP_OP_76J1_129_9700_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cordic_int_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cordic_int_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cordic_int_3, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_dotVn_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cal_vn_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cal_vn_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design FloorAndWrap_8_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design FloorAndWrap_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design FloorAndWrap_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design FloorAndWrap_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design FloorAndWrap_3, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design FloorAndWrap_4, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design FloorAndWrap_5, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design FloorAndWrap_6, since there are no registers. (PWR-806)
+Information: Performing clock-gating on design cal_vn. (PWR-730)
+Information: Performing clock-gating on design dotVn. (PWR-730)
+Information: Performing clock-gating on design cordic_int. (PWR-730)
+Memory usage for J2 task 1329 Mbytes -- main task 1329 Mbytes.
+Memory usage for J3 task 1329 Mbytes -- main task 1329 Mbytes.
+Memory usage for J4 task 1329 Mbytes -- main task 1329 Mbytes.
+Information: The register 'dot/psum1_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'dot/psum2_reg[0]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'cal_vn'. (DDB-72)
+  Mapping Optimization (Phase 1)
+Information: The register 'cordic/res_rg_reg[0]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:13    1261.3      0.00       0.0      43.5                           37621.1641
+    0:00:13    1261.3      0.00       0.0      43.5                           37621.1641
+    0:00:13    1261.3      0.00       0.0      43.5                           37621.1641
+    0:00:13    1261.3      0.00       0.0      43.5                           37621.1641
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:14    1226.8      0.00       0.0      43.5                           34889.0430
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_fanout)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:14    1111.9      0.00       0.0      43.5                           25677.0879
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+    0:00:14    1137.1      0.00       0.0      37.5                           26317.3672
+    0:00:14    1137.1      0.00       0.0      37.5                           26317.3672
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:14    1137.1      0.00       0.0      37.5                           26317.3672
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.0      0.00       0.0      37.5                           25707.6562
+    0:00:15    1113.6      0.00       0.0      37.5                           25731.2871
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:15    1113.6      0.00       0.0      37.5                           25731.2871
+    0:00:15    1315.7      0.00       0.0      37.5                           35101.3516
+    0:00:15    1315.7      0.00       0.0      37.5                           35101.3516
+    0:00:15    1315.7      0.00       0.0      37.5                           35101.3516
+    0:00:16    1157.4      0.00       0.0      37.5                           27142.1230
+    0:00:16    1172.6      0.00       0.0      37.5                           27459.4688
+    0:00:16    1172.6      0.00       0.0      37.5                           27459.4688
+    0:00:16    1172.6      0.00       0.0      37.5                           27459.4688
+    0:00:16    1172.6      0.00       0.0      37.5                           27459.4688
+    0:00:17    1137.0      0.00       0.0      37.5                           26326.9531
+Loading db file '/root/lib/tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#compile_ultra -timing_high_effort_script -no_autoungroup  -no_boundary_optimization
+##compile_ultra -timing_high_effort_script -no_autoungroup  -no_boundary_optimization -incremental
+set verilogout_no_tri   "true"
+true
+set verilogout_equation "false"
+false
+#define_name_rules  myrule -type net -allowed "0-9" -first_restricted "_ 0-9 N" -replacement_char "0-9" -prefix "n"
+#change_names -rules myrule -verbose
+change_names -hier -rules verilog
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+1
+write_sdc                                ./outputs/$data/${TOP_MODULE}.sdc
+1
+write -format ddc     -hierarchy -output ./outputs/$data/${TOP_MODULE}.ddc
+Writing ddc file './outputs/1026_2043/cal_phase.ddc'.
+1
+write -format verilog -hierarchy -output ./outputs/$data/${TOP_MODULE}.v
+Writing verilog file '/mnt/mydata/spinal_works/2-SYN/outputs/1026_2043/cal_phase.v'.
+1
+write_link_library -out                               ./outputs/$data/link_library.txt
+1
+save_upf                                               ./outputs/$data/${TOP_MODULE}.upf
+1
+report_power_domain [get_power_domains * -hierarchical] > ./rpt/$data/${TOP_MODULE}_final_power_domain.rpt
+Warning: Can't find power_domains matching '*' in design 'cal_phase'. (UID-95)
+Error: Errors detected during redirect
+	Use error_info for more info. (CMD-013)
+report_supply_net [get_supply_nets *]                     > ./rpt/$data/${TOP_MODULE}_final_supple_net.rpt
+Warning: Can't find supply_nets matching '*' in design 'cal_phase'. (UID-95)
+Error: Errors detected during redirect
+	Use error_info for more info. (CMD-013)
+report_level_shifter -domain [get_power_domains * -hierarchical] > ./rpt/$data/${TOP_MODULE}_final_level_shifter.rpt
+Warning: Can't find power_domains matching '*' in design 'cal_phase'. (UID-95)
+#report_pst                                                   > ./rpt/$data/${TOP_MODULE}_final_pst.rpt
+#############################################################################333333333
+report_constraint -all_vio > ./rpt/$data/constrant.rpt
+report_area   -hier        > ./rpt/$data/area.rpt
+report_constraint  -all_violators                         > ./rpt/$data/${TOP_MODULE}_constraint_all_violators.rpt
+check_timing                                              > ./rpt/$data/${TOP_MODULE}_check_timing_final.rpt
+report_timing_requirements                                > ./rpt/$data/${TOP_MODULE}_report_timing_requirements.rpt
+report_timing -transition_time -nets -attributes -nosplit > ./rpt/$data/${TOP_MODULE}_mapped_timing.rpt
+report_area -physical -nosplit -hierarchy                 > ./rpt/$data/${TOP_MODULE}_mapped_area.rpt
+report_power                                              > ./rpt/$data/${TOP_MODULE}_power.rpt
+report_cell                                               > ./rpt/$data/${TOP_MODULE}_cell.rpt
+#report_timing  -delay max -max_paths 50                   > ./rpt/$data/${TOP_MODULE}_timing_max_path.rpt
+report_timing  -delay max -path_type full_clock_expanded -sort_by slack -max_paths 50 -nosplit                   > ./rpt/$data/${TOP_MODULE}_timing_max_path.rpt
+report_timing  -delay min -path_type full_clock_expanded -sort_by slack -max_paths 50 -nosplit                   > ./rpt/$data/${TOP_MODULE}_timing_min_path.rpt
+report_reference                                          > ./rpt/$data/${TOP_MODULE}_ref.rpt
+report_power -hierarchy -levels 3                         > ./rpt/$data/${TOP_MODULE}_hie_power.rpt
+report_power -verbose                                     > ./rpt/$data/${TOP_MODULE}_total_power.rpt
+report_clock_gating -gated -verbose                       > ./rpt/$data/${TOP_MODULE}_clock_gating_gated.rpt
+report_clock_gating -ungated -verbose                     > ./rpt/$data/${TOP_MODULE}_clock_gating_ungated.rpt
+dc_shell> ls[K[K

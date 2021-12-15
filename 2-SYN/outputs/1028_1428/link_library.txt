@@ -1,0 +1,12 @@
+########################################################################
+
+# Created by write_link_library -target ptsh on Thu Oct 28 14:34:13 2021
+
+########################################################################
+
+# Recommended setting of $link_path:
+
+set link_path { * core_slow.db gtech.db }
+
+
+set link_path_per_instance [list ]

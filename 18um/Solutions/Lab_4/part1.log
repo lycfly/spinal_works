@@ -1,0 +1,565 @@
+remove_design -designs
+1
+
+read LATCH.db
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/LATCH.db'
+Current design is now '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/LATCH.db:LATCH'
+{"LATCH"}
+
+check_test
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/Lib/workshop_lib.db'
+Loading db file '/remote/release/1998.02/libraries/syn/gtech.db'
+Loading db file '/remote/release/1998.02/libraries/syn/standard.sldb'
+  Loading target library 'workshop_lib'
+Warning: Multibit library cell 'LD1X4P' will not be used in multibit optimization. (OPT-918)
+Warning: Multibit library cell 'LD1X4' will not be used in multibit optimization. (OPT-918)
+  Loading design 'LATCH'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+Warning: No scan equivalent exists for cell CL_reg_2 (LD1). (TEST-120)
+Information: There are 7 other cells with the same violation. (TEST-171)
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port CLK3 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port CLK2 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port CLK1 (45.0,55.0). (TEST-260)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port CLK1...
+  ...simulating capture clock rising edge at port CLK2...
+  ...simulating capture clock rising edge at port CLK3...
+  ...simulating capture clock falling edge at port CLK1...
+  ...simulating capture clock falling edge at port CLK2...
+  ...simulating capture clock falling edge at port CLK3...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : CLK1, CLK2. (TEST-262)
+Information: Inferred capture clock group : CLK3. (TEST-262)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 8
+**************************************************
+
+MODELING VIOLATIONS
+      8 Cell has no scan equivalent violations (TEST-120)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  8 out of 25 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+   *   8 cells are black boxes
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  17 cells are valid scan cells
+
+1
+create_test_patterns
+  Loading design 'LATCH'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Building test generation network
+Information: Faults on unused cell outputs are not considered, e.g. pin QN of cell DR_reg_2 (FD1). (TEST-200)
+Warning: Design has no scan path.  Generated vectors will not be saved. (UIT-8)
+
+  Combinational Test Pattern Generation starts:
+
+    Start random pattern generation...
+
+       44.31% faults processed ; cumulative fault coverage =  44.31%
+
+    ...End random pattern generation
+
+    Start deterministic pattern generation...
+
+
+    ...End deterministic pattern generation
+
+
+                                Non-collapsed     Collapsed
+    No. of detected faults      178               109
+    No. of abandoned faults     0                 0
+    No. of tied faults          0                 0
+    No. of redundant faults     0                 0
+    No. of untested faults      204               137
+    Total no. of faults         382               246
+    Fault coverage              46.60             44.31
+
+    No. of test patterns         12
+
+    Test Generation Time (CPU)  1.00 sec
+
+    Start compaction...
+
+    ...End compaction
+
+    No. of compacted patterns    8
+
+    Compaction Time (CPU)       0.00 sec
+...Writing test program LATCH (without vectors) to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_5/LATCH.vdb
+1
+report_test -faults -class untested
+ 
+****************************************
+Report : test
+          -faults (untested)
+Design : LATCH
+Version: 1998.02
+Date   : Sat Aug 29 18:30:16 1998
+****************************************
+
+Test program : `LATCH' 
+Depends on   : 
+
+Faults:
+
+ s-a-0 : stuck at 0 fault
+ s-a-1 : stuck at 1 fault
+
+  LATCH:
+    Untested:
+      ABCL_reg_0/D pin s-a-0 & s-a-1
+      ABCL_reg_0/G pin s-a-0 & s-a-1
+      ABCL_reg_0/Q pin s-a-0 & s-a-1
+      ABCL_reg_0/QN pin s-a-0 & s-a-1
+      ABCL_reg_1/D pin s-a-0 & s-a-1
+      ABCL_reg_1/G pin s-a-0 & s-a-1
+      ABCL_reg_1/Q pin s-a-0 & s-a-1
+      ABCL_reg_2/D pin s-a-0 & s-a-1
+      ABCL_reg_2/G pin s-a-0 & s-a-1
+      ABCL_reg_2/Q pin s-a-0 & s-a-1
+      ABCL_reg_3/D pin s-a-0 & s-a-1
+      ABCL_reg_3/G pin s-a-0 & s-a-1
+      ABCL_reg_3/QN pin s-a-0 & s-a-1
+      ABR_reg_0/Q pin s-a-0 & s-a-1
+      ABR_reg_1/Q pin s-a-0 & s-a-1
+      ABR_reg_2/Q pin s-a-0 & s-a-1
+      ABR_reg_3/Q pin s-a-0 & s-a-1
+      CL_reg_0/D pin s-a-0 & s-a-1
+      CL_reg_0/G pin s-a-0 & s-a-1
+      CL_reg_0/Q pin s-a-0 & s-a-1
+      CL_reg_1/D pin s-a-0 & s-a-1
+      CL_reg_1/G pin s-a-0 & s-a-1
+      CL_reg_1/Q pin s-a-0 & s-a-1
+      CL_reg_2/D pin s-a-0 & s-a-1
+      CL_reg_2/G pin s-a-0 & s-a-1
+      CL_reg_2/Q pin s-a-0 & s-a-1
+      CL_reg_3/D pin s-a-0 & s-a-1
+      CL_reg_3/G pin s-a-0 & s-a-1
+      CL_reg_3/QN pin s-a-0 & s-a-1
+      DR_reg_0/D pin s-a-0 & s-a-1
+      DR_reg_0/CP pin s-a-0 & s-a-1
+      DR_reg_1/D pin s-a-0 & s-a-1
+      DR_reg_1/CP pin s-a-0 & s-a-1
+      DR_reg_2/D pin s-a-0 & s-a-1
+      DR_reg_2/CP pin s-a-0 & s-a-1
+      DR_reg_3/D pin s-a-0 & s-a-1
+      DR_reg_3/CP pin s-a-0 & s-a-1
+      ENR_reg/Q pin s-a-0 & s-a-1
+      U29/A pin s-a-0 & s-a-1
+      U29/B pin s-a-0 & s-a-1
+      U29/C pin s-a-0 & s-a-1
+      U29/Z pin s-a-0 & s-a-1
+      U32/A pin s-a-0 & s-a-1
+      U32/B pin s-a-0 & s-a-1
+      U32/Z pin s-a-0 & s-a-1
+      U33/A pin s-a-0 & s-a-1
+      U33/B pin s-a-0 & s-a-1
+      U33/Z pin s-a-0 & s-a-1
+      U34/A pin s-a-0 & s-a-1
+      U34/B pin s-a-0 & s-a-1
+      U34/C pin s-a-0 & s-a-1
+      U34/Z pin s-a-0 & s-a-1
+      U36/A pin s-a-0 & s-a-1
+      U36/B pin s-a-0 & s-a-1
+      U36/Z pin s-a-0 & s-a-1
+      U37/A pin s-a-0 & s-a-1
+      U37/B pin s-a-0 & s-a-1
+      U37/C pin s-a-0 & s-a-1
+      U37/D pin s-a-0 & s-a-1
+      U37/Z pin s-a-0 & s-a-1
+      U39/A pin s-a-0 & s-a-1
+      U39/B pin s-a-0 & s-a-1
+      U39/Z pin s-a-0 & s-a-1
+      U40/A pin s-a-0 & s-a-1
+      U40/B pin s-a-0 & s-a-1
+      U40/Z pin s-a-0 & s-a-1
+      U42/A pin s-a-0 & s-a-1
+      U42/B pin s-a-0 & s-a-1
+      U42/Z pin s-a-0 & s-a-1
+      U45/A pin s-a-0 & s-a-1
+      U45/B pin s-a-0 & s-a-1
+      U45/Z pin s-a-0 & s-a-1
+      U46/A pin s-a-0 & s-a-1
+      U46/B pin s-a-0 & s-a-1
+      U46/Z pin s-a-0 & s-a-1
+      U49/A pin s-a-0 & s-a-1
+      U49/B pin s-a-0 & s-a-1
+      U49/Z pin s-a-0 & s-a-1
+      U50/A pin s-a-0 & s-a-1
+      U50/B pin s-a-0 & s-a-1
+      U50/Z pin s-a-0 & s-a-1
+      U52/A pin s-a-0 & s-a-1
+      U52/B pin s-a-0 & s-a-1
+      U52/Z pin s-a-0 & s-a-1
+      U53/A pin s-a-0 & s-a-1
+      U53/B pin s-a-0 & s-a-1
+      U53/C pin s-a-0 & s-a-1
+      U53/D pin s-a-0 & s-a-1
+      U53/Z pin s-a-0 & s-a-1
+      U55/A pin s-a-0 & s-a-1
+      U55/B pin s-a-0 & s-a-1
+      U55/Z pin s-a-0 & s-a-1
+      U56/A pin s-a-0 & s-a-1
+      U56/Z pin s-a-0 & s-a-1
+      U57/A pin s-a-0 & s-a-1
+      U57/Z pin s-a-0 & s-a-1
+      CLK3 port s-a-0 & s-a-1
+      C[0] port s-a-0 & s-a-1
+      C[1] port s-a-0 & s-a-1
+      C[2] port s-a-0 & s-a-1
+      C[3] port s-a-0 & s-a-1
+      LOAD_C port s-a-0 & s-a-1
+
+1
+
+set_scan_transparent true LD1 -existing
+Performing set_scan_transparent on reference 'LD1'. 
+1
+check_test
+  Loading design 'LATCH'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+Information: Latch cell CL_reg_2 (LD1) assumed non-scan and transparent for testing. (TEST-204)
+Information: There are 7 other cells with the same violation. (TEST-171)
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port CLK3 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port CLK2 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port CLK1 (45.0,55.0). (TEST-260)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port CLK1...
+  ...simulating capture clock rising edge at port CLK2...
+  ...simulating capture clock rising edge at port CLK3...
+  ...simulating capture clock falling edge at port CLK1...
+  ...simulating capture clock falling edge at port CLK2...
+  ...simulating capture clock falling edge at port CLK3...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : CLK1, CLK2. (TEST-262)
+Information: Inferred capture clock group : CLK3. (TEST-262)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 0
+**************************************************
+
+
+
+**************************************************
+  Sequential Cell Summary
+
+  0 out of 25 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  17 cells are valid scan cells
+   *   8 cells are transparent_latches
+
+1
+create_test_patterns
+  Loading design 'LATCH'
+  Using test design rule information from previous check_test run
+  Building test generation network
+Information: Faults on unused cell outputs are not considered, e.g. pin QN of cell DR_reg_2 (FD1). (TEST-200)
+Warning: Design has no scan path.  Generated vectors will not be saved. (UIT-8)
+
+  Combinational Test Pattern Generation starts:
+
+    Start random pattern generation...
+
+       90.65% faults processed ; cumulative fault coverage =  90.65%
+       91.87% faults processed ; cumulative fault coverage =  91.87%
+
+    ...End random pattern generation
+
+    Start deterministic pattern generation...
+
+
+    ...End deterministic pattern generation
+
+
+                                Non-collapsed     Collapsed
+    No. of detected faults      362               226
+    No. of abandoned faults     0                 0
+    No. of tied faults          0                 0
+    No. of redundant faults     0                 0
+    No. of untested faults      20                20
+    Total no. of faults         382               246
+    Fault coverage              94.76             91.87
+
+    No. of test patterns         21
+
+    Test Generation Time (CPU)  0.00 sec
+
+    Start compaction...
+
+    ...End compaction
+
+    No. of compacted patterns    16
+
+    Compaction Time (CPU)       0.00 sec
+...Writing test program LATCH (without vectors) to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_5/LATCH.vdb
+1
+report_test -faults -class untested
+ 
+****************************************
+Report : test
+          -faults (untested)
+Design : LATCH
+Version: 1998.02
+Date   : Sat Aug 29 18:30:17 1998
+****************************************
+
+Test program : `LATCH' 
+Depends on   : 
+
+Faults:
+
+ s-a-0 : stuck at 0 fault
+ s-a-1 : stuck at 1 fault
+
+  LATCH:
+    Untested:
+      ABCL_reg_0/G pin s-a-0 & s-a-1
+      ABCL_reg_1/G pin s-a-0 & s-a-1
+      ABCL_reg_2/G pin s-a-0 & s-a-1
+      ABCL_reg_3/G pin s-a-0 & s-a-1
+      CL_reg_0/G pin s-a-0 & s-a-1
+      CL_reg_1/G pin s-a-0 & s-a-1
+      CL_reg_2/G pin s-a-0 & s-a-1
+      CL_reg_3/G pin s-a-0 & s-a-1
+      ENR_reg/Q pin s-a-0 & s-a-1
+      LOAD_C port s-a-0 & s-a-1
+
+1
+
+preview_scan -show all
+  Loading design 'LATCH'
+  Using test design rule information from previous check_test run
+  Architecting Scan Chains
+
+****************************************
+Preview scan report
+For    : 'Insert_scan' command
+Design : LATCH
+Version: 1998.02
+Date   : Sat Aug 29 18:30:18 1998
+****************************************
+
+Number of chains: 3
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: no_mix
+
+  (l) shows cell scan-out drives a lockup latch
+  (s) shows cell is a scan segment
+  (t) shows cell has a true scan attribute
+  (w) shows cell scan-out drives a wire
+
+
+Scan chain '1' (test_si1 --> DR[3]) contains 4 cells:
+
+  DR_reg_0                      (CLK3, 45.0, rising)
+  DR_reg_1                      
+  DR_reg_2                      
+  DR_reg_3                      
+
+  Scan signals:
+    test_scan_out: DR[3] (no hookup pin)
+
+
+Scan chain '2' (test_si2 --> test_so2) contains 12 cells:
+
+  ABR_reg_0                     (CLK1, 45.0, rising)
+  ABR_reg_1                     
+  ABR_reg_2                     
+  ABR_reg_3                     
+  AR_reg_0                      
+  AR_reg_1                      
+  AR_reg_2                      
+  AR_reg_3                      
+  BR_reg_0                      
+  BR_reg_1                      
+  BR_reg_2                      
+  BR_reg_3                      
+
+  No scan signals
+
+
+Scan chain '3' (test_si3 --> test_so3) contains 1 cell:
+
+  ENR_reg                       (CLK2, 45.0, rising)
+
+  No scan signals
+
+
+****************************************
+
+No segments
+
+
+****************************************
+
+No cells have scan true
+
+8 cells have scan false:
+
+  CL_reg_2
+  ABCL_reg_3
+  CL_reg_3
+  ABCL_reg_2
+  CL_reg_1
+  ABCL_reg_0
+  CL_reg_0
+  ABCL_reg_1
+
+
+1
+insert_scan
+  Loading design 'LATCH'
+  Using test design rule information from previous check_test run
+  Architecting Scan Chains
+  Inserting Scan Cells
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+  Transferring design 'LATCH' to database 'LATCH.db'
+
+Warning: Deleting current test program 'LATCH' because it is not consistent with the current design. (TPM-40)
+1
+check_test
+  Loading design 'LATCH'
+
+Information: Starting test design rule checking for existing scan design. (TEST-220)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+Information: Latch cell CL_reg_2 (LD1) assumed non-scan and transparent for testing. (TEST-204)
+Information: There are 7 other cells with the same violation. (TEST-171)
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port CLK3 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port CLK2 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port CLK1 (45.0,55.0). (TEST-260)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...17 bits scanned-in to 17 cells (total scan-in 17)...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port CLK1...
+  ...simulating capture clock rising edge at port CLK2...
+  ...simulating capture clock rising edge at port CLK3...
+  ...simulating capture clock falling edge at port CLK1...
+  ...simulating capture clock falling edge at port CLK2...
+  ...simulating capture clock falling edge at port CLK3...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : CLK1, CLK2. (TEST-262)
+Information: Inferred capture clock group : CLK3. (TEST-262)
+  ...simulating parallel vector...
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...data scanned-out from 14 cells (total scan-out 17)...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 0
+**************************************************
+
+
+
+**************************************************
+  Sequential Cell Summary
+
+  0 out of 25 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  17 cells are valid scan cells
+   *   8 cells are transparent_latches
+
+1
+create_test_patterns
+  Loading design 'LATCH'
+  Using test design rule information from previous check_test run
+  Building test generation network
+Information: Faults on unused cell outputs are not considered, e.g. pin QN of cell CL_reg_2 (LD1). (TEST-200)
+
+  Combinational Test Pattern Generation starts:
+
+    Start random pattern generation...
+
+       93.33% faults processed ; cumulative fault coverage =  93.33%
+       94.55% faults processed ; cumulative fault coverage =  94.55%
+
+    ...End random pattern generation
+
+    Start deterministic pattern generation...
+
+
+    ...End deterministic pattern generation
+
+
+                                Non-collapsed     Collapsed
+    No. of detected faults      446               312
+    No. of abandoned faults     0                 0
+    No. of tied faults          0                 0
+    No. of redundant faults     0                 0
+    No. of untested faults      18                18
+    Total no. of faults         464               330
+    Fault coverage              96.12             94.55
+
+    No. of test patterns         30
+
+    Test Generation Time (CPU)  0.00 sec
+
+    Start compaction...
+
+    ...End compaction
+
+    No. of compacted patterns    23
+
+    Compaction Time (CPU)       0.00 sec
+...Writing test program LATCH to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_5/LATCH.vdb
+1

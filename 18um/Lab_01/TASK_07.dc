@@ -1,0 +1,60 @@
+/************************************************/
+/* SINE-WAVE GENERATOR                          */
+/* Scan-insertion dc_shell script.              */
+/*                                              */
+/* File: TASK_07.dc                             */
+/* Path: <DFTW>/Lab_01                          */
+/*                                              */
+/************************************************/
+
+/* TIME STAMP */
+   sh date
+
+/* ATE TIMING PARAMETERS
+ * TetraMAX-Optimal
+ */
+   test_default_delay  =   0
+   test_default_strobe =  40
+   test_default_period = 100
+
+   current_design SINE_GEN
+   create_test_clock  -p 100  -w {45 55}  CLOCK
+
+/* INSERT SCAN:
+ * Check scan compliance of flip-flops.
+ * Preview expected scan architecture.
+ * Insert scan path, check, and report.
+ */
+   check_scan
+   preview_scan
+   insert_scan
+   check_scan
+   report_test -scan_path
+
+/* REPORT RESULTS */
+   csh
+   report_reference -nosplit
+   report_timing    -sig 3
+
+/* EXPORT NETLIST FILE 
+ * Write out a Verilog or VHDL netlist.
+ * Include all hierarchical subdesigns.
+ */
+   write  -f verilog  -hier SINE_GEN \
+                      -out  SINE_GEN-net.v
+
+   write  -form vhdl  -hier SINE_GEN \
+                      -out  SINE_GEN-net.vhd
+
+/* EXPORT PROTOCOL FILE 
+ * For simplicity, use Verilog only.
+ * Adopt Verilog naming conventions.
+ * Extract protocol in STIL format.
+ */
+   test_stil_netlist_format = verilog
+
+/* write_test_protocol  -f stil \
+ *            -out SINE_GEN.spf
+ */
+
+/************************************************/

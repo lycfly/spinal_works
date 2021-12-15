@@ -1,0 +1,4 @@
+[debug] [cal_phase-test] Classpath dependencies List()
+[debug] [cal_phase-test] Dependencies from configurations List(cal_phase)
+[debug] Bloop wrote the configuration of project 'cal_phase-test' to '/mnt/mydata/spinal_works/cal_phase/.bloop/cal_phase-test.json'
+[success] Generated .bloop/cal_phase-test.json

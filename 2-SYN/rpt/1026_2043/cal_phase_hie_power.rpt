@@ -1,0 +1,85 @@
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Oct 26 20:44:42 2021
+****************************************
+
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs (File: /root/lib/tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db)
+
+
+Operating Conditions: ssg0p81v125c   Library: tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+cal_phase              ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+cal_vn                 ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+dotVn                  ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+cordic_int             ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_7         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_6         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_5         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_4         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_3         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_2         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_1         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_0         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_cal_vn_0
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_cal_vn_2
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_cal_vn_1
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+s_table                ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_8_1       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_8_0       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_dotVn_0
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_dotVn_1
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_cordic_int_0
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_cordic_int_3
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_cordic_int_2
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_cordic_int_1
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+
+Global Operating Voltage = 0.81 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+cal_phase                              8.24e-03 3.37e-02 2.60e+04 6.79e-02 100.0
+  cordic (cordic_int)                  1.21e-03 5.45e-03 7.90e+03 1.46e-02  21.4
+  dot (dotVn)                          2.36e-03 7.41e-03 8.35e+03 1.81e-02  26.7
+    FloorWrap2 (FloorAndWrap_8_0)      3.07e-05 4.03e-05  190.781 2.62e-04   0.4
+    FloorWrap1 (FloorAndWrap_8_1)      4.73e-05 4.19e-05  190.953 2.80e-04   0.4
+    table_1 (s_table)                  1.38e-03 1.44e-03 4.00e+03 6.82e-03  10.0
+  calvn (cal_vn)                       4.07e-03 1.99e-02 9.08e+03 3.31e-02  48.7
+    FloorWrap_7 (FloorAndWrap_0)       2.14e-05 6.80e-05   85.861 1.75e-04   0.3
+    FloorWrap_6 (FloorAndWrap_1)       2.15e-05 6.83e-05   85.868 1.76e-04   0.3
+    FloorWrap_5 (FloorAndWrap_2)       2.13e-05 6.78e-05   85.698 1.75e-04   0.3
+    FloorWrap_4 (FloorAndWrap_3)       2.13e-05 6.78e-05   85.967 1.75e-04   0.3
+    FloorWrap_3 (FloorAndWrap_4)       2.15e-05 6.82e-05   85.777 1.75e-04   0.3
+    FloorWrap_2 (FloorAndWrap_5)       2.14e-05 6.79e-05   85.895 1.75e-04   0.3
+    FloorWrap_1 (FloorAndWrap_6)       2.12e-05 6.74e-05   85.979 1.75e-04   0.3
+    FloorWrap_0 (FloorAndWrap_7)       2.13e-05 6.76e-05   85.993 1.75e-04   0.3
+1

@@ -1,0 +1,91 @@
+[0m2021.12.04 15:38:13 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works' for client Visual Studio Code 1.61.2.[0m
+[0m2021.12.04 15:38:13 INFO  time: initialize in 0.5s[0m
+[0m2021.12.04 15:38:14 WARN  Build server is not auto-connectable.[0m
+[0m2021.12.04 15:38:14 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 15:38:14 WARN  no build target for: /mnt/mydata/spinal_works/cardiff-b0/src/main/scala/DesignCompiler/DesignCompiler_config.scala[0m
+[0m2021.12.04 15:38:24 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+Dec 04, 2021 3:39:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8
+[0m2021.12.04 15:39:14 INFO  time: code lens generation in 2.85s[0m
+[0m2021.12.04 15:39:14 INFO  time: code lens generation in 2.85s[0m
+[0m2021.12.04 15:39:14 INFO  time: code lens generation in 2.85s[0m
+[0m2021.12.04 15:39:14 INFO  time: code lens generation in 2.87s[0m
+Dec 04, 2021 3:39:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.12.04 15:46:24 WARN  no build target for: /mnt/mydata/spinal_works/cardiff-b0/build.sbt[0m
+[0m2021.12.04 15:53:25 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 15:58:05 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works' for client Visual Studio Code 1.61.2.[0m
+[0m2021.12.04 15:58:05 INFO  time: initialize in 0.43s[0m
+[0m2021.12.04 15:58:06 WARN  Build server is not auto-connectable.[0m
+[0m2021.12.04 15:58:06 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 15:58:17 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 15:58:29 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 15:58:30 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 15:58:30 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+Dec 04, 2021 4:01:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.12.04 16:01:15 INFO  shutting down Metals[0m
+[0m2021.12.04 16:03:59 INFO  Started: Metals version 0.10.9 in workspace '/mnt/mydata/spinal_works' for client Visual Studio Code 1.61.2.[0m
+[0m2021.12.04 16:04:00 INFO  time: initialize in 0.57s[0m
+[0m2021.12.04 16:04:00 WARN  Build server is not auto-connectable.[0m
+[0m2021.12.04 16:04:00 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 16:04:59 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 16:05:02 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 16:05:02 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 16:05:04 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 16:05:10 WARN  no build target for: /mnt/mydata/spinal_works/cardiff-b0/src/main/scala/cal_phase.scala[0m
+Dec 04, 2021 4:05:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10
+[0m2021.12.04 16:05:13 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.12.04 16:05:16 INFO  time: code lens generation in 4.22s[0m
+[0m2021.12.04 16:05:16 INFO  time: code lens generation in 4.18s[0m
+[0m2021.12.04 16:05:45 WARN  no build target for: /mnt/mydata/spinal_works/cardiff-b0/src/main/scala/cal_phase.scala[0m
+[0m2021.12.04 16:05:46 WARN  no build target for: /mnt/mydata/spinal_works/cardiff-b0/src/main/scala/cal_phase.scala[0m
+Dec 04, 2021 4:06:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 75
+[0m2021.12.04 16:06:09 WARN  no build target for: /mnt/mydata/spinal_works/cardiff-b0/build.sbt[0m
+Dec 04, 2021 4:11:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 92
+[0m2021.12.04 16:12:41 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 16:12:54 INFO  compilation cancelled[0m
+[0m2021.12.04 16:12:58 INFO  Attempting to connect to the build server...[0m
+[0m2021.12.04 16:12:58 INFO  No build server found[0m
+[0m2021.12.04 16:12:58 INFO  time: Connected to build server in 13ms[0m
+[0m2021.12.04 16:12:58 INFO  Attempting to connect to the build server...[0m
+[0m2021.12.04 16:12:58 INFO  No build server found[0m
+[0m2021.12.04 16:12:58 INFO  time: Connected to build server in 8ms[0m
+[0m2021.12.04 16:13:00 INFO  Attempting to connect to the build server...[0m
+[0m2021.12.04 16:13:00 INFO  No build server found[0m
+[0m2021.12.04 16:13:00 INFO  time: Connected to build server in 6ms[0m
+[0m2021.12.04 16:13:01 INFO  Attempting to connect to the build server...[0m
+[0m2021.12.04 16:13:01 INFO  No build server found[0m
+[0m2021.12.04 16:13:01 INFO  time: Connected to build server in 7ms[0m
+[0m2021.12.04 16:13:01 INFO  Attempting to connect to the build server...[0m
+[0m2021.12.04 16:13:01 INFO  No build server found[0m
+[0m2021.12.04 16:13:01 INFO  time: Connected to build server in 7ms[0m
+[0m2021.12.04 16:13:02 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 16:13:05 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 16:13:05 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 16:13:09 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 16:13:09 WARN  no build tool detected in workspace '/mnt/mydata/spinal_works'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.04 16:15:21 INFO  [0m
+[0m2021.12.04 16:15:21 INFO  Template applied in /mnt/mydata/spinal_works/cardiff-b0/./cardiff[0m
+[0m2021.12.04 16:15:21 INFO  [0m
+[0m2021.12.04 16:15:21 INFO  time: ran 'giter8.Giter8' in 3.19s[0m
+[0m2021.12.04 16:15:54 ERROR [0m
+[0m2021.12.04 16:15:54 ERROR https://github.com/scala/hello-world.g8.git: Secure connection to https://github.com/scala/hello-world.g8.git could not be established because of SSL problems[0m
+[0m2021.12.04 16:15:54 ERROR [0m
+[0m2021.12.04 16:15:54 INFO  time: ran 'giter8.Giter8' in 14s[0m
+[0m2021.12.04 16:16:24 WARN  no build target for: /mnt/mydata/spinal_works/cardiff-b0/build.sbt[0m
+[0m2021.12.04 16:17:06 WARN  Build server is not auto-connectable.[0m
+[0m2021.12.04 16:17:17 WARN  no build target for: /mnt/mydata/spinal_works/cardiff-b0/build.sbt[0m
+[0m2021.12.04 16:17:21 INFO  compilation cancelled[0m
+[0m2021.12.04 16:17:27 INFO  Attempting to connect to the build server...[0m
+[0m2021.12.04 16:17:27 INFO  No build server found[0m
+[0m2021.12.04 16:17:27 INFO  time: Connected to build server in 7ms[0m
+[0m2021.12.04 16:17:27 WARN  no build target for: /mnt/mydata/spinal_works/cardiff-b0/build.sbt[0m
+[0m2021.12.04 16:19:26 INFO  [0m
+[0m2021.12.04 16:19:26 INFO  Template applied in /mnt/mydata/spinal_works/cardiff-b0/cardiff/./cardiff[0m
+[0m2021.12.04 16:19:26 INFO  [0m
+[0m2021.12.04 16:19:26 INFO  time: ran 'giter8.Giter8' in 4.46s[0m
+[0m2021.12.04 16:19:30 INFO  shutting down Metals[0m

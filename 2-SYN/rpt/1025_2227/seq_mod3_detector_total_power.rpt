@@ -1,0 +1,53 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+        -verbose
+Design : seq_mod3_detector
+Version: L-2016.03-SP1
+Date   : Mon Oct 25 22:30:14 2021
+****************************************
+
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs (File: /root/lib/tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db)
+
+
+Operating Conditions: ssg0p81v125c   Library: tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+seq_mod3_detector      ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+
+Global Operating Voltage = 0.81 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =   1.7850 uW   (79%)
+  Net Switching Power  = 487.0241 nW   (21%)
+                         ---------
+Total Dynamic Power    =   2.2721 uW  (100%)
+
+Cell Leakage Power     = 190.1497 nW
+
+                 Internal         Switching           Leakage            Total                         Cell
+Power Group      Power            Power               Power              Power   (   %    )  Attrs  Count
+---------------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+register       1.7089e-03        4.5005e-04          128.6432        2.2875e-03  (  92.91%)            3
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+combinational  7.6174e-05        3.6977e-05           61.5065        1.7466e-04  (   7.09%)            7
+---------------------------------------------------------------------------------------------------------
+Total          1.7850e-03 mW     4.8702e-04 mW       190.1497 nW     2.4622e-03 mW
+1

@@ -1,0 +1,66 @@
+ 
+****************************************
+Report : area
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Sun Nov 28 21:11:44 2021
+****************************************
+
+Library(s) Used:
+
+    ssc_core_slow (File: /mnt/mydata/spinal_works/18um/Technology/TSMC/core/synopsys/db/nopower/core_slow.db)
+
+Number of ports:                          654
+Number of nets:                          3207
+Number of cells:                         2411
+Number of combinational cells:           2178
+Number of sequential cells:               212
+Number of macros/black boxes:               0
+Number of buf/inv:                        646
+Number of references:                      24
+
+Combinational area:              32520.050093
+Buf/Inv area:                     4848.949997
+Noncombinational area:           11178.330038
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 43698.380131
+Total area:                 undefined
+
+The above information was reported from the logical library. The following are from the physical library:
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ---------------------------------
+cal_phase                         43698.3801    100.0   1626.1100   1527.7200  0.0000  cal_phase
+calvn                             11704.2500     26.8   6834.6900   4146.7200  0.0000  cal_vn
+calvn/FloorWrapVn_0                  80.3200      0.2     80.3200      0.0000  0.0000  FloorAndWrap_7
+calvn/FloorWrapVn_1                  80.3200      0.2     80.3200      0.0000  0.0000  FloorAndWrap_6
+calvn/FloorWrapVn_2                  80.3200      0.2     80.3200      0.0000  0.0000  FloorAndWrap_5
+calvn/FloorWrapVn_3                  80.3200      0.2     80.3200      0.0000  0.0000  FloorAndWrap_4
+calvn/FloorWrapVn_4                  80.3200      0.2     80.3200      0.0000  0.0000  FloorAndWrap_3
+calvn/FloorWrapVn_5                  80.3200      0.2     80.3200      0.0000  0.0000  FloorAndWrap_2
+calvn/FloorWrapVn_6                  80.3200      0.2     80.3200      0.0000  0.0000  FloorAndWrap_1
+calvn/FloorWrapVn_7                  80.3200      0.2     80.3200      0.0000  0.0000  FloorAndWrap_0
+calvn/clk_gate_SumXinReg_reg         40.1400      0.1     12.5400     27.6000  0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_1
+calvn/clk_gate_VnReg_4_reg           40.1400      0.1     12.5400     27.6000  0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_0
+clk_gate_LastA2stZero_reg            40.1400      0.1     12.5400     27.6000  0.0000  SNPS_CLOCK_GATE_HIGH_cal_phase_0
+clk_gate_ph_now_reg                  40.1400      0.1     12.5400     27.6000  0.0000  SNPS_CLOCK_GATE_HIGH_cal_phase_1
+cordic                            13934.3700     31.9  10755.9900   3098.1000  0.0000  cordic_int
+cordic/clk_gate_res_rg_reg           40.1400      0.1     12.5400     27.6000  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_1
+cordic/clk_gate_xn_reg               40.1400      0.1     12.5400     27.6000  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_0
+dot                               14825.6500     33.9   4333.1900   2212.5900  0.0000  dotVn
+dot/FloorWrapPsum1                  160.6400      0.4    160.6400      0.0000  0.0000  FloorAndWrap_8_1
+dot/FloorWrapPsum2                  160.6400      0.4    160.6400      0.0000  0.0000  FloorAndWrap_8_0
+dot/clk_gate_psum2_reg               40.1400      0.1     12.5400     27.6000  0.0000  SNPS_CLOCK_GATE_HIGH_dotVn
+dot/table_1                        7918.4501     18.1   7918.4501      0.0000  0.0000  s_table
+--------------------------------  ----------  -------  ----------  ----------  ------  ---------------------------------
+Total                                                  32520.0501  11178.3300  0.0000
+
+1

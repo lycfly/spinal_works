@@ -1,0 +1,255 @@
+ 
+****************************************
+Report : timing
+        -path full_clock_expanded
+        -delay min
+        -max_paths 50
+        -sort_by slack
+Design : seq_mod3_detector
+Version: L-2016.03-SP1
+Date   : Mon Oct 25 22:30:14 2021
+****************************************
+
+Operating Conditions: ssg0p81v125c   Library: tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: current_state_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: success_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  seq_mod3_detector  ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  current_state_reg_1_/CP (DFCND1BWP7T35P140)             0.00       2.00 r
+  current_state_reg_1_/Q (DFCND1BWP7T35P140)              0.14       2.14 r
+  U15/ZN (AOI221D1BWP7T35P140)                            0.02       2.16 f
+  success_reg/D (DFCNQD1BWP7T35P140)                      0.00       2.16 f
+  data arrival time                                                  2.16
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  success_reg/CP (DFCNQD1BWP7T35P140)                     0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.16
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.92
+
+
+  Startpoint: current_state_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: current_state_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  seq_mod3_detector  ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  current_state_reg_0_/CP (DFCNQD1BWP7T35P140)            0.00       2.00 r
+  current_state_reg_0_/Q (DFCNQD1BWP7T35P140)             0.14       2.14 r
+  U12/ZN (AOI221D1BWP7T35P140)                            0.02       2.16 f
+  current_state_reg_0_/D (DFCNQD1BWP7T35P140)             0.00       2.16 f
+  data arrival time                                                  2.16
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  current_state_reg_0_/CP (DFCNQD1BWP7T35P140)            0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.16
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.91
+
+
+  Startpoint: current_state_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: current_state_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  seq_mod3_detector  ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  current_state_reg_0_/CP (DFCNQD1BWP7T35P140)            0.00       2.00 r
+  current_state_reg_0_/Q (DFCNQD1BWP7T35P140)             0.14       2.14 f
+  U14/Z (AO33D1BWP7T35P140)                               0.03       2.17 f
+  current_state_reg_1_/D (DFCND1BWP7T35P140)              0.00       2.17 f
+  data arrival time                                                  2.17
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  current_state_reg_1_/CP (DFCND1BWP7T35P140)             0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -2.17
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.91
+
+
+  Startpoint: data (input port clocked by clk)
+  Endpoint: success_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  seq_mod3_detector  ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 r
+  data (in)                                0.00       6.00 r
+  U9/ZN (INVD1BWP7T35P140)                 0.00       6.00 f
+  U10/ZN (INVD1BWP7T35P140)                0.05       6.05 r
+  U15/ZN (AOI221D1BWP7T35P140)             0.03       6.07 f
+  success_reg/D (DFCNQD1BWP7T35P140)       0.00       6.07 f
+  data arrival time                                   6.07
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  clock uncertainty                        1.00       3.00
+  success_reg/CP (DFCNQD1BWP7T35P140)      0.00       3.00 r
+  library hold time                        0.07       3.07
+  data required time                                  3.07
+  -----------------------------------------------------------
+  data required time                                  3.07
+  data arrival time                                  -6.07
+  -----------------------------------------------------------
+  slack (MET)                                         3.00
+
+
+  Startpoint: data (input port clocked by clk)
+  Endpoint: current_state_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  seq_mod3_detector  ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 r
+  data (in)                                               0.00       6.00 r
+  U9/ZN (INVD1BWP7T35P140)                                0.00       6.00 f
+  U10/ZN (INVD1BWP7T35P140)                               0.05       6.05 r
+  U12/ZN (AOI221D1BWP7T35P140)                            0.03       6.07 f
+  current_state_reg_0_/D (DFCNQD1BWP7T35P140)             0.00       6.07 f
+  data arrival time                                                  6.07
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  current_state_reg_0_/CP (DFCNQD1BWP7T35P140)            0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -6.07
+  --------------------------------------------------------------------------
+  slack (MET)                                                        3.00
+
+
+  Startpoint: data (input port clocked by clk)
+  Endpoint: current_state_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  seq_mod3_detector  ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 r
+  data (in)                                               0.00       6.00 r
+  U9/ZN (INVD1BWP7T35P140)                                0.00       6.00 f
+  U10/ZN (INVD1BWP7T35P140)                               0.05       6.05 r
+  U11/ZN (INVD1BWP7T35P140)                               0.02       6.07 f
+  U14/Z (AO33D1BWP7T35P140)                               0.03       6.10 f
+  current_state_reg_1_/D (DFCND1BWP7T35P140)              0.00       6.10 f
+  data arrival time                                                  6.10
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  current_state_reg_1_/CP (DFCND1BWP7T35P140)             0.00       3.00 r
+  library hold time                                       0.07       3.07
+  data required time                                                 3.07
+  --------------------------------------------------------------------------
+  data required time                                                 3.07
+  data arrival time                                                 -6.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        3.02
+
+
+  Startpoint: success_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: success (output port clocked by clk)
+  Path Group: OUTPUT_GROUP
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  seq_mod3_detector  ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  success_reg/CP (DFCNQD1BWP7T35P140)      0.00       2.00 r
+  success_reg/Q (DFCNQD1BWP7T35P140)       0.34       2.34 f
+  success (out)                            0.00       2.34 f
+  data arrival time                                   2.34
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  clock uncertainty                        1.00       3.00
+  output external delay                   -6.00      -3.00
+  data required time                                 -3.00
+  -----------------------------------------------------------
+  data required time                                 -3.00
+  data arrival time                                  -2.34
+  -----------------------------------------------------------
+  slack (MET)                                         5.34
+
+
+1

@@ -1,0 +1,68 @@
+ 
+****************************************
+Report : area
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Oct 26 20:44:41 2021
+****************************************
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs (File: /root/lib/tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db)
+
+Number of ports:                          667
+Number of nets:                          2409
+Number of cells:                         1594
+Number of combinational cells:           1385
+Number of sequential cells:               186
+Number of macros/black boxes:               0
+Number of buf/inv:                        488
+Number of references:                       6
+
+Combinational area:                803.599999
+Buf/Inv area:                      108.289998
+Noncombinational area:             333.395998
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  1136.995997
+Total area:                 undefined
+
+The above information was reported from the logical library. The following are from the physical library:
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ---------------------------------
+cal_phase                         1136.9960    100.0   24.7940     0.0000  0.0000  cal_phase
+calvn                              387.3940     34.1  220.7940   143.3740  0.0000  cal_vn
+calvn/FloorWrap_0                    2.3520      0.2    2.3520     0.0000  0.0000  FloorAndWrap_7
+calvn/FloorWrap_1                    2.3520      0.2    2.3520     0.0000  0.0000  FloorAndWrap_6
+calvn/FloorWrap_2                    2.3520      0.2    2.3520     0.0000  0.0000  FloorAndWrap_5
+calvn/FloorWrap_3                    2.3520      0.2    2.3520     0.0000  0.0000  FloorAndWrap_4
+calvn/FloorWrap_4                    2.3520      0.2    2.3520     0.0000  0.0000  FloorAndWrap_3
+calvn/FloorWrap_5                    2.3520      0.2    2.3520     0.0000  0.0000  FloorAndWrap_2
+calvn/FloorWrap_6                    2.3520      0.2    2.3520     0.0000  0.0000  FloorAndWrap_1
+calvn/FloorWrap_7                    2.3520      0.2    2.3520     0.0000  0.0000  FloorAndWrap_0
+calvn/clk_gate_SumXinReg_reg         1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_1
+calvn/clk_gate_VnReg_0_reg           1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_2
+calvn/clk_gate_VnReg_4_reg           1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_0
+cordic                             349.9580     30.8  243.4320   100.6460  0.0000  cordic_int
+cordic/clk_gate_nozero_flg_reg       1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_2
+cordic/clk_gate_res_rg_reg           1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_1
+cordic/clk_gate_xn_reg               1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_0
+cordic/clk_gate_yn_reg               1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_3
+dot                                374.8500     33.0  102.0180    76.1460  0.0000  dotVn
+dot/FloorWrap1                       4.7040      0.4    4.7040     0.0000  0.0000  FloorAndWrap_8_1
+dot/FloorWrap2                       4.7040      0.4    4.7040     0.0000  0.0000  FloorAndWrap_8_0
+dot/clk_gate_mac_cnt_reg             1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_dotVn_0
+dot/clk_gate_psum2_reg               1.4700      0.1    0.0000     1.4700  0.0000  SNPS_CLOCK_GATE_HIGH_dotVn_1
+dot/table_1                        184.3380     16.2  184.3380     0.0000  0.0000  s_table
+--------------------------------  ---------  -------  --------  ---------  ------  ---------------------------------
+Total                                                 803.6000   333.3960  0.0000
+
+1

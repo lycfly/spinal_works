@@ -1,0 +1,2167 @@
+ 
+****************************************
+Report : timing
+        -path full_clock_expanded
+        -delay max
+        -max_paths 50
+        -sort_by slack
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Sun Nov 28 21:28:00 2021
+****************************************
+
+Operating Conditions: ssg0p81v125c   Library: tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: res_last_vld_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: res_vld (output port clocked by clk)
+  Path Group: OUTPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cordic_int_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_2 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cordic_int_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_dotVn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_dotVn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_2 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_phase_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_phase_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  res_last_vld_reg/CP (DFCNQD1BWP7T35P140)                0.00       2.00 r
+  res_last_vld_reg/Q (DFCNQD1BWP7T35P140)                 0.36       2.36 r
+  res_vld (out)                                           0.00       2.36 r
+  data arrival time                                                  2.36
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  output external delay                                  -6.00       5.00
+  data required time                                                 5.00
+  --------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                 -2.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.64
+
+
+  Startpoint: res_last_reg_9_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: res[9] (output port clocked by clk)
+  Path Group: OUTPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cal_phase_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  res_last_reg_9_/CP (DFCNQD1BWP7T35P140)                 0.00       2.00 r
+  res_last_reg_9_/Q (DFCNQD1BWP7T35P140)                  0.36       2.36 r
+  res[9] (out)                                            0.00       2.36 r
+  data arrival time                                                  2.36
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  output external delay                                  -6.00       5.00
+  data required time                                                 5.00
+  --------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                 -2.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.64
+
+
+  Startpoint: res_last_reg_8_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: res[8] (output port clocked by clk)
+  Path Group: OUTPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cal_phase_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  res_last_reg_8_/CP (DFCNQD1BWP7T35P140)                 0.00       2.00 r
+  res_last_reg_8_/Q (DFCNQD1BWP7T35P140)                  0.36       2.36 r
+  res[8] (out)                                            0.00       2.36 r
+  data arrival time                                                  2.36
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  output external delay                                  -6.00       5.00
+  data required time                                                 5.00
+  --------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                 -2.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.64
+
+
+  Startpoint: res_last_reg_7_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: res[7] (output port clocked by clk)
+  Path Group: OUTPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cal_phase_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  res_last_reg_7_/CP (DFCNQD1BWP7T35P140)                 0.00       2.00 r
+  res_last_reg_7_/Q (DFCNQD1BWP7T35P140)                  0.36       2.36 r
+  res[7] (out)                                            0.00       2.36 r
+  data arrival time                                                  2.36
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  output external delay                                  -6.00       5.00
+  data required time                                                 5.00
+  --------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                 -2.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.64
+
+
+  Startpoint: res_last_reg_6_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: res[6] (output port clocked by clk)
+  Path Group: OUTPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cal_phase_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  res_last_reg_6_/CP (DFCNQD1BWP7T35P140)                 0.00       2.00 r
+  res_last_reg_6_/Q (DFCNQD1BWP7T35P140)                  0.36       2.36 r
+  res[6] (out)                                            0.00       2.36 r
+  data arrival time                                                  2.36
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  output external delay                                  -6.00       5.00
+  data required time                                                 5.00
+  --------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                 -2.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.64
+
+
+  Startpoint: res_last_reg_5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: res[5] (output port clocked by clk)
+  Path Group: OUTPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cal_phase_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  res_last_reg_5_/CP (DFCNQD1BWP7T35P140)                 0.00       2.00 r
+  res_last_reg_5_/Q (DFCNQD1BWP7T35P140)                  0.36       2.36 r
+  res[5] (out)                                            0.00       2.36 r
+  data arrival time                                                  2.36
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  output external delay                                  -6.00       5.00
+  data required time                                                 5.00
+  --------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                 -2.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.64
+
+
+  Startpoint: res_last_reg_4_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: res[4] (output port clocked by clk)
+  Path Group: OUTPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cal_phase_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  res_last_reg_4_/CP (DFCNQD1BWP7T35P140)                 0.00       2.00 r
+  res_last_reg_4_/Q (DFCNQD1BWP7T35P140)                  0.36       2.36 r
+  res[4] (out)                                            0.00       2.36 r
+  data arrival time                                                  2.36
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  output external delay                                  -6.00       5.00
+  data required time                                                 5.00
+  --------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                 -2.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.64
+
+
+  Startpoint: res_last_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: res[3] (output port clocked by clk)
+  Path Group: OUTPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cal_phase_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  res_last_reg_3_/CP (DFCNQD1BWP7T35P140)                 0.00       2.00 r
+  res_last_reg_3_/Q (DFCNQD1BWP7T35P140)                  0.36       2.36 r
+  res[3] (out)                                            0.00       2.36 r
+  data arrival time                                                  2.36
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  output external delay                                  -6.00       5.00
+  data required time                                                 5.00
+  --------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                 -2.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.64
+
+
+  Startpoint: res_last_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: res[2] (output port clocked by clk)
+  Path Group: OUTPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cal_phase_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  res_last_reg_2_/CP (DFCNQD1BWP7T35P140)                 0.00       2.00 r
+  res_last_reg_2_/Q (DFCNQD1BWP7T35P140)                  0.36       2.36 r
+  res[2] (out)                                            0.00       2.36 r
+  data arrival time                                                  2.36
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  output external delay                                  -6.00       5.00
+  data required time                                                 5.00
+  --------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                 -2.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.64
+
+
+  Startpoint: res_last_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: res[1] (output port clocked by clk)
+  Path Group: OUTPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cal_phase_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  res_last_reg_1_/CP (DFCNQD1BWP7T35P140)                 0.00       2.00 r
+  res_last_reg_1_/Q (DFCNQD1BWP7T35P140)                  0.36       2.36 r
+  res[1] (out)                                            0.00       2.36 r
+  data arrival time                                                  2.36
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  output external delay                                  -6.00       5.00
+  data required time                                                 5.00
+  --------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                 -2.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.64
+
+
+  Startpoint: res_last_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: res[0] (output port clocked by clk)
+  Path Group: OUTPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_cal_phase_0 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  res_last_reg_0_/CP (DFCNQD1BWP7T35P140)                 0.00       2.00 r
+  res_last_reg_0_/Q (DFCNQD1BWP7T35P140)                  0.36       2.36 r
+  res[0] (out)                                            0.00       2.36 r
+  data arrival time                                                  2.36
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  output external delay                                  -6.00       5.00
+  data required time                                                 5.00
+  --------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                 -2.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.64
+
+
+  Startpoint: v_in_1[2] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_1[2] (in)                                          0.00       6.00 f
+  calvn/v_in_1[2] (cal_vn)                                0.00       6.00 f
+  calvn/U3/ZN (INVD1BWP7T35P140)                          0.19       6.19 r
+  calvn/U132/ZN (NR2D1BWP7T35P140)                        0.04       6.23 f
+  calvn/intadd_11_U5/S (FA1D1BWP7T35P140)                 0.09       6.32 f
+  calvn/intadd_13_U3/S (FA1D1BWP7T35P140)                 0.11       6.43 r
+  calvn/intadd_15_U2/S (FA1D1BWP7T35P140)                 0.09       6.52 f
+  calvn/intadd_0_U8/CO (FA1D1BWP7T35P140)                 0.07       6.58 f
+  calvn/intadd_0_U7/CO (FA1D1BWP7T35P140)                 0.06       6.64 f
+  calvn/intadd_0_U6/CO (FA1D1BWP7T35P140)                 0.06       6.70 f
+  calvn/intadd_0_U5/CO (FA1D1BWP7T35P140)                 0.06       6.75 f
+  calvn/intadd_0_U4/CO (FA1D1BWP7T35P140)                 0.06       6.81 f
+  calvn/intadd_0_U3/CO (FA1D1BWP7T35P140)                 0.06       6.86 f
+  calvn/intadd_0_U2/S (FA1D1BWP7T35P140)                  0.09       6.95 r
+  calvn/SumXinReg_reg_9_/D (DFCNQD1BWP7T35P140)           0.00       6.95 r
+  data arrival time                                                  6.95
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/SumXinReg_reg_9_/CP (DFCNQD1BWP7T35P140)          0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.02
+
+
+  Startpoint: v_in_1[2] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_1[2] (in)                                          0.00       6.00 f
+  calvn/v_in_1[2] (cal_vn)                                0.00       6.00 f
+  calvn/U3/ZN (INVD1BWP7T35P140)                          0.19       6.19 r
+  calvn/U132/ZN (NR2D1BWP7T35P140)                        0.04       6.23 f
+  calvn/intadd_11_U5/S (FA1D1BWP7T35P140)                 0.09       6.32 f
+  calvn/intadd_13_U3/S (FA1D1BWP7T35P140)                 0.11       6.43 r
+  calvn/intadd_15_U2/S (FA1D1BWP7T35P140)                 0.09       6.52 f
+  calvn/intadd_0_U8/CO (FA1D1BWP7T35P140)                 0.07       6.58 f
+  calvn/intadd_0_U7/CO (FA1D1BWP7T35P140)                 0.06       6.64 f
+  calvn/intadd_0_U6/CO (FA1D1BWP7T35P140)                 0.06       6.70 f
+  calvn/intadd_0_U5/CO (FA1D1BWP7T35P140)                 0.06       6.75 f
+  calvn/intadd_0_U4/CO (FA1D1BWP7T35P140)                 0.06       6.81 f
+  calvn/intadd_0_U3/CO (FA1D1BWP7T35P140)                 0.06       6.86 f
+  calvn/intadd_0_U2/CO (FA1D1BWP7T35P140)                 0.05       6.91 f
+  calvn/U125/ZN (INVD1BWP7T35P140)                        0.01       6.92 r
+  calvn/SumXinReg_reg_10_/D (DFCNQD1BWP7T35P140)          0.00       6.92 r
+  data arrival time                                                  6.92
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/SumXinReg_reg_10_/CP (DFCNQD1BWP7T35P140)         0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.05
+
+
+  Startpoint: v_in_1[2] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_1[2] (in)                                          0.00       6.00 f
+  calvn/v_in_1[2] (cal_vn)                                0.00       6.00 f
+  calvn/U3/ZN (INVD1BWP7T35P140)                          0.19       6.19 r
+  calvn/U132/ZN (NR2D1BWP7T35P140)                        0.04       6.23 f
+  calvn/intadd_11_U5/S (FA1D1BWP7T35P140)                 0.09       6.32 f
+  calvn/intadd_13_U3/S (FA1D1BWP7T35P140)                 0.11       6.43 r
+  calvn/intadd_15_U2/S (FA1D1BWP7T35P140)                 0.09       6.52 f
+  calvn/intadd_0_U8/CO (FA1D1BWP7T35P140)                 0.07       6.58 f
+  calvn/intadd_0_U7/CO (FA1D1BWP7T35P140)                 0.06       6.64 f
+  calvn/intadd_0_U6/CO (FA1D1BWP7T35P140)                 0.06       6.70 f
+  calvn/intadd_0_U5/CO (FA1D1BWP7T35P140)                 0.06       6.75 f
+  calvn/intadd_0_U4/CO (FA1D1BWP7T35P140)                 0.06       6.81 f
+  calvn/intadd_0_U3/S (FA1D1BWP7T35P140)                  0.09       6.89 r
+  calvn/SumXinReg_reg_8_/D (DFCNQD1BWP7T35P140)           0.00       6.89 r
+  data arrival time                                                  6.89
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/SumXinReg_reg_8_/CP (DFCNQD1BWP7T35P140)          0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.08
+
+
+  Startpoint: v_in_1[2] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_1[2] (in)                                          0.00       6.00 f
+  calvn/v_in_1[2] (cal_vn)                                0.00       6.00 f
+  calvn/U3/ZN (INVD1BWP7T35P140)                          0.19       6.19 r
+  calvn/U132/ZN (NR2D1BWP7T35P140)                        0.04       6.23 f
+  calvn/intadd_11_U5/S (FA1D1BWP7T35P140)                 0.09       6.32 f
+  calvn/intadd_13_U3/S (FA1D1BWP7T35P140)                 0.11       6.43 r
+  calvn/intadd_15_U2/S (FA1D1BWP7T35P140)                 0.09       6.52 f
+  calvn/intadd_0_U8/CO (FA1D1BWP7T35P140)                 0.07       6.58 f
+  calvn/intadd_0_U7/CO (FA1D1BWP7T35P140)                 0.06       6.64 f
+  calvn/intadd_0_U6/CO (FA1D1BWP7T35P140)                 0.06       6.70 f
+  calvn/intadd_0_U5/CO (FA1D1BWP7T35P140)                 0.06       6.75 f
+  calvn/intadd_0_U4/S (FA1D1BWP7T35P140)                  0.09       6.84 r
+  calvn/SumXinReg_reg_7_/D (DFCNQD1BWP7T35P140)           0.00       6.84 r
+  data arrival time                                                  6.84
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/SumXinReg_reg_7_/CP (DFCNQD1BWP7T35P140)          0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.84
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.13
+
+
+  Startpoint: v_in_1[2] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_1[2] (in)                                          0.00       6.00 f
+  calvn/v_in_1[2] (cal_vn)                                0.00       6.00 f
+  calvn/U3/ZN (INVD1BWP7T35P140)                          0.19       6.19 r
+  calvn/U132/ZN (NR2D1BWP7T35P140)                        0.04       6.23 f
+  calvn/intadd_11_U5/S (FA1D1BWP7T35P140)                 0.09       6.32 f
+  calvn/intadd_13_U3/S (FA1D1BWP7T35P140)                 0.11       6.43 r
+  calvn/intadd_15_U2/S (FA1D1BWP7T35P140)                 0.09       6.52 f
+  calvn/intadd_0_U8/CO (FA1D1BWP7T35P140)                 0.07       6.58 f
+  calvn/intadd_0_U7/CO (FA1D1BWP7T35P140)                 0.06       6.64 f
+  calvn/intadd_0_U6/CO (FA1D1BWP7T35P140)                 0.06       6.70 f
+  calvn/intadd_0_U5/S (FA1D1BWP7T35P140)                  0.09       6.78 r
+  calvn/SumXinReg_reg_6_/D (DFCNQD1BWP7T35P140)           0.00       6.78 r
+  data arrival time                                                  6.78
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/SumXinReg_reg_6_/CP (DFCNQD1BWP7T35P140)          0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.78
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.19
+
+
+  Startpoint: v_in_1[2] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_1[2] (in)                                          0.00       6.00 f
+  calvn/v_in_1[2] (cal_vn)                                0.00       6.00 f
+  calvn/U3/ZN (INVD1BWP7T35P140)                          0.19       6.19 r
+  calvn/U132/ZN (NR2D1BWP7T35P140)                        0.04       6.23 f
+  calvn/intadd_11_U5/S (FA1D1BWP7T35P140)                 0.09       6.32 f
+  calvn/intadd_13_U3/S (FA1D1BWP7T35P140)                 0.11       6.43 r
+  calvn/intadd_15_U2/S (FA1D1BWP7T35P140)                 0.09       6.52 f
+  calvn/intadd_0_U8/CO (FA1D1BWP7T35P140)                 0.07       6.58 f
+  calvn/intadd_0_U7/CO (FA1D1BWP7T35P140)                 0.06       6.64 f
+  calvn/intadd_0_U6/S (FA1D1BWP7T35P140)                  0.09       6.73 r
+  calvn/SumXinReg_reg_5_/D (DFCNQD1BWP7T35P140)           0.00       6.73 r
+  data arrival time                                                  6.73
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/SumXinReg_reg_5_/CP (DFCNQD1BWP7T35P140)          0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.73
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.24
+
+
+  Startpoint: v_in_1[2] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_1[2] (in)                                          0.00       6.00 f
+  calvn/v_in_1[2] (cal_vn)                                0.00       6.00 f
+  calvn/U3/ZN (INVD1BWP7T35P140)                          0.19       6.19 r
+  calvn/U132/ZN (NR2D1BWP7T35P140)                        0.04       6.23 f
+  calvn/intadd_11_U5/S (FA1D1BWP7T35P140)                 0.09       6.32 f
+  calvn/intadd_13_U3/S (FA1D1BWP7T35P140)                 0.11       6.43 r
+  calvn/intadd_15_U2/S (FA1D1BWP7T35P140)                 0.09       6.52 f
+  calvn/intadd_0_U8/CO (FA1D1BWP7T35P140)                 0.07       6.58 f
+  calvn/intadd_0_U7/S (FA1D1BWP7T35P140)                  0.09       6.67 r
+  calvn/SumXinReg_reg_4_/D (DFCNQD1BWP7T35P140)           0.00       6.67 r
+  data arrival time                                                  6.67
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/SumXinReg_reg_4_/CP (DFCNQD1BWP7T35P140)          0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.67
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.30
+
+
+  Startpoint: v_in_1[2] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_1[2] (in)                                          0.00       6.00 f
+  calvn/v_in_1[2] (cal_vn)                                0.00       6.00 f
+  calvn/U3/ZN (INVD1BWP7T35P140)                          0.19       6.19 r
+  calvn/U132/ZN (NR2D1BWP7T35P140)                        0.04       6.23 f
+  calvn/intadd_11_U5/S (FA1D1BWP7T35P140)                 0.09       6.32 f
+  calvn/intadd_13_U3/S (FA1D1BWP7T35P140)                 0.11       6.43 r
+  calvn/intadd_15_U2/S (FA1D1BWP7T35P140)                 0.09       6.52 f
+  calvn/intadd_0_U8/S (FA1D1BWP7T35P140)                  0.10       6.62 r
+  calvn/SumXinReg_reg_3_/D (DFCNQD1BWP7T35P140)           0.00       6.62 r
+  data arrival time                                                  6.62
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/SumXinReg_reg_3_/CP (DFCNQD1BWP7T35P140)          0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.35
+
+
+  Startpoint: v_in_3[1] (input port clocked by clk)
+  Endpoint: calvn/VnReg_3_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_4     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_3[1] (in)                                          0.00       6.00 f
+  calvn/v_in_3[1] (cal_vn)                                0.00       6.00 f
+  calvn/U129/ZN (INVD1BWP7T35P140)                        0.20       6.20 r
+  calvn/intadd_5_U8/CO (FA1D1BWP7T35P140)                 0.07       6.27 r
+  calvn/intadd_5_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_5_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_5_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_5_U4/CO (FA1D1BWP7T35P140)                 0.05       6.46 r
+  calvn/intadd_5_U3/CO (FA1D1BWP7T35P140)                 0.05       6.51 r
+  calvn/intadd_5_U2/S (FA1D1BWP7T35P140)                  0.08       6.59 f
+  calvn/U118/ZN (INVD1BWP7T35P140)                        0.01       6.60 r
+  calvn/FloorWrapVn_3/din[10] (FloorAndWrap_4)            0.00       6.60 r
+  calvn/FloorWrapVn_3/U1/Z (DEL025D1BWP7T35P140)          0.02       6.62 r
+  calvn/FloorWrapVn_3/dout[7] (FloorAndWrap_4)            0.00       6.62 r
+  calvn/VnReg_3_reg_7_/D (DFCNQD1BWP7T35P140)             0.00       6.62 r
+  data arrival time                                                  6.62
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_3_reg_7_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.35
+
+
+  Startpoint: v_in_1[1] (input port clocked by clk)
+  Endpoint: calvn/VnReg_1_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_6     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_1[1] (in)                                          0.00       6.00 f
+  calvn/v_in_1[1] (cal_vn)                                0.00       6.00 f
+  calvn/U4/ZN (INVD1BWP7T35P140)                          0.19       6.19 r
+  calvn/intadd_7_U8/CO (FA1D1BWP7T35P140)                 0.07       6.26 r
+  calvn/intadd_7_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_7_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_7_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_7_U4/CO (FA1D1BWP7T35P140)                 0.05       6.46 r
+  calvn/intadd_7_U3/CO (FA1D1BWP7T35P140)                 0.05       6.51 r
+  calvn/intadd_7_U2/S (FA1D1BWP7T35P140)                  0.08       6.58 f
+  calvn/U112/ZN (INVD1BWP7T35P140)                        0.01       6.60 r
+  calvn/FloorWrapVn_1/din[10] (FloorAndWrap_6)            0.00       6.60 r
+  calvn/FloorWrapVn_1/U8/Z (DEL025D1BWP7T35P140)          0.02       6.62 r
+  calvn/FloorWrapVn_1/dout[7] (FloorAndWrap_6)            0.00       6.62 r
+  calvn/VnReg_1_reg_7_/D (DFCNQD1BWP7T35P140)             0.00       6.62 r
+  data arrival time                                                  6.62
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_1_reg_7_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.35
+
+
+  Startpoint: v_in_7[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_7_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_0     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_7[0] (in)                                          0.00       6.00 f
+  U147/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U148/ZN (INVD1BWP7T35P140)                              0.05       6.17 f
+  calvn/v_in_7[0] (cal_vn)                                0.00       6.17 f
+  calvn/U65/ZN (AOI21D1BWP7T35P140)                       0.04       6.21 r
+  calvn/intadd_1_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_1_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_1_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_1_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_1_U4/CO (FA1D1BWP7T35P140)                 0.05       6.46 r
+  calvn/intadd_1_U3/CO (FA1D1BWP7T35P140)                 0.05       6.51 r
+  calvn/intadd_1_U2/S (FA1D1BWP7T35P140)                  0.08       6.58 f
+  calvn/U61/ZN (INVD1BWP7T35P140)                         0.01       6.60 r
+  calvn/FloorWrapVn_7/din[10] (FloorAndWrap_0)            0.00       6.60 r
+  calvn/FloorWrapVn_7/U8/Z (DEL025D1BWP7T35P140)          0.02       6.62 r
+  calvn/FloorWrapVn_7/dout[7] (FloorAndWrap_0)            0.00       6.62 r
+  calvn/VnReg_7_reg_7_/D (DFCNQD1BWP7T35P140)             0.00       6.62 r
+  data arrival time                                                  6.62
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_7_reg_7_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.35
+
+
+  Startpoint: v_in_2[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_2_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_5     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_2[0] (in)                                          0.00       6.00 f
+  U137/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U138/ZN (INVD1BWP7T35P140)                              0.05       6.17 f
+  calvn/v_in_2[0] (cal_vn)                                0.00       6.17 f
+  calvn/U97/ZN (AOI21D1BWP7T35P140)                       0.04       6.21 r
+  calvn/intadd_6_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_6_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_6_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_6_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_6_U4/CO (FA1D1BWP7T35P140)                 0.05       6.46 r
+  calvn/intadd_6_U3/CO (FA1D1BWP7T35P140)                 0.05       6.51 r
+  calvn/intadd_6_U2/S (FA1D1BWP7T35P140)                  0.08       6.58 f
+  calvn/U96/ZN (INVD1BWP7T35P140)                         0.01       6.60 r
+  calvn/FloorWrapVn_2/din[10] (FloorAndWrap_5)            0.00       6.60 r
+  calvn/FloorWrapVn_2/U1/Z (DEL025D1BWP7T35P140)          0.02       6.62 r
+  calvn/FloorWrapVn_2/dout[7] (FloorAndWrap_5)            0.00       6.62 r
+  calvn/VnReg_2_reg_7_/D (DFCNQD1BWP7T35P140)             0.00       6.62 r
+  data arrival time                                                  6.62
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_2_reg_7_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.35
+
+
+  Startpoint: v_in_4[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_4_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_3     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_4[0] (in)                                          0.00       6.00 f
+  U143/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U144/ZN (INVD1BWP7T35P140)                              0.05       6.17 f
+  calvn/v_in_4[0] (cal_vn)                                0.00       6.17 f
+  calvn/U81/ZN (AOI21D1BWP7T35P140)                       0.04       6.21 r
+  calvn/intadd_4_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_4_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_4_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_4_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_4_U4/CO (FA1D1BWP7T35P140)                 0.05       6.46 r
+  calvn/intadd_4_U3/CO (FA1D1BWP7T35P140)                 0.05       6.50 r
+  calvn/intadd_4_U2/S (FA1D1BWP7T35P140)                  0.08       6.58 f
+  calvn/U80/ZN (INVD1BWP7T35P140)                         0.01       6.59 r
+  calvn/FloorWrapVn_4/din[10] (FloorAndWrap_3)            0.00       6.59 r
+  calvn/FloorWrapVn_4/U1/Z (DEL025D1BWP7T35P140)          0.02       6.61 r
+  calvn/FloorWrapVn_4/dout[7] (FloorAndWrap_3)            0.00       6.61 r
+  calvn/VnReg_4_reg_7_/D (DFCNQD1BWP7T35P140)             0.00       6.61 r
+  data arrival time                                                  6.61
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_4_reg_7_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.61
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.36
+
+
+  Startpoint: v_in_6[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_6_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_1     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_6[0] (in)                                          0.00       6.00 f
+  U141/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U142/ZN (INVD1BWP7T35P140)                              0.05       6.17 f
+  calvn/v_in_6[0] (cal_vn)                                0.00       6.17 f
+  calvn/U89/ZN (AOI21D1BWP7T35P140)                       0.04       6.21 r
+  calvn/intadd_2_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_2_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_2_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_2_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_2_U4/CO (FA1D1BWP7T35P140)                 0.05       6.46 r
+  calvn/intadd_2_U3/CO (FA1D1BWP7T35P140)                 0.05       6.50 r
+  calvn/intadd_2_U2/S (FA1D1BWP7T35P140)                  0.08       6.58 f
+  calvn/U88/ZN (INVD1BWP7T35P140)                         0.01       6.59 r
+  calvn/FloorWrapVn_6/din[10] (FloorAndWrap_1)            0.00       6.59 r
+  calvn/FloorWrapVn_6/U8/Z (DEL025D1BWP7T35P140)          0.02       6.61 r
+  calvn/FloorWrapVn_6/dout[7] (FloorAndWrap_1)            0.00       6.61 r
+  calvn/VnReg_6_reg_7_/D (DFCNQD1BWP7T35P140)             0.00       6.61 r
+  data arrival time                                                  6.61
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_6_reg_7_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.61
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.36
+
+
+  Startpoint: v_in_0[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_0_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_7     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_0[0] (in)                                          0.00       6.00 f
+  U133/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U134/ZN (INVD1BWP7T35P140)                              0.04       6.16 f
+  calvn/v_in_0[0] (cal_vn)                                0.00       6.16 f
+  calvn/U105/ZN (AOI21D1BWP7T35P140)                      0.04       6.20 r
+  calvn/intadd_8_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_8_U7/CO (FA1D1BWP7T35P140)                 0.05       6.30 r
+  calvn/intadd_8_U6/CO (FA1D1BWP7T35P140)                 0.05       6.35 r
+  calvn/intadd_8_U5/CO (FA1D1BWP7T35P140)                 0.05       6.40 r
+  calvn/intadd_8_U4/CO (FA1D1BWP7T35P140)                 0.05       6.45 r
+  calvn/intadd_8_U3/CO (FA1D1BWP7T35P140)                 0.05       6.50 r
+  calvn/intadd_8_U2/S (FA1D1BWP7T35P140)                  0.08       6.57 f
+  calvn/U104/ZN (INVD1BWP7T35P140)                        0.01       6.59 r
+  calvn/FloorWrapVn_0/din[10] (FloorAndWrap_7)            0.00       6.59 r
+  calvn/FloorWrapVn_0/U8/Z (DEL025D1BWP7T35P140)          0.02       6.61 r
+  calvn/FloorWrapVn_0/dout[7] (FloorAndWrap_7)            0.00       6.61 r
+  calvn/VnReg_0_reg_7_/D (DFCNQD1BWP7T35P140)             0.00       6.61 r
+  data arrival time                                                  6.61
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_0_reg_7_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.61
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.36
+
+
+  Startpoint: v_in_5[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_5_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_2     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_5[0] (in)                                          0.00       6.00 f
+  U135/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U136/ZN (INVD1BWP7T35P140)                              0.03       6.15 f
+  calvn/v_in_5[0] (cal_vn)                                0.00       6.15 f
+  calvn/U73/ZN (AOI21D1BWP7T35P140)                       0.04       6.18 r
+  calvn/intadd_3_U8/CO (FA1D1BWP7T35P140)                 0.05       6.24 r
+  calvn/intadd_3_U7/CO (FA1D1BWP7T35P140)                 0.05       6.29 r
+  calvn/intadd_3_U6/CO (FA1D1BWP7T35P140)                 0.05       6.33 r
+  calvn/intadd_3_U5/CO (FA1D1BWP7T35P140)                 0.05       6.38 r
+  calvn/intadd_3_U4/CO (FA1D1BWP7T35P140)                 0.05       6.43 r
+  calvn/intadd_3_U3/CO (FA1D1BWP7T35P140)                 0.05       6.48 r
+  calvn/intadd_3_U2/S (FA1D1BWP7T35P140)                  0.08       6.56 f
+  calvn/U72/ZN (INVD1BWP7T35P140)                         0.01       6.57 r
+  calvn/FloorWrapVn_5/din[10] (FloorAndWrap_2)            0.00       6.57 r
+  calvn/FloorWrapVn_5/U8/Z (DEL025D1BWP7T35P140)          0.02       6.59 r
+  calvn/FloorWrapVn_5/dout[7] (FloorAndWrap_2)            0.00       6.59 r
+  calvn/VnReg_5_reg_7_/D (DFCNQD1BWP7T35P140)             0.00       6.59 r
+  data arrival time                                                  6.59
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_5_reg_7_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.59
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.38
+
+
+  Startpoint: v_in_3[1] (input port clocked by clk)
+  Endpoint: calvn/VnReg_3_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_4     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_3[1] (in)                                          0.00       6.00 f
+  calvn/v_in_3[1] (cal_vn)                                0.00       6.00 f
+  calvn/U129/ZN (INVD1BWP7T35P140)                        0.20       6.20 r
+  calvn/intadd_5_U8/CO (FA1D1BWP7T35P140)                 0.07       6.27 r
+  calvn/intadd_5_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_5_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_5_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_5_U4/CO (FA1D1BWP7T35P140)                 0.05       6.46 r
+  calvn/intadd_5_U3/S (FA1D1BWP7T35P140)                  0.08       6.54 f
+  calvn/U60/ZN (INVD1BWP7T35P140)                         0.01       6.55 r
+  calvn/FloorWrapVn_3/din[9] (FloorAndWrap_4)             0.00       6.55 r
+  calvn/FloorWrapVn_3/U2/Z (DEL025D1BWP7T35P140)          0.02       6.57 r
+  calvn/FloorWrapVn_3/dout[6] (FloorAndWrap_4)            0.00       6.57 r
+  calvn/VnReg_3_reg_6_/D (DFCNQD1BWP7T35P140)             0.00       6.57 r
+  data arrival time                                                  6.57
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_3_reg_6_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.57
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.40
+
+
+  Startpoint: v_in_1[1] (input port clocked by clk)
+  Endpoint: calvn/VnReg_1_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_6     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_1[1] (in)                                          0.00       6.00 f
+  calvn/v_in_1[1] (cal_vn)                                0.00       6.00 f
+  calvn/U4/ZN (INVD1BWP7T35P140)                          0.19       6.19 r
+  calvn/intadd_7_U8/CO (FA1D1BWP7T35P140)                 0.07       6.26 r
+  calvn/intadd_7_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_7_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_7_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_7_U4/CO (FA1D1BWP7T35P140)                 0.05       6.46 r
+  calvn/intadd_7_U3/S (FA1D1BWP7T35P140)                  0.08       6.54 f
+  calvn/U59/ZN (INVD1BWP7T35P140)                         0.01       6.55 r
+  calvn/FloorWrapVn_1/din[9] (FloorAndWrap_6)             0.00       6.55 r
+  calvn/FloorWrapVn_1/U7/Z (DEL025D1BWP7T35P140)          0.02       6.57 r
+  calvn/FloorWrapVn_1/dout[6] (FloorAndWrap_6)            0.00       6.57 r
+  calvn/VnReg_1_reg_6_/D (DFCNQD1BWP7T35P140)             0.00       6.57 r
+  data arrival time                                                  6.57
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_1_reg_6_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.57
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.40
+
+
+  Startpoint: v_in_7[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_7_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_0     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_7[0] (in)                                          0.00       6.00 f
+  U147/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U148/ZN (INVD1BWP7T35P140)                              0.05       6.17 f
+  calvn/v_in_7[0] (cal_vn)                                0.00       6.17 f
+  calvn/U65/ZN (AOI21D1BWP7T35P140)                       0.04       6.21 r
+  calvn/intadd_1_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_1_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_1_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_1_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_1_U4/CO (FA1D1BWP7T35P140)                 0.05       6.46 r
+  calvn/intadd_1_U3/S (FA1D1BWP7T35P140)                  0.08       6.53 f
+  calvn/U54/ZN (INVD1BWP7T35P140)                         0.01       6.55 r
+  calvn/FloorWrapVn_7/din[9] (FloorAndWrap_0)             0.00       6.55 r
+  calvn/FloorWrapVn_7/U1/Z (DEL025D1BWP7T35P140)          0.02       6.57 r
+  calvn/FloorWrapVn_7/dout[6] (FloorAndWrap_0)            0.00       6.57 r
+  calvn/VnReg_7_reg_6_/D (DFCNQD1BWP7T35P140)             0.00       6.57 r
+  data arrival time                                                  6.57
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_7_reg_6_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.57
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.40
+
+
+  Startpoint: v_in_2[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_2_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_5     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_2[0] (in)                                          0.00       6.00 f
+  U137/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U138/ZN (INVD1BWP7T35P140)                              0.05       6.17 f
+  calvn/v_in_2[0] (cal_vn)                                0.00       6.17 f
+  calvn/U97/ZN (AOI21D1BWP7T35P140)                       0.04       6.21 r
+  calvn/intadd_6_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_6_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_6_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_6_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_6_U4/CO (FA1D1BWP7T35P140)                 0.05       6.46 r
+  calvn/intadd_6_U3/S (FA1D1BWP7T35P140)                  0.08       6.53 f
+  calvn/U55/ZN (INVD1BWP7T35P140)                         0.01       6.55 r
+  calvn/FloorWrapVn_2/din[9] (FloorAndWrap_5)             0.00       6.55 r
+  calvn/FloorWrapVn_2/U2/Z (DEL025D1BWP7T35P140)          0.02       6.57 r
+  calvn/FloorWrapVn_2/dout[6] (FloorAndWrap_5)            0.00       6.57 r
+  calvn/VnReg_2_reg_6_/D (DFCNQD1BWP7T35P140)             0.00       6.57 r
+  data arrival time                                                  6.57
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_2_reg_6_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.57
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.40
+
+
+  Startpoint: v_in_4[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_4_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_3     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_4[0] (in)                                          0.00       6.00 f
+  U143/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U144/ZN (INVD1BWP7T35P140)                              0.05       6.17 f
+  calvn/v_in_4[0] (cal_vn)                                0.00       6.17 f
+  calvn/U81/ZN (AOI21D1BWP7T35P140)                       0.04       6.21 r
+  calvn/intadd_4_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_4_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_4_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_4_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_4_U4/CO (FA1D1BWP7T35P140)                 0.05       6.46 r
+  calvn/intadd_4_U3/S (FA1D1BWP7T35P140)                  0.08       6.53 f
+  calvn/U57/ZN (INVD1BWP7T35P140)                         0.01       6.54 r
+  calvn/FloorWrapVn_4/din[9] (FloorAndWrap_3)             0.00       6.54 r
+  calvn/FloorWrapVn_4/U2/Z (DEL025D1BWP7T35P140)          0.02       6.57 r
+  calvn/FloorWrapVn_4/dout[6] (FloorAndWrap_3)            0.00       6.57 r
+  calvn/VnReg_4_reg_6_/D (DFCNQD1BWP7T35P140)             0.00       6.57 r
+  data arrival time                                                  6.57
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_4_reg_6_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.57
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.41
+
+
+  Startpoint: v_in_6[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_6_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_1     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_6[0] (in)                                          0.00       6.00 f
+  U141/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U142/ZN (INVD1BWP7T35P140)                              0.05       6.17 f
+  calvn/v_in_6[0] (cal_vn)                                0.00       6.17 f
+  calvn/U89/ZN (AOI21D1BWP7T35P140)                       0.04       6.21 r
+  calvn/intadd_2_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_2_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_2_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_2_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_2_U4/CO (FA1D1BWP7T35P140)                 0.05       6.46 r
+  calvn/intadd_2_U3/S (FA1D1BWP7T35P140)                  0.08       6.53 f
+  calvn/U56/ZN (INVD1BWP7T35P140)                         0.01       6.54 r
+  calvn/FloorWrapVn_6/din[9] (FloorAndWrap_1)             0.00       6.54 r
+  calvn/FloorWrapVn_6/U7/Z (DEL025D1BWP7T35P140)          0.02       6.57 r
+  calvn/FloorWrapVn_6/dout[6] (FloorAndWrap_1)            0.00       6.57 r
+  calvn/VnReg_6_reg_6_/D (DFCNQD1BWP7T35P140)             0.00       6.57 r
+  data arrival time                                                  6.57
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_6_reg_6_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.57
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.41
+
+
+  Startpoint: v_in_3[2] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_3[2] (in)                                          0.00       6.00 f
+  calvn/v_in_3[2] (cal_vn)                                0.00       6.00 f
+  calvn/U131/ZN (INVD1BWP7T35P140)                        0.20       6.20 r
+  calvn/U133/ZN (AOI21D1BWP7T35P140)                      0.05       6.25 f
+  calvn/intadd_13_U4/S (FA1D1BWP7T35P140)                 0.13       6.37 r
+  calvn/intadd_16_U2/S (FA1D1BWP7T35P140)                 0.09       6.46 f
+  calvn/intadd_0_U9/S (FA1D1BWP7T35P140)                  0.10       6.56 r
+  calvn/SumXinReg_reg_2_/D (DFCNQD1BWP7T35P140)           0.00       6.56 r
+  data arrival time                                                  6.56
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/SumXinReg_reg_2_/CP (DFCNQD1BWP7T35P140)          0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.56
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.41
+
+
+  Startpoint: v_in_0[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_0_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_7     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_0[0] (in)                                          0.00       6.00 f
+  U133/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U134/ZN (INVD1BWP7T35P140)                              0.04       6.16 f
+  calvn/v_in_0[0] (cal_vn)                                0.00       6.16 f
+  calvn/U105/ZN (AOI21D1BWP7T35P140)                      0.04       6.20 r
+  calvn/intadd_8_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_8_U7/CO (FA1D1BWP7T35P140)                 0.05       6.30 r
+  calvn/intadd_8_U6/CO (FA1D1BWP7T35P140)                 0.05       6.35 r
+  calvn/intadd_8_U5/CO (FA1D1BWP7T35P140)                 0.05       6.40 r
+  calvn/intadd_8_U4/CO (FA1D1BWP7T35P140)                 0.05       6.45 r
+  calvn/intadd_8_U3/S (FA1D1BWP7T35P140)                  0.08       6.52 f
+  calvn/U58/ZN (INVD1BWP7T35P140)                         0.01       6.54 r
+  calvn/FloorWrapVn_0/din[9] (FloorAndWrap_7)             0.00       6.54 r
+  calvn/FloorWrapVn_0/U7/Z (DEL025D1BWP7T35P140)          0.02       6.56 r
+  calvn/FloorWrapVn_0/dout[6] (FloorAndWrap_7)            0.00       6.56 r
+  calvn/VnReg_0_reg_6_/D (DFCNQD1BWP7T35P140)             0.00       6.56 r
+  data arrival time                                                  6.56
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_0_reg_6_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.56
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.41
+
+
+  Startpoint: v_in_5[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_5_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_2     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_5[0] (in)                                          0.00       6.00 f
+  U135/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U136/ZN (INVD1BWP7T35P140)                              0.03       6.15 f
+  calvn/v_in_5[0] (cal_vn)                                0.00       6.15 f
+  calvn/U73/ZN (AOI21D1BWP7T35P140)                       0.04       6.18 r
+  calvn/intadd_3_U8/CO (FA1D1BWP7T35P140)                 0.05       6.24 r
+  calvn/intadd_3_U7/CO (FA1D1BWP7T35P140)                 0.05       6.29 r
+  calvn/intadd_3_U6/CO (FA1D1BWP7T35P140)                 0.05       6.33 r
+  calvn/intadd_3_U5/CO (FA1D1BWP7T35P140)                 0.05       6.38 r
+  calvn/intadd_3_U4/CO (FA1D1BWP7T35P140)                 0.05       6.43 r
+  calvn/intadd_3_U3/S (FA1D1BWP7T35P140)                  0.08       6.51 f
+  calvn/U53/ZN (INVD1BWP7T35P140)                         0.01       6.52 r
+  calvn/FloorWrapVn_5/din[9] (FloorAndWrap_2)             0.00       6.52 r
+  calvn/FloorWrapVn_5/U7/Z (DEL025D1BWP7T35P140)          0.02       6.54 r
+  calvn/FloorWrapVn_5/dout[6] (FloorAndWrap_2)            0.00       6.54 r
+  calvn/VnReg_5_reg_6_/D (DFCNQD1BWP7T35P140)             0.00       6.54 r
+  data arrival time                                                  6.54
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_5_reg_6_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.54
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.43
+
+
+  Startpoint: v_in_3[1] (input port clocked by clk)
+  Endpoint: calvn/VnReg_3_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_4     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_3[1] (in)                                          0.00       6.00 f
+  calvn/v_in_3[1] (cal_vn)                                0.00       6.00 f
+  calvn/U129/ZN (INVD1BWP7T35P140)                        0.20       6.20 r
+  calvn/intadd_5_U8/CO (FA1D1BWP7T35P140)                 0.07       6.27 r
+  calvn/intadd_5_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_5_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_5_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_5_U4/S (FA1D1BWP7T35P140)                  0.08       6.49 f
+  calvn/U52/ZN (INVD1BWP7T35P140)                         0.01       6.50 r
+  calvn/FloorWrapVn_3/din[8] (FloorAndWrap_4)             0.00       6.50 r
+  calvn/FloorWrapVn_3/U3/Z (DEL025D1BWP7T35P140)          0.02       6.52 r
+  calvn/FloorWrapVn_3/dout[5] (FloorAndWrap_4)            0.00       6.52 r
+  calvn/VnReg_3_reg_5_/D (DFCNQD1BWP7T35P140)             0.00       6.52 r
+  data arrival time                                                  6.52
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_3_reg_5_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.52
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.45
+
+
+  Startpoint: v_in_1[1] (input port clocked by clk)
+  Endpoint: calvn/VnReg_1_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_6     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_1[1] (in)                                          0.00       6.00 f
+  calvn/v_in_1[1] (cal_vn)                                0.00       6.00 f
+  calvn/U4/ZN (INVD1BWP7T35P140)                          0.19       6.19 r
+  calvn/intadd_7_U8/CO (FA1D1BWP7T35P140)                 0.07       6.26 r
+  calvn/intadd_7_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_7_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_7_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_7_U4/S (FA1D1BWP7T35P140)                  0.08       6.49 f
+  calvn/U51/ZN (INVD1BWP7T35P140)                         0.01       6.50 r
+  calvn/FloorWrapVn_1/din[8] (FloorAndWrap_6)             0.00       6.50 r
+  calvn/FloorWrapVn_1/U6/Z (DEL025D1BWP7T35P140)          0.02       6.52 r
+  calvn/FloorWrapVn_1/dout[5] (FloorAndWrap_6)            0.00       6.52 r
+  calvn/VnReg_1_reg_5_/D (DFCNQD1BWP7T35P140)             0.00       6.52 r
+  data arrival time                                                  6.52
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_1_reg_5_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.52
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.45
+
+
+  Startpoint: v_in_7[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_7_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_0     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_7[0] (in)                                          0.00       6.00 f
+  U147/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U148/ZN (INVD1BWP7T35P140)                              0.05       6.17 f
+  calvn/v_in_7[0] (cal_vn)                                0.00       6.17 f
+  calvn/U65/ZN (AOI21D1BWP7T35P140)                       0.04       6.21 r
+  calvn/intadd_1_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_1_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_1_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_1_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_1_U4/S (FA1D1BWP7T35P140)                  0.08       6.48 f
+  calvn/U46/ZN (INVD1BWP7T35P140)                         0.01       6.50 r
+  calvn/FloorWrapVn_7/din[8] (FloorAndWrap_0)             0.00       6.50 r
+  calvn/FloorWrapVn_7/U7/Z (DEL025D1BWP7T35P140)          0.02       6.52 r
+  calvn/FloorWrapVn_7/dout[5] (FloorAndWrap_0)            0.00       6.52 r
+  calvn/VnReg_7_reg_5_/D (DFCNQD1BWP7T35P140)             0.00       6.52 r
+  data arrival time                                                  6.52
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_7_reg_5_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.52
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.45
+
+
+  Startpoint: v_in_2[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_2_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_5     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_2[0] (in)                                          0.00       6.00 f
+  U137/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U138/ZN (INVD1BWP7T35P140)                              0.05       6.17 f
+  calvn/v_in_2[0] (cal_vn)                                0.00       6.17 f
+  calvn/U97/ZN (AOI21D1BWP7T35P140)                       0.04       6.21 r
+  calvn/intadd_6_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_6_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_6_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_6_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_6_U4/S (FA1D1BWP7T35P140)                  0.08       6.48 f
+  calvn/U48/ZN (INVD1BWP7T35P140)                         0.01       6.50 r
+  calvn/FloorWrapVn_2/din[8] (FloorAndWrap_5)             0.00       6.50 r
+  calvn/FloorWrapVn_2/U3/Z (DEL025D1BWP7T35P140)          0.02       6.52 r
+  calvn/FloorWrapVn_2/dout[5] (FloorAndWrap_5)            0.00       6.52 r
+  calvn/VnReg_2_reg_5_/D (DFCNQD1BWP7T35P140)             0.00       6.52 r
+  data arrival time                                                  6.52
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_2_reg_5_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.52
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.45
+
+
+  Startpoint: v_in_4[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_4_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_3     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_4[0] (in)                                          0.00       6.00 f
+  U143/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U144/ZN (INVD1BWP7T35P140)                              0.05       6.17 f
+  calvn/v_in_4[0] (cal_vn)                                0.00       6.17 f
+  calvn/U81/ZN (AOI21D1BWP7T35P140)                       0.04       6.21 r
+  calvn/intadd_4_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_4_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_4_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_4_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_4_U4/S (FA1D1BWP7T35P140)                  0.08       6.48 f
+  calvn/U47/ZN (INVD1BWP7T35P140)                         0.01       6.50 r
+  calvn/FloorWrapVn_4/din[8] (FloorAndWrap_3)             0.00       6.50 r
+  calvn/FloorWrapVn_4/U3/Z (DEL025D1BWP7T35P140)          0.02       6.52 r
+  calvn/FloorWrapVn_4/dout[5] (FloorAndWrap_3)            0.00       6.52 r
+  calvn/VnReg_4_reg_5_/D (DFCNQD1BWP7T35P140)             0.00       6.52 r
+  data arrival time                                                  6.52
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_4_reg_5_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.52
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.45
+
+
+  Startpoint: v_in_6[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_6_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_1     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_6[0] (in)                                          0.00       6.00 f
+  U141/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U142/ZN (INVD1BWP7T35P140)                              0.05       6.17 f
+  calvn/v_in_6[0] (cal_vn)                                0.00       6.17 f
+  calvn/U89/ZN (AOI21D1BWP7T35P140)                       0.04       6.21 r
+  calvn/intadd_2_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_2_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_2_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_2_U5/CO (FA1D1BWP7T35P140)                 0.05       6.41 r
+  calvn/intadd_2_U4/S (FA1D1BWP7T35P140)                  0.08       6.48 f
+  calvn/U45/ZN (INVD1BWP7T35P140)                         0.01       6.50 r
+  calvn/FloorWrapVn_6/din[8] (FloorAndWrap_1)             0.00       6.50 r
+  calvn/FloorWrapVn_6/U6/Z (DEL025D1BWP7T35P140)          0.02       6.52 r
+  calvn/FloorWrapVn_6/dout[5] (FloorAndWrap_1)            0.00       6.52 r
+  calvn/VnReg_6_reg_5_/D (DFCNQD1BWP7T35P140)             0.00       6.52 r
+  data arrival time                                                  6.52
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_6_reg_5_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.52
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.45
+
+
+  Startpoint: v_in_0[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_0_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_7     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_0[0] (in)                                          0.00       6.00 f
+  U133/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U134/ZN (INVD1BWP7T35P140)                              0.04       6.16 f
+  calvn/v_in_0[0] (cal_vn)                                0.00       6.16 f
+  calvn/U105/ZN (AOI21D1BWP7T35P140)                      0.04       6.20 r
+  calvn/intadd_8_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_8_U7/CO (FA1D1BWP7T35P140)                 0.05       6.30 r
+  calvn/intadd_8_U6/CO (FA1D1BWP7T35P140)                 0.05       6.35 r
+  calvn/intadd_8_U5/CO (FA1D1BWP7T35P140)                 0.05       6.40 r
+  calvn/intadd_8_U4/S (FA1D1BWP7T35P140)                  0.08       6.48 f
+  calvn/U50/ZN (INVD1BWP7T35P140)                         0.01       6.49 r
+  calvn/FloorWrapVn_0/din[8] (FloorAndWrap_7)             0.00       6.49 r
+  calvn/FloorWrapVn_0/U6/Z (DEL025D1BWP7T35P140)          0.02       6.51 r
+  calvn/FloorWrapVn_0/dout[5] (FloorAndWrap_7)            0.00       6.51 r
+  calvn/VnReg_0_reg_5_/D (DFCNQD1BWP7T35P140)             0.00       6.51 r
+  data arrival time                                                  6.51
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_0_reg_5_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.51
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.46
+
+
+  Startpoint: v_in_1[1] (input port clocked by clk)
+  Endpoint: calvn/SumXinReg_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_1[1] (in)                                          0.00       6.00 f
+  calvn/v_in_1[1] (cal_vn)                                0.00       6.00 f
+  calvn/U4/ZN (INVD1BWP7T35P140)                          0.19       6.19 r
+  calvn/U130/ZN (NR2D1BWP7T35P140)                        0.05       6.24 f
+  calvn/U166/ZN (AOI21D1BWP7T35P140)                      0.06       6.30 r
+  calvn/U168/S (FA1D1BWP7T35P140)                         0.10       6.40 f
+  calvn/intadd_0_U10/S (FA1D1BWP7T35P140)                 0.10       6.50 r
+  calvn/SumXinReg_reg_1_/D (DFCNQD1BWP7T35P140)           0.00       6.50 r
+  data arrival time                                                  6.50
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/SumXinReg_reg_1_/CP (DFCNQD1BWP7T35P140)          0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.47
+
+
+  Startpoint: v_in_5[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_5_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_2     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_5[0] (in)                                          0.00       6.00 f
+  U135/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U136/ZN (INVD1BWP7T35P140)                              0.03       6.15 f
+  calvn/v_in_5[0] (cal_vn)                                0.00       6.15 f
+  calvn/U73/ZN (AOI21D1BWP7T35P140)                       0.04       6.18 r
+  calvn/intadd_3_U8/CO (FA1D1BWP7T35P140)                 0.05       6.24 r
+  calvn/intadd_3_U7/CO (FA1D1BWP7T35P140)                 0.05       6.29 r
+  calvn/intadd_3_U6/CO (FA1D1BWP7T35P140)                 0.05       6.33 r
+  calvn/intadd_3_U5/CO (FA1D1BWP7T35P140)                 0.05       6.38 r
+  calvn/intadd_3_U4/S (FA1D1BWP7T35P140)                  0.08       6.46 f
+  calvn/U49/ZN (INVD1BWP7T35P140)                         0.01       6.47 r
+  calvn/FloorWrapVn_5/din[8] (FloorAndWrap_2)             0.00       6.47 r
+  calvn/FloorWrapVn_5/U6/Z (DEL025D1BWP7T35P140)          0.02       6.49 r
+  calvn/FloorWrapVn_5/dout[5] (FloorAndWrap_2)            0.00       6.49 r
+  calvn/VnReg_5_reg_5_/D (DFCNQD1BWP7T35P140)             0.00       6.49 r
+  data arrival time                                                  6.49
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_5_reg_5_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.49
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.48
+
+
+  Startpoint: en (input port clocked by clk)
+  Endpoint: calvn/clk_gate_SumXinReg_reg/latch
+            (gating element for clock clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  dotVn              ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cordic_int         ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  SNPS_CLOCK_GATE_HIGH_cal_vn_1 ZeroWireload tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  en (in)                                                 0.00       6.00 f
+  U149/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U150/ZN (INVD1BWP7T35P140)                              0.05       6.16 f
+  calvn/en (cal_vn)                                       0.00       6.16 f
+  calvn/U44/Z (AN2D0BWP7T35P140)                          0.04       6.21 f
+  calvn/clk_gate_SumXinReg_reg/EN (SNPS_CLOCK_GATE_HIGH_cal_vn_1)     0.00     6.21 f
+  calvn/clk_gate_SumXinReg_reg/latch/E (CKLNQD1BWP7T35P140)     0.00     6.21 f
+  data arrival time                                                  6.21
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/clk_gate_SumXinReg_reg/latch/CP (CKLNQD1BWP7T35P140)     0.00    11.00 r
+  clock gating setup time                                -0.30      10.70
+  data required time                                                10.70
+  --------------------------------------------------------------------------
+  data required time                                                10.70
+  data arrival time                                                 -6.21
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.49
+
+
+  Startpoint: v_in_3[1] (input port clocked by clk)
+  Endpoint: calvn/VnReg_3_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_4     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_3[1] (in)                                          0.00       6.00 f
+  calvn/v_in_3[1] (cal_vn)                                0.00       6.00 f
+  calvn/U129/ZN (INVD1BWP7T35P140)                        0.20       6.20 r
+  calvn/intadd_5_U8/CO (FA1D1BWP7T35P140)                 0.07       6.27 r
+  calvn/intadd_5_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_5_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_5_U5/S (FA1D1BWP7T35P140)                  0.08       6.44 f
+  calvn/U43/ZN (INVD1BWP7T35P140)                         0.01       6.45 r
+  calvn/FloorWrapVn_3/din[7] (FloorAndWrap_4)             0.00       6.45 r
+  calvn/FloorWrapVn_3/U4/Z (DEL025D1BWP7T35P140)          0.02       6.47 r
+  calvn/FloorWrapVn_3/dout[4] (FloorAndWrap_4)            0.00       6.47 r
+  calvn/VnReg_3_reg_4_/D (DFCNQD1BWP7T35P140)             0.00       6.47 r
+  data arrival time                                                  6.47
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_3_reg_4_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.50
+
+
+  Startpoint: v_in_1[1] (input port clocked by clk)
+  Endpoint: calvn/VnReg_1_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_6     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_1[1] (in)                                          0.00       6.00 f
+  calvn/v_in_1[1] (cal_vn)                                0.00       6.00 f
+  calvn/U4/ZN (INVD1BWP7T35P140)                          0.19       6.19 r
+  calvn/intadd_7_U8/CO (FA1D1BWP7T35P140)                 0.07       6.26 r
+  calvn/intadd_7_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_7_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_7_U5/S (FA1D1BWP7T35P140)                  0.08       6.44 f
+  calvn/U42/ZN (INVD1BWP7T35P140)                         0.01       6.45 r
+  calvn/FloorWrapVn_1/din[7] (FloorAndWrap_6)             0.00       6.45 r
+  calvn/FloorWrapVn_1/U2/Z (DEL025D1BWP7T35P140)          0.02       6.47 r
+  calvn/FloorWrapVn_1/dout[4] (FloorAndWrap_6)            0.00       6.47 r
+  calvn/VnReg_1_reg_4_/D (DFCNQD1BWP7T35P140)             0.00       6.47 r
+  data arrival time                                                  6.47
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_1_reg_4_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.50
+
+
+  Startpoint: v_in_7[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_7_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_0     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_7[0] (in)                                          0.00       6.00 f
+  U147/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U148/ZN (INVD1BWP7T35P140)                              0.05       6.17 f
+  calvn/v_in_7[0] (cal_vn)                                0.00       6.17 f
+  calvn/U65/ZN (AOI21D1BWP7T35P140)                       0.04       6.21 r
+  calvn/intadd_1_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_1_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_1_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_1_U5/S (FA1D1BWP7T35P140)                  0.08       6.44 f
+  calvn/U37/ZN (INVD1BWP7T35P140)                         0.01       6.45 r
+  calvn/FloorWrapVn_7/din[7] (FloorAndWrap_0)             0.00       6.45 r
+  calvn/FloorWrapVn_7/U6/Z (DEL025D1BWP7T35P140)          0.02       6.47 r
+  calvn/FloorWrapVn_7/dout[4] (FloorAndWrap_0)            0.00       6.47 r
+  calvn/VnReg_7_reg_4_/D (DFCNQD1BWP7T35P140)             0.00       6.47 r
+  data arrival time                                                  6.47
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_7_reg_4_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.50
+
+
+  Startpoint: v_in_2[0] (input port clocked by clk)
+  Endpoint: calvn/VnReg_2_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  cal_vn             ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+  FloorAndWrap_5     ZeroWireload          tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  v_in_2[0] (in)                                          0.00       6.00 f
+  U137/ZN (INVD1BWP7T35P140)                              0.12       6.12 r
+  U138/ZN (INVD1BWP7T35P140)                              0.05       6.17 f
+  calvn/v_in_2[0] (cal_vn)                                0.00       6.17 f
+  calvn/U97/ZN (AOI21D1BWP7T35P140)                       0.04       6.21 r
+  calvn/intadd_6_U8/CO (FA1D1BWP7T35P140)                 0.05       6.26 r
+  calvn/intadd_6_U7/CO (FA1D1BWP7T35P140)                 0.05       6.31 r
+  calvn/intadd_6_U6/CO (FA1D1BWP7T35P140)                 0.05       6.36 r
+  calvn/intadd_6_U5/S (FA1D1BWP7T35P140)                  0.08       6.44 f
+  calvn/U40/ZN (INVD1BWP7T35P140)                         0.01       6.45 r
+  calvn/FloorWrapVn_2/din[7] (FloorAndWrap_5)             0.00       6.45 r
+  calvn/FloorWrapVn_2/U4/Z (DEL025D1BWP7T35P140)          0.02       6.47 r
+  calvn/FloorWrapVn_2/dout[4] (FloorAndWrap_5)            0.00       6.47 r
+  calvn/VnReg_2_reg_4_/D (DFCNQD1BWP7T35P140)             0.00       6.47 r
+  data arrival time                                                  6.47
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/VnReg_2_reg_4_/CP (DFCNQD1BWP7T35P140)            0.00      11.00 r
+  library setup time                                     -0.03      10.97
+  data required time                                                10.97
+  --------------------------------------------------------------------------
+  data required time                                                10.97
+  data arrival time                                                 -6.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.50
+
+
+1

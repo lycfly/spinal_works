@@ -1,0 +1,11 @@
+Sun Aug 13 17:51:25 PDT 2000
+
+hld1a0:
+o Behavioral code led to N2 error in TetraMAX.
+o Commented out, in version core.v-.
+
+
+Wed Nov  1 18:14:41 PST 2000
+o Used TetraMAX command:
+     write netlist  core.gz  -f verilog  -compress gzip
+  to write out the Verilog library in compressed form.

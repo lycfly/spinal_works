@@ -1,0 +1,33 @@
+remove_design -designs
+
+read BIDIR.db
+
+test_default_period = 200
+test_default_strobe = 190
+
+current_design BIDIR
+check_test
+create_test_patterns
+
+test_default_bidir_delay = 110
+check_test
+create_test_patterns
+report_test -faults -class untested
+
+set_scan_configuration -bidi_mode output
+check_test
+insert_scan
+check_test
+remove_design -design
+
+read BIDIR.db
+current_design BIDIR
+set_scan_configuration -disable false
+insert_scan
+check_test
+
+set_scan_configuration -bidi_mode input
+set_scan_configuration -disable true
+
+insert_scan
+check_test

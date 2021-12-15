@@ -1,0 +1,136 @@
+test_protocol() {
+   period : 1000.00 ;
+   delay : 0.00 ;
+   bidir_delay : 5.00 ;
+   strobe : 400.00 ;
+   strobe_width : 0.00 ;
+
+   clock() {
+      period : 1000.00 ;
+      waveform : {500.00, 700.00} ;
+      sources : CLK ;
+   }
+
+   protocol_start() {
+      foreach_program() {
+         vector() {
+            set(all_inputs, "[9]X,0,[15]X,1,[4]0,[3]X,1,X,0,[11]X");
+            set(all_outputs,"[21]M");
+            set(all_bidirectionals,"[16]Z");
+         }
+         foreach_pattern() {
+            vector() {
+              set(all_inputs, "[9]X,0,[15]X,1,[4]0,[3]X,0,X,0,[11]X");
+              set(all_outputs,"[21]M");
+              set(all_bidirectionals,"[16]Z");
+            }
+            stream(222) {
+              set(all_inputs, "[9]U,C,[15]U,1,[4]0,[3]U,0,Si,0,[11]U");
+              set(all_outputs,"[20]M,So");
+              set(all_bidirectionals,"[16]Z");
+            }
+            vector() {
+              set(all_inputs, "[9]Pi,0,[15]Pi,Pi,[4]Pi,[3]Pi,1,Pi,0,[11]Pi");
+              set(all_outputs,"[21]Po");
+              set(all_bidirectionals,"[16]Pio");
+            }
+            vector() {
+              set(all_inputs, "[9]U,Cp,[15]U,U,[4]U,[3]U,U,U,U,[11]U");
+              set(all_outputs,"[21]M");
+              set(all_bidirectionals,"[16]M");
+            }
+         }
+      }
+   }
+
+/*
+------------------- inputs -------------------
+ADDR1_1 
+ADDR1_2 
+ADDR1_3 
+ADDR2_1 
+ADDR2_2 
+ADDR2_3 
+AT_IRQ_2 
+BMG1 
+BMG2 
+CLK
+DIRQ_1_N 
+DMA_IRQ 
+DSP_IRQ_1 
+DSP_IRQ_2 
+IRQ0 
+IRQ1 
+IRQ2 
+IRQ3 
+IRQ4 
+IRQ5 
+IRQ6 
+IRQ7 
+NMI_1_N 
+NMI_2_N 
+P302_IRQ_1 
+RESETN 
+RSTN1
+RSTN2 
+RSTN3 
+RSTN4 
+RW1 
+RW2 
+S302_IRQ 
+SE_N
+TDI
+TESTB
+TIRQ1_1_N 
+TIRQ1_2_N 
+TIRQ2_1_N 
+VDD1 
+VDD2 
+VDD3 
+VDD4 
+VSS1 
+VSS2 
+VSS3 
+VSS4
+------------ outputs ---------
+ATSEL_1_N
+ATSEL_2_N 
+DTACK1 
+DTACK2 
+IACK_0_N 
+IACK_1_N 
+IACK_2_N 
+IACK_3_N 
+IACK_4_N 
+IACK_5_N 
+IACK_6_N 
+IACK_7_N 
+IACK_P302_N 
+IACK_S302_N 
+IPL1_0 
+IPL1_1 
+IPL1_2 
+IPL2_0 
+IPL2_1 
+IPL2_2 
+TDO
+----------- bidi pins ---------
+DATA00
+DATA01 
+DATA02 
+DATA03 
+DATA04 
+DATA05 
+DATA06 
+DATA07 
+DATA08 
+DATA09 
+DATA10 
+DATA11 
+DATA12 
+DATA13 
+DATA14 
+DATA15
+
+*/
+}

@@ -1,0 +1,171 @@
+ 
+****************************************
+Report : area
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Sun Nov 28 20:54:05 2021
+****************************************
+
+Library(s) Used:
+
+    gtech (File: /usr/synopsys/dc-L-2016.03-SP1/libraries/syn/gtech.db)
+
+Number of ports:                         4898
+Number of nets:                          7908
+Number of cells:                         2535
+Number of combinational cells:           2086
+Number of sequential cells:               323
+Number of macros/black boxes:               0
+Number of buf/inv:                        566
+Number of references:                      14
+
+Combinational area:                  0.000000
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                     0.000000
+Total area:                 undefined
+
+Information: This design contains unmapped logic. (RPT-7)
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ----------------------------
+cal_phase                            0.0000      0.0    0.0000     0.0000  0.0000  cal_phase
+add_148                              0.0000      0.0    0.0000     0.0000  0.0000  *ADD_UNS_OP_9_1_9
+add_148/*cell*431                    0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width9
+add_175                              0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_9_9_10
+add_175/*cell*440                    0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width10
+calvn                                0.0000      0.0    0.0000     0.0000  0.0000  cal_vn
+calvn/FloorWrapVn_0                  0.0000      0.0    0.0000     0.0000  0.0000  FloorAndWrap
+calvn/FloorWrapVn_1                  0.0000      0.0    0.0000     0.0000  0.0000  FloorAndWrap
+calvn/FloorWrapVn_2                  0.0000      0.0    0.0000     0.0000  0.0000  FloorAndWrap
+calvn/FloorWrapVn_3                  0.0000      0.0    0.0000     0.0000  0.0000  FloorAndWrap
+calvn/FloorWrapVn_4                  0.0000      0.0    0.0000     0.0000  0.0000  FloorAndWrap
+calvn/FloorWrapVn_5                  0.0000      0.0    0.0000     0.0000  0.0000  FloorAndWrap
+calvn/FloorWrapVn_6                  0.0000      0.0    0.0000     0.0000  0.0000  FloorAndWrap
+calvn/FloorWrapVn_7                  0.0000      0.0    0.0000     0.0000  0.0000  FloorAndWrap
+calvn/add_641                        0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_8_8_9
+calvn/add_641/*cell*444              0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width9
+calvn/add_642                        0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_8_8_9
+calvn/add_642/*cell*447              0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width9
+calvn/add_643                        0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_8_8_9
+calvn/add_643/*cell*450              0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width9
+calvn/add_644                        0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_8_8_9
+calvn/add_644/*cell*453              0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width9
+calvn/add_645                        0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_9_9_10
+calvn/add_645/*cell*456              0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width10
+calvn/add_646                        0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_9_9_10
+calvn/add_646/*cell*459              0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width10
+calvn/add_647                        0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_10_10_11
+calvn/add_647/*cell*462              0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width11
+calvn/sub_656                        0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_11_11_12
+calvn/sub_656/*cell*465              0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width12
+calvn/sub_657                        0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_11_11_12
+calvn/sub_657/*cell*468              0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width12
+calvn/sub_658                        0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_11_11_12
+calvn/sub_658/*cell*471              0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width12
+calvn/sub_659                        0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_11_11_12
+calvn/sub_659/*cell*474              0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width12
+calvn/sub_660                        0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_11_11_12
+calvn/sub_660/*cell*477              0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width12
+calvn/sub_661                        0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_11_11_12
+calvn/sub_661/*cell*480              0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width12
+calvn/sub_662                        0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_11_11_12
+calvn/sub_662/*cell*483              0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width12
+calvn/sub_663                        0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_11_11_12
+calvn/sub_663/*cell*486              0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width12
+cordic                               0.0000      0.0    0.0000     0.0000  0.0000  cordic_int
+cordic/add_281                       0.0000      0.0    0.0000     0.0000  0.0000  *ADD_UNS_OP_3_1_3
+cordic/add_281/*cell*549             0.0000      0.0    0.0000     0.0000  0.0000  DW01_inc_width3
+cordic/add_308                       0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_22_22_22
+cordic/add_308/*cell*566             0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width22
+cordic/add_311                       0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_22_22_22
+cordic/add_311/*cell*572             0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width22
+cordic/add_313                       0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_8_8_8
+cordic/add_313/*cell*578             0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width8
+cordic/lt_288                        0.0000      0.0    0.0000     0.0000  0.0000  *LT_TC_OP_16_16_1
+cordic/lt_288/*cell*551              0.0000      0.0    0.0000     0.0000  0.0000  DW01_cmp2_width16
+cordic/lt_293                        0.0000      0.0    0.0000     0.0000  0.0000  *LT_TC_OP_16_16_1
+cordic/lt_293/*cell*555              0.0000      0.0    0.0000     0.0000  0.0000  DW01_cmp2_width16
+cordic/lt_306                        0.0000      0.0    0.0000     0.0000  0.0000  *LT_TC_OP_22_22_1
+cordic/lt_306/*cell*559              0.0000      0.0    0.0000     0.0000  0.0000  DW01_cmp2_width22
+cordic/sla_256                       0.0000      0.0    0.0000     0.0000  0.0000  *ASH_UNS_UNS_OP_8_3_8
+cordic/sla_256/*cell*544             0.0000      0.0    0.0000     0.0000  0.0000  DW01_ash_A_width8_SH_width3
+cordic/sra_254                       0.0000      0.0    0.0000     0.0000  0.0000  *ASHR_TC_UNS_OP_22_3_22
+cordic/sra_254/*cell*528             0.0000      0.0    0.0000     0.0000  0.0000  DW_rash_A_width22_SH_width3
+cordic/sra_255                       0.0000      0.0    0.0000     0.0000  0.0000  *ASHR_TC_UNS_OP_22_3_22
+cordic/sra_255/*cell*536             0.0000      0.0    0.0000     0.0000  0.0000  DW_rash_A_width22_SH_width3
+cordic/sub_227                       0.0000      0.0    0.0000     0.0000  0.0000  *SUB_UNS_OP_3_1_3
+cordic/sub_227/*cell*513             0.0000      0.0    0.0000     0.0000  0.0000  DW01_dec_width3
+cordic/sub_228                       0.0000      0.0    0.0000     0.0000  0.0000  *SUB_UNS_OP_3_1_3
+cordic/sub_228/*cell*515             0.0000      0.0    0.0000     0.0000  0.0000  DW01_dec_width3
+cordic/sub_230                       0.0000      0.0    0.0000     0.0000  0.0000  *SUB_UNS_OP_3_3_3
+cordic/sub_230/*cell*517             0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width3
+cordic/sub_250                       0.0000      0.0    0.0000     0.0000  0.0000  *SUB_UNS_OP_1_22_22
+cordic/sub_250/*cell*520             0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width22
+cordic/sub_251                       0.0000      0.0    0.0000     0.0000  0.0000  *SUB_UNS_OP_1_22_22
+cordic/sub_251/*cell*523             0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width22
+cordic/sub_307                       0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_22_22_22
+cordic/sub_307/*cell*563             0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width22
+cordic/sub_309                       0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_8_8_8
+cordic/sub_309/*cell*569             0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width8
+cordic/sub_312                       0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_22_22_22
+cordic/sub_312/*cell*575             0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width22
+dot                                  0.0000      0.0    0.0000     0.0000  0.0000  dotVn
+dot/FloorWrapPsum1                   0.0000      0.0    0.0000     0.0000  0.0000  FloorAndWrap_8
+dot/FloorWrapPsum2                   0.0000      0.0    0.0000     0.0000  0.0000  FloorAndWrap_8
+dot/add_442                          0.0000      0.0    0.0000     0.0000  0.0000  *ADD_UNS_OP_3_1_3
+dot/add_442/*cell*490                0.0000      0.0    0.0000     0.0000  0.0000  DW01_inc_width3
+dot/add_447_aco                      0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_19_19_19
+dot/add_447_aco/*cell*492            0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width19
+dot/add_448_aco                      0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_19_19_19
+dot/add_448_aco/*cell*495            0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width19
+dot/mult_add_447_aco                 0.0000      0.0    0.0000     0.0000  0.0000  *MULT_UNS_OP_19_1_19
+dot/mult_add_447_aco/*cell*500       0.0000      0.0    0.0000     0.0000  0.0000  DW02_mult_A_width19_B_width1
+dot/mult_add_448_aco                 0.0000      0.0    0.0000     0.0000  0.0000  *MULT_UNS_OP_19_1_19
+dot/mult_add_448_aco/*cell*507       0.0000      0.0    0.0000     0.0000  0.0000  DW02_mult_A_width19_B_width1
+dot/table_1                          0.0000      0.0    0.0000     0.0000  0.0000  s_table
+dot/table_1/add_822                  0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_11_12_13
+dot/table_1/add_822/*cell*582        0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width13
+dot/table_1/add_834                  0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_16_9_17
+dot/table_1/add_834/*cell*591        0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width17
+dot/table_1/add_893                  0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_15_14_16
+dot/table_1/add_893/*cell*606        0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width16
+dot/table_1/add_894                  0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_16_11_17
+dot/table_1/add_894/*cell*609        0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width17
+dot/table_1/add_898                  0.0000      0.0    0.0000     0.0000  0.0000  *ADD_TC_OP_15_13_16
+dot/table_1/add_898/*cell*612        0.0000      0.0    0.0000     0.0000  0.0000  DW01_add_width16
+dot/table_1/sub_825                  0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_17_9_18
+dot/table_1/sub_825/*cell*585        0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width18
+dot/table_1/sub_829                  0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_16_9_17
+dot/table_1/sub_829/*cell*588        0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width17
+dot/table_1/sub_838                  0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_19_9_19
+dot/table_1/sub_838/*cell*594        0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width19
+dot/table_1/sub_842                  0.0000      0.0    0.0000     0.0000  0.0000  *SUB_UNS_OP_1_18_18
+dot/table_1/sub_842/*cell*597        0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width18
+dot/table_1/sub_843                  0.0000      0.0    0.0000     0.0000  0.0000  *SUB_UNS_OP_1_16_16
+dot/table_1/sub_843/*cell*600        0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width16
+dot/table_1/sub_844                  0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_19_9_19
+dot/table_1/sub_844/*cell*603        0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width19
+dot/table_1/sub_900                  0.0000      0.0    0.0000     0.0000  0.0000  *SUB_UNS_OP_1_19_19
+dot/table_1/sub_900/*cell*615        0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width19
+dot/table_1/sub_904                  0.0000      0.0    0.0000     0.0000  0.0000  *SUB_UNS_OP_1_19_19
+dot/table_1/sub_904/*cell*618        0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width19
+lt_149                               0.0000      0.0    0.0000     0.0000  0.0000  *LT_UNS_OP_7_9_1
+lt_149/*cell*434                     0.0000      0.0    0.0000     0.0000  0.0000  DW01_cmp2_width9
+sub_147                              0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_8_8_9
+sub_147/*cell*428                    0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width9
+sub_173                              0.0000      0.0    0.0000     0.0000  0.0000  *SUB_TC_OP_9_9_10
+sub_173/*cell*437                    0.0000      0.0    0.0000     0.0000  0.0000  DW01_sub_width10
+--------------------------------  ---------  -------  --------  ---------  ------  ----------------------------
+Total                                                   0.0000     0.0000  0.0000
+
+1

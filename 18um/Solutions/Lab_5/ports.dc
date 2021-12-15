@@ -1,0 +1,8 @@
+set_scan_signal test_scan_in  -port b1[1] -chain path1
+set_scan_signal test_scan_out -port d1[1] -chain path1
+set_scan_signal test_scan_in  -port b1[2] -chain path2
+set_scan_signal test_scan_out -port d1[2] -chain path2
+set_scan_signal test_scan_in  -port b1[3] -chain path3
+set_scan_signal test_scan_out -port d1[3] -chain path3
+set_scan_signal test_scan_enable -port test_se -hookup sebuf/Z
+

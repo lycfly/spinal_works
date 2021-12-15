@@ -1,0 +1,26 @@
+# LASERWRITER SCRIPT
+# Uses "enscript" to print dc_shell scripts or code
+# to a PostScript printer, allowing three-hole paper.
+#
+# File: lw_script *
+# Home: ~cdancak/bin
+# Call: lw_script  lj377  file1 ...
+#
+# Task: Set environment variable.
+#       Assemble header string.
+#       Add left margin; print.
+# Code:
+  setenv ENSCRIPT ' -fCourier-Bold11'
+  set Laser_Writer = $1
+  shift
+  foreach Code_File  ( $* )
+    echo "Printing ${Code_File} . . ."
+    set STR_0 = `pwd`
+    set STR_1 = `basename $STR_0`
+    set STR_2 = ${Code_File}
+    set STR_3 = "${STR_1}/${STR_2}"
+#     
+    nawk '{printf("\t%s\n", $0)}'  ${Code_File} \
+  | enscript -P${Laser_Writer}  -b${STR_3}
+  end
+# Done.

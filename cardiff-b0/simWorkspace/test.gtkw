@@ -1,0 +1,90 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Wed Oct 27 08:41:02 2021
+[*]
+[dumpfile] "/mnt/mydata/spinal_works/cardiff-b0/simWorkspace/cal_phase/test.vcd"
+[dumpfile_mtime] "Wed Oct 27 08:37:50 2021"
+[dumpfile_size] 26598
+[optimize_vcd]
+[savefile] "/mnt/mydata/spinal_works/cardiff-b0/simWorkspace/test.gtkw"
+[timestart] 198
+[size] 1890 891
+[pos] -93 -62
+*-4.883663 251 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TOP.
+[treeopen] TOP.cal_phase.
+[treeopen] TOP.cal_phase.calvn.
+[treeopen] TOP.cal_phase.dot.
+[sst_width] 352
+[signals_width] 223
+[sst_expanded] 1
+[sst_vpaned_height] 548
+@28
+TOP.cal_phase.clk
+@22
+TOP.cal_phase.psum_out1[15:0]
+@24
+TOP.cal_phase.v_in_0[7:0]
+TOP.cal_phase.v_in_1[7:0]
+TOP.cal_phase.v_in_2[7:0]
+TOP.cal_phase.v_in_3[7:0]
+TOP.cal_phase.v_in_4[7:0]
+TOP.cal_phase.v_in_5[7:0]
+TOP.cal_phase.v_in_6[7:0]
+TOP.cal_phase.v_in_7[7:0]
+TOP.cal_phase.vn_vld
+@28
+[color] 3
+TOP.cal_phase.vin_vld
+@24
+TOP.cal_phase.calvn.vn_0[7:0]
+TOP.cal_phase.calvn.vn_1[7:0]
+TOP.cal_phase.calvn.vn_2[7:0]
+TOP.cal_phase.calvn.vn_3[7:0]
+TOP.cal_phase.calvn.vn_4[7:0]
+TOP.cal_phase.calvn.vn_5[7:0]
+TOP.cal_phase.calvn.vn_6[7:0]
+TOP.cal_phase.calvn.vn_7[7:0]
+TOP.cal_phase.dot.mac_cnt[2:0]
+@22
+TOP.cal_phase.dot.psum2[18:0]
+@28
+TOP.cal_phase.dot.en
+TOP.cal_phase.dot.mac_en
+TOP.cal_phase.dot.mac_finish
+TOP.cal_phase.dot.finish
+@420
+TOP.cal_phase.dot.psum1[18:0]
+TOP.cal_phase.dot.psum2[18:0]
+@40000420
+[fpshift_count] 15
+TOP.cal_phase.dot.psum_out1[15:0]
+[fpshift_count] 15
+TOP.cal_phase.dot.psum_out2[15:0]
+@28
+TOP.cal_phase.cordic.cal_en
+TOP.cal_phase.dot.psum_vld
+TOP.cal_phase.cordic.vld
+@420
+TOP.cal_phase.ph_cal[7:0]
+@28
+TOP.cal_phase.cordic.nozero_flg
+TOP.cal_phase.LastA2stZero
+TOP.cal_phase.AbsGtPi
+TOP.cal_phase.ph_vld
+@40000420
+[fpshift_count] 1
+TOP.cal_phase.ph_last[7:0]
+[fpshift_count] 1
+TOP.cal_phase.ph_now[7:0]
+@40000421
+[fpshift_count] 1
+TOP.cal_phase.ph_delta[8:0]
+@40000420
+[color] 3
+[fpshift_count] 1
+TOP.cal_phase.res_vld
+[fpshift_count] 1
+TOP.cal_phase.res[9:0]
+[pattern_trace] 1
+[pattern_trace] 0

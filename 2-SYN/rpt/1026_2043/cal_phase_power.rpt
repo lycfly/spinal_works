@@ -1,0 +1,88 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Oct 26 20:44:42 2021
+****************************************
+
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs (File: /root/lib/tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db)
+
+
+Operating Conditions: ssg0p81v125c   Library: tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+cal_phase              ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+cal_vn                 ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+dotVn                  ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+cordic_int             ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_7         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_6         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_5         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_4         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_3         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_2         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_1         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_0         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_cal_vn_0
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_cal_vn_2
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_cal_vn_1
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+s_table                ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_8_1       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+FloorAndWrap_8_0       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_dotVn_0
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_dotVn_1
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_cordic_int_0
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_cordic_int_3
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_cordic_int_2
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+SNPS_CLOCK_GATE_HIGH_cordic_int_1
+                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+
+
+Global Operating Voltage = 0.81 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =  33.7389 uW   (80%)
+  Net Switching Power  =   8.2427 uW   (20%)
+                         ---------
+Total Dynamic Power    =  41.9816 uW  (100%)
+
+Cell Leakage Power     =  25.9610 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network  4.7776e-03        8.6228e-04          360.0228        5.9999e-03  (   8.83%)
+register       1.8444e-02        6.1951e-04        6.8730e+03        2.5937e-02  (  38.17%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  1.0517e-02        6.7609e-03        1.8728e+04        3.6006e-02  (  52.99%)
+--------------------------------------------------------------------------------------------------
+Total          3.3739e-02 mW     8.2427e-03 mW     2.5961e+04 nW     6.7943e-02 mW
+1

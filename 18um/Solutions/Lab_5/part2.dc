@@ -1,0 +1,62 @@
+remove_design -designs
+
+foreach (EACH_DESIGN, {ADES, BDES, CDES, DDES}) {
+  read EACH_DESIGN + "_GENERIC.db"
+  current_design EACH_DESIGN
+  set_scan_configuration -style multiplexed_flip_flop
+  compile -scan
+  check_test > EACH_DESIGN + ".rpt"
+  preview_scan -show all >> EACH_DESIGN + ".rpt"
+  insert_scan
+  check_test >> EACH_DESIGN + ".rpt"
+  report_test -scan_path >> EACH_DESIGN + ".rpt"
+  write -format db -hierarchy -output EACH_DESIGN + ".db"
+}
+
+remove_design -designs
+read TOP_ONLY.db
+current_design TOP_ONLY
+
+link
+
+set_scan_configuration -bidi_mode input
+check_test
+preview_scan -show all
+set_scan_configuration -chain_count 10
+preview_scan -show all
+
+set_scan_configuration -clock_mixing mix_clocks
+set_scan_configuration -chain_count 3
+set_scan_configuration -add_lockup false
+
+set_scan_signal test_scan_in  -port b1[1] -chain path1
+set_scan_signal test_scan_out -port d1[1] -chain path1
+set_scan_signal test_scan_in  -port b1[2] -chain path2
+set_scan_signal test_scan_out -port d1[2] -chain path2
+set_scan_signal test_scan_in  -port b1[3] -chain path3
+set_scan_signal test_scan_out -port d1[3] -chain path3
+set_scan_signal test_scan_enable -port test_se
+
+insert_scan
+check_test
+
+remove_design ADES
+
+EACH_DESIGN = ADES
+  read EACH_DESIGN + "_GENERIC.db"
+  current_design EACH_DESIGN
+  set_scan_configuration -style multiplexed_flip_flop
+  compile -scan
+  set_scan_element false find(cell, "sh*_reg")
+  set_scan_segment shift -access {test_scan_in sh1_reg/D, \
+			test_scan_out sh4_reg/Q} \
+			-contains { "sh*_reg"}
+  check_test > EACH_DESIGN + ".rpt"
+  preview_scan -show all >> EACH_DESIGN + ".rpt"
+  insert_scan
+  check_test >> EACH_DESIGN + ".rpt"
+  report_test -scan_path >> EACH_DESIGN + ".rpt"
+  write -format db -hierarchy -output EACH_DESIGN + ".db"
+
+current_design TOP_ONLY
+check_test

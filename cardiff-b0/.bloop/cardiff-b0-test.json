@@ -1,0 +1,1025 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "cardiff-b0-test",
+        "directory": "/mnt/mydata/spinal_works/cardiff-b0",
+        "workspaceDir": "/mnt/mydata/spinal_works/cardiff-b0",
+        "sources": [
+            "/mnt/mydata/spinal_works/cardiff-b0/src/test/scala",
+            "/mnt/mydata/spinal_works/cardiff-b0/src/test/scala-2.11",
+            "/mnt/mydata/spinal_works/cardiff-b0/src/test/scala-2",
+            "/mnt/mydata/spinal_works/cardiff-b0/src/test/java",
+            "/mnt/mydata/spinal_works/cardiff-b0/target/scala-2.11/src_managed/test"
+        ],
+        "dependencies": [
+            "cardiff-b0"
+        ],
+        "classpath": [
+            "/mnt/mydata/spinal_works/cardiff-b0/.bloop/cardiff-b0/scala-2.11/classes",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalanlp/breeze_2.11/0.12/breeze_2.11-0.12.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalanlp/breeze-natives_2.11/0.12/breeze-natives_2.11-0.12.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-core_2.11/1.4.2/spinalhdl-core_2.11-1.4.2.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-lib_2.11/1.4.2/spinalhdl-lib_2.11-1.4.2.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalanlp/breeze-macros_2.11/0.12/breeze-macros_2.11-0.12.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/core/1.1.2/core-1.1.2.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/sourceforge/f2j/arpack_combined_all/0.1/arpack_combined_all-0.1.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/rwl/jtransforms/2.4.0/jtransforms-2.4.0.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/spire-math/spire_2.11/0.7.4/spire_2.11-0.7.4.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/chuusai/shapeless_2.11/2.0.0/shapeless_2.11-2.0.0.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-idsl-plugin_2.11/1.4.2/spinalhdl-idsl-plugin_2.11-1.4.2.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-sim_2.11/1.4.2/spinalhdl-sim_2.11-1.4.2.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/scopt/scopt_2.11/3.4.0/scopt_2.11-3.4.0.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/junit/junit/4.8.2/junit-4.8.2.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/spire-math/spire-macros_2.11/0.7.4/spire-macros_2.11-0.7.4.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-osx-x86_64/1.1/netlib-native_ref-osx-x86_64-1.1-natives.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-x86_64/1.1/netlib-native_ref-linux-x86_64-1.1-natives.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-i686/1.1/netlib-native_ref-linux-i686-1.1-natives.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-win-x86_64/1.1/netlib-native_ref-win-x86_64-1.1-natives.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-win-i686/1.1/netlib-native_ref-win-i686-1.1-natives.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-armhf/1.1/netlib-native_ref-linux-armhf-1.1-natives.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-osx-x86_64/1.1/netlib-native_system-osx-x86_64-1.1-natives.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-x86_64/1.1/netlib-native_system-linux-x86_64-1.1-natives.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-i686/1.1/netlib-native_system-linux-i686-1.1-natives.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-armhf/1.1/netlib-native_system-linux-armhf-1.1-natives.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-win-x86_64/1.1/netlib-native_system-win-x86_64-1.1-natives.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-win-i686/1.1/netlib-native_system-win-i686-1.1-natives.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-idsl-payload_2.11/1.4.2/spinalhdl-idsl-payload_2.11-1.4.2.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/openhft/affinity/3.1.11/affinity-3.1.11.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/native_ref-java/1.1/native_ref-java-1.1.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/native_system-java/1.1/native_system-java-1.1.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/4.2.2/jna-4.2.2.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna-platform/4.2.2/jna-platform-4.2.2.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/intellij/annotations/12.0/annotations-12.0.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/oshi/oshi-core/3.4.0/oshi-core-3.4.0.jar",
+            "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/jniloader/1.1/jniloader-1.1.jar"
+        ],
+        "out": "/mnt/mydata/spinal_works/cardiff-b0/.bloop/cardiff-b0",
+        "classesDir": "/mnt/mydata/spinal_works/cardiff-b0/.bloop/cardiff-b0/scala-2.11/test-classes",
+        "resources": [
+            "/mnt/mydata/spinal_works/cardiff-b0/src/test/resources",
+            "/mnt/mydata/spinal_works/cardiff-b0/target/scala-2.11/resource_managed/test"
+        ],
+        "scala": {
+            "organization": "org.scala-lang",
+            "name": "scala-compiler",
+            "version": "2.11.12",
+            "options": [
+                "-Xplugin:/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-idsl-plugin_2.11/1.4.2/spinalhdl-idsl-plugin_2.11-1.4.2.jar"
+            ],
+            "jars": [
+                "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar",
+                "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12.jar",
+                "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12.jar",
+                "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar",
+                "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar",
+                "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/jline/jline/2.14.3/jline-2.14.3.jar"
+            ],
+            "analysis": "/mnt/mydata/spinal_works/cardiff-b0/target/streams/test/bloopAnalysisOut/_global/streams/inc_compile_2.11.zip",
+            "setup": {
+                "order": "mixed",
+                "addLibraryToBootClasspath": true,
+                "addCompilerToClasspath": false,
+                "addExtraJarsToClasspath": false,
+                "manageBootClasspath": true,
+                "filterLibraryFromClasspath": true
+            }
+        },
+        "java": {
+            "options": [
+                
+            ]
+        },
+        "test": {
+            "frameworks": [
+                {
+                    "names": [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "munit.Framework"
+                    ]
+                }
+            ],
+            "options": {
+                "excludes": [
+                    
+                ],
+                "arguments": [
+                    
+                ]
+            }
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "/usr/local/jdk1.8/jre",
+                "options": [
+                    "-Duser.dir=/mnt/mydata/spinal_works/cardiff-b0"
+                ]
+            },
+            "mainClass": [
+                
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.11.12",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12-sources.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalanlp",
+                    "name": "breeze_2.11",
+                    "version": "0.12",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "breeze_2.11",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalanlp/breeze_2.11/0.12/breeze_2.11-0.12.jar"
+                        },
+                        {
+                            "name": "breeze_2.11",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalanlp/breeze_2.11/0.12/breeze_2.11-0.12-sources.jar"
+                        },
+                        {
+                            "name": "breeze_2.11",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalanlp/breeze_2.11/0.12/breeze_2.11-0.12-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalanlp",
+                    "name": "breeze-natives_2.11",
+                    "version": "0.12",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "breeze-natives_2.11",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalanlp/breeze-natives_2.11/0.12/breeze-natives_2.11-0.12.jar"
+                        },
+                        {
+                            "name": "breeze-natives_2.11",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalanlp/breeze-natives_2.11/0.12/breeze-natives_2.11-0.12-sources.jar"
+                        },
+                        {
+                            "name": "breeze-natives_2.11",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalanlp/breeze-natives_2.11/0.12/breeze-natives_2.11-0.12-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.github.spinalhdl",
+                    "name": "spinalhdl-core_2.11",
+                    "version": "1.4.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "spinalhdl-core_2.11",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-core_2.11/1.4.2/spinalhdl-core_2.11-1.4.2.jar"
+                        },
+                        {
+                            "name": "spinalhdl-core_2.11",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-core_2.11/1.4.2/spinalhdl-core_2.11-1.4.2-sources.jar"
+                        },
+                        {
+                            "name": "spinalhdl-core_2.11",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-core_2.11/1.4.2/spinalhdl-core_2.11-1.4.2-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.github.spinalhdl",
+                    "name": "spinalhdl-lib_2.11",
+                    "version": "1.4.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "spinalhdl-lib_2.11",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-lib_2.11/1.4.2/spinalhdl-lib_2.11-1.4.2.jar"
+                        },
+                        {
+                            "name": "spinalhdl-lib_2.11",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-lib_2.11/1.4.2/spinalhdl-lib_2.11-1.4.2-sources.jar"
+                        },
+                        {
+                            "name": "spinalhdl-lib_2.11",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-lib_2.11/1.4.2/spinalhdl-lib_2.11-1.4.2-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalanlp",
+                    "name": "breeze-macros_2.11",
+                    "version": "0.12",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "breeze-macros_2.11",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalanlp/breeze-macros_2.11/0.12/breeze-macros_2.11-0.12.jar"
+                        },
+                        {
+                            "name": "breeze-macros_2.11",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalanlp/breeze-macros_2.11/0.12/breeze-macros_2.11-0.12-sources.jar"
+                        },
+                        {
+                            "name": "breeze-macros_2.11",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalanlp/breeze-macros_2.11/0.12/breeze-macros_2.11-0.12-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.github.fommil.netlib",
+                    "name": "core",
+                    "version": "1.1.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "core",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/core/1.1.2/core-1.1.2.jar"
+                        },
+                        {
+                            "name": "core",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/core/1.1.2/core-1.1.2-sources.jar"
+                        },
+                        {
+                            "name": "core",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/core/1.1.2/core-1.1.2-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.sourceforge.f2j",
+                    "name": "arpack_combined_all",
+                    "version": "0.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "arpack_combined_all",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/sourceforge/f2j/arpack_combined_all/0.1/arpack_combined_all-0.1.jar"
+                        },
+                        {
+                            "name": "arpack_combined_all",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/sourceforge/f2j/arpack_combined_all/0.1/arpack_combined_all-0.1-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.sf.opencsv",
+                    "name": "opencsv",
+                    "version": "2.3",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "opencsv",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3.jar"
+                        },
+                        {
+                            "name": "opencsv",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3-sources.jar"
+                        },
+                        {
+                            "name": "opencsv",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/sf/opencsv/opencsv/2.3/opencsv-2.3-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.github.rwl",
+                    "name": "jtransforms",
+                    "version": "2.4.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "jtransforms",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/rwl/jtransforms/2.4.0/jtransforms-2.4.0.jar"
+                        },
+                        {
+                            "name": "jtransforms",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/rwl/jtransforms/2.4.0/jtransforms-2.4.0-sources.jar"
+                        },
+                        {
+                            "name": "jtransforms",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/rwl/jtransforms/2.4.0/jtransforms-2.4.0-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.commons",
+                    "name": "commons-math3",
+                    "version": "3.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "commons-math3",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar"
+                        },
+                        {
+                            "name": "commons-math3",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-math3/3.2/commons-math3-3.2-sources.jar"
+                        },
+                        {
+                            "name": "commons-math3",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-math3/3.2/commons-math3-3.2-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.spire-math",
+                    "name": "spire_2.11",
+                    "version": "0.7.4",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "spire_2.11",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/spire-math/spire_2.11/0.7.4/spire_2.11-0.7.4.jar"
+                        },
+                        {
+                            "name": "spire_2.11",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/spire-math/spire_2.11/0.7.4/spire_2.11-0.7.4-sources.jar"
+                        },
+                        {
+                            "name": "spire_2.11",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/spire-math/spire_2.11/0.7.4/spire_2.11-0.7.4-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.slf4j",
+                    "name": "slf4j-api",
+                    "version": "1.7.25",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "slf4j-api",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "da76ca59f6a57ee3102f8f9bd9cee742973efa8a"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar"
+                        },
+                        {
+                            "name": "slf4j-api",
+                            "classifier": "sources",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "962153db4a9ea71b79d047dfd1b2a0d80d8f4739"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25-sources.jar"
+                        },
+                        {
+                            "name": "slf4j-api",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.chuusai",
+                    "name": "shapeless_2.11",
+                    "version": "2.0.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "shapeless_2.11",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/chuusai/shapeless_2.11/2.0.0/shapeless_2.11-2.0.0.jar"
+                        },
+                        {
+                            "name": "shapeless_2.11",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/chuusai/shapeless_2.11/2.0.0/shapeless_2.11-2.0.0-sources.jar"
+                        },
+                        {
+                            "name": "shapeless_2.11",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/chuusai/shapeless_2.11/2.0.0/shapeless_2.11-2.0.0-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.github.spinalhdl",
+                    "name": "spinalhdl-idsl-plugin_2.11",
+                    "version": "1.4.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "spinalhdl-idsl-plugin_2.11",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-idsl-plugin_2.11/1.4.2/spinalhdl-idsl-plugin_2.11-1.4.2.jar"
+                        },
+                        {
+                            "name": "spinalhdl-idsl-plugin_2.11",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-idsl-plugin_2.11/1.4.2/spinalhdl-idsl-plugin_2.11-1.4.2-sources.jar"
+                        },
+                        {
+                            "name": "spinalhdl-idsl-plugin_2.11",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-idsl-plugin_2.11/1.4.2/spinalhdl-idsl-plugin_2.11-1.4.2-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.github.spinalhdl",
+                    "name": "spinalhdl-sim_2.11",
+                    "version": "1.4.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "spinalhdl-sim_2.11",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-sim_2.11/1.4.2/spinalhdl-sim_2.11-1.4.2.jar"
+                        },
+                        {
+                            "name": "spinalhdl-sim_2.11",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-sim_2.11/1.4.2/spinalhdl-sim_2.11-1.4.2-sources.jar"
+                        },
+                        {
+                            "name": "spinalhdl-sim_2.11",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-sim_2.11/1.4.2/spinalhdl-sim_2.11-1.4.2-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-reflect",
+                    "version": "2.11.12",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-reflect",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12.jar"
+                        },
+                        {
+                            "name": "scala-reflect",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12-sources.jar"
+                        },
+                        {
+                            "name": "scala-reflect",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.github.scopt",
+                    "name": "scopt_2.11",
+                    "version": "3.4.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scopt_2.11",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "42cb5f951e3583442a942e787a8d6e982a12e0d4"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/scopt/scopt_2.11/3.4.0/scopt_2.11-3.4.0.jar"
+                        },
+                        {
+                            "name": "scopt_2.11",
+                            "classifier": "sources",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "e0f4347bbe37845848306233d10c35a11b7f1253"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/scopt/scopt_2.11/3.4.0/scopt_2.11-3.4.0-sources.jar"
+                        },
+                        {
+                            "name": "scopt_2.11",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/scopt/scopt_2.11/3.4.0/scopt_2.11-3.4.0-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "commons-io",
+                    "name": "commons-io",
+                    "version": "2.4",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "commons-io",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "b1b6ea3b7e4aa4f492509a4952029cd8e48019ad  ./commons-io-2.4.jar\n"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.jar"
+                        },
+                        {
+                            "name": "commons-io",
+                            "classifier": "sources",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "f2d8698c46d1167ff24b06a840a87d91a02db891  ./commons-io-2.4-sources.jar\n"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-io/commons-io/2.4/commons-io-2.4-sources.jar"
+                        },
+                        {
+                            "name": "commons-io",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/commons-io/commons-io/2.4/commons-io-2.4-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "junit",
+                    "name": "junit",
+                    "version": "4.8.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "junit",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/junit/junit/4.8.2/junit-4.8.2.jar"
+                        },
+                        {
+                            "name": "junit",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/junit/junit/4.8.2/junit-4.8.2-sources.jar"
+                        },
+                        {
+                            "name": "junit",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/junit/junit/4.8.2/junit-4.8.2-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.spire-math",
+                    "name": "spire-macros_2.11",
+                    "version": "0.7.4",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "spire-macros_2.11",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/spire-math/spire-macros_2.11/0.7.4/spire-macros_2.11-0.7.4.jar"
+                        },
+                        {
+                            "name": "spire-macros_2.11",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/spire-math/spire-macros_2.11/0.7.4/spire-macros_2.11-0.7.4-sources.jar"
+                        },
+                        {
+                            "name": "spire-macros_2.11",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/spire-math/spire-macros_2.11/0.7.4/spire-macros_2.11-0.7.4-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-compiler",
+                    "version": "2.11.12",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-compiler",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12.jar"
+                        },
+                        {
+                            "name": "scala-compiler",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12-sources.jar"
+                        },
+                        {
+                            "name": "scala-compiler",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.github.spinalhdl",
+                    "name": "spinalhdl-idsl-payload_2.11",
+                    "version": "1.4.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "spinalhdl-idsl-payload_2.11",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-idsl-payload_2.11/1.4.2/spinalhdl-idsl-payload_2.11-1.4.2.jar"
+                        },
+                        {
+                            "name": "spinalhdl-idsl-payload_2.11",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-idsl-payload_2.11/1.4.2/spinalhdl-idsl-payload_2.11-1.4.2-sources.jar"
+                        },
+                        {
+                            "name": "spinalhdl-idsl-payload_2.11",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-idsl-payload_2.11/1.4.2/spinalhdl-idsl-payload_2.11-1.4.2-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.openhft",
+                    "name": "affinity",
+                    "version": "3.1.11",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "affinity",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "27bc3e2018d794678c64f0e9bc4d9b9714b1846a"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/openhft/affinity/3.1.11/affinity-3.1.11.jar"
+                        },
+                        {
+                            "name": "affinity",
+                            "classifier": "sources",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "4d6dc6c103ab935abdbe87cf7a6bdfcd5fb0c02e"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/openhft/affinity/3.1.11/affinity-3.1.11-sources.jar"
+                        },
+                        {
+                            "name": "affinity",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/openhft/affinity/3.1.11/affinity-3.1.11-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.slf4j",
+                    "name": "slf4j-simple",
+                    "version": "1.7.25",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "slf4j-simple",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "8dacf9514f0c707cbbcdd6fd699e8940d42fb54e"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25.jar"
+                        },
+                        {
+                            "name": "slf4j-simple",
+                            "classifier": "sources",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "af3cd3ad1ea4b08b27b54f12529b4bf343bc5ca1"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25-sources.jar"
+                        },
+                        {
+                            "name": "slf4j-simple",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.github.fommil.netlib",
+                    "name": "native_ref-java",
+                    "version": "1.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "native_ref-java",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/native_ref-java/1.1/native_ref-java-1.1.jar"
+                        },
+                        {
+                            "name": "native_ref-java",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/native_ref-java/1.1/native_ref-java-1.1-sources.jar"
+                        },
+                        {
+                            "name": "native_ref-java",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/native_ref-java/1.1/native_ref-java-1.1-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.github.fommil.netlib",
+                    "name": "native_system-java",
+                    "version": "1.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "native_system-java",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/native_system-java/1.1/native_system-java-1.1.jar"
+                        },
+                        {
+                            "name": "native_system-java",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/native_system-java/1.1/native_system-java-1.1-sources.jar"
+                        },
+                        {
+                            "name": "native_system-java",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/netlib/native_system-java/1.1/native_system-java-1.1-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-xml_2.11",
+                    "version": "1.0.5",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-xml_2.11",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "77ac9be4033768cf03cc04fbd1fc5e5711de2459"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar"
+                        },
+                        {
+                            "name": "scala-xml_2.11",
+                            "classifier": "sources",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "ca7f8ffad89550695d29fdd45d251d2f41447a8c"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5-sources.jar"
+                        },
+                        {
+                            "name": "scala-xml_2.11",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-parser-combinators_2.11",
+                    "version": "1.0.4",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-parser-combinators_2.11",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar"
+                        },
+                        {
+                            "name": "scala-parser-combinators_2.11",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4-sources.jar"
+                        },
+                        {
+                            "name": "scala-parser-combinators_2.11",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.java.dev.jna",
+                    "name": "jna",
+                    "version": "4.2.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "jna",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/4.2.2/jna-4.2.2.jar"
+                        },
+                        {
+                            "name": "jna",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/4.2.2/jna-4.2.2-sources.jar"
+                        },
+                        {
+                            "name": "jna",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/4.2.2/jna-4.2.2-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.java.dev.jna",
+                    "name": "jna-platform",
+                    "version": "4.2.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "jna-platform",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "030fa67b23cf2c0327a02cfaecbef76a20160e7b"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna-platform/4.2.2/jna-platform-4.2.2.jar"
+                        },
+                        {
+                            "name": "jna-platform",
+                            "classifier": "sources",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "19ccc6c91d76b7a35d2a37c84b61ef58eab97c37"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna-platform/4.2.2/jna-platform-4.2.2-sources.jar"
+                        },
+                        {
+                            "name": "jna-platform",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna-platform/4.2.2/jna-platform-4.2.2-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.intellij",
+                    "name": "annotations",
+                    "version": "12.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "annotations",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "bbcf6448f6d40abe506e2c83b70a3e8bfd2b4539"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/intellij/annotations/12.0/annotations-12.0.jar"
+                        },
+                        {
+                            "name": "annotations",
+                            "classifier": "sources",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "4943118f12f706a8820f73529fcb8f5853bc0fed"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/intellij/annotations/12.0/annotations-12.0-sources.jar"
+                        },
+                        {
+                            "name": "annotations",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/intellij/annotations/12.0/annotations-12.0-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.github.oshi",
+                    "name": "oshi-core",
+                    "version": "3.4.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "oshi-core",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "d309ad504b8301df1d14d5ee1b7e6005063cc4df"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/oshi/oshi-core/3.4.0/oshi-core-3.4.0.jar"
+                        },
+                        {
+                            "name": "oshi-core",
+                            "classifier": "sources",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "a4e33f54c202155ed88279df9b482ba8c7628431"
+                            },
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/oshi/oshi-core/3.4.0/oshi-core-3.4.0-sources.jar"
+                        },
+                        {
+                            "name": "oshi-core",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/oshi/oshi-core/3.4.0/oshi-core-3.4.0-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.github.fommil",
+                    "name": "jniloader",
+                    "version": "1.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "jniloader",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/jniloader/1.1/jniloader-1.1.jar"
+                        },
+                        {
+                            "name": "jniloader",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/jniloader/1.1/jniloader-1.1-sources.jar"
+                        },
+                        {
+                            "name": "jniloader",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/fommil/jniloader/1.1/jniloader-1.1-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-compiler",
+                    "version": "2.11.12",
+                    "configurations": "optional",
+                    "artifacts": [
+                        {
+                            "name": "scala-compiler",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12.jar"
+                        },
+                        {
+                            "name": "scala-compiler",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12-sources.jar"
+                        },
+                        {
+                            "name": "scala-compiler",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.11.12",
+                    "configurations": "optional",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12-sources.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "javadoc",
+                            "path": "/root/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12-javadoc.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "test"
+        ]
+    }
+}

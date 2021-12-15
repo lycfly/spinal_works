@@ -1,0 +1,55 @@
+ 
+****************************************
+check_design summary:
+Version:     L-2016.03-SP1
+Date:        Sun Nov 28 21:26:29 2021
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     29
+    Unconnected ports (LINT-28)                                     5
+    Feedthrough (LINT-29)                                          24
+
+Nets                                                                8
+    Unloaded nets (LINT-2)                                          8
+--------------------------------------------------------------------------------
+
+Warning: In design 'cal_phase', net 'net122' driven by pin 'C222/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'net121' driven by pin 'C221/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'dot/net979' driven by pin 'dot/C383/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'dot/net978' driven by pin 'dot/C382/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'cordic/net1301' driven by pin 'cordic/C675/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'cordic/net1300' driven by pin 'cordic/C674/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'cordic/net1299' driven by pin 'cordic/C685/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'cordic/net1298' driven by pin 'cordic/C663/Z' has no loads. (LINT-2)
+Warning: In design 'FloorAndWrap', port 'din[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'FloorAndWrap', port 'din[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'FloorAndWrap', port 'din[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'FloorAndWrap', port 'din[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'FloorAndWrap_8', port 'din[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'FloorAndWrap', input port 'din[10]' is connected directly to output port 'dout[7]'. (LINT-29)
+Warning: In design 'FloorAndWrap', input port 'din[9]' is connected directly to output port 'dout[6]'. (LINT-29)
+Warning: In design 'FloorAndWrap', input port 'din[8]' is connected directly to output port 'dout[5]'. (LINT-29)
+Warning: In design 'FloorAndWrap', input port 'din[7]' is connected directly to output port 'dout[4]'. (LINT-29)
+Warning: In design 'FloorAndWrap', input port 'din[6]' is connected directly to output port 'dout[3]'. (LINT-29)
+Warning: In design 'FloorAndWrap', input port 'din[5]' is connected directly to output port 'dout[2]'. (LINT-29)
+Warning: In design 'FloorAndWrap', input port 'din[4]' is connected directly to output port 'dout[1]'. (LINT-29)
+Warning: In design 'FloorAndWrap', input port 'din[3]' is connected directly to output port 'dout[0]'. (LINT-29)
+Warning: In design 'FloorAndWrap_8', input port 'din[15]' is connected directly to output port 'dout[15]'. (LINT-29)
+Warning: In design 'FloorAndWrap_8', input port 'din[14]' is connected directly to output port 'dout[14]'. (LINT-29)
+Warning: In design 'FloorAndWrap_8', input port 'din[13]' is connected directly to output port 'dout[13]'. (LINT-29)
+Warning: In design 'FloorAndWrap_8', input port 'din[12]' is connected directly to output port 'dout[12]'. (LINT-29)
+Warning: In design 'FloorAndWrap_8', input port 'din[11]' is connected directly to output port 'dout[11]'. (LINT-29)
+Warning: In design 'FloorAndWrap_8', input port 'din[10]' is connected directly to output port 'dout[10]'. (LINT-29)
+Warning: In design 'FloorAndWrap_8', input port 'din[9]' is connected directly to output port 'dout[9]'. (LINT-29)
+Warning: In design 'FloorAndWrap_8', input port 'din[8]' is connected directly to output port 'dout[8]'. (LINT-29)
+Warning: In design 'FloorAndWrap_8', input port 'din[7]' is connected directly to output port 'dout[7]'. (LINT-29)
+Warning: In design 'FloorAndWrap_8', input port 'din[6]' is connected directly to output port 'dout[6]'. (LINT-29)
+Warning: In design 'FloorAndWrap_8', input port 'din[5]' is connected directly to output port 'dout[5]'. (LINT-29)
+Warning: In design 'FloorAndWrap_8', input port 'din[4]' is connected directly to output port 'dout[4]'. (LINT-29)
+Warning: In design 'FloorAndWrap_8', input port 'din[3]' is connected directly to output port 'dout[3]'. (LINT-29)
+Warning: In design 'FloorAndWrap_8', input port 'din[2]' is connected directly to output port 'dout[2]'. (LINT-29)
+Warning: In design 'FloorAndWrap_8', input port 'din[1]' is connected directly to output port 'dout[1]'. (LINT-29)
+Warning: In design 'FloorAndWrap_8', input port 'din[0]' is connected directly to output port 'dout[0]'. (LINT-29)
+1

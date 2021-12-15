@@ -1,0 +1,414 @@
+remove_design -designs
+Removing file 'CLOCK_DFT.db'
+         design 'CLOCK_DFT'
+         design 'CREG'
+         design 'EREG'
+         design 'DREG'
+         design 'BREG'
+         design 'AREG'
+         design 'CLOCK_GEN'
+1
+read CLOCK_DFT.db
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/CLOCK_DFT.db'
+Current design is now '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/CLOCK_DFT.db:CLOCK_DFT'
+{"CLOCK_DFT", "CREG", "EREG", "DREG", "BREG", "AREG", "CLOCK_GEN"}
+
+check_test
+  Loading design 'CLOCK_DFT'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk (45.0,55.0). (TEST-260)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk...
+  ...simulating capture clock falling edge at port clk...
+Information: Clock port clk captures data on both edges. (TEST-135)
+Warning: Pin D of cell dreg/dr_reg[3] (FD1) cannot capture reliably. (TEST-478)
+Information: Cell breg/br_reg[3] launches response data from pin QN at rising edge of clock port clk (pin CP) at time 45.0. (TEST-472)
+Information: Cell dreg/dr_reg[3] captures data on pin D at falling edge of clock port clk (pin CP) at time 55.0. (TEST-473)
+Information: There is a path from breg/br_reg[3] to dreg/dr_reg[3]. (TEST-474)
+Information: The path contains: breg/br_reg[3]/QN, u42/B, u42/Z, u27/B, u27/Z, dreg/dr_reg[3]/D. (TEST-282)
+Information: There are 3 other pins with the same violation. (TEST-170)
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk. (TEST-262)
+Warning: Data can not be captured into cell dreg/dr_reg[0] (FD1). (TEST-310)
+Information: There are 3 other cells with the same violation. (TEST-171)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 8
+**************************************************
+
+CAPTURE VIOLATIONS
+      4 Unreliable capture (data pin) violations (TEST-478)
+      4 Cell does not capture violations (TEST-310)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  4 out of 27 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+   *   4 cells have parallel capture violations
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  23 cells are valid scan cells
+
+1
+preview_scan -show all
+  Loading design 'CLOCK_DFT'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+
+****************************************
+Preview scan report
+For    : 'Insert_scan' command
+Design : CLOCK_DFT
+Version: 1998.02
+Date   : Sat Aug 29 18:20:54 1998
+****************************************
+
+Number of chains: 2
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: no_mix
+
+  (l) shows cell scan-out drives a lockup latch
+  (s) shows cell is a scan segment
+  (t) shows cell has a true scan attribute
+  (w) shows cell scan-out drives a wire
+
+
+Scan chain '1' (test_si1 --> e[3]) contains 19 cells:
+
+  areg/ar_reg[0]                (clk, 45.0, rising)
+  areg/ar_reg[1]                
+  areg/ar_reg[2]                
+  areg/ar_reg[3]                
+  breg/br_reg[0]                
+  breg/br_reg[1]                
+  breg/br_reg[2]                
+  breg/br_reg[3]                
+  clk_inst/COUNT_reg[0]         
+  clk_inst/COUNT_reg[1]         
+  clk_inst/COUNT_reg[2]         
+  clk_inst/COUNT_reg[3]         
+  clk_inst/COUNT_reg[4]         
+  clk_inst/COUNT_reg[5]         
+  clk_inst/INT_CLK_reg          
+  ereg/e_reg[0]                 
+  ereg/e_reg[1]                 
+  ereg/e_reg[2]                 
+  ereg/e_reg[3]                 
+
+  Scan signals:
+    test_scan_out: e[3] (no hookup pin)
+
+
+Scan chain '2' (test_si2 --> d[3]) contains 8 cells:
+
+  creg/cr_reg[0]                (clk, 55.0, falling)
+  creg/cr_reg[1]                
+  creg/cr_reg[2]                
+  creg/cr_reg[3]                
+  dreg/dr_reg[0]                
+  dreg/dr_reg[1]                
+  dreg/dr_reg[2]                
+  dreg/dr_reg[3]                
+
+  Scan signals:
+    test_scan_out: d[3] (no hookup pin)
+
+
+****************************************
+
+No segments
+
+
+****************************************
+
+No cells have scan true
+
+No cells have scan false
+
+
+1
+
+create_clock -name clock1 -period 100 find(port, "clk")
+Performing create_clock on port 'clk'. 
+1
+create_clock -name clock2 -period 100 find(pin, "clk_inst/DIV_CLK")
+Performing create_clock on pin 'clk_inst/DIV_CLK'. 
+1
+
+set_scan_path path1 all_registers(-edge_triggered -clock clock1) -complete true
+Information: Updating design information... (UID-85)
+Performing set_scan_path on cell 'areg/ar_reg[3]'. 
+Performing set_scan_path on cell 'areg/ar_reg[2]'. 
+Performing set_scan_path on cell 'areg/ar_reg[1]'. 
+Performing set_scan_path on cell 'areg/ar_reg[0]'. 
+Performing set_scan_path on cell 'clk_inst/INT_CLK_reg'. 
+Performing set_scan_path on cell 'clk_inst/COUNT_reg[5]'. 
+Performing set_scan_path on cell 'clk_inst/COUNT_reg[4]'. 
+Performing set_scan_path on cell 'clk_inst/COUNT_reg[3]'. 
+Performing set_scan_path on cell 'clk_inst/COUNT_reg[2]'. 
+Performing set_scan_path on cell 'clk_inst/COUNT_reg[1]'. 
+Performing set_scan_path on cell 'clk_inst/COUNT_reg[0]'. 
+Accepted specification for scan chain 'path1'.
+1
+set_scan_path path2
+Accepted specification for scan chain 'path2'.
+1
+set_scan_path path3
+Accepted specification for scan chain 'path3'.
+1
+
+preview_scan -show all
+  Loading design 'CLOCK_DFT'
+  Checking test design rules
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+
+****************************************
+Preview scan report
+For    : 'Insert_scan' command
+Design : CLOCK_DFT
+Version: 1998.02
+Date   : Sat Aug 29 18:20:55 1998
+****************************************
+
+Number of chains: 3
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: no_mix
+
+  (l) shows cell scan-out drives a lockup latch
+  (s) shows cell is a scan segment
+  (t) shows cell has a true scan attribute
+  (w) shows cell scan-out drives a wire
+
+
+Scan chain 'path1' (test_si1 --> test_so1) contains 11 cells:
+
+  areg/ar_reg[3]                (clk, 45.0, rising)
+  areg/ar_reg[2]                
+  areg/ar_reg[1]                
+  areg/ar_reg[0]                
+  clk_inst/INT_CLK_reg          
+  clk_inst/COUNT_reg[5]         
+  clk_inst/COUNT_reg[4]         
+  clk_inst/COUNT_reg[3]         
+  clk_inst/COUNT_reg[2]         
+  clk_inst/COUNT_reg[1]         
+  clk_inst/COUNT_reg[0]         
+
+  No scan signals
+
+
+Scan chain 'path2' (test_si2 --> e[3]) contains 8 cells:
+
+  breg/br_reg[0]                (clk, 45.0, rising)
+  breg/br_reg[1]                
+  breg/br_reg[2]                
+  breg/br_reg[3]                
+  ereg/e_reg[0]                 
+  ereg/e_reg[1]                 
+  ereg/e_reg[2]                 
+  ereg/e_reg[3]                 
+
+  Scan signals:
+    test_scan_out: e[3] (no hookup pin)
+
+
+Scan chain 'path3' (test_si3 --> d[3]) contains 8 cells:
+
+  creg/cr_reg[0]                (clk, 55.0, falling)
+  creg/cr_reg[1]                
+  creg/cr_reg[2]                
+  creg/cr_reg[3]                
+  dreg/dr_reg[0]                
+  dreg/dr_reg[1]                
+  dreg/dr_reg[2]                
+  dreg/dr_reg[3]                
+
+  Scan signals:
+    test_scan_out: d[3] (no hookup pin)
+
+
+****************************************
+
+No segments
+
+
+****************************************
+
+No cells have scan true
+
+No cells have scan false
+
+
+1
+
+insert_scan
+  Loading design 'CLOCK_DFT'
+  Checking test design rules
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+  Inserting Scan Cells
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+  Beginning Mapping Optimizations
+
+                                               TOTAL NEG     DESIGN RULE
+            TRIALS      AREA     DELTA DELAY     SLACK          COST
+           --------    ------    -----------    -------        ------
+	         3
+	   --------
+	         3
+
+  Transferring (new) design 'AREG_test_1' to database 'CLOCK_DFT.db'
+  Transferring (new) design 'BREG_test_1' to database 'CLOCK_DFT.db'
+  Transferring (new) design 'CLOCK_GEN_test_1' to database 'CLOCK_DFT.db'
+  Transferring (new) design 'CREG_test_1' to database 'CLOCK_DFT.db'
+  Transferring (new) design 'DREG_test_1' to database 'CLOCK_DFT.db'
+  Transferring (new) design 'EREG_test_1' to database 'CLOCK_DFT.db'
+  Transferring design 'CLOCK_DFT' to database 'CLOCK_DFT.db'
+
+Warning: Deleting current test program 'pass2' because it is not consistent with the current design. (TPM-40)
+1
+
+check_test
+  Loading design 'CLOCK_DFT'
+
+Information: Starting test design rule checking for existing scan design. (TEST-220)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk (45.0,55.0). (TEST-260)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...27 bits scanned-in to 27 cells (total scan-in 27)...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk...
+  ...simulating capture clock falling edge at port clk...
+Information: Clock port clk captures data on both edges. (TEST-135)
+Warning: Pin D of cell dreg/dr_reg[3] (FD1S) cannot capture reliably. (TEST-478)
+Information: Cell breg/br_reg[3] launches response data from pin QN at rising edge of clock port clk (pin CP) at time 45.0. (TEST-472)
+Information: Cell dreg/dr_reg[3] captures data on pin D at falling edge of clock port clk (pin CP) at time 55.0. (TEST-473)
+Information: There is a path from breg/br_reg[3] to dreg/dr_reg[3]. (TEST-474)
+Information: The path contains: breg/br_reg[3]/QN, u42/B, u42/Z, u27/B, u27/Z, dreg/dr_reg[3]/D. (TEST-282)
+Information: There are 3 other pins with the same violation. (TEST-170)
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk. (TEST-262)
+  ...simulating parallel vector...
+Warning: Data can not be captured into cell dreg/dr_reg[3] (FD1S). (TEST-310)
+Information: There are 3 other cells with the same violation. (TEST-171)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...data scanned-out from 24 cells (total scan-out 27)...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 8
+**************************************************
+
+CAPTURE VIOLATIONS
+      4 Unreliable capture (data pin) violations (TEST-478)
+      4 Cell does not capture violations (TEST-310)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  4 out of 27 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+   *   4 cells have parallel capture violations
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  23 cells are valid scan cells
+
+1
+report_test -scan_path
+ 
+****************************************
+Report : test
+          -scan_path
+Design : CLOCK_DFT
+Version: 1998.02
+Date   : Sat Aug 29 18:20:59 1998
+****************************************
+
+  (*) indicates change of polarity in scan data
+  (c) indicates cell is scan controllable only
+  (o) indicates cell is scan observable only
+  (x) indicates cell cannot capture
+
+Complete scan chain #1 (test_si1 --> test_so1) contains 11 cells:
+
+  test_si1	->
+  areg/ar_reg[3] (*)	->
+  areg/ar_reg[2] (*)	->
+  areg/ar_reg[1] (*)	->
+  areg/ar_reg[0] (*)	->
+  clk_inst/INT_CLK_reg	->
+  clk_inst/COUNT_reg[5] (*)	->
+  clk_inst/COUNT_reg[4] (*)	->
+  clk_inst/COUNT_reg[3] (*)	->
+  clk_inst/COUNT_reg[2] (*)	->
+  clk_inst/COUNT_reg[1] (*)	->
+  clk_inst/COUNT_reg[0] (*)	->
+  test_so1
+
+Complete scan chain #2 (test_si2 --> e[3]) contains 8 cells:
+
+  test_si2	->
+  breg/br_reg[0] (*)	->
+  breg/br_reg[1] (*)	->
+  breg/br_reg[2] (*)	->
+  breg/br_reg[3]	->
+  ereg/e_reg[0]	->
+  ereg/e_reg[1]	->
+  ereg/e_reg[2]	->
+  ereg/e_reg[3]	->
+  e[3]
+
+Complete scan chain #3 (test_si3 --> d[3]) contains 8 cells:
+
+  test_si3	->
+  creg/cr_reg[0] (*)	->
+  creg/cr_reg[1] (*)	->
+  creg/cr_reg[2] (*)	->
+  creg/cr_reg[3] (*)	->
+  dreg/dr_reg[0] (*) (x)	->
+  dreg/dr_reg[1] (*) (x)	->
+  dreg/dr_reg[2] (*) (x)	->
+  dreg/dr_reg[3] (x)	->
+  d[3]
+
+1

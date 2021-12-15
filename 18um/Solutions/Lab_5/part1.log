@@ -1,0 +1,1058 @@
+remove_design -designs
+1
+read TOP_HIER.db
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/TOP_HIER.db'
+Current design is now '/remote/trg1/dickhoff/NEW_TC_LABS/TC/DB/TOP_HIER.db:TOP_HIER'
+{"TOP_HIER", "DDES", "CDES", "BDES", "ADES"}
+
+current_design TOP_HIER
+Current design is 'TOP_HIER'.
+{"TOP_HIER"}
+
+check_test
+Loading db file '/remote/trg1/dickhoff/NEW_TC_LABS/TC/Lib/workshop_lib.db'
+Loading db file '/remote/release/1998.02/libraries/syn/gtech.db'
+Loading db file '/remote/release/1998.02/libraries/syn/standard.sldb'
+  Loading target library 'workshop_lib'
+Warning: Multibit library cell 'LD1X4P' will not be used in multibit optimization. (OPT-918)
+Warning: Multibit library cell 'LD1X4' will not be used in multibit optimization. (OPT-918)
+  Loading design 'TOP_HIER'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk1 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port clk2 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port clk3 (45.0,55.0). (TEST-260)
+Warning: Net bidi[4], connected to bidirectional port bidi[4], has three-state driver(s) with unknown mode during scan shift. (TEST-563)
+Information: Because the three-state cell U14 is unknown due to the following input pin values: E = x. (TEST-552)
+Information: Bidirectional port bidi[4] is inferred as X (Input don't care value) during scan shift due to scan configuration specification. (TEST-565)
+Information: There are 3 other nets with the same violation. (TEST-289)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk1...
+  ...simulating capture clock rising edge at port clk2...
+  ...simulating capture clock rising edge at port clk3...
+  ...simulating capture clock falling edge at port clk1...
+Information: Clock port clk1 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk2...
+Information: Clock port clk2 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk3...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk1. (TEST-262)
+Information: Inferred capture clock group : clk2. (TEST-262)
+Information: Inferred capture clock group : clk3. (TEST-262)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 4
+**************************************************
+
+PROTOCOL VIOLATIONS
+      4 net (connected to bidirectional port) with unknown 3-state driver mode violations (TEST-563)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  0 out of 26 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  26 cells are valid scan cells
+
+1
+preview_scan -show {scan_clocks, cells}
+  Loading design 'TOP_HIER'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+
+****************************************
+Preview scan report
+For    : 'Insert_scan' command
+Design : TOP_HIER
+Version: 1998.02
+Date   : Sat Aug 29 18:39:14 1998
+****************************************
+
+Number of chains: 5
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: no_mix
+
+  (l) shows cell scan-out drives a lockup latch
+  (s) shows cell is a scan segment
+  (w) shows cell scan-out drives a wire
+
+
+Scan chain '1' (test_si1 --> test_so1) contains 9 cells:
+
+  instA/sh1_reg                 (clk1, 45.0, rising)
+  instA/sh2_reg                 
+  instA/sh3_reg                 
+  instA/sh4_reg                 
+  instA/zr_reg                  
+  instB/d2_reg[1]               
+  instB/d2_reg[2]               
+  instB/d2_reg[3]               
+  instB/d2_reg[4]               
+
+
+Scan chain '2' (test_si2 --> test_so2) contains 2 cells:
+
+  instC/a1r_reg                 (clk2, 45.0, rising)
+  instC/a2r_reg                 
+
+
+Scan chain '3' (test_si3 --> test_so3) contains 4 cells:
+
+  instD/r1_reg[1]               (clk2, 55.0, falling)
+  instD/r1_reg[2]               
+  instD/r1_reg[3]               
+  instD/r1_reg[4]               
+
+
+Scan chain '4' (test_si4 --> test_so4) contains 6 cells:
+
+  instB/d1_reg[1]               (clk3, 45.0, rising)
+  instB/d1_reg[2]               
+  instB/d1_reg[3]               
+  instB/d1_reg[4]               
+  instC/yr_reg                  
+  instC/zr_reg                  
+
+
+Scan chain '5' (test_si5 --> test_so5) contains 5 cells:
+
+  instB/en_reg                  (clk1, 55.0, falling)
+  instD/r2_reg[1]               
+  instD/r2_reg[2]               
+  instD/r2_reg[3]               
+  instD/r2_reg[4]               
+
+
+1
+
+set_scan_configuration -clock_mixing mix_edges
+Accepted scan specification for design 'TOP_HIER'.
+1
+preview_scan -show {scan_clocks, cells}
+  Loading design 'TOP_HIER'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+
+****************************************
+Preview scan report
+For    : 'Insert_scan' command
+Design : TOP_HIER
+Version: 1998.02
+Date   : Sat Aug 29 18:39:15 1998
+****************************************
+
+Number of chains: 3
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: mix_edges
+
+  (l) shows cell scan-out drives a lockup latch
+  (s) shows cell is a scan segment
+  (w) shows cell scan-out drives a wire
+
+
+Scan chain '1' (test_si1 --> test_so1) contains 14 cells:
+
+  instB/en_reg                  (clk1, 55.0, falling)
+  instD/r2_reg[1]               
+  instD/r2_reg[2]               
+  instD/r2_reg[3]               
+  instD/r2_reg[4]               
+  instA/sh1_reg                 (clk1, 45.0, rising)
+  instA/sh2_reg                 
+  instA/sh3_reg                 
+  instA/sh4_reg                 
+  instA/zr_reg                  
+  instB/d2_reg[1]               
+  instB/d2_reg[2]               
+  instB/d2_reg[3]               
+  instB/d2_reg[4]               
+
+
+Scan chain '2' (test_si2 --> test_so2) contains 6 cells:
+
+  instB/d1_reg[1]               (clk3, 45.0, rising)
+  instB/d1_reg[2]               
+  instB/d1_reg[3]               
+  instB/d1_reg[4]               
+  instC/yr_reg                  
+  instC/zr_reg                  
+
+
+Scan chain '3' (test_si3 --> test_so3) contains 6 cells:
+
+  instD/r1_reg[1]               (clk2, 55.0, falling)
+  instD/r1_reg[2]               
+  instD/r1_reg[3]               
+  instD/r1_reg[4]               
+  instC/a1r_reg                 (clk2, 45.0, rising)
+  instC/a2r_reg                 
+
+
+1
+
+set_scan_configuration -clock_mixing mix_clocks
+Accepted scan specification for design 'TOP_HIER'.
+1
+set_scan_configuration -chain_count 3
+Accepted scan specification for design 'TOP_HIER'.
+1
+preview_scan -show {scan_clocks, cells}
+  Loading design 'TOP_HIER'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+
+****************************************
+Preview scan report
+For    : 'Insert_scan' command
+Design : TOP_HIER
+Version: 1998.02
+Date   : Sat Aug 29 18:39:15 1998
+****************************************
+
+Number of chains: 3
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: mix_clocks
+
+  (l) shows cell scan-out drives a lockup latch
+  (s) shows cell is a scan segment
+  (w) shows cell scan-out drives a wire
+
+
+Scan chain '1' (test_si1 --> test_so1) contains 9 cells:
+
+  instB/en_reg                  (clk1, 55.0, falling)
+  instD/r2_reg[1]               
+  instD/r2_reg[2]               
+  instD/r2_reg[3]               
+  instD/r2_reg[4] (l)           
+  instD/r1_reg[1]               (clk2, 55.0, falling)
+  instD/r1_reg[2]               
+  instD/r1_reg[3]               
+  instD/r1_reg[4]               
+
+
+Scan chain '2' (test_si2 --> test_so2) contains 9 cells:
+
+  instA/sh1_reg                 (clk1, 45.0, rising)
+  instA/sh2_reg                 
+  instA/sh3_reg                 
+  instA/sh4_reg                 
+  instA/zr_reg                  
+  instB/d2_reg[1]               
+  instB/d2_reg[2]               
+  instB/d2_reg[3]               
+  instB/d2_reg[4]               
+
+
+Scan chain '3' (test_si3 --> test_so3) contains 8 cells:
+
+  instC/a1r_reg                 (clk2, 45.0, rising)
+  instC/a2r_reg (l)             
+  instB/d1_reg[1]               (clk3, 45.0, rising)
+  instB/d1_reg[2]               
+  instB/d1_reg[3]               
+  instB/d1_reg[4]               
+  instC/yr_reg                  
+  instC/zr_reg                  
+
+
+1
+
+set_scan_configuration -add_lockup false
+Accepted scan specification for design 'TOP_HIER'.
+1
+preview_scan -show {scan_clocks, cells}
+  Loading design 'TOP_HIER'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+
+****************************************
+Preview scan report
+For    : 'Insert_scan' command
+Design : TOP_HIER
+Version: 1998.02
+Date   : Sat Aug 29 18:39:15 1998
+****************************************
+
+Number of chains: 3
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: mix_clocks
+
+  (l) shows cell scan-out drives a lockup latch
+  (s) shows cell is a scan segment
+  (w) shows cell scan-out drives a wire
+
+
+Scan chain '1' (test_si1 --> test_so1) contains 9 cells:
+
+  instB/en_reg                  (clk1, 55.0, falling)
+  instD/r2_reg[1]               
+  instD/r2_reg[2]               
+  instD/r2_reg[3]               
+  instD/r2_reg[4]               
+  instD/r1_reg[1]               (clk2, 55.0, falling)
+  instD/r1_reg[2]               
+  instD/r1_reg[3]               
+  instD/r1_reg[4]               
+
+
+Scan chain '2' (test_si2 --> test_so2) contains 9 cells:
+
+  instA/sh1_reg                 (clk1, 45.0, rising)
+  instA/sh2_reg                 
+  instA/sh3_reg                 
+  instA/sh4_reg                 
+  instA/zr_reg                  
+  instB/d2_reg[1]               
+  instB/d2_reg[2]               
+  instB/d2_reg[3]               
+  instB/d2_reg[4]               
+
+
+Scan chain '3' (test_si3 --> test_so3) contains 8 cells:
+
+  instC/a1r_reg                 (clk2, 45.0, rising)
+  instC/a2r_reg                 
+  instB/d1_reg[1]               (clk3, 45.0, rising)
+  instB/d1_reg[2]               
+  instB/d1_reg[3]               
+  instB/d1_reg[4]               
+  instC/yr_reg                  
+  instC/zr_reg                  
+
+
+1
+
+set_scan_segment shift -access \
+	{test_scan_in,  instA/sh1_reg/D, \
+	 test_scan_out, instA/sh4_reg/Q} \
+	-contains {"instA/sh*reg"}
+Performing set_scan_segment on cell 'instA/sh1_reg'. 
+Performing set_scan_segment on cell 'instA/sh3_reg'. 
+Performing set_scan_segment on cell 'instA/sh2_reg'. 
+Performing set_scan_segment on cell 'instA/sh4_reg'. 
+Performing set_scan_segment on pin 'instA/sh1_reg/D'. 
+Performing set_scan_segment on pin 'instA/sh4_reg/Q'. 
+Accepted specification for scan segment 'shift'.
+1
+preview_scan -show all
+  Loading design 'TOP_HIER'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+
+****************************************
+Preview scan report
+For    : 'Insert_scan' command
+Design : TOP_HIER
+Version: 1998.02
+Date   : Sat Aug 29 18:39:16 1998
+****************************************
+
+Number of chains: 3
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: mix_clocks
+
+  (l) shows cell scan-out drives a lockup latch
+  (s) shows cell is a scan segment
+  (t) shows cell has a true scan attribute
+  (w) shows cell scan-out drives a wire
+
+
+Scan chain '1' (test_si1 --> test_so1) contains 9 cells:
+
+  instB/en_reg                  (clk1, 55.0, falling)
+  instD/r2_reg[1]               
+  instD/r2_reg[2]               
+  instD/r2_reg[3]               
+  instD/r2_reg[4]               
+  shift (s)                     (clk1, 45.0, rising)
+
+  No scan signals
+
+
+Scan chain '2' (test_si2 --> test_so2) contains 9 cells:
+
+  instD/r1_reg[1]               (clk2, 55.0, falling)
+  instD/r1_reg[2]               
+  instD/r1_reg[3]               
+  instD/r1_reg[4]               
+  instA/zr_reg                  (clk1, 45.0, rising)
+  instB/d2_reg[1]               
+  instB/d2_reg[2]               
+  instB/d2_reg[3]               
+  instB/d2_reg[4]               
+
+  No scan signals
+
+
+Scan chain '3' (test_si3 --> test_so3) contains 8 cells:
+
+  instC/a1r_reg                 (clk2, 45.0, rising)
+  instC/a2r_reg                 
+  instB/d1_reg[1]               (clk3, 45.0, rising)
+  instB/d1_reg[2]               
+  instB/d1_reg[3]               
+  instB/d1_reg[4]               
+  instC/yr_reg                  
+  instC/zr_reg                  
+
+  No scan signals
+
+
+****************************************
+
+Number of segments: 1
+
+
+Scan segment 'shift' (instA/sh1_reg/D --> instA/sh4_reg/Q) contains 4 cells:
+
+  instA/sh1_reg                 (clk1, 45.0, rising)
+  instA/sh3_reg                 
+  instA/sh2_reg                 
+  instA/sh4_reg                 
+
+  No other access pins
+
+
+****************************************
+
+No cells have scan true
+
+No cells have scan false
+
+
+1
+
+preview_scan -script > scan.scr
+1
+include ../Solutions/Lab_6/scan.scr
+/*Warning: Violations occurred during test design rule checking. (TEST-124)
+*/
+
+
+/******************************************************
+
+  Created by preview_scan() on Sat Aug 29 15:14:00 1998
+
+******************************************************/
+
+
+set_scan_path path1 -dedicated_scan_out false { \
+  instB/en_reg \
+  instD/r2_reg[1] \
+  instD/r2_reg[2] \
+  instD/r2_reg[3] \
+  instD/r2_reg[4] \
+  shift \
+}
+Performing set_scan_path on cell 'instB/en_reg'. 
+Performing set_scan_path on cell 'instD/r2_reg[1]'. 
+Performing set_scan_path on cell 'instD/r2_reg[2]'. 
+Performing set_scan_path on cell 'instD/r2_reg[3]'. 
+Performing set_scan_path on cell 'instD/r2_reg[4]'. 
+Accepted specification for scan chain 'path1'.
+1
+
+set_scan_path path2 -dedicated_scan_out false { \
+  instD/r1_reg[4] \
+  instD/r1_reg[3] \
+  instD/r1_reg[2] \
+  instD/r1_reg[1] \
+  instA/zr_reg \
+  instB/d2_reg[1] \
+  instB/d2_reg[2] \
+  instB/d2_reg[3] \
+  instB/d2_reg[4] \
+}
+Performing set_scan_path on cell 'instD/r1_reg[4]'. 
+Performing set_scan_path on cell 'instD/r1_reg[3]'. 
+Performing set_scan_path on cell 'instD/r1_reg[2]'. 
+Performing set_scan_path on cell 'instD/r1_reg[1]'. 
+Performing set_scan_path on cell 'instA/zr_reg'. 
+Performing set_scan_path on cell 'instB/d2_reg[1]'. 
+Performing set_scan_path on cell 'instB/d2_reg[2]'. 
+Performing set_scan_path on cell 'instB/d2_reg[3]'. 
+Performing set_scan_path on cell 'instB/d2_reg[4]'. 
+Accepted specification for scan chain 'path2'.
+1
+
+set_scan_path path3 -dedicated_scan_out false { \
+  instC/a1r_reg \
+  instC/a2r_reg \
+  instB/d1_reg[1] \
+  instB/d1_reg[2] \
+  instB/d1_reg[3] \
+  instB/d1_reg[4] \
+  instC/yr_reg \
+  instC/zr_reg \
+}
+Performing set_scan_path on cell 'instC/a1r_reg'. 
+Performing set_scan_path on cell 'instC/a2r_reg'. 
+Performing set_scan_path on cell 'instB/d1_reg[1]'. 
+Performing set_scan_path on cell 'instB/d1_reg[2]'. 
+Performing set_scan_path on cell 'instB/d1_reg[3]'. 
+Performing set_scan_path on cell 'instB/d1_reg[4]'. 
+Performing set_scan_path on cell 'instC/yr_reg'. 
+Performing set_scan_path on cell 'instC/zr_reg'. 
+Accepted specification for scan chain 'path3'.
+1
+
+1
+preview_scan -show all
+  Loading design 'TOP_HIER'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+
+****************************************
+Preview scan report
+For    : 'Insert_scan' command
+Design : TOP_HIER
+Version: 1998.02
+Date   : Sat Aug 29 18:39:16 1998
+****************************************
+
+Number of chains: 3
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: mix_clocks
+
+  (l) shows cell scan-out drives a lockup latch
+  (s) shows cell is a scan segment
+  (t) shows cell has a true scan attribute
+  (w) shows cell scan-out drives a wire
+
+
+Scan chain 'path1' (test_si1 --> test_so1) contains 9 cells:
+
+  instB/en_reg                  (clk1, 55.0, falling)
+  instD/r2_reg[1]               
+  instD/r2_reg[2]               
+  instD/r2_reg[3]               
+  instD/r2_reg[4]               
+  shift (s)                     (clk1, 45.0, rising)
+
+  No scan signals
+
+
+Scan chain 'path2' (test_si2 --> test_so2) contains 9 cells:
+
+  instD/r1_reg[4]               (clk2, 55.0, falling)
+  instD/r1_reg[3]               
+  instD/r1_reg[2]               
+  instD/r1_reg[1]               
+  instA/zr_reg                  (clk1, 45.0, rising)
+  instB/d2_reg[1]               
+  instB/d2_reg[2]               
+  instB/d2_reg[3]               
+  instB/d2_reg[4]               
+
+  No scan signals
+
+
+Scan chain 'path3' (test_si3 --> test_so3) contains 8 cells:
+
+  instC/a1r_reg                 (clk2, 45.0, rising)
+  instC/a2r_reg                 
+  instB/d1_reg[1]               (clk3, 45.0, rising)
+  instB/d1_reg[2]               
+  instB/d1_reg[3]               
+  instB/d1_reg[4]               
+  instC/yr_reg                  
+  instC/zr_reg                  
+
+  No scan signals
+
+
+****************************************
+
+Number of segments: 1
+
+
+Scan segment 'shift' (instA/sh1_reg/D --> instA/sh4_reg/Q) contains 4 cells:
+
+  instA/sh1_reg                 (clk1, 45.0, rising)
+  instA/sh3_reg                 
+  instA/sh2_reg                 
+  instA/sh4_reg                 
+
+  No other access pins
+
+
+****************************************
+
+No cells have scan true
+
+No cells have scan false
+
+
+1
+
+set_scan_signal test_scan_in  -port b1[1] -chain path1
+Performing set_scan_signal on port 'b1[1]'. 
+Accepted scan signal specification.
+1
+set_scan_signal test_scan_out -port d1[1] -chain path1
+Performing set_scan_signal on port 'd1[1]'. 
+Accepted scan signal specification.
+1
+set_scan_signal test_scan_in  -port b1[2] -chain path2
+Performing set_scan_signal on port 'b1[2]'. 
+Accepted scan signal specification.
+1
+set_scan_signal test_scan_out -port d1[2] -chain path2
+Performing set_scan_signal on port 'd1[2]'. 
+Accepted scan signal specification.
+1
+set_scan_signal test_scan_in  -port b1[3] -chain path3
+Performing set_scan_signal on port 'b1[3]'. 
+Accepted scan signal specification.
+1
+set_scan_signal test_scan_out -port d1[3] -chain path3
+Performing set_scan_signal on port 'd1[3]'. 
+Accepted scan signal specification.
+1
+set_scan_signal test_scan_enable -port test_se -hookup sebuf/Z
+Performing set_scan_signal on port 'test_se'. 
+Performing set_scan_signal on pin 'sebuf/Z'. 
+Accepted scan signal specification.
+1
+
+preview_scan -show all
+  Loading design 'TOP_HIER'
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+
+****************************************
+Preview scan report
+For    : 'Insert_scan' command
+Design : TOP_HIER
+Version: 1998.02
+Date   : Sat Aug 29 18:39:17 1998
+****************************************
+
+Number of chains: 3
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: mix_clocks
+Scan enable: test_se (hookup pin: sebuf/Z, sense: non_inverted)
+
+  (l) shows cell scan-out drives a lockup latch
+  (s) shows cell is a scan segment
+  (t) shows cell has a true scan attribute
+  (w) shows cell scan-out drives a wire
+
+
+Scan chain 'path1' (b1[1] --> d1[1]) contains 9 cells:
+
+  instB/en_reg                  (clk1, 55.0, falling)
+  instD/r2_reg[1]               
+  instD/r2_reg[2]               
+  instD/r2_reg[3]               
+  instD/r2_reg[4]               
+  shift (s)                     (clk1, 45.0, rising)
+
+  Scan signals:
+    test_scan_in: b1[1] (no hookup pin)
+    test_scan_out: d1[1] (no hookup pin)
+
+
+Scan chain 'path2' (b1[2] --> d1[2]) contains 9 cells:
+
+  instD/r1_reg[4]               (clk2, 55.0, falling)
+  instD/r1_reg[3]               
+  instD/r1_reg[2]               
+  instD/r1_reg[1]               
+  instA/zr_reg                  (clk1, 45.0, rising)
+  instB/d2_reg[1]               
+  instB/d2_reg[2]               
+  instB/d2_reg[3]               
+  instB/d2_reg[4]               
+
+  Scan signals:
+    test_scan_in: b1[2] (no hookup pin)
+    test_scan_out: d1[2] (no hookup pin)
+
+
+Scan chain 'path3' (b1[3] --> d1[3]) contains 8 cells:
+
+  instC/a1r_reg                 (clk2, 45.0, rising)
+  instC/a2r_reg                 
+  instB/d1_reg[1]               (clk3, 45.0, rising)
+  instB/d1_reg[2]               
+  instB/d1_reg[3]               
+  instB/d1_reg[4]               
+  instC/yr_reg                  
+  instC/zr_reg                  
+
+  Scan signals:
+    test_scan_in: b1[3] (no hookup pin)
+    test_scan_out: d1[3] (no hookup pin)
+
+
+****************************************
+
+Number of segments: 1
+
+
+Scan segment 'shift' (instA/sh1_reg/D --> instA/sh4_reg/Q) contains 4 cells:
+
+  instA/sh1_reg                 (clk1, 45.0, rising)
+  instA/sh3_reg                 
+  instA/sh2_reg                 
+  instA/sh4_reg                 
+
+  No other access pins
+
+
+****************************************
+
+No cells have scan true
+
+No cells have scan false
+
+
+1
+
+set_scan_configuration -bidi_mode input
+Accepted scan specification for design 'TOP_HIER'.
+1
+check_test
+  Loading design 'TOP_HIER'
+
+Information: Starting test design rule checking. (TEST-222)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk1 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port clk2 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port clk3 (45.0,55.0). (TEST-260)
+Warning: Net bidi[4], connected to bidirectional port bidi[4], has three-state driver(s) with unknown mode during scan shift. (TEST-563)
+Information: Because the three-state cell U14 is unknown due to the following input pin values: E = x. (TEST-552)
+Information: Bidirectional port bidi[4] is inferred as X (Input don't care value) during scan shift due to scan configuration specification. (TEST-565)
+Information: There are 3 other nets with the same violation. (TEST-289)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk1...
+  ...simulating capture clock rising edge at port clk2...
+  ...simulating capture clock rising edge at port clk3...
+  ...simulating capture clock falling edge at port clk1...
+Information: Clock port clk1 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk2...
+Information: Clock port clk2 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk3...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk1. (TEST-262)
+Information: Inferred capture clock group : clk2. (TEST-262)
+Information: Inferred capture clock group : clk3. (TEST-262)
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 4
+**************************************************
+
+PROTOCOL VIOLATIONS
+      4 net (connected to bidirectional port) with unknown 3-state driver mode violations (TEST-563)
+
+
+**************************************************
+  Sequential Cell Summary
+
+  0 out of 26 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  26 cells are valid scan cells
+
+1
+
+insert_scan
+  Loading design 'TOP_HIER'
+Warning: In design 'TOP_HIER', there is 1 cell that doesn't drive any nets. (LINT-30)
+
+Information: Use the 'check_design' command for 
+	 more information about warnings. (LINT-99)
+
+  Using test design rule information from previous check_test run
+Warning: Violations occurred during test design rule checking. (TEST-124)
+  Architecting Scan Chains
+  Inserting Scan Cells
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+  Transferring (new) design 'ADES_test_1' to database 'TOP_HIER.db'
+  Transferring (new) design 'BDES_test_1' to database 'TOP_HIER.db'
+  Transferring (new) design 'CDES_test_1' to database 'TOP_HIER.db'
+  Transferring (new) design 'DDES_test_1' to database 'TOP_HIER.db'
+  Transferring design 'TOP_HIER' to database 'TOP_HIER.db'
+
+1
+check_test
+  Loading design 'TOP_HIER'
+
+Information: Starting test design rule checking for existing scan design. (TEST-220)
+  ...full scan rules enabled...
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking combinational feedback loops...
+  ...inferring test protocol...
+Information: Inferred system/test clock port clk1 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port clk2 (45.0,55.0). (TEST-260)
+Information: Inferred system/test clock port clk3 (45.0,55.0). (TEST-260)
+  ...simulating parallel vector...
+  ...simulating parallel vector...
+  ...simulating serial scan-in...
+  ...26 bits scanned-in to 26 cells (total scan-in 26)...
+  ...simulating parallel vector...
+  ...binding scan-in state...
+  ...simulating parallel vector...
+  ...simulating capture clock rising edge at port clk1...
+  ...simulating capture clock rising edge at port clk2...
+  ...simulating capture clock rising edge at port clk3...
+  ...simulating capture clock falling edge at port clk1...
+Information: Clock port clk1 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk2...
+Information: Clock port clk2 captures data on both edges. (TEST-135)
+  ...simulating capture clock falling edge at port clk3...
+  ...creating capture clock groups...
+Information: Inferred capture clock group : clk1. (TEST-262)
+Information: Inferred capture clock group : clk2. (TEST-262)
+Information: Inferred capture clock group : clk3. (TEST-262)
+  ...simulating parallel vector...
+  ...binding scan-out state...
+  ...simulating serial scan-out...
+  ...data scanned-out from 23 cells (total scan-out 26)...
+  ...simulating parallel vector...
+Information: Test design rule checking completed. (TEST-123)
+
+**************************************************
+  Test Design Rule Violation Summary
+
+  Total violations: 0
+**************************************************
+
+
+
+**************************************************
+  Sequential Cell Summary
+
+  0 out of 26 sequential cells have violations
+**************************************************
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+   *  26 cells are valid scan cells
+
+1
+report_test -scan_path
+ 
+****************************************
+Report : test
+          -scan_path
+Design : TOP_HIER
+Version: 1998.02
+Date   : Sat Aug 29 18:39:22 1998
+****************************************
+
+  (*) indicates change of polarity in scan data
+  (c) indicates cell is scan controllable only
+  (o) indicates cell is scan observable only
+  (x) indicates cell cannot capture
+
+Complete scan chain #1 (b1[1] --> d1[1]) contains 9 cells:
+
+  b1[1]	->
+  instB/en_reg	->
+  instD/r2_reg[1]	->
+  instD/r2_reg[2]	->
+  instD/r2_reg[3]	->
+  instD/r2_reg[4]	->
+  instA/sh1_reg	->
+  instA/sh2_reg	->
+  instA/sh3_reg	->
+  instA/sh4_reg	->
+  d1[1]
+
+Complete scan chain #2 (b1[2] --> d1[2]) contains 9 cells:
+
+  b1[2]	->
+  instD/r1_reg[4]	->
+  instD/r1_reg[3]	->
+  instD/r1_reg[2]	->
+  instD/r1_reg[1]	->
+  instA/zr_reg	->
+  instB/d2_reg[1]	->
+  instB/d2_reg[2]	->
+  instB/d2_reg[3]	->
+  instB/d2_reg[4]	->
+  d1[2]
+
+Complete scan chain #3 (b1[3] --> d1[3]) contains 8 cells:
+
+  b1[3]	->
+  instC/a1r_reg	->
+  instC/a2r_reg	->
+  instB/d1_reg[1]	->
+  instB/d1_reg[2]	->
+  instB/d1_reg[3]	->
+  instB/d1_reg[4]	->
+  instC/yr_reg	->
+  instC/zr_reg	->
+  d1[3]
+
+1
+
+create_test_patterns
+  Loading design 'TOP_HIER'
+  Using test design rule information from previous check_test run
+  Building test generation network
+Information: Faults on unused cell outputs are not considered, e.g. pin QN of cell instD/r1_reg[1] (FD1S). (TEST-200)
+
+  Combinational Test Pattern Generation starts:
+
+    Start random pattern generation...
+
+       84.70% faults processed ; cumulative fault coverage =  84.70%
+       89.44% faults processed ; cumulative fault coverage =  89.44%
+       91.07% faults processed ; cumulative fault coverage =  91.07%
+       91.44% faults processed ; cumulative fault coverage =  91.44%
+       92.53% faults processed ; cumulative fault coverage =  92.53%
+       93.08% faults processed ; cumulative fault coverage =  93.08%
+
+    ...End random pattern generation
+
+    Start deterministic pattern generation...
+
+      100.00% faults processed ; cumulative fault coverage =  97.81%
+
+    ...End deterministic pattern generation
+
+
+                                Non-collapsed     Collapsed
+    No. of detected faults      786               537
+    No. of abandoned faults     0                 0
+    No. of tied faults          0                 0
+    No. of redundant faults     0                 0
+    No. of untested faults      14                12
+    Total no. of faults         800               549
+    Fault coverage              98.25             97.81
+
+    No. of test patterns         44
+
+    Test Generation Time (CPU)  1.00 sec
+
+    Start compaction...
+
+    ...End compaction
+
+    No. of compacted patterns    39
+
+    Compaction Time (CPU)       0.00 sec
+...Writing test program TOP_HIER to file /remote/trg1/dickhoff/NEW_TC_LABS/TC/Lab_6/TOP_HIER.vdb
+1
+report_test -coverage -faults -class untested
+ 
+****************************************
+Report : test
+          -coverage
+          -faults (untested)
+Design : TOP_HIER
+Version: 1998.02
+Date   : Sat Aug 29 18:39:25 1998
+****************************************
+
+Test program : `TOP_HIER' 
+Depends on   : 
+
+Fault Coverage Report :
+
+    Detect   : Number of faults Detected
+    Aband    : Number of faults Abandoned
+    Tied     : Number of faults Tied High or Low
+    Redun    : Number of faults Redundant
+    Untest   : Number of faults Untested
+    Probl    : Number of faults Probably Detected
+    Unpro    : Number of faults Hyperactive/Oscillating
+    Total    : Number of faults Total
+    Coverage : Detect / (Total - Tied - Redund)
+
+Design/Cell          Detect  Aband  Tied Redun Untest Probl Unpro Total Coverage
+--------------------------------------------------------------------------------
+instA                    84      0     0     0      0     0     0     84 100.00%
+instB                   202      0     0     0      0     0     0    202 100.00%
+instC                    86      0     0     0      0     0     0     86 100.00%
+instD                   292      0     0     0      0     0     0    292 100.00%
+TOP_HIER                786      0     0     0     14     0     0    800  98.25%
+
+Test program : `TOP_HIER' 
+Depends on   : 
+
+Faults:
+
+ s-a-0 : stuck at 0 fault
+ s-a-1 : stuck at 1 fault
+
+  TOP_HIER:
+    Untested:
+      U11/E pin s-a-0 & s-a-1
+      U12/E pin s-a-0 & s-a-1
+      U13/E pin s-a-0 & s-a-1
+      U14/E pin s-a-0 & s-a-1
+      U18/A pin s-a-0 & s-a-1
+      U18/B pin s-a-0 & s-a-1
+      U18/Z pin s-a-0 & s-a-1
+
+1
+
+remove_design -designs
+Removing file 'TOP_HIER.db'
+         design 'TOP_HIER'
+         design 'DDES'
+         design 'CDES'
+         design 'BDES'
+         design 'ADES'
+         design 'ADES_test_1'
+         design 'BDES_test_1'
+         design 'CDES_test_1'
+         design 'DDES_test_1'
+1

@@ -1,0 +1,26 @@
+/************************************************/
+/* FIVE_REG BLOCK                               */
+/* TetraMAX Export Script                       */
+/*                                              */
+/* File: TASK_11.dc                             */
+/* Path: <DFTW>/Lab_03                          */
+/*                                              */
+/************************************************/
+
+/* RECHECK FAULT COVERAGE */
+   current_design FIVE_REG
+   create_test_patterns  -no_compaction  -dft
+   report_test -coverage
+
+/* EXPORT DUT TO TetraMAX */
+   write  -form verilog   \
+          -hier FIVE_REG  \
+          -out  FIVE_REG-net.v
+
+   test_stil_netlist_format = verilog
+
+   write_test_protocol    \
+          -form stil      \
+          -out FIVE_REG.spf
+
+/************************************************/
