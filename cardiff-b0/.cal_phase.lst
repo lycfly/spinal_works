@@ -1,7 +1,5 @@
 ./enumdefine.v
-./s_table.v
-./FloorAndWrap.v
 ./cal_vn.v
-./dotVn.v
+./dotVn_2.v
 ./cordic_int.v
 ./cal_phase.v

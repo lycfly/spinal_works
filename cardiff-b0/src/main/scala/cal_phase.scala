@@ -7,14 +7,19 @@ import scala.util.Random
 import scala.language.postfixOps
 import scala.math._
 
-class cal_phase (N: Int, SizeIn: Int, SizeCoeff: Int, Stage: Int, SizeOut: Int) extends Component {
+class cal_phase (N: Int, SizeIn: Int, SizeCoeff: Int, SizeOut: Int) extends Component {
   val io = new Bundle {
-    val en = in Bool()
+    val rg_calphase_en = in Bool()
+    val rg_bypass_mean = in Bool()
+    val rg_cordic_iternum = in UInt(3 bits)
+    val rg_leakage_table = in Vec(SInt(SizeIn bits), N)
+    val rg_sin_table = in Vec(SInt(SizeIn bits), N)
+    val rg_cos_table = in Vec(SInt(SizeIn bits), N)
     val valid_num = in UInt(3 bits)
+
     val vin_vld = in Bool()
     val vin1 = in SInt(SizeIn bits)
     val vin2 = in SInt(SizeIn bits)
-    val rg_leakage_table = in Vec(SInt(SizeIn bits), N)
 
     val phase_vld = out Bool()
     val phase = out SInt(SizeOut bits)
@@ -23,8 +28,8 @@ class cal_phase (N: Int, SizeIn: Int, SizeCoeff: Int, Stage: Int, SizeOut: Int) 
   val logN = log2Up(N)
 
   val calvn = new cal_vn(N = N, SizeIn = SizeIn)
-  val dot = new dotVn (N = N, SizeIn = SizeIn, SizeCoeff = SizeCoeff)
-  val cordic = new cordic_int (Stage = Stage, SizeIn = SizeCoeff+SizeIn, SizeOut = SizeOut)
+  val dot = new dotVn_2 (N = N, SizeIn = SizeIn, SizeCoeff = SizeCoeff)
+  val cordic = new cordic_int (SizeIn = SizeCoeff+SizeIn, SizeOut = SizeOut)
 
   val mean = SInt(SizeIn bits)
   val calvn_finish = Bool()
@@ -34,7 +39,8 @@ class cal_phase (N: Int, SizeIn: Int, SizeCoeff: Int, Stage: Int, SizeOut: Int) 
   val psum_out2 = SInt(SizeCoeff+SizeIn bits)  //a2
   val psum_vld = Bool()
 
-  calvn.io.en <> io.en
+  calvn.io.en <> io.rg_calphase_en
+  calvn.io.rg_bypass_mean <> io.rg_bypass_mean
   calvn.io.valid_num <> io.valid_num
   calvn.io.vin1 <> io.vin1
   calvn.io.vin2 <> io.vin2
@@ -44,7 +50,10 @@ class cal_phase (N: Int, SizeIn: Int, SizeCoeff: Int, Stage: Int, SizeOut: Int) 
   calvn.io.vn <> vn
   calvn.io.finish <> calvn_finish
 
-  dot.io.en <> io.en
+  dot.io.en <> io.rg_calphase_en
+  dot.io.rg_bypass_mean <> io.rg_bypass_mean
+  dot.io.rg_cos_table <> io.rg_cos_table
+  dot.io.rg_sin_table <> io.rg_sin_table
   dot.io.vn_vld <> calvn_finish
   dot.io.vn_in <> vn
   dot.io.valid_num <> io.valid_num
@@ -55,8 +64,9 @@ class cal_phase (N: Int, SizeIn: Int, SizeCoeff: Int, Stage: Int, SizeOut: Int) 
 
   val ph_vld =  Bool() simPublic()
   val ph_cal =  SInt(SizeOut bits)
-  cordic.io.en <> io.en
+  cordic.io.en <> io.rg_calphase_en
   cordic.io.vld <> psum_vld
+  cordic.io.rg_cordic_iternum <> io.rg_cordic_iternum
   cordic.io.x <> psum_out1
   cordic.io.y <> psum_out2
   cordic.io.res <> ph_cal
@@ -77,7 +87,7 @@ object Inst_cal_phase {
       mode=Verilog,
       oneFilePerComponent = true)
       .addStandardMemBlackboxing(blackboxAll)
-      .generate(new cal_phase (N = 8, SizeIn = 8, SizeCoeff = 8, Stage = 4, SizeOut = 8))
+      .generate(new cal_phase (N = 8, SizeIn = 8, SizeCoeff = 8, SizeOut = 8))
   }.printPruned()
    println(log2Up(5))
 //  val compiled = SimConfig.withWave.allOptimisation.compile(

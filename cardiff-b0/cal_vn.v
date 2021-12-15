@@ -1,10 +1,11 @@
 // Generator : SpinalHDL v1.4.2    git head : 804c7bd7b7feaddcc1d25ecef6c208fd5f776f79
 // Component : cal_vn
-// Git hash  : 924b1b3ea195ed51b9bde2aaac749226b2c0509e
+// Git hash  : fb2cb1ecbdc4b6cfb05b45c17cc3b2bea71072be
 
 
 module cal_vn (
   input               en,
+  input               rg_bypass_mean,
   input      [2:0]    valid_num,
   input               vin_vld,
   input      [7:0]    vin1,
@@ -81,8 +82,8 @@ module cal_vn (
 
   assign _zz_13 = (valid_num - 3'b001);
   assign _zz_14 = ($signed(_zz_15) + $signed(_zz_16));
-  assign _zz_15 = {bigger[7],bigger};
-  assign _zz_16 = {smaller[7],smaller};
+  assign _zz_15 = {max_v[7],max_v};
+  assign _zz_16 = {min_v[7],min_v};
   assign _zz_17 = _zz_1[8 : 7];
   assign _zz_18 = _zz_1[7 : 7];
   assign _zz_19 = (v_cnt <<< 1);
@@ -159,8 +160,8 @@ module cal_vn (
 
   assign mean_doing = 1'b0;
   assign v1gtv2 = ($signed(vin2) < $signed(vin1));
-  assign bigger = (v1gtv2 ? vin1 : vin2);
-  assign smaller = (v1gtv2 ? vin2 : vin1);
+  assign bigger = ((v1gtv2 && rg_bypass_mean) ? vin1 : vin2);
+  assign smaller = ((v1gtv2 && rg_bypass_mean) ? vin2 : vin1);
   assign data_load_finish = (v_cnt == _zz_13);
   assign _zz_1 = ($signed(_zz_14) >>> 1);
   always @ (*) begin
@@ -295,15 +296,17 @@ module cal_vn (
         end else begin
           v_cnt <= (v_cnt + 3'b001);
         end
-        if((v_cnt == 3'b000))begin
-          max_v <= bigger;
-          min_v <= smaller;
-        end else begin
-          if(($signed(max_v) < $signed(bigger)))begin
+        if(rg_bypass_mean)begin
+          if((v_cnt == 3'b000))begin
             max_v <= bigger;
-          end
-          if(($signed(smaller) < $signed(min_v)))begin
             min_v <= smaller;
+          end else begin
+            if(($signed(max_v) < $signed(bigger)))begin
+              max_v <= bigger;
+            end
+            if(($signed(smaller) < $signed(min_v)))begin
+              min_v <= smaller;
+            end
           end
         end
       end

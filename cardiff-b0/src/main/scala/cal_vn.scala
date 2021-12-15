@@ -9,6 +9,7 @@ import scala.language.postfixOps
 class cal_vn (N: Int, SizeIn: Int) extends Component {
   val io = new Bundle {
     val en = in Bool()
+    val rg_bypass_mean = in Bool()
     val valid_num = in UInt(3 bits)
     val vin_vld = in Bool()
     val vin1 = in SInt(SizeIn bits)
@@ -33,10 +34,10 @@ class cal_vn (N: Int, SizeIn: Int) extends Component {
   val mean_doing = Reg(Bool()) init(false)
 
   v1gtv2 := io.vin1 > io.vin2
-  bigger := Mux(v1gtv2 , io.vin1 , io.vin2)
-  smaller := Mux(v1gtv2 , io.vin2 , io.vin1)
+  bigger := Mux(v1gtv2 & io.rg_bypass_mean , io.vin1 , io.vin2)
+  smaller := Mux(v1gtv2 & io.rg_bypass_mean, io.vin2 , io.vin1)
   data_load_finish := v_cnt === (io.valid_num-1)
-  io.mean := ((bigger +^ smaller)|>>1).sat(1)
+  io.mean := ((max_v +^ min_v)|>>1).sat(1)
   io.finish := io.en & io.vin_vld & data_load_finish
   when(io.en & io.vin_vld){
     Vins((v_cnt|<<1)) := (io.vin1 -^ io.rg_leakage_table((v_cnt|<<1))).sat(1)
@@ -46,17 +47,20 @@ class cal_vn (N: Int, SizeIn: Int) extends Component {
     }.otherwise{
       v_cnt := v_cnt + 1
     }
-    when(v_cnt === 0){
-      max_v := bigger
-      min_v := smaller
-    }.otherwise{
-      when(bigger > max_v){
+    when(io.rg_bypass_mean){
+      when(v_cnt === 0){
         max_v := bigger
-      }
-      when(min_v > smaller){
         min_v := smaller
+      }.otherwise{
+        when(bigger > max_v){
+          max_v := bigger
+        }
+        when(min_v > smaller){
+          min_v := smaller
+        }
       }
     }
+
   }
 //  val vmean_cnt = Reg(UInt(4 bits)) init(0)
 //  val mean_finish = Bool()

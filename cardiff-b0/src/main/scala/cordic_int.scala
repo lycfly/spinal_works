@@ -7,9 +7,10 @@ import scala.util.Random
 import scala.language.postfixOps
 import scala.math._
 
-class cordic_int (Stage: Int, SizeIn: Int, SizeOut: Int) extends Component {
+class cordic_int (SizeIn: Int, SizeOut: Int) extends Component {
   val io = new Bundle {
     val en = in Bool()  // dot finish
+    val rg_cordic_iternum = in UInt(3 bits)
     val vld = in Bool()
     val y = in SInt(SizeIn bits)
     val x = in SInt(SizeIn bits)
@@ -18,18 +19,18 @@ class cordic_int (Stage: Int, SizeIn: Int, SizeOut: Int) extends Component {
 
   }
   noIoPrefix()
-
+  val Stage = 7
   val logStage = log2Up(Stage)
-  val KAngle = Vec(S(32, 7 bits),S(19, 7 bits),S(10, 7 bits),S(5, 7 bits))
-  val xn = Reg(SInt(SizeIn+Stage+logStage bits)) init(0)
-  val yn = Reg(SInt(SizeIn+Stage+logStage bits)) init(0)
+  val KAngle = Vec(S(32, 7 bits),S(19, 7 bits),S(10, 7 bits),S(5, 7 bits),S(3, 7 bits),S(1, 7 bits),S(1, 7 bits))
+  val xn = Reg(SInt(SizeIn+logStage bits)) init(0)
+  val yn = Reg(SInt(SizeIn+logStage bits)) init(0)
   val res_rg = Reg(SInt(SizeOut+1 bits)) init(0)
-  val x_ext = SInt(SizeIn+Stage+logStage bits)
-  val y_ext = SInt(SizeIn+Stage+logStage bits)
-  val x_ins = SInt(SizeIn+Stage+logStage bits)
-  val y_ins = SInt(SizeIn+Stage+logStage bits)
-  x_ext := (U((logStage-1 downto 0)->io.x.msb) ## io.x ## U(0, Stage bits)).asSInt
-  y_ext := (U((logStage-1 downto 0)->io.y.msb) ## io.y ## U(0, Stage bits)).asSInt
+  val x_ext = SInt(SizeIn+logStage bits)
+  val y_ext = SInt(SizeIn+logStage bits)
+  val x_ins = SInt(SizeIn+logStage bits)
+  val y_ins = SInt(SizeIn+logStage bits)
+  x_ext := (U((logStage-1 downto 0)->io.x.msb) ## io.x ).asSInt
+  y_ext := (U((logStage-1 downto 0)->io.y.msb) ## io.y ).asSInt
   x_ins := -x_ext
   y_ins := -y_ext
 
@@ -41,10 +42,10 @@ class cordic_int (Stage: Int, SizeIn: Int, SizeOut: Int) extends Component {
   val nozero_flg = Reg(Bool()) init(true)
 
   cal_start := cal_en.rise(False)
-  cal_finish := cal_cnt === Stage-1
+  cal_finish := cal_cnt === io.rg_cordic_iternum
 
-  val xn_rightshift = SInt(SizeIn+Stage+logStage bits)
-  val yn_rightshift = SInt(SizeIn+Stage+logStage bits)
+  val xn_rightshift = SInt(SizeIn+logStage bits)
+  val yn_rightshift = SInt(SizeIn+logStage bits)
   val res_bias = SInt(SizeOut bits)
   xn_rightshift := xn |>> (cal_cnt)
   yn_rightshift := yn |>> (cal_cnt)
@@ -111,6 +112,6 @@ object Inst_cordic {
         resetActiveLevel = LOW),
       mode=Verilog)
       .addStandardMemBlackboxing(blackboxAll)
-      .generate(new cordic_int (Stage = 4, SizeIn = 8, SizeOut = 7))
+      .generate(new cordic_int (SizeIn = 8, SizeOut = 8))
   }.printPruned()
 }

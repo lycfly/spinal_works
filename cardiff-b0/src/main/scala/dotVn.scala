@@ -9,6 +9,7 @@ import scala.language.postfixOps
 class dotVn (N: Int, SizeIn: Int, SizeCoeff: Int) extends Component {
   val io = new Bundle {
     val en = in Bool()
+    val rg_bypass_mean = in Bool()
     val vn_vld = in Bool() // vld_dly1
     val vn_in = in Vec(SInt(SizeIn bits), N)
     val psum_out1 = out SInt(SizeCoeff+SizeIn bits)
@@ -33,7 +34,7 @@ class dotVn (N: Int, SizeIn: Int, SizeCoeff: Int) extends Component {
   val mac_finish = Bool()
   val finish = Reg(Bool())
 
-  vin_minus_mean := io.vn_in(mac_cnt) - io.mean
+  vin_minus_mean := Mux(io.rg_bypass_mean, io.vn_in(mac_cnt) - io.mean, io.vn_in(mac_cnt))
   mac_start := mac_cnt === 0
   mac_finish := mac_cnt === N-1
   table.io.index <> mac_cnt
