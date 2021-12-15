@@ -5,83 +5,76 @@ Report : power
         -verbose
 Design : cal_phase
 Version: L-2016.03-SP1
-Date   : Sun Nov 28 21:28:00 2021
+Date   : Wed Dec 15 15:23:37 2021
 ****************************************
 
 
 Library(s) Used:
 
-    tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs (File: /root/lib/tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db)
+    ssc_core_slow (File: /mnt/mydata/spinal_works/18um/Technology/TSMC/core/synopsys/db/nopower/core_slow.db)
 
+Information: The cells in your design are not characterized for internal power. (PWR-229)
 
-Operating Conditions: ssg0p81v125c   Library: tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-Wire Load Model Mode: segmented
+Operating Conditions: slow_125_1.62   Library: ssc_core_slow
+Wire Load Model Mode: enclosed
 
 Design        Wire Load Model            Library
 ------------------------------------------------
-cal_phase              ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-cal_vn                 ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-dotVn                  ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-cordic_int             ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-SNPS_CLOCK_GATE_HIGH_cal_phase_0
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-SNPS_CLOCK_GATE_HIGH_cal_phase_1
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_7         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_6         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_5         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_4         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_3         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_2         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_1         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_0         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-SNPS_CLOCK_GATE_HIGH_cal_vn_0
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+cal_phase              5KGATES           ssc_core_slow
+cal_vn                 5KGATES           ssc_core_slow
+dotVn_2                5KGATES           ssc_core_slow
+cordic_int             5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_10
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_9
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_7
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_4
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_3
+                       5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_cal_vn_2
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                       5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_cal_vn_1
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-s_table                ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_8_1       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_8_0       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-SNPS_CLOCK_GATE_HIGH_dotVn_0
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-SNPS_CLOCK_GATE_HIGH_dotVn_1
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_dotVn_2
+                       5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_cordic_int_0
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                       5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_cordic_int_2
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                       5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_cordic_int_1
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                       5KGATES           ssc_core_slow
 
 
-Global Operating Voltage = 0.81 
+Global Operating Voltage = 1.62 
 Power-specific unit information :
     Voltage Units = 1V
     Capacitance Units = 1.000000pf
     Time Units = 1ns
     Dynamic Power Units = 1mW    (derived from V,C,T units)
-    Leakage Power Units = 1nW
+    Leakage Power Units = Unitless
 
 
-  Cell Internal Power  =  34.9370 uW   (82%)
-  Net Switching Power  =   7.5442 uW   (18%)
+  Cell Internal Power  =   0.0000 mW    (0%)
+  Net Switching Power  = 397.0324 uW  (100%)
                          ---------
-Total Dynamic Power    =  42.4812 uW  (100%)
+Total Dynamic Power    = 397.0324 uW  (100%)
 
-Cell Leakage Power     =  29.7556 uW
+Cell Leakage Power     =   0.0000 
 
+Error: Either dynamic power or leakage power, in the library, is unitless. Unable to display complete power group summary. (PWR-799)
                  Internal         Switching           Leakage            Total                         Cell
 Power Group      Power            Power               Power              Power   (   %    )  Attrs  Count
 ---------------------------------------------------------------------------------------------------------
-io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
-memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
-black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
-clock_network  5.0823e-03        6.1125e-04          398.8282        6.0924e-03  (   8.43%)            10
-register       1.9807e-02        3.8363e-04        7.9764e+03        2.8167e-02  (  38.99%)            205
-sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
-combinational  1.0047e-02        6.5493e-03        2.1380e+04        3.7977e-02  (  52.57%)            1588
+io_pad             0.0000            0.0000            0.0000               NA   (     N/A)             0
+memory             0.0000            0.0000            0.0000               NA   (     N/A)            0
+black_box          0.0000            0.0000            0.0000               NA   (     N/A)            0
+clock_network      0.0000        1.6668e-02            0.0000               NA   (     N/A)           22
+register           0.0000        9.2421e-03            0.0000               NA   (     N/A)            180
+sequential         0.0000            0.0000            0.0000               NA   (     N/A)            0
+combinational      0.0000            0.3711            0.0000               NA   (     N/A)            2233
 ---------------------------------------------------------------------------------------------------------
-Total          3.4937e-02 mW     7.5441e-03 mW     2.9756e+04 nW     7.2237e-02 mW
+Total              0.0000 mW         0.3970 mW         0.0000               NA        
 1

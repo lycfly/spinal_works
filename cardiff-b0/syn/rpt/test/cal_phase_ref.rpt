@@ -3,7 +3,7 @@
 Report : reference
 Design : cal_phase
 Version: L-2016.03-SP1
-Date   : Sun Nov 28 21:28:00 2021
+Date   : Wed Dec 15 15:23:37 2021
 ****************************************
 
 Attributes:
@@ -19,44 +19,25 @@ Attributes:
 
 Reference          Library       Unit Area   Count    Total Area   Attributes
 -----------------------------------------------------------------------------
-AO21D1BWP7T35P140  tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-                                  0.490000       2      0.980000  
-AO22D0BWP7T35P140  tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-                                  0.686000       8      5.488000  
-DEL025D1BWP7T35P140
-                   tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-                                  0.294000       2      0.588000  
-DFCNQD1BWP7T35P140 tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-                                  1.862000      29     53.998000  n
-FA1D1BWP7T35P140   tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-                                  1.666000       8     13.328000  r
-HA1D1BWP7T35P140   tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-                                  1.274000       8     10.192000  r
-IND2D1BWP7T35P140  tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-                                  0.392000       1      0.392000  
-INR3D0BWP7T35P140  tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-                                  0.490000       1      0.490000  
-INVD1BWP7T35P140   tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-                                  0.196000     144     28.223999  
-MUX2D1BWP7T35P140  tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-                                  0.686000       1      0.686000  
-NR2D1BWP7T35P140   tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-                                  0.294000       3      0.882000  
-NR4D0BWP7T35P140   tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-                                  0.490000       1      0.490000  
-OR2D1BWP7T35P140   tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-                                  0.392000       1      0.392000  
-SNPS_CLOCK_GATE_HIGH_cal_phase_0
-                                  1.470000       1      1.470000  b, h
-SNPS_CLOCK_GATE_HIGH_cal_phase_1
-                                  1.470000       1      1.470000  b, h
-TIELBWP7T35P140    tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-                                  0.196000       1      0.196000  
-XNR2D0BWP7T35P140  tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-                                  0.686000       1      0.686000  
-cal_vn                          386.610000       1    386.610000  b, h, n
-cordic_int                      414.637999       1    414.637999  b, h, n
-dotVn                           389.256001       1    389.256001  b, h, n
+cal_vn                         9420.370024       1   9420.370024  h, n
+clk1a3             ssc_core_slow
+                                 10.040000      13    130.520000  
+clk1b6             ssc_core_slow
+                                 10.040000       6     60.240000  
+cordic_int                    12556.770011       1  12556.770011  h, n
+dotVn_2                       20387.089925       1  20387.089925  h, n
+inv1a1             ssc_core_slow
+                                  5.020000       9     45.180000  
+inv1a2             ssc_core_slow
+                                  7.530000       2     15.060000  
+inv1a3             ssc_core_slow
+                                  7.530000      10     75.300002  
+inv1a9             ssc_core_slow
+                                 15.050000       2     30.100000  
+inv1a15            ssc_core_slow
+                                 20.070000       3     60.209999  
+inv1a27            ssc_core_slow
+                                 35.119999       1     35.119999  
 -----------------------------------------------------------------------------
-Total 20 references                                  1310.455999
+Total 11 references                                 42815.959960
 1

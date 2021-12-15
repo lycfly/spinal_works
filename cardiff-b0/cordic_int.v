@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.4.2    git head : 804c7bd7b7feaddcc1d25ecef6c208fd5f776f79
 // Component : cordic_int
-// Git hash  : fb2cb1ecbdc4b6cfb05b45c17cc3b2bea71072be
+// Git hash  : 09ea9d4f94094b8d5eb0b1619e98b47bd4969cc0
 
 
 module cordic_int (
@@ -34,6 +34,7 @@ module cordic_int (
   reg        [18:0]   xn;
   reg        [18:0]   yn;
   reg        [8:0]    res_rg;
+  reg        [7:0]    res_out;
   wire       [18:0]   x_ext;
   wire       [18:0]   y_ext;
   wire       [18:0]   x_ins;
@@ -53,6 +54,7 @@ module cordic_int (
   wire       [18:0]   yn_rightshift;
   wire       [7:0]    res_bias;
   wire       [6:0]    _zz_5;
+  reg                 cal_finish_delay;
   reg        [7:0]    _zz_6;
 
   assign _zz_8 = (x | y);
@@ -136,18 +138,20 @@ module cordic_int (
     end
   end
 
-  assign res = _zz_6;
+  assign res = res_out;
   assign res_vld = finish;
   always @ (posedge clk or negedge resetn) begin
     if (!resetn) begin
       xn <= 19'h0;
       yn <= 19'h0;
       res_rg <= 9'h0;
+      res_out <= 8'h0;
       cal_cnt <= 3'b000;
       cal_en <= 1'b0;
       finish <= 1'b0;
       nozero_flg <= 1'b1;
       cal_en_regNext <= 1'b0;
+      cal_finish_delay <= 1'b0;
     end else begin
       cal_en_regNext <= cal_en;
       if(en)begin
@@ -197,9 +201,13 @@ module cordic_int (
         end
       end
       if(en)begin
-        finish <= cal_finish;
-      end else begin
-        finish <= 1'b0;
+        cal_finish_delay <= cal_finish;
+      end
+      if(cal_finish_delay)begin
+        res_out <= _zz_6;
+      end
+      if(en)begin
+        finish <= cal_finish_delay;
       end
     end
   end

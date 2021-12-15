@@ -5,83 +5,64 @@ Report : power
         -analysis_effort low
 Design : cal_phase
 Version: L-2016.03-SP1
-Date   : Sun Nov 28 21:28:00 2021
+Date   : Wed Dec 15 15:23:37 2021
 ****************************************
 
 
 Library(s) Used:
 
-    tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs (File: /root/lib/tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db)
+    ssc_core_slow (File: /mnt/mydata/spinal_works/18um/Technology/TSMC/core/synopsys/db/nopower/core_slow.db)
 
+Information: The cells in your design are not characterized for internal power. (PWR-229)
 
-Operating Conditions: ssg0p81v125c   Library: tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-Wire Load Model Mode: segmented
+Operating Conditions: slow_125_1.62   Library: ssc_core_slow
+Wire Load Model Mode: enclosed
 
 Design        Wire Load Model            Library
 ------------------------------------------------
-cal_phase              ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-cal_vn                 ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-dotVn                  ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-cordic_int             ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-SNPS_CLOCK_GATE_HIGH_cal_phase_0
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-SNPS_CLOCK_GATE_HIGH_cal_phase_1
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_7         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_6         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_5         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_4         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_3         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_2         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_1         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_0         ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-SNPS_CLOCK_GATE_HIGH_cal_vn_0
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+cal_phase              5KGATES           ssc_core_slow
+cal_vn                 5KGATES           ssc_core_slow
+dotVn_2                5KGATES           ssc_core_slow
+cordic_int             5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_10
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_9
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_7
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_4
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_3
+                       5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_cal_vn_2
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                       5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_cal_vn_1
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-s_table                ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_8_1       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-FloorAndWrap_8_0       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-SNPS_CLOCK_GATE_HIGH_dotVn_0
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
-SNPS_CLOCK_GATE_HIGH_dotVn_1
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_dotVn_2
+                       5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_cordic_int_0
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                       5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_cordic_int_2
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                       5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_cordic_int_1
-                       ZeroWireload      tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs
+                       5KGATES           ssc_core_slow
 
 
-Global Operating Voltage = 0.81 
+Global Operating Voltage = 1.62 
 Power-specific unit information :
     Voltage Units = 1V
     Capacitance Units = 1.000000pf
     Time Units = 1ns
     Dynamic Power Units = 1mW    (derived from V,C,T units)
-    Leakage Power Units = 1nW
+    Leakage Power Units = Unitless
 
 
 --------------------------------------------------------------------------------
                                        Switch   Int      Leak     Total
 Hierarchy                              Power    Power    Power    Power    %
 --------------------------------------------------------------------------------
-cal_phase                              7.54e-03 3.49e-02 2.98e+04 7.22e-02 100.0
-  cordic (cordic_int)                  6.30e-04 5.75e-03 9.37e+03 1.58e-02  21.8
-  dot (dotVn)                          2.28e-03 8.46e-03 8.35e+03 1.91e-02  26.4
-    FloorWrapPsum2 (FloorAndWrap_8_0)  3.03e-05 3.78e-05  190.748 2.59e-04   0.4
-    FloorWrapPsum1 (FloorAndWrap_8_1)  3.72e-05 4.03e-05  190.782 2.68e-04   0.4
-    table_1 (s_table)                  1.30e-03 1.37e-03 4.23e+03 6.90e-03   9.5
-  calvn (cal_vn)                       3.94e-03 1.77e-02 9.07e+03 3.07e-02  42.6
-    FloorWrapVn_7 (FloorAndWrap_0)     2.15e-05 6.83e-05   85.928 1.76e-04   0.2
-    FloorWrapVn_6 (FloorAndWrap_1)     2.17e-05 6.89e-05   85.930 1.76e-04   0.2
-    FloorWrapVn_5 (FloorAndWrap_2)     2.16e-05 6.86e-05   85.911 1.76e-04   0.2
-    FloorWrapVn_4 (FloorAndWrap_3)     2.15e-05 6.85e-05   85.947 1.76e-04   0.2
-    FloorWrapVn_3 (FloorAndWrap_4)     2.16e-05 6.88e-05   85.842 1.76e-04   0.2
-    FloorWrapVn_2 (FloorAndWrap_5)     2.16e-05 6.86e-05   85.943 1.76e-04   0.2
-    FloorWrapVn_1 (FloorAndWrap_6)     2.14e-05 6.80e-05   85.955 1.75e-04   0.2
-    FloorWrapVn_0 (FloorAndWrap_7)     2.16e-05 6.85e-05   85.885 1.76e-04   0.2
+cal_phase                                 0.397    0.000    0.000    0.397 100.0
+  cordic (cordic_int)                  1.33e-02    0.000    0.000 1.33e-02   3.3
+  dot (dotVn_2)                           0.207    0.000    0.000    0.207  52.0
+  calvn (cal_vn)                          0.156    0.000    0.000    0.156  39.2
 1

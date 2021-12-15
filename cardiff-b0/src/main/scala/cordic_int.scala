@@ -25,6 +25,7 @@ class cordic_int (SizeIn: Int, SizeOut: Int) extends Component {
   val xn = Reg(SInt(SizeIn+logStage bits)) init(0)
   val yn = Reg(SInt(SizeIn+logStage bits)) init(0)
   val res_rg = Reg(SInt(SizeOut+1 bits)) init(0)
+  val res_out = Reg(SInt(SizeOut bits)) init(0)
   val x_ext = SInt(SizeIn+logStage bits)
   val y_ext = SInt(SizeIn+logStage bits)
   val x_ins = SInt(SizeIn+logStage bits)
@@ -93,13 +94,17 @@ class cordic_int (SizeIn: Int, SizeOut: Int) extends Component {
           }
         }
   }
-
+  val cal_finish_delay = Reg(Bool()) init(false)
   when(io.en){
-    finish := cal_finish
-  }.otherwise{
-    finish := Bool(false)
+    cal_finish_delay := cal_finish
   }
-  io.res := res_rg.sat(1)
+  when(cal_finish_delay){
+    res_out := res_rg.sat(1)
+  }
+  when(io.en){
+    finish := cal_finish_delay
+  }
+  io.res := res_out
   io.res_vld := finish
 
 }

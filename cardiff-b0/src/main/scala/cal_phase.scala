@@ -127,13 +127,13 @@ object Inst_cal_phase {
 //  }
 //  import sys.process._
 //  "gtkwave -o ./simWorkspace/cal_phase/test.vcd"!
-  // import DesignCompiler._
-  // val dc_config = DesignCompiler_config(process = 28, freq = 100)
-  // val dc = new DesignCompilerFlow(
-  //                                   design = new cal_phase (N = 8, SizeIn = 8, SizeCoeff = 8, Stage = 4, SizeOut = 10, SizePh = 8),
-  //                                   topModuleName = "cal_phase",
-  //                                   workspacePath = "/mnt/mydata/spinal_works/cardiff-b0/syn",
-  //                                   DCConfig = dc_config,
-  //                                   designPath = ""
-  // ).doit()
+//   import DesignCompiler._
+//   val dc_config = DesignCompiler_config(process = 180, freq = 100)
+//   val dc = new DesignCompilerFlow(
+//                                     design = new cal_phase (N = 8, SizeIn = 8, SizeCoeff = 8, SizeOut = 8),
+//                                     topModuleName = "cal_phase",
+//                                     workspacePath = "/mnt/mydata/spinal_works/cardiff-b0/syn",
+//                                     DCConfig = dc_config,
+//                                     designPath = ""
+//   ).doit()
 }

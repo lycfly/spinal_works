@@ -7,10 +7,10 @@
     set compile_seqmap_identify_shift_registers_with_synchronous_logic false
     set timing_enable_multiple_clocks_per_reg true
     
-    set lib_path          "/root/lib"
+    set lib_path          "/mnt/mydata/spinal_works/18um/Technology/TSMC/core/synopsys/db/nopower"
     set search_path       ". $lib_path"
 
-    set target_library    "tcbn28hpcplusbwp7t35p140ssg0p81v125c_ccs.db \
+    set target_library    "core_slow.db \
                             "
     set synthetic_library "dw_foundation.sldb"
 
