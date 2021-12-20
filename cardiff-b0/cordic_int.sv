@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.4.2    git head : 804c7bd7b7feaddcc1d25ecef6c208fd5f776f79
 // Component : cordic_int
-// Git hash  : 8406ba4457c2ac51b10d3b90d8c3f84b7a7749ab
+// Git hash  : 7689016539fce71eac5b72b24831b097bb38ae23
 
 
 module cordic_int (
@@ -15,15 +15,16 @@ module cordic_int (
   input               resetn
 );
   reg        [6:0]    _zz_7;
-  wire       [15:0]   _zz_8;
+  wire       [2:0]    _zz_8;
   wire       [15:0]   _zz_9;
   wire       [15:0]   _zz_10;
   wire       [15:0]   _zz_11;
-  wire       [18:0]   _zz_12;
-  wire       [8:0]    _zz_13;
+  wire       [15:0]   _zz_12;
+  wire       [18:0]   _zz_13;
   wire       [8:0]    _zz_14;
-  wire       [1:0]    _zz_15;
-  wire       [0:0]    _zz_16;
+  wire       [8:0]    _zz_15;
+  wire       [1:0]    _zz_16;
+  wire       [0:0]    _zz_17;
   wire       [6:0]    KAngle_0;
   wire       [6:0]    KAngle_1;
   wire       [6:0]    KAngle_2;
@@ -52,20 +53,20 @@ module cordic_int (
   reg                 cal_en_regNext;
   wire       [18:0]   xn_rightshift;
   wire       [18:0]   yn_rightshift;
-  wire       [7:0]    res_bias;
   wire       [6:0]    _zz_5;
   reg                 cal_finish_delay;
   reg        [7:0]    _zz_6;
 
-  assign _zz_8 = (x | y);
+  assign _zz_8 = (rg_cordic_iternum - 3'b001);
   assign _zz_9 = 16'h0;
   assign _zz_10 = 16'h0;
   assign _zz_11 = 16'h0;
-  assign _zz_12 = 19'h0;
-  assign _zz_13 = {{2{_zz_5[6]}}, _zz_5};
+  assign _zz_12 = 16'h0;
+  assign _zz_13 = 19'h0;
   assign _zz_14 = {{2{_zz_5[6]}}, _zz_5};
-  assign _zz_15 = res_rg[8 : 7];
-  assign _zz_16 = res_rg[7 : 7];
+  assign _zz_15 = {{2{_zz_5[6]}}, _zz_5};
+  assign _zz_16 = res_rg[8 : 7];
+  assign _zz_17 = res_rg[7 : 7];
   always @(*) begin
     case(cal_cnt)
       3'b000 : begin
@@ -118,19 +119,19 @@ module cordic_int (
   assign x_ins = (- x_ext);
   assign y_ins = (- y_ext);
   assign cal_start = (cal_en && (! cal_en_regNext));
-  assign cal_finish = (cal_cnt == rg_cordic_iternum);
+  assign cal_finish = (cal_cnt == _zz_8);
   assign xn_rightshift = ($signed(xn) >>> cal_cnt);
   assign yn_rightshift = ($signed(yn) >>> cal_cnt);
   assign _zz_5 = _zz_7;
   always @ (*) begin
     if(res_rg[8])begin
-      if((! (_zz_15 == 2'b11)))begin
+      if((! (_zz_16 == 2'b11)))begin
         _zz_6 = 8'h80;
       end else begin
         _zz_6 = res_rg[7 : 0];
       end
     end else begin
-      if((_zz_16 != 1'b0))begin
+      if((_zz_17 != 1'b0))begin
         _zz_6 = 8'h7f;
       end else begin
         _zz_6 = res_rg[7 : 0];
@@ -166,36 +167,40 @@ module cordic_int (
         cal_en <= 1'b0;
       end
       if(cal_en)begin
-        nozero_flg <= 1'b1;
         if(cal_start)begin
           cal_cnt <= 3'b000;
-          if(($signed(_zz_8) == $signed(_zz_9)))begin
+          if((($signed(x) == $signed(_zz_9)) || ($signed(y) == $signed(_zz_10))))begin
             res_rg <= 9'h0;
             nozero_flg <= 1'b0;
           end else begin
-            if(($signed(x) < $signed(_zz_10)))begin
-              if(($signed(y) < $signed(_zz_11)))begin
+            nozero_flg <= 1'b1;
+            if(($signed(x) < $signed(_zz_11)))begin
+              if(($signed(y) < $signed(_zz_12)))begin
                 xn <= y_ins;
-                yn <= xn;
+                yn <= x_ext;
                 res_rg <= 9'h1c0;
               end else begin
-                xn <= yn;
+                xn <= y_ext;
                 yn <= x_ins;
                 res_rg <= 9'h040;
               end
+            end else begin
+              xn <= x_ext;
+              yn <= y_ext;
+              res_rg <= 9'h0;
             end
           end
         end else begin
           if(nozero_flg)begin
             cal_cnt <= (cal_cnt + 3'b001);
-            if(($signed(yn) < $signed(_zz_12)))begin
+            if(($signed(yn) < $signed(_zz_13)))begin
               xn <= ($signed(xn) - $signed(yn_rightshift));
               yn <= ($signed(yn) + $signed(xn_rightshift));
-              res_rg <= ($signed(res_rg) - $signed(_zz_13));
+              res_rg <= ($signed(res_rg) - $signed(_zz_14));
             end else begin
               xn <= ($signed(xn) + $signed(yn_rightshift));
               yn <= ($signed(yn) - $signed(xn_rightshift));
-              res_rg <= ($signed(res_rg) + $signed(_zz_14));
+              res_rg <= ($signed(res_rg) + $signed(_zz_15));
             end
           end
         end

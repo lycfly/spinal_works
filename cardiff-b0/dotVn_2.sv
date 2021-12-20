@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.4.2    git head : 804c7bd7b7feaddcc1d25ecef6c208fd5f776f79
 // Component : dotVn_2
-// Git hash  : 8406ba4457c2ac51b10d3b90d8c3f84b7a7749ab
+// Git hash  : 7689016539fce71eac5b72b24831b097bb38ae23
 
 
 module dotVn_2 (
@@ -116,8 +116,8 @@ module dotVn_2 (
 
   assign vin_minus_mean = ($signed(_zz_3) - $signed(mean));
   assign vin_true_in = vin_minus_mean;
-  assign mac_start = (mac_cnt == 3'b000);
-  assign mac_finish = (mac_cnt == valid_num);
+  assign mac_start = (mac_en && (mac_cnt == 3'b000));
+  assign mac_finish = (mac_en && (mac_cnt == valid_num));
   assign product1 = ($signed(vin_true_in) * $signed(_zz_4));
   assign product2 = ($signed(vin_true_in) * $signed(_zz_5));
   assign s1 = {{5{_zz_6[13]}}, _zz_6};
