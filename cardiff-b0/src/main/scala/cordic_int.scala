@@ -43,11 +43,10 @@ class cordic_int (SizeIn: Int, SizeOut: Int) extends Component {
   val nozero_flg = Reg(Bool()) init(true)
 
   cal_start := cal_en.rise(False)
-  cal_finish := cal_cnt === io.rg_cordic_iternum
+  cal_finish := cal_cnt === io.rg_cordic_iternum - 1
 
   val xn_rightshift = SInt(SizeIn+logStage bits)
   val yn_rightshift = SInt(SizeIn+logStage bits)
-  val res_bias = SInt(SizeOut bits)
   xn_rightshift := xn |>> (cal_cnt)
   yn_rightshift := yn |>> (cal_cnt)
 
@@ -62,23 +61,28 @@ class cordic_int (SizeIn: Int, SizeOut: Int) extends Component {
   }
 
   when(cal_en){
-    nozero_flg := Bool(true)
     when(cal_start) {
       cal_cnt := 0
-      when((io.x | io.y) === 0) {
+      when((io.x === 0) || (io.y === 0)) {
         res_rg := 0
         nozero_flg := Bool(false)
       }.otherwise {
+        nozero_flg := Bool(true)
         when(io.x < 0) {
           when(io.y < 0) {
             xn := y_ins
-            yn := xn
-            res_rg := S(-pow(2, 6).toInt, SizeOut+1 bits)
+            yn := x_ext
+            //res_rg := S(-pow(2, 6).toInt, SizeOut+1 bits)
+            res_rg := -64
           }.otherwise {
-            xn := yn
+            xn := y_ext
             yn := x_ins
-            res_rg := S(pow(2, 6).toInt, SizeOut+1 bits)
+            res_rg := 64
           }
+        }.otherwise {
+          xn := x_ext
+          yn := y_ext
+          res_rg := 0
         }
       }
     }.elsewhen(nozero_flg){

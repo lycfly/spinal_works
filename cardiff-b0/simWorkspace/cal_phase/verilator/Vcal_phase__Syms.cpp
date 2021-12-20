@@ -29,6 +29,5 @@ Vcal_phase__Syms::Vcal_phase__Syms(Vcal_phase* topp, const char* namep)
     // Setup export functions
     for (int __Vfinal=0; __Vfinal<2; __Vfinal++) {
         __Vscope_cal_phase.varInsert(__Vfinal,"ph_vld", &(TOP__cal_phase.ph_vld), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
-        __Vscope_cal_phase.varInsert(__Vfinal,"ph_vld_dly1", &(TOP__cal_phase.ph_vld_dly1), false, VLVT_UINT8,VLVD_NODIR|VLVF_PUB_RW,0);
     }
 }

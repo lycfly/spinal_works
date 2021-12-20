@@ -44,7 +44,7 @@ class cal_phase (N: Int, SizeIn: Int, SizeCoeff: Int, SizeOut: Int) extends Comp
 
   calvn.io.en <> io.rg_calphase_en
   calvn.io.rg_bypass_mean <> io.rg_bypass_mean
-  calvn.io.valid_num <> valid_num_true
+  calvn.io.valid_num <> io.valid_num
   calvn.io.vin1 <> io.vin1
   calvn.io.vin2 <> io.vin2
   calvn.io.rg_leakage_table <> io.rg_leakage_table
@@ -54,7 +54,6 @@ class cal_phase (N: Int, SizeIn: Int, SizeCoeff: Int, SizeOut: Int) extends Comp
   calvn.io.finish <> calvn_finish
 
   dot.io.en <> io.rg_calphase_en
-  dot.io.rg_bypass_mean <> io.rg_bypass_mean
   dot.io.rg_cos_table <> io.rg_cos_table
   dot.io.rg_sin_table <> io.rg_sin_table
   dot.io.vn_vld <> calvn_finish
@@ -92,44 +91,53 @@ object Inst_cal_phase {
       .addStandardMemBlackboxing(blackboxAll)
       .generate(new cal_phase (N = 8, SizeIn = 8, SizeCoeff = 8, SizeOut = 8))
   }.printPruned()
-   println(log2Up(5))
-//  val compiled = SimConfig.withWave.allOptimisation.compile(
-//    rtl = new cal_phase (N = 8, SizeIn = 8, SizeCoeff = 8, Stage = 4, SizeOut = 10, SizePh = 8))
-//  compiled.doSim { dut =>
-//    val N = 8
-//    val in_buffer1 = Array(101,72,0,-72,-101,-72,0,72)
-//    val in_buffer2 = Array(97,47,-30,-90,-97,-47,30,90)
-//
-//    dut.clockDomain.forkStimulus(5)
-//    dut.io.en #= false
-//    dut.io.vin_vld #= false
-//    dut.io.res_vld #= false
-//
-//    sleep(100)
-//    println("test")
-//    dut.clockDomain.waitSampling()
-//    sleep(100)
-//    dut.clockDomain.waitSampling()
-//    dut.io.en #= true
-//    dut.io.vin_vld #= true
-//    for(i <- 0 until N) {
-//      dut.io.v_in(i) #=  in_buffer1(i)
-//    }
-//    dut.clockDomain.waitSampling()
-//    dut.io.vin_vld #= false
-//    //sleep(100)
-//    dut.clockDomain.waitSamplingWhere(dut.ph_vld.toBoolean)
-//    dut.io.vin_vld #= true
-//    for(i <- 0 until N) {
-//      dut.io.v_in(i) #=  in_buffer2(i)
-//    }
-//    dut.clockDomain.waitSampling()
-//    dut.io.vin_vld #= false
-//    dut.clockDomain.waitSamplingWhere(dut.ph_vld.toBoolean)
 
-//  }
-//  import sys.process._
-//  "gtkwave -o ./simWorkspace/cal_phase/test.vcd"!
+  val compiled = SimConfig.withWave.allOptimisation.compile(
+    rtl = new cal_phase (N = 8, SizeIn = 8, SizeCoeff = 8, SizeOut = 10))
+  compiled.doSim { dut =>
+    val N = 8
+    val in_buffer1 = Array(40,127,10,-125)
+    val in_buffer2 = Array(110,91,-76,-119)
+    val sin_table = Array(0,99,124,55,-55,-124,-99,0)
+    val cos_table = Array(127,79,-28,-114,-114,-28,79,127)
+
+
+    dut.clockDomain.forkStimulus(5)
+    dut.io.rg_calphase_en #= false
+    dut.io.rg_bypass_mean #= false
+    dut.io.rg_cordic_iternum #= 6
+    dut.io.valid_num #= 4
+    dut.io.vin_vld #= false
+    dut.clockDomain.waitSampling()
+
+    for(i <- 0 until N) {
+      dut.io.rg_leakage_table(i) #= 0
+      dut.io.rg_sin_table(i) #= sin_table(i)
+      dut.io.rg_cos_table(i) #= cos_table(i)
+    }
+
+    sleep(100)
+    println("test")
+    dut.clockDomain.waitSampling()
+    sleep(100)
+    dut.clockDomain.waitSampling()
+    dut.io.rg_calphase_en #= true
+    dut.io.vin_vld #= true
+    for(i <- 0 until N/2) {
+      dut.io.vin1 #=  in_buffer1(i)
+      dut.io.vin2 #=  in_buffer2(i)
+      dut.clockDomain.waitSampling()
+
+    }
+    dut.io.vin_vld #= false
+    //dut.clockDomain.waitSamplingWhere(dut.io.phase_vld.toBoolean)
+    sleep(100)
+
+    dut.clockDomain.waitSampling()
+
+  }
+  import sys.process._
+  "gtkwave -o ./simWorkspace/cal_phase/test.vcd"!
 //   import DesignCompiler._
 //   val dc_config = DesignCompiler_config(process = 180, freq = 100)
 //   val dc = new DesignCompilerFlow(

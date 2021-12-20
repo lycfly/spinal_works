@@ -9,7 +9,6 @@ import scala.language.postfixOps
 class dotVn_2 (N: Int, SizeIn: Int, SizeCoeff: Int) extends Component {
   val io = new Bundle {
     val en = in Bool()
-    val rg_bypass_mean = in Bool()
     val rg_sin_table = in Vec(SInt(SizeIn bits), N)
     val rg_cos_table = in Vec(SInt(SizeIn bits), N)
     val vn_vld = in Bool() // vld_dly1
@@ -40,10 +39,10 @@ class dotVn_2 (N: Int, SizeIn: Int, SizeCoeff: Int) extends Component {
   val finish = Reg(Bool())
 
   vin_minus_mean := io.vn_in(mac_cnt) - io.mean
-  vin_true_in := Mux(io.rg_bypass_mean, vin_minus_mean, io.vn_in(mac_cnt))
+  vin_true_in := vin_minus_mean
 
-  mac_start := mac_cnt === 0
-  mac_finish := mac_cnt === io.valid_num
+  mac_start := mac_en & (mac_cnt === 0)
+  mac_finish := mac_en & (mac_cnt === io.valid_num)
   product1 := vin_true_in * io.rg_sin_table(mac_cnt)
   product2 := vin_true_in * io.rg_cos_table(mac_cnt)
   s1 := (product1 >> 2).resized

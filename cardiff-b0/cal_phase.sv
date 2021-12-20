@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.4.2    git head : 804c7bd7b7feaddcc1d25ecef6c208fd5f776f79
 // Component : cal_phase
-// Git hash  : 54cd370b51a27c83db8bb8db494f2451add2a282
+// Git hash  : 8406ba4457c2ac51b10d3b90d8c3f84b7a7749ab
 
 
 module cal_phase (
@@ -106,7 +106,6 @@ module cal_phase (
   );
   dotVn_2 dot (
     .en                (rg_calphase_en       ), //i
-    .rg_bypass_mean    (rg_bypass_mean       ), //i
     .rg_sin_table_0    (rg_sin_table_0[7:0]  ), //i
     .rg_sin_table_1    (rg_sin_table_1[7:0]  ), //i
     .rg_sin_table_2    (rg_sin_table_2[7:0]  ), //i

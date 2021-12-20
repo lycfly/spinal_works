@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.4.2    git head : 804c7bd7b7feaddcc1d25ecef6c208fd5f776f79
 // Component : cordic_int
-// Git hash  : 54cd370b51a27c83db8bb8db494f2451add2a282
+// Git hash  : 8406ba4457c2ac51b10d3b90d8c3f84b7a7749ab
 
 
 module cordic_int (

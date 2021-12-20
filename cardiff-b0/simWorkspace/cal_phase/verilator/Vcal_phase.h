@@ -32,18 +32,39 @@ VL_MODULE(Vcal_phase) {
     // propagate new values into/out from the Verilated model.
     VL_IN8(clk,0,0);
     VL_IN8(reset,0,0);
-    VL_IN8(en,0,0);
+    VL_IN8(rg_calphase_en,0,0);
+    VL_IN8(rg_bypass_mean,0,0);
+    VL_IN8(rg_cordic_iternum,2,0);
+    VL_IN8(rg_leakage_table_0,7,0);
+    VL_IN8(rg_leakage_table_1,7,0);
+    VL_IN8(rg_leakage_table_2,7,0);
+    VL_IN8(rg_leakage_table_3,7,0);
+    VL_IN8(rg_leakage_table_4,7,0);
+    VL_IN8(rg_leakage_table_5,7,0);
+    VL_IN8(rg_leakage_table_6,7,0);
+    VL_IN8(rg_leakage_table_7,7,0);
+    VL_IN8(rg_sin_table_0,7,0);
+    VL_IN8(rg_sin_table_1,7,0);
+    VL_IN8(rg_sin_table_2,7,0);
+    VL_IN8(rg_sin_table_3,7,0);
+    VL_IN8(rg_sin_table_4,7,0);
+    VL_IN8(rg_sin_table_5,7,0);
+    VL_IN8(rg_sin_table_6,7,0);
+    VL_IN8(rg_sin_table_7,7,0);
+    VL_IN8(rg_cos_table_0,7,0);
+    VL_IN8(rg_cos_table_1,7,0);
+    VL_IN8(rg_cos_table_2,7,0);
+    VL_IN8(rg_cos_table_3,7,0);
+    VL_IN8(rg_cos_table_4,7,0);
+    VL_IN8(rg_cos_table_5,7,0);
+    VL_IN8(rg_cos_table_6,7,0);
+    VL_IN8(rg_cos_table_7,7,0);
+    VL_IN8(valid_num,2,0);
     VL_IN8(vin_vld,0,0);
-    VL_IN8(v_in_0,7,0);
-    VL_IN8(v_in_1,7,0);
-    VL_IN8(v_in_2,7,0);
-    VL_IN8(v_in_3,7,0);
-    VL_IN8(v_in_4,7,0);
-    VL_IN8(v_in_5,7,0);
-    VL_IN8(v_in_6,7,0);
-    VL_IN8(v_in_7,7,0);
-    VL_OUT8(res_vld,0,0);
-    VL_OUT16(res,9,0);
+    VL_IN8(vin1,7,0);
+    VL_IN8(vin2,7,0);
+    VL_OUT8(phase_vld,0,0);
+    VL_OUT16(phase,9,0);
     
     // LOCAL VARIABLES
     // Internals; generally not touched by application code
@@ -98,11 +119,9 @@ VL_MODULE(Vcal_phase) {
     static void _settle__TOP__1(Vcal_phase__Syms* __restrict vlSymsp);
   private:
     static void traceChgSub0(void* userp, VerilatedVcd* tracep);
-    static void traceChgSub1(void* userp, VerilatedVcd* tracep);
     static void traceChgTop0(void* userp, VerilatedVcd* tracep);
     static void traceCleanup(void* userp, VerilatedVcd* /*unused*/);
     static void traceFullSub0(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
-    static void traceFullSub1(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
     static void traceFullTop0(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
     static void traceInitSub0(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
     static void traceInitTop(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;

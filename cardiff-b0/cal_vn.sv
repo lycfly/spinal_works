@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.4.2    git head : 804c7bd7b7feaddcc1d25ecef6c208fd5f776f79
 // Component : cal_vn
-// Git hash  : 54cd370b51a27c83db8bb8db494f2451add2a282
+// Git hash  : 8406ba4457c2ac51b10d3b90d8c3f84b7a7749ab
 
 
 module cal_vn (
@@ -31,27 +31,26 @@ module cal_vn (
   input               clk,
   input               resetn
 );
-  reg        [7:0]    _zz_11;
-  reg        [7:0]    _zz_12;
-  wire       [8:0]    _zz_13;
-  wire       [8:0]    _zz_14;
+  reg        [7:0]    _zz_13;
+  reg        [7:0]    _zz_14;
   wire       [8:0]    _zz_15;
-  wire       [1:0]    _zz_16;
-  wire       [0:0]    _zz_17;
-  wire       [2:0]    _zz_18;
+  wire       [8:0]    _zz_16;
+  wire       [1:0]    _zz_17;
+  wire       [0:0]    _zz_18;
   wire       [2:0]    _zz_19;
-  wire       [8:0]    _zz_20;
+  wire       [2:0]    _zz_20;
   wire       [8:0]    _zz_21;
-  wire       [1:0]    _zz_22;
-  wire       [0:0]    _zz_23;
-  wire       [2:0]    _zz_24;
+  wire       [8:0]    _zz_22;
+  wire       [1:0]    _zz_23;
+  wire       [0:0]    _zz_24;
   wire       [2:0]    _zz_25;
   wire       [2:0]    _zz_26;
   wire       [2:0]    _zz_27;
-  wire       [8:0]    _zz_28;
+  wire       [2:0]    _zz_28;
   wire       [8:0]    _zz_29;
-  wire       [1:0]    _zz_30;
-  wire       [0:0]    _zz_31;
+  wire       [8:0]    _zz_30;
+  wire       [1:0]    _zz_31;
+  wire       [0:0]    _zz_32;
   reg        [7:0]    Vins_0;
   reg        [7:0]    Vins_1;
   reg        [7:0]    Vins_2;
@@ -68,152 +67,155 @@ module cal_vn (
   wire                v1gtv2;
   wire                data_load_finish;
   wire                mean_doing;
-  wire       [8:0]    _zz_1;
-  reg        [7:0]    _zz_2;
-  wire       [7:0]    _zz_3;
-  wire       [7:0]    _zz_4;
-  wire       [8:0]    _zz_5;
-  reg        [7:0]    _zz_6;
-  wire       [7:0]    _zz_7;
-  wire       [7:0]    _zz_8;
-  wire       [8:0]    _zz_9;
-  reg        [7:0]    _zz_10;
+  wire       [7:0]    _zz_1;
+  wire       [7:0]    _zz_2;
+  wire       [8:0]    _zz_3;
+  reg        [7:0]    _zz_4;
+  wire       [7:0]    _zz_5;
+  wire       [7:0]    _zz_6;
+  wire       [8:0]    _zz_7;
+  reg        [7:0]    _zz_8;
+  wire       [7:0]    _zz_9;
+  wire       [7:0]    _zz_10;
+  wire       [8:0]    _zz_11;
+  reg        [7:0]    _zz_12;
 
-  assign _zz_13 = ($signed(_zz_14) + $signed(_zz_15));
-  assign _zz_14 = {max_v[7],max_v};
-  assign _zz_15 = {min_v[7],min_v};
-  assign _zz_16 = _zz_1[8 : 7];
-  assign _zz_17 = _zz_1[7 : 7];
-  assign _zz_18 = (v_cnt <<< 1);
+  assign _zz_15 = {_zz_1[7],_zz_1};
+  assign _zz_16 = {_zz_2[7],_zz_2};
+  assign _zz_17 = _zz_3[8 : 7];
+  assign _zz_18 = _zz_3[7 : 7];
   assign _zz_19 = (v_cnt <<< 1);
-  assign _zz_20 = {vin1[7],vin1};
-  assign _zz_21 = {_zz_4[7],_zz_4};
-  assign _zz_22 = _zz_5[8 : 7];
-  assign _zz_23 = _zz_5[7 : 7];
-  assign _zz_24 = (_zz_25 + 3'b001);
-  assign _zz_25 = (v_cnt <<< 1);
-  assign _zz_26 = (_zz_27 + 3'b001);
-  assign _zz_27 = (v_cnt <<< 1);
-  assign _zz_28 = {vin2[7],vin2};
-  assign _zz_29 = {_zz_8[7],_zz_8};
-  assign _zz_30 = _zz_9[8 : 7];
-  assign _zz_31 = _zz_9[7 : 7];
+  assign _zz_20 = (v_cnt <<< 1);
+  assign _zz_21 = {vin1[7],vin1};
+  assign _zz_22 = {_zz_6[7],_zz_6};
+  assign _zz_23 = _zz_7[8 : 7];
+  assign _zz_24 = _zz_7[7 : 7];
+  assign _zz_25 = (_zz_26 + 3'b001);
+  assign _zz_26 = (v_cnt <<< 1);
+  assign _zz_27 = (_zz_28 + 3'b001);
+  assign _zz_28 = (v_cnt <<< 1);
+  assign _zz_29 = {vin2[7],vin2};
+  assign _zz_30 = {_zz_10[7],_zz_10};
+  assign _zz_31 = _zz_11[8 : 7];
+  assign _zz_32 = _zz_11[7 : 7];
   always @(*) begin
-    case(_zz_19)
+    case(_zz_20)
       3'b000 : begin
-        _zz_11 = rg_leakage_table_0;
+        _zz_13 = rg_leakage_table_0;
       end
       3'b001 : begin
-        _zz_11 = rg_leakage_table_1;
+        _zz_13 = rg_leakage_table_1;
       end
       3'b010 : begin
-        _zz_11 = rg_leakage_table_2;
+        _zz_13 = rg_leakage_table_2;
       end
       3'b011 : begin
-        _zz_11 = rg_leakage_table_3;
+        _zz_13 = rg_leakage_table_3;
       end
       3'b100 : begin
-        _zz_11 = rg_leakage_table_4;
+        _zz_13 = rg_leakage_table_4;
       end
       3'b101 : begin
-        _zz_11 = rg_leakage_table_5;
+        _zz_13 = rg_leakage_table_5;
       end
       3'b110 : begin
-        _zz_11 = rg_leakage_table_6;
+        _zz_13 = rg_leakage_table_6;
       end
       default : begin
-        _zz_11 = rg_leakage_table_7;
+        _zz_13 = rg_leakage_table_7;
       end
     endcase
   end
 
   always @(*) begin
-    case(_zz_26)
+    case(_zz_27)
       3'b000 : begin
-        _zz_12 = rg_leakage_table_0;
+        _zz_14 = rg_leakage_table_0;
       end
       3'b001 : begin
-        _zz_12 = rg_leakage_table_1;
+        _zz_14 = rg_leakage_table_1;
       end
       3'b010 : begin
-        _zz_12 = rg_leakage_table_2;
+        _zz_14 = rg_leakage_table_2;
       end
       3'b011 : begin
-        _zz_12 = rg_leakage_table_3;
+        _zz_14 = rg_leakage_table_3;
       end
       3'b100 : begin
-        _zz_12 = rg_leakage_table_4;
+        _zz_14 = rg_leakage_table_4;
       end
       3'b101 : begin
-        _zz_12 = rg_leakage_table_5;
+        _zz_14 = rg_leakage_table_5;
       end
       3'b110 : begin
-        _zz_12 = rg_leakage_table_6;
+        _zz_14 = rg_leakage_table_6;
       end
       default : begin
-        _zz_12 = rg_leakage_table_7;
+        _zz_14 = rg_leakage_table_7;
       end
     endcase
   end
 
   assign mean_doing = 1'b0;
   assign v1gtv2 = ($signed(vin2) < $signed(vin1));
-  assign bigger = ((v1gtv2 && rg_bypass_mean) ? vin1 : vin2);
-  assign smaller = ((v1gtv2 && rg_bypass_mean) ? vin2 : vin1);
+  assign bigger = (v1gtv2 ? vin1 : vin2);
+  assign smaller = (v1gtv2 ? vin2 : vin1);
   assign data_load_finish = (v_cnt == valid_num);
-  assign _zz_1 = ($signed(_zz_13) >>> 1);
+  assign _zz_1 = ($signed(max_v) >>> 1);
+  assign _zz_2 = ($signed(min_v) >>> 1);
+  assign _zz_3 = ($signed(_zz_15) + $signed(_zz_16));
   always @ (*) begin
-    if(_zz_1[8])begin
-      if((! (_zz_16 == 2'b11)))begin
-        _zz_2 = 8'h80;
+    if(_zz_3[8])begin
+      if((! (_zz_17 == 2'b11)))begin
+        _zz_4 = 8'h80;
       end else begin
-        _zz_2 = _zz_1[7 : 0];
+        _zz_4 = _zz_3[7 : 0];
       end
     end else begin
-      if((_zz_17 != 1'b0))begin
-        _zz_2 = 8'h7f;
+      if((_zz_18 != 1'b0))begin
+        _zz_4 = 8'h7f;
       end else begin
-        _zz_2 = _zz_1[7 : 0];
+        _zz_4 = _zz_3[7 : 0];
       end
     end
   end
 
-  assign mean = _zz_2;
+  assign mean = _zz_4;
   assign finish = ((en && vin_vld) && data_load_finish);
-  assign _zz_3 = ({7'd0,1'b1} <<< _zz_18);
-  assign _zz_4 = _zz_11;
-  assign _zz_5 = ($signed(_zz_20) - $signed(_zz_21));
+  assign _zz_5 = ({7'd0,1'b1} <<< _zz_19);
+  assign _zz_6 = _zz_13;
+  assign _zz_7 = ($signed(_zz_21) - $signed(_zz_22));
   always @ (*) begin
-    if(_zz_5[8])begin
-      if((! (_zz_22 == 2'b11)))begin
-        _zz_6 = 8'h80;
+    if(_zz_7[8])begin
+      if((! (_zz_23 == 2'b11)))begin
+        _zz_8 = 8'h80;
       end else begin
-        _zz_6 = _zz_5[7 : 0];
+        _zz_8 = _zz_7[7 : 0];
       end
     end else begin
-      if((_zz_23 != 1'b0))begin
-        _zz_6 = 8'h7f;
+      if((_zz_24 != 1'b0))begin
+        _zz_8 = 8'h7f;
       end else begin
-        _zz_6 = _zz_5[7 : 0];
+        _zz_8 = _zz_7[7 : 0];
       end
     end
   end
 
-  assign _zz_7 = ({7'd0,1'b1} <<< _zz_24);
-  assign _zz_8 = _zz_12;
-  assign _zz_9 = ($signed(_zz_28) - $signed(_zz_29));
+  assign _zz_9 = ({7'd0,1'b1} <<< _zz_25);
+  assign _zz_10 = _zz_14;
+  assign _zz_11 = ($signed(_zz_29) - $signed(_zz_30));
   always @ (*) begin
-    if(_zz_9[8])begin
-      if((! (_zz_30 == 2'b11)))begin
-        _zz_10 = 8'h80;
+    if(_zz_11[8])begin
+      if((! (_zz_31 == 2'b11)))begin
+        _zz_12 = 8'h80;
       end else begin
-        _zz_10 = _zz_9[7 : 0];
+        _zz_12 = _zz_11[7 : 0];
       end
     end else begin
-      if((_zz_31 != 1'b0))begin
-        _zz_10 = 8'h7f;
+      if((_zz_32 != 1'b0))begin
+        _zz_12 = 8'h7f;
       end else begin
-        _zz_10 = _zz_9[7 : 0];
+        _zz_12 = _zz_11[7 : 0];
       end
     end
   end
@@ -241,60 +243,60 @@ module cal_vn (
       min_v <= 8'h0;
     end else begin
       if((en && vin_vld))begin
-        if(_zz_3[0])begin
-          Vins_0 <= _zz_6;
+        if(_zz_5[0])begin
+          Vins_0 <= _zz_8;
         end
-        if(_zz_3[1])begin
-          Vins_1 <= _zz_6;
+        if(_zz_5[1])begin
+          Vins_1 <= _zz_8;
         end
-        if(_zz_3[2])begin
-          Vins_2 <= _zz_6;
+        if(_zz_5[2])begin
+          Vins_2 <= _zz_8;
         end
-        if(_zz_3[3])begin
-          Vins_3 <= _zz_6;
+        if(_zz_5[3])begin
+          Vins_3 <= _zz_8;
         end
-        if(_zz_3[4])begin
-          Vins_4 <= _zz_6;
+        if(_zz_5[4])begin
+          Vins_4 <= _zz_8;
         end
-        if(_zz_3[5])begin
-          Vins_5 <= _zz_6;
+        if(_zz_5[5])begin
+          Vins_5 <= _zz_8;
         end
-        if(_zz_3[6])begin
-          Vins_6 <= _zz_6;
+        if(_zz_5[6])begin
+          Vins_6 <= _zz_8;
         end
-        if(_zz_3[7])begin
-          Vins_7 <= _zz_6;
+        if(_zz_5[7])begin
+          Vins_7 <= _zz_8;
         end
-        if(_zz_7[0])begin
-          Vins_0 <= _zz_10;
+        if(_zz_9[0])begin
+          Vins_0 <= _zz_12;
         end
-        if(_zz_7[1])begin
-          Vins_1 <= _zz_10;
+        if(_zz_9[1])begin
+          Vins_1 <= _zz_12;
         end
-        if(_zz_7[2])begin
-          Vins_2 <= _zz_10;
+        if(_zz_9[2])begin
+          Vins_2 <= _zz_12;
         end
-        if(_zz_7[3])begin
-          Vins_3 <= _zz_10;
+        if(_zz_9[3])begin
+          Vins_3 <= _zz_12;
         end
-        if(_zz_7[4])begin
-          Vins_4 <= _zz_10;
+        if(_zz_9[4])begin
+          Vins_4 <= _zz_12;
         end
-        if(_zz_7[5])begin
-          Vins_5 <= _zz_10;
+        if(_zz_9[5])begin
+          Vins_5 <= _zz_12;
         end
-        if(_zz_7[6])begin
-          Vins_6 <= _zz_10;
+        if(_zz_9[6])begin
+          Vins_6 <= _zz_12;
         end
-        if(_zz_7[7])begin
-          Vins_7 <= _zz_10;
+        if(_zz_9[7])begin
+          Vins_7 <= _zz_12;
         end
         if(data_load_finish)begin
           v_cnt <= 3'b000;
         end else begin
           v_cnt <= (v_cnt + 3'b001);
         end
-        if(rg_bypass_mean)begin
+        if((! rg_bypass_mean))begin
           if((v_cnt == 3'b000))begin
             max_v <= bigger;
             min_v <= smaller;
@@ -306,6 +308,9 @@ module cal_vn (
               min_v <= smaller;
             end
           end
+        end else begin
+          max_v <= 8'h0;
+          min_v <= 8'h0;
         end
       end
     end

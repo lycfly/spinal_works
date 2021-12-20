@@ -72,8 +72,8 @@ VL_INLINE_OPT void Vcal_phase::_settle__TOP__1(Vcal_phase__Syms* __restrict vlSy
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vcal_phase::_settle__TOP__1\n"); );
     Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    vlTOPp->res = vlSymsp->TOP__cal_phase.__PVT__res_last;
-    vlTOPp->res_vld = vlSymsp->TOP__cal_phase.__PVT__res_last_vld;
+    vlTOPp->phase = vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__res_out;
+    vlTOPp->phase_vld = vlSymsp->TOP__cal_phase.ph_vld;
 }
 
 void Vcal_phase::_eval(Vcal_phase__Syms* __restrict vlSymsp) {
@@ -81,9 +81,10 @@ void Vcal_phase::_eval(Vcal_phase__Syms* __restrict vlSymsp) {
     Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlSymsp->TOP__cal_phase._combo__TOP__cal_phase__1(vlSymsp);
+    vlTOPp->__Vm_traceActivity[1U] = 1U;
     if ((((IData)(vlTOPp->clk) & (~ (IData)(vlTOPp->__Vclklast__TOP__clk))) 
          | ((IData)(vlTOPp->reset) & (~ (IData)(vlTOPp->__Vclklast__TOP__reset))))) {
-        vlTOPp->__Vm_traceActivity[1U] = 1U;
+        vlTOPp->__Vm_traceActivity[2U] = 1U;
         vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__5(vlSymsp);
         vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__6(vlSymsp);
         vlTOPp->_settle__TOP__1(vlSymsp);
@@ -91,10 +92,9 @@ void Vcal_phase::_eval(Vcal_phase__Syms* __restrict vlSymsp) {
     if (((IData)(vlTOPp->clk) & (~ (IData)(vlTOPp->__Vclklast__TOP__clk)))) {
         vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__7(vlSymsp);
     }
+    vlSymsp->TOP__cal_phase._combo__TOP__cal_phase__8(vlSymsp);
     if ((((IData)(vlTOPp->clk) & (~ (IData)(vlTOPp->__Vclklast__TOP__clk))) 
          | ((IData)(vlTOPp->reset) & (~ (IData)(vlTOPp->__Vclklast__TOP__reset))))) {
-        vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__8(vlSymsp);
-        vlTOPp->__Vm_traceActivity[2U] = 1U;
         vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__9(vlSymsp);
     }
     vlSymsp->TOP__cal_phase._combo__TOP__cal_phase__10(vlSymsp);
@@ -123,8 +123,14 @@ VL_INLINE_OPT QData Vcal_phase::_change_request_1(Vcal_phase__Syms* __restrict v
 void Vcal_phase::_eval_debug_assertions() {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vcal_phase::_eval_debug_assertions\n"); );
     // Body
-    if (VL_UNLIKELY((en & 0xfeU))) {
-        Verilated::overWidthError("en");}
+    if (VL_UNLIKELY((rg_calphase_en & 0xfeU))) {
+        Verilated::overWidthError("rg_calphase_en");}
+    if (VL_UNLIKELY((rg_bypass_mean & 0xfeU))) {
+        Verilated::overWidthError("rg_bypass_mean");}
+    if (VL_UNLIKELY((rg_cordic_iternum & 0xf8U))) {
+        Verilated::overWidthError("rg_cordic_iternum");}
+    if (VL_UNLIKELY((valid_num & 0xf8U))) {
+        Verilated::overWidthError("valid_num");}
     if (VL_UNLIKELY((vin_vld & 0xfeU))) {
         Verilated::overWidthError("vin_vld");}
     if (VL_UNLIKELY((clk & 0xfeU))) {

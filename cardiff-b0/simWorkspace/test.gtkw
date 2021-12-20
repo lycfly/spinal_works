@@ -1,42 +1,52 @@
 [*]
 [*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
-[*] Wed Oct 27 08:41:02 2021
+[*] Mon Dec 20 07:37:27 2021
 [*]
 [dumpfile] "/mnt/mydata/spinal_works/cardiff-b0/simWorkspace/cal_phase/test.vcd"
-[dumpfile_mtime] "Wed Oct 27 08:37:50 2021"
-[dumpfile_size] 26598
+[dumpfile_mtime] "Mon Dec 20 07:31:42 2021"
+[dumpfile_size] 15418
 [optimize_vcd]
 [savefile] "/mnt/mydata/spinal_works/cardiff-b0/simWorkspace/test.gtkw"
-[timestart] 198
+[timestart] 332
 [size] 1890 891
-[pos] -93 -62
-*-4.883663 251 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[pos] -51 -20
+*-3.000000 369 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] TOP.
 [treeopen] TOP.cal_phase.
-[treeopen] TOP.cal_phase.calvn.
-[treeopen] TOP.cal_phase.dot.
-[sst_width] 352
-[signals_width] 223
+[sst_width] 228
+[signals_width] 206
 [sst_expanded] 1
-[sst_vpaned_height] 548
+[sst_vpaned_height] 428
 @28
-TOP.cal_phase.clk
-@22
-TOP.cal_phase.psum_out1[15:0]
+TOP.clk
+TOP.reset
+TOP.rg_bypass_mean
+TOP.rg_calphase_en
 @24
-TOP.cal_phase.v_in_0[7:0]
-TOP.cal_phase.v_in_1[7:0]
-TOP.cal_phase.v_in_2[7:0]
-TOP.cal_phase.v_in_3[7:0]
-TOP.cal_phase.v_in_4[7:0]
-TOP.cal_phase.v_in_5[7:0]
-TOP.cal_phase.v_in_6[7:0]
-TOP.cal_phase.v_in_7[7:0]
-TOP.cal_phase.vn_vld
+TOP.rg_cordic_iternum[2:0]
+@420
+TOP.rg_sin_table_0[7:0]
+TOP.rg_sin_table_1[7:0]
+TOP.rg_sin_table_2[7:0]
+TOP.rg_sin_table_3[7:0]
+TOP.rg_sin_table_4[7:0]
+TOP.rg_sin_table_5[7:0]
+TOP.rg_sin_table_6[7:0]
+TOP.rg_sin_table_7[7:0]
+TOP.rg_cos_table_0[7:0]
+TOP.rg_cos_table_1[7:0]
+TOP.rg_cos_table_2[7:0]
+TOP.rg_cos_table_3[7:0]
+TOP.rg_cos_table_4[7:0]
+TOP.rg_cos_table_5[7:0]
+TOP.rg_cos_table_6[7:0]
+TOP.rg_cos_table_7[7:0]
+TOP.vin1[7:0]
+TOP.vin2[7:0]
 @28
-[color] 3
-TOP.cal_phase.vin_vld
-@24
+TOP.vin_vld
+TOP.cal_phase.calvn.finish
+@420
 TOP.cal_phase.calvn.vn_0[7:0]
 TOP.cal_phase.calvn.vn_1[7:0]
 TOP.cal_phase.calvn.vn_2[7:0]
@@ -45,46 +55,74 @@ TOP.cal_phase.calvn.vn_4[7:0]
 TOP.cal_phase.calvn.vn_5[7:0]
 TOP.cal_phase.calvn.vn_6[7:0]
 TOP.cal_phase.calvn.vn_7[7:0]
-TOP.cal_phase.dot.mac_cnt[2:0]
-@22
-TOP.cal_phase.dot.psum2[18:0]
+@24
+TOP.cal_phase.calvn.valid_num[2:0]
+TOP.cal_phase.calvn.v_cnt[2:0]
+@420
+TOP.cal_phase.calvn.max_v[7:0]
+TOP.cal_phase.calvn.mean[7:0]
+TOP.cal_phase.calvn.min_v[7:0]
+@200
+-
+@420
+TOP.cal_phase.dot.vn_in_0[7:0]
+TOP.cal_phase.dot.vn_in_1[7:0]
+TOP.cal_phase.dot.vn_in_2[7:0]
+TOP.cal_phase.dot.vn_in_3[7:0]
+TOP.cal_phase.dot.vn_in_4[7:0]
+TOP.cal_phase.dot.vn_in_5[7:0]
+TOP.cal_phase.dot.vn_in_6[7:0]
+TOP.cal_phase.dot.vn_in_7[7:0]
 @28
-TOP.cal_phase.dot.en
+TOP.cal_phase.dot.vn_vld
+@24
+TOP.cal_phase.dot.mac_cnt[2:0]
+@28
 TOP.cal_phase.dot.mac_en
 TOP.cal_phase.dot.mac_finish
-TOP.cal_phase.dot.finish
+TOP.cal_phase.dot.mac_start
 @420
 TOP.cal_phase.dot.psum1[18:0]
 TOP.cal_phase.dot.psum2[18:0]
-@40000420
-[fpshift_count] 15
-TOP.cal_phase.dot.psum_out1[15:0]
-[fpshift_count] 15
-TOP.cal_phase.dot.psum_out2[15:0]
+TOP.cal_phase.dot.psum_vld
+@200
+-
+@24
+TOP.cal_phase.cordic.cal_cnt[2:0]
+@420
+TOP.cal_phase.cordic.x[15:0]
+@c00420
+TOP.cal_phase.cordic.y[15:0]
+@28
+(0)TOP.cal_phase.cordic.y[15:0]
+(1)TOP.cal_phase.cordic.y[15:0]
+(2)TOP.cal_phase.cordic.y[15:0]
+(3)TOP.cal_phase.cordic.y[15:0]
+(4)TOP.cal_phase.cordic.y[15:0]
+(5)TOP.cal_phase.cordic.y[15:0]
+(6)TOP.cal_phase.cordic.y[15:0]
+(7)TOP.cal_phase.cordic.y[15:0]
+(8)TOP.cal_phase.cordic.y[15:0]
+(9)TOP.cal_phase.cordic.y[15:0]
+(10)TOP.cal_phase.cordic.y[15:0]
+(11)TOP.cal_phase.cordic.y[15:0]
+(12)TOP.cal_phase.cordic.y[15:0]
+(13)TOP.cal_phase.cordic.y[15:0]
+(14)TOP.cal_phase.cordic.y[15:0]
+(15)TOP.cal_phase.cordic.y[15:0]
+@1401200
+-group_end
 @28
 TOP.cal_phase.cordic.cal_en
-TOP.cal_phase.dot.psum_vld
-TOP.cal_phase.cordic.vld
+@29
+TOP.cal_phase.cordic.cal_finish
+@28
+TOP.cal_phase.cordic.cal_start
 @420
-TOP.cal_phase.ph_cal[7:0]
+TOP.cal_phase.cordic.res[9:0]
+TOP.cal_phase.cordic.res_rg[10:0]
 @28
 TOP.cal_phase.cordic.nozero_flg
-TOP.cal_phase.LastA2stZero
-TOP.cal_phase.AbsGtPi
-TOP.cal_phase.ph_vld
-@40000420
-[fpshift_count] 1
-TOP.cal_phase.ph_last[7:0]
-[fpshift_count] 1
-TOP.cal_phase.ph_now[7:0]
-@40000421
-[fpshift_count] 1
-TOP.cal_phase.ph_delta[8:0]
-@40000420
-[color] 3
-[fpshift_count] 1
-TOP.cal_phase.res_vld
-[fpshift_count] 1
-TOP.cal_phase.res[9:0]
+TOP.cal_phase.cordic.res_vld
 [pattern_trace] 1
 [pattern_trace] 0

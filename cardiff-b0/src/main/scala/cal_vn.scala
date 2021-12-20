@@ -28,17 +28,17 @@ class cal_vn (N: Int, SizeIn: Int) extends Component {
   val smaller = SInt(SizeIn bits)
   val max_v  = Reg(SInt(SizeIn bits)) init(0)
   val min_v  = Reg(SInt(SizeIn bits)) init(0)
-
+  val mean_finish = Bool()
   val v1gtv2 = Bool()
   val data_load_finish = Bool()
-  val mean_doing = Reg(Bool()) init(false)
 
   v1gtv2 := io.vin1 > io.vin2
-  bigger := Mux(v1gtv2 & io.rg_bypass_mean , io.vin1 , io.vin2)
-  smaller := Mux(v1gtv2 & io.rg_bypass_mean, io.vin2 , io.vin1)
-  data_load_finish := v_cnt === io.valid_num
-  io.mean := ((max_v +^ min_v)|>>1).sat(1)
-  io.finish := io.en & io.vin_vld & data_load_finish
+  bigger := Mux(v1gtv2 , io.vin1 , io.vin2)
+  smaller := Mux(v1gtv2 , io.vin2 , io.vin1)
+  data_load_finish := v_cnt === io.valid_num -1
+  io.mean := ((max_v |>>1 ) +^ (min_v |>>1 )).sat(1)
+  mean_finish := io.en & io.vin_vld & data_load_finish
+  io.finish := RegNext(mean_finish) init(false)
   when(io.en & io.vin_vld){
     Vins((v_cnt|<<1)) := (io.vin1 -^ io.rg_leakage_table((v_cnt|<<1))).sat(1)
     Vins((v_cnt|<<1)+1) := (io.vin2 -^ io.rg_leakage_table((v_cnt|<<1)+1)).sat(1)
@@ -47,7 +47,7 @@ class cal_vn (N: Int, SizeIn: Int) extends Component {
     }.otherwise{
       v_cnt := v_cnt + 1
     }
-    when(io.rg_bypass_mean){
+    when(~io.rg_bypass_mean){
       when(v_cnt === 0){
         max_v := bigger
         min_v := smaller
@@ -59,6 +59,9 @@ class cal_vn (N: Int, SizeIn: Int) extends Component {
           min_v := smaller
         }
       }
+    }.otherwise{
+      max_v := 0
+      min_v := 0
     }
 
   }
