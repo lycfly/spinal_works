@@ -172,53 +172,53 @@ void Vbooth4_v2::traceFullSub0(void* userp, VerilatedVcd* tracep) {
                                                     : 
                                                    (vlTOPp->booth4_v2__DOT__shiftReg 
                                                     >> 9U)))))),9);
-        tracep->fullIData(oldp+23,((0x3ffffU & ((0xff80U 
-                                                 & (((4U 
-                                                      & vlTOPp->booth4_v2__DOT__shiftReg)
-                                                      ? 
-                                                     ((2U 
-                                                       & vlTOPp->booth4_v2__DOT__shiftReg)
-                                                       ? 
-                                                      ((1U 
-                                                        & vlTOPp->booth4_v2__DOT__shiftReg)
-                                                        ? 
-                                                       (vlTOPp->booth4_v2__DOT__shiftReg 
-                                                        >> 9U)
-                                                        : (IData)(vlTOPp->booth4_v2__DOT__MinusB))
-                                                       : 
-                                                      ((1U 
-                                                        & vlTOPp->booth4_v2__DOT__shiftReg)
-                                                        ? (IData)(vlTOPp->booth4_v2__DOT__MinusB)
-                                                        : 
-                                                       ((vlTOPp->booth4_v2__DOT__shiftReg 
-                                                         >> 9U) 
-                                                        + 
-                                                        ((- (IData)(vlTOPp->booth4_v2__DOT__PositiveB)) 
-                                                         << 1U))))
-                                                      : 
-                                                     ((2U 
-                                                       & vlTOPp->booth4_v2__DOT__shiftReg)
-                                                       ? 
-                                                      ((1U 
-                                                        & vlTOPp->booth4_v2__DOT__shiftReg)
-                                                        ? 
-                                                       ((vlTOPp->booth4_v2__DOT__shiftReg 
-                                                         >> 9U) 
-                                                        + 
-                                                        ((IData)(vlTOPp->booth4_v2__DOT__PositiveB) 
-                                                         << 1U))
-                                                        : (IData)(vlTOPp->booth4_v2__DOT__AddB))
-                                                       : 
-                                                      ((1U 
-                                                        & vlTOPp->booth4_v2__DOT__shiftReg)
-                                                        ? (IData)(vlTOPp->booth4_v2__DOT__AddB)
-                                                        : 
-                                                       (vlTOPp->booth4_v2__DOT__shiftReg 
-                                                        >> 9U)))) 
-                                                    << 7U)) 
-                                                | (0x7fU 
-                                                   & (vlTOPp->booth4_v2__DOT__shiftReg 
-                                                      >> 2U))))),18);
+        tracep->fullIData(oldp+23,((0x3ffffU & VL_SHIFTRS_III(18,18,32, 
+                                                              ((0x3fe00U 
+                                                                & (((4U 
+                                                                     & vlTOPp->booth4_v2__DOT__shiftReg)
+                                                                     ? 
+                                                                    ((2U 
+                                                                      & vlTOPp->booth4_v2__DOT__shiftReg)
+                                                                      ? 
+                                                                     ((1U 
+                                                                       & vlTOPp->booth4_v2__DOT__shiftReg)
+                                                                       ? 
+                                                                      (vlTOPp->booth4_v2__DOT__shiftReg 
+                                                                       >> 9U)
+                                                                       : (IData)(vlTOPp->booth4_v2__DOT__MinusB))
+                                                                      : 
+                                                                     ((1U 
+                                                                       & vlTOPp->booth4_v2__DOT__shiftReg)
+                                                                       ? (IData)(vlTOPp->booth4_v2__DOT__MinusB)
+                                                                       : 
+                                                                      ((vlTOPp->booth4_v2__DOT__shiftReg 
+                                                                        >> 9U) 
+                                                                       + 
+                                                                       ((- (IData)(vlTOPp->booth4_v2__DOT__PositiveB)) 
+                                                                        << 1U))))
+                                                                     : 
+                                                                    ((2U 
+                                                                      & vlTOPp->booth4_v2__DOT__shiftReg)
+                                                                      ? 
+                                                                     ((1U 
+                                                                       & vlTOPp->booth4_v2__DOT__shiftReg)
+                                                                       ? 
+                                                                      ((vlTOPp->booth4_v2__DOT__shiftReg 
+                                                                        >> 9U) 
+                                                                       + 
+                                                                       ((IData)(vlTOPp->booth4_v2__DOT__PositiveB) 
+                                                                        << 1U))
+                                                                       : (IData)(vlTOPp->booth4_v2__DOT__AddB))
+                                                                      : 
+                                                                     ((1U 
+                                                                       & vlTOPp->booth4_v2__DOT__shiftReg)
+                                                                       ? (IData)(vlTOPp->booth4_v2__DOT__AddB)
+                                                                       : 
+                                                                      (vlTOPp->booth4_v2__DOT__shiftReg 
+                                                                       >> 9U)))) 
+                                                                   << 9U)) 
+                                                               | (0x1ffU 
+                                                                  & vlTOPp->booth4_v2__DOT__shiftReg)), 2U))),18);
         tracep->fullBit(oldp+24,(vlTOPp->booth4_v2__DOT__cal_en_regNext));
     }
 }

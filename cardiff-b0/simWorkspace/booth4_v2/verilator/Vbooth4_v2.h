@@ -40,8 +40,8 @@ VL_MODULE(Vbooth4_v2) {
     SData/*8:0*/ booth4_v2__DOT__PositiveB;
     SData/*8:0*/ booth4_v2__DOT__AddB;
     SData/*8:0*/ booth4_v2__DOT__MinusB;
+    IData/*17:0*/ booth4_v2__DOT___zz_2;
     IData/*17:0*/ booth4_v2__DOT__shiftReg;
-    IData/*17:0*/ booth4_v2__DOT__aftershift;
     
     // LOCAL VARIABLES
     // Internals; generally not touched by application code

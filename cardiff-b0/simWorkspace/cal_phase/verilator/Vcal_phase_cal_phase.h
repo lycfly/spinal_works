@@ -121,12 +121,12 @@ VL_MODULE(Vcal_phase_cal_phase) {
         IData/*18:0*/ __PVT__dot__DOT__s2;
         IData/*18:0*/ __PVT__dot__DOT__psum1;
         IData/*18:0*/ __PVT__dot__DOT__psum2;
+        IData/*17:0*/ __PVT__dot__DOT__booth_sin__DOT___zz_2;
         IData/*17:0*/ __PVT__dot__DOT__booth_sin__DOT__shiftReg;
-        IData/*17:0*/ __PVT__dot__DOT__booth_sin__DOT__aftershift;
     };
     struct {
+        IData/*17:0*/ __PVT__dot__DOT__booth_cos__DOT___zz_2;
         IData/*17:0*/ __PVT__dot__DOT__booth_cos__DOT__shiftReg;
-        IData/*17:0*/ __PVT__dot__DOT__booth_cos__DOT__aftershift;
         IData/*18:0*/ __PVT__cordic__DOT__xn;
         IData/*18:0*/ __PVT__cordic__DOT__yn;
         IData/*18:0*/ __PVT__cordic__DOT__x_ext;

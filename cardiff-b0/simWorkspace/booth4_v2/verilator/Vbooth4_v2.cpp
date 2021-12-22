@@ -118,7 +118,8 @@ VL_INLINE_OPT void Vbooth4_v2::_sequent__TOP__4(Vbooth4_v2__Syms* __restrict vlS
                                                 << 1U);
         } else {
             if (vlTOPp->booth4_v2__DOT__cal_en) {
-                vlTOPp->booth4_v2__DOT__shiftReg = vlTOPp->booth4_v2__DOT__aftershift;
+                vlTOPp->booth4_v2__DOT__shiftReg = 
+                    (0x3ffffU & VL_SHIFTRS_III(18,18,32, vlTOPp->booth4_v2__DOT___zz_2, 2U));
             }
         }
     }
@@ -140,54 +141,51 @@ VL_INLINE_OPT void Vbooth4_v2::_combo__TOP__5(Vbooth4_v2__Syms* __restrict vlSym
     vlTOPp->booth4_v2__DOT__MinusB = (0x1ffU & ((vlTOPp->booth4_v2__DOT__shiftReg 
                                                  >> 9U) 
                                                 + (- (IData)(vlTOPp->booth4_v2__DOT__PositiveB))));
-    vlTOPp->booth4_v2__DOT__aftershift = (0x3ffffU 
-                                          & ((0xff80U 
-                                              & (((4U 
-                                                   & vlTOPp->booth4_v2__DOT__shiftReg)
-                                                   ? 
-                                                  ((2U 
+    vlTOPp->booth4_v2__DOT___zz_2 = ((0x3fe00U & ((
+                                                   (4U 
                                                     & vlTOPp->booth4_v2__DOT__shiftReg)
                                                     ? 
-                                                   ((1U 
+                                                   ((2U 
                                                      & vlTOPp->booth4_v2__DOT__shiftReg)
                                                      ? 
-                                                    (vlTOPp->booth4_v2__DOT__shiftReg 
-                                                     >> 9U)
-                                                     : (IData)(vlTOPp->booth4_v2__DOT__MinusB))
-                                                    : 
-                                                   ((1U 
-                                                     & vlTOPp->booth4_v2__DOT__shiftReg)
-                                                     ? (IData)(vlTOPp->booth4_v2__DOT__MinusB)
+                                                    ((1U 
+                                                      & vlTOPp->booth4_v2__DOT__shiftReg)
+                                                      ? 
+                                                     (vlTOPp->booth4_v2__DOT__shiftReg 
+                                                      >> 9U)
+                                                      : (IData)(vlTOPp->booth4_v2__DOT__MinusB))
                                                      : 
-                                                    ((vlTOPp->booth4_v2__DOT__shiftReg 
-                                                      >> 9U) 
-                                                     + 
-                                                     ((- (IData)(vlTOPp->booth4_v2__DOT__PositiveB)) 
-                                                      << 1U))))
-                                                   : 
-                                                  ((2U 
-                                                    & vlTOPp->booth4_v2__DOT__shiftReg)
-                                                    ? 
-                                                   ((1U 
+                                                    ((1U 
+                                                      & vlTOPp->booth4_v2__DOT__shiftReg)
+                                                      ? (IData)(vlTOPp->booth4_v2__DOT__MinusB)
+                                                      : 
+                                                     ((vlTOPp->booth4_v2__DOT__shiftReg 
+                                                       >> 9U) 
+                                                      + 
+                                                      ((- (IData)(vlTOPp->booth4_v2__DOT__PositiveB)) 
+                                                       << 1U))))
+                                                    : 
+                                                   ((2U 
                                                      & vlTOPp->booth4_v2__DOT__shiftReg)
                                                      ? 
-                                                    ((vlTOPp->booth4_v2__DOT__shiftReg 
-                                                      >> 9U) 
-                                                     + 
-                                                     ((IData)(vlTOPp->booth4_v2__DOT__PositiveB) 
-                                                      << 1U))
-                                                     : (IData)(vlTOPp->booth4_v2__DOT__AddB))
-                                                    : 
-                                                   ((1U 
-                                                     & vlTOPp->booth4_v2__DOT__shiftReg)
-                                                     ? (IData)(vlTOPp->booth4_v2__DOT__AddB)
+                                                    ((1U 
+                                                      & vlTOPp->booth4_v2__DOT__shiftReg)
+                                                      ? 
+                                                     ((vlTOPp->booth4_v2__DOT__shiftReg 
+                                                       >> 9U) 
+                                                      + 
+                                                      ((IData)(vlTOPp->booth4_v2__DOT__PositiveB) 
+                                                       << 1U))
+                                                      : (IData)(vlTOPp->booth4_v2__DOT__AddB))
                                                      : 
-                                                    (vlTOPp->booth4_v2__DOT__shiftReg 
-                                                     >> 9U)))) 
-                                                 << 7U)) 
-                                             | (0x7fU 
-                                                & (vlTOPp->booth4_v2__DOT__shiftReg 
-                                                   >> 2U))));
+                                                    ((1U 
+                                                      & vlTOPp->booth4_v2__DOT__shiftReg)
+                                                      ? (IData)(vlTOPp->booth4_v2__DOT__AddB)
+                                                      : 
+                                                     (vlTOPp->booth4_v2__DOT__shiftReg 
+                                                      >> 9U)))) 
+                                                  << 9U)) 
+                                     | (0x1ffU & vlTOPp->booth4_v2__DOT__shiftReg));
 }
 
 void Vbooth4_v2::_eval(Vbooth4_v2__Syms* __restrict vlSymsp) {

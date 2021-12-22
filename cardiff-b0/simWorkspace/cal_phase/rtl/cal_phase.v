@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.4.2    git head : 804c7bd7b7feaddcc1d25ecef6c208fd5f776f79
 // Component : cal_phase
-// Git hash  : ed79254912e4e0116b93338ee750ed4f28bc3df0
+// Git hash  : 4fa549902b849df099b030f0556e4e0470202670
 
 
 
@@ -954,6 +954,8 @@ module booth4_v2 (
   input               clk,
   input               reset
 );
+  wire       [17:0]   _zz_1;
+  wire       [17:0]   _zz_2;
   reg        [17:0]   shiftReg;
   wire       [2:0]    flag_bits;
   wire       [8:0]    NegativeB;
@@ -972,6 +974,8 @@ module booth4_v2 (
   wire       [17:0]   aftershift;
   reg                 cal_en_regNext;
 
+  assign _zz_1 = ($signed(_zz_2) >>> 2);
+  assign _zz_2 = {beforeshift,shiftReg_low};
   assign flag_bits = shiftReg[2 : 0];
   assign NegativeB = (- PositiveB);
   assign PositiveB = {{1{io_dinB[7]}}, io_dinB};
@@ -1003,7 +1007,7 @@ module booth4_v2 (
     endcase
   end
 
-  assign aftershift = ({beforeshift,shiftReg_low} >>> 2);
+  assign aftershift = _zz_1;
   assign io_dout_vld = ((! cal_en) && cal_en_regNext);
   assign io_dout = shiftReg[16 : 1];
   always @ (posedge clk or posedge reset) begin

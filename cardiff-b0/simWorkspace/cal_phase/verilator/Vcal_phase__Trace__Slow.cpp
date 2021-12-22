@@ -430,53 +430,53 @@ void Vcal_phase::traceFullSub0(void* userp, VerilatedVcd* tracep) {
                                                     : 
                                                    (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
                                                     >> 9U)))))),9);
-        tracep->fullIData(oldp+21,((0x3ffffU & ((0xff80U 
-                                                 & (((4U 
-                                                      & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
-                                                      ? 
-                                                     ((2U 
-                                                       & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
-                                                       ? 
-                                                      ((1U 
-                                                        & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
-                                                        ? 
-                                                       (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
-                                                        >> 9U)
-                                                        : (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__MinusB))
-                                                       : 
-                                                      ((1U 
-                                                        & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
-                                                        ? (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__MinusB)
-                                                        : 
-                                                       ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
-                                                         >> 9U) 
-                                                        + 
-                                                        ((- (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__PositiveB)) 
-                                                         << 1U))))
-                                                      : 
-                                                     ((2U 
-                                                       & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
-                                                       ? 
-                                                      ((1U 
-                                                        & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
-                                                        ? 
-                                                       ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
-                                                         >> 9U) 
-                                                        + 
-                                                        ((IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__PositiveB) 
-                                                         << 1U))
-                                                        : (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__AddB))
-                                                       : 
-                                                      ((1U 
-                                                        & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
-                                                        ? (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__AddB)
-                                                        : 
-                                                       (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
-                                                        >> 9U)))) 
-                                                    << 7U)) 
-                                                | (0x7fU 
-                                                   & (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
-                                                      >> 2U))))),18);
+        tracep->fullIData(oldp+21,((0x3ffffU & VL_SHIFTRS_III(18,18,32, 
+                                                              ((0x3fe00U 
+                                                                & (((4U 
+                                                                     & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
+                                                                     ? 
+                                                                    ((2U 
+                                                                      & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
+                                                                      ? 
+                                                                     ((1U 
+                                                                       & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
+                                                                       ? 
+                                                                      (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
+                                                                       >> 9U)
+                                                                       : (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__MinusB))
+                                                                      : 
+                                                                     ((1U 
+                                                                       & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
+                                                                       ? (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__MinusB)
+                                                                       : 
+                                                                      ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
+                                                                        >> 9U) 
+                                                                       + 
+                                                                       ((- (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__PositiveB)) 
+                                                                        << 1U))))
+                                                                     : 
+                                                                    ((2U 
+                                                                      & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
+                                                                      ? 
+                                                                     ((1U 
+                                                                       & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
+                                                                       ? 
+                                                                      ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
+                                                                        >> 9U) 
+                                                                       + 
+                                                                       ((IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__PositiveB) 
+                                                                        << 1U))
+                                                                       : (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__AddB))
+                                                                      : 
+                                                                     ((1U 
+                                                                       & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
+                                                                       ? (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__AddB)
+                                                                       : 
+                                                                      (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
+                                                                       >> 9U)))) 
+                                                                   << 9U)) 
+                                                               | (0x1ffU 
+                                                                  & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)), 2U))),18);
         tracep->fullSData(oldp+22,((0x1ffU & ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
                                                >> 9U) 
                                               + ((IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__PositiveB) 
@@ -524,53 +524,53 @@ void Vcal_phase::traceFullSub0(void* userp, VerilatedVcd* tracep) {
                                                     : 
                                                    (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
                                                     >> 9U)))))),9);
-        tracep->fullIData(oldp+25,((0x3ffffU & ((0xff80U 
-                                                 & (((4U 
-                                                      & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
-                                                      ? 
-                                                     ((2U 
-                                                       & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
-                                                       ? 
-                                                      ((1U 
-                                                        & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
-                                                        ? 
-                                                       (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
-                                                        >> 9U)
-                                                        : (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__MinusB))
-                                                       : 
-                                                      ((1U 
-                                                        & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
-                                                        ? (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__MinusB)
-                                                        : 
-                                                       ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
-                                                         >> 9U) 
-                                                        + 
-                                                        ((- (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__PositiveB)) 
-                                                         << 1U))))
-                                                      : 
-                                                     ((2U 
-                                                       & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
-                                                       ? 
-                                                      ((1U 
-                                                        & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
-                                                        ? 
-                                                       ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
-                                                         >> 9U) 
-                                                        + 
-                                                        ((IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__PositiveB) 
-                                                         << 1U))
-                                                        : (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__AddB))
-                                                       : 
-                                                      ((1U 
-                                                        & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
-                                                        ? (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__AddB)
-                                                        : 
-                                                       (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
-                                                        >> 9U)))) 
-                                                    << 7U)) 
-                                                | (0x7fU 
-                                                   & (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
-                                                      >> 2U))))),18);
+        tracep->fullIData(oldp+25,((0x3ffffU & VL_SHIFTRS_III(18,18,32, 
+                                                              ((0x3fe00U 
+                                                                & (((4U 
+                                                                     & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
+                                                                     ? 
+                                                                    ((2U 
+                                                                      & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
+                                                                      ? 
+                                                                     ((1U 
+                                                                       & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
+                                                                       ? 
+                                                                      (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
+                                                                       >> 9U)
+                                                                       : (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__MinusB))
+                                                                      : 
+                                                                     ((1U 
+                                                                       & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
+                                                                       ? (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__MinusB)
+                                                                       : 
+                                                                      ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
+                                                                        >> 9U) 
+                                                                       + 
+                                                                       ((- (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__PositiveB)) 
+                                                                        << 1U))))
+                                                                     : 
+                                                                    ((2U 
+                                                                      & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
+                                                                      ? 
+                                                                     ((1U 
+                                                                       & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
+                                                                       ? 
+                                                                      ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
+                                                                        >> 9U) 
+                                                                       + 
+                                                                       ((IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__PositiveB) 
+                                                                        << 1U))
+                                                                       : (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__AddB))
+                                                                      : 
+                                                                     ((1U 
+                                                                       & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
+                                                                       ? (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__AddB)
+                                                                       : 
+                                                                      (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
+                                                                       >> 9U)))) 
+                                                                   << 9U)) 
+                                                               | (0x1ffU 
+                                                                  & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)), 2U))),18);
         tracep->fullSData(oldp+26,(vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__res_out),10);
         tracep->fullCData(oldp+27,((0xffU & ((0x100U 
                                               & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_3))

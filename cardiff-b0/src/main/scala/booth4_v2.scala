@@ -77,7 +77,7 @@ class booth4_v2 (SIZEINA: Int, SIZEINB:Int) extends Component {
       beforeshift  :=  Minus2B.asBits  //shift and add
     }
   }
-  aftershift := (beforeshift ## shiftReg_low.asBits) |>> 2
+  aftershift := ((beforeshift ## shiftReg_low.asBits).asSInt |>> 2).asBits
 
   when(io.din_vld){
     shiftReg := U(0, SHIFT_SIZE - SIZEINA - 1 bits).asBits ## io.dinA.asBits ## U(0, 1 bits).asBits
