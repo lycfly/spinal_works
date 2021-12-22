@@ -119,9 +119,11 @@ VL_MODULE(Vcal_phase) {
     static void _settle__TOP__1(Vcal_phase__Syms* __restrict vlSymsp);
   private:
     static void traceChgSub0(void* userp, VerilatedVcd* tracep);
+    static void traceChgSub1(void* userp, VerilatedVcd* tracep);
     static void traceChgTop0(void* userp, VerilatedVcd* tracep);
     static void traceCleanup(void* userp, VerilatedVcd* /*unused*/);
     static void traceFullSub0(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
+    static void traceFullSub1(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
     static void traceFullTop0(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
     static void traceInitSub0(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
     static void traceInitSub1(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;

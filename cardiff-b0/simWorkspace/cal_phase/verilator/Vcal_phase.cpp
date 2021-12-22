@@ -94,6 +94,7 @@ void Vcal_phase::_eval(Vcal_phase__Syms* __restrict vlSymsp) {
         vlTOPp->_settle__TOP__1(vlSymsp);
     }
     vlSymsp->TOP__cal_phase._combo__TOP__cal_phase__9(vlSymsp);
+    vlSymsp->TOP__cal_phase._combo__TOP__cal_phase__10(vlSymsp);
     // Final
     vlTOPp->__Vclklast__TOP__clk = vlTOPp->clk;
     vlTOPp->__Vclklast__TOP__reset = vlTOPp->reset;

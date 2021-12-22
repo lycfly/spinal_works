@@ -58,16 +58,16 @@ void Vbooth4::traceInitSub0(void* userp, VerilatedVcd* tracep) {
         tracep->declBus(c+17,"booth4 io_dout", false,-1, 15,0);
         tracep->declBit(c+18,"booth4 clk", false,-1);
         tracep->declBit(c+19,"booth4 reset", false,-1);
-        tracep->declBus(c+9,"booth4 shiftReg", false,-1, 18,0);
+        tracep->declBus(c+9,"booth4 shiftReg", false,-1, 17,0);
         tracep->declBus(c+10,"booth4 flag_bits", false,-1, 2,0);
-        tracep->declBus(c+1,"booth4 NegativeB", false,-1, 9,0);
-        tracep->declBus(c+2,"booth4 Negative2B", false,-1, 9,0);
-        tracep->declBus(c+3,"booth4 PositiveB", false,-1, 9,0);
-        tracep->declBus(c+4,"booth4 Positive2B", false,-1, 9,0);
-        tracep->declBus(c+5,"booth4 AddB", false,-1, 9,0);
-        tracep->declBus(c+6,"booth4 Add2B", false,-1, 9,0);
-        tracep->declBus(c+7,"booth4 MinusB", false,-1, 9,0);
-        tracep->declBus(c+8,"booth4 Minus2B", false,-1, 9,0);
+        tracep->declBus(c+1,"booth4 NegativeB", false,-1, 8,0);
+        tracep->declBus(c+2,"booth4 Negative2B", false,-1, 8,0);
+        tracep->declBus(c+3,"booth4 PositiveB", false,-1, 8,0);
+        tracep->declBus(c+4,"booth4 Positive2B", false,-1, 8,0);
+        tracep->declBus(c+5,"booth4 AddB", false,-1, 8,0);
+        tracep->declBus(c+6,"booth4 Add2B", false,-1, 8,0);
+        tracep->declBus(c+7,"booth4 MinusB", false,-1, 8,0);
+        tracep->declBus(c+8,"booth4 Minus2B", false,-1, 8,0);
         tracep->declBus(c+11,"booth4 cal_cnt", false,-1, 1,0);
         tracep->declBit(c+12,"booth4 cal_en", false,-1);
         tracep->declBit(c+20,"booth4 cal_en_regNext", false,-1);
@@ -99,17 +99,17 @@ void Vbooth4::traceFullSub0(void* userp, VerilatedVcd* tracep) {
     if (false && oldp) {}  // Prevent unused
     // Body
     {
-        tracep->fullSData(oldp+1,((0x3ffU & (- (IData)(vlTOPp->booth4__DOT__PositiveB)))),10);
-        tracep->fullSData(oldp+2,((0x3ffU & ((- (IData)(vlTOPp->booth4__DOT__PositiveB)) 
-                                             << 1U))),10);
-        tracep->fullSData(oldp+3,(vlTOPp->booth4__DOT__PositiveB),10);
-        tracep->fullSData(oldp+4,((0x3ffU & ((IData)(vlTOPp->booth4__DOT__PositiveB) 
-                                             << 1U))),10);
-        tracep->fullSData(oldp+5,(vlTOPp->booth4__DOT__AddB),10);
-        tracep->fullSData(oldp+6,(vlTOPp->booth4__DOT__Add2B),10);
-        tracep->fullSData(oldp+7,(vlTOPp->booth4__DOT__MinusB),10);
-        tracep->fullSData(oldp+8,(vlTOPp->booth4__DOT__Minus2B),10);
-        tracep->fullIData(oldp+9,(vlTOPp->booth4__DOT__shiftReg),19);
+        tracep->fullSData(oldp+1,((0x1ffU & (- (IData)(vlTOPp->booth4__DOT__PositiveB)))),9);
+        tracep->fullSData(oldp+2,((0x1ffU & ((- (IData)(vlTOPp->booth4__DOT__PositiveB)) 
+                                             << 1U))),9);
+        tracep->fullSData(oldp+3,(vlTOPp->booth4__DOT__PositiveB),9);
+        tracep->fullSData(oldp+4,((0x1ffU & ((IData)(vlTOPp->booth4__DOT__PositiveB) 
+                                             << 1U))),9);
+        tracep->fullSData(oldp+5,(vlTOPp->booth4__DOT__AddB),9);
+        tracep->fullSData(oldp+6,(vlTOPp->booth4__DOT__Add2B),9);
+        tracep->fullSData(oldp+7,(vlTOPp->booth4__DOT__MinusB),9);
+        tracep->fullSData(oldp+8,(vlTOPp->booth4__DOT__Minus2B),9);
+        tracep->fullIData(oldp+9,(vlTOPp->booth4__DOT__shiftReg),18);
         tracep->fullCData(oldp+10,((7U & vlTOPp->booth4__DOT__shiftReg)),3);
         tracep->fullCData(oldp+11,(vlTOPp->booth4__DOT__cal_cnt),2);
         tracep->fullBit(oldp+12,(vlTOPp->booth4__DOT__cal_en));

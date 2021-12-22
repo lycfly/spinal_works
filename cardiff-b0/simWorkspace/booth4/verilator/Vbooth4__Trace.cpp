@@ -23,19 +23,19 @@ void Vbooth4::traceChgSub0(void* userp, VerilatedVcd* tracep) {
     // Body
     {
         if (VL_UNLIKELY(vlTOPp->__Vm_traceActivity[1U])) {
-            tracep->chgSData(oldp+0,((0x3ffU & (- (IData)(vlTOPp->booth4__DOT__PositiveB)))),10);
-            tracep->chgSData(oldp+1,((0x3ffU & ((- (IData)(vlTOPp->booth4__DOT__PositiveB)) 
-                                                << 1U))),10);
-            tracep->chgSData(oldp+2,(vlTOPp->booth4__DOT__PositiveB),10);
-            tracep->chgSData(oldp+3,((0x3ffU & ((IData)(vlTOPp->booth4__DOT__PositiveB) 
-                                                << 1U))),10);
-            tracep->chgSData(oldp+4,(vlTOPp->booth4__DOT__AddB),10);
-            tracep->chgSData(oldp+5,(vlTOPp->booth4__DOT__Add2B),10);
-            tracep->chgSData(oldp+6,(vlTOPp->booth4__DOT__MinusB),10);
-            tracep->chgSData(oldp+7,(vlTOPp->booth4__DOT__Minus2B),10);
+            tracep->chgSData(oldp+0,((0x1ffU & (- (IData)(vlTOPp->booth4__DOT__PositiveB)))),9);
+            tracep->chgSData(oldp+1,((0x1ffU & ((- (IData)(vlTOPp->booth4__DOT__PositiveB)) 
+                                                << 1U))),9);
+            tracep->chgSData(oldp+2,(vlTOPp->booth4__DOT__PositiveB),9);
+            tracep->chgSData(oldp+3,((0x1ffU & ((IData)(vlTOPp->booth4__DOT__PositiveB) 
+                                                << 1U))),9);
+            tracep->chgSData(oldp+4,(vlTOPp->booth4__DOT__AddB),9);
+            tracep->chgSData(oldp+5,(vlTOPp->booth4__DOT__Add2B),9);
+            tracep->chgSData(oldp+6,(vlTOPp->booth4__DOT__MinusB),9);
+            tracep->chgSData(oldp+7,(vlTOPp->booth4__DOT__Minus2B),9);
         }
         if (VL_UNLIKELY(vlTOPp->__Vm_traceActivity[2U])) {
-            tracep->chgIData(oldp+8,(vlTOPp->booth4__DOT__shiftReg),19);
+            tracep->chgIData(oldp+8,(vlTOPp->booth4__DOT__shiftReg),18);
             tracep->chgCData(oldp+9,((7U & vlTOPp->booth4__DOT__shiftReg)),3);
             tracep->chgCData(oldp+10,(vlTOPp->booth4__DOT__cal_cnt),2);
             tracep->chgBit(oldp+11,(vlTOPp->booth4__DOT__cal_en));

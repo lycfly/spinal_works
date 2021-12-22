@@ -137,8 +137,8 @@ object Inst_cal_phase {
     dut.clockDomain.waitSampling()
 
   }
- // import sys.process._
- // "gtkwave -o ./simWorkspace/cal_phase/test.vcd"!
+  import sys.process._
+  "gtkwave -o ./simWorkspace/cal_phase/test.vcd"!
 //   import DesignCompiler._
 //   val dc_config = DesignCompiler_config(process = 180, freq = 100)
 //   val dc = new DesignCompilerFlow(

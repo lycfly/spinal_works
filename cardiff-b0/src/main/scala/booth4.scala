@@ -17,17 +17,17 @@ class booth4 (SIZEINA: Int, SIZEINB:Int) extends Component {
 
   val MAX_NUM = SIZEINA/2 -1
   val MAX_DW = log2Up(MAX_NUM)
-  val SHIFT_SIZE = SIZEINA + SIZEINB + 1 + 2
+  val SHIFT_SIZE = SIZEINA + SIZEINB + 1 + 1
   val shiftReg = Reg(Bits(SHIFT_SIZE bits)) init(0)
   val flag_bits = Bits(3 bits)
-  val NegativeB = SInt(SIZEINB+ 2 bits)
-  val Negative2B = SInt(SIZEINB+ 2 bits)
-  val PositiveB = SInt(SIZEINB+ 2 bits)
-  val Positive2B = SInt(SIZEINB+ 2 bits)
-  val AddB = SInt(SIZEINB+ 2 bits)
-  val Add2B = SInt(SIZEINB+ 2 bits)
-  val MinusB = SInt(SIZEINB+ 2 bits)
-  val Minus2B = SInt(SIZEINB+ 2 bits)
+  val NegativeB = SInt(SIZEINB+ 1 bits)
+  val Negative2B = SInt(SIZEINB+ 1 bits)
+  val PositiveB = SInt(SIZEINB+ 1 bits)
+  val Positive2B = SInt(SIZEINB+ 1 bits)
+  val AddB = SInt(SIZEINB+ 1 bits)
+  val Add2B = SInt(SIZEINB+ 1 bits)
+  val MinusB = SInt(SIZEINB+ 1 bits)
+  val Minus2B = SInt(SIZEINB+ 1 bits)
 
   val cal_cnt = Reg(UInt(MAX_DW bits)) init(0)
   val cal_en = Reg(Bool()) init(false)
@@ -37,10 +37,10 @@ class booth4 (SIZEINA: Int, SIZEINB:Int) extends Component {
   Negative2B := NegativeB |<< 1
   Positive2B := PositiveB |<< 1
 
-  AddB := (shiftReg(SIZEINA+SIZEINB+ 2 downto SIZEINA+1).asSInt + PositiveB)
-  Add2B := (shiftReg(SIZEINA+SIZEINB+ 2 downto SIZEINA+1).asSInt + Positive2B)
-  MinusB := (shiftReg(SIZEINA+SIZEINB+ 2 downto SIZEINA+1).asSInt + NegativeB)
-  Minus2B := (shiftReg(SIZEINA+SIZEINB+ 2 downto SIZEINA+1).asSInt + Negative2B)
+  AddB := (shiftReg(SIZEINA+SIZEINB+ 1 downto SIZEINA+1).asSInt + PositiveB)
+  Add2B := (shiftReg(SIZEINA+SIZEINB+ 1 downto SIZEINA+1).asSInt + Positive2B)
+  MinusB := (shiftReg(SIZEINA+SIZEINB+ 1 downto SIZEINA+1).asSInt + NegativeB)
+  Minus2B := (shiftReg(SIZEINA+SIZEINB+ 1 downto SIZEINA+1).asSInt + Negative2B)
 
 
   when(io.din_vld){
@@ -113,16 +113,16 @@ object booth4 {
 
 
   }
-  import sys.process._
-  "gtkwave -o ./simWorkspace/cal_phase/test.vcd"!
+ // import sys.process._
+ // "gtkwave -o ./simWorkspace/cal_phase/test.vcd"!
 
-//  import DesignCompiler._
-//  val dc_config = DesignCompiler_config(process = 28, freq = 100)
-//  val dc = new DesignCompilerFlow(
-//    design = new booth4(SIZEINA = 8, SIZEINB = 8),
-//    topModuleName = "booth4",
-//    workspacePath = "/mnt/mydata/Easonlib/syn/booth4",
-//    DCConfig = dc_config,
-//    designPath = ""
-//  ).doit()
+  import DesignCompiler._
+  val dc_config = DesignCompiler_config(process = 180, freq = 100)
+  val dc = new DesignCompilerFlow(
+    design = new booth4(SIZEINA = 8, SIZEINB = 8),
+    topModuleName = "booth4",
+    workspacePath = "/mnt/mydata/Easonlib/syn/booth4",
+    DCConfig = dc_config,
+    designPath = ""
+  ).doit()
 }

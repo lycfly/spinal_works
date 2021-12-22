@@ -38,8 +38,8 @@ class dotVn_2 (N: Int, SizeIn: Int, SizeCoeff: Int) extends Component {
   val mac_finish = Bool()
   val finish = Reg(Bool()) init(false)
 
-  val booth_sin = new booth2(SIZEINA = SizeIn, SIZEINB = SizeCoeff)
-  val booth_cos = new booth2(SIZEINA = SizeIn, SIZEINB = SizeCoeff)
+  val booth_sin = new booth4_v2(SIZEINA = SizeIn, SIZEINB = SizeCoeff)
+  val booth_cos = new booth4_v2(SIZEINA = SizeIn, SIZEINB = SizeCoeff)
   val mul_done = Bool()
   val booth_start = RegNext(io.vn_vld | (mac_en & mul_done)) init(false)
 

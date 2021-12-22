@@ -38,13 +38,13 @@ VL_MODULE(Vbooth4) {
     CData/*1:0*/ booth4__DOT__cal_cnt;
     CData/*0:0*/ booth4__DOT__cal_en;
     CData/*0:0*/ booth4__DOT__cal_en_regNext;
-    SData/*9:0*/ booth4__DOT__PositiveB;
-    SData/*9:0*/ booth4__DOT__AddB;
-    SData/*9:0*/ booth4__DOT__Add2B;
-    SData/*9:0*/ booth4__DOT__MinusB;
-    SData/*9:0*/ booth4__DOT__Minus2B;
-    IData/*18:0*/ booth4__DOT___zz_5;
-    IData/*18:0*/ booth4__DOT__shiftReg;
+    SData/*8:0*/ booth4__DOT__PositiveB;
+    SData/*8:0*/ booth4__DOT__AddB;
+    SData/*8:0*/ booth4__DOT__Add2B;
+    SData/*8:0*/ booth4__DOT__MinusB;
+    SData/*8:0*/ booth4__DOT__Minus2B;
+    IData/*17:0*/ booth4__DOT___zz_5;
+    IData/*17:0*/ booth4__DOT__shiftReg;
     
     // LOCAL VARIABLES
     // Internals; generally not touched by application code
