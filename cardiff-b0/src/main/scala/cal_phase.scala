@@ -86,7 +86,8 @@ object Inst_cal_phase {
       defaultConfigForClockDomains = ClockDomainConfig(resetKind = ASYNC,
         clockEdge = RISING,
         resetActiveLevel = LOW),
-      mode=SystemVerilog,
+      mode=Verilog,
+      targetDirectory="/mnt/mydata/spinal_works/cardiff-b0/rtl/cal_phase",
       oneFilePerComponent = true)
       .addStandardMemBlackboxing(blackboxAll)
       .generate(new cal_phase (N = 8, SizeIn = 8, SizeCoeff = 8, SizeOut = 8))
@@ -136,8 +137,8 @@ object Inst_cal_phase {
     dut.clockDomain.waitSampling()
 
   }
-  import sys.process._
-  "gtkwave -o ./simWorkspace/cal_phase/test.vcd"!
+ // import sys.process._
+ // "gtkwave -o ./simWorkspace/cal_phase/test.vcd"!
 //   import DesignCompiler._
 //   val dc_config = DesignCompiler_config(process = 180, freq = 100)
 //   val dc = new DesignCompilerFlow(
