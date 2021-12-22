@@ -130,8 +130,8 @@ object Inst_cal_phase {
 
     }
     dut.io.vin_vld #= false
-    //dut.clockDomain.waitSamplingWhere(dut.io.phase_vld.toBoolean)
-    sleep(100)
+    dut.clockDomain.waitSamplingWhere(dut.io.phase_vld.toBoolean)
+   // sleep(500)
 
     dut.clockDomain.waitSampling()
 
@@ -143,7 +143,7 @@ object Inst_cal_phase {
 //   val dc = new DesignCompilerFlow(
 //                                     design = new cal_phase (N = 8, SizeIn = 8, SizeCoeff = 8, SizeOut = 8),
 //                                     topModuleName = "cal_phase",
-//                                     workspacePath = "/mnt/mydata/spinal_works/cardiff-b0/syn",
+//                                     workspacePath = "/mnt/mydata/spinal_works/cardiff-b0/syn/booth2_method",
 //                                     DCConfig = dc_config,
 //                                     designPath = ""
 //   ).doit()

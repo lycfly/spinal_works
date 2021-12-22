@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Wed Dec 15 15:23:35 2021
+# Created by write_sdc on Tue Dec 21 17:29:46 2021
 
 ###################################################################
 set sdc_version 2.0
@@ -22,10 +22,10 @@ create_clock [get_ports clk]  -period 10  -waveform {0 5}
 set_clock_latency 1  [get_clocks clk]
 set_clock_latency -source 1  [get_clocks clk]
 set_clock_uncertainty 1  [get_clocks clk]
-set_clock_transition -min -fall 1 [get_clocks clk]
-set_clock_transition -min -rise 1 [get_clocks clk]
-set_clock_transition -max -fall 1 [get_clocks clk]
 set_clock_transition -max -rise 1 [get_clocks clk]
+set_clock_transition -max -fall 1 [get_clocks clk]
+set_clock_transition -min -rise 1 [get_clocks clk]
+set_clock_transition -min -fall 1 [get_clocks clk]
 group_path -name INPUT_GROUP  -from [list [get_ports rg_calphase_en] [get_ports rg_bypass_mean] [get_ports  \
 {rg_cordic_iternum[2]}] [get_ports {rg_cordic_iternum[1]}] [get_ports          \
 {rg_cordic_iternum[0]}] [get_ports {rg_leakage_table_0[7]}] [get_ports         \
@@ -798,13 +798,13 @@ set_input_transition -min 1  [get_ports {vin2[0]}]
 set_input_transition -max 1  [get_ports resetn]
 set_input_transition -min 1  [get_ports resetn]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-cordic/clk_gate_yn_reg/main_gate]
+cordic/clk_gate_res_out_reg/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-cordic/clk_gate_yn_reg/main_gate]
+cordic/clk_gate_res_out_reg/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-cordic/clk_gate_yn_reg/main_gate]
+cordic/clk_gate_res_out_reg/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-cordic/clk_gate_yn_reg/main_gate]
+cordic/clk_gate_res_out_reg/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
 cordic/clk_gate_res_rg_reg/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
@@ -814,13 +814,13 @@ cordic/clk_gate_res_rg_reg/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
 cordic/clk_gate_res_rg_reg/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-cordic/clk_gate_cal_cnt_reg/main_gate]
+cordic/clk_gate_yn_reg/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-cordic/clk_gate_cal_cnt_reg/main_gate]
+cordic/clk_gate_yn_reg/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-cordic/clk_gate_cal_cnt_reg/main_gate]
+cordic/clk_gate_yn_reg/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-cordic/clk_gate_cal_cnt_reg/main_gate]
+cordic/clk_gate_yn_reg/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
 dot/clk_gate_psum2_reg/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
@@ -830,6 +830,30 @@ dot/clk_gate_psum2_reg/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
 dot/clk_gate_psum2_reg/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
+dot/booth_cos/clk_gate_PsumReg_reg/main_gate]
+set_clock_gating_check -fall -setup 0 [get_cells                               \
+dot/booth_cos/clk_gate_PsumReg_reg/main_gate]
+set_clock_gating_check -rise -hold 0 [get_cells                                \
+dot/booth_cos/clk_gate_PsumReg_reg/main_gate]
+set_clock_gating_check -fall -hold 0 [get_cells                                \
+dot/booth_cos/clk_gate_PsumReg_reg/main_gate]
+set_clock_gating_check -rise -setup 0 [get_cells                               \
+dot/booth_sin/clk_gate_PsumReg_reg/main_gate]
+set_clock_gating_check -fall -setup 0 [get_cells                               \
+dot/booth_sin/clk_gate_PsumReg_reg/main_gate]
+set_clock_gating_check -rise -hold 0 [get_cells                                \
+dot/booth_sin/clk_gate_PsumReg_reg/main_gate]
+set_clock_gating_check -fall -hold 0 [get_cells                                \
+dot/booth_sin/clk_gate_PsumReg_reg/main_gate]
+set_clock_gating_check -rise -setup 0 [get_cells                               \
+calvn/clk_gate_Vins_0_reg/main_gate]
+set_clock_gating_check -fall -setup 0 [get_cells                               \
+calvn/clk_gate_Vins_0_reg/main_gate]
+set_clock_gating_check -rise -hold 0 [get_cells                                \
+calvn/clk_gate_Vins_0_reg/main_gate]
+set_clock_gating_check -fall -hold 0 [get_cells                                \
+calvn/clk_gate_Vins_0_reg/main_gate]
+set_clock_gating_check -rise -setup 0 [get_cells                               \
 calvn/clk_gate_v_cnt_reg/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
 calvn/clk_gate_v_cnt_reg/main_gate]
@@ -838,21 +862,13 @@ calvn/clk_gate_v_cnt_reg/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
 calvn/clk_gate_v_cnt_reg/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-calvn/clk_gate_Vins_1_reg/main_gate]
+calvn/clk_gate_Vins_2_reg/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-calvn/clk_gate_Vins_1_reg/main_gate]
+calvn/clk_gate_Vins_2_reg/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-calvn/clk_gate_Vins_1_reg/main_gate]
+calvn/clk_gate_Vins_2_reg/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-calvn/clk_gate_Vins_1_reg/main_gate]
-set_clock_gating_check -rise -setup 0 [get_cells                               \
-calvn/clk_gate_Vins_3_reg/main_gate]
-set_clock_gating_check -fall -setup 0 [get_cells                               \
-calvn/clk_gate_Vins_3_reg/main_gate]
-set_clock_gating_check -rise -hold 0 [get_cells                                \
-calvn/clk_gate_Vins_3_reg/main_gate]
-set_clock_gating_check -fall -hold 0 [get_cells                                \
-calvn/clk_gate_Vins_3_reg/main_gate]
+calvn/clk_gate_Vins_2_reg/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
 calvn/clk_gate_Vins_4_reg/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \

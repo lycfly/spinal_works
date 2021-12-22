@@ -82,22 +82,18 @@ void Vcal_phase::_eval(Vcal_phase__Syms* __restrict vlSymsp) {
     // Body
     vlSymsp->TOP__cal_phase._combo__TOP__cal_phase__1(vlSymsp);
     vlTOPp->__Vm_traceActivity[1U] = 1U;
+    if (((IData)(vlTOPp->clk) & (~ (IData)(vlTOPp->__Vclklast__TOP__clk)))) {
+        vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__4(vlSymsp);
+    }
     if ((((IData)(vlTOPp->clk) & (~ (IData)(vlTOPp->__Vclklast__TOP__clk))) 
          | ((IData)(vlTOPp->reset) & (~ (IData)(vlTOPp->__Vclklast__TOP__reset))))) {
         vlTOPp->__Vm_traceActivity[2U] = 1U;
-        vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__5(vlSymsp);
         vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__6(vlSymsp);
+        vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__7(vlSymsp);
+        vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__8(vlSymsp);
         vlTOPp->_settle__TOP__1(vlSymsp);
     }
-    if (((IData)(vlTOPp->clk) & (~ (IData)(vlTOPp->__Vclklast__TOP__clk)))) {
-        vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__7(vlSymsp);
-    }
-    vlSymsp->TOP__cal_phase._combo__TOP__cal_phase__8(vlSymsp);
-    if ((((IData)(vlTOPp->clk) & (~ (IData)(vlTOPp->__Vclklast__TOP__clk))) 
-         | ((IData)(vlTOPp->reset) & (~ (IData)(vlTOPp->__Vclklast__TOP__reset))))) {
-        vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__9(vlSymsp);
-    }
-    vlSymsp->TOP__cal_phase._combo__TOP__cal_phase__10(vlSymsp);
+    vlSymsp->TOP__cal_phase._combo__TOP__cal_phase__9(vlSymsp);
     // Final
     vlTOPp->__Vclklast__TOP__clk = vlTOPp->clk;
     vlTOPp->__Vclklast__TOP__reset = vlTOPp->reset;

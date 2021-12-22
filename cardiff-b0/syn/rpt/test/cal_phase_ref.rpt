@@ -3,7 +3,7 @@
 Report : reference
 Design : cal_phase
 Version: L-2016.03-SP1
-Date   : Wed Dec 15 15:23:37 2021
+Date   : Tue Dec 21 17:29:48 2021
 ****************************************
 
 Attributes:
@@ -19,25 +19,29 @@ Attributes:
 
 Reference          Library       Unit Area   Count    Total Area   Attributes
 -----------------------------------------------------------------------------
-cal_vn                         9420.370024       1   9420.370024  h, n
+buf1a6             ssc_core_slow
+                                 15.050000       1     15.050000  
+cal_vn                         9357.629995       1   9357.629995  h, n
 clk1a3             ssc_core_slow
                                  10.040000      13    130.520000  
 clk1b6             ssc_core_slow
-                                 10.040000       6     60.240000  
-cordic_int                    12556.770011       1  12556.770011  h, n
-dotVn_2                       20387.089925       1  20387.089925  h, n
+                                 10.040000       1     10.040000  
+clk1b9             ssc_core_slow
+                                 22.580000       1     22.580000  
+cordic_int                    13698.120008       1  13698.120008  h, n
+dotVn_2                       18567.469935       1  18567.469935  h, n
 inv1a1             ssc_core_slow
-                                  5.020000       9     45.180000  
-inv1a2             ssc_core_slow
-                                  7.530000       2     15.060000  
+                                  5.020000       4     20.080000  
 inv1a3             ssc_core_slow
-                                  7.530000      10     75.300002  
+                                  7.530000       5     37.650001  
 inv1a9             ssc_core_slow
                                  15.050000       2     30.100000  
 inv1a15            ssc_core_slow
                                  20.070000       3     60.209999  
 inv1a27            ssc_core_slow
                                  35.119999       1     35.119999  
+mx2a1              ssc_core_slow
+                                 20.070000       1     20.070000  
 -----------------------------------------------------------------------------
-Total 11 references                                 42815.959960
+Total 13 references                                 42004.639936
 1

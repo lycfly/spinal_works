@@ -1,0 +1,36 @@
+ 
+****************************************
+check_design summary:
+Version:     L-2016.03-SP1
+Date:        Tue Dec 21 17:34:22 2021
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               3
+    Cells do not drive (LINT-1)                                     3
+
+Nets                                                               16
+    Unloaded nets (LINT-2)                                         16
+--------------------------------------------------------------------------------
+
+Warning: In design 'cal_vn', cell 'B_42' does not drive any nets. (LINT-1)
+Warning: In design 'cal_vn', cell 'B_43' does not drive any nets. (LINT-1)
+Warning: In design 'cal_vn', cell 'B_44' does not drive any nets. (LINT-1)
+Warning: In design 'cal_phase', net 'calvn/net252' driven by pin 'calvn/C1242/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'calvn/net251' driven by pin 'calvn/C1235/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'dot/booth_cos/net1686' driven by pin 'dot/booth_cos/C232/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'dot/booth_cos_io_dout[0]' driven by pin 'dot/booth_cos/io_dout[0]' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'dot/booth_cos_io_dout[1]' driven by pin 'dot/booth_cos/io_dout[1]' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'dot/booth_cos_io_dout_vld' driven by pin 'dot/booth_cos/io_dout_vld' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'dot/net555' driven by pin 'dot/C532/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'dot/net554' driven by pin 'dot/C528/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'dot/net553' driven by pin 'dot/C540/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'dot/booth_sin_io_dout[0]' driven by pin 'dot/booth_sin/io_dout[0]' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'dot/booth_sin_io_dout[1]' driven by pin 'dot/booth_sin/io_dout[1]' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'cordic/net760' driven by pin 'cordic/C867/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'cordic/net759' driven by pin 'cordic/C866/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'cordic/net758' driven by pin 'cordic/C878/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'cordic/net757' driven by pin 'cordic/C860/Z' has no loads. (LINT-2)
+Warning: In design 'cal_phase', net 'dot/booth_sin/net1507' driven by pin 'dot/booth_sin/C232/Z' has no loads. (LINT-2)
+1

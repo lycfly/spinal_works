@@ -32,25 +32,32 @@ void Vbooth4::_settle__TOP__3(Vbooth4__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vbooth4::_settle__TOP__3\n"); );
     Vbooth4* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    vlTOPp->booth4__DOT___zz_5 = (0x1ffffU & VL_SHIFTRS_III(17,17,32, vlTOPp->booth4__DOT__shiftReg, 2U));
+    vlTOPp->booth4__DOT__PositiveB = ((0x300U & ((- (IData)(
+                                                            (1U 
+                                                             & ((IData)(vlTOPp->io_dinB) 
+                                                                >> 7U)))) 
+                                                 << 8U)) 
+                                      | (IData)(vlTOPp->io_dinB));
+    vlTOPp->booth4__DOT___zz_5 = (0x7ffffU & VL_SHIFTRS_III(19,19,32, vlTOPp->booth4__DOT__shiftReg, 2U));
     vlTOPp->booth4__DOT__flag_bits = (7U & vlTOPp->booth4__DOT__shiftReg);
     vlTOPp->io_dout = (0xffffU & (vlTOPp->booth4__DOT__shiftReg 
                                   >> 1U));
-    vlTOPp->booth4__DOT__AddB = (0xffU & ((vlTOPp->booth4__DOT__shiftReg 
-                                           >> 9U) + (IData)(vlTOPp->io_dinB)));
-    vlTOPp->booth4__DOT__Add2B = (0xffU & ((vlTOPp->booth4__DOT__shiftReg 
-                                            >> 9U) 
-                                           + ((IData)(vlTOPp->io_dinB) 
-                                              << 1U)));
-    vlTOPp->booth4__DOT__MinusB = (0xffU & ((vlTOPp->booth4__DOT__shiftReg 
-                                             >> 9U) 
-                                            + (- (IData)(vlTOPp->io_dinB))));
-    vlTOPp->booth4__DOT__Minus2B = (0xffU & ((vlTOPp->booth4__DOT__shiftReg 
-                                              >> 9U) 
-                                             + ((- (IData)(vlTOPp->io_dinB)) 
-                                                << 1U)));
     vlTOPp->io_dout_vld = ((~ (IData)(vlTOPp->booth4__DOT__cal_en)) 
                            & (IData)(vlTOPp->booth4__DOT__cal_en_regNext));
+    vlTOPp->booth4__DOT__AddB = (0x3ffU & ((vlTOPp->booth4__DOT__shiftReg 
+                                            >> 9U) 
+                                           + (IData)(vlTOPp->booth4__DOT__PositiveB)));
+    vlTOPp->booth4__DOT__Add2B = (0x3ffU & ((vlTOPp->booth4__DOT__shiftReg 
+                                             >> 9U) 
+                                            + ((IData)(vlTOPp->booth4__DOT__PositiveB) 
+                                               << 1U)));
+    vlTOPp->booth4__DOT__MinusB = (0x3ffU & ((vlTOPp->booth4__DOT__shiftReg 
+                                              >> 9U) 
+                                             + (- (IData)(vlTOPp->booth4__DOT__PositiveB))));
+    vlTOPp->booth4__DOT__Minus2B = (0x3ffU & ((vlTOPp->booth4__DOT__shiftReg 
+                                               >> 9U) 
+                                              + ((- (IData)(vlTOPp->booth4__DOT__PositiveB)) 
+                                                 << 1U)));
 }
 
 void Vbooth4::_eval_initial(Vbooth4__Syms* __restrict vlSymsp) {
@@ -88,13 +95,14 @@ void Vbooth4::_ctor_var_reset() {
     io_dout = VL_RAND_RESET_I(16);
     clk = VL_RAND_RESET_I(1);
     reset = VL_RAND_RESET_I(1);
-    booth4__DOT___zz_5 = VL_RAND_RESET_I(17);
-    booth4__DOT__shiftReg = VL_RAND_RESET_I(17);
+    booth4__DOT___zz_5 = VL_RAND_RESET_I(19);
+    booth4__DOT__shiftReg = VL_RAND_RESET_I(19);
     booth4__DOT__flag_bits = VL_RAND_RESET_I(3);
-    booth4__DOT__AddB = VL_RAND_RESET_I(8);
-    booth4__DOT__Add2B = VL_RAND_RESET_I(8);
-    booth4__DOT__MinusB = VL_RAND_RESET_I(8);
-    booth4__DOT__Minus2B = VL_RAND_RESET_I(8);
+    booth4__DOT__PositiveB = VL_RAND_RESET_I(10);
+    booth4__DOT__AddB = VL_RAND_RESET_I(10);
+    booth4__DOT__Add2B = VL_RAND_RESET_I(10);
+    booth4__DOT__MinusB = VL_RAND_RESET_I(10);
+    booth4__DOT__Minus2B = VL_RAND_RESET_I(10);
     booth4__DOT__cal_cnt = VL_RAND_RESET_I(2);
     booth4__DOT__cal_en = VL_RAND_RESET_I(1);
     booth4__DOT__cal_en_regNext = VL_RAND_RESET_I(1);

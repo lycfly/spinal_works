@@ -73,13 +73,25 @@ VL_INLINE_OPT void Vbooth4::_sequent__TOP__1(Vbooth4__Syms* __restrict vlSymsp) 
     vlTOPp->booth4__DOT__cal_en_regNext = vlTOPp->booth4__DOT__cal_en;
 }
 
-VL_INLINE_OPT void Vbooth4::_sequent__TOP__2(Vbooth4__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vbooth4::_sequent__TOP__2\n"); );
+VL_INLINE_OPT void Vbooth4::_combo__TOP__2(Vbooth4__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vbooth4::_combo__TOP__2\n"); );
+    Vbooth4* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->booth4__DOT__PositiveB = ((0x300U & ((- (IData)(
+                                                            (1U 
+                                                             & ((IData)(vlTOPp->io_dinB) 
+                                                                >> 7U)))) 
+                                                 << 8U)) 
+                                      | (IData)(vlTOPp->io_dinB));
+}
+
+VL_INLINE_OPT void Vbooth4::_sequent__TOP__4(Vbooth4__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vbooth4::_sequent__TOP__4\n"); );
     Vbooth4* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Variables
     CData/*1:0*/ __Vdly__booth4__DOT__cal_cnt;
     CData/*0:0*/ __Vdly__booth4__DOT__cal_en;
-    IData/*16:0*/ __Vdly__booth4__DOT__shiftReg;
+    IData/*18:0*/ __Vdly__booth4__DOT__shiftReg;
     // Body
     __Vdly__booth4__DOT__cal_cnt = vlTOPp->booth4__DOT__cal_cnt;
     __Vdly__booth4__DOT__cal_en = vlTOPp->booth4__DOT__cal_en;
@@ -105,10 +117,8 @@ VL_INLINE_OPT void Vbooth4::_sequent__TOP__2(Vbooth4__Syms* __restrict vlSymsp) 
             }
         }
         if (vlTOPp->io_din_vld) {
-            __Vdly__booth4__DOT__shiftReg = ((0x1fe01U 
-                                              & __Vdly__booth4__DOT__shiftReg) 
-                                             | ((IData)(vlTOPp->io_dinA) 
-                                                << 1U));
+            __Vdly__booth4__DOT__shiftReg = ((IData)(vlTOPp->io_dinA) 
+                                             << 1U);
         } else {
             if (vlTOPp->booth4__DOT__cal_en) {
                 __Vdly__booth4__DOT__shiftReg = ((4U 
@@ -121,10 +131,10 @@ VL_INLINE_OPT void Vbooth4::_sequent__TOP__2(Vbooth4__Syms* __restrict vlSymsp) 
                                                     & (IData)(vlTOPp->booth4__DOT__flag_bits))
                                                     ? vlTOPp->booth4__DOT___zz_5
                                                     : 
-                                                   ((0x10000U 
+                                                   ((0x40000U 
                                                      & ((IData)(vlTOPp->booth4__DOT__MinusB) 
                                                         << 9U)) 
-                                                    | ((0x8000U 
+                                                    | ((0x20000U 
                                                         & ((IData)(vlTOPp->booth4__DOT__MinusB) 
                                                            << 8U)) 
                                                        | (((IData)(vlTOPp->booth4__DOT__MinusB) 
@@ -136,10 +146,10 @@ VL_INLINE_OPT void Vbooth4::_sequent__TOP__2(Vbooth4__Syms* __restrict vlSymsp) 
                                                   ((1U 
                                                     & (IData)(vlTOPp->booth4__DOT__flag_bits))
                                                     ? 
-                                                   ((0x10000U 
+                                                   ((0x40000U 
                                                      & ((IData)(vlTOPp->booth4__DOT__MinusB) 
                                                         << 9U)) 
-                                                    | ((0x8000U 
+                                                    | ((0x20000U 
                                                         & ((IData)(vlTOPp->booth4__DOT__MinusB) 
                                                            << 8U)) 
                                                        | (((IData)(vlTOPp->booth4__DOT__MinusB) 
@@ -148,10 +158,10 @@ VL_INLINE_OPT void Vbooth4::_sequent__TOP__2(Vbooth4__Syms* __restrict vlSymsp) 
                                                              & (vlTOPp->booth4__DOT__shiftReg 
                                                                 >> 2U)))))
                                                     : 
-                                                   ((0x10000U 
+                                                   ((0x40000U 
                                                      & ((IData)(vlTOPp->booth4__DOT__Minus2B) 
                                                         << 9U)) 
-                                                    | ((0x8000U 
+                                                    | ((0x20000U 
                                                         & ((IData)(vlTOPp->booth4__DOT__Minus2B) 
                                                            << 8U)) 
                                                        | (((IData)(vlTOPp->booth4__DOT__Minus2B) 
@@ -166,10 +176,10 @@ VL_INLINE_OPT void Vbooth4::_sequent__TOP__2(Vbooth4__Syms* __restrict vlSymsp) 
                                                   ((1U 
                                                     & (IData)(vlTOPp->booth4__DOT__flag_bits))
                                                     ? 
-                                                   ((0x10000U 
+                                                   ((0x40000U 
                                                      & ((IData)(vlTOPp->booth4__DOT__Add2B) 
                                                         << 9U)) 
-                                                    | ((0x8000U 
+                                                    | ((0x20000U 
                                                         & ((IData)(vlTOPp->booth4__DOT__Add2B) 
                                                            << 8U)) 
                                                        | (((IData)(vlTOPp->booth4__DOT__Add2B) 
@@ -178,10 +188,10 @@ VL_INLINE_OPT void Vbooth4::_sequent__TOP__2(Vbooth4__Syms* __restrict vlSymsp) 
                                                              & (vlTOPp->booth4__DOT__shiftReg 
                                                                 >> 2U)))))
                                                     : 
-                                                   ((0x10000U 
+                                                   ((0x40000U 
                                                      & ((IData)(vlTOPp->booth4__DOT__AddB) 
                                                         << 9U)) 
-                                                    | ((0x8000U 
+                                                    | ((0x20000U 
                                                         & ((IData)(vlTOPp->booth4__DOT__AddB) 
                                                            << 8U)) 
                                                        | (((IData)(vlTOPp->booth4__DOT__AddB) 
@@ -193,10 +203,10 @@ VL_INLINE_OPT void Vbooth4::_sequent__TOP__2(Vbooth4__Syms* __restrict vlSymsp) 
                                                   ((1U 
                                                     & (IData)(vlTOPp->booth4__DOT__flag_bits))
                                                     ? 
-                                                   ((0x10000U 
+                                                   ((0x40000U 
                                                      & ((IData)(vlTOPp->booth4__DOT__AddB) 
                                                         << 9U)) 
-                                                    | ((0x8000U 
+                                                    | ((0x20000U 
                                                         & ((IData)(vlTOPp->booth4__DOT__AddB) 
                                                            << 8U)) 
                                                        | (((IData)(vlTOPp->booth4__DOT__AddB) 
@@ -213,29 +223,30 @@ VL_INLINE_OPT void Vbooth4::_sequent__TOP__2(Vbooth4__Syms* __restrict vlSymsp) 
     vlTOPp->booth4__DOT__shiftReg = __Vdly__booth4__DOT__shiftReg;
     vlTOPp->io_dout_vld = ((~ (IData)(vlTOPp->booth4__DOT__cal_en)) 
                            & (IData)(vlTOPp->booth4__DOT__cal_en_regNext));
-    vlTOPp->booth4__DOT___zz_5 = (0x1ffffU & VL_SHIFTRS_III(17,17,32, vlTOPp->booth4__DOT__shiftReg, 2U));
+    vlTOPp->booth4__DOT___zz_5 = (0x7ffffU & VL_SHIFTRS_III(19,19,32, vlTOPp->booth4__DOT__shiftReg, 2U));
     vlTOPp->booth4__DOT__flag_bits = (7U & vlTOPp->booth4__DOT__shiftReg);
     vlTOPp->io_dout = (0xffffU & (vlTOPp->booth4__DOT__shiftReg 
                                   >> 1U));
 }
 
-VL_INLINE_OPT void Vbooth4::_combo__TOP__4(Vbooth4__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vbooth4::_combo__TOP__4\n"); );
+VL_INLINE_OPT void Vbooth4::_combo__TOP__5(Vbooth4__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vbooth4::_combo__TOP__5\n"); );
     Vbooth4* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    vlTOPp->booth4__DOT__AddB = (0xffU & ((vlTOPp->booth4__DOT__shiftReg 
-                                           >> 9U) + (IData)(vlTOPp->io_dinB)));
-    vlTOPp->booth4__DOT__Add2B = (0xffU & ((vlTOPp->booth4__DOT__shiftReg 
+    vlTOPp->booth4__DOT__AddB = (0x3ffU & ((vlTOPp->booth4__DOT__shiftReg 
                                             >> 9U) 
-                                           + ((IData)(vlTOPp->io_dinB) 
-                                              << 1U)));
-    vlTOPp->booth4__DOT__MinusB = (0xffU & ((vlTOPp->booth4__DOT__shiftReg 
+                                           + (IData)(vlTOPp->booth4__DOT__PositiveB)));
+    vlTOPp->booth4__DOT__Add2B = (0x3ffU & ((vlTOPp->booth4__DOT__shiftReg 
                                              >> 9U) 
-                                            + (- (IData)(vlTOPp->io_dinB))));
-    vlTOPp->booth4__DOT__Minus2B = (0xffU & ((vlTOPp->booth4__DOT__shiftReg 
+                                            + ((IData)(vlTOPp->booth4__DOT__PositiveB) 
+                                               << 1U)));
+    vlTOPp->booth4__DOT__MinusB = (0x3ffU & ((vlTOPp->booth4__DOT__shiftReg 
                                               >> 9U) 
-                                             + ((- (IData)(vlTOPp->io_dinB)) 
-                                                << 1U)));
+                                             + (- (IData)(vlTOPp->booth4__DOT__PositiveB))));
+    vlTOPp->booth4__DOT__Minus2B = (0x3ffU & ((vlTOPp->booth4__DOT__shiftReg 
+                                               >> 9U) 
+                                              + ((- (IData)(vlTOPp->booth4__DOT__PositiveB)) 
+                                                 << 1U)));
 }
 
 void Vbooth4::_eval(Vbooth4__Syms* __restrict vlSymsp) {
@@ -245,13 +256,14 @@ void Vbooth4::_eval(Vbooth4__Syms* __restrict vlSymsp) {
     if (((IData)(vlTOPp->clk) & (~ (IData)(vlTOPp->__Vclklast__TOP__clk)))) {
         vlTOPp->_sequent__TOP__1(vlSymsp);
     }
+    vlTOPp->_combo__TOP__2(vlSymsp);
+    vlTOPp->__Vm_traceActivity[1U] = 1U;
     if ((((IData)(vlTOPp->clk) & (~ (IData)(vlTOPp->__Vclklast__TOP__clk))) 
          | ((IData)(vlTOPp->reset) & (~ (IData)(vlTOPp->__Vclklast__TOP__reset))))) {
-        vlTOPp->_sequent__TOP__2(vlSymsp);
-        vlTOPp->__Vm_traceActivity[1U] = 1U;
+        vlTOPp->_sequent__TOP__4(vlSymsp);
+        vlTOPp->__Vm_traceActivity[2U] = 1U;
     }
-    vlTOPp->_combo__TOP__4(vlSymsp);
-    vlTOPp->__Vm_traceActivity[2U] = 1U;
+    vlTOPp->_combo__TOP__5(vlSymsp);
     // Final
     vlTOPp->__Vclklast__TOP__clk = vlTOPp->clk;
     vlTOPp->__Vclklast__TOP__reset = vlTOPp->reset;

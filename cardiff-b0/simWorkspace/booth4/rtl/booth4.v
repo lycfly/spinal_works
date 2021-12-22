@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.4.2    git head : 804c7bd7b7feaddcc1d25ecef6c208fd5f776f79
 // Component : booth4
-// Git hash  : 7689016539fce71eac5b72b24831b097bb38ae23
+// Git hash  : 0af3daec77d099208d061589aabe1993b5bb0a32
 
 
 
@@ -13,35 +13,35 @@ module booth4 (
   input               clk,
   input               reset
 );
-  wire       [7:0]    _zz_1;
-  wire       [7:0]    _zz_2;
-  wire       [7:0]    _zz_3;
-  wire       [7:0]    _zz_4;
-  wire       [16:0]   _zz_5;
-  wire       [16:0]   _zz_6;
-  reg        [16:0]   shiftReg;
+  wire       [9:0]    _zz_1;
+  wire       [9:0]    _zz_2;
+  wire       [9:0]    _zz_3;
+  wire       [9:0]    _zz_4;
+  wire       [18:0]   _zz_5;
+  wire       [18:0]   _zz_6;
+  reg        [18:0]   shiftReg;
   wire       [2:0]    flag_bits;
-  wire       [7:0]    NegativeB;
-  wire       [7:0]    Negative2B;
-  wire       [7:0]    PositiveB;
-  wire       [7:0]    Positive2B;
-  wire       [7:0]    AddB;
-  wire       [7:0]    Add2B;
-  wire       [7:0]    MinusB;
-  wire       [7:0]    Minus2B;
+  wire       [9:0]    NegativeB;
+  wire       [9:0]    Negative2B;
+  wire       [9:0]    PositiveB;
+  wire       [9:0]    Positive2B;
+  wire       [9:0]    AddB;
+  wire       [9:0]    Add2B;
+  wire       [9:0]    MinusB;
+  wire       [9:0]    Minus2B;
   reg        [1:0]    cal_cnt;
   reg                 cal_en;
   reg                 cal_en_regNext;
 
-  assign _zz_1 = shiftReg[16 : 9];
-  assign _zz_2 = shiftReg[16 : 9];
-  assign _zz_3 = shiftReg[16 : 9];
-  assign _zz_4 = shiftReg[16 : 9];
+  assign _zz_1 = shiftReg[18 : 9];
+  assign _zz_2 = shiftReg[18 : 9];
+  assign _zz_3 = shiftReg[18 : 9];
+  assign _zz_4 = shiftReg[18 : 9];
   assign _zz_5 = ($signed(_zz_6) >>> 2);
   assign _zz_6 = shiftReg;
   assign flag_bits = shiftReg[2 : 0];
   assign NegativeB = (- PositiveB);
-  assign PositiveB = io_dinB;
+  assign PositiveB = {{2{io_dinB[7]}}, io_dinB};
   assign Negative2B = (NegativeB <<< 1);
   assign Positive2B = (PositiveB <<< 1);
   assign AddB = ($signed(_zz_1) + $signed(PositiveB));
@@ -52,7 +52,7 @@ module booth4 (
   assign io_dout = shiftReg[16 : 1];
   always @ (posedge clk or posedge reset) begin
     if (reset) begin
-      shiftReg <= 17'h0;
+      shiftReg <= 19'h0;
       cal_cnt <= 2'b00;
       cal_en <= 1'b0;
     end else begin
@@ -71,7 +71,7 @@ module booth4 (
         end
       end
       if(io_din_vld)begin
-        shiftReg[8 : 1] <= io_dinA;
+        shiftReg <= {{10'h0,io_dinA},1'b0};
       end else begin
         if(cal_en)begin
           case(flag_bits)
@@ -79,16 +79,16 @@ module booth4 (
               shiftReg <= _zz_5;
             end
             3'b001, 3'b010 : begin
-              shiftReg <= {{{AddB[7],AddB[7]},AddB},shiftReg[8 : 2]};
+              shiftReg <= {{{AddB[9],AddB[9]},AddB},shiftReg[8 : 2]};
             end
             3'b101, 3'b110 : begin
-              shiftReg <= {{{MinusB[7],MinusB[7]},MinusB},shiftReg[8 : 2]};
+              shiftReg <= {{{MinusB[9],MinusB[9]},MinusB},shiftReg[8 : 2]};
             end
             3'b011 : begin
-              shiftReg <= {{{Add2B[7],Add2B[7]},Add2B},shiftReg[8 : 2]};
+              shiftReg <= {{{Add2B[9],Add2B[9]},Add2B},shiftReg[8 : 2]};
             end
             default : begin
-              shiftReg <= {{{Minus2B[7],Minus2B[7]},Minus2B},shiftReg[8 : 2]};
+              shiftReg <= {{{Minus2B[9],Minus2B[9]},Minus2B},shiftReg[8 : 2]};
             end
           endcase
         end

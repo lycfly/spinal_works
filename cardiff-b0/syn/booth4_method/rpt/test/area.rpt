@@ -1,0 +1,63 @@
+ 
+****************************************
+Report : area
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Dec 21 17:37:10 2021
+****************************************
+
+Library(s) Used:
+
+    ssc_core_slow (File: /mnt/mydata/spinal_works/18um/Technology/TSMC/core/synopsys/db/nopower/core_slow.db)
+
+Number of ports:                          788
+Number of nets:                          2987
+Number of cells:                         2102
+Number of combinational cells:           1822
+Number of sequential cells:               251
+Number of macros/black boxes:              11
+Number of buf/inv:                        387
+Number of references:                      10
+
+Combinational area:              27921.709964
+Buf/Inv area:                     3011.450014
+Noncombinational area:           12959.430040
+Macro/Black Box area:              386.319988
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 41267.459993
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area             Local cell area
+                                  -------------------  -------------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes     Design
+--------------------------------  ----------  -------  ----------  ----------  --------  ---------------------------------
+cal_phase                         41267.4600    100.0    298.6500      0.0000    0.0000  cal_phase
+calvn                              9199.4400     22.3   4458.2200   4425.1200   35.1200  cal_vn
+calvn/clk_gate_Vins_0_reg            40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_1
+calvn/clk_gate_Vins_2_reg            40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_3
+calvn/clk_gate_Vins_4_reg            40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_4
+calvn/clk_gate_Vins_6_reg            40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_7
+calvn/clk_gate_max_v_reg             40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_9
+calvn/clk_gate_min_v_reg             40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_10
+calvn/clk_gate_v_cnt_reg             40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_2
+cordic                            13617.8300     33.0  10108.3000   3389.1100    0.0000  cordic_int
+cordic/clk_gate_res_out_reg          40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_1
+cordic/clk_gate_res_rg_reg           40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_2
+cordic/clk_gate_yn_reg               40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_0
+dot                               18151.5400     44.0   6410.1100   2332.9800  351.2000  dotVn_2
+dot/booth_cos                      4516.0800     10.9   3249.2300   1226.7100    0.0000  booth4_0
+dot/booth_cos/clk_gate_shiftReg_reg
+                                     40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_booth4_0_0
+dot/booth_sin                      4501.0300     10.9   3234.1800   1226.7100    0.0000  booth4_1
+dot/booth_sin/clk_gate_shiftReg_reg
+                                     40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_booth4_0_1
+dot/clk_gate_psum2_reg               40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_dotVn_2
+--------------------------------  ----------  -------  ----------  ----------  --------  ---------------------------------
+Total                                                  27921.7100  12959.4300  386.3200
+
+1

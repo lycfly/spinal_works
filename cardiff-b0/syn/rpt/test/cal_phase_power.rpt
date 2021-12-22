@@ -8,7 +8,7 @@ Report : power
         -analysis_effort low
 Design : cal_phase
 Version: L-2016.03-SP1
-Date   : Wed Dec 15 15:23:36 2021
+Date   : Tue Dec 21 17:29:47 2021
 ****************************************
 
 
@@ -41,6 +41,8 @@ SNPS_CLOCK_GATE_HIGH_cal_vn_2
                        5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_cal_vn_1
                        5KGATES           ssc_core_slow
+signMul_1              5KGATES           ssc_core_slow
+signMul_0              5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_dotVn_2
                        5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_cordic_int_0
@@ -48,6 +50,10 @@ SNPS_CLOCK_GATE_HIGH_cordic_int_0
 SNPS_CLOCK_GATE_HIGH_cordic_int_2
                        5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_cordic_int_1
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_signMul_0_1
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_signMul_0_0
                        5KGATES           ssc_core_slow
 
 
@@ -61,9 +67,9 @@ Power-specific unit information :
 
 
   Cell Internal Power  =   0.0000 mW    (0%)
-  Net Switching Power  = 397.0324 uW  (100%)
+  Net Switching Power  = 329.5695 uW  (100%)
                          ---------
-Total Dynamic Power    = 397.0324 uW  (100%)
+Total Dynamic Power    = 329.5695 uW  (100%)
 
 Cell Leakage Power     =   0.0000 
 
@@ -75,10 +81,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000               NA   (     N/A)
 memory             0.0000            0.0000            0.0000               NA   (     N/A)
 black_box          0.0000            0.0000            0.0000               NA   (     N/A)
-clock_network      0.0000        1.6668e-02            0.0000               NA   (     N/A)
-register           0.0000        9.2421e-03            0.0000               NA   (     N/A)
+clock_network      0.0000        2.0982e-02            0.0000               NA   (     N/A)
+register           0.0000        1.0169e-02            0.0000               NA   (     N/A)
 sequential         0.0000            0.0000            0.0000               NA   (     N/A)
-combinational      0.0000            0.3711            0.0000               NA   (     N/A)
+combinational      0.0000            0.2984            0.0000               NA   (     N/A)
 --------------------------------------------------------------------------------------------------
-Total              0.0000 mW         0.3970 mW         0.0000               NA        
+Total              0.0000 mW         0.3296 mW         0.0000               NA        
 1

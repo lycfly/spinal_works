@@ -35,15 +35,16 @@ VL_MODULE(Vbooth4) {
     // LOCAL SIGNALS
     // Internals; generally not touched by application code
     CData/*2:0*/ booth4__DOT__flag_bits;
-    CData/*7:0*/ booth4__DOT__AddB;
-    CData/*7:0*/ booth4__DOT__Add2B;
-    CData/*7:0*/ booth4__DOT__MinusB;
-    CData/*7:0*/ booth4__DOT__Minus2B;
     CData/*1:0*/ booth4__DOT__cal_cnt;
     CData/*0:0*/ booth4__DOT__cal_en;
     CData/*0:0*/ booth4__DOT__cal_en_regNext;
-    IData/*16:0*/ booth4__DOT___zz_5;
-    IData/*16:0*/ booth4__DOT__shiftReg;
+    SData/*9:0*/ booth4__DOT__PositiveB;
+    SData/*9:0*/ booth4__DOT__AddB;
+    SData/*9:0*/ booth4__DOT__Add2B;
+    SData/*9:0*/ booth4__DOT__MinusB;
+    SData/*9:0*/ booth4__DOT__Minus2B;
+    IData/*18:0*/ booth4__DOT___zz_5;
+    IData/*18:0*/ booth4__DOT__shiftReg;
     
     // LOCAL VARIABLES
     // Internals; generally not touched by application code
@@ -86,7 +87,8 @@ VL_MODULE(Vbooth4) {
     static QData _change_request(Vbooth4__Syms* __restrict vlSymsp);
     static QData _change_request_1(Vbooth4__Syms* __restrict vlSymsp);
   public:
-    static void _combo__TOP__4(Vbooth4__Syms* __restrict vlSymsp);
+    static void _combo__TOP__2(Vbooth4__Syms* __restrict vlSymsp);
+    static void _combo__TOP__5(Vbooth4__Syms* __restrict vlSymsp);
   private:
     void _ctor_var_reset() VL_ATTR_COLD;
   public:
@@ -99,7 +101,7 @@ VL_MODULE(Vbooth4) {
     static void _eval_initial(Vbooth4__Syms* __restrict vlSymsp) VL_ATTR_COLD;
     static void _eval_settle(Vbooth4__Syms* __restrict vlSymsp) VL_ATTR_COLD;
     static void _sequent__TOP__1(Vbooth4__Syms* __restrict vlSymsp);
-    static void _sequent__TOP__2(Vbooth4__Syms* __restrict vlSymsp);
+    static void _sequent__TOP__4(Vbooth4__Syms* __restrict vlSymsp);
     static void _settle__TOP__3(Vbooth4__Syms* __restrict vlSymsp) VL_ATTR_COLD;
   private:
     static void traceChgSub0(void* userp, VerilatedVcd* tracep);

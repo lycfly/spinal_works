@@ -3,7 +3,7 @@
 Report : cell
 Design : cal_phase
 Version: L-2016.03-SP1
-Date   : Wed Dec 15 15:23:36 2021
+Date   : Tue Dec 21 17:29:47 2021
 ****************************************
 
 Attributes:
@@ -15,58 +15,44 @@ Attributes:
 
 Cell                      Reference       Library             Area  Attributes
 --------------------------------------------------------------------------------
-U1                        clk1b6          ssc_core_slow   10.040000 
-U2                        clk1b6          ssc_core_slow   10.040000 
-U3                        inv1a9          ssc_core_slow   15.050000 
-U4                        clk1b6          ssc_core_slow   10.040000 
-U5                        clk1a3          ssc_core_slow   10.040000 
-U6                        clk1a3          ssc_core_slow   10.040000 
-U7                        clk1a3          ssc_core_slow   10.040000 
+U6                        inv1a9          ssc_core_slow   15.050000 
+U7                        buf1a6          ssc_core_slow   15.050000 
 U8                        clk1a3          ssc_core_slow   10.040000 
-U9                        clk1a3          ssc_core_slow   10.040000 
+U9                        inv1a3          ssc_core_slow   7.530000  
 U10                       clk1a3          ssc_core_slow   10.040000 
-U11                       clk1a3          ssc_core_slow   10.040000 
-U12                       clk1a3          ssc_core_slow   10.040000 
+U11                       inv1a9          ssc_core_slow   15.050000 
+U12                       clk1b6          ssc_core_slow   10.040000 
 U13                       clk1a3          ssc_core_slow   10.040000 
 U14                       clk1a3          ssc_core_slow   10.040000 
-U15                       inv1a15         ssc_core_slow   20.070000 
-U16                       inv1a2          ssc_core_slow   7.530000  
-U17                       clk1b6          ssc_core_slow   10.040000 
-U18                       inv1a2          ssc_core_slow   7.530000  
-U19                       inv1a9          ssc_core_slow   15.050000 
+U15                       clk1a3          ssc_core_slow   10.040000 
+U16                       clk1a3          ssc_core_slow   10.040000 
+U17                       clk1a3          ssc_core_slow   10.040000 
+U18                       clk1a3          ssc_core_slow   10.040000 
+U19                       clk1a3          ssc_core_slow   10.040000 
 U20                       clk1a3          ssc_core_slow   10.040000 
 U21                       clk1a3          ssc_core_slow   10.040000 
 U22                       clk1a3          ssc_core_slow   10.040000 
-U23                       inv1a15         ssc_core_slow   20.070000 
-U24                       inv1a3          ssc_core_slow   7.530000  
-U25                       inv1a1          ssc_core_slow   5.020000  
-U26                       inv1a1          ssc_core_slow   5.020000  
-U27                       clk1b6          ssc_core_slow   10.040000 
+U23                       clk1a3          ssc_core_slow   10.040000 
+U24                       inv1a15         ssc_core_slow   20.070000 
+U25                       inv1a3          ssc_core_slow   7.530000  
+U26                       inv1a27         ssc_core_slow   35.119999 
+U27                       inv1a15         ssc_core_slow   20.070000 
 U28                       inv1a3          ssc_core_slow   7.530000  
-U29                       inv1a1          ssc_core_slow   5.020000  
-U30                       inv1a1          ssc_core_slow   5.020000  
-U31                       inv1a1          ssc_core_slow   5.020000  
-U32                       inv1a27         ssc_core_slow   35.119999 
-U33                       inv1a15         ssc_core_slow   20.070000 
-U34                       clk1b6          ssc_core_slow   10.040000 
-U35                       inv1a3          ssc_core_slow   7.530000  
-U36                       inv1a3          ssc_core_slow   7.530000  
-U37                       inv1a3          ssc_core_slow   7.530000  
-U38                       inv1a3          ssc_core_slow   7.530000  
-U39                       inv1a3          ssc_core_slow   7.530000  
-U40                       inv1a1          ssc_core_slow   5.020000  
-U41                       inv1a3          ssc_core_slow   7.530000  
-U42                       inv1a1          ssc_core_slow   5.020000  
-U43                       inv1a1          ssc_core_slow   5.020000  
-U44                       inv1a1          ssc_core_slow   5.020000  
-U45                       inv1a3          ssc_core_slow   7.530000  
-U46                       inv1a3          ssc_core_slow   7.530000  
-calvn                     cal_vn                          9420.370024
+U29                       inv1a3          ssc_core_slow   7.530000  
+U30                       inv1a3          ssc_core_slow   7.530000  
+U31                       inv1a15         ssc_core_slow   20.070000 
+U32                       inv1a1          ssc_core_slow   5.020000  
+U33                       clk1b9          ssc_core_slow   22.580000 
+U34                       inv1a1          ssc_core_slow   5.020000  
+U35                       inv1a1          ssc_core_slow   5.020000  
+U37                       inv1a1          ssc_core_slow   5.020000  
+U38                       mx2a1           ssc_core_slow   20.070000 
+calvn                     cal_vn                          9357.629995
                                                                     h, n
-cordic                    cordic_int                      12556.770011
+cordic                    cordic_int                      13698.120008
                                                                     h, n
-dot                       dotVn_2                         20387.089925
+dot                       dotVn_2                         18567.469935
                                                                     h, n
 --------------------------------------------------------------------------------
-Total 49 cells                                            42815.959960
+Total 35 cells                                            42004.639936
 1

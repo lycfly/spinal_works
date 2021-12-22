@@ -81,115 +81,123 @@ Presto compilation completed successfully.
 Elaborated 1 design.
 Current design is now 'cal_phase'.
 Information: Building the design 'cal_vn'. (HDL-193)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:655: signed to unsigned assignment occurs. (VER-318)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:737: signed to unsigned assignment occurs. (VER-318)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:758: signed to unsigned assignment occurs. (VER-318)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:777: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:785: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:786: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:787: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:809: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:828: signed to unsigned assignment occurs. (VER-318)
 
-Statistics for case statements in always block at line 674 in file
+Statistics for case statements in always block at line 723 in file
 	'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|           675            |    auto/auto     |
+|           724            |    auto/auto     |
 ===============================================
 
-Statistics for case statements in always block at line 703 in file
+Statistics for case statements in always block at line 752 in file
 	'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|           704            |    auto/auto     |
+|           753            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
-	in routine cal_vn line 802 in file
+	in routine cal_vn line 853 in file
 		'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|     Vins_0_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-|      min_v_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-|      max_v_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     Vins_7_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     Vins_6_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     Vins_5_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     Vins_2_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     Vins_4_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     Vins_3_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     Vins_1_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-|      v_cnt_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+|       Vins_1_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| mean_finish_regNext_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        min_v_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        max_v_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       Vins_7_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       Vins_6_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       Vins_3_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       Vins_5_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       Vins_4_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       Vins_2_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        v_cnt_reg        | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       Vins_0_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
 Presto compilation completed successfully.
 Information: Building the design 'dotVn_2'. (HDL-193)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:490: signed to unsigned assignment occurs. (VER-318)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:494: signed to unsigned assignment occurs. (VER-318)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:495: signed to unsigned assignment occurs. (VER-318)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:557: signed to unsigned assignment occurs. (VER-318)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:558: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:536: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:603: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:604: signed to unsigned assignment occurs. (VER-318)
 
-Statistics for case statements in always block at line 444 in file
+Statistics for case statements in always block at line 486 in file
 	'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|           445            |    auto/auto     |
+|           487            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
-	in routine dotVn_2 line 533 in file
+	in routine dotVn_2 line 577 in file
 		'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
+|     finish_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 |     mac_en_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|     mac_cnt_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
 |      psum2_reg      | Flip-flop |  19   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     mac_cnt_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
 |      psum1_reg      | Flip-flop |  19   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine dotVn_2 line 566 in file
-		'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|     finish_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   booth_start_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
 Information: Building the design 'cordic_int'. (HDL-193)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:284: signed to unsigned assignment occurs. (VER-318)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:285: signed to unsigned assignment occurs. (VER-318)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:352: signed to unsigned assignment occurs. (VER-318)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:353: signed to unsigned assignment occurs. (VER-318)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:354: signed to unsigned assignment occurs. (VER-318)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:356: signed to unsigned assignment occurs. (VER-318)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:357: signed to unsigned assignment occurs. (VER-318)
-Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:358: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:292: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:293: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:366: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:367: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:368: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:370: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:371: signed to unsigned assignment occurs. (VER-318)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:372: signed to unsigned assignment occurs. (VER-318)
 
-Statistics for case statements in always block at line 231 in file
+Statistics for case statements in always block at line 239 in file
 	'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|           232            |    auto/auto     |
+|           240            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
-	in routine cordic_int line 305 in file
+	in routine cordic_int line 313 in file
 		'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|     cal_cnt_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     res_rg_reg      | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
-|       yn_reg        | Flip-flop |  19   |  Y  | N  | Y  | N  | N  | N  | N  |
-|       xn_reg        | Flip-flop |  19   |  Y  | N  | Y  | N  | N  | N  | N  |
-|   nozero_flg_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
-|     finish_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|     cal_en_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-| cal_en_regNext_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+|        yn_reg        | Flip-flop |  19   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      cal_en_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        xn_reg        | Flip-flop |  19   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      res_rg_reg      | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      finish_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| cal_finish_delay_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  cal_en_regNext_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    nozero_flg_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     res_out_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     cal_cnt_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'signMul'. (HDL-193)
+Warning:  /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v:968: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine signMul line 962 in file
+		'/mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| io_din_vld_regNext_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      PsumReg_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
 Presto compilation completed successfully.
 1
 current_design  $TOP_MODULE
@@ -200,7 +208,7 @@ link
   Linking design 'cal_phase'
   Using the following designs and libraries:
   --------------------------------------------------------------------------
-  * (4 designs)               /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.db, etc
+  * (5 designs)               /mnt/mydata/spinal_works/cardiff-b0/syn/cal_phase.db, etc
   ssc_core_slow (library)     /mnt/mydata/spinal_works/18um/Technology/TSMC/core/synopsys/db/nopower/core_slow.db
   dw_foundation.sldb (library) /usr/synopsys/dc-L-2016.03-SP1/libraries/syn/dw_foundation.sldb
 
@@ -259,19 +267,17 @@ set_max_capacitance             $MAX_CAP                 $ALL_EX_OUT_IN
 report_clock
 Information: Checking out the license 'DesignWare'. (SEC-104)
 Information: Changed wire load model for 'cordic_int' from '(none)' to '5KGATES'. (OPT-170)
+Information: Changed wire load model for 'signMul' from '(none)' to '5KGATES'. (OPT-170)
+Information: Changed wire load model for 'signMul' from '(none)' to '5KGATES'. (OPT-170)
 Information: Changed wire load model for 'dotVn_2' from '(none)' to '5KGATES'. (OPT-170)
 Information: Changed wire load model for 'cal_vn' from '(none)' to '5KGATES'. (OPT-170)
-Information: Changed wire load model for 'alt1' from '(none)' to '5KGATES'. (OPT-170)
-Information: Changed wire load model for 'apparch' from '(none)' to '5KGATES'. (OPT-170)
-Information: Changed wire load model for 'alt1' from '(none)' to '5KGATES'. (OPT-170)
-Information: Changed wire load model for 'astr' from '(none)' to '5KGATES'. (OPT-170)
 Information: Updating graph... (UID-83)
  
 ****************************************
 Report : clocks
 Design : cal_phase
 Version: L-2016.03-SP1
-Date   : Wed Dec 15 15:23:05 2021
+Date   : Tue Dec 21 17:29:19 2021
 ****************************************
 
 Attributes:
@@ -352,8 +358,9 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 
 Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
 
-Information: There are 15 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 19 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
+Information: Uniquified 2 instances of design 'signMul'. (OPT-1056)
   Simplifying Design 'cal_phase'
 
 Loaded alib file './alib-52/core_slow.db.alib'
@@ -361,20 +368,24 @@ Information: State dependent leakage is now switched from on to off.
 
   Beginning Pass 1 Mapping
   ------------------------
-  Processing 'cal_vn'
-Information: Added key list 'DesignWare' to design 'cal_vn'. (DDB-72)
- Implement Synthetic for 'cal_vn'.
   Processing 'cordic_int'
 Information: Added key list 'DesignWare' to design 'cordic_int'. (DDB-72)
  Implement Synthetic for 'cordic_int'.
+  Processing 'cal_vn'
+Information: Added key list 'DesignWare' to design 'cal_vn'. (DDB-72)
+ Implement Synthetic for 'cal_vn'.
   Processing 'dotVn_2'
 Information: Added key list 'DesignWare' to design 'dotVn_2'. (DDB-72)
  Implement Synthetic for 'dotVn_2'.
   Processing 'cal_phase'
+Information: Added key list 'DesignWare' to design 'cal_phase'. (DDB-72)
+  Processing 'signMul_0'
+ Implement Synthetic for 'signMul_0'.
   Processing 'SNPS_CLOCK_GATE_HIGH_cordic_int_0'
   Processing 'SNPS_CLOCK_GATE_HIGH_dotVn_2'
+  Processing 'SNPS_CLOCK_GATE_HIGH_signMul_0_0'
   Processing 'SNPS_CLOCK_GATE_HIGH_cal_vn_0'
-Memory usage for J1 task 148 Mbytes -- main task 144 Mbytes.
+Memory usage for J1 task 147 Mbytes -- main task 142 Mbytes.
 
   Updating timing information
 Information: Updating design information... (UID-85)
@@ -386,18 +397,21 @@ Information: Skipping clock gating on design cal_vn_DW01_sub_J1_0, since there a
 Information: Skipping clock gating on design cal_vn_DW01_sub_J1_1, since there are no registers. (PWR-806)
 Information: Skipping clock gating on design cal_vn_DW01_add_J1_0, since there are no registers. (PWR-806)
 Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_dotVn_2, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design dotVn_2_DP_OP_35J1_134_2905_J1_0, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design dotVn_2_DP_OP_34J1_133_2905_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design dotVn_2_DW01_add_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design dotVn_2_DW01_add_J1_1, since there are no registers. (PWR-806)
 Information: Skipping clock gating on design dotVn_2_DW01_sub_J1_0, since there are no registers. (PWR-806)
 Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cordic_int_0, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design cordic_int_RSOP_65, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design cordic_int_RSOP_66, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design cordic_int_RSOP_67, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design cordic_int_DP_OP_38J1_122_4721_J1_0, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design cordic_int_DP_OP_65J1_125_723_J1_0, since there are no registers. (PWR-806)
-Information: Skipping clock gating on design cordic_int_DP_OP_74J1_129_8649_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cordic_int_RSOP_70, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cordic_int_RSOP_71, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cordic_int_RSOP_72, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_signMul_0_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design signMul_0_DW_mult_tc_J1_0_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cordic_int_DP_OP_39J1_122_1632_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cordic_int_DP_OP_67J1_125_1913_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design cordic_int_DP_OP_79J1_129_8036_J1_0, since there are no registers. (PWR-806)
 Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cordic_int_1, since there are no registers. (PWR-806)
 Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cordic_int_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_signMul_0_0, since there are no registers. (PWR-806)
 Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cal_vn_1, since there are no registers. (PWR-806)
 Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cal_vn_2, since there are no registers. (PWR-806)
 Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cal_vn_3, since there are no registers. (PWR-806)
@@ -408,12 +422,17 @@ Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cal_vn_7, sinc
 Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cal_vn_8, since there are no registers. (PWR-806)
 Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cal_vn_9, since there are no registers. (PWR-806)
 Information: Skipping clock gating on design SNPS_CLOCK_GATE_HIGH_cal_vn_10, since there are no registers. (PWR-806)
-Information: Performing clock-gating on design dotVn_2. (PWR-730)
+Information: Skipping clock gating on design signMul_0_DW_mult_tc_J1_0_0, since there are no registers. (PWR-806)
 Information: Performing clock-gating on design cordic_int. (PWR-730)
+Information: Performing clock-gating on design dotVn_2. (PWR-730)
 Information: Performing clock-gating on design cal_vn. (PWR-730)
-Memory usage for J2 task 144 Mbytes -- main task 144 Mbytes.
-Memory usage for J3 task 144 Mbytes -- main task 144 Mbytes.
-Memory usage for J4 task 144 Mbytes -- main task 144 Mbytes.
+Information: Performing clock-gating on design signMul_1. (PWR-730)
+Information: Performing clock-gating on design signMul_0. (PWR-730)
+Memory usage for J2 task 142 Mbytes -- main task 142 Mbytes.
+Memory usage for J3 task 142 Mbytes -- main task 142 Mbytes.
+Memory usage for J4 task 142 Mbytes -- main task 142 Mbytes.
+Memory usage for J5 task 142 Mbytes -- main task 142 Mbytes.
+Memory usage for J6 task 142 Mbytes -- main task 142 Mbytes.
 
   Beginning Mapping Optimizations  (Ultra High effort)
   -------------------------------
@@ -457,8 +476,9 @@ Memory usage for J4 task 144 Mbytes -- main task 144 Mbytes.
   Global Optimization (Phase 29)
   Global Optimization (Phase 30)
   Global Optimization (Phase 31)
-  Mapping 'cordic_int_DP_OP_74J1_129_8649_0'
-  Mapping 'dotVn_2_DP_OP_35J1_134_2905_3'
+  Mapping 'cordic_int_DP_OP_67J1_125_1913_0'
+Information: Added key list 'DesignWare' to design 'signMul_1'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'signMul_0'. (DDB-72)
 
   Beginning Isolate Ports
   -----------------------
@@ -470,33 +490,33 @@ Memory usage for J4 task 144 Mbytes -- main task 144 Mbytes.
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:16   43551.1      1.36      54.5      18.2                              0.0000
-    0:00:17   47071.2      0.00       0.0      17.4                              0.0000
-    0:00:17   47071.2      0.00       0.0      17.4                              0.0000
-    0:00:18   46980.9      0.00       0.0      17.4                              0.0000
+    0:00:14   41375.2      1.16      14.3      11.3                              0.0000
+    0:00:14   43051.2      0.00       0.0      12.4                              0.0000
+    0:00:14   43051.2      0.00       0.0      12.4                              0.0000
+    0:00:15   43006.0      0.00       0.0      12.4                              0.0000
 
   Beginning WLM Backend Optimization
   --------------------------------------
-    0:00:19   46278.4      0.00       0.0      17.7                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
+    0:00:16   42682.4      0.00       0.0      13.4                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
 
 
   Beginning Design Rule Fixing  (max_transition)  (max_fanout)  (max_capacitance)
@@ -506,50 +526,50 @@ Memory usage for J4 task 144 Mbytes -- main task 144 Mbytes.
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:20   45739.2      0.00       0.0      13.1                              0.0000
+    0:00:16   42639.8      0.00       0.0      13.0                              0.0000
   Global Optimization (Phase 32)
   Global Optimization (Phase 33)
   Global Optimization (Phase 34)
-    0:00:21   45917.4      0.00       0.0       4.8 dot/rg_sin_table_1[2]        0.0000
-    0:00:23   45917.4      0.00       0.0       4.8                              0.0000
-    0:00:23   45917.4      0.00       0.0       4.8                              0.0000
-    0:00:23   45917.4      0.00       0.0       4.8                              0.0000
-    0:00:23   45917.4      0.00       0.0       4.8                              0.0000
-    0:00:23   45917.4      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
+    0:00:18   43319.8      0.00       0.0       5.0 cordic/net13102              0.0000
+    0:00:19   43327.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43327.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43327.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43327.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43327.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:19   43322.3      0.00       0.0       4.8                              0.0000
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:23   45852.2      0.00       0.0       4.8                              0.0000
-    0:00:24   43827.2      0.01       0.0       4.8                              0.0000
-    0:00:24   43829.7      0.00       0.0       4.8                              0.0000
-    0:00:24   43829.7      0.00       0.0       4.8                              0.0000
-    0:00:24   43792.1      0.00       0.0       4.8                              0.0000
-    0:00:26   43408.1      0.00       0.0       4.8                              0.0000
-    0:00:26   43408.1      0.00       0.0       4.8                              0.0000
-    0:00:26   43408.1      0.00       0.0       4.8                              0.0000
-    0:00:26   43408.1      0.00       0.0       4.8                              0.0000
-    0:00:27   42816.0      0.00       0.0       4.8                              0.0000
+    0:00:20   43322.3      0.00       0.0       4.8                              0.0000
+    0:00:20   42456.3      0.00       0.0       4.8                              0.0000
+    0:00:20   42461.3      0.00       0.0       4.8                              0.0000
+    0:00:20   42461.3      0.00       0.0       4.8                              0.0000
+    0:00:20   42476.4      0.00       0.0       4.8                              0.0000
+    0:00:23   42248.0      0.00       0.0       4.8                              0.0000
+    0:00:23   42248.0      0.00       0.0       4.8                              0.0000
+    0:00:23   42248.0      0.00       0.0       4.8                              0.0000
+    0:00:23   42248.0      0.00       0.0       4.8                              0.0000
+    0:00:23   42004.6      0.00       0.0       4.8                              0.0000
 Loading db file '/mnt/mydata/spinal_works/18um/Technology/TSMC/core/synopsys/db/nopower/core_slow.db'
 
 
@@ -601,6 +621,6 @@ report_clock_gating -ungated -verbose                     > ./rpt/$date/${TOP_MO
 dc_shell> 
 Memory usage for main task 160 Mbytes.
 Memory usage for this session 160 Mbytes.
-CPU usage for this session 32 seconds ( 0.01 hours ).
+CPU usage for this session 33 seconds ( 0.01 hours ).
 
 Thank you...

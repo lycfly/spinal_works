@@ -1,0 +1,41 @@
+ 
+****************************************
+Report : reference
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Dec 21 17:48:38 2021
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+cal_vn                         9126.669977       1   9126.669977  h, n
+clk1a3             ssc_core_slow
+                                 10.040000      12    120.480000  
+clk1b6             ssc_core_slow
+                                 10.040000       2     20.080000  
+cordic_int                    13577.700020       1  13577.700020  h, n
+dotVn_2                       13843.629996       1  13843.629996  h, n
+inv1a1             ssc_core_slow
+                                  5.020000       1      5.020000  
+inv1a3             ssc_core_slow
+                                  7.530000       7     52.710001  
+inv1a9             ssc_core_slow
+                                 15.050000       5     75.250001  
+inv1a15            ssc_core_slow
+                                 20.070000       2     40.139999  
+mx2a1              ssc_core_slow
+                                 20.070000       1     20.070000  
+-----------------------------------------------------------------------------
+Total 10 references                                 36881.749995
+1

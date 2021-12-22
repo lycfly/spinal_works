@@ -17,16 +17,17 @@ class booth4 (SIZEINA: Int, SIZEINB:Int) extends Component {
 
   val MAX_NUM = SIZEINA/2 -1
   val MAX_DW = log2Up(MAX_NUM)
-  val shiftReg = Reg(Bits(SIZEINA + SIZEINB + 1  bits)) init(0)
+  val SHIFT_SIZE = SIZEINA + SIZEINB + 1 + 2
+  val shiftReg = Reg(Bits(SHIFT_SIZE bits)) init(0)
   val flag_bits = Bits(3 bits)
-  val NegativeB = SInt(SIZEINB bits)
-  val Negative2B = SInt(SIZEINB bits)
-  val PositiveB = SInt(SIZEINB bits)
-  val Positive2B = SInt(SIZEINB bits)
-  val AddB = SInt(SIZEINB bits)
-  val Add2B = SInt(SIZEINB bits)
-  val MinusB = SInt(SIZEINB bits)
-  val Minus2B = SInt(SIZEINB bits)
+  val NegativeB = SInt(SIZEINB+ 2 bits)
+  val Negative2B = SInt(SIZEINB+ 2 bits)
+  val PositiveB = SInt(SIZEINB+ 2 bits)
+  val Positive2B = SInt(SIZEINB+ 2 bits)
+  val AddB = SInt(SIZEINB+ 2 bits)
+  val Add2B = SInt(SIZEINB+ 2 bits)
+  val MinusB = SInt(SIZEINB+ 2 bits)
+  val Minus2B = SInt(SIZEINB+ 2 bits)
 
   val cal_cnt = Reg(UInt(MAX_DW bits)) init(0)
   val cal_en = Reg(Bool()) init(false)
@@ -36,10 +37,10 @@ class booth4 (SIZEINA: Int, SIZEINB:Int) extends Component {
   Negative2B := NegativeB |<< 1
   Positive2B := PositiveB |<< 1
 
-  AddB := (shiftReg(SIZEINA+SIZEINB downto SIZEINA+1).asSInt + PositiveB)
-  Add2B := (shiftReg(SIZEINA+SIZEINB downto SIZEINA+1).asSInt + Positive2B)
-  MinusB := (shiftReg(SIZEINA+SIZEINB downto SIZEINA+1).asSInt + NegativeB)
-  Minus2B := (shiftReg(SIZEINA+SIZEINB downto SIZEINA+1).asSInt + Negative2B)
+  AddB := (shiftReg(SIZEINA+SIZEINB+ 2 downto SIZEINA+1).asSInt + PositiveB)
+  Add2B := (shiftReg(SIZEINA+SIZEINB+ 2 downto SIZEINA+1).asSInt + Positive2B)
+  MinusB := (shiftReg(SIZEINA+SIZEINB+ 2 downto SIZEINA+1).asSInt + NegativeB)
+  Minus2B := (shiftReg(SIZEINA+SIZEINB+ 2 downto SIZEINA+1).asSInt + Negative2B)
 
 
   when(io.din_vld){
@@ -53,7 +54,7 @@ class booth4 (SIZEINA: Int, SIZEINB:Int) extends Component {
     cal_cnt := 0
   }
   when(io.din_vld){
-    shiftReg(SIZEINA downto 1) := io.dinA.asBits
+    shiftReg := U(0, SHIFT_SIZE - SIZEINA - 1 bits).asBits ## io.dinA.asBits ## U(0, 1 bits).asBits
   }.elsewhen(cal_en){
     switch(flag_bits){
       is(0,7){
@@ -102,8 +103,8 @@ object booth4 {
     println("test")
     dut.clockDomain.waitSampling()
     dut.io.din_vld #= true
-    dut.io.dinA #= -34
-    dut.io.dinB #= 22
+    dut.io.dinA #= 55
+    dut.io.dinB #= 91
     dut.clockDomain.waitSampling()
     dut.io.din_vld #= false
     dut.clockDomain.waitSampling()
@@ -112,16 +113,16 @@ object booth4 {
 
 
   }
-  //import sys.process._
-  //"gtkwave -o ./simWorkspace/cal_phase/test.vcd"!
+  import sys.process._
+  "gtkwave -o ./simWorkspace/cal_phase/test.vcd"!
 
-  import DesignCompiler._
-  val dc_config = DesignCompiler_config(process = 28, freq = 100)
-  val dc = new DesignCompilerFlow(
-    design = new booth4(SIZEINA = 8, SIZEINB = 8),
-    topModuleName = "booth4",
-    workspacePath = "/mnt/mydata/Easonlib/syn/booth4",
-    DCConfig = dc_config,
-    designPath = ""
-  ).doit()
+//  import DesignCompiler._
+//  val dc_config = DesignCompiler_config(process = 28, freq = 100)
+//  val dc = new DesignCompilerFlow(
+//    design = new booth4(SIZEINA = 8, SIZEINB = 8),
+//    topModuleName = "booth4",
+//    workspacePath = "/mnt/mydata/Easonlib/syn/booth4",
+//    DCConfig = dc_config,
+//    designPath = ""
+//  ).doit()
 }

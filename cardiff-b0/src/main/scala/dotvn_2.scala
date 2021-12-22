@@ -9,8 +9,8 @@ import scala.language.postfixOps
 class dotVn_2 (N: Int, SizeIn: Int, SizeCoeff: Int) extends Component {
   val io = new Bundle {
     val en = in Bool()
-    val rg_sin_table = in Vec(SInt(SizeIn bits), N)
-    val rg_cos_table = in Vec(SInt(SizeIn bits), N)
+    val rg_sin_table = in Vec(SInt(SizeCoeff bits), N)
+    val rg_cos_table = in Vec(SInt(SizeCoeff bits), N)
     val vn_vld = in Bool() // vld_dly1
     val vn_in = in Vec(SInt(SizeIn bits), N)
     val psum_out1 = out SInt(SizeCoeff+SizeIn bits)
@@ -36,15 +36,33 @@ class dotVn_2 (N: Int, SizeIn: Int, SizeCoeff: Int) extends Component {
   val mac_en = Reg(Bool()) init(false)
   val mac_start = Bool()
   val mac_finish = Bool()
-  val finish = Reg(Bool())
+  val finish = Reg(Bool()) init(false)
+
+  val booth_sin = new booth2(SIZEINA = SizeIn, SIZEINB = SizeCoeff)
+  val booth_cos = new booth2(SIZEINA = SizeIn, SIZEINB = SizeCoeff)
+  val mul_done = Bool()
+  val booth_start = RegNext(io.vn_vld | (mac_en & mul_done)) init(false)
+
+  booth_sin.io.dinA <> vin_true_in
+  booth_sin.io.dinB <> io.rg_sin_table(mac_cnt)
+  booth_sin.io.din_vld <> booth_start
+  booth_sin.io.dout_vld <> mul_done
+  booth_sin.io.dout <> product1
+
+  booth_cos.io.dinA <> vin_true_in
+  booth_cos.io.dinB <> io.rg_cos_table(mac_cnt)
+  booth_cos.io.din_vld <> booth_start
+  // booth_cos.io.dout_vld <> mul_done
+  booth_cos.io.dout <> product2
 
   vin_minus_mean := io.vn_in(mac_cnt) - io.mean
   vin_true_in := vin_minus_mean
 
-  mac_start := mac_en & (mac_cnt === 0)
-  mac_finish := mac_en & (mac_cnt === io.valid_num)
-  product1 := vin_true_in * io.rg_sin_table(mac_cnt)
-  product2 := vin_true_in * io.rg_cos_table(mac_cnt)
+//  mac_en := mac_cnt < io.valid_num
+  mac_start :=  (mac_cnt === 0) & mul_done
+  mac_finish := (mac_cnt === io.valid_num - 1) & mul_done
+  //product1 := vin_true_in * io.rg_sin_table(mac_cnt)
+  //product2 := vin_true_in * io.rg_cos_table(mac_cnt)
   s1 := (product1 >> 2).resized
   s2 := (product2 >> 2).resized
   //  table.io.index <> mac_cnt
@@ -60,17 +78,21 @@ class dotVn_2 (N: Int, SizeIn: Int, SizeCoeff: Int) extends Component {
   }.otherwise{
     mac_en := Bool(false)
   }
-  when(mac_en){
-    mac_cnt := mac_cnt + 1
-    when(mac_start){
-      psum1 :=  s1
-      psum2 :=  s2
+
+  when(mac_start){
+    psum1 :=  s1
+    psum2 :=  s2
+  }.elsewhen(mul_done){
+    psum1 := psum1 + s1
+    psum2 := psum2 + s2
+  }
+
+  when(mul_done){
+    when(mac_en){
+      mac_cnt := mac_cnt + 1
     }.otherwise{
-      psum1 := psum1 + s1
-      psum2 := psum2 + s2
+      mac_cnt := 0
     }
-  }.otherwise{
-    mac_cnt := 0
   }
   // 1,19,14 --add 1 frac bit--> 1,20,15 --cut 2bits--> 1,18,15
   //val FloorWrapPsum1 =  new FloorAndWrap(SizeInList = Array(1,SizeIn+SizeCoeff+logN,SizeIn+SizeCoeff-1), SizeOutList = Array(1,SizeIn+SizeCoeff,SizeIn+SizeCoeff-1))
@@ -86,7 +108,7 @@ class dotVn_2 (N: Int, SizeIn: Int, SizeCoeff: Int) extends Component {
   io.psum_out2 := psum2.sat(logN)
 
   when(io.en){
-    finish := mac_finish & mac_en
+    finish := (mac_cnt === io.valid_num) & mul_done
   }.otherwise{
     finish := Bool(false)
   }

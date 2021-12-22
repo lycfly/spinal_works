@@ -1,0 +1,2617 @@
+ 
+****************************************
+Report : timing
+        -path full_clock_expanded
+        -delay max
+        -max_paths 50
+        -sort_by slack
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Dec 21 17:48:37 2021
+****************************************
+
+Operating Conditions: slow_125_1.62   Library: ssc_core_slow
+Wire Load Model Mode: enclosed
+
+  Startpoint: vin2[2] (input port clocked by clk)
+  Endpoint: calvn/clk_gate_max_v_reg/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  vin2[2] (in)                                            0.00       6.00 f
+  calvn/vin2[2] (cal_vn)                                  0.00       6.00 f
+  calvn/U125/Y (inv1a1)                                   0.48       6.48 r
+  calvn/U128/CO (fac2a1)                                  0.17       6.66 f
+  calvn/U129/CO (fac2a1)                                  0.26       6.92 r
+  calvn/U130/CO (fac2a1)                                  0.16       7.08 f
+  calvn/U131/CO (fac2a1)                                  0.22       7.30 r
+  calvn/U132/CO (fac2a1)                                  0.16       7.46 f
+  calvn/U133/CO (fac2a1)                                  0.23       7.69 r
+  calvn/U134/Y (buf1a9)                                   0.36       8.05 r
+  calvn/U135/Y (inv1a15)                                  0.18       8.23 f
+  calvn/U138/Y (ao4f3)                                    0.32       8.55 r
+  calvn/U192/Y (and2c3)                                   0.12       8.67 f
+  calvn/U194/CO (fac2a1)                                  0.28       8.95 r
+  calvn/U195/CO (fac2a1)                                  0.19       9.14 f
+  calvn/U198/CO (fac2a1)                                  0.26       9.40 r
+  calvn/U199/CO (fac2a1)                                  0.16       9.56 f
+  calvn/U200/CO (fac2a1)                                  0.22       9.78 r
+  calvn/U201/CO (fac2a1)                                  0.18       9.97 f
+  calvn/U202/CO (fac2a1)                                  0.25      10.22 r
+  calvn/U203/Y (ao1f2)                                    0.15      10.36 f
+  calvn/clk_gate_max_v_reg/EN (SNPS_CLOCK_GATE_HIGH_cal_vn_9)     0.00    10.36 f
+  calvn/clk_gate_max_v_reg/latch/D (ldf1b3)               0.00      10.36 f
+  data arrival time                                                 10.36
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                      -1.00       6.00
+  calvn/clk_gate_max_v_reg/latch/G (ldf1b3)               0.00       6.00 f
+  time borrowed from endpoint                             4.36      10.36
+  data required time                                                10.36
+  --------------------------------------------------------------------------
+  data required time                                                10.36
+  data arrival time                                                -10.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                                 5.00   
+  library setup time                                     -0.52   
+  --------------------------------------------------------------
+  max time borrow                                         4.48   
+  --------------------------------------------------------------
+  actual time borrow                                      4.36   
+  clock uncertainty                                      -1.00   
+  --------------------------------------------------------------
+  time given to startpoint                                3.36   
+  --------------------------------------------------------------
+
+
+  Startpoint: vin2[2] (input port clocked by clk)
+  Endpoint: calvn/clk_gate_min_v_reg/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  vin2[2] (in)                                            0.00       6.00 f
+  calvn/vin2[2] (cal_vn)                                  0.00       6.00 f
+  calvn/U125/Y (inv1a1)                                   0.48       6.48 r
+  calvn/U128/CO (fac2a1)                                  0.17       6.66 f
+  calvn/U129/CO (fac2a1)                                  0.26       6.92 r
+  calvn/U130/CO (fac2a1)                                  0.16       7.08 f
+  calvn/U131/CO (fac2a1)                                  0.22       7.30 r
+  calvn/U132/CO (fac2a1)                                  0.16       7.46 f
+  calvn/U133/CO (fac2a1)                                  0.23       7.69 r
+  calvn/U134/Y (buf1a9)                                   0.36       8.05 r
+  calvn/U135/Y (inv1a15)                                  0.18       8.23 f
+  calvn/U151/Y (ao4c6)                                    0.25       8.48 f
+  calvn/U178/Y (and2a6)                                   0.16       8.63 f
+  calvn/U179/CO (fac2a1)                                  0.22       8.86 r
+  calvn/U181/CO (fac2a1)                                  0.16       9.02 f
+  calvn/U182/CO (fac2a1)                                  0.20       9.22 r
+  calvn/U183/Y (inv1a2)                                   0.10       9.32 f
+  calvn/U184/CO (fac2a1)                                  0.19       9.51 r
+  calvn/U185/CO (fac2a1)                                  0.16       9.67 f
+  calvn/U186/CO (fac2a1)                                  0.22       9.89 r
+  calvn/U187/CO (fac2a1)                                  0.16      10.04 f
+  calvn/U189/Y (ao1d2)                                    0.22      10.26 f
+  calvn/clk_gate_min_v_reg/EN (SNPS_CLOCK_GATE_HIGH_cal_vn_10)     0.00    10.26 f
+  calvn/clk_gate_min_v_reg/latch/D (ldf1b3)               0.00      10.26 f
+  data arrival time                                                 10.26
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                      -1.00       6.00
+  calvn/clk_gate_min_v_reg/latch/G (ldf1b3)               0.00       6.00 f
+  time borrowed from endpoint                             4.26      10.26
+  data required time                                                10.26
+  --------------------------------------------------------------------------
+  data required time                                                10.26
+  data arrival time                                                -10.26
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                                 5.00   
+  library setup time                                     -0.51   
+  --------------------------------------------------------------
+  max time borrow                                         4.49   
+  --------------------------------------------------------------
+  actual time borrow                                      4.26   
+  clock uncertainty                                      -1.00   
+  --------------------------------------------------------------
+  time given to startpoint                                3.26   
+  --------------------------------------------------------------
+
+
+  Startpoint: vin_vld (input port clocked by clk)
+  Endpoint: calvn/clk_gate_Vins_0_reg/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 r
+  vin_vld (in)                                            0.00       6.00 r
+  calvn/vin_vld (cal_vn)                                  0.00       6.00 r
+  calvn/U111/Y (or2c15)                                   0.23       6.23 f
+  calvn/U175/Y (and2c3)                                   0.28       6.51 r
+  calvn/clk_gate_Vins_0_reg/EN (SNPS_CLOCK_GATE_HIGH_cal_vn_1)     0.00     6.51 r
+  calvn/clk_gate_Vins_0_reg/latch/D (ldf1b3)              0.00       6.51 r
+  data arrival time                                                  6.51
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                      -1.00       6.00
+  calvn/clk_gate_Vins_0_reg/latch/G (ldf1b3)              0.00       6.00 f
+  time borrowed from endpoint                             0.51       6.51
+  data required time                                                 6.51
+  --------------------------------------------------------------------------
+  data required time                                                 6.51
+  data arrival time                                                 -6.51
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                                 5.00   
+  library setup time                                     -0.52   
+  --------------------------------------------------------------
+  max time borrow                                         4.48   
+  --------------------------------------------------------------
+  actual time borrow                                      0.51   
+  clock uncertainty                                      -1.00   
+  --------------------------------------------------------------
+  time given to startpoint                               -0.49   
+  --------------------------------------------------------------
+
+
+  Startpoint: rg_calphase_en
+              (input port clocked by clk)
+  Endpoint: calvn/clk_gate_v_cnt_reg/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  rg_calphase_en (in)                                     0.00       6.00 f
+  calvn/en (cal_vn)                                       0.00       6.00 f
+  calvn/U111/Y (or2c15)                                   0.33       6.33 r
+  calvn/U112/Y (clk1b6)                                   0.11       6.44 f
+  calvn/clk_gate_v_cnt_reg/EN (SNPS_CLOCK_GATE_HIGH_cal_vn_2)     0.00     6.44 f
+  calvn/clk_gate_v_cnt_reg/latch/D (ldf1b3)               0.00       6.44 f
+  data arrival time                                                  6.44
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                      -1.00       6.00
+  calvn/clk_gate_v_cnt_reg/latch/G (ldf1b3)               0.00       6.00 f
+  time borrowed from endpoint                             0.44       6.44
+  data required time                                                 6.44
+  --------------------------------------------------------------------------
+  data required time                                                 6.44
+  data arrival time                                                 -6.44
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                                 5.00   
+  library setup time                                     -0.50   
+  --------------------------------------------------------------
+  max time borrow                                         4.50   
+  --------------------------------------------------------------
+  actual time borrow                                      0.44   
+  clock uncertainty                                      -1.00   
+  --------------------------------------------------------------
+  time given to startpoint                               -0.56   
+  --------------------------------------------------------------
+
+
+  Startpoint: vin_vld (input port clocked by clk)
+  Endpoint: calvn/clk_gate_Vins_6_reg/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 r
+  vin_vld (in)                                            0.00       6.00 r
+  calvn/vin_vld (cal_vn)                                  0.00       6.00 r
+  calvn/U111/Y (or2c15)                                   0.23       6.23 f
+  calvn/U89/Y (and2c3)                                    0.19       6.42 r
+  calvn/clk_gate_Vins_6_reg/EN (SNPS_CLOCK_GATE_HIGH_cal_vn_7)     0.00     6.42 r
+  calvn/clk_gate_Vins_6_reg/latch/D (ldf1b3)              0.00       6.42 r
+  data arrival time                                                  6.42
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                      -1.00       6.00
+  calvn/clk_gate_Vins_6_reg/latch/G (ldf1b3)              0.00       6.00 f
+  time borrowed from endpoint                             0.42       6.42
+  data required time                                                 6.42
+  --------------------------------------------------------------------------
+  data required time                                                 6.42
+  data arrival time                                                 -6.42
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                                 5.00   
+  library setup time                                     -0.50   
+  --------------------------------------------------------------
+  max time borrow                                         4.50   
+  --------------------------------------------------------------
+  actual time borrow                                      0.42   
+  clock uncertainty                                      -1.00   
+  --------------------------------------------------------------
+  time given to startpoint                               -0.58   
+  --------------------------------------------------------------
+
+
+  Startpoint: vin_vld (input port clocked by clk)
+  Endpoint: calvn/clk_gate_Vins_4_reg/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 r
+  vin_vld (in)                                            0.00       6.00 r
+  calvn/vin_vld (cal_vn)                                  0.00       6.00 r
+  calvn/U111/Y (or2c15)                                   0.23       6.23 f
+  calvn/U90/Y (and2c3)                                    0.19       6.42 r
+  calvn/clk_gate_Vins_4_reg/EN (SNPS_CLOCK_GATE_HIGH_cal_vn_4)     0.00     6.42 r
+  calvn/clk_gate_Vins_4_reg/latch/D (ldf1b3)              0.00       6.42 r
+  data arrival time                                                  6.42
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                      -1.00       6.00
+  calvn/clk_gate_Vins_4_reg/latch/G (ldf1b3)              0.00       6.00 f
+  time borrowed from endpoint                             0.42       6.42
+  data required time                                                 6.42
+  --------------------------------------------------------------------------
+  data required time                                                 6.42
+  data arrival time                                                 -6.42
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                                 5.00   
+  library setup time                                     -0.50   
+  --------------------------------------------------------------
+  max time borrow                                         4.50   
+  --------------------------------------------------------------
+  actual time borrow                                      0.42   
+  clock uncertainty                                      -1.00   
+  --------------------------------------------------------------
+  time given to startpoint                               -0.58   
+  --------------------------------------------------------------
+
+
+  Startpoint: vin_vld (input port clocked by clk)
+  Endpoint: calvn/clk_gate_Vins_2_reg/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 r
+  vin_vld (in)                                            0.00       6.00 r
+  calvn/vin_vld (cal_vn)                                  0.00       6.00 r
+  calvn/U111/Y (or2c15)                                   0.23       6.23 f
+  calvn/U88/Y (and2c3)                                    0.19       6.42 r
+  calvn/clk_gate_Vins_2_reg/EN (SNPS_CLOCK_GATE_HIGH_cal_vn_3)     0.00     6.42 r
+  calvn/clk_gate_Vins_2_reg/latch/D (ldf1b3)              0.00       6.42 r
+  data arrival time                                                  6.42
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                      -1.00       6.00
+  calvn/clk_gate_Vins_2_reg/latch/G (ldf1b3)              0.00       6.00 f
+  time borrowed from endpoint                             0.42       6.42
+  data required time                                                 6.42
+  --------------------------------------------------------------------------
+  data required time                                                 6.42
+  data arrival time                                                 -6.42
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                                 5.00   
+  library setup time                                     -0.50   
+  --------------------------------------------------------------
+  max time borrow                                         4.50   
+  --------------------------------------------------------------
+  actual time borrow                                      0.42   
+  clock uncertainty                                      -1.00   
+  --------------------------------------------------------------
+  time given to startpoint                               -0.58   
+  --------------------------------------------------------------
+
+
+  Startpoint: dot/psum1_reg_15_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_18_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dotVn_2            5KGATES               ssc_core_slow
+  cal_phase          5KGATES               ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/psum1_reg_15_/CLK (fdf2a3)           0.00       2.00 r
+  dot/psum1_reg_15_/Q (fdf2a3)             0.72       2.72 f
+  dot/U229/Y (inv1a3)                      0.23       2.95 r
+  dot/U235/Y (or3d1)                       0.31       3.26 f
+  dot/U236/Y (or2c3)                       0.16       3.42 r
+  dot/U237/Y (buf1a6)                      0.40       3.82 r
+  dot/U238/Y (ao1f2)                       0.32       4.14 f
+  dot/psum_out1[0] (dotVn_2)               0.00       4.14 f
+  cordic/x[0] (cordic_int)                 0.00       4.14 f
+  cordic/U593/Y (or2c1)                    0.32       4.46 r
+  cordic/U594/Y (or2c3)                    0.15       4.61 f
+  cordic/U595/Y (xor2a2)                   0.28       4.89 f
+  cordic/U635/CO (fa1a2)                   0.36       5.25 f
+  cordic/U644/CO (fa1a2)                   0.38       5.63 f
+  cordic/U596/Y (ao1d2)                    0.15       5.78 r
+  cordic/U597/Y (or2c3)                    0.13       5.91 f
+  cordic/U164/CO (fa1a2)                   0.38       6.29 f
+  cordic/U157/Y (ao1d2)                    0.15       6.44 r
+  cordic/U152/Y (or2c3)                    0.18       6.62 f
+  cordic/U293/Y (ao1f2)                    0.15       6.77 r
+  cordic/U150/Y (or2c3)                    0.16       6.93 f
+  cordic/U147/CO (fa1a3)                   0.38       7.31 f
+  cordic/U598/Y (ao1d3)                    0.12       7.43 r
+  cordic/U56/Y (or2c3)                     0.12       7.55 f
+  cordic/U141/CO (fa1a3)                   0.38       7.93 f
+  cordic/U599/Y (ao1d3)                    0.12       8.05 r
+  cordic/U55/Y (or2c3)                     0.14       8.19 f
+  cordic/U600/Y (ao1d3)                    0.15       8.34 r
+  cordic/U601/Y (or2c6)                    0.12       8.46 f
+  cordic/U129/Y (ao1f3)                    0.14       8.59 r
+  cordic/U602/Y (or2c6)                    0.11       8.70 f
+  cordic/U128/CO (fa1a3)                   0.39       9.09 f
+  cordic/U603/Y (ao1e6)                    0.10       9.19 r
+  cordic/U604/Y (or2c6)                    0.10       9.29 f
+  cordic/U737/CO (fa1a3)                   0.37       9.66 f
+  cordic/U605/Y (ao1d3)                    0.14       9.80 r
+  cordic/U606/Y (or2c6)                    0.12       9.92 f
+  cordic/U125/Y (ao1f3)                    0.14      10.06 r
+  cordic/U607/Y (or2c6)                    0.11      10.16 f
+  cordic/U610/CO (fa1a2)                   0.32      10.48 f
+  cordic/U608/Y (xor2a2)                   0.23      10.71 f
+  cordic/U122/Y (or2b2)                    0.23      10.95 f
+  cordic/yn_reg_18_/D (fdf2a9)             0.00      10.95 f
+  data arrival time                                  10.95
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  cordic/yn_reg_18_/CLK (fdf2a9)           0.00      11.00 r
+  library setup time                      -0.05      10.95
+  data required time                                 10.95
+  -----------------------------------------------------------
+  data required time                                 10.95
+  data arrival time                                 -10.95
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: cordic/cal_en_regNext_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_18_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  cordic/cal_en_regNext_reg/CLK (fdf2a3)                  0.00       2.00 r
+  cordic/cal_en_regNext_reg/Q (fdf2a3)                    0.72       2.72 f
+  cordic/U303/Y (inv1a3)                                  0.13       2.85 r
+  cordic/U27/Y (or2c3)                                    0.23       3.08 f
+  cordic/U32/Y (inv1a1)                                   0.43       3.51 r
+  cordic/U118/Y (or2c3)                                   0.37       3.88 f
+  cordic/U18/Y (inv1a1)                                   0.31       4.20 r
+  cordic/U318/Y (or2c3)                                   0.24       4.43 f
+  cordic/U319/Y (inv1a3)                                  0.29       4.72 r
+  cordic/U266/Y (inv1a9)                                  0.28       5.00 f
+  cordic/U362/Y (ao4f3)                                   0.26       5.26 r
+  cordic/U281/Y (xor2a2)                                  0.29       5.55 r
+  cordic/U271/Y (or2c1)                                   0.27       5.81 f
+  cordic/U13/Y (inv1a1)                                   0.45       6.27 r
+  cordic/U370/Y (oa1f3)                                   0.15       6.42 f
+  cordic/U167/Y (ao1f2)                                   0.20       6.62 r
+  cordic/U376/Y (oa1f3)                                   0.27       6.89 f
+  cordic/U158/Y (ao1f3)                                   0.33       7.22 r
+  cordic/U154/Y (oa1f3)                                   0.25       7.47 f
+  cordic/U395/Y (ao1f3)                                   0.32       7.79 r
+  cordic/U404/Y (oa1f3)                                   0.25       8.03 f
+  cordic/U412/Y (ao1f3)                                   0.32       8.35 r
+  cordic/U145/Y (oa1f3)                                   0.25       8.60 f
+  cordic/U143/Y (ao1e3)                                   0.34       8.93 r
+  cordic/U433/Y (oa1f3)                                   0.25       9.18 f
+  cordic/U441/Y (ao1f3)                                   0.32       9.51 r
+  cordic/U137/Y (oa1f3)                                   0.25       9.75 f
+  cordic/U134/Y (ao1e3)                                   0.34      10.09 r
+  cordic/U452/Y (oa1f3)                                   0.24      10.33 f
+  cordic/U131/Y (ao1f2)                                   0.27      10.61 r
+  cordic/U269/Y (xor2b2)                                  0.29      10.90 f
+  cordic/xn_reg_18_/D (fdf2a3)                            0.00      10.90 f
+  data arrival time                                                 10.90
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  cordic/xn_reg_18_/CLK (fdf2a3)                          0.00      11.00 r
+  library setup time                                     -0.10      10.90
+  data required time                                                10.90
+  --------------------------------------------------------------------------
+  data required time                                                10.90
+  data arrival time                                                -10.90
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: rg_sin_table_3[0]
+              (input port clocked by clk)
+  Endpoint: dot/booth_sin/shiftReg_reg_16_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+  booth2_1           5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  rg_sin_table_3[0] (in)                                  0.00       6.00 f
+  dot/rg_sin_table_3[0] (dotVn_2)                         0.00       6.00 f
+  dot/U295/Y (or2c1)                                      0.43       6.43 r
+  dot/U297/Y (or2c1)                                      0.24       6.67 f
+  dot/U298/Y (oa1f3)                                      0.22       6.89 r
+  dot/U29/Y (or3d3)                                       0.18       7.07 f
+  dot/booth_sin/io_dinB[0] (booth2_1)                     0.00       7.07 f
+  dot/booth_sin/U17/Y (mx2a3)                             0.34       7.41 f
+  dot/booth_sin/U26/CO (fa1a2)                            0.35       7.76 f
+  dot/booth_sin/U25/CO (fa1a2)                            0.36       8.12 f
+  dot/booth_sin/U24/CO (fa1a2)                            0.36       8.49 f
+  dot/booth_sin/U23/CO (fa1a2)                            0.37       8.86 f
+  dot/booth_sin/U12/CO (fa1a3)                            0.36       9.22 f
+  dot/booth_sin/U22/CO (fa1a2)                            0.36       9.58 f
+  dot/booth_sin/U21/CO (fa1a2)                            0.33       9.90 f
+  dot/booth_sin/U15/Y (xor2a2)                            0.23      10.14 f
+  dot/booth_sin/U10/Y (or2c1)                             0.35      10.49 r
+  dot/booth_sin/U11/Y (or2c1)                             0.32      10.81 f
+  dot/booth_sin/shiftReg_reg_16_/D (fdf2a6)               0.00      10.81 f
+  data arrival time                                                 10.81
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  dot/booth_sin/shiftReg_reg_16_/CLK (fdf2a6)             0.00      11.00 r
+  library setup time                                     -0.18      10.82
+  data required time                                                10.82
+  --------------------------------------------------------------------------
+  data required time                                                10.82
+  data arrival time                                                -10.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_7_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U10/Y (ao1d3)                      0.40      10.31 f
+  calvn/U215/Y (inv1a3)                    0.34      10.65 r
+  calvn/U217/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_7_reg_6_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_7_reg_6_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.13      10.87
+  data required time                                 10.87
+  -----------------------------------------------------------
+  data required time                                 10.87
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.04
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_7_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U8/Y (ao1d3)                       0.40      10.31 f
+  calvn/U221/Y (inv1a3)                    0.34      10.65 r
+  calvn/U223/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_7_reg_5_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_7_reg_5_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.13      10.87
+  data required time                                 10.87
+  -----------------------------------------------------------
+  data required time                                 10.87
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.04
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_7_reg_3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U9/Y (ao1d3)                       0.40      10.31 f
+  calvn/U224/Y (inv1a3)                    0.34      10.65 r
+  calvn/U226/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_7_reg_3_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_7_reg_3_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.13      10.87
+  data required time                                 10.87
+  -----------------------------------------------------------
+  data required time                                 10.87
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.04
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_7_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U6/Y (ao1d3)                       0.40      10.31 f
+  calvn/U239/Y (inv1a3)                    0.34      10.65 r
+  calvn/U241/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_7_reg_2_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_7_reg_2_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.13      10.87
+  data required time                                 10.87
+  -----------------------------------------------------------
+  data required time                                 10.87
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.04
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_1_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U10/Y (ao1d3)                      0.40      10.31 f
+  calvn/U215/Y (inv1a3)                    0.34      10.65 r
+  calvn/U219/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_1_reg_6_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_1_reg_6_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_1_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U8/Y (ao1d3)                       0.40      10.31 f
+  calvn/U221/Y (inv1a3)                    0.34      10.65 r
+  calvn/U235/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_1_reg_5_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_1_reg_5_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_1_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U24/Y (ao1d3)                      0.40      10.31 f
+  calvn/U227/Y (inv1a3)                    0.34      10.65 r
+  calvn/U234/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_1_reg_4_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_1_reg_4_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_1_reg_3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U9/Y (ao1d3)                       0.40      10.31 f
+  calvn/U224/Y (inv1a3)                    0.34      10.65 r
+  calvn/U233/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_1_reg_3_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_1_reg_3_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_1_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U6/Y (ao1d3)                       0.40      10.31 f
+  calvn/U239/Y (inv1a3)                    0.34      10.65 r
+  calvn/U243/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_1_reg_2_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_1_reg_2_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_1_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U7/Y (ao1d3)                       0.40      10.31 f
+  calvn/U208/Y (inv1a3)                    0.34      10.65 r
+  calvn/U214/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_1_reg_0_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_1_reg_0_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_5_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U10/Y (ao1d3)                      0.40      10.31 f
+  calvn/U215/Y (inv1a3)                    0.34      10.65 r
+  calvn/U220/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_5_reg_6_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_5_reg_6_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_5_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U8/Y (ao1d3)                       0.40      10.31 f
+  calvn/U221/Y (inv1a3)                    0.34      10.65 r
+  calvn/U231/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_5_reg_5_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_5_reg_5_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_5_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U24/Y (ao1d3)                      0.40      10.31 f
+  calvn/U227/Y (inv1a3)                    0.34      10.65 r
+  calvn/U232/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_5_reg_4_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_5_reg_4_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_5_reg_3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U9/Y (ao1d3)                       0.40      10.31 f
+  calvn/U224/Y (inv1a3)                    0.34      10.65 r
+  calvn/U230/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_5_reg_3_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_5_reg_3_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_5_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U6/Y (ao1d3)                       0.40      10.31 f
+  calvn/U239/Y (inv1a3)                    0.34      10.65 r
+  calvn/U242/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_5_reg_2_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_5_reg_2_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_5_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U7/Y (ao1d3)                       0.40      10.31 f
+  calvn/U208/Y (inv1a3)                    0.34      10.65 r
+  calvn/U212/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_5_reg_0_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_5_reg_0_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_7_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U24/Y (ao1d3)                      0.40      10.31 f
+  calvn/U227/Y (inv1a3)                    0.34      10.65 r
+  calvn/U229/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_7_reg_4_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_7_reg_4_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_7_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U7/Y (ao1d3)                       0.40      10.31 f
+  calvn/U208/Y (inv1a3)                    0.34      10.65 r
+  calvn/U211/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_7_reg_0_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_7_reg_0_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_3_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U10/Y (ao1d3)                      0.40      10.31 f
+  calvn/U215/Y (inv1a3)                    0.34      10.65 r
+  calvn/U218/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_3_reg_6_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_3_reg_6_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_3_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U8/Y (ao1d3)                       0.40      10.31 f
+  calvn/U221/Y (inv1a3)                    0.34      10.65 r
+  calvn/U236/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_3_reg_5_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_3_reg_5_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_3_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U24/Y (ao1d3)                      0.40      10.31 f
+  calvn/U227/Y (inv1a3)                    0.34      10.65 r
+  calvn/U238/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_3_reg_4_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_3_reg_4_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_3_reg_3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U9/Y (ao1d3)                       0.40      10.31 f
+  calvn/U224/Y (inv1a3)                    0.34      10.65 r
+  calvn/U237/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_3_reg_3_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_3_reg_3_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_3_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U6/Y (ao1d3)                       0.40      10.31 f
+  calvn/U239/Y (inv1a3)                    0.34      10.65 r
+  calvn/U244/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_3_reg_2_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_3_reg_2_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_3_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U7/Y (ao1d3)                       0.40      10.31 f
+  calvn/U208/Y (inv1a3)                    0.34      10.65 r
+  calvn/U213/Y (ao4f3)                     0.18      10.83 f
+  calvn/Vins_3_reg_0_/D (fdf2a3)           0.00      10.83 f
+  data arrival time                                  10.83
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_3_reg_0_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.83
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_7_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U4/Y (ao1d3)                       0.44      10.35 f
+  calvn/U245/Y (inv1a3)                    0.30      10.65 r
+  calvn/U247/Y (ao4f3)                     0.17      10.82 f
+  calvn/Vins_7_reg_1_/D (fdf2a3)           0.00      10.82 f
+  data arrival time                                  10.82
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_7_reg_1_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.13      10.87
+  data required time                                 10.87
+  -----------------------------------------------------------
+  data required time                                 10.87
+  data arrival time                                 -10.82
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_5_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U4/Y (ao1d3)                       0.44      10.35 f
+  calvn/U245/Y (inv1a3)                    0.30      10.65 r
+  calvn/U248/Y (ao4f3)                     0.17      10.82 f
+  calvn/Vins_5_reg_1_/D (fdf2a3)           0.00      10.82 f
+  data arrival time                                  10.82
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_5_reg_1_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.82
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_1_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U4/Y (ao1d3)                       0.44      10.35 f
+  calvn/U245/Y (inv1a3)                    0.30      10.65 r
+  calvn/U246/Y (ao4e3)                     0.16      10.81 f
+  calvn/Vins_1_reg_1_/D (fdf2a3)           0.00      10.81 f
+  data arrival time                                  10.81
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_1_reg_1_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.12      10.88
+  data required time                                 10.88
+  -----------------------------------------------------------
+  data required time                                 10.88
+  data arrival time                                 -10.81
+  -----------------------------------------------------------
+  slack (MET)                                         0.07
+
+
+  Startpoint: rg_leakage_table_5[0]
+              (input port clocked by clk)
+  Endpoint: calvn/Vins_3_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 r
+  rg_leakage_table_5[0] (in)                              0.00       6.00 r
+  calvn/rg_leakage_table_5[0] (cal_vn)                    0.00       6.00 r
+  calvn/U169/Y (oa4f3)                                    0.20       6.20 f
+  calvn/U21/Y (or2c1)                                     0.47       6.67 r
+  calvn/U170/Y (or2b2)                                    0.18       6.85 f
+  calvn/U32/CO (fa1a3)                                    0.38       7.23 f
+  calvn/U31/CO (fa1a3)                                    0.36       7.59 f
+  calvn/U29/CO (fa1a3)                                    0.36       7.95 f
+  calvn/U37/CO (fa1a3)                                    0.36       8.31 f
+  calvn/U59/CO (fa1a3)                                    0.36       8.67 f
+  calvn/U57/CO (fa1a3)                                    0.36       9.03 f
+  calvn/U27/CO (fa1a3)                                    0.47       9.50 f
+  calvn/U26/Y (inv1a3)                                    0.21       9.72 r
+  calvn/U5/Y (or2c3)                                      0.39      10.11 f
+  calvn/U205/Y (ao1f3)                                    0.35      10.46 r
+  calvn/U206/Y (ao4c2)                                    0.28      10.74 f
+  calvn/Vins_3_reg_1_/D (fdf2a3)                          0.00      10.74 f
+  data arrival time                                                 10.74
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/Vins_3_reg_1_/CLK (fdf2a3)                        0.00      11.00 r
+  library setup time                                     -0.15      10.85
+  data required time                                                10.85
+  --------------------------------------------------------------------------
+  data required time                                                10.85
+  data arrival time                                                -10.74
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.11
+
+
+  Startpoint: rg_sin_table_3[0]
+              (input port clocked by clk)
+  Endpoint: dot/booth_sin/shiftReg_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+  booth2_1           5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  rg_sin_table_3[0] (in)                                  0.00       6.00 f
+  dot/rg_sin_table_3[0] (dotVn_2)                         0.00       6.00 f
+  dot/U295/Y (or2c1)                                      0.43       6.43 r
+  dot/U297/Y (or2c1)                                      0.24       6.67 f
+  dot/U298/Y (oa1f3)                                      0.22       6.89 r
+  dot/U29/Y (or3d3)                                       0.18       7.07 f
+  dot/booth_sin/io_dinB[0] (booth2_1)                     0.00       7.07 f
+  dot/booth_sin/U17/Y (mx2a3)                             0.34       7.41 f
+  dot/booth_sin/U26/CO (fa1a2)                            0.35       7.76 f
+  dot/booth_sin/U25/CO (fa1a2)                            0.36       8.12 f
+  dot/booth_sin/U24/CO (fa1a2)                            0.36       8.49 f
+  dot/booth_sin/U23/CO (fa1a2)                            0.37       8.86 f
+  dot/booth_sin/U12/CO (fa1a3)                            0.36       9.22 f
+  dot/booth_sin/U22/CO (fa1a2)                            0.36       9.58 f
+  dot/booth_sin/U21/CO (fa1a2)                            0.33       9.90 f
+  dot/booth_sin/U15/Y (xor2a2)                            0.23      10.14 f
+  dot/booth_sin/U10/Y (or2c1)                             0.35      10.49 r
+  dot/booth_sin/U72/Y (ao1f2)                             0.24      10.72 f
+  dot/booth_sin/shiftReg_reg_15_/D (fdf2a3)               0.00      10.72 f
+  data arrival time                                                 10.72
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  dot/booth_sin/shiftReg_reg_15_/CLK (fdf2a3)             0.00      11.00 r
+  library setup time                                     -0.13      10.87
+  data required time                                                10.87
+  --------------------------------------------------------------------------
+  data required time                                                10.87
+  data arrival time                                                -10.72
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.14
+
+
+  Startpoint: dot/psum1_reg_15_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/yn_reg_17_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dotVn_2            5KGATES               ssc_core_slow
+  cal_phase          5KGATES               ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/psum1_reg_15_/CLK (fdf2a3)           0.00       2.00 r
+  dot/psum1_reg_15_/Q (fdf2a3)             0.72       2.72 f
+  dot/U229/Y (inv1a3)                      0.23       2.95 r
+  dot/U235/Y (or3d1)                       0.31       3.26 f
+  dot/U236/Y (or2c3)                       0.16       3.42 r
+  dot/U237/Y (buf1a6)                      0.40       3.82 r
+  dot/U238/Y (ao1f2)                       0.32       4.14 f
+  dot/psum_out1[0] (dotVn_2)               0.00       4.14 f
+  cordic/x[0] (cordic_int)                 0.00       4.14 f
+  cordic/U593/Y (or2c1)                    0.32       4.46 r
+  cordic/U594/Y (or2c3)                    0.15       4.61 f
+  cordic/U595/Y (xor2a2)                   0.28       4.89 f
+  cordic/U635/CO (fa1a2)                   0.36       5.25 f
+  cordic/U644/CO (fa1a2)                   0.38       5.63 f
+  cordic/U596/Y (ao1d2)                    0.15       5.78 r
+  cordic/U597/Y (or2c3)                    0.13       5.91 f
+  cordic/U164/CO (fa1a2)                   0.38       6.29 f
+  cordic/U157/Y (ao1d2)                    0.15       6.44 r
+  cordic/U152/Y (or2c3)                    0.18       6.62 f
+  cordic/U293/Y (ao1f2)                    0.15       6.77 r
+  cordic/U150/Y (or2c3)                    0.16       6.93 f
+  cordic/U147/CO (fa1a3)                   0.38       7.31 f
+  cordic/U598/Y (ao1d3)                    0.12       7.43 r
+  cordic/U56/Y (or2c3)                     0.12       7.55 f
+  cordic/U141/CO (fa1a3)                   0.38       7.93 f
+  cordic/U599/Y (ao1d3)                    0.12       8.05 r
+  cordic/U55/Y (or2c3)                     0.14       8.19 f
+  cordic/U600/Y (ao1d3)                    0.15       8.34 r
+  cordic/U601/Y (or2c6)                    0.12       8.46 f
+  cordic/U129/Y (ao1f3)                    0.14       8.59 r
+  cordic/U602/Y (or2c6)                    0.11       8.70 f
+  cordic/U128/CO (fa1a3)                   0.39       9.09 f
+  cordic/U603/Y (ao1e6)                    0.10       9.19 r
+  cordic/U604/Y (or2c6)                    0.10       9.29 f
+  cordic/U737/CO (fa1a3)                   0.37       9.66 f
+  cordic/U605/Y (ao1d3)                    0.14       9.80 r
+  cordic/U606/Y (or2c6)                    0.12       9.92 f
+  cordic/U125/Y (ao1f3)                    0.14      10.06 r
+  cordic/U607/Y (or2c6)                    0.11      10.16 f
+  cordic/U610/S (fa1a2)                    0.43      10.60 r
+  cordic/U123/Y (or2b2)                    0.20      10.79 r
+  cordic/yn_reg_17_/D (fdf2a3)             0.00      10.79 r
+  data arrival time                                  10.79
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  cordic/yn_reg_17_/CLK (fdf2a3)           0.00      11.00 r
+  library setup time                      -0.06      10.94
+  data required time                                 10.94
+  -----------------------------------------------------------
+  data required time                                 10.94
+  data arrival time                                 -10.79
+  -----------------------------------------------------------
+  slack (MET)                                         0.15
+
+
+  Startpoint: dot/psum2_reg_15_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/clk_gate_yn_reg/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dotVn_2            5KGATES               ssc_core_slow
+  cal_phase          5KGATES               ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/psum2_reg_15_/CLK (fdf2a3)                          0.00       2.00 r
+  dot/psum2_reg_15_/Q (fdf2a3)                            0.75       2.75 f
+  dot/U139/Y (inv1a3)                                     0.19       2.94 r
+  dot/U17/Y (or3d1)                                       0.39       3.33 f
+  dot/U141/Y (or2c6)                                      0.51       3.84 r
+  dot/U155/Y (ao1f2)                                      0.38       4.22 f
+  dot/psum_out2[7] (dotVn_2)                              0.00       4.22 f
+  cordic/y[7] (cordic_int)                                0.00       4.22 f
+  cordic/U715/Y (and2c1)                                  0.49       4.72 r
+  cordic/U716/Y (or3d1)                                   0.30       5.01 f
+  cordic/U725/Y (oa4a2)                                   0.40       5.41 f
+  cordic/U726/Y (inv1a1)                                  0.25       5.66 r
+  cordic/U728/Y (oa1f3)                                   0.14       5.80 f
+  cordic/clk_gate_yn_reg/EN (SNPS_CLOCK_GATE_HIGH_cordic_int_0)     0.00     5.80 f
+  cordic/clk_gate_yn_reg/latch/D (ldf1b3)                 0.00       5.80 f
+  data arrival time                                                  5.80
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                      -1.00       6.00
+  cordic/clk_gate_yn_reg/latch/G (ldf1b3)                 0.00       6.00 f
+  time borrowed from endpoint                             0.00       6.00
+  data required time                                                 6.00
+  --------------------------------------------------------------------------
+  data required time                                                 6.00
+  data arrival time                                                 -5.80
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.20
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                                 5.00   
+  library setup time                                     -0.51   
+  --------------------------------------------------------------
+  max time borrow                                         4.49   
+  actual time borrow                                      0.00   
+  --------------------------------------------------------------
+
+
+  Startpoint: rg_cos_table_3[0]
+              (input port clocked by clk)
+  Endpoint: dot/booth_cos/shiftReg_reg_16_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+  booth2_0           5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  rg_cos_table_3[0] (in)                                  0.00       6.00 f
+  dot/rg_cos_table_3[0] (dotVn_2)                         0.00       6.00 f
+  dot/U125/Y (or2c1)                                      0.43       6.43 r
+  dot/U127/Y (or2c1)                                      0.24       6.67 f
+  dot/U128/Y (oa1f3)                                      0.22       6.89 r
+  dot/U129/Y (or3d3)                                      0.18       7.06 f
+  dot/booth_cos/io_dinB[0] (booth2_0)                     0.00       7.06 f
+  dot/booth_cos/U29/Y (mx2a1)                             0.41       7.47 f
+  dot/booth_cos/U19/CO (fa1a2)                            0.37       7.84 f
+  dot/booth_cos/U18/CO (fa1a2)                            0.36       8.21 f
+  dot/booth_cos/U17/CO (fa1a2)                            0.36       8.57 f
+  dot/booth_cos/U16/CO (fa1a2)                            0.36       8.94 f
+  dot/booth_cos/U15/CO (fa1a2)                            0.36       9.30 f
+  dot/booth_cos/U14/CO (fa1a2)                            0.36       9.66 f
+  dot/booth_cos/U13/CO (fa1a2)                            0.33       9.99 f
+  dot/booth_cos/U5/Y (xor2a2)                             0.27      10.26 r
+  dot/booth_cos/U70/Y (or2c3)                             0.12      10.38 f
+  dot/booth_cos/U4/Y (or2c1)                              0.33      10.71 r
+  dot/booth_cos/shiftReg_reg_16_/D (fdf2a6)               0.00      10.71 r
+  data arrival time                                                 10.71
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  dot/booth_cos/shiftReg_reg_16_/CLK (fdf2a6)             0.00      11.00 r
+  library setup time                                     -0.08      10.92
+  data required time                                                10.92
+  --------------------------------------------------------------------------
+  data required time                                                10.92
+  data arrival time                                                -10.71
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.20
+
+
+  Startpoint: cordic/cal_en_regNext_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/xn_reg_17_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  cordic/cal_en_regNext_reg/CLK (fdf2a3)                  0.00       2.00 r
+  cordic/cal_en_regNext_reg/Q (fdf2a3)                    0.72       2.72 f
+  cordic/U303/Y (inv1a3)                                  0.13       2.85 r
+  cordic/U27/Y (or2c3)                                    0.23       3.08 f
+  cordic/U32/Y (inv1a1)                                   0.43       3.51 r
+  cordic/U118/Y (or2c3)                                   0.37       3.88 f
+  cordic/U18/Y (inv1a1)                                   0.31       4.20 r
+  cordic/U318/Y (or2c3)                                   0.24       4.43 f
+  cordic/U319/Y (inv1a3)                                  0.29       4.72 r
+  cordic/U266/Y (inv1a9)                                  0.28       5.00 f
+  cordic/U362/Y (ao4f3)                                   0.26       5.26 r
+  cordic/U281/Y (xor2a2)                                  0.29       5.55 r
+  cordic/U271/Y (or2c1)                                   0.27       5.81 f
+  cordic/U13/Y (inv1a1)                                   0.45       6.27 r
+  cordic/U370/Y (oa1f3)                                   0.15       6.42 f
+  cordic/U167/Y (ao1f2)                                   0.20       6.62 r
+  cordic/U376/Y (oa1f3)                                   0.27       6.89 f
+  cordic/U158/Y (ao1f3)                                   0.33       7.22 r
+  cordic/U154/Y (oa1f3)                                   0.25       7.47 f
+  cordic/U395/Y (ao1f3)                                   0.32       7.79 r
+  cordic/U404/Y (oa1f3)                                   0.25       8.03 f
+  cordic/U412/Y (ao1f3)                                   0.32       8.35 r
+  cordic/U145/Y (oa1f3)                                   0.25       8.60 f
+  cordic/U143/Y (ao1e3)                                   0.34       8.93 r
+  cordic/U433/Y (oa1f3)                                   0.25       9.18 f
+  cordic/U441/Y (ao1f3)                                   0.32       9.51 r
+  cordic/U137/Y (oa1f3)                                   0.25       9.75 f
+  cordic/U134/Y (ao1e3)                                   0.34      10.09 r
+  cordic/U452/Y (oa1f3)                                   0.24      10.33 f
+  cordic/U130/Y (xor2a2)                                  0.29      10.62 f
+  cordic/xn_reg_17_/D (fdf2a3)                            0.00      10.62 f
+  data arrival time                                                 10.62
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  cordic/xn_reg_17_/CLK (fdf2a3)                          0.00      11.00 r
+  library setup time                                     -0.12      10.88
+  data required time                                                10.88
+  --------------------------------------------------------------------------
+  data required time                                                10.88
+  data arrival time                                                -10.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.26
+
+
+  Startpoint: rg_cos_table_3[0]
+              (input port clocked by clk)
+  Endpoint: dot/booth_cos/shiftReg_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+  booth2_0           5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  rg_cos_table_3[0] (in)                                  0.00       6.00 f
+  dot/rg_cos_table_3[0] (dotVn_2)                         0.00       6.00 f
+  dot/U125/Y (or2c1)                                      0.43       6.43 r
+  dot/U127/Y (or2c1)                                      0.24       6.67 f
+  dot/U128/Y (oa1f3)                                      0.22       6.89 r
+  dot/U129/Y (or3d3)                                      0.18       7.06 f
+  dot/booth_cos/io_dinB[0] (booth2_0)                     0.00       7.06 f
+  dot/booth_cos/U29/Y (mx2a1)                             0.41       7.47 f
+  dot/booth_cos/U19/CO (fa1a2)                            0.37       7.84 f
+  dot/booth_cos/U18/CO (fa1a2)                            0.36       8.21 f
+  dot/booth_cos/U17/CO (fa1a2)                            0.36       8.57 f
+  dot/booth_cos/U16/CO (fa1a2)                            0.36       8.94 f
+  dot/booth_cos/U15/CO (fa1a2)                            0.36       9.30 f
+  dot/booth_cos/U14/CO (fa1a2)                            0.36       9.66 f
+  dot/booth_cos/U13/CO (fa1a2)                            0.33       9.99 f
+  dot/booth_cos/U5/Y (xor2a2)                             0.25      10.24 f
+  dot/booth_cos/U70/Y (or2c3)                             0.13      10.37 r
+  dot/booth_cos/U71/Y (ao1f2)                             0.17      10.53 f
+  dot/booth_cos/shiftReg_reg_15_/D (fdf2a3)               0.00      10.53 f
+  data arrival time                                                 10.53
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  dot/booth_cos/shiftReg_reg_15_/CLK (fdf2a3)             0.00      11.00 r
+  library setup time                                     -0.12      10.88
+  data required time                                                10.88
+  --------------------------------------------------------------------------
+  data required time                                                10.88
+  data arrival time                                                -10.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.34
+
+
+  Startpoint: calvn/clk_gate_max_v_reg/latch
+              (negative level-sensitive latch clocked by clk)
+  Endpoint: calvn/clk_gate_max_v_reg/main_gate
+            (gating element for clock clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_vn             5KGATES               ssc_core_slow
+  SNPS_CLOCK_GATE_HIGH_cal_vn_9 5KGATES    ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  time given to startpoint                                3.36      10.36
+  calvn/clk_gate_max_v_reg/latch/D (ldf1b3)               0.00      10.36 f
+  calvn/clk_gate_max_v_reg/latch/Q (ldf1b3)               0.24      10.60 f
+  calvn/clk_gate_max_v_reg/main_gate/A (and2a3)           0.00      10.60 f
+  data arrival time                                                 10.60
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  calvn/clk_gate_max_v_reg/main_gate/B (and2a3)           0.00      11.00 r
+  clock gating setup time                                 0.00      11.00
+  data required time                                                11.00
+  --------------------------------------------------------------------------
+  data required time                                                11.00
+  data arrival time                                                -10.60
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.40
+
+
+  Startpoint: rg_cos_table_3[0]
+              (input port clocked by clk)
+  Endpoint: dot/booth_cos/shiftReg_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+  booth2_0           5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  input external delay                                    4.00       6.00 f
+  rg_cos_table_3[0] (in)                                  0.00       6.00 f
+  dot/rg_cos_table_3[0] (dotVn_2)                         0.00       6.00 f
+  dot/U125/Y (or2c1)                                      0.43       6.43 r
+  dot/U127/Y (or2c1)                                      0.24       6.67 f
+  dot/U128/Y (oa1f3)                                      0.22       6.89 r
+  dot/U129/Y (or3d3)                                      0.18       7.06 f
+  dot/booth_cos/io_dinB[0] (booth2_0)                     0.00       7.06 f
+  dot/booth_cos/U29/Y (mx2a1)                             0.41       7.47 f
+  dot/booth_cos/U19/CO (fa1a2)                            0.37       7.84 f
+  dot/booth_cos/U18/CO (fa1a2)                            0.36       8.21 f
+  dot/booth_cos/U17/CO (fa1a2)                            0.36       8.57 f
+  dot/booth_cos/U16/CO (fa1a2)                            0.36       8.94 f
+  dot/booth_cos/U15/CO (fa1a2)                            0.36       9.30 f
+  dot/booth_cos/U14/CO (fa1a2)                            0.36       9.66 f
+  dot/booth_cos/U13/S (fa1a2)                             0.35      10.02 f
+  dot/booth_cos/U67/Y (or2c1)                             0.23      10.24 r
+  dot/booth_cos/U68/Y (ao1f2)                             0.19      10.44 f
+  dot/booth_cos/shiftReg_reg_14_/D (fdf2a3)               0.00      10.44 f
+  data arrival time                                                 10.44
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  dot/booth_cos/shiftReg_reg_14_/CLK (fdf2a3)             0.00      11.00 r
+  library setup time                                     -0.13      10.87
+  data required time                                                10.87
+  --------------------------------------------------------------------------
+  data required time                                                10.87
+  data arrival time                                                -10.44
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.43
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_4_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U4/Y (ao1d3)                       0.44      10.35 f
+  calvn/Vins_4_reg_1_/D (fdf2a3)           0.00      10.35 f
+  data arrival time                                  10.35
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_4_reg_1_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.21      10.79
+  data required time                                 10.79
+  -----------------------------------------------------------
+  data required time                                 10.79
+  data arrival time                                 -10.35
+  -----------------------------------------------------------
+  slack (MET)                                         0.44
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_6_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U4/Y (ao1d3)                       0.44      10.35 f
+  calvn/Vins_6_reg_1_/D (fdf2a3)           0.00      10.35 f
+  data arrival time                                  10.35
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_6_reg_1_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.21      10.79
+  data required time                                 10.79
+  -----------------------------------------------------------
+  data required time                                 10.79
+  data arrival time                                 -10.35
+  -----------------------------------------------------------
+  slack (MET)                                         0.44
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_2_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U4/Y (ao1d3)                       0.44      10.35 f
+  calvn/Vins_2_reg_1_/D (fdf2a3)           0.00      10.35 f
+  data arrival time                                  10.35
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_2_reg_1_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.21      10.79
+  data required time                                 10.79
+  -----------------------------------------------------------
+  data required time                                 10.79
+  data arrival time                                 -10.35
+  -----------------------------------------------------------
+  slack (MET)                                         0.44
+
+
+  Startpoint: vin1[0] (input port clocked by clk)
+  Endpoint: calvn/Vins_0_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INPUT_GROUP
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  input external delay                     4.00       6.00 f
+  vin1[0] (in)                             0.00       6.00 f
+  U7/Y (inv1a3)                            0.24       6.24 r
+  U14/Y (inv1a3)                           0.18       6.42 f
+  calvn/vin1[0] (cal_vn)                   0.00       6.42 f
+  calvn/U108/Y (or2b2)                     0.28       6.70 f
+  calvn/U33/CO (fa1a2)                     0.36       7.05 f
+  calvn/U109/CO (fa1a2)                    0.37       7.43 f
+  calvn/U30/CO (fa1a3)                     0.37       7.79 f
+  calvn/U38/CO (fa1a3)                     0.36       8.15 f
+  calvn/U58/CO (fa1a3)                     0.36       8.51 f
+  calvn/U56/CO (fa1a3)                     0.36       8.87 f
+  calvn/U55/CO (fa1a3)                     0.35       9.22 f
+  calvn/U15/Y (clk1b6)                     0.21       9.44 r
+  calvn/U14/Y (inv1a9)                     0.13       9.57 f
+  calvn/U110/Y (or2a6)                     0.33       9.91 f
+  calvn/U4/Y (ao1d3)                       0.44      10.35 f
+  calvn/Vins_0_reg_1_/D (fdf2a3)           0.00      10.35 f
+  data arrival time                                  10.35
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              2.00      12.00
+  clock uncertainty                       -1.00      11.00
+  calvn/Vins_0_reg_1_/CLK (fdf2a3)         0.00      11.00 r
+  library setup time                      -0.21      10.79
+  data required time                                 10.79
+  -----------------------------------------------------------
+  data required time                                 10.79
+  data arrival time                                 -10.35
+  -----------------------------------------------------------
+  slack (MET)                                         0.44
+
+
+1

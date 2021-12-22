@@ -8,13 +8,13 @@ Report : timing
         -transition_time
 Design : cal_phase
 Version: L-2016.03-SP1
-Date   : Wed Dec 15 15:23:35 2021
+Date   : Tue Dec 21 17:29:47 2021
 ****************************************
 
 Operating Conditions: slow_125_1.62   Library: ssc_core_slow
 Wire Load Model Mode: enclosed
 
-  Startpoint: vin2[1] (input port clocked by clk)
+  Startpoint: vin1[3] (input port clocked by clk)
   Endpoint: calvn/clk_gate_min_v_reg/latch
             (negative level-sensitive latch clocked by clk)
   Path Group: INPUT_GROUP
@@ -38,94 +38,87 @@ Attributes:
   clock clk (rise edge)                                             0.00       0.00
   clock network delay (ideal)                                       2.00       2.00
   input external delay                                              4.00       6.00 f
-  vin2[1] (in)                                            1.00      0.00       6.00 f
-  vin2[1] (net)                                 5                   0.00       6.00 f
-  calvn/vin2[1] (cal_vn)                                            0.00       6.00 f
-  calvn/vin2[1] (net)                                               0.00       6.00 f
-  calvn/U120/Y (or2c1)                                    0.47      0.43       6.43 r
-  calvn/n51 (net)                               1                   0.00       6.43 r
-  calvn/U122/Y (or2c1)                                    0.31      0.21       6.64 f
-  calvn/n56 (net)                               1                   0.00       6.64 f
-  calvn/U86/Y (or3d2)                                     0.26      0.17       6.80 r
-  calvn/n61 (net)                               1                   0.00       6.80 r
-  calvn/U131/Y (or3d3)                                    0.22      0.14       6.94 f
-  calvn/n64 (net)                               1                   0.00       6.94 f
-  calvn/U134/Y (or2c3)                                    0.17      0.11       7.05 r
-  calvn/n67 (net)                               1                   0.00       7.05 r
-  calvn/U137/Y (or2c3)                                    0.15      0.09       7.15 f
-  calvn/n69 (net)                               1                   0.00       7.15 f
-  calvn/U139/Y (or2c3)                                    0.17      0.10       7.25 r
-  calvn/n71 (net)                               1                   0.00       7.25 r
-  calvn/U141/Y (or2c3)                                    0.18      0.09       7.34 f
-  calvn/n74 (net)                               1                   0.00       7.34 f
-  calvn/U144/Y (or2c3)                                    0.18      0.10       7.44 r
-  calvn/n76 (net)                               1                   0.00       7.44 r
-  calvn/U146/Y (or2c3)                                    0.15      0.09       7.54 f
-  calvn/n78 (net)                               1                   0.00       7.54 f
-  calvn/U149/Y (oa1f3)                                    0.29      0.18       7.71 r
-  calvn/n79 (net)                               1                   0.00       7.71 r
-  calvn/U150/Y (buf1a9)                                   0.50      0.37       8.08 r
-  calvn/n104 (net)                             14                   0.00       8.08 r
-  calvn/U160/Y (mx2a9)                                    0.16      0.33       8.41 r
-  calvn/smaller[1] (net)                        3                   0.00       8.41 r
-  calvn/U187/Y (or2c1)                                    0.28      0.15       8.56 f
-  calvn/n108 (net)                              1                   0.00       8.56 f
-  calvn/U188/Y (or3d1)                                    0.40      0.27       8.83 r
-  calvn/n115 (net)                              1                   0.00       8.83 r
-  calvn/U193/Y (or3d1)                                    0.40      0.25       9.08 f
-  calvn/n117 (net)                              1                   0.00       9.08 f
-  calvn/U194/Y (or2c1)                                    0.46      0.31       9.40 r
-  calvn/n118 (net)                              1                   0.00       9.40 r
-  calvn/U195/Y (ao2i3)                                    0.25      0.19       9.59 f
-  calvn/n121 (net)                              1                   0.00       9.59 f
-  calvn/U196/Y (ao2i3)                                    0.32      0.12       9.71 r
-  calvn/n124 (net)                              1                   0.00       9.71 r
-  calvn/U197/Y (ao1f2)                                    0.21      0.15       9.86 f
-  calvn/n126 (net)                              1                   0.00       9.86 f
-  calvn/U198/Y (ao1f2)                                    0.39      0.14       9.99 r
-  calvn/n129 (net)                              1                   0.00       9.99 r
-  calvn/U202/Y (oa1f3)                                    0.18      0.14      10.14 f
-  calvn/N242 (net)                              1                   0.00      10.14 f
-  calvn/clk_gate_min_v_reg/EN (SNPS_CLOCK_GATE_HIGH_cal_vn_10)      0.00      10.14 f
-  calvn/clk_gate_min_v_reg/EN (net)                                 0.00      10.14 f
-  calvn/clk_gate_min_v_reg/latch/D (ldf1b3)               0.18      0.00      10.14 f
-  data arrival time                                                           10.14
+  vin1[3] (in)                                            1.00      0.00       6.00 f
+  vin1[3] (net)                                 1                   0.00       6.00 f
+  U7/Y (buf1a6)                                           0.17      0.39       6.39 f
+  n20 (net)                                     4                   0.00       6.39 f
+  calvn/vin1[3] (cal_vn)                                            0.00       6.39 f
+  calvn/vin1[3] (net)                                               0.00       6.39 f
+  calvn/U202/Y (inv1a1)                                   0.56      0.31       6.70 r
+  calvn/n166 (net)                              2                   0.00       6.70 r
+  calvn/U203/Y (or2c1)                                    0.36      0.23       6.93 f
+  calvn/n131 (net)                              1                   0.00       6.93 f
+  calvn/U56/Y (or3d2)                                     0.24      0.18       7.12 r
+  calvn/n135 (net)                              1                   0.00       7.12 r
+  calvn/U208/Y (or3d3)                                    0.22      0.14       7.26 f
+  calvn/n138 (net)                              1                   0.00       7.26 f
+  calvn/U210/Y (or3d3)                                    0.22      0.13       7.38 r
+  calvn/n141 (net)                              1                   0.00       7.38 r
+  calvn/U211/Y (or3d3)                                    0.22      0.14       7.52 f
+  calvn/n143 (net)                              1                   0.00       7.52 f
+  calvn/U213/Y (or2c3)                                    0.25      0.17       7.69 r
+  calvn/n145 (net)                              1                   0.00       7.69 r
+  calvn/U214/Y (or2c9)                                    0.44      0.25       7.93 f
+  calvn/n154 (net)                             10                   0.00       7.93 f
+  calvn/U226/Y (mx2d3)                                    0.15      0.23       8.17 f
+  calvn/n190 (net)                              2                   0.00       8.17 f
+  calvn/U263/Y (and2c1)                                   0.94      0.49       8.66 r
+  calvn/n192 (net)                              1                   0.00       8.66 r
+  calvn/U264/Y (oa4a2)                                    0.26      0.38       9.04 r
+  calvn/n195 (net)                              2                   0.00       9.04 r
+  calvn/U265/Y (or2c1)                                    0.33      0.21       9.25 f
+  calvn/n197 (net)                              1                   0.00       9.25 f
+  calvn/U267/Y (ao2i3)                                    0.33      0.15       9.40 r
+  calvn/n200 (net)                              1                   0.00       9.40 r
+  calvn/U268/Y (ao2i3)                                    0.25      0.17       9.57 f
+  calvn/n207 (net)                              1                   0.00       9.57 f
+  calvn/U272/Y (or3d3)                                    0.22      0.14       9.71 r
+  calvn/n208 (net)                              1                   0.00       9.71 r
+  calvn/U273/Y (ao1f3)                                    0.14      0.11       9.82 f
+  calvn/n210 (net)                              1                   0.00       9.82 f
+  calvn/U274/CO (fac2a1)                                  0.36      0.20      10.02 r
+  calvn/n213 (net)                              1                   0.00      10.02 r
+  calvn/U275/Y (ao1d2)                                    0.22      0.21      10.23 r
+  calvn/N255 (net)                              1                   0.00      10.23 r
+  calvn/clk_gate_min_v_reg/EN (SNPS_CLOCK_GATE_HIGH_cal_vn_10)      0.00      10.23 r
+  calvn/clk_gate_min_v_reg/EN (net)                                 0.00      10.23 r
+  calvn/clk_gate_min_v_reg/latch/D (ldf1b3)               0.22      0.00      10.23 r
+  data arrival time                                                           10.23
 
   clock clk (fall edge)                                             5.00       5.00
   clock network delay (ideal)                                       2.00       7.00
   clock uncertainty                                                -1.00       6.00
   calvn/clk_gate_min_v_reg/latch/G (ldf1b3)                         0.00       6.00 f
-  time borrowed from endpoint                                       4.14      10.14
-  data required time                                                          10.14
+  time borrowed from endpoint                                       4.23      10.23
+  data required time                                                          10.23
   ---------------------------------------------------------------------------------------------------------
-  data required time                                                          10.14
-  data arrival time                                                          -10.14
+  data required time                                                          10.23
+  data arrival time                                                          -10.23
   ---------------------------------------------------------------------------------------------------------
   slack (MET)                                                                  0.00
 
   Time Borrowing Information
   ------------------------------------------------------------------------
   clk nominal pulse width                                           5.00   
-  library setup time                                               -0.51   
+  library setup time                                               -0.49   
   ------------------------------------------------------------------------
-  max time borrow                                                   4.49   
+  max time borrow                                                   4.51   
   ------------------------------------------------------------------------
-  actual time borrow                                                4.14   
+  actual time borrow                                                4.23   
   clock uncertainty                                                -1.00   
   ------------------------------------------------------------------------
-  time given to startpoint                                          3.14   
+  time given to startpoint                                          3.23   
   ------------------------------------------------------------------------
 
 
-  Startpoint: cordic/res_rg_reg_8_
+  Startpoint: cordic/finish_reg
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: phase[0] (output port clocked by clk)
+  Endpoint: phase_vld (output port clocked by clk)
   Path Group: OUTPUT_GROUP
   Path Type: max
 
   Des/Clust/Port     Wire Load Model       Library
   ------------------------------------------------
-  cordic_int         5KGATES               ssc_core_slow
   cal_phase          5KGATES               ssc_core_slow
 
 Attributes:
@@ -140,21 +133,13 @@ Attributes:
   ------------------------------------------------------------------------------------------
   clock clk (rise edge)                              0.00       0.00
   clock network delay (ideal)                        2.00       2.00
-  cordic/res_rg_reg_8_/CLK (fdf2a6)        1.00      0.00       2.00 r
-  cordic/res_rg_reg_8_/Q (fdf2a6)          0.25      0.84       2.84 f
-  cordic/res[7] (net)            4                   0.00       2.84 f
-  cordic/U20/Y (inv1a1)                    0.37      0.24       3.08 r
-  cordic/n523 (net)              1                   0.00       3.08 r
-  cordic/U22/Y (or2c3)                     0.58      0.35       3.44 f
-  cordic/n530 (net)              7                   0.00       3.44 f
-  cordic/U24/Y (ao1f2)                     0.37      0.20       3.63 r
-  cordic/res[0] (net)            1                   0.00       3.63 r
-  cordic/res[0] (cordic_int)                         0.00       3.63 r
-  n53 (net)                                          0.00       3.63 r
-  U8/Y (clk1a3)                            0.53      0.37       4.00 r
-  phase[0] (net)                 1                   0.00       4.00 r
-  phase[0] (out)                           0.53      0.00       4.00 r
-  data arrival time                                             4.00
+  cordic/finish_reg/CLK (fdef2a3)          1.00      0.00       2.00 r
+  cordic/finish_reg/Q (fdef2a3)            0.65      1.00       3.00 r
+  cordic/res_vld (net)           1                   0.00       3.00 r
+  cordic/res_vld (cordic_int)                        0.00       3.00 r
+  phase_vld (net)                                    0.00       3.00 r
+  phase_vld (out)                          0.65      0.00       3.00 r
+  data arrival time                                             3.00
 
   clock clk (rise edge)                             10.00      10.00
   clock network delay (ideal)                        2.00      12.00
@@ -163,14 +148,14 @@ Attributes:
   data required time                                            5.00
   ------------------------------------------------------------------------------------------
   data required time                                            5.00
-  data arrival time                                            -4.00
+  data arrival time                                            -3.00
   ------------------------------------------------------------------------------------------
-  slack (MET)                                                   1.00
+  slack (MET)                                                   2.00
 
 
-  Startpoint: cordic/cal_cnt_reg_0_
+  Startpoint: cordic/cal_cnt_reg_1_
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: cordic/yn_reg_17_
+  Endpoint: cordic/xn_reg_18_
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -191,91 +176,91 @@ Attributes:
   ------------------------------------------------------------------------------------------
   clock clk (rise edge)                              0.00       0.00
   clock network delay (ideal)                        2.00       2.00
-  cordic/cal_cnt_reg_0_/CLK (fdf2a3)       1.00      0.00       2.00 r
-  cordic/cal_cnt_reg_0_/Q (fdf2a3)         0.25      0.79       2.79 f
-  cordic/cal_cnt[0] (net)        3                   0.00       2.79 f
-  cordic/U301/Y (clk1b6)                   0.25      0.18       2.96 r
-  cordic/n110 (net)              4                   0.00       2.96 r
-  cordic/U329/Y (or2c6)                    0.62      0.38       3.34 f
-  cordic/n368 (net)             17                   0.00       3.34 f
-  cordic/U415/Y (and2c1)                   0.97      0.61       3.95 r
-  cordic/n97 (net)               1                   0.00       3.95 r
-  cordic/U417/Y (oa2i2)                    0.39      0.28       4.23 f
-  cordic/n127 (net)              2                   0.00       4.23 f
-  cordic/U449/Y (oa2i2)                    0.59      0.37       4.60 r
-  cordic/n128 (net)              1                   0.00       4.60 r
-  cordic/U450/Y (ao4f3)                    0.27      0.19       4.80 f
-  cordic/n130 (net)              1                   0.00       4.80 f
-  cordic/U451/Y (xor2a2)                   0.28      0.31       5.11 f
-  cordic/n383 (net)              1                   0.00       5.11 f
-  cordic/U587/CO (fa1a2)                   0.22      0.42       5.53 f
-  cordic/n395 (net)              2                   0.00       5.53 f
-  cordic/U459/Y (ao1d2)                    0.20      0.15       5.68 r
-  cordic/n141 (net)              1                   0.00       5.68 r
-  cordic/U461/Y (or2c3)                    0.18      0.13       5.81 f
-  cordic/n405 (net)              1                   0.00       5.81 f
-  cordic/U596/CO (fa1a2)                   0.22      0.37       6.18 f
-  cordic/n423 (net)              2                   0.00       6.18 f
-  cordic/U56/Y (ao1d2)                     0.20      0.15       6.33 r
-  cordic/n145 (net)              1                   0.00       6.33 r
-  cordic/U161/Y (or2c3)                    0.18      0.13       6.46 f
-  cordic/n432 (net)              1                   0.00       6.46 f
-  cordic/U53/CO (fa1a2)                    0.22      0.37       6.83 f
-  cordic/n450 (net)              2                   0.00       6.83 f
-  cordic/U52/Y (ao1d2)                     0.20      0.15       6.98 r
-  cordic/n149 (net)              1                   0.00       6.98 r
-  cordic/U51/Y (or2c3)                     0.21      0.13       7.12 f
-  cordic/n461 (net)              1                   0.00       7.12 f
-  cordic/U153/CO (fa1a3)                   0.18      0.38       7.49 f
-  cordic/n474 (net)              2                   0.00       7.49 f
-  cordic/U50/Y (ao1d2)                     0.19      0.14       7.63 r
-  cordic/n153 (net)              1                   0.00       7.63 r
-  cordic/U49/Y (or2c3)                     0.23      0.14       7.77 f
-  cordic/n487 (net)              2                   0.00       7.77 f
-  cordic/U48/Y (ao1d2)                     0.20      0.15       7.92 r
-  cordic/n157 (net)              1                   0.00       7.92 r
-  cordic/U144/Y (or2c3)                    0.21      0.13       8.06 f
-  cordic/n497 (net)              1                   0.00       8.06 f
-  cordic/U626/CO (fa1a3)                   0.22      0.40       8.46 f
-  cordic/n513 (net)              2                   0.00       8.46 f
-  cordic/U463/Y (ao1d6)                    0.14      0.11       8.57 r
-  cordic/n161 (net)              1                   0.00       8.57 r
-  cordic/U464/Y (or2c6)                    0.17      0.08       8.65 f
-  cordic/n533 (net)              1                   0.00       8.65 f
-  cordic/U138/CO (fa1a3)                   0.19      0.37       9.03 f
-  cordic/n548 (net)              2                   0.00       9.03 f
-  cordic/U465/Y (ao1d3)                    0.19      0.14       9.17 r
-  cordic/n165 (net)              1                   0.00       9.17 r
-  cordic/U466/Y (or2c6)                    0.24      0.13       9.30 f
-  cordic/n557 (net)              2                   0.00       9.30 f
-  cordic/U467/Y (ao1f6)                    0.31      0.11       9.41 r
-  cordic/n167 (net)              1                   0.00       9.41 r
-  cordic/U468/Y (ao1f6)                    0.18      0.13       9.54 f
-  cordic/n570 (net)              1                   0.00       9.54 f
-  cordic/U658/CO (fa1a2)                   0.23      0.38       9.92 f
-  cordic/n583 (net)              2                   0.00       9.92 f
-  cordic/U469/Y (ao1d3)                    0.20      0.15      10.07 r
-  cordic/n172 (net)              1                   0.00      10.07 r
-  cordic/U470/Y (or2c6)                    0.17      0.09      10.16 f
-  cordic/n594 (net)              1                   0.00      10.16 f
-  cordic/U666/S (fa1a2)                    0.13      0.35      10.50 f
-  cordic/n597 (net)              1                   0.00      10.50 f
-  cordic/U667/Y (inv1a1)                   0.32      0.19      10.69 r
-  cordic/n598 (net)              1                   0.00      10.69 r
-  cordic/U668/Y (ao1f2)                    0.27      0.18      10.87 f
-  cordic/N285 (net)              1                   0.00      10.87 f
-  cordic/yn_reg_17_/D (fdf2a3)             0.27      0.00      10.87 f
-  data arrival time                                            10.87
+  cordic/cal_cnt_reg_1_/CLK (fdf2a6)       1.00      0.00       2.00 r
+  cordic/cal_cnt_reg_1_/Q (fdf2a6)         0.53      0.87       2.87 r
+  cordic/cal_cnt[1] (net)       10                   0.00       2.87 r
+  cordic/U243/Y (and2a3)                   0.33      0.32       3.20 r
+  cordic/n77 (net)               3                   0.00       3.20 r
+  cordic/U12/Y (clk1b6)                    0.43      0.31       3.50 f
+  cordic/n659 (net)             17                   0.00       3.50 f
+  cordic/U337/Y (and2c1)                   0.96      0.57       4.07 r
+  cordic/n120 (net)              1                   0.00       4.07 r
+  cordic/U339/Y (oa2i2)                    0.36      0.26       4.32 f
+  cordic/n156 (net)              2                   0.00       4.32 f
+  cordic/U369/Y (oa1f3)                    0.27      0.20       4.52 r
+  cordic/n159 (net)              1                   0.00       4.52 r
+  cordic/U371/Y (ao1f2)                    0.23      0.15       4.67 f
+  cordic/n160 (net)              1                   0.00       4.67 f
+  cordic/U372/Y (xor2a2)                   0.22      0.30       4.97 f
+  cordic/n429 (net)              1                   0.00       4.97 f
+  cordic/U580/CO (fa1a2)                   0.22      0.38       5.35 f
+  cordic/n442 (net)              2                   0.00       5.35 f
+  cordic/U373/Y (ao1d2)                    0.20      0.15       5.50 r
+  cordic/n165 (net)              1                   0.00       5.50 r
+  cordic/U375/Y (or2c3)                    0.26      0.18       5.68 f
+  cordic/n454 (net)              2                   0.00       5.68 f
+  cordic/U111/Y (ao1f2)                    0.40      0.15       5.83 r
+  cordic/n167 (net)              1                   0.00       5.83 r
+  cordic/U376/Y (or2c3)                    0.21      0.15       5.98 f
+  cordic/n467 (net)              1                   0.00       5.98 f
+  cordic/U605/CO (fa1a2)                   0.20      0.37       6.34 f
+  cordic/n479 (net)              1                   0.00       6.34 f
+  cordic/U612/CO (fa1a2)                   0.23      0.39       6.73 f
+  cordic/n493 (net)              2                   0.00       6.73 f
+  cordic/U107/Y (ao1e3)                    0.31      0.12       6.85 r
+  cordic/n170 (net)              1                   0.00       6.85 r
+  cordic/U105/Y (or2c3)                    0.21      0.15       7.00 f
+  cordic/n504 (net)              1                   0.00       7.00 f
+  cordic/U104/CO (fa1a3)                   0.18      0.38       7.38 f
+  cordic/n517 (net)              2                   0.00       7.38 f
+  cordic/U102/Y (ao1d2)                    0.19      0.14       7.51 r
+  cordic/n174 (net)              1                   0.00       7.51 r
+  cordic/U100/Y (or2c3)                    0.24      0.15       7.66 f
+  cordic/n529 (net)              2                   0.00       7.66 f
+  cordic/U377/Y (ao1d3)                    0.16      0.13       7.79 r
+  cordic/n178 (net)              1                   0.00       7.79 r
+  cordic/U98/Y (or2c3)                     0.21      0.13       7.92 f
+  cordic/n540 (net)              1                   0.00       7.92 f
+  cordic/U97/CO (fa1a3)                    0.19      0.38       8.30 f
+  cordic/n555 (net)              2                   0.00       8.30 f
+  cordic/U378/Y (ao1d3)                    0.19      0.14       8.44 r
+  cordic/n182 (net)              1                   0.00       8.44 r
+  cordic/U379/Y (or2c6)                    0.18      0.10       8.53 f
+  cordic/n587 (net)              2                   0.00       8.53 f
+  cordic/U380/Y (ao1d3)                    0.19      0.14       8.67 r
+  cordic/n186 (net)              1                   0.00       8.67 r
+  cordic/U381/Y (or2c6)                    0.17      0.09       8.76 f
+  cordic/n598 (net)              1                   0.00       8.76 f
+  cordic/U685/CO (fa1a3)                   0.19      0.37       9.13 f
+  cordic/n614 (net)              2                   0.00       9.13 f
+  cordic/U92/Y (ao1d3)                     0.19      0.14       9.27 r
+  cordic/n190 (net)              1                   0.00       9.27 r
+  cordic/U382/Y (or2c6)                    0.17      0.09       9.37 f
+  cordic/n627 (net)              1                   0.00       9.37 f
+  cordic/U699/CO (fa1a3)                   0.22      0.39       9.76 f
+  cordic/n636 (net)              2                   0.00       9.76 f
+  cordic/U383/Y (ao1d6)                    0.14      0.11       9.87 r
+  cordic/n194 (net)              1                   0.00       9.87 r
+  cordic/U384/Y (or2c6)                    0.17      0.08       9.95 f
+  cordic/n643 (net)              1                   0.00       9.95 f
+  cordic/U706/CO (fa1a2)                   0.20      0.36      10.31 f
+  cordic/n651 (net)              1                   0.00      10.31 f
+  cordic/U708/CO (fa1a2)                   0.15      0.33      10.64 f
+  cordic/n196 (net)              1                   0.00      10.64 f
+  cordic/U385/Y (xor2a2)                   0.17      0.27      10.90 f
+  cordic/N323 (net)              1                   0.00      10.90 f
+  cordic/xn_reg_18_/D (fdf2a3)             0.17      0.00      10.90 f
+  data arrival time                                            10.90
 
   clock clk (rise edge)                             10.00      10.00
   clock network delay (ideal)                        2.00      12.00
   clock uncertainty                                 -1.00      11.00
-  cordic/yn_reg_17_/CLK (fdf2a3)                     0.00      11.00 r
-  library setup time                                -0.13      10.87
-  data required time                                           10.87
+  cordic/xn_reg_18_/CLK (fdf2a3)                     0.00      11.00 r
+  library setup time                                -0.10      10.90
+  data required time                                           10.90
   ------------------------------------------------------------------------------------------
-  data required time                                           10.87
-  data arrival time                                           -10.87
+  data required time                                           10.90
+  data arrival time                                           -10.90
   ------------------------------------------------------------------------------------------
   slack (MET)                                                   0.00
 

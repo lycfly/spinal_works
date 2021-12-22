@@ -5,7 +5,7 @@ Report : power
         -analysis_effort low
 Design : cal_phase
 Version: L-2016.03-SP1
-Date   : Wed Dec 15 15:23:37 2021
+Date   : Tue Dec 21 17:29:48 2021
 ****************************************
 
 
@@ -38,6 +38,8 @@ SNPS_CLOCK_GATE_HIGH_cal_vn_2
                        5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_cal_vn_1
                        5KGATES           ssc_core_slow
+signMul_1              5KGATES           ssc_core_slow
+signMul_0              5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_dotVn_2
                        5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_cordic_int_0
@@ -45,6 +47,10 @@ SNPS_CLOCK_GATE_HIGH_cordic_int_0
 SNPS_CLOCK_GATE_HIGH_cordic_int_2
                        5KGATES           ssc_core_slow
 SNPS_CLOCK_GATE_HIGH_cordic_int_1
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_signMul_0_1
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_signMul_0_0
                        5KGATES           ssc_core_slow
 
 
@@ -61,8 +67,10 @@ Power-specific unit information :
                                        Switch   Int      Leak     Total
 Hierarchy                              Power    Power    Power    Power    %
 --------------------------------------------------------------------------------
-cal_phase                                 0.397    0.000    0.000    0.397 100.0
-  cordic (cordic_int)                  1.33e-02    0.000    0.000 1.33e-02   3.3
-  dot (dotVn_2)                           0.207    0.000    0.000    0.207  52.0
-  calvn (cal_vn)                          0.156    0.000    0.000    0.156  39.2
+cal_phase                                 0.330    0.000    0.000    0.330 100.0
+  cordic (cordic_int)                  1.63e-02    0.000    0.000 1.63e-02   4.9
+  dot (dotVn_2)                           0.138    0.000    0.000    0.138  41.9
+    booth_cos (signMul_0)              4.76e-02    0.000    0.000 4.76e-02  14.4
+    booth_sin (signMul_1)              4.84e-02    0.000    0.000 4.84e-02  14.7
+  calvn (cal_vn)                          0.161    0.000    0.000    0.161  48.7
 1

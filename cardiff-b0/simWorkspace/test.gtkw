@@ -1,22 +1,22 @@
 [*]
 [*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
-[*] Mon Dec 20 07:37:27 2021
+[*] Tue Dec 21 07:59:02 2021
 [*]
 [dumpfile] "/mnt/mydata/spinal_works/cardiff-b0/simWorkspace/cal_phase/test.vcd"
-[dumpfile_mtime] "Mon Dec 20 07:31:42 2021"
-[dumpfile_size] 15418
+[dumpfile_mtime] "Tue Dec 21 07:55:29 2021"
+[dumpfile_size] 20216
 [optimize_vcd]
 [savefile] "/mnt/mydata/spinal_works/cardiff-b0/simWorkspace/test.gtkw"
-[timestart] 332
+[timestart] 0
 [size] 1890 891
 [pos] -51 -20
-*-3.000000 369 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-6.000000 305 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] TOP.
 [treeopen] TOP.cal_phase.
 [sst_width] 228
-[signals_width] 206
+[signals_width] 219
 [sst_expanded] 1
-[sst_vpaned_height] 428
+[sst_vpaned_height] 156
 @28
 TOP.clk
 TOP.reset
@@ -79,6 +79,10 @@ TOP.cal_phase.dot.vn_vld
 TOP.cal_phase.dot.mac_cnt[2:0]
 @28
 TOP.cal_phase.dot.mac_en
+TOP.cal_phase.dot.booth_start
+@29
+TOP.cal_phase.dot.mul_done
+@28
 TOP.cal_phase.dot.mac_finish
 TOP.cal_phase.dot.mac_start
 @420
@@ -114,9 +118,7 @@ TOP.cal_phase.cordic.y[15:0]
 -group_end
 @28
 TOP.cal_phase.cordic.cal_en
-@29
 TOP.cal_phase.cordic.cal_finish
-@28
 TOP.cal_phase.cordic.cal_start
 @420
 TOP.cal_phase.cordic.res[9:0]

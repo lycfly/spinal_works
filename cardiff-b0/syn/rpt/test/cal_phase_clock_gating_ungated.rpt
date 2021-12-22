@@ -5,7 +5,7 @@ Report : clock_gating
         -verbose
 Design : cal_phase
 Version: L-2016.03-SP1
-Date   : Wed Dec 15 15:23:38 2021
+Date   : Tue Dec 21 17:29:49 2021
 ****************************************
 
 
@@ -14,28 +14,32 @@ Date   : Wed Dec 15 15:23:38 2021
 --------------------------------------------------------------------------------
            Ungated Register     |  Reason                  |  What Next?
 --------------------------------------------------------------------------------
+    calvn/mean_finish_regNext_reg
+                                |  Always enabled register |  -
+    dot/booth_start_reg         |  Always enabled register |  -
     dot/mac_en_reg              |  Min bitwidth not met    |  -
     dot/finish_reg              |  Always enabled register |  -
-    dot/mac_cnt_reg_0_          |  Always enabled register |  -
-    dot/mac_cnt_reg_1_          |  Min bitwidth not met    |  -
-    dot/mac_cnt_reg_2_          |  Min bitwidth not met    |  -
+    cordic/cal_finish_delay_reg |  Min bitwidth not met    |  -
+    cordic/finish_reg           |  Min bitwidth not met    |  -
     cordic/cal_en_regNext_reg   |  Always enabled register |  -
-    cordic/finish_reg           |  Always enabled register |  -
-    cordic/nozero_flg_reg       |  Min bitwidth not met    |  -
     cordic/cal_en_reg           |  Min bitwidth not met    |  -
+    dot/booth_sin/io_din_vld_regNext_reg
+                                |  Always enabled register |  -
+    dot/booth_cos/io_din_vld_regNext_reg
+                                |  Always enabled register |  -
                                 |                          |
 --------------------------------------------------------------------------------
 
 
                              Clock Gating Summary
           ------------------------------------------------------------
-          |    Number of Clock gating elements    |       11         |
+          |    Number of Clock gating elements    |       13         |
           |                                       |                  |
-          |    Number of Gated registers          |   171 (95.00%)   |
+          |    Number of Gated registers          |   215 (95.56%)   |
           |                                       |                  |
-          |    Number of Ungated registers        |     9 (5.00%)    |
+          |    Number of Ungated registers        |    10 (4.44%)    |
           |                                       |                  |
-          |    Total number of registers          |      180         |
+          |    Total number of registers          |      225         |
           ------------------------------------------------------------
 
 

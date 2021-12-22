@@ -23,30 +23,31 @@ void Vbooth4::traceChgSub0(void* userp, VerilatedVcd* tracep) {
     // Body
     {
         if (VL_UNLIKELY(vlTOPp->__Vm_traceActivity[1U])) {
-            tracep->chgIData(oldp+0,(vlTOPp->booth4__DOT__shiftReg),17);
-            tracep->chgCData(oldp+1,((7U & vlTOPp->booth4__DOT__shiftReg)),3);
-            tracep->chgCData(oldp+2,(vlTOPp->booth4__DOT__cal_cnt),2);
-            tracep->chgBit(oldp+3,(vlTOPp->booth4__DOT__cal_en));
+            tracep->chgSData(oldp+0,((0x3ffU & (- (IData)(vlTOPp->booth4__DOT__PositiveB)))),10);
+            tracep->chgSData(oldp+1,((0x3ffU & ((- (IData)(vlTOPp->booth4__DOT__PositiveB)) 
+                                                << 1U))),10);
+            tracep->chgSData(oldp+2,(vlTOPp->booth4__DOT__PositiveB),10);
+            tracep->chgSData(oldp+3,((0x3ffU & ((IData)(vlTOPp->booth4__DOT__PositiveB) 
+                                                << 1U))),10);
+            tracep->chgSData(oldp+4,(vlTOPp->booth4__DOT__AddB),10);
+            tracep->chgSData(oldp+5,(vlTOPp->booth4__DOT__Add2B),10);
+            tracep->chgSData(oldp+6,(vlTOPp->booth4__DOT__MinusB),10);
+            tracep->chgSData(oldp+7,(vlTOPp->booth4__DOT__Minus2B),10);
         }
         if (VL_UNLIKELY(vlTOPp->__Vm_traceActivity[2U])) {
-            tracep->chgCData(oldp+4,(vlTOPp->booth4__DOT__AddB),8);
-            tracep->chgCData(oldp+5,(vlTOPp->booth4__DOT__Add2B),8);
-            tracep->chgCData(oldp+6,(vlTOPp->booth4__DOT__MinusB),8);
-            tracep->chgCData(oldp+7,(vlTOPp->booth4__DOT__Minus2B),8);
+            tracep->chgIData(oldp+8,(vlTOPp->booth4__DOT__shiftReg),19);
+            tracep->chgCData(oldp+9,((7U & vlTOPp->booth4__DOT__shiftReg)),3);
+            tracep->chgCData(oldp+10,(vlTOPp->booth4__DOT__cal_cnt),2);
+            tracep->chgBit(oldp+11,(vlTOPp->booth4__DOT__cal_en));
         }
-        tracep->chgBit(oldp+8,(vlTOPp->io_din_vld));
-        tracep->chgCData(oldp+9,(vlTOPp->io_dinA),8);
-        tracep->chgCData(oldp+10,(vlTOPp->io_dinB),8);
-        tracep->chgBit(oldp+11,(vlTOPp->io_dout_vld));
-        tracep->chgSData(oldp+12,(vlTOPp->io_dout),16);
-        tracep->chgBit(oldp+13,(vlTOPp->clk));
-        tracep->chgBit(oldp+14,(vlTOPp->reset));
-        tracep->chgCData(oldp+15,((0xffU & (- (IData)(vlTOPp->io_dinB)))),8);
-        tracep->chgCData(oldp+16,((0xffU & ((- (IData)(vlTOPp->io_dinB)) 
-                                            << 1U))),8);
-        tracep->chgCData(oldp+17,((0xffU & ((IData)(vlTOPp->io_dinB) 
-                                            << 1U))),8);
-        tracep->chgBit(oldp+18,(vlTOPp->booth4__DOT__cal_en_regNext));
+        tracep->chgBit(oldp+12,(vlTOPp->io_din_vld));
+        tracep->chgCData(oldp+13,(vlTOPp->io_dinA),8);
+        tracep->chgCData(oldp+14,(vlTOPp->io_dinB),8);
+        tracep->chgBit(oldp+15,(vlTOPp->io_dout_vld));
+        tracep->chgSData(oldp+16,(vlTOPp->io_dout),16);
+        tracep->chgBit(oldp+17,(vlTOPp->clk));
+        tracep->chgBit(oldp+18,(vlTOPp->reset));
+        tracep->chgBit(oldp+19,(vlTOPp->booth4__DOT__cal_en_regNext));
     }
 }
 

@@ -1,4 +1,5 @@
 ./enumdefine.sv
+./booth2.sv
 ./cal_vn.sv
 ./dotVn_2.sv
 ./cordic_int.sv

@@ -1,0 +1,1761 @@
+ 
+****************************************
+Report : timing
+        -path full_clock_expanded
+        -delay min
+        -max_paths 50
+        -sort_by slack
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Dec 21 17:48:37 2021
+****************************************
+
+Operating Conditions: slow_125_1.62   Library: ssc_core_slow
+Wire Load Model Mode: enclosed
+
+  Startpoint: cordic/res_rg_reg_8_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/res_out_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  cordic/res_rg_reg_8_/CLK (fdf2a3)        0.00       2.00 r
+  cordic/res_rg_reg_8_/Q (fdf2a3)          0.76       2.76 f
+  cordic/res_out_reg_7_/D (fdf2c3)         0.00       2.76 f
+  data arrival time                                   2.76
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  clock uncertainty                        1.00       3.00
+  cordic/res_out_reg_7_/CLK (fdf2c3)       0.00       3.00 r
+  library hold time                        0.51       3.51
+  data required time                                  3.51
+  -----------------------------------------------------------
+  data required time                                  3.51
+  data arrival time                                  -2.76
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.75
+
+
+  Startpoint: cordic/cal_en_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/cal_en_regNext_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  cordic/cal_en_reg/CLK (fdf2a3)                          0.00       2.00 r
+  cordic/cal_en_reg/Q (fdf2a3)                            0.76       2.76 f
+  cordic/cal_en_regNext_reg/D (fdf2a3)                    0.00       2.76 f
+  data arrival time                                                  2.76
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/cal_en_regNext_reg/CLK (fdf2a3)                  0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -2.76
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.73
+
+
+  Startpoint: dot/booth_sin/cal_en_regNext_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/clk_gate_psum2_reg/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  booth2_1           5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  dot/booth_sin/cal_en_regNext_reg/CLK (fdf1c2)           0.00      12.00 r
+  dot/booth_sin/cal_en_regNext_reg/QN (fdf1c2)            0.48      12.48 f
+  dot/booth_sin/U39/Y (and2a3)                            0.21      12.69 f
+  dot/booth_sin/io_dout_vld (booth2_1)                    0.00      12.69 f
+  dot/clk_gate_psum2_reg/EN (SNPS_CLOCK_GATE_HIGH_dotVn_2)     0.00    12.69 f
+  dot/clk_gate_psum2_reg/latch/D (ldf1b3)                 0.00      12.69 f
+  data arrival time                                                 12.69
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                       1.00      13.00
+  dot/clk_gate_psum2_reg/latch/G (ldf1b3)                 0.00      13.00 r
+  library hold time                                       0.37      13.37
+  data required time                                                13.37
+  --------------------------------------------------------------------------
+  data required time                                                13.37
+  data arrival time                                                -12.69
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.69
+
+
+  Startpoint: dot/booth_sin/clk_gate_shiftReg_reg/latch
+              (negative level-sensitive latch clocked by clk)
+  Endpoint: dot/booth_sin/clk_gate_shiftReg_reg/main_gate
+            (gating element for clock clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  SNPS_CLOCK_GATE_HIGH_booth2_0_1 5KGATES  ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  dot/booth_sin/clk_gate_shiftReg_reg/latch/G (ldf1b3)     0.00      7.00 f
+  dot/booth_sin/clk_gate_shiftReg_reg/latch/Q (ldf1b3)     0.33      7.33 f
+  dot/booth_sin/clk_gate_shiftReg_reg/main_gate/A (and2a3)     0.00     7.33 f
+  data arrival time                                                  7.33
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                       1.00       8.00
+  dot/booth_sin/clk_gate_shiftReg_reg/main_gate/B (and2a3)     0.00     8.00 f
+  clock gating hold time                                  0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -7.33
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.67
+
+
+  Startpoint: dot/booth_cos/clk_gate_shiftReg_reg/latch
+              (negative level-sensitive latch clocked by clk)
+  Endpoint: dot/booth_cos/clk_gate_shiftReg_reg/main_gate
+            (gating element for clock clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  SNPS_CLOCK_GATE_HIGH_booth2_0_0 5KGATES  ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  dot/booth_cos/clk_gate_shiftReg_reg/latch/G (ldf1b3)     0.00      7.00 f
+  dot/booth_cos/clk_gate_shiftReg_reg/latch/Q (ldf1b3)     0.33      7.33 f
+  dot/booth_cos/clk_gate_shiftReg_reg/main_gate/A (and2a3)     0.00     7.33 f
+  data arrival time                                                  7.33
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                       1.00       8.00
+  dot/booth_cos/clk_gate_shiftReg_reg/main_gate/B (and2a3)     0.00     8.00 f
+  clock gating hold time                                  0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -7.33
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.67
+
+
+  Startpoint: cordic/clk_gate_yn_reg/latch
+              (negative level-sensitive latch clocked by clk)
+  Endpoint: cordic/clk_gate_yn_reg/main_gate
+            (gating element for clock clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  SNPS_CLOCK_GATE_HIGH_cordic_int_0 5KGATES ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  cordic/clk_gate_yn_reg/latch/G (ldf1b3)                 0.00       7.00 f
+  cordic/clk_gate_yn_reg/latch/Q (ldf1b3)                 0.33       7.33 f
+  cordic/clk_gate_yn_reg/main_gate/A (and2a3)             0.00       7.33 f
+  data arrival time                                                  7.33
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                       1.00       8.00
+  cordic/clk_gate_yn_reg/main_gate/B (and2a3)             0.00       8.00 f
+  clock gating hold time                                  0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -7.33
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.67
+
+
+  Startpoint: cordic/clk_gate_res_rg_reg/latch
+              (negative level-sensitive latch clocked by clk)
+  Endpoint: cordic/clk_gate_res_rg_reg/main_gate
+            (gating element for clock clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  SNPS_CLOCK_GATE_HIGH_cordic_int_2 5KGATES ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  cordic/clk_gate_res_rg_reg/latch/G (ldf1b3)             0.00       7.00 f
+  cordic/clk_gate_res_rg_reg/latch/Q (ldf1b3)             0.33       7.33 f
+  cordic/clk_gate_res_rg_reg/main_gate/A (and2a3)         0.00       7.33 f
+  data arrival time                                                  7.33
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                       1.00       8.00
+  cordic/clk_gate_res_rg_reg/main_gate/B (and2a3)         0.00       8.00 f
+  clock gating hold time                                  0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -7.33
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.67
+
+
+  Startpoint: cordic/clk_gate_res_out_reg/latch
+              (negative level-sensitive latch clocked by clk)
+  Endpoint: cordic/clk_gate_res_out_reg/main_gate
+            (gating element for clock clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  SNPS_CLOCK_GATE_HIGH_cordic_int_1 5KGATES ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  cordic/clk_gate_res_out_reg/latch/G (ldf1b3)            0.00       7.00 f
+  cordic/clk_gate_res_out_reg/latch/Q (ldf1b3)            0.33       7.33 f
+  cordic/clk_gate_res_out_reg/main_gate/A (and2a3)        0.00       7.33 f
+  data arrival time                                                  7.33
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                       1.00       8.00
+  cordic/clk_gate_res_out_reg/main_gate/B (and2a3)        0.00       8.00 f
+  clock gating hold time                                  0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -7.33
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.67
+
+
+  Startpoint: calvn/clk_gate_min_v_reg/latch
+              (negative level-sensitive latch clocked by clk)
+  Endpoint: calvn/clk_gate_min_v_reg/main_gate
+            (gating element for clock clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  SNPS_CLOCK_GATE_HIGH_cal_vn_10 5KGATES   ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  calvn/clk_gate_min_v_reg/latch/G (ldf1b3)               0.00       7.00 f
+  calvn/clk_gate_min_v_reg/latch/Q (ldf1b3)               0.33       7.33 f
+  calvn/clk_gate_min_v_reg/main_gate/A (and2a3)           0.00       7.33 f
+  data arrival time                                                  7.33
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                       1.00       8.00
+  calvn/clk_gate_min_v_reg/main_gate/B (and2a3)           0.00       8.00 f
+  clock gating hold time                                  0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -7.33
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.67
+
+
+  Startpoint: calvn/clk_gate_max_v_reg/latch
+              (negative level-sensitive latch clocked by clk)
+  Endpoint: calvn/clk_gate_max_v_reg/main_gate
+            (gating element for clock clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  SNPS_CLOCK_GATE_HIGH_cal_vn_9 5KGATES    ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  calvn/clk_gate_max_v_reg/latch/G (ldf1b3)               0.00       7.00 f
+  calvn/clk_gate_max_v_reg/latch/Q (ldf1b3)               0.33       7.33 f
+  calvn/clk_gate_max_v_reg/main_gate/A (and2a3)           0.00       7.33 f
+  data arrival time                                                  7.33
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                       1.00       8.00
+  calvn/clk_gate_max_v_reg/main_gate/B (and2a3)           0.00       8.00 f
+  clock gating hold time                                  0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -7.33
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.67
+
+
+  Startpoint: calvn/clk_gate_Vins_6_reg/latch
+              (negative level-sensitive latch clocked by clk)
+  Endpoint: calvn/clk_gate_Vins_6_reg/main_gate
+            (gating element for clock clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  SNPS_CLOCK_GATE_HIGH_cal_vn_7 5KGATES    ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  calvn/clk_gate_Vins_6_reg/latch/G (ldf1b3)              0.00       7.00 f
+  calvn/clk_gate_Vins_6_reg/latch/Q (ldf1b3)              0.33       7.33 f
+  calvn/clk_gate_Vins_6_reg/main_gate/A (and2a3)          0.00       7.33 f
+  data arrival time                                                  7.33
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                       1.00       8.00
+  calvn/clk_gate_Vins_6_reg/main_gate/B (and2a3)          0.00       8.00 f
+  clock gating hold time                                  0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -7.33
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.67
+
+
+  Startpoint: calvn/clk_gate_Vins_4_reg/latch
+              (negative level-sensitive latch clocked by clk)
+  Endpoint: calvn/clk_gate_Vins_4_reg/main_gate
+            (gating element for clock clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  SNPS_CLOCK_GATE_HIGH_cal_vn_4 5KGATES    ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  calvn/clk_gate_Vins_4_reg/latch/G (ldf1b3)              0.00       7.00 f
+  calvn/clk_gate_Vins_4_reg/latch/Q (ldf1b3)              0.33       7.33 f
+  calvn/clk_gate_Vins_4_reg/main_gate/A (and2a3)          0.00       7.33 f
+  data arrival time                                                  7.33
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                       1.00       8.00
+  calvn/clk_gate_Vins_4_reg/main_gate/B (and2a3)          0.00       8.00 f
+  clock gating hold time                                  0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -7.33
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.67
+
+
+  Startpoint: calvn/clk_gate_Vins_2_reg/latch
+              (negative level-sensitive latch clocked by clk)
+  Endpoint: calvn/clk_gate_Vins_2_reg/main_gate
+            (gating element for clock clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  SNPS_CLOCK_GATE_HIGH_cal_vn_3 5KGATES    ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  calvn/clk_gate_Vins_2_reg/latch/G (ldf1b3)              0.00       7.00 f
+  calvn/clk_gate_Vins_2_reg/latch/Q (ldf1b3)              0.33       7.33 f
+  calvn/clk_gate_Vins_2_reg/main_gate/A (and2a3)          0.00       7.33 f
+  data arrival time                                                  7.33
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                       1.00       8.00
+  calvn/clk_gate_Vins_2_reg/main_gate/B (and2a3)          0.00       8.00 f
+  clock gating hold time                                  0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -7.33
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.67
+
+
+  Startpoint: calvn/clk_gate_v_cnt_reg/latch
+              (negative level-sensitive latch clocked by clk)
+  Endpoint: calvn/clk_gate_v_cnt_reg/main_gate
+            (gating element for clock clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  SNPS_CLOCK_GATE_HIGH_cal_vn_2 5KGATES    ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  calvn/clk_gate_v_cnt_reg/latch/G (ldf1b3)               0.00       7.00 f
+  calvn/clk_gate_v_cnt_reg/latch/Q (ldf1b3)               0.33       7.33 f
+  calvn/clk_gate_v_cnt_reg/main_gate/A (and2a3)           0.00       7.33 f
+  data arrival time                                                  7.33
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                       1.00       8.00
+  calvn/clk_gate_v_cnt_reg/main_gate/B (and2a3)           0.00       8.00 f
+  clock gating hold time                                  0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -7.33
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.67
+
+
+  Startpoint: calvn/clk_gate_Vins_0_reg/latch
+              (negative level-sensitive latch clocked by clk)
+  Endpoint: calvn/clk_gate_Vins_0_reg/main_gate
+            (gating element for clock clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  SNPS_CLOCK_GATE_HIGH_cal_vn_1 5KGATES    ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  calvn/clk_gate_Vins_0_reg/latch/G (ldf1b3)              0.00       7.00 f
+  calvn/clk_gate_Vins_0_reg/latch/Q (ldf1b3)              0.33       7.33 f
+  calvn/clk_gate_Vins_0_reg/main_gate/A (and2a3)          0.00       7.33 f
+  data arrival time                                                  7.33
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                       1.00       8.00
+  calvn/clk_gate_Vins_0_reg/main_gate/B (and2a3)          0.00       8.00 f
+  clock gating hold time                                  0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -7.33
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.67
+
+
+  Startpoint: dot/clk_gate_psum2_reg/latch
+              (negative level-sensitive latch clocked by clk)
+  Endpoint: dot/clk_gate_psum2_reg/main_gate
+            (gating element for clock clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  SNPS_CLOCK_GATE_HIGH_dotVn_2 5KGATES     ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  dot/clk_gate_psum2_reg/latch/G (ldf1b3)                 0.00       7.00 f
+  dot/clk_gate_psum2_reg/latch/Q (ldf1b3)                 0.33       7.33 f
+  dot/clk_gate_psum2_reg/main_gate/A (and2a3)             0.00       7.33 f
+  data arrival time                                                  7.33
+
+  clock clk (fall edge)                                   5.00       5.00
+  clock network delay (ideal)                             2.00       7.00
+  clock uncertainty                                       1.00       8.00
+  dot/clk_gate_psum2_reg/main_gate/B (and2a3)             0.00       8.00 f
+  clock gating hold time                                  0.00       8.00
+  data required time                                                 8.00
+  --------------------------------------------------------------------------
+  data required time                                                 8.00
+  data arrival time                                                 -7.33
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.67
+
+
+  Startpoint: cordic/cal_finish_delay_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/clk_gate_res_out_reg/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  cordic/cal_finish_delay_reg/CLK (fdef2a3)               0.00      12.00 r
+  cordic/cal_finish_delay_reg/Q (fdef2a3)                 0.73      12.73 f
+  cordic/clk_gate_res_out_reg/EN (SNPS_CLOCK_GATE_HIGH_cordic_int_1)     0.00    12.73 f
+  cordic/clk_gate_res_out_reg/latch/D (ldf1b3)            0.00      12.73 f
+  data arrival time                                                 12.73
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                       1.00      13.00
+  cordic/clk_gate_res_out_reg/latch/G (ldf1b3)            0.00      13.00 r
+  library hold time                                       0.37      13.37
+  data required time                                                13.37
+  --------------------------------------------------------------------------
+  data required time                                                13.37
+  data arrival time                                                -12.73
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.64
+
+
+  Startpoint: dot/booth_sin/cal_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_sin/cal_cnt_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_1           5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_sin/cal_cnt_reg_0_/CLK (fdf2a3)               0.00       2.00 r
+  dot/booth_sin/cal_cnt_reg_0_/Q (fdf2a3)                 0.74       2.74 r
+  dot/booth_sin/U29/Y (and2c2)                            0.12       2.85 f
+  dot/booth_sin/cal_cnt_reg_0_/D (fdf2a3)                 0.00       2.85 f
+  data arrival time                                                  2.85
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_sin/cal_cnt_reg_0_/CLK (fdf2a3)               0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -2.85
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.64
+
+
+  Startpoint: dot/booth_cos/cal_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_cos/cal_cnt_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_0           5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_cos/cal_cnt_reg_0_/CLK (fdf2a3)               0.00       2.00 r
+  dot/booth_cos/cal_cnt_reg_0_/Q (fdf2a3)                 0.74       2.74 r
+  dot/booth_cos/U20/Y (and2c2)                            0.12       2.85 f
+  dot/booth_cos/cal_cnt_reg_0_/D (fdf2a3)                 0.00       2.85 f
+  data arrival time                                                  2.85
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_cos/cal_cnt_reg_0_/CLK (fdf2a3)               0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -2.85
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.64
+
+
+  Startpoint: cordic/cal_finish_delay_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/finish_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  cordic/cal_finish_delay_reg/CLK (fdef2a3)               0.00       2.00 r
+  cordic/cal_finish_delay_reg/Q (fdef2a3)                 0.73       2.73 f
+  cordic/finish_reg/D (fdef2a3)                           0.00       2.73 f
+  data arrival time                                                  2.73
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/finish_reg/CLK (fdef2a3)                         0.00       3.00 r
+  library hold time                                       0.36       3.36
+  data required time                                                 3.36
+  --------------------------------------------------------------------------
+  data required time                                                 3.36
+  data arrival time                                                 -2.73
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.62
+
+
+  Startpoint: dot/booth_sin/shiftReg_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_sin/shiftReg_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_1           5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_sin/shiftReg_reg_2_/CLK (fdf2a3)              0.00       2.00 r
+  dot/booth_sin/shiftReg_reg_2_/Q (fdf2a3)                0.68       2.68 r
+  dot/booth_sin/U75/Y (ao4a3)                             0.21       2.89 r
+  dot/booth_sin/shiftReg_reg_1_/D (fdf2a3)                0.00       2.89 r
+  data arrival time                                                  2.89
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_sin/shiftReg_reg_1_/CLK (fdf2a3)              0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -2.89
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.60
+
+
+  Startpoint: dot/booth_cos/shiftReg_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_cos/shiftReg_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_0           5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_cos/shiftReg_reg_2_/CLK (fdf2a3)              0.00       2.00 r
+  dot/booth_cos/shiftReg_reg_2_/Q (fdf2a3)                0.68       2.68 r
+  dot/booth_cos/U75/Y (ao4a3)                             0.21       2.89 r
+  dot/booth_cos/shiftReg_reg_1_/D (fdf2a3)                0.00       2.89 r
+  data arrival time                                                  2.89
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_cos/shiftReg_reg_1_/CLK (fdf2a3)              0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -2.89
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.60
+
+
+  Startpoint: dot/finish_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/cal_en_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/finish_reg/CLK (fdf2a3)              0.00       2.00 r
+  dot/finish_reg/Q (fdf2a3)                0.66       2.66 r
+  dot/psum_vld (dotVn_2)                   0.00       2.66 r
+  cordic/vld (cordic_int)                  0.00       2.66 r
+  cordic/U746/Y (oa1f1)                    0.09       2.75 f
+  cordic/U748/Y (and2c3)                   0.17       2.92 r
+  cordic/cal_en_reg/D (fdf2a3)             0.00       2.92 r
+  data arrival time                                   2.92
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  clock uncertainty                        1.00       3.00
+  cordic/cal_en_reg/CLK (fdf2a3)           0.00       3.00 r
+  library hold time                        0.49       3.49
+  data required time                                  3.49
+  -----------------------------------------------------------
+  data required time                                  3.49
+  data arrival time                                  -2.92
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.57
+
+
+  Startpoint: dot/mac_en_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/mac_en_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_en_reg/CLK (fdf2a3)              0.00       2.00 r
+  dot/mac_en_reg/Q (fdf2a3)                0.71       2.71 f
+  dot/U44/Y (ao1f2)                        0.11       2.83 r
+  dot/U177/Y (oa1f3)                       0.13       2.95 f
+  dot/mac_en_reg/D (fdf2a3)                0.00       2.95 f
+  data arrival time                                   2.95
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  clock uncertainty                        1.00       3.00
+  dot/mac_en_reg/CLK (fdf2a3)              0.00       3.00 r
+  library hold time                        0.49       3.49
+  data required time                                  3.49
+  -----------------------------------------------------------
+  data required time                                  3.49
+  data arrival time                                  -2.95
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.54
+
+
+  Startpoint: dot/booth_sin/shiftReg_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_sin/shiftReg_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_1           5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_sin/shiftReg_reg_1_/CLK (fdf2a3)              0.00       2.00 r
+  dot/booth_sin/shiftReg_reg_1_/Q (fdf2a3)                0.68       2.68 f
+  dot/booth_sin/U34/Y (inv1a3)                            0.16       2.85 r
+  dot/booth_sin/U28/Y (and2c2)                            0.12       2.96 f
+  dot/booth_sin/shiftReg_reg_0_/D (fdf2a3)                0.00       2.96 f
+  data arrival time                                                  2.96
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_sin/shiftReg_reg_0_/CLK (fdf2a3)              0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -2.96
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.53
+
+
+  Startpoint: dot/booth_cos/shiftReg_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_cos/shiftReg_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_0           5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_cos/shiftReg_reg_1_/CLK (fdf2a3)              0.00       2.00 r
+  dot/booth_cos/shiftReg_reg_1_/Q (fdf2a3)                0.68       2.68 f
+  dot/booth_cos/U30/Y (inv1a3)                            0.16       2.85 r
+  dot/booth_cos/U11/Y (and2c2)                            0.12       2.96 f
+  dot/booth_cos/shiftReg_reg_0_/D (fdf2a3)                0.00       2.96 f
+  data arrival time                                                  2.96
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_cos/shiftReg_reg_0_/CLK (fdf2a3)              0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -2.96
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.53
+
+
+  Startpoint: calvn/mean_finish_regNext_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_start_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  calvn/mean_finish_regNext_reg/CLK (fdf2a3)              0.00       2.00 r
+  calvn/mean_finish_regNext_reg/Q (fdf2a3)                0.66       2.66 r
+  calvn/finish (cal_vn)                                   0.00       2.66 r
+  dot/vn_vld (dotVn_2)                                    0.00       2.66 r
+  dot/U121/Y (inv1a1)                                     0.15       2.81 f
+  dot/U122/Y (ao1f2)                                      0.17       2.98 r
+  dot/booth_start_reg/D (fdf2a9)                          0.00       2.98 r
+  data arrival time                                                  2.98
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_start_reg/CLK (fdf2a9)                        0.00       3.00 r
+  library hold time                                       0.50       3.50
+  data required time                                                 3.50
+  --------------------------------------------------------------------------
+  data required time                                                 3.50
+  data arrival time                                                 -2.98
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.52
+
+
+  Startpoint: dot/booth_cos/cal_en_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_cos/cal_en_regNext_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  booth2_0           5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_cos/cal_en_reg/CLK (fdf2a3)                   0.00       2.00 r
+  dot/booth_cos/cal_en_reg/Q (fdf2a3)                     0.75       2.75 r
+  dot/booth_cos/U21/Y (inv1a3)                            0.20       2.95 f
+  dot/booth_cos/cal_en_regNext_reg/D (fdf1c2)             0.00       2.95 f
+  data arrival time                                                  2.95
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_cos/cal_en_regNext_reg/CLK (fdf1c2)           0.00       3.00 r
+  library hold time                                       0.47       3.47
+  data required time                                                 3.47
+  --------------------------------------------------------------------------
+  data required time                                                 3.47
+  data arrival time                                                 -2.95
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.52
+
+
+  Startpoint: dot/mac_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/mac_cnt_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_cnt_reg_0_/CLK (fdf2a3)          0.00       2.00 r
+  dot/mac_cnt_reg_0_/Q (fdf2a3)            0.84       2.84 r
+  dot/U54/Y (and2c2)                       0.14       2.97 f
+  dot/mac_cnt_reg_0_/D (fdf2a3)            0.00       2.97 f
+  data arrival time                                   2.97
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  clock uncertainty                        1.00       3.00
+  dot/mac_cnt_reg_0_/CLK (fdf2a3)          0.00       3.00 r
+  library hold time                        0.49       3.49
+  data required time                                  3.49
+  -----------------------------------------------------------
+  data required time                                  3.49
+  data arrival time                                  -2.97
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.52
+
+
+  Startpoint: dot/booth_sin/cal_en_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_sin/cal_en_regNext_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  booth2_1           5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_sin/cal_en_reg/CLK (fdf2a3)                   0.00       2.00 r
+  dot/booth_sin/cal_en_reg/Q (fdf2a3)                     0.75       2.75 r
+  dot/booth_sin/U33/Y (inv1a3)                            0.21       2.96 f
+  dot/booth_sin/cal_en_regNext_reg/D (fdf1c2)             0.00       2.96 f
+  data arrival time                                                  2.96
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_sin/cal_en_regNext_reg/CLK (fdf1c2)           0.00       3.00 r
+  library hold time                                       0.47       3.47
+  data required time                                                 3.47
+  --------------------------------------------------------------------------
+  data required time                                                 3.47
+  data arrival time                                                 -2.96
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.51
+
+
+  Startpoint: cordic/cal_en_regNext_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/clk_gate_res_rg_reg/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  cordic/cal_en_regNext_reg/CLK (fdf2a3)                  0.00      12.00 r
+  cordic/cal_en_regNext_reg/Q (fdf2a3)                    0.72      12.72 r
+  cordic/U286/Y (oa1f3)                                   0.15      12.87 f
+  cordic/clk_gate_res_rg_reg/EN (SNPS_CLOCK_GATE_HIGH_cordic_int_2)     0.00    12.87 f
+  cordic/clk_gate_res_rg_reg/latch/D (ldf1b3)             0.00      12.87 f
+  data arrival time                                                 12.87
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             2.00      12.00
+  clock uncertainty                                       1.00      13.00
+  cordic/clk_gate_res_rg_reg/latch/G (ldf1b3)             0.00      13.00 r
+  library hold time                                       0.37      13.37
+  data required time                                                13.37
+  --------------------------------------------------------------------------
+  data required time                                                13.37
+  data arrival time                                                -12.87
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.50
+
+
+  Startpoint: dot/booth_cos/shiftReg_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum2_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_0           5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_cos/shiftReg_reg_3_/CLK (fdf2a3)              0.00       2.00 r
+  dot/booth_cos/shiftReg_reg_3_/Q (fdf2a3)                0.78       2.78 r
+  dot/booth_cos/io_dout[2] (booth2_0)                     0.00       2.78 r
+  dot/U302/Y (oa2i2)                                      0.21       2.99 f
+  dot/psum2_reg_0_/D (fdf2a3)                             0.00       2.99 f
+  data arrival time                                                  2.99
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/psum2_reg_0_/CLK (fdf2a3)                           0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -2.99
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.50
+
+
+  Startpoint: dot/booth_cos/shiftReg_reg_4_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum2_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_0           5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_cos/shiftReg_reg_4_/CLK (fdf2a3)              0.00       2.00 r
+  dot/booth_cos/shiftReg_reg_4_/Q (fdf2a3)                0.78       2.78 r
+  dot/booth_cos/io_dout[3] (booth2_0)                     0.00       2.78 r
+  dot/U307/Y (oa2i2)                                      0.21       2.99 f
+  dot/psum2_reg_1_/D (fdf2a3)                             0.00       2.99 f
+  data arrival time                                                  2.99
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/psum2_reg_1_/CLK (fdf2a3)                           0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -2.99
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.50
+
+
+  Startpoint: dot/booth_sin/shiftReg_reg_4_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_1           5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_sin/shiftReg_reg_4_/CLK (fdf2a3)              0.00       2.00 r
+  dot/booth_sin/shiftReg_reg_4_/Q (fdf2a3)                0.78       2.78 r
+  dot/booth_sin/io_dout[3] (booth2_1)                     0.00       2.78 r
+  dot/U348/Y (oa2i2)                                      0.21       2.99 f
+  dot/psum1_reg_1_/D (fdf2a3)                             0.00       2.99 f
+  data arrival time                                                  2.99
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/psum1_reg_1_/CLK (fdf2a3)                           0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -2.99
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.50
+
+
+  Startpoint: dot/booth_sin/shiftReg_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/psum1_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_1           5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_sin/shiftReg_reg_3_/CLK (fdf2a3)              0.00       2.00 r
+  dot/booth_sin/shiftReg_reg_3_/Q (fdf2a3)                0.78       2.78 r
+  dot/booth_sin/io_dout[2] (booth2_1)                     0.00       2.78 r
+  dot/U344/Y (oa2i2)                                      0.21       2.99 f
+  dot/psum1_reg_0_/D (fdf2a3)                             0.00       2.99 f
+  data arrival time                                                  2.99
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/psum1_reg_0_/CLK (fdf2a3)                           0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -2.99
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.50
+
+
+  Startpoint: cordic/cal_en_regNext_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cordic/nozero_flg_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  cordic_int         5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  cordic/cal_en_regNext_reg/CLK (fdf2a3)                  0.00       2.00 r
+  cordic/cal_en_regNext_reg/Q (fdf2a3)                    0.72       2.72 f
+  cordic/U303/Y (inv1a3)                                  0.13       2.85 r
+  cordic/nozero_flg_reg/E (fdef3a6)                       0.00       2.85 r
+  data arrival time                                                  2.85
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  cordic/nozero_flg_reg/CLK (fdef3a6)                     0.00       3.00 r
+  library hold time                                       0.33       3.33
+  data required time                                                 3.33
+  --------------------------------------------------------------------------
+  data required time                                                 3.33
+  data arrival time                                                 -2.85
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.48
+
+
+  Startpoint: dot/mac_en_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/mac_cnt_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_en_reg/CLK (fdf2a3)              0.00       2.00 r
+  dot/mac_en_reg/Q (fdf2a3)                0.71       2.71 f
+  dot/U79/Y (inv1a3)                       0.20       2.91 r
+  dot/U171/Y (and2c3)                      0.10       3.01 f
+  dot/mac_cnt_reg_2_/D (fdf2a3)            0.00       3.01 f
+  data arrival time                                   3.01
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  clock uncertainty                        1.00       3.00
+  dot/mac_cnt_reg_2_/CLK (fdf2a3)          0.00       3.00 r
+  library hold time                        0.49       3.49
+  data required time                                  3.49
+  -----------------------------------------------------------
+  data required time                                  3.49
+  data arrival time                                  -3.01
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.48
+
+
+  Startpoint: dot/booth_sin/shiftReg_reg_4_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_sin/shiftReg_reg_3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_1           5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_sin/shiftReg_reg_4_/CLK (fdf2a3)              0.00       2.00 r
+  dot/booth_sin/shiftReg_reg_4_/Q (fdf2a3)                0.78       2.78 r
+  dot/booth_sin/U77/Y (ao4a3)                             0.24       3.02 r
+  dot/booth_sin/shiftReg_reg_3_/D (fdf2a3)                0.00       3.02 r
+  data arrival time                                                  3.02
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_sin/shiftReg_reg_3_/CLK (fdf2a3)              0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -3.02
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.47
+
+
+  Startpoint: dot/booth_sin/shiftReg_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_sin/shiftReg_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_1           5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_sin/shiftReg_reg_3_/CLK (fdf2a3)              0.00       2.00 r
+  dot/booth_sin/shiftReg_reg_3_/Q (fdf2a3)                0.78       2.78 r
+  dot/booth_sin/U76/Y (ao4a3)                             0.24       3.02 r
+  dot/booth_sin/shiftReg_reg_2_/D (fdf2a3)                0.00       3.02 r
+  data arrival time                                                  3.02
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_sin/shiftReg_reg_2_/CLK (fdf2a3)              0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -3.02
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.47
+
+
+  Startpoint: dot/booth_cos/shiftReg_reg_4_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_cos/shiftReg_reg_3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_0           5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_cos/shiftReg_reg_4_/CLK (fdf2a3)              0.00       2.00 r
+  dot/booth_cos/shiftReg_reg_4_/Q (fdf2a3)                0.78       2.78 r
+  dot/booth_cos/U77/Y (ao4a3)                             0.24       3.02 r
+  dot/booth_cos/shiftReg_reg_3_/D (fdf2a3)                0.00       3.02 r
+  data arrival time                                                  3.02
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_cos/shiftReg_reg_3_/CLK (fdf2a3)              0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -3.02
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.47
+
+
+  Startpoint: dot/booth_cos/shiftReg_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_cos/shiftReg_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_0           5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_cos/shiftReg_reg_3_/CLK (fdf2a3)              0.00       2.00 r
+  dot/booth_cos/shiftReg_reg_3_/Q (fdf2a3)                0.78       2.78 r
+  dot/booth_cos/U76/Y (ao4a3)                             0.24       3.02 r
+  dot/booth_cos/shiftReg_reg_2_/D (fdf2a3)                0.00       3.02 r
+  data arrival time                                                  3.02
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_cos/shiftReg_reg_2_/CLK (fdf2a3)              0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -3.02
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.47
+
+
+  Startpoint: calvn/v_cnt_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: calvn/v_cnt_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  calvn/v_cnt_reg_0_/CLK (fdf2a3)          0.00       2.00 r
+  calvn/v_cnt_reg_0_/Q (fdf2a3)            0.91       2.91 r
+  calvn/U98/Y (and2c3)                     0.12       3.02 f
+  calvn/v_cnt_reg_0_/D (fdf2a3)            0.00       3.02 f
+  data arrival time                                   3.02
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  clock uncertainty                        1.00       3.00
+  calvn/v_cnt_reg_0_/CLK (fdf2a3)          0.00       3.00 r
+  library hold time                        0.49       3.49
+  data required time                                  3.49
+  -----------------------------------------------------------
+  data required time                                  3.49
+  data arrival time                                  -3.02
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.47
+
+
+  Startpoint: calvn/v_cnt_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: calvn/v_cnt_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_vn             5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  calvn/v_cnt_reg_2_/CLK (fdf2a3)          0.00       2.00 r
+  calvn/v_cnt_reg_2_/Q (fdf2a3)            0.83       2.83 r
+  calvn/U252/Y (oa2i2)                     0.20       3.03 f
+  calvn/v_cnt_reg_2_/D (fdf2a3)            0.00       3.03 f
+  data arrival time                                   3.03
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  clock uncertainty                        1.00       3.00
+  calvn/v_cnt_reg_2_/CLK (fdf2a3)          0.00       3.00 r
+  library hold time                        0.49       3.49
+  data required time                                  3.49
+  -----------------------------------------------------------
+  data required time                                  3.49
+  data arrival time                                  -3.03
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.46
+
+
+  Startpoint: dot/booth_sin/cal_en_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_sin/cal_cnt_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  booth2_1           5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_sin/cal_en_reg/CLK (fdf2a3)                   0.00       2.00 r
+  dot/booth_sin/cal_en_reg/Q (fdf2a3)                     0.73       2.73 f
+  dot/booth_sin/U41/Y (ao2i1)                             0.17       2.90 r
+  dot/booth_sin/U42/Y (inv1a1)                            0.15       3.05 f
+  dot/booth_sin/cal_cnt_reg_1_/D (fdf2a3)                 0.00       3.05 f
+  data arrival time                                                  3.05
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_sin/cal_cnt_reg_1_/CLK (fdf2a3)               0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -3.05
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.44
+
+
+  Startpoint: dot/booth_cos/cal_en_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_cos/cal_cnt_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  booth2_0           5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_cos/cal_en_reg/CLK (fdf2a3)                   0.00       2.00 r
+  dot/booth_cos/cal_en_reg/Q (fdf2a3)                     0.73       2.73 f
+  dot/booth_cos/U39/Y (ao2i1)                             0.17       2.90 r
+  dot/booth_cos/U40/Y (inv1a1)                            0.15       3.05 f
+  dot/booth_cos/cal_cnt_reg_1_/D (fdf2a3)                 0.00       3.05 f
+  data arrival time                                                  3.05
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_cos/cal_cnt_reg_1_/CLK (fdf2a3)               0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -3.05
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.44
+
+
+  Startpoint: dot/mac_en_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/mac_cnt_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cal_phase          5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  dot/mac_en_reg/CLK (fdf2a3)              0.00       2.00 r
+  dot/mac_en_reg/Q (fdf2a3)                0.71       2.71 f
+  dot/U79/Y (inv1a3)                       0.20       2.91 r
+  dot/U130/Y (oa1f1)                       0.14       3.06 f
+  dot/mac_cnt_reg_1_/D (fdf2a3)            0.00       3.06 f
+  data arrival time                                   3.06
+
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              2.00       2.00
+  clock uncertainty                        1.00       3.00
+  dot/mac_cnt_reg_1_/CLK (fdf2a3)          0.00       3.00 r
+  library hold time                        0.49       3.49
+  data required time                                  3.49
+  -----------------------------------------------------------
+  data required time                                  3.49
+  data arrival time                                  -3.06
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.43
+
+
+  Startpoint: dot/booth_cos/shiftReg_reg_8_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_cos/shiftReg_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_0           5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_cos/shiftReg_reg_8_/CLK (fdf2a3)              0.00       2.00 r
+  dot/booth_cos/shiftReg_reg_8_/Q (fdf2a3)                0.82       2.82 r
+  dot/booth_cos/U81/Y (ao4a3)                             0.24       3.06 r
+  dot/booth_cos/shiftReg_reg_7_/D (fdf2a3)                0.00       3.06 r
+  data arrival time                                                  3.06
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_cos/shiftReg_reg_7_/CLK (fdf2a3)              0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -3.06
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.43
+
+
+  Startpoint: dot/booth_cos/shiftReg_reg_7_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_cos/shiftReg_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_0           5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_cos/shiftReg_reg_7_/CLK (fdf2a3)              0.00       2.00 r
+  dot/booth_cos/shiftReg_reg_7_/Q (fdf2a3)                0.82       2.82 r
+  dot/booth_cos/U80/Y (ao4a3)                             0.24       3.06 r
+  dot/booth_cos/shiftReg_reg_6_/D (fdf2a3)                0.00       3.06 r
+  data arrival time                                                  3.06
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_cos/shiftReg_reg_6_/CLK (fdf2a3)              0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -3.06
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.43
+
+
+  Startpoint: dot/booth_cos/shiftReg_reg_6_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_cos/shiftReg_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_0           5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_cos/shiftReg_reg_6_/CLK (fdf2a3)              0.00       2.00 r
+  dot/booth_cos/shiftReg_reg_6_/Q (fdf2a3)                0.82       2.82 r
+  dot/booth_cos/U79/Y (ao4a3)                             0.24       3.06 r
+  dot/booth_cos/shiftReg_reg_5_/D (fdf2a3)                0.00       3.06 r
+  data arrival time                                                  3.06
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_cos/shiftReg_reg_5_/CLK (fdf2a3)              0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -3.06
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.43
+
+
+  Startpoint: dot/booth_cos/shiftReg_reg_5_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dot/booth_cos/shiftReg_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  booth2_0           5KGATES               ssc_core_slow
+  dotVn_2            5KGATES               ssc_core_slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  dot/booth_cos/shiftReg_reg_5_/CLK (fdf2a3)              0.00       2.00 r
+  dot/booth_cos/shiftReg_reg_5_/Q (fdf2a3)                0.82       2.82 r
+  dot/booth_cos/U78/Y (ao4a3)                             0.24       3.06 r
+  dot/booth_cos/shiftReg_reg_4_/D (fdf2a3)                0.00       3.06 r
+  data arrival time                                                  3.06
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             2.00       2.00
+  clock uncertainty                                       1.00       3.00
+  dot/booth_cos/shiftReg_reg_4_/CLK (fdf2a3)              0.00       3.00 r
+  library hold time                                       0.49       3.49
+  data required time                                                 3.49
+  --------------------------------------------------------------------------
+  data required time                                                 3.49
+  data arrival time                                                 -3.06
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.43
+
+
+1

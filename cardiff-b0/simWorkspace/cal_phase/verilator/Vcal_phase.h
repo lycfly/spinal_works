@@ -124,6 +124,7 @@ VL_MODULE(Vcal_phase) {
     static void traceFullSub0(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
     static void traceFullTop0(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
     static void traceInitSub0(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
+    static void traceInitSub1(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
     static void traceInitTop(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
     void traceRegister(VerilatedVcd* tracep) VL_ATTR_COLD;
     static void traceInit(void* userp, VerilatedVcd* tracep, uint32_t code) VL_ATTR_COLD;

@@ -1,0 +1,76 @@
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Dec 21 17:48:38 2021
+****************************************
+
+
+Library(s) Used:
+
+    ssc_core_slow (File: /mnt/mydata/spinal_works/18um/Technology/TSMC/core/synopsys/db/nopower/core_slow.db)
+
+Information: The cells in your design are not characterized for internal power. (PWR-229)
+
+Operating Conditions: slow_125_1.62   Library: ssc_core_slow
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+cal_phase              5KGATES           ssc_core_slow
+cal_vn                 5KGATES           ssc_core_slow
+dotVn_2                5KGATES           ssc_core_slow
+cordic_int             5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_10
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_9
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_7
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_4
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_3
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_2
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cal_vn_1
+                       5KGATES           ssc_core_slow
+booth2_1               5KGATES           ssc_core_slow
+booth2_0               5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_dotVn_2
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cordic_int_0
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cordic_int_2
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_cordic_int_1
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_booth2_0_1
+                       5KGATES           ssc_core_slow
+SNPS_CLOCK_GATE_HIGH_booth2_0_0
+                       5KGATES           ssc_core_slow
+
+
+Global Operating Voltage = 1.62 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = Unitless
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+cal_phase                                 0.241    0.000    0.000    0.241 100.0
+  cordic (cordic_int)                  1.03e-02    0.000    0.000 1.03e-02   4.3
+  dot (dotVn_2)                        5.18e-02    0.000    0.000 5.18e-02  21.5
+    booth_cos (booth2_0)               1.66e-02    0.000    0.000 1.66e-02   6.9
+    booth_sin (booth2_1)               1.67e-02    0.000    0.000 1.67e-02   6.9
+  calvn (cal_vn)                          0.159    0.000    0.000    0.159  66.1
+1

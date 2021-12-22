@@ -1,0 +1,56 @@
+ 
+****************************************
+Report : cell
+Design : cal_phase
+Version: L-2016.03-SP1
+Date   : Tue Dec 21 17:48:37 2021
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U6                        inv1a9          ssc_core_slow   15.050000 
+U7                        inv1a3          ssc_core_slow   7.530000  
+U8                        clk1b6          ssc_core_slow   10.040000 
+U9                        inv1a9          ssc_core_slow   15.050000 
+U10                       clk1a3          ssc_core_slow   10.040000 
+U11                       clk1a3          ssc_core_slow   10.040000 
+U12                       clk1a3          ssc_core_slow   10.040000 
+U13                       inv1a15         ssc_core_slow   20.070000 
+U14                       inv1a3          ssc_core_slow   7.530000  
+U15                       inv1a15         ssc_core_slow   20.070000 
+U16                       inv1a9          ssc_core_slow   15.050000 
+U17                       inv1a9          ssc_core_slow   15.050000 
+U18                       clk1b6          ssc_core_slow   10.040000 
+U19                       inv1a9          ssc_core_slow   15.050000 
+U20                       clk1a3          ssc_core_slow   10.040000 
+U21                       clk1a3          ssc_core_slow   10.040000 
+U22                       clk1a3          ssc_core_slow   10.040000 
+U23                       clk1a3          ssc_core_slow   10.040000 
+U24                       clk1a3          ssc_core_slow   10.040000 
+U25                       clk1a3          ssc_core_slow   10.040000 
+U26                       clk1a3          ssc_core_slow   10.040000 
+U27                       clk1a3          ssc_core_slow   10.040000 
+U28                       clk1a3          ssc_core_slow   10.040000 
+U29                       inv1a3          ssc_core_slow   7.530000  
+U30                       inv1a1          ssc_core_slow   5.020000  
+U31                       inv1a3          ssc_core_slow   7.530000  
+U32                       inv1a3          ssc_core_slow   7.530000  
+U33                       inv1a3          ssc_core_slow   7.530000  
+U34                       inv1a3          ssc_core_slow   7.530000  
+U36                       mx2a1           ssc_core_slow   20.070000 
+calvn                     cal_vn                          9126.669977
+                                                                    h, n
+cordic                    cordic_int                      13577.700020
+                                                                    h, n
+dot                       dotVn_2                         13843.629996
+                                                                    h, n
+--------------------------------------------------------------------------------
+Total 33 cells                                            36881.749995
+1

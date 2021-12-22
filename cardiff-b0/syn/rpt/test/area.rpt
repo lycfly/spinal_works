@@ -3,55 +3,61 @@
 Report : area
 Design : cal_phase
 Version: L-2016.03-SP1
-Date   : Wed Dec 15 15:23:35 2021
+Date   : Tue Dec 21 17:29:46 2021
 ****************************************
 
 Library(s) Used:
 
     ssc_core_slow (File: /mnt/mydata/spinal_works/18um/Technology/TSMC/core/synopsys/db/nopower/core_slow.db)
 
-Number of ports:                          711
-Number of nets:                          3221
-Number of cells:                         2449
-Number of combinational cells:           2243
-Number of sequential cells:               191
-Number of macros/black boxes:               1
-Number of buf/inv:                        465
-Number of references:                      11
+Number of ports:                          788
+Number of nets:                          3025
+Number of cells:                         2161
+Number of combinational cells:           1893
+Number of sequential cells:               239
+Number of macros/black boxes:              11
+Number of buf/inv:                        404
+Number of references:                      13
 
-Combinational area:              32824.159933
-Buf/Inv area:                     3425.640016
-Noncombinational area:            9956.680029
-Macro/Black Box area:               35.119999
+Combinational area:              29308.639896
+Buf/Inv area:                     3197.110005
+Noncombinational area:           12309.680052
+Macro/Black Box area:              386.319988
 Net Interconnect area:      undefined  (Wire load has zero net area)
 
-Total cell area:                 42815.959960
+Total cell area:                 42004.639936
 Total area:                 undefined
 
 Hierarchical area distribution
 ------------------------------
 
-                                  Global cell area            Local cell area
-                                  -------------------  ------------------------------ 
-Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-  Black-
-                                  Total       Total    national    national   boxes    Design
---------------------------------  ----------  -------  ----------  ---------  -------  ---------------------------------
-cal_phase                         42815.9600    100.0    451.7300     0.0000   0.0000  cal_phase
-calvn                              9420.3700     22.0   4731.8300  4372.4400  35.1200  cal_vn
-calvn/clk_gate_Vins_1_reg            40.1400      0.1     12.5400    27.6000   0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_2
-calvn/clk_gate_Vins_3_reg            40.1400      0.1     12.5400    27.6000   0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_3
-calvn/clk_gate_Vins_4_reg            40.1400      0.1     12.5400    27.6000   0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_4
-calvn/clk_gate_Vins_6_reg            40.1400      0.1     12.5400    27.6000   0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_7
-calvn/clk_gate_max_v_reg             40.1400      0.1     12.5400    27.6000   0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_9
-calvn/clk_gate_min_v_reg             40.1400      0.1     12.5400    27.6000   0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_10
-calvn/clk_gate_v_cnt_reg             40.1400      0.1     12.5400    27.6000   0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_1
-cordic                            12556.7700     29.3   9571.5500  2864.8000   0.0000  cordic_int
-cordic/clk_gate_cal_cnt_reg          40.1400      0.1     12.5400    27.6000   0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_0
-cordic/clk_gate_res_rg_reg           40.1400      0.1     12.5400    27.6000   0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_2
-cordic/clk_gate_yn_reg               40.1400      0.1     12.5400    27.6000   0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_1
-dot                               20387.0899     47.6  17931.1099  2415.8400   0.0000  dotVn_2
-dot/clk_gate_psum2_reg               40.1400      0.1     12.5400    27.6000   0.0000  SNPS_CLOCK_GATE_HIGH_dotVn_2
---------------------------------  ----------  -------  ----------  ---------  -------  ---------------------------------
-Total                                                  32824.1599  9956.6800  35.1200
+                                  Global cell area             Local cell area
+                                  -------------------  -------------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes     Design
+--------------------------------  ----------  -------  ----------  ----------  --------  ---------------------------------
+cal_phase                         42004.6399    100.0    381.4200      0.0000    0.0000  cal_phase
+calvn                              9357.6300     22.3   4616.4100   4425.1200   35.1200  cal_vn
+calvn/clk_gate_Vins_0_reg            40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_1
+calvn/clk_gate_Vins_2_reg            40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_3
+calvn/clk_gate_Vins_4_reg            40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_4
+calvn/clk_gate_Vins_6_reg            40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_7
+calvn/clk_gate_max_v_reg             40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_9
+calvn/clk_gate_min_v_reg             40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_10
+calvn/clk_gate_v_cnt_reg             40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cal_vn_2
+cordic                            13698.1200     32.6  10171.0200   3406.6800    0.0000  cordic_int
+cordic/clk_gate_res_out_reg          40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_1
+cordic/clk_gate_res_rg_reg           40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_2
+cordic/clk_gate_yn_reg               40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_cordic_int_0
+dot                               18567.4699     44.2   6623.1400   2322.9400  351.2000  dotVn_2
+dot/booth_cos                      4608.7500     11.0   3670.5400    898.0700    0.0000  signMul_0
+dot/booth_cos/clk_gate_PsumReg_reg
+                                     40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_signMul_0_0
+dot/booth_sin                      4621.3000     11.0   3683.0900    898.0700    0.0000  signMul_1
+dot/booth_sin/clk_gate_PsumReg_reg
+                                     40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_signMul_0_1
+dot/clk_gate_psum2_reg               40.1400      0.1     12.5400     27.6000    0.0000  SNPS_CLOCK_GATE_HIGH_dotVn_2
+--------------------------------  ----------  -------  ----------  ----------  --------  ---------------------------------
+Total                                                  29308.6399  12309.6801  386.3200
 
 1
