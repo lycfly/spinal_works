@@ -39,14 +39,16 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__6(Vcal_phase_
         = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__min_v;
     vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__max_v 
         = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__max_v;
-    vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__v_cnt 
-        = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt;
     vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_cos__DOT__cal_en 
         = vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_en;
     vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_cos__DOT__cal_cnt 
         = vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_cnt;
+    vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__v_cnt 
+        = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt;
     vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_sin__DOT__cal_cnt 
         = vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_cnt;
+    vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__mac_cnt 
+        = vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt;
     vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_sin__DOT__cal_en 
         = vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_en;
     vlSymsp->TOP__cal_phase.__Vdly__cordic__DOT__nozero_flg 
@@ -59,8 +61,6 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__6(Vcal_phase_
         = vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__xn;
     vlSymsp->TOP__cal_phase.__Vdly__cordic__DOT__cal_cnt 
         = vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_cnt;
-    vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__mac_cnt 
-        = vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt;
     if (vlTOPp->reset) {
         vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__res_out = 0U;
         vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__finish = 0U;
@@ -288,13 +288,13 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__7(Vcal_phase_
         if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_start) {
             vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_cos__DOT__cal_en = 1U;
         } else {
-            if ((3U == (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_cnt))) {
+            if ((7U == (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_cnt))) {
                 vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_cos__DOT__cal_en = 0U;
             }
         }
         if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_en) {
             vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_cos__DOT__cal_cnt 
-                = (3U & ((IData)(1U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_cnt)));
+                = (7U & ((IData)(1U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_cnt)));
         } else {
             if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_start) {
                 vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_cos__DOT__cal_cnt = 0U;
@@ -307,7 +307,7 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__7(Vcal_phase_
         } else {
             if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_en) {
                 vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
-                    = (0x3ffffU & VL_SHIFTRS_III(18,18,32, vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT___zz_2, 2U));
+                    = (0x1ffffU & VL_SHIFTRS_III(17,17,32, vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT___zz_2, 1U));
             }
         }
     }
@@ -319,13 +319,13 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__7(Vcal_phase_
         if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_start) {
             vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_sin__DOT__cal_en = 1U;
         } else {
-            if ((3U == (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_cnt))) {
+            if ((7U == (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_cnt))) {
                 vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_sin__DOT__cal_en = 0U;
             }
         }
         if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_en) {
             vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_sin__DOT__cal_cnt 
-                = (3U & ((IData)(1U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_cnt)));
+                = (7U & ((IData)(1U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_cnt)));
         } else {
             if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_start) {
                 vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_sin__DOT__cal_cnt = 0U;
@@ -338,7 +338,7 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__7(Vcal_phase_
         } else {
             if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_en) {
                 vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
-                    = (0x3ffffU & VL_SHIFTRS_III(18,18,32, vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT___zz_2, 2U));
+                    = (0x1ffffU & VL_SHIFTRS_III(17,17,32, vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT___zz_2, 1U));
             }
         }
     }
@@ -715,68 +715,41 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_combo__TOP__cal_phase__9(Vcal_phase__S
         = ((IData)(vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_cnt) 
            == (7U & ((IData)(vlTOPp->rg_cordic_iternum) 
                      - (IData)(1U))));
-    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__PositiveB 
-        = ((0x100U & (((4U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                        ? ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                            ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                ? (IData)(vlTOPp->rg_sin_table_7)
-                                : (IData)(vlTOPp->rg_sin_table_6))
-                            : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                ? (IData)(vlTOPp->rg_sin_table_5)
-                                : (IData)(vlTOPp->rg_sin_table_4)))
-                        : ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                            ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                ? (IData)(vlTOPp->rg_sin_table_3)
-                                : (IData)(vlTOPp->rg_sin_table_2))
-                            : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                ? (IData)(vlTOPp->rg_sin_table_1)
-                                : (IData)(vlTOPp->rg_sin_table_0)))) 
-                      << 1U)) | ((4U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                  ? ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                      ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                          ? (IData)(vlTOPp->rg_sin_table_7)
-                                          : (IData)(vlTOPp->rg_sin_table_6))
-                                      : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                          ? (IData)(vlTOPp->rg_sin_table_5)
-                                          : (IData)(vlTOPp->rg_sin_table_4)))
-                                  : ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                      ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                          ? (IData)(vlTOPp->rg_sin_table_3)
-                                          : (IData)(vlTOPp->rg_sin_table_2))
-                                      : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                          ? (IData)(vlTOPp->rg_sin_table_1)
-                                          : (IData)(vlTOPp->rg_sin_table_0)))));
-    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__PositiveB 
-        = ((0x100U & (((4U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                        ? ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                            ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                ? (IData)(vlTOPp->rg_cos_table_7)
-                                : (IData)(vlTOPp->rg_cos_table_6))
-                            : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                ? (IData)(vlTOPp->rg_cos_table_5)
-                                : (IData)(vlTOPp->rg_cos_table_4)))
-                        : ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                            ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                ? (IData)(vlTOPp->rg_cos_table_3)
-                                : (IData)(vlTOPp->rg_cos_table_2))
-                            : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                ? (IData)(vlTOPp->rg_cos_table_1)
-                                : (IData)(vlTOPp->rg_cos_table_0)))) 
-                      << 1U)) | ((4U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                  ? ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                      ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                          ? (IData)(vlTOPp->rg_cos_table_7)
-                                          : (IData)(vlTOPp->rg_cos_table_6))
-                                      : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                          ? (IData)(vlTOPp->rg_cos_table_5)
-                                          : (IData)(vlTOPp->rg_cos_table_4)))
-                                  : ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                      ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                          ? (IData)(vlTOPp->rg_cos_table_3)
-                                          : (IData)(vlTOPp->rg_cos_table_2))
-                                      : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                                          ? (IData)(vlTOPp->rg_cos_table_1)
-                                          : (IData)(vlTOPp->rg_cos_table_0)))));
+    if ((4U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))) {
+        vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_5 
+            = ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                    ? (IData)(vlTOPp->rg_sin_table_7)
+                    : (IData)(vlTOPp->rg_sin_table_6))
+                : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                    ? (IData)(vlTOPp->rg_sin_table_5)
+                    : (IData)(vlTOPp->rg_sin_table_4)));
+        vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_6 
+            = ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                    ? (IData)(vlTOPp->rg_cos_table_7)
+                    : (IData)(vlTOPp->rg_cos_table_6))
+                : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                    ? (IData)(vlTOPp->rg_cos_table_5)
+                    : (IData)(vlTOPp->rg_cos_table_4)));
+    } else {
+        vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_5 
+            = ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                    ? (IData)(vlTOPp->rg_sin_table_3)
+                    : (IData)(vlTOPp->rg_sin_table_2))
+                : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                    ? (IData)(vlTOPp->rg_sin_table_1)
+                    : (IData)(vlTOPp->rg_sin_table_0)));
+        vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_6 
+            = ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                    ? (IData)(vlTOPp->rg_cos_table_3)
+                    : (IData)(vlTOPp->rg_cos_table_2))
+                : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                    ? (IData)(vlTOPp->rg_cos_table_1)
+                    : (IData)(vlTOPp->rg_cos_table_0)));
+    }
     vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__data_load_finish 
         = ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
            == (7U & ((IData)(vlTOPp->valid_num) - (IData)(1U))));
@@ -790,18 +763,30 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_combo__TOP__cal_phase__9(Vcal_phase__S
                                  << 1U)) | (IData)(vlTOPp->vin2)) 
                      - ((0x100U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_14) 
                                    << 1U)) | (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_14))));
-    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__AddB 
-        = (0x1ffU & ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
-                      >> 9U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__PositiveB)));
-    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__MinusB 
-        = (0x1ffU & ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
-                      >> 9U) + (- (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__PositiveB))));
-    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__AddB 
-        = (0x1ffU & ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
-                      >> 9U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__PositiveB)));
-    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__MinusB 
-        = (0x1ffU & ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
-                      >> 9U) + (- (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__PositiveB))));
+    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT___zz_2 
+        = ((0x1fe00U & ((((0U == (3U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)) 
+                          | (3U == (3U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)))
+                          ? (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
+                             >> 9U) : ((2U == (3U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg))
+                                        ? ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
+                                            >> 9U) 
+                                           + (- (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_5)))
+                                        : ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
+                                            >> 9U) 
+                                           + (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_5)))) 
+                        << 9U)) | (0x1ffU & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg));
+    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT___zz_2 
+        = ((0x1fe00U & ((((0U == (3U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)) 
+                          | (3U == (3U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)))
+                          ? (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
+                             >> 9U) : ((2U == (3U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg))
+                                        ? ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
+                                            >> 9U) 
+                                           + (- (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_6)))
+                                        : ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
+                                            >> 9U) 
+                                           + (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_6)))) 
+                        << 9U)) | (0x1ffU & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg));
     vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_8 
         = (0xffU & ((0x100U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_7))
                      ? ((3U != (3U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_7) 
@@ -816,54 +801,4 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_combo__TOP__cal_phase__9(Vcal_phase__S
                          : (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_11))
                      : ((0x80U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_11))
                          ? 0x7fU : (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_11))));
-    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT___zz_2 
-        = ((0x3fe00U & (((4U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
-                          ? ((2U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
-                              ? ((1U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
-                                  ? (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
-                                     >> 9U) : (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__MinusB))
-                              : ((1U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
-                                  ? (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__MinusB)
-                                  : ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
-                                      >> 9U) + ((- (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__PositiveB)) 
-                                                << 1U))))
-                          : ((2U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
-                              ? ((1U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
-                                  ? ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
-                                      >> 9U) + ((IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__PositiveB) 
-                                                << 1U))
-                                  : (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__AddB))
-                              : ((1U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
-                                  ? (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__AddB)
-                                  : (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
-                                     >> 9U)))) << 9U)) 
-           | (0x1ffU & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg));
-}
-
-VL_INLINE_OPT void Vcal_phase_cal_phase::_combo__TOP__cal_phase__10(Vcal_phase__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+      Vcal_phase_cal_phase::_combo__TOP__cal_phase__10\n"); );
-    Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Body
-    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT___zz_2 
-        = ((0x3fe00U & (((4U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
-                          ? ((2U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
-                              ? ((1U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
-                                  ? (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
-                                     >> 9U) : (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__MinusB))
-                              : ((1U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
-                                  ? (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__MinusB)
-                                  : ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
-                                      >> 9U) + ((- (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__PositiveB)) 
-                                                << 1U))))
-                          : ((2U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
-                              ? ((1U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
-                                  ? ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
-                                      >> 9U) + ((IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__PositiveB) 
-                                                << 1U))
-                                  : (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__AddB))
-                              : ((1U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
-                                  ? (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__AddB)
-                                  : (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
-                                     >> 9U)))) << 9U)) 
-           | (0x1ffU & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg));
 }

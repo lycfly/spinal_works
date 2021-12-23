@@ -80,6 +80,8 @@ VL_MODULE(Vcal_phase_cal_phase) {
         CData/*0:0*/ __PVT__calvn__DOT__mean_finish_regNext;
         CData/*7:0*/ __PVT__calvn__DOT___zz_8;
         CData/*7:0*/ __PVT__calvn__DOT___zz_12;
+        CData/*7:0*/ __PVT__dot__DOT___zz_5;
+        CData/*7:0*/ __PVT__dot__DOT___zz_6;
         CData/*0:0*/ __PVT__dot__DOT__booth_sin_io_dout_vld;
         CData/*7:0*/ __PVT__dot__DOT__vin_minus_mean;
         CData/*2:0*/ __PVT__dot__DOT__mac_cnt;
@@ -87,10 +89,10 @@ VL_MODULE(Vcal_phase_cal_phase) {
         CData/*0:0*/ __PVT__dot__DOT__mac_start;
         CData/*0:0*/ __PVT__dot__DOT__finish;
         CData/*0:0*/ __PVT__dot__DOT__booth_start;
-        CData/*1:0*/ __PVT__dot__DOT__booth_sin__DOT__cal_cnt;
+        CData/*2:0*/ __PVT__dot__DOT__booth_sin__DOT__cal_cnt;
         CData/*0:0*/ __PVT__dot__DOT__booth_sin__DOT__cal_en;
         CData/*0:0*/ __PVT__dot__DOT__booth_sin__DOT__cal_en_regNext;
-        CData/*1:0*/ __PVT__dot__DOT__booth_cos__DOT__cal_cnt;
+        CData/*2:0*/ __PVT__dot__DOT__booth_cos__DOT__cal_cnt;
         CData/*0:0*/ __PVT__dot__DOT__booth_cos__DOT__cal_en;
         CData/*0:0*/ __PVT__dot__DOT__booth_cos__DOT__cal_en_regNext;
         CData/*6:0*/ __PVT__cordic__DOT___zz_7;
@@ -109,26 +111,20 @@ VL_MODULE(Vcal_phase_cal_phase) {
         SData/*8:0*/ __PVT__calvn__DOT___zz_11;
         SData/*15:0*/ __PVT__dot__DOT___zz_1;
         SData/*15:0*/ __PVT__dot__DOT___zz_2;
-        SData/*8:0*/ __PVT__dot__DOT__booth_sin__DOT__PositiveB;
-        SData/*8:0*/ __PVT__dot__DOT__booth_sin__DOT__AddB;
-        SData/*8:0*/ __PVT__dot__DOT__booth_sin__DOT__MinusB;
-        SData/*8:0*/ __PVT__dot__DOT__booth_cos__DOT__PositiveB;
-        SData/*8:0*/ __PVT__dot__DOT__booth_cos__DOT__AddB;
-        SData/*8:0*/ __PVT__dot__DOT__booth_cos__DOT__MinusB;
         SData/*10:0*/ __PVT__cordic__DOT__res_rg;
         SData/*9:0*/ __PVT__cordic__DOT__res_out;
         IData/*18:0*/ __PVT__dot__DOT__s1;
         IData/*18:0*/ __PVT__dot__DOT__s2;
         IData/*18:0*/ __PVT__dot__DOT__psum1;
         IData/*18:0*/ __PVT__dot__DOT__psum2;
-        IData/*17:0*/ __PVT__dot__DOT__booth_sin__DOT___zz_2;
-        IData/*17:0*/ __PVT__dot__DOT__booth_sin__DOT__shiftReg;
-    };
-    struct {
-        IData/*17:0*/ __PVT__dot__DOT__booth_cos__DOT___zz_2;
-        IData/*17:0*/ __PVT__dot__DOT__booth_cos__DOT__shiftReg;
+        IData/*16:0*/ __PVT__dot__DOT__booth_sin__DOT___zz_2;
+        IData/*16:0*/ __PVT__dot__DOT__booth_sin__DOT__shiftReg;
+        IData/*16:0*/ __PVT__dot__DOT__booth_cos__DOT___zz_2;
+        IData/*16:0*/ __PVT__dot__DOT__booth_cos__DOT__shiftReg;
         IData/*18:0*/ __PVT__cordic__DOT__xn;
         IData/*18:0*/ __PVT__cordic__DOT__yn;
+    };
+    struct {
         IData/*18:0*/ __PVT__cordic__DOT__x_ext;
         IData/*18:0*/ __PVT__cordic__DOT__y_ext;
         IData/*18:0*/ __PVT__cordic__DOT__xn_rightshift;
@@ -141,9 +137,9 @@ VL_MODULE(Vcal_phase_cal_phase) {
     CData/*7:0*/ __Vdly__calvn__DOT__max_v;
     CData/*7:0*/ __Vdly__calvn__DOT__min_v;
     CData/*2:0*/ __Vdly__dot__DOT__mac_cnt;
-    CData/*1:0*/ __Vdly__dot__DOT__booth_sin__DOT__cal_cnt;
+    CData/*2:0*/ __Vdly__dot__DOT__booth_sin__DOT__cal_cnt;
     CData/*0:0*/ __Vdly__dot__DOT__booth_sin__DOT__cal_en;
-    CData/*1:0*/ __Vdly__dot__DOT__booth_cos__DOT__cal_cnt;
+    CData/*2:0*/ __Vdly__dot__DOT__booth_cos__DOT__cal_cnt;
     CData/*0:0*/ __Vdly__dot__DOT__booth_cos__DOT__cal_en;
     CData/*2:0*/ __Vdly__cordic__DOT__cal_cnt;
     CData/*0:0*/ __Vdly__cordic__DOT__nozero_flg;
@@ -169,7 +165,6 @@ VL_MODULE(Vcal_phase_cal_phase) {
     // INTERNAL METHODS
     void __Vconfigure(Vcal_phase__Syms* symsp, bool first);
     static void _combo__TOP__cal_phase__1(Vcal_phase__Syms* __restrict vlSymsp);
-    static void _combo__TOP__cal_phase__10(Vcal_phase__Syms* __restrict vlSymsp);
     static void _combo__TOP__cal_phase__9(Vcal_phase__Syms* __restrict vlSymsp);
   private:
     void _ctor_var_reset() VL_ATTR_COLD;
