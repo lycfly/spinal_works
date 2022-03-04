@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.4.2    git head : 804c7bd7b7feaddcc1d25ecef6c208fd5f776f79
 // Component : cordic_int
-// Git hash  : deefa699849420e1dbdaa26347dab508ac586639
+// Git hash  : 917c4ceee242fb9011d09d0562a43f468673e9a6
 
 
 module cordic_int (
@@ -47,10 +47,16 @@ module cordic_int (
   reg        [2:0]    cal_cnt;
   reg                 cal_en;
   wire                cal_start;
+  wire                cal_start_delay;
   wire                cal_finish;
+  wire                normal_finish;
+  wire                early_finish1;
+  wire                early_finish2;
   reg                 finish;
   reg                 nozero_flg;
   reg                 cal_en_regNext;
+  reg                 cal_start_regNext;
+  reg                 nozero_flg_regNext;
   wire       [18:0]   xn_rightshift;
   wire       [18:0]   yn_rightshift;
   wire       [6:0]    _zz_5;
@@ -119,7 +125,11 @@ module cordic_int (
   assign x_ins = (- x_ext);
   assign y_ins = (- y_ext);
   assign cal_start = (cal_en && (! cal_en_regNext));
-  assign cal_finish = (cal_cnt == _zz_8);
+  assign cal_start_delay = cal_start_regNext;
+  assign cal_finish = (((rg_cordic_iternum == 3'b001) ? cal_start_delay : normal_finish) || early_finish1);
+  assign normal_finish = (cal_cnt == _zz_8);
+  assign early_finish1 = ((! nozero_flg) && nozero_flg_regNext);
+  assign early_finish2 = cal_start_delay;
   assign xn_rightshift = ($signed(xn) >>> cal_cnt);
   assign yn_rightshift = ($signed(yn) >>> cal_cnt);
   assign _zz_5 = _zz_7;
@@ -152,9 +162,11 @@ module cordic_int (
       finish <= 1'b0;
       nozero_flg <= 1'b1;
       cal_en_regNext <= 1'b0;
+      cal_start_regNext <= 1'b0;
       cal_finish_delay <= 1'b0;
     end else begin
       cal_en_regNext <= cal_en;
+      cal_start_regNext <= cal_start;
       if(en)begin
         if(vld)begin
           cal_en <= 1'b1;
@@ -215,6 +227,10 @@ module cordic_int (
         finish <= cal_finish_delay;
       end
     end
+  end
+
+  always @ (posedge clk) begin
+    nozero_flg_regNext <= nozero_flg;
   end
 
 

@@ -159,7 +159,7 @@ public:
     uint32_t timeCheck;
     bool waveEnabled;
     Vcal_phase top;
-    ISignalAccess *signalAccess[36];
+    ISignalAccess *signalAccess[44];
     #ifdef TRACE
 	  VerilatedVcdC tfp;
 	  #endif
@@ -183,30 +183,38 @@ public:
       signalAccess[9] = new CDataSignalAccess( top.rg_leakage_table_5 );
       signalAccess[10] = new CDataSignalAccess( top.rg_leakage_table_6 );
       signalAccess[11] = new CDataSignalAccess( top.rg_leakage_table_7 );
-      signalAccess[12] = new CDataSignalAccess( top.rg_sin_table_0 );
-      signalAccess[13] = new CDataSignalAccess( top.rg_sin_table_1 );
-      signalAccess[14] = new CDataSignalAccess( top.rg_sin_table_2 );
-      signalAccess[15] = new CDataSignalAccess( top.rg_sin_table_3 );
-      signalAccess[16] = new CDataSignalAccess( top.rg_sin_table_4 );
-      signalAccess[17] = new CDataSignalAccess( top.rg_sin_table_5 );
-      signalAccess[18] = new CDataSignalAccess( top.rg_sin_table_6 );
-      signalAccess[19] = new CDataSignalAccess( top.rg_sin_table_7 );
-      signalAccess[20] = new CDataSignalAccess( top.rg_cos_table_0 );
-      signalAccess[21] = new CDataSignalAccess( top.rg_cos_table_1 );
-      signalAccess[22] = new CDataSignalAccess( top.rg_cos_table_2 );
-      signalAccess[23] = new CDataSignalAccess( top.rg_cos_table_3 );
-      signalAccess[24] = new CDataSignalAccess( top.rg_cos_table_4 );
-      signalAccess[25] = new CDataSignalAccess( top.rg_cos_table_5 );
-      signalAccess[26] = new CDataSignalAccess( top.rg_cos_table_6 );
-      signalAccess[27] = new CDataSignalAccess( top.rg_cos_table_7 );
-      signalAccess[28] = new CDataSignalAccess( top.valid_num );
-      signalAccess[29] = new CDataSignalAccess( top.vin_vld );
-      signalAccess[30] = new CDataSignalAccess( top.vin1 );
-      signalAccess[31] = new CDataSignalAccess( top.vin2 );
-      signalAccess[32] = new CDataSignalAccess( top.phase_vld );
-      signalAccess[33] = new SDataSignalAccess( top.phase );
-      signalAccess[34] = new CDataSignalAccess( top.clk );
-      signalAccess[35] = new CDataSignalAccess( top.reset );
+      signalAccess[12] = new CDataSignalAccess( top.rg_ac_table_0 );
+      signalAccess[13] = new CDataSignalAccess( top.rg_ac_table_1 );
+      signalAccess[14] = new CDataSignalAccess( top.rg_ac_table_2 );
+      signalAccess[15] = new CDataSignalAccess( top.rg_ac_table_3 );
+      signalAccess[16] = new CDataSignalAccess( top.rg_ac_table_4 );
+      signalAccess[17] = new CDataSignalAccess( top.rg_ac_table_5 );
+      signalAccess[18] = new CDataSignalAccess( top.rg_ac_table_6 );
+      signalAccess[19] = new CDataSignalAccess( top.rg_ac_table_7 );
+      signalAccess[20] = new CDataSignalAccess( top.rg_sin_table_0 );
+      signalAccess[21] = new CDataSignalAccess( top.rg_sin_table_1 );
+      signalAccess[22] = new CDataSignalAccess( top.rg_sin_table_2 );
+      signalAccess[23] = new CDataSignalAccess( top.rg_sin_table_3 );
+      signalAccess[24] = new CDataSignalAccess( top.rg_sin_table_4 );
+      signalAccess[25] = new CDataSignalAccess( top.rg_sin_table_5 );
+      signalAccess[26] = new CDataSignalAccess( top.rg_sin_table_6 );
+      signalAccess[27] = new CDataSignalAccess( top.rg_sin_table_7 );
+      signalAccess[28] = new CDataSignalAccess( top.rg_cos_table_0 );
+      signalAccess[29] = new CDataSignalAccess( top.rg_cos_table_1 );
+      signalAccess[30] = new CDataSignalAccess( top.rg_cos_table_2 );
+      signalAccess[31] = new CDataSignalAccess( top.rg_cos_table_3 );
+      signalAccess[32] = new CDataSignalAccess( top.rg_cos_table_4 );
+      signalAccess[33] = new CDataSignalAccess( top.rg_cos_table_5 );
+      signalAccess[34] = new CDataSignalAccess( top.rg_cos_table_6 );
+      signalAccess[35] = new CDataSignalAccess( top.rg_cos_table_7 );
+      signalAccess[36] = new CDataSignalAccess( top.valid_num );
+      signalAccess[37] = new CDataSignalAccess( top.vin_vld );
+      signalAccess[38] = new CDataSignalAccess( top.vin1 );
+      signalAccess[39] = new CDataSignalAccess( top.vin2 );
+      signalAccess[40] = new CDataSignalAccess( top.phase_vld );
+      signalAccess[41] = new SDataSignalAccess( top.phase );
+      signalAccess[42] = new CDataSignalAccess( top.clk );
+      signalAccess[43] = new CDataSignalAccess( top.reset );
 
       #ifdef TRACE
       Verilated::traceEverOn(true);
@@ -217,7 +225,7 @@ public:
     }
 
     virtual ~Wrapper_1(){
-      for(int idx = 0;idx < 36;idx++){
+      for(int idx = 0;idx < 44;idx++){
           delete signalAccess[idx];
       }
 

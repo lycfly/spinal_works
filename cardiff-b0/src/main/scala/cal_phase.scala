@@ -12,21 +12,28 @@ class cal_phase (N: Int, SizeIn: Int, SizeCoeff: Int, SizeOut: Int) extends Comp
     val rg_calphase_en = in Bool()
     val rg_bypass_mean = in Bool()
     val rg_cordic_iternum = in UInt(3 bits)
-    val rg_leakage_table = in Vec(SInt(SizeIn bits), N)
+    val rg_leakage_table = in Vec(UInt(SizeIn bits), N)
+    val rg_ac_table = in Vec(UInt(2 bits), N)
     val rg_sin_table = in Vec(SInt(SizeIn bits), N)
     val rg_cos_table = in Vec(SInt(SizeIn bits), N)
     val valid_num = in UInt(3 bits)
 
     val vin_vld = in Bool()
-    val vin1 = in SInt(SizeIn bits)
-    val vin2 = in SInt(SizeIn bits)
+    val vin1 = in UInt(SizeIn bits)
+    val vin2 = in UInt(SizeIn bits)
 
     val phase_vld = out Bool()
     val phase = out SInt(SizeOut bits)
   }
   noIoPrefix()
   val logN = log2Up(N)
-
+  val vin1_reg = Reg(UInt(SizeIn bits)) init(0)
+  val vin2_reg = Reg(UInt(SizeIn bits)) init(0)
+  when(io.vin_vld){
+    vin1_reg := io.vin1
+    vin2_reg := io.vin2
+  }
+  val vin_vld_reg = RegNext(io.vin_vld, Bool(false))
   val calvn = new cal_vn(N = N, SizeIn = SizeIn)
   val dot = new dotVn_2 (N = N, SizeIn = SizeIn, SizeCoeff = SizeCoeff)
   val cordic = new cordic_int (SizeIn = SizeCoeff+SizeIn, SizeOut = SizeOut)
@@ -45,10 +52,11 @@ class cal_phase (N: Int, SizeIn: Int, SizeCoeff: Int, SizeOut: Int) extends Comp
   calvn.io.en <> io.rg_calphase_en
   calvn.io.rg_bypass_mean <> io.rg_bypass_mean
   calvn.io.valid_num <> io.valid_num
-  calvn.io.vin1 <> io.vin1
-  calvn.io.vin2 <> io.vin2
+  calvn.io.vin1 <> vin1_reg
+  calvn.io.vin2 <> vin2_reg
   calvn.io.rg_leakage_table <> io.rg_leakage_table
-  calvn.io.vin_vld <> io.vin_vld
+  calvn.io.rg_ac_table <> io.rg_ac_table
+  calvn.io.vin_vld <> vin_vld_reg
   calvn.io.mean <> mean
   calvn.io.vn <> vn
   calvn.io.finish <> calvn_finish
@@ -97,8 +105,8 @@ object Inst_cal_phase {
     rtl = new cal_phase (N = 8, SizeIn = 8, SizeCoeff = 8, SizeOut = 10))
   compiled.doSim { dut =>
     val N = 8
-    val in_buffer1 = Array(40,127,10,-125)
-    val in_buffer2 = Array(110,91,-76,-119)
+    val in_buffer1 = Array(40,127,10,125)
+    val in_buffer2 = Array(110,91,76,119)
     val sin_table = Array(0,99,124,55,-55,-124,-99,0)
     val cos_table = Array(127,79,-28,-114,-114,-28,79,127)
 
@@ -137,8 +145,8 @@ object Inst_cal_phase {
     dut.clockDomain.waitSampling()
 
   }
-  import sys.process._
-  "gtkwave -o ./simWorkspace/cal_phase/test.vcd"!
+//  import sys.process._
+//  "gtkwave -o ./simWorkspace/cal_phase/test.vcd"!
 //   import DesignCompiler._
 //   val dc_config = DesignCompiler_config(process = 180, freq = 100)
 //   val dc = new DesignCompilerFlow(

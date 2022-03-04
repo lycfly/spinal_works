@@ -68,8 +68,8 @@ void Vcal_phase::_eval_initial_loop(Vcal_phase__Syms* __restrict vlSymsp) {
     } while (VL_UNLIKELY(__Vchange));
 }
 
-VL_INLINE_OPT void Vcal_phase::_settle__TOP__1(Vcal_phase__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vcal_phase::_settle__TOP__1\n"); );
+VL_INLINE_OPT void Vcal_phase::_sequent__TOP__1(Vcal_phase__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vcal_phase::_sequent__TOP__1\n"); );
     Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->phase = vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__res_out;
@@ -80,20 +80,21 @@ void Vcal_phase::_eval(Vcal_phase__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vcal_phase::_eval\n"); );
     Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    vlSymsp->TOP__cal_phase._combo__TOP__cal_phase__1(vlSymsp);
-    vlTOPp->__Vm_traceActivity[1U] = 1U;
     if (((IData)(vlTOPp->clk) & (~ (IData)(vlTOPp->__Vclklast__TOP__clk)))) {
-        vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__4(vlSymsp);
+        vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__1(vlSymsp);
+        vlTOPp->__Vm_traceActivity[1U] = 1U;
     }
     if ((((IData)(vlTOPp->clk) & (~ (IData)(vlTOPp->__Vclklast__TOP__clk))) 
          | ((IData)(vlTOPp->reset) & (~ (IData)(vlTOPp->__Vclklast__TOP__reset))))) {
         vlTOPp->__Vm_traceActivity[2U] = 1U;
+        vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__3(vlSymsp);
+        vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__4(vlSymsp);
+        vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__5(vlSymsp);
         vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__6(vlSymsp);
-        vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__7(vlSymsp);
-        vlSymsp->TOP__cal_phase._sequent__TOP__cal_phase__8(vlSymsp);
-        vlTOPp->_settle__TOP__1(vlSymsp);
+        vlTOPp->_sequent__TOP__1(vlSymsp);
     }
     vlSymsp->TOP__cal_phase._combo__TOP__cal_phase__9(vlSymsp);
+    vlTOPp->__Vm_traceActivity[3U] = 1U;
     // Final
     vlTOPp->__Vclklast__TOP__clk = vlTOPp->clk;
     vlTOPp->__Vclklast__TOP__reset = vlTOPp->reset;
@@ -125,6 +126,22 @@ void Vcal_phase::_eval_debug_assertions() {
         Verilated::overWidthError("rg_bypass_mean");}
     if (VL_UNLIKELY((rg_cordic_iternum & 0xf8U))) {
         Verilated::overWidthError("rg_cordic_iternum");}
+    if (VL_UNLIKELY((rg_ac_table_0 & 0xfcU))) {
+        Verilated::overWidthError("rg_ac_table_0");}
+    if (VL_UNLIKELY((rg_ac_table_1 & 0xfcU))) {
+        Verilated::overWidthError("rg_ac_table_1");}
+    if (VL_UNLIKELY((rg_ac_table_2 & 0xfcU))) {
+        Verilated::overWidthError("rg_ac_table_2");}
+    if (VL_UNLIKELY((rg_ac_table_3 & 0xfcU))) {
+        Verilated::overWidthError("rg_ac_table_3");}
+    if (VL_UNLIKELY((rg_ac_table_4 & 0xfcU))) {
+        Verilated::overWidthError("rg_ac_table_4");}
+    if (VL_UNLIKELY((rg_ac_table_5 & 0xfcU))) {
+        Verilated::overWidthError("rg_ac_table_5");}
+    if (VL_UNLIKELY((rg_ac_table_6 & 0xfcU))) {
+        Verilated::overWidthError("rg_ac_table_6");}
+    if (VL_UNLIKELY((rg_ac_table_7 & 0xfcU))) {
+        Verilated::overWidthError("rg_ac_table_7");}
     if (VL_UNLIKELY((valid_num & 0xf8U))) {
         Verilated::overWidthError("valid_num");}
     if (VL_UNLIKELY((vin_vld & 0xfeU))) {

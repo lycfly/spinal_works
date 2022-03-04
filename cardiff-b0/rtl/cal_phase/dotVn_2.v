@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.4.2    git head : 804c7bd7b7feaddcc1d25ecef6c208fd5f776f79
 // Component : dotVn_2
-// Git hash  : deefa699849420e1dbdaa26347dab508ac586639
+// Git hash  : 917c4ceee242fb9011d09d0562a43f468673e9a6
 
 
 module dotVn_2 (
@@ -79,7 +79,7 @@ module dotVn_2 (
   assign _zz_12 = psum1[17 : 15];
   assign _zz_13 = psum2[18 : 15];
   assign _zz_14 = psum2[17 : 15];
-  booth2_v2 booth_sin (
+  booth4_v2 booth_sin (
     .io_din_vld     (booth_start              ), //i
     .io_dinA        (vin_true_in[7:0]         ), //i
     .io_dinB        (_zz_3[7:0]               ), //i
@@ -88,7 +88,7 @@ module dotVn_2 (
     .clk            (clk                      ), //i
     .resetn         (resetn                   )  //i
   );
-  booth2_v2 booth_cos (
+  booth4_v2 booth_cos (
     .io_din_vld     (booth_start              ), //i
     .io_dinA        (vin_true_in[7:0]         ), //i
     .io_dinB        (_zz_4[7:0]               ), //i

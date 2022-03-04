@@ -38,12 +38,20 @@ class cordic_int (SizeIn: Int, SizeOut: Int) extends Component {
   val cal_cnt = Reg(UInt(logStage bits)) init(0)
   val cal_en = Reg(Bool()) init(false)
   val cal_start = Bool()
+  val cal_start_delay = Bool()
   val cal_finish = Bool()
+  val normal_finish = Bool()
+  val early_finish1 = Bool()
+  val early_finish2 = Bool()
   val finish = Reg(Bool()) init(false)
   val nozero_flg = Reg(Bool()) init(true)
 
   cal_start := cal_en.rise(False)
-  cal_finish := cal_cnt === io.rg_cordic_iternum - 1
+  cal_start_delay := RegNext(cal_start, Bool(false))
+  cal_finish := Mux((io.rg_cordic_iternum === 1), cal_start_delay , normal_finish) | early_finish1
+  normal_finish := cal_cnt === io.rg_cordic_iternum - 1
+  early_finish1 := nozero_flg.fall()
+  early_finish2 :=  cal_start_delay
 
   val xn_rightshift = SInt(SizeIn+logStage bits)
   val yn_rightshift = SInt(SizeIn+logStage bits)

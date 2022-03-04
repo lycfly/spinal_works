@@ -31,6 +31,20 @@ Vcal_phase::~Vcal_phase() {
     VL_DO_CLEAR(delete __VlSymsp, __VlSymsp = nullptr);
 }
 
+void Vcal_phase::_settle__TOP__2(Vcal_phase__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vcal_phase::_settle__TOP__2\n"); );
+    Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->phase = vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__res_out;
+}
+
+void Vcal_phase::_settle__TOP__3(Vcal_phase__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vcal_phase::_settle__TOP__3\n"); );
+    Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->phase_vld = vlSymsp->TOP__cal_phase.ph_vld;
+}
+
 void Vcal_phase::_eval_initial(Vcal_phase__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vcal_phase::_eval_initial\n"); );
     Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
@@ -50,12 +64,14 @@ void Vcal_phase::_eval_settle(Vcal_phase__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vcal_phase::_eval_settle\n"); );
     Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    vlSymsp->TOP__cal_phase._settle__TOP__cal_phase__2(vlSymsp);
+    vlTOPp->_settle__TOP__2(vlSymsp);
+    vlTOPp->__Vm_traceActivity[3U] = 1U;
     vlTOPp->__Vm_traceActivity[2U] = 1U;
     vlTOPp->__Vm_traceActivity[1U] = 1U;
     vlTOPp->__Vm_traceActivity[0U] = 1U;
-    vlSymsp->TOP__cal_phase._settle__TOP__cal_phase__3(vlSymsp);
-    vlTOPp->_settle__TOP__1(vlSymsp);
+    vlSymsp->TOP__cal_phase._settle__TOP__cal_phase__7(vlSymsp);
+    vlSymsp->TOP__cal_phase._settle__TOP__cal_phase__8(vlSymsp);
+    vlTOPp->_settle__TOP__3(vlSymsp);
 }
 
 void Vcal_phase::_ctor_var_reset() {
@@ -72,6 +88,14 @@ void Vcal_phase::_ctor_var_reset() {
     rg_leakage_table_5 = VL_RAND_RESET_I(8);
     rg_leakage_table_6 = VL_RAND_RESET_I(8);
     rg_leakage_table_7 = VL_RAND_RESET_I(8);
+    rg_ac_table_0 = VL_RAND_RESET_I(2);
+    rg_ac_table_1 = VL_RAND_RESET_I(2);
+    rg_ac_table_2 = VL_RAND_RESET_I(2);
+    rg_ac_table_3 = VL_RAND_RESET_I(2);
+    rg_ac_table_4 = VL_RAND_RESET_I(2);
+    rg_ac_table_5 = VL_RAND_RESET_I(2);
+    rg_ac_table_6 = VL_RAND_RESET_I(2);
+    rg_ac_table_7 = VL_RAND_RESET_I(2);
     rg_sin_table_0 = VL_RAND_RESET_I(8);
     rg_sin_table_1 = VL_RAND_RESET_I(8);
     rg_sin_table_2 = VL_RAND_RESET_I(8);
@@ -96,7 +120,7 @@ void Vcal_phase::_ctor_var_reset() {
     phase = VL_RAND_RESET_I(10);
     clk = VL_RAND_RESET_I(1);
     reset = VL_RAND_RESET_I(1);
-    for (int __Vi0=0; __Vi0<3; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<4; ++__Vi0) {
         __Vm_traceActivity[__Vi0] = VL_RAND_RESET_I(1);
     }
 }

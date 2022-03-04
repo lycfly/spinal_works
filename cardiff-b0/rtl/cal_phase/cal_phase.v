@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.4.2    git head : 804c7bd7b7feaddcc1d25ecef6c208fd5f776f79
 // Component : cal_phase
-// Git hash  : deefa699849420e1dbdaa26347dab508ac586639
+// Git hash  : 917c4ceee242fb9011d09d0562a43f468673e9a6
 
 
 module cal_phase (
@@ -15,6 +15,14 @@ module cal_phase (
   input      [7:0]    rg_leakage_table_5,
   input      [7:0]    rg_leakage_table_6,
   input      [7:0]    rg_leakage_table_7,
+  input      [1:0]    rg_ac_table_0,
+  input      [1:0]    rg_ac_table_1,
+  input      [1:0]    rg_ac_table_2,
+  input      [1:0]    rg_ac_table_3,
+  input      [1:0]    rg_ac_table_4,
+  input      [1:0]    rg_ac_table_5,
+  input      [1:0]    rg_ac_table_6,
+  input      [1:0]    rg_ac_table_7,
   input      [7:0]    rg_sin_table_0,
   input      [7:0]    rg_sin_table_1,
   input      [7:0]    rg_sin_table_2,
@@ -57,6 +65,9 @@ module cal_phase (
   wire                cordic_res_vld;
   wire       [3:0]    _zz_1;
   wire       [3:0]    _zz_2;
+  reg        [7:0]    vin1_reg;
+  reg        [7:0]    vin2_reg;
+  reg                 vin_vld_reg;
   wire       [2:0]    valid_num_true;
   wire       [7:0]    mean;
   wire                calvn_finish;
@@ -80,9 +91,9 @@ module cal_phase (
     .en                    (rg_calphase_en           ), //i
     .rg_bypass_mean        (rg_bypass_mean           ), //i
     .valid_num             (valid_num[2:0]           ), //i
-    .vin_vld               (vin_vld                  ), //i
-    .vin1                  (vin1[7:0]                ), //i
-    .vin2                  (vin2[7:0]                ), //i
+    .vin_vld               (vin_vld_reg              ), //i
+    .vin1                  (vin1_reg[7:0]            ), //i
+    .vin2                  (vin2_reg[7:0]            ), //i
     .rg_leakage_table_0    (rg_leakage_table_0[7:0]  ), //i
     .rg_leakage_table_1    (rg_leakage_table_1[7:0]  ), //i
     .rg_leakage_table_2    (rg_leakage_table_2[7:0]  ), //i
@@ -91,6 +102,14 @@ module cal_phase (
     .rg_leakage_table_5    (rg_leakage_table_5[7:0]  ), //i
     .rg_leakage_table_6    (rg_leakage_table_6[7:0]  ), //i
     .rg_leakage_table_7    (rg_leakage_table_7[7:0]  ), //i
+    .rg_ac_table_0         (rg_ac_table_0[1:0]       ), //i
+    .rg_ac_table_1         (rg_ac_table_1[1:0]       ), //i
+    .rg_ac_table_2         (rg_ac_table_2[1:0]       ), //i
+    .rg_ac_table_3         (rg_ac_table_3[1:0]       ), //i
+    .rg_ac_table_4         (rg_ac_table_4[1:0]       ), //i
+    .rg_ac_table_5         (rg_ac_table_5[1:0]       ), //i
+    .rg_ac_table_6         (rg_ac_table_6[1:0]       ), //i
+    .rg_ac_table_7         (rg_ac_table_7[1:0]       ), //i
     .mean                  (calvn_mean[7:0]          ), //o
     .vn_0                  (calvn_vn_0[7:0]          ), //o
     .vn_1                  (calvn_vn_1[7:0]          ), //o
@@ -168,5 +187,19 @@ module cal_phase (
   assign ph_vld = cordic_res_vld;
   assign phase = ph_cal;
   assign phase_vld = ph_vld;
+  always @ (posedge clk or negedge resetn) begin
+    if (!resetn) begin
+      vin1_reg <= 8'h0;
+      vin2_reg <= 8'h0;
+      vin_vld_reg <= 1'b0;
+    end else begin
+      if(vin_vld)begin
+        vin1_reg <= vin1;
+        vin2_reg <= vin2;
+      end
+      vin_vld_reg <= vin_vld;
+    end
+  end
+
 
 endmodule

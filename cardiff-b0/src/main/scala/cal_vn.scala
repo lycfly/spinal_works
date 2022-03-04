@@ -12,18 +12,30 @@ class cal_vn (N: Int, SizeIn: Int) extends Component {
     val rg_bypass_mean = in Bool()
     val valid_num = in UInt(3 bits)
     val vin_vld = in Bool()
-    val vin1 = in SInt(SizeIn bits)
-    val vin2 = in SInt(SizeIn bits)
-    val rg_leakage_table = in Vec(SInt(SizeIn bits), N)
+    val vin1 = in UInt(SizeIn bits)
+    val vin2 = in UInt(SizeIn bits)
+    val rg_leakage_table = in Vec(UInt(SizeIn bits), N)
+    val rg_ac_table = in Vec(UInt(2 bits), N)
     val mean = out SInt(SizeIn bits)
     val vn = out Vec(SInt(SizeIn bits), N)
     val finish = out Bool()
   }
   noIoPrefix()
   val logN = log2Up(N)
-  val Vins = Vec(Reg(SInt(SizeIn bits)) init(0),  N)
+  val vin_vld_d1 = RegNext(io.vin_vld, Bool(false))
+  val vin_vld_d2 = RegNext(vin_vld_d1, Bool(false))
+
+  val vin1_bias_shift = UInt(SizeIn bits)
+  val vin2_bias_shift = UInt(SizeIn bits)
+  val vin1_bias_shift_norm = SInt(SizeIn bits)
+  val vin2_bias_shift_norm = SInt(SizeIn bits)
+
+  val V_bias_ac = Vec(Reg(SInt(SizeIn bits)) init(0),  N)
+//  val V_ac = Vec(Reg(SInt(SizeIn bits)) init(0),  N)
 
   val v_cnt = Reg(UInt(3 bits)) init(0)
+  val v_cnt_group0 = UInt()
+  val v_cnt_group1 = UInt()
   val bigger = SInt(SizeIn bits)
   val smaller = SInt(SizeIn bits)
   val max_v  = Reg(SInt(SizeIn bits)) init(0)
@@ -31,17 +43,29 @@ class cal_vn (N: Int, SizeIn: Int) extends Component {
   val mean_finish = Bool()
   val v1gtv2 = Bool()
   val data_load_finish = Bool()
-
-  v1gtv2 := io.vin1 > io.vin2
-  bigger := Mux(v1gtv2 , io.vin1 , io.vin2)
-  smaller := Mux(v1gtv2 , io.vin2 , io.vin1)
+  v_cnt_group0 := (v_cnt|<<1)
+  v_cnt_group1 := (v_cnt|<<1)+1
+  v1gtv2 := vin1_bias_shift_norm > vin2_bias_shift_norm
+  bigger := Mux(v1gtv2 , vin1_bias_shift_norm , vin2_bias_shift_norm)
+  smaller := Mux(v1gtv2 , vin2_bias_shift_norm , vin1_bias_shift_norm)
   data_load_finish := v_cnt === io.valid_num -1
   io.mean := ((max_v |>>1 ) +^ (min_v |>>1 )).sat(1)
   mean_finish := io.en & io.vin_vld & data_load_finish
   io.finish := RegNext(mean_finish) init(false)
+
+//  for(i <- (0 until N)){
+//    V_ac(i) := V_bias(i).asSInt - 128
+//  }
+  vin1_bias_shift := ((io.vin1 - io.rg_leakage_table(v_cnt_group0)) |<< io.rg_ac_table(v_cnt_group0))
+  vin2_bias_shift := ((io.vin2 - io.rg_leakage_table(v_cnt_group1)) |<< io.rg_ac_table(v_cnt_group1))
+  vin1_bias_shift_norm := vin1_bias_shift.asSInt + S(-128, 8 bits)
+  vin2_bias_shift_norm := vin2_bias_shift.asSInt + S(-128, 8 bits)
+
+
   when(io.en & io.vin_vld){
-    Vins((v_cnt|<<1)) := (io.vin1 -^ io.rg_leakage_table((v_cnt|<<1))).sat(1)
-    Vins((v_cnt|<<1)+1) := (io.vin2 -^ io.rg_leakage_table((v_cnt|<<1)+1)).sat(1)
+    V_bias_ac(v_cnt_group0) :=  vin1_bias_shift_norm
+    V_bias_ac(v_cnt_group1) :=  vin2_bias_shift_norm
+
     when(data_load_finish) {
       v_cnt := 0
     }.otherwise{
@@ -87,7 +111,7 @@ class cal_vn (N: Int, SizeIn: Int) extends Component {
 //  }
 
   for(i <- 0 until N) {
-    io.vn(i) := Vins(i)
+    io.vn(i) := V_bias_ac(i)
   }
 
 }

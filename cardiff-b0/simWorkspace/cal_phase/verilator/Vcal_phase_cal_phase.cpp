@@ -9,58 +9,56 @@
 
 //==========
 
-VL_INLINE_OPT void Vcal_phase_cal_phase::_combo__TOP__cal_phase__1(Vcal_phase__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+      Vcal_phase_cal_phase::_combo__TOP__cal_phase__1\n"); );
-    Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Body
-    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v1gtv2 
-        = VL_LTS_III(1,8,8, (IData)(vlTOPp->vin2), (IData)(vlTOPp->vin1));
-}
-
-VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__4(Vcal_phase__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+      Vcal_phase_cal_phase::_sequent__TOP__cal_phase__4\n"); );
+VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__1(Vcal_phase__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+      Vcal_phase_cal_phase::_sequent__TOP__cal_phase__1\n"); );
     Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_en_regNext 
         = vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_en;
+    vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__nozero_flg_regNext 
+        = vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__nozero_flg;
     vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_en_regNext 
         = vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_en;
 }
 
-VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__6(Vcal_phase__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+      Vcal_phase_cal_phase::_sequent__TOP__cal_phase__6\n"); );
+VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__3(Vcal_phase__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+      Vcal_phase_cal_phase::_sequent__TOP__cal_phase__3\n"); );
     Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__psum1 
         = vlSymsp->TOP__cal_phase.__PVT__dot__DOT__psum1;
     vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__psum2 
         = vlSymsp->TOP__cal_phase.__PVT__dot__DOT__psum2;
-    vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__min_v 
-        = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__min_v;
-    vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__max_v 
-        = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__max_v;
+    vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__mac_cnt 
+        = vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt;
     vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_cos__DOT__cal_en 
         = vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_en;
     vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_cos__DOT__cal_cnt 
         = vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_cnt;
-    vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__v_cnt 
-        = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt;
     vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_sin__DOT__cal_cnt 
         = vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_cnt;
-    vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__mac_cnt 
-        = vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt;
     vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_sin__DOT__cal_en 
         = vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_en;
-    vlSymsp->TOP__cal_phase.__Vdly__cordic__DOT__nozero_flg 
-        = vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__nozero_flg;
+    vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__min_v 
+        = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__min_v;
+    vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__max_v 
+        = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__max_v;
     vlSymsp->TOP__cal_phase.__Vdly__cordic__DOT__res_rg 
         = vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__res_rg;
     vlSymsp->TOP__cal_phase.__Vdly__cordic__DOT__yn 
         = vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__yn;
     vlSymsp->TOP__cal_phase.__Vdly__cordic__DOT__xn 
         = vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__xn;
+    vlSymsp->TOP__cal_phase.__Vdly__cordic__DOT__nozero_flg 
+        = vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__nozero_flg;
     vlSymsp->TOP__cal_phase.__Vdly__cordic__DOT__cal_cnt 
         = vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_cnt;
+    vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__v_cnt 
+        = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt;
+    vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_start_regNext 
+        = ((~ (IData)(vlTOPp->reset)) & (IData)(vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_start));
+    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin_vld_d2 
+        = ((~ (IData)(vlTOPp->reset)) & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin_vld_d1));
     if (vlTOPp->reset) {
         vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__res_out = 0U;
         vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__finish = 0U;
@@ -77,142 +75,6 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__6(Vcal_phase_
         if (vlTOPp->rg_calphase_en) {
             vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__finish 
                 = vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_finish_delay;
-        }
-    }
-    if (vlTOPp->reset) {
-        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_3 = 0U;
-    } else {
-        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlTOPp->vin_vld))) {
-            if ((8U & ((IData)(1U) << (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                             << 1U))))) {
-                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_3 
-                    = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_8;
-            }
-            if ((8U & ((IData)(1U) << (7U & ((IData)(1U) 
-                                             + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                                << 1U)))))) {
-                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_3 
-                    = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_12;
-            }
-        }
-    }
-    if (vlTOPp->reset) {
-        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_2 = 0U;
-    } else {
-        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlTOPp->vin_vld))) {
-            if ((4U & ((IData)(1U) << (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                             << 1U))))) {
-                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_2 
-                    = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_8;
-            }
-            if ((4U & ((IData)(1U) << (7U & ((IData)(1U) 
-                                             + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                                << 1U)))))) {
-                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_2 
-                    = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_12;
-            }
-        }
-    }
-    if (vlTOPp->reset) {
-        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_1 = 0U;
-    } else {
-        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlTOPp->vin_vld))) {
-            if ((2U & ((IData)(1U) << (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                             << 1U))))) {
-                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_1 
-                    = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_8;
-            }
-            if ((2U & ((IData)(1U) << (7U & ((IData)(1U) 
-                                             + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                                << 1U)))))) {
-                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_1 
-                    = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_12;
-            }
-        }
-    }
-    if (vlTOPp->reset) {
-        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_5 = 0U;
-    } else {
-        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlTOPp->vin_vld))) {
-            if ((0x20U & ((IData)(1U) << (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                                << 1U))))) {
-                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_5 
-                    = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_8;
-            }
-            if ((0x20U & ((IData)(1U) << (7U & ((IData)(1U) 
-                                                + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                                   << 1U)))))) {
-                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_5 
-                    = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_12;
-            }
-        }
-    }
-    if (vlTOPp->reset) {
-        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_4 = 0U;
-    } else {
-        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlTOPp->vin_vld))) {
-            if ((0x10U & ((IData)(1U) << (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                                << 1U))))) {
-                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_4 
-                    = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_8;
-            }
-            if ((0x10U & ((IData)(1U) << (7U & ((IData)(1U) 
-                                                + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                                   << 1U)))))) {
-                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_4 
-                    = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_12;
-            }
-        }
-    }
-    if (vlTOPp->reset) {
-        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_0 = 0U;
-    } else {
-        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlTOPp->vin_vld))) {
-            if ((1U & ((IData)(1U) << (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                             << 1U))))) {
-                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_0 
-                    = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_8;
-            }
-            if ((1U & ((IData)(1U) << (7U & ((IData)(1U) 
-                                             + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                                << 1U)))))) {
-                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_0 
-                    = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_12;
-            }
-        }
-    }
-    if (vlTOPp->reset) {
-        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_6 = 0U;
-    } else {
-        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlTOPp->vin_vld))) {
-            if ((0x40U & ((IData)(1U) << (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                                << 1U))))) {
-                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_6 
-                    = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_8;
-            }
-            if ((0x40U & ((IData)(1U) << (7U & ((IData)(1U) 
-                                                + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                                   << 1U)))))) {
-                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_6 
-                    = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_12;
-            }
-        }
-    }
-    if (vlTOPp->reset) {
-        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_7 = 0U;
-    } else {
-        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlTOPp->vin_vld))) {
-            if ((0x80U & ((IData)(1U) << (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                                << 1U))))) {
-                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_7 
-                    = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_8;
-            }
-            if ((0x80U & ((IData)(1U) << (7U & ((IData)(1U) 
-                                                + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                                   << 1U)))))) {
-                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_7 
-                    = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_12;
-            }
         }
     }
     if (vlTOPp->reset) {
@@ -244,40 +106,161 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__6(Vcal_phase_
         }
     }
     if (vlTOPp->reset) {
-        vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__v_cnt = 0U;
-        vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__max_v = 0U;
-        vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__min_v = 0U;
+        vlSymsp->TOP__cal_phase.__PVT__vin2_reg = 0U;
     } else {
-        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlTOPp->vin_vld))) {
-            vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__v_cnt 
-                = ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__data_load_finish)
-                    ? 0U : (7U & ((IData)(1U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt))));
-            if (vlTOPp->rg_bypass_mean) {
-                vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__max_v = 0U;
-                vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__min_v = 0U;
-            } else {
-                if ((0U == (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt))) {
-                    vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__max_v 
-                        = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__bigger;
-                    vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__min_v 
-                        = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__smaller;
-                } else {
-                    if (VL_LTS_III(1,8,8, (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__max_v), (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__bigger))) {
-                        vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__max_v 
-                            = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__bigger;
-                    }
-                    if (VL_LTS_III(1,8,8, (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__smaller), (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__min_v))) {
-                        vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__min_v 
-                            = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__smaller;
-                    }
-                }
+        if (vlTOPp->vin_vld) {
+            vlSymsp->TOP__cal_phase.__PVT__vin2_reg 
+                = vlTOPp->vin2;
+        }
+    }
+    if (vlTOPp->reset) {
+        vlSymsp->TOP__cal_phase.__PVT__vin1_reg = 0U;
+    } else {
+        if (vlTOPp->vin_vld) {
+            vlSymsp->TOP__cal_phase.__PVT__vin1_reg 
+                = vlTOPp->vin1;
+        }
+    }
+    if (vlTOPp->reset) {
+        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_1 = 0U;
+    } else {
+        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlSymsp->TOP__cal_phase.__PVT__vin_vld_reg))) {
+            if ((2U & ((IData)(1U) << (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                             << 1U))))) {
+                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_1 
+                    = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin1_bias_shift)));
+            }
+            if ((2U & ((IData)(1U) << (7U & ((IData)(1U) 
+                                             + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                << 1U)))))) {
+                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_1 
+                    = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin2_bias_shift)));
+            }
+        }
+    }
+    if (vlTOPp->reset) {
+        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_0 = 0U;
+    } else {
+        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlSymsp->TOP__cal_phase.__PVT__vin_vld_reg))) {
+            if ((1U & ((IData)(1U) << (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                             << 1U))))) {
+                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_0 
+                    = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin1_bias_shift)));
+            }
+            if ((1U & ((IData)(1U) << (7U & ((IData)(1U) 
+                                             + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                << 1U)))))) {
+                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_0 
+                    = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin2_bias_shift)));
+            }
+        }
+    }
+    if (vlTOPp->reset) {
+        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_4 = 0U;
+    } else {
+        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlSymsp->TOP__cal_phase.__PVT__vin_vld_reg))) {
+            if ((0x10U & ((IData)(1U) << (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                << 1U))))) {
+                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_4 
+                    = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin1_bias_shift)));
+            }
+            if ((0x10U & ((IData)(1U) << (7U & ((IData)(1U) 
+                                                + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                   << 1U)))))) {
+                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_4 
+                    = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin2_bias_shift)));
+            }
+        }
+    }
+    if (vlTOPp->reset) {
+        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_3 = 0U;
+    } else {
+        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlSymsp->TOP__cal_phase.__PVT__vin_vld_reg))) {
+            if ((8U & ((IData)(1U) << (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                             << 1U))))) {
+                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_3 
+                    = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin1_bias_shift)));
+            }
+            if ((8U & ((IData)(1U) << (7U & ((IData)(1U) 
+                                             + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                << 1U)))))) {
+                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_3 
+                    = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin2_bias_shift)));
+            }
+        }
+    }
+    if (vlTOPp->reset) {
+        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_2 = 0U;
+    } else {
+        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlSymsp->TOP__cal_phase.__PVT__vin_vld_reg))) {
+            if ((4U & ((IData)(1U) << (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                             << 1U))))) {
+                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_2 
+                    = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin1_bias_shift)));
+            }
+            if ((4U & ((IData)(1U) << (7U & ((IData)(1U) 
+                                             + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                << 1U)))))) {
+                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_2 
+                    = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin2_bias_shift)));
+            }
+        }
+    }
+    if (vlTOPp->reset) {
+        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_5 = 0U;
+    } else {
+        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlSymsp->TOP__cal_phase.__PVT__vin_vld_reg))) {
+            if ((0x20U & ((IData)(1U) << (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                << 1U))))) {
+                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_5 
+                    = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin1_bias_shift)));
+            }
+            if ((0x20U & ((IData)(1U) << (7U & ((IData)(1U) 
+                                                + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                   << 1U)))))) {
+                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_5 
+                    = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin2_bias_shift)));
+            }
+        }
+    }
+    if (vlTOPp->reset) {
+        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_6 = 0U;
+    } else {
+        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlSymsp->TOP__cal_phase.__PVT__vin_vld_reg))) {
+            if ((0x40U & ((IData)(1U) << (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                << 1U))))) {
+                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_6 
+                    = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin1_bias_shift)));
+            }
+            if ((0x40U & ((IData)(1U) << (7U & ((IData)(1U) 
+                                                + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                   << 1U)))))) {
+                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_6 
+                    = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin2_bias_shift)));
+            }
+        }
+    }
+    if (vlTOPp->reset) {
+        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_7 = 0U;
+    } else {
+        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlSymsp->TOP__cal_phase.__PVT__vin_vld_reg))) {
+            if ((0x80U & ((IData)(1U) << (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                << 1U))))) {
+                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_7 
+                    = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin1_bias_shift)));
+            }
+            if ((0x80U & ((IData)(1U) << (7U & ((IData)(1U) 
+                                                + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                   << 1U)))))) {
+                vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_7 
+                    = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin2_bias_shift)));
             }
         }
     }
 }
 
-VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__7(Vcal_phase__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+      Vcal_phase_cal_phase::_sequent__TOP__cal_phase__7\n"); );
+VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__4(Vcal_phase__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+      Vcal_phase_cal_phase::_sequent__TOP__cal_phase__4\n"); );
     Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     if (vlTOPp->reset) {
@@ -288,13 +271,13 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__7(Vcal_phase_
         if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_start) {
             vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_cos__DOT__cal_en = 1U;
         } else {
-            if ((7U == (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_cnt))) {
+            if ((3U == (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_cnt))) {
                 vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_cos__DOT__cal_en = 0U;
             }
         }
         if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_en) {
             vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_cos__DOT__cal_cnt 
-                = (7U & ((IData)(1U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_cnt)));
+                = (3U & ((IData)(1U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_cnt)));
         } else {
             if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_start) {
                 vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_cos__DOT__cal_cnt = 0U;
@@ -307,7 +290,7 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__7(Vcal_phase_
         } else {
             if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_en) {
                 vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
-                    = (0x1ffffU & VL_SHIFTRS_III(17,17,32, vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT___zz_2, 1U));
+                    = (0x7ffffU & VL_SHIFTRS_III(19,19,32, vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT___zz_2, 2U));
             }
         }
     }
@@ -319,13 +302,13 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__7(Vcal_phase_
         if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_start) {
             vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_sin__DOT__cal_en = 1U;
         } else {
-            if ((7U == (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_cnt))) {
+            if ((3U == (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_cnt))) {
                 vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_sin__DOT__cal_en = 0U;
             }
         }
         if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_en) {
             vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_sin__DOT__cal_cnt 
-                = (7U & ((IData)(1U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_cnt)));
+                = (3U & ((IData)(1U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_cnt)));
         } else {
             if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_start) {
                 vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_sin__DOT__cal_cnt = 0U;
@@ -338,8 +321,52 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__7(Vcal_phase_
         } else {
             if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_en) {
                 vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
-                    = (0x1ffffU & VL_SHIFTRS_III(17,17,32, vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT___zz_2, 1U));
+                    = (0x7ffffU & VL_SHIFTRS_III(19,19,32, vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT___zz_2, 2U));
             }
+        }
+    }
+    if (vlTOPp->reset) {
+        vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__Breg = 0U;
+    } else {
+        if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_start) {
+            vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__Breg 
+                = ((4U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                    ? ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                        ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                            ? (IData)(vlTOPp->rg_cos_table_7)
+                            : (IData)(vlTOPp->rg_cos_table_6))
+                        : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                            ? (IData)(vlTOPp->rg_cos_table_5)
+                            : (IData)(vlTOPp->rg_cos_table_4)))
+                    : ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                        ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                            ? (IData)(vlTOPp->rg_cos_table_3)
+                            : (IData)(vlTOPp->rg_cos_table_2))
+                        : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                            ? (IData)(vlTOPp->rg_cos_table_1)
+                            : (IData)(vlTOPp->rg_cos_table_0))));
+        }
+    }
+    if (vlTOPp->reset) {
+        vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__Breg = 0U;
+    } else {
+        if (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_start) {
+            vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__Breg 
+                = ((4U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                    ? ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                        ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                            ? (IData)(vlTOPp->rg_sin_table_7)
+                            : (IData)(vlTOPp->rg_sin_table_6))
+                        : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                            ? (IData)(vlTOPp->rg_sin_table_5)
+                            : (IData)(vlTOPp->rg_sin_table_4)))
+                    : ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                        ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                            ? (IData)(vlTOPp->rg_sin_table_3)
+                            : (IData)(vlTOPp->rg_sin_table_2))
+                        : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
+                            ? (IData)(vlTOPp->rg_sin_table_1)
+                            : (IData)(vlTOPp->rg_sin_table_0))));
         }
     }
     if (vlTOPp->reset) {
@@ -424,16 +451,41 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__7(Vcal_phase_
         vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_en_regNext 
             = vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_en;
     }
+    if (vlTOPp->reset) {
+        vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__v_cnt = 0U;
+        vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__max_v = 0U;
+        vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__min_v = 0U;
+    } else {
+        if (((IData)(vlTOPp->rg_calphase_en) & (IData)(vlSymsp->TOP__cal_phase.__PVT__vin_vld_reg))) {
+            vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__v_cnt 
+                = ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__data_load_finish)
+                    ? 0U : (7U & ((IData)(1U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt))));
+            if (vlTOPp->rg_bypass_mean) {
+                vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__max_v = 0U;
+                vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__min_v = 0U;
+            } else {
+                if ((0U == (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt))) {
+                    vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__max_v 
+                        = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__bigger;
+                    vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__min_v 
+                        = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__smaller;
+                } else {
+                    if (VL_LTS_III(1,8,8, (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__max_v), (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__bigger))) {
+                        vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__max_v 
+                            = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__bigger;
+                    }
+                    if (VL_LTS_III(1,8,8, (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__smaller), (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__min_v))) {
+                        vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__min_v 
+                            = vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__smaller;
+                    }
+                }
+            }
+        }
+    }
     vlSymsp->TOP__cal_phase.__PVT__dot__DOT__psum1 
         = vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__psum1;
     vlSymsp->TOP__cal_phase.__PVT__dot__DOT__psum2 
         = vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__psum2;
-    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__max_v 
-        = vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__max_v;
-    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__min_v 
-        = vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__min_v;
-    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt 
-        = vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__v_cnt;
     vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_cnt 
         = vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_cos__DOT__cal_cnt;
     vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__cal_en 
@@ -442,16 +494,30 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__7(Vcal_phase_
         = vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_sin__DOT__cal_cnt;
     vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_en 
         = vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__booth_sin__DOT__cal_en;
-    vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__nozero_flg 
-        = vlSymsp->TOP__cal_phase.__Vdly__cordic__DOT__nozero_flg;
     vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__res_rg 
         = vlSymsp->TOP__cal_phase.__Vdly__cordic__DOT__res_rg;
     vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__xn 
         = vlSymsp->TOP__cal_phase.__Vdly__cordic__DOT__xn;
     vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__yn 
         = vlSymsp->TOP__cal_phase.__Vdly__cordic__DOT__yn;
+    vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__nozero_flg 
+        = vlSymsp->TOP__cal_phase.__Vdly__cordic__DOT__nozero_flg;
     vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_cnt 
         = vlSymsp->TOP__cal_phase.__Vdly__cordic__DOT__cal_cnt;
+}
+
+VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__5(Vcal_phase__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+      Vcal_phase_cal_phase::_sequent__TOP__cal_phase__5\n"); );
+    Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__max_v 
+        = vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__max_v;
+    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__min_v 
+        = vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__min_v;
+    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt 
+        = vlSymsp->TOP__cal_phase.__Vdly__calvn__DOT__v_cnt;
+    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin_vld_d1 
+        = ((~ (IData)(vlTOPp->reset)) & (IData)(vlSymsp->TOP__cal_phase.__PVT__vin_vld_reg));
     vlSymsp->TOP__cal_phase.ph_vld = vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__finish;
     if (vlTOPp->reset) {
         vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_finish_delay = 0U;
@@ -477,13 +543,6 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__7(Vcal_phase_
                        : ((0U != (7U & (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__psum2 
                                         >> 0xfU))) ? 0x7fffU
                            : vlSymsp->TOP__cal_phase.__PVT__dot__DOT__psum2)));
-    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_3 
-        = (0x1ffU & (((0x100U & (VL_SHIFTRS_III(8,8,32, (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__max_v), 1U) 
-                                 << 1U)) | (0xffU & 
-                                            VL_SHIFTRS_III(8,8,32, (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__max_v), 1U))) 
-                     + ((0x100U & (VL_SHIFTRS_III(8,8,32, (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__min_v), 1U) 
-                                   << 1U)) | (0xffU 
-                                              & VL_SHIFTRS_III(8,8,32, (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__min_v), 1U)))));
     vlSymsp->TOP__cal_phase.__PVT__dot__DOT__s2 = (
                                                    (0x7c000U 
                                                     & ((- (IData)(
@@ -504,6 +563,14 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__7(Vcal_phase_
                                                    | (0x3fffU 
                                                       & (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
                                                          >> 3U)));
+    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__PositiveB 
+        = ((0x300U & ((- (IData)((1U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__Breg) 
+                                        >> 7U)))) << 8U)) 
+           | (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__Breg));
+    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__PositiveB 
+        = ((0x300U & ((- (IData)((1U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__Breg) 
+                                        >> 7U)))) << 8U)) 
+           | (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__Breg));
     vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__xn_rightshift 
         = (0x7ffffU & VL_SHIFTRS_III(19,19,3, vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__xn, (IData)(vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_cnt)));
     vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__yn_rightshift 
@@ -527,12 +594,13 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__7(Vcal_phase_
             vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_en = 0U;
         }
     }
-}
-
-VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__8(Vcal_phase__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+      Vcal_phase_cal_phase::_sequent__TOP__cal_phase__8\n"); );
-    Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Body
+    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_3 
+        = (0x1ffU & (((0x100U & (VL_SHIFTRS_III(8,8,32, (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__max_v), 1U) 
+                                 << 1U)) | (0xffU & 
+                                            VL_SHIFTRS_III(8,8,32, (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__max_v), 1U))) 
+                     + ((0x100U & (VL_SHIFTRS_III(8,8,32, (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__min_v), 1U) 
+                                   << 1U)) | (0xffU 
+                                              & VL_SHIFTRS_III(8,8,32, (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__min_v), 1U)))));
     vlSymsp->TOP__cal_phase.__PVT__cordic__DOT___zz_2 
         = ((3U & (IData)(vlSymsp->TOP__cal_phase.__PVT__cordic__DOT___zz_2)) 
            | (4U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_1) 
@@ -557,12 +625,68 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__8(Vcal_phase_
         = ((6U & (IData)(vlSymsp->TOP__cal_phase.__PVT__cordic__DOT___zz_4)) 
            | (1U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_2) 
                     >> 0xfU)));
+    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__AddB 
+        = (0x3ffU & ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
+                      >> 9U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__PositiveB)));
+    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__MinusB 
+        = (0x3ffU & ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
+                      >> 9U) + (- (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__PositiveB))));
+    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__AddB 
+        = (0x3ffU & ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
+                      >> 9U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__PositiveB)));
+    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__MinusB 
+        = (0x3ffU & ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
+                      >> 9U) + (- (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__PositiveB))));
     vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__x_ext 
         = (((IData)(vlSymsp->TOP__cal_phase.__PVT__cordic__DOT___zz_2) 
             << 0x10U) | (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_1));
     vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__y_ext 
         = (((IData)(vlSymsp->TOP__cal_phase.__PVT__cordic__DOT___zz_4) 
             << 0x10U) | (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_2));
+    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT___zz_2 
+        = ((0x7fe00U & (((4U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
+                          ? ((2U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
+                              ? ((1U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
+                                  ? (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
+                                     >> 9U) : (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__MinusB))
+                              : ((1U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
+                                  ? (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__MinusB)
+                                  : ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
+                                      >> 9U) + ((- (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__PositiveB)) 
+                                                << 1U))))
+                          : ((2U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
+                              ? ((1U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
+                                  ? ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
+                                      >> 9U) + ((IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__PositiveB) 
+                                                << 1U))
+                                  : (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__AddB))
+                              : ((1U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)
+                                  ? (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__AddB)
+                                  : (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
+                                     >> 9U)))) << 9U)) 
+           | (0x1ffU & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg));
+    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT___zz_2 
+        = ((0x7fe00U & (((4U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
+                          ? ((2U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
+                              ? ((1U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
+                                  ? (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
+                                     >> 9U) : (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__MinusB))
+                              : ((1U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
+                                  ? (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__MinusB)
+                                  : ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
+                                      >> 9U) + ((- (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__PositiveB)) 
+                                                << 1U))))
+                          : ((2U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
+                              ? ((1U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
+                                  ? ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
+                                      >> 9U) + ((IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__PositiveB) 
+                                                << 1U))
+                                  : (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__AddB))
+                              : ((1U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)
+                                  ? (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__AddB)
+                                  : (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
+                                     >> 9U)))) << 9U)) 
+           | (0x1ffU & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg));
     vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_start 
         = ((IData)(vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_en) 
            & (~ (IData)(vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_en_regNext)));
@@ -591,6 +715,12 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__8(Vcal_phase_
                                                        - (IData)(1U)))) 
                                                   & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin_io_dout_vld)));
     }
+}
+
+VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__6(Vcal_phase__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+      Vcal_phase_cal_phase::_sequent__TOP__cal_phase__6\n"); );
+    Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
     if (vlTOPp->reset) {
         vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_en = 0U;
     } else {
@@ -614,10 +744,6 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__8(Vcal_phase_
            & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__cal_en_regNext));
     vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt 
         = vlSymsp->TOP__cal_phase.__Vdly__dot__DOT__mac_cnt;
-    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__mean_finish_regNext 
-        = ((~ (IData)(vlTOPp->reset)) & (((IData)(vlTOPp->rg_calphase_en) 
-                                          & (IData)(vlTOPp->vin_vld)) 
-                                         & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__data_load_finish)));
     vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_start 
         = ((0U == (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt)) 
            & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin_io_dout_vld));
@@ -625,180 +751,145 @@ VL_INLINE_OPT void Vcal_phase_cal_phase::_sequent__TOP__cal_phase__8(Vcal_phase_
         = (0xffU & (((4U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
                       ? ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
                           ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                              ? (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_7)
-                              : (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_6))
+                              ? (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_7)
+                              : (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_6))
                           : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                              ? (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_5)
-                              : (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_4)))
+                              ? (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_5)
+                              : (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_4)))
                       : ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
                           ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                              ? (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_3)
-                              : (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_2))
+                              ? (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_3)
+                              : (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_2))
                           : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                              ? (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_1)
-                              : (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__Vins_0)))) 
+                              ? (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_1)
+                              : (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__V_bias_ac_0)))) 
                     - ((0x100U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_3))
                         ? ((3U != (3U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_3) 
                                          >> 7U))) ? 0x80U
                             : (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_3))
                         : ((0x80U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_3))
                             ? 0x7fU : (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_3)))));
+    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__mean_finish_regNext 
+        = ((~ (IData)(vlTOPp->reset)) & (((IData)(vlTOPp->rg_calphase_en) 
+                                          & (IData)(vlSymsp->TOP__cal_phase.__PVT__vin_vld_reg)) 
+                                         & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__data_load_finish)));
+    vlSymsp->TOP__cal_phase.__PVT__vin_vld_reg = ((~ (IData)(vlTOPp->reset)) 
+                                                  & (IData)(vlTOPp->vin_vld));
 }
 
 VL_INLINE_OPT void Vcal_phase_cal_phase::_combo__TOP__cal_phase__9(Vcal_phase__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+      Vcal_phase_cal_phase::_combo__TOP__cal_phase__9\n"); );
     Vcal_phase* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    if (vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v1gtv2) {
-        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__bigger 
-            = vlTOPp->vin1;
-        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__smaller 
-            = vlTOPp->vin2;
-    } else {
-        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__bigger 
-            = vlTOPp->vin2;
-        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__smaller 
-            = vlTOPp->vin1;
-    }
-    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_13 
-        = ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt))
-            ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt))
-                ? ((1U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                          << 1U)) ? (IData)(vlTOPp->rg_leakage_table_7)
-                    : (IData)(vlTOPp->rg_leakage_table_6))
-                : ((1U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                          << 1U)) ? (IData)(vlTOPp->rg_leakage_table_5)
-                    : (IData)(vlTOPp->rg_leakage_table_4)))
-            : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt))
-                ? ((1U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                          << 1U)) ? (IData)(vlTOPp->rg_leakage_table_3)
-                    : (IData)(vlTOPp->rg_leakage_table_2))
-                : ((1U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                          << 1U)) ? (IData)(vlTOPp->rg_leakage_table_1)
-                    : (IData)(vlTOPp->rg_leakage_table_0))));
-    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_14 
-        = ((4U & ((IData)(1U) + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                 << 1U))) ? ((2U & 
-                                              ((IData)(1U) 
-                                               + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin1_bias_shift 
+        = (0xffU & (((IData)(vlSymsp->TOP__cal_phase.__PVT__vin1_reg) 
+                     - ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt))
+                         ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt))
+                             ? ((1U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                       << 1U)) ? (IData)(vlTOPp->rg_leakage_table_7)
+                                 : (IData)(vlTOPp->rg_leakage_table_6))
+                             : ((1U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                       << 1U)) ? (IData)(vlTOPp->rg_leakage_table_5)
+                                 : (IData)(vlTOPp->rg_leakage_table_4)))
+                         : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt))
+                             ? ((1U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                       << 1U)) ? (IData)(vlTOPp->rg_leakage_table_3)
+                                 : (IData)(vlTOPp->rg_leakage_table_2))
+                             : ((1U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                       << 1U)) ? (IData)(vlTOPp->rg_leakage_table_1)
+                                 : (IData)(vlTOPp->rg_leakage_table_0))))) 
+                    << ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt))
+                         ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt))
+                             ? ((1U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                       << 1U)) ? (IData)(vlTOPp->rg_ac_table_7)
+                                 : (IData)(vlTOPp->rg_ac_table_6))
+                             : ((1U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                       << 1U)) ? (IData)(vlTOPp->rg_ac_table_5)
+                                 : (IData)(vlTOPp->rg_ac_table_4)))
+                         : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt))
+                             ? ((1U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                       << 1U)) ? (IData)(vlTOPp->rg_ac_table_3)
+                                 : (IData)(vlTOPp->rg_ac_table_2))
+                             : ((1U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                       << 1U)) ? (IData)(vlTOPp->rg_ac_table_1)
+                                 : (IData)(vlTOPp->rg_ac_table_0))))));
+    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin2_bias_shift 
+        = (0xffU & (((IData)(vlSymsp->TOP__cal_phase.__PVT__vin2_reg) 
+                     - ((4U & ((IData)(1U) + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                              << 1U)))
+                         ? ((2U & ((IData)(1U) + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
                                                   << 1U)))
-                                              ? ((1U 
-                                                  & ((IData)(1U) 
-                                                     + 
-                                                     (7U 
-                                                      & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                                         << 1U))))
-                                                  ? (IData)(vlTOPp->rg_leakage_table_7)
-                                                  : (IData)(vlTOPp->rg_leakage_table_6))
-                                              : ((1U 
-                                                  & ((IData)(1U) 
-                                                     + 
-                                                     (7U 
-                                                      & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                                         << 1U))))
-                                                  ? (IData)(vlTOPp->rg_leakage_table_5)
-                                                  : (IData)(vlTOPp->rg_leakage_table_4)))
-            : ((2U & ((IData)(1U) + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                     << 1U))) ? ((1U 
-                                                  & ((IData)(1U) 
-                                                     + 
-                                                     (7U 
-                                                      & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                                         << 1U))))
-                                                  ? (IData)(vlTOPp->rg_leakage_table_3)
-                                                  : (IData)(vlTOPp->rg_leakage_table_2))
-                : ((1U & ((IData)(1U) + (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
-                                               << 1U))))
-                    ? (IData)(vlTOPp->rg_leakage_table_1)
-                    : (IData)(vlTOPp->rg_leakage_table_0))));
+                             ? ((1U & ((IData)(1U) 
+                                       + (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                << 1U))))
+                                 ? (IData)(vlTOPp->rg_leakage_table_7)
+                                 : (IData)(vlTOPp->rg_leakage_table_6))
+                             : ((1U & ((IData)(1U) 
+                                       + (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                << 1U))))
+                                 ? (IData)(vlTOPp->rg_leakage_table_5)
+                                 : (IData)(vlTOPp->rg_leakage_table_4)))
+                         : ((2U & ((IData)(1U) + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                  << 1U)))
+                             ? ((1U & ((IData)(1U) 
+                                       + (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                << 1U))))
+                                 ? (IData)(vlTOPp->rg_leakage_table_3)
+                                 : (IData)(vlTOPp->rg_leakage_table_2))
+                             : ((1U & ((IData)(1U) 
+                                       + (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                << 1U))))
+                                 ? (IData)(vlTOPp->rg_leakage_table_1)
+                                 : (IData)(vlTOPp->rg_leakage_table_0))))) 
+                    << ((4U & ((IData)(1U) + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                              << 1U)))
+                         ? ((2U & ((IData)(1U) + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                  << 1U)))
+                             ? ((1U & ((IData)(1U) 
+                                       + (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                << 1U))))
+                                 ? (IData)(vlTOPp->rg_ac_table_7)
+                                 : (IData)(vlTOPp->rg_ac_table_6))
+                             : ((1U & ((IData)(1U) 
+                                       + (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                << 1U))))
+                                 ? (IData)(vlTOPp->rg_ac_table_5)
+                                 : (IData)(vlTOPp->rg_ac_table_4)))
+                         : ((2U & ((IData)(1U) + ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                  << 1U)))
+                             ? ((1U & ((IData)(1U) 
+                                       + (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                << 1U))))
+                                 ? (IData)(vlTOPp->rg_ac_table_3)
+                                 : (IData)(vlTOPp->rg_ac_table_2))
+                             : ((1U & ((IData)(1U) 
+                                       + (7U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
+                                                << 1U))))
+                                 ? (IData)(vlTOPp->rg_ac_table_1)
+                                 : (IData)(vlTOPp->rg_ac_table_0))))));
     vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_finish 
-        = ((IData)(vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_cnt) 
-           == (7U & ((IData)(vlTOPp->rg_cordic_iternum) 
-                     - (IData)(1U))));
-    if ((4U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))) {
-        vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_5 
-            = ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                    ? (IData)(vlTOPp->rg_sin_table_7)
-                    : (IData)(vlTOPp->rg_sin_table_6))
-                : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                    ? (IData)(vlTOPp->rg_sin_table_5)
-                    : (IData)(vlTOPp->rg_sin_table_4)));
-        vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_6 
-            = ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                    ? (IData)(vlTOPp->rg_cos_table_7)
-                    : (IData)(vlTOPp->rg_cos_table_6))
-                : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                    ? (IData)(vlTOPp->rg_cos_table_5)
-                    : (IData)(vlTOPp->rg_cos_table_4)));
-    } else {
-        vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_5 
-            = ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                    ? (IData)(vlTOPp->rg_sin_table_3)
-                    : (IData)(vlTOPp->rg_sin_table_2))
-                : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                    ? (IData)(vlTOPp->rg_sin_table_1)
-                    : (IData)(vlTOPp->rg_sin_table_0)));
-        vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_6 
-            = ((2U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                ? ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                    ? (IData)(vlTOPp->rg_cos_table_3)
-                    : (IData)(vlTOPp->rg_cos_table_2))
-                : ((1U & (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT__mac_cnt))
-                    ? (IData)(vlTOPp->rg_cos_table_1)
-                    : (IData)(vlTOPp->rg_cos_table_0)));
-    }
+        = (((1U == (IData)(vlTOPp->rg_cordic_iternum))
+             ? (IData)(vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_start_regNext)
+             : ((IData)(vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__cal_cnt) 
+                == (7U & ((IData)(vlTOPp->rg_cordic_iternum) 
+                          - (IData)(1U))))) | ((~ (IData)(vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__nozero_flg)) 
+                                               & (IData)(vlSymsp->TOP__cal_phase.__PVT__cordic__DOT__nozero_flg_regNext)));
     vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__data_load_finish 
         = ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v_cnt) 
            == (7U & ((IData)(vlTOPp->valid_num) - (IData)(1U))));
-    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_7 
-        = (0x1ffU & (((0x100U & ((IData)(vlTOPp->vin1) 
-                                 << 1U)) | (IData)(vlTOPp->vin1)) 
-                     - ((0x100U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_13) 
-                                   << 1U)) | (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_13))));
-    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_11 
-        = (0x1ffU & (((0x100U & ((IData)(vlTOPp->vin2) 
-                                 << 1U)) | (IData)(vlTOPp->vin2)) 
-                     - ((0x100U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_14) 
-                                   << 1U)) | (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_14))));
-    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT___zz_2 
-        = ((0x1fe00U & ((((0U == (3U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)) 
-                          | (3U == (3U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg)))
-                          ? (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
-                             >> 9U) : ((2U == (3U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg))
-                                        ? ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
-                                            >> 9U) 
-                                           + (- (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_5)))
-                                        : ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg 
-                                            >> 9U) 
-                                           + (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_5)))) 
-                        << 9U)) | (0x1ffU & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_sin__DOT__shiftReg));
-    vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT___zz_2 
-        = ((0x1fe00U & ((((0U == (3U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)) 
-                          | (3U == (3U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg)))
-                          ? (vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
-                             >> 9U) : ((2U == (3U & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg))
-                                        ? ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
-                                            >> 9U) 
-                                           + (- (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_6)))
-                                        : ((vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg 
-                                            >> 9U) 
-                                           + (IData)(vlSymsp->TOP__cal_phase.__PVT__dot__DOT___zz_6)))) 
-                        << 9U)) | (0x1ffU & vlSymsp->TOP__cal_phase.__PVT__dot__DOT__booth_cos__DOT__shiftReg));
-    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_8 
-        = (0xffU & ((0x100U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_7))
-                     ? ((3U != (3U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_7) 
-                                      >> 7U))) ? 0x80U
-                         : (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_7))
-                     : ((0x80U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_7))
-                         ? 0x7fU : (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_7))));
-    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_12 
-        = (0xffU & ((0x100U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_11))
-                     ? ((3U != (3U & ((IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_11) 
-                                      >> 7U))) ? 0x80U
-                         : (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_11))
-                     : ((0x80U & (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_11))
-                         ? 0x7fU : (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT___zz_11))));
+    vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v1gtv2 
+        = VL_LTS_III(1,8,8, (0xffU & ((IData)(0x80U) 
+                                      + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin2_bias_shift))), 
+                     (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin1_bias_shift))));
+    if (vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__v1gtv2) {
+        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__bigger 
+            = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin1_bias_shift)));
+        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__smaller 
+            = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin2_bias_shift)));
+    } else {
+        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__bigger 
+            = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin2_bias_shift)));
+        vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__smaller 
+            = (0xffU & ((IData)(0x80U) + (IData)(vlSymsp->TOP__cal_phase.__PVT__calvn__DOT__vin1_bias_shift)));
+    }
 }

@@ -43,6 +43,14 @@ VL_MODULE(Vcal_phase) {
     VL_IN8(rg_leakage_table_5,7,0);
     VL_IN8(rg_leakage_table_6,7,0);
     VL_IN8(rg_leakage_table_7,7,0);
+    VL_IN8(rg_ac_table_0,1,0);
+    VL_IN8(rg_ac_table_1,1,0);
+    VL_IN8(rg_ac_table_2,1,0);
+    VL_IN8(rg_ac_table_3,1,0);
+    VL_IN8(rg_ac_table_4,1,0);
+    VL_IN8(rg_ac_table_5,1,0);
+    VL_IN8(rg_ac_table_6,1,0);
+    VL_IN8(rg_ac_table_7,1,0);
     VL_IN8(rg_sin_table_0,7,0);
     VL_IN8(rg_sin_table_1,7,0);
     VL_IN8(rg_sin_table_2,7,0);
@@ -70,7 +78,7 @@ VL_MODULE(Vcal_phase) {
     // Internals; generally not touched by application code
     CData/*0:0*/ __Vclklast__TOP__clk;
     CData/*0:0*/ __Vclklast__TOP__reset;
-    CData/*0:0*/ __Vm_traceActivity[3];
+    CData/*0:0*/ __Vm_traceActivity[4];
     
     // INTERNAL VARIABLES
     // Internals; generally not touched by application code
@@ -116,7 +124,9 @@ VL_MODULE(Vcal_phase) {
   public:
     static void _eval_initial(Vcal_phase__Syms* __restrict vlSymsp) VL_ATTR_COLD;
     static void _eval_settle(Vcal_phase__Syms* __restrict vlSymsp) VL_ATTR_COLD;
-    static void _settle__TOP__1(Vcal_phase__Syms* __restrict vlSymsp);
+    static void _sequent__TOP__1(Vcal_phase__Syms* __restrict vlSymsp);
+    static void _settle__TOP__2(Vcal_phase__Syms* __restrict vlSymsp) VL_ATTR_COLD;
+    static void _settle__TOP__3(Vcal_phase__Syms* __restrict vlSymsp) VL_ATTR_COLD;
   private:
     static void traceChgSub0(void* userp, VerilatedVcd* tracep);
     static void traceChgSub1(void* userp, VerilatedVcd* tracep);

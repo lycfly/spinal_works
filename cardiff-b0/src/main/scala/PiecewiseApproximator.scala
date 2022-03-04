@@ -25,8 +25,8 @@ class PiecewiseApproximator (SizeIn: Int, SizeOut: Int) extends Component {
   def op(a:Int,b:Int):Int={
     a + b
   }
-  val test = Runtime.getRuntime.
-
+  //val test = Runtime.getRuntime.
+  io.res := 0
 
 
 
